@@ -1,0 +1,9 @@
+/target
+/bin
+/src/main/java/META-INF/MANIFEST.MF
+*.DS_Store
+/.externalToolBuilders/
+/.settings/
+.classpath
+/core.iml
+/libjhdf5.jnilib

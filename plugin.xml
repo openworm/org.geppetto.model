@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated geppettoModelGenerator -->
+      <package
+            uri="http://www.geppetto.org/model"
+            class="org.geppetto.model.GeppettoPackage"
+            genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
+   </extension>
+
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated geppettoModelGenerator -->
+      <parser
+            type="gep"
+            class="org.geppetto.model.util.GeppettoResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated geppettoModelGenerator -->
+      <package
+            uri="http://www.geppetto.org/model/types"
+            class="org.geppetto.model.types.TypesPackage"
+            genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated geppettoModelGenerator -->
+      <package
+            uri="http://www.geppetto.org/model/values"
+            class="org.geppetto.model.values.ValuesPackage"
+            genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated geppettoModelGenerator -->
+      <package
+            uri="http://www.geppetto.org/model/variables"
+            class="org.geppetto.model.variables.VariablesPackage"
+            genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated geppettoModelGenerator -->
+      <package
+            uri="http://www.geppetto.org/model/aspect"
+            class="org.geppetto.model.aspect.AspectPackage"
+            genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
+   </extension>
+</plugin>
