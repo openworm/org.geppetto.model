@@ -32,18 +32,12 @@
  *******************************************************************************/
 package org.geppetto.model.test;
 
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.Map;
 
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.emfjson.jackson.resource.JsonResourceFactory;
 import org.geppetto.model.GeppettoModel;
