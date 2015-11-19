@@ -37,6 +37,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
 
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -45,8 +46,9 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.emfjson.jackson.resource.JsonResourceFactory;
+import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.Root;
+import org.geppetto.model.util.GeppettoModelTraversal;
 import org.geppetto.model.util.GeppettoPrinterSwitch;
 import org.junit.Before;
 import org.junit.Test;
@@ -55,7 +57,7 @@ import org.junit.Test;
  * @author matteocantarelli
  *
  */
-public class ModelReader
+public class ReadWriteTest
 {
 
 	/**
@@ -67,32 +69,42 @@ public class ModelReader
 	}
 
 	@Test
-	public void test() throws IOException
+	public void test() throws Exception
 	{
-		//Initialize the factory and the resource set
+		// Initialize the factory and the resource set
 		GeppettoPackage.eINSTANCE.eClass();
-	    Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
-	    Map<String, Object> m = reg.getExtensionToFactoryMap();
-	    m.put("xmi", new XMIResourceFactoryImpl()); //sets the factory for the XMI type
-	    m.put("json", new JsonResourceFactory()); //sets the factory for the JSON type
-	    ResourceSet resSet = new ResourceSetImpl();
+		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> m = reg.getExtensionToFactoryMap();
+		m.put("xmi", new XMIResourceFactoryImpl()); // sets the factory for the XMI type
+		m.put("json", new JsonResourceFactory()); // sets the factory for the JSON type
+		ResourceSet resSet = new ResourceSetImpl();
 
-	    // How to read
-	    Resource resource = resSet.getResource(URI.createURI("./src/test/resources/test.xmi"), true);
-	    Root root = (Root) resource.getContents().get(0);
-	    
-	    //How to visit
-	    GeppettoPrinterSwitch<Boolean> visitor=new GeppettoPrinterSwitch<Boolean>();
-	    for (Iterator iter = EcoreUtil.getAllContents(Collections.singleton(root)); iter.hasNext(); ) 
-	    {
-	    	  EObject eObject = (EObject)iter.next();
-	    	  visitor.doSwitch(eObject);
-	    }
-	    
-	    // How to save to JSON
-	    Resource jsonResource = resSet.createResource(URI.createURI("./src/test/resources/test.json"));
-	    jsonResource.getContents().add(root);
-	    jsonResource.save(null);
+		// How to read
+		Resource resource = resSet.getResource(URI.createURI("./src/test/resources/test.xmi"), true);
+		GeppettoModel geppettoModel = (GeppettoModel) resource.getContents().get(0);
+
+		// How to visit
+		GeppettoPrinterSwitch visitor = new GeppettoPrinterSwitch();
+		//Includes root
+		// TreeIterator<EObject> iterator = EcoreUtil.getAllContents(Collections.singleton(geppettoModel));
+		// while(iterator.hasNext())
+		// {
+		// visitor.doSwitch(iterator.next());
+		// }
+
+		//Excludes root
+		GeppettoModelTraversal.apply(geppettoModel, visitor);
+
+		// for (Iterator iter = EcoreUtil.getAllContents(Collections.singleton(geppettoModel)); iter.hasNext(); )
+		// {
+		// EObject eObject = (EObject)iter.next();
+		// visitor.doSwitch(eObject);
+		// }
+
+		// How to save to JSON
+		Resource jsonResource = resSet.createResource(URI.createURI("./src/test/resources/test.json"));
+		jsonResource.getContents().add(geppettoModel);
+		jsonResource.save(null);
 
 	}
 

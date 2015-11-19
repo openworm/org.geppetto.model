@@ -1,5 +1,5 @@
 {
-  "eClass" : "http://www.geppetto.org/model#//Root",
+  "eClass" : "http://www.geppetto.org/model#//GeppettoModel",
   "variables" : [ {
     "eClass" : "http://www.geppetto.org/model#//variables/Variable",
     "name" : "acnet2",

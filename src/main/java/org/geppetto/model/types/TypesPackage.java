@@ -80,22 +80,13 @@ public interface TypesPackage extends EPackage
 	int TYPE__NAME = GeppettoPackage.NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE__ASPECT = GeppettoPackage.NODE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__REFERENCED_VARIABLES = GeppettoPackage.NODE_FEATURE_COUNT + 1;
+	int TYPE__REFERENCED_VARIABLES = GeppettoPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -104,7 +95,25 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__SUPER_TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+	int TYPE__SUPER_TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__ASPECT = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__DOMAIN_MODEL = GeppettoPackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -113,7 +122,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 3;
+	int TYPE_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -162,15 +171,6 @@ public interface TypesPackage extends EPackage
 	int PRIMITIVE_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIMITIVE_TYPE__ASPECT = TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,6 +187,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int PRIMITIVE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE__ASPECT = TYPE__ASPECT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The number of structural features of the '<em>Primitive Type</em>' class.
@@ -244,15 +262,6 @@ public interface TypesPackage extends EPackage
 	int INT_TYPE__NAME = PRIMITIVE_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -269,6 +278,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int INT_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -335,15 +362,6 @@ public interface TypesPackage extends EPackage
 	int IMPORT_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TYPE__ASPECT = TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -360,6 +378,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int IMPORT_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TYPE__ASPECT = TYPE__ASPECT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -444,15 +480,6 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_TYPE__ASPECT = TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -469,6 +496,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int COMPOSITE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_TYPE__ASPECT = TYPE__ASPECT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -535,15 +580,6 @@ public interface TypesPackage extends EPackage
 	int ANY_PRIMITIVE_TYPE__NAME = PRIMITIVE_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -560,6 +596,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int ANY_PRIMITIVE_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANY_PRIMITIVE_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANY_PRIMITIVE_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The number of structural features of the '<em>Any Primitive Type</em>' class.
@@ -618,15 +672,6 @@ public interface TypesPackage extends EPackage
 	int SIMPLE_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TYPE__ASPECT = TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -643,6 +688,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int SIMPLE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__ASPECT = TYPE__ASPECT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The number of structural features of the '<em>Simple Type</em>' class.
@@ -700,15 +763,6 @@ public interface TypesPackage extends EPackage
 	int FLOAT_TYPE__NAME = PRIMITIVE_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOAT_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -725,6 +779,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int FLOAT_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOAT_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOAT_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -791,15 +863,6 @@ public interface TypesPackage extends EPackage
 	int DOUBLE_TYPE__NAME = PRIMITIVE_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOUBLE_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -816,6 +879,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int DOUBLE_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -882,15 +963,6 @@ public interface TypesPackage extends EPackage
 	int STRING_TYPE__NAME = PRIMITIVE_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -907,6 +979,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int STRING_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -974,6 +1064,17 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	EReference getType_Aspect();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Domain Model</em>'.
+	 * @see org.geppetto.model.types.Type#getDomainModel()
+	 * @see #getType()
+	 * @generated
+	 */
+	EAttribute getType_DomainModel();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.geppetto.model.types.Type#getReferencedVariables <em>Referenced Variables</em>}'.
@@ -1226,6 +1327,14 @@ public interface TypesPackage extends EPackage
 		 * @generated
 		 */
 		EReference TYPE__ASPECT = eINSTANCE.getType_Aspect();
+
+		/**
+		 * The meta object literal for the '<em><b>Domain Model</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TYPE__DOMAIN_MODEL = eINSTANCE.getType_DomainModel();
 
 		/**
 		 * The meta object literal for the '<em><b>Referenced Variables</b></em>' reference list feature.

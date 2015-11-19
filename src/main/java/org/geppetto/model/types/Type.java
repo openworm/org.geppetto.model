@@ -20,9 +20,10 @@ import org.geppetto.model.variables.Variable;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.types.Type#getAspect <em>Aspect</em>}</li>
  *   <li>{@link org.geppetto.model.types.Type#getReferencedVariables <em>Referenced Variables</em>}</li>
  *   <li>{@link org.geppetto.model.types.Type#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.geppetto.model.types.Type#getAspect <em>Aspect</em>}</li>
+ *   <li>{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,6 +60,32 @@ public interface Type extends Node
 	 * @generated
 	 */
 	void setAspect(Aspect value);
+
+	/**
+	 * Returns the value of the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Domain Model</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Domain Model</em>' attribute.
+	 * @see #setDomainModel(Object)
+	 * @see org.geppetto.model.types.TypesPackage#getType_DomainModel()
+	 * @model transient="true"
+	 * @generated
+	 */
+	Object getDomainModel();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Domain Model</em>' attribute.
+	 * @see #getDomainModel()
+	 * @generated
+	 */
+	void setDomainModel(Object value);
 
 	/**
 	 * Returns the value of the '<em><b>Referenced Variables</b></em>' reference list.

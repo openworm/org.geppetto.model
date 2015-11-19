@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://www.geppetto.org/model" nsPrefix="gep">
-  <eClassifiers xsi:type="ecore:EClass" name="Root">
+  <eClassifiers xsi:type="ecore:EClass" name="GeppettoModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
         eType="#//variables/Variable" containment="true" resolveProxies="false">
       <eAnnotations>
@@ -24,11 +24,13 @@
   <eSubpackages name="types" nsURI="http://www.geppetto.org/model/types" nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//Node">
       <eOperations name="getDefaultValue" eType="#//values/Value"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="aspect" eType="#//aspect/Aspect"
-          eOpposite="#//aspect/Aspect/types"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="referencedVariables"
           upperBound="-1" eType="#//variables/Variable" eOpposite="#//variables/Variable/types"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//types/Type"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="aspect" eType="#//aspect/Aspect"
+          eOpposite="#//aspect/Aspect/types"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainModel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+          transient="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" abstract="true" eSuperTypes="#//types/Type"/>
     <eClassifiers xsi:type="ecore:EClass" name="IntType" eSuperTypes="#//types/PrimitiveType">

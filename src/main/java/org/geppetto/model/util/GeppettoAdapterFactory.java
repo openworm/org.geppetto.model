@@ -75,9 +75,9 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 		new GeppettoSwitch<Adapter>()
 		{
 			@Override
-			public Adapter caseRoot(Root object)
+			public Adapter caseGeppettoModel(GeppettoModel object)
 			{
-				return createRootAdapter();
+				return createGeppettoModelAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object)
@@ -107,16 +107,16 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.Root <em>Root</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.Root
+	 * @see org.geppetto.model.GeppettoModel
 	 * @generated
 	 */
-	public Adapter createRootAdapter()
+	public Adapter createGeppettoModelAdapter()
 	{
 		return null;
 	}

@@ -12,22 +12,22 @@ import org.geppetto.model.variables.Variable;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Root</b></em>'.
+ * A representation of the model object '<em><b>Model</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.Root#getVariables <em>Variables</em>}</li>
- *   <li>{@link org.geppetto.model.Root#getAspects <em>Aspects</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getAspects <em>Aspects</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getRoot()
+ * @see org.geppetto.model.GeppettoPackage#getGeppettoModel()
  * @model
  * @generated
  */
-public interface Root extends EObject
+public interface GeppettoModel extends EObject
 {
 	/**
 	 * Returns the value of the '<em><b>Variables</b></em>' containment reference list.
@@ -39,7 +39,7 @@ public interface Root extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variables</em>' containment reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getRoot_Variables()
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Variables()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='variable' namespace='##targetNamespace'"
 	 * @generated
@@ -56,10 +56,10 @@ public interface Root extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Aspects</em>' containment reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getRoot_Aspects()
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Aspects()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Aspect> getAspects();
 
-} // Root
+} // GeppettoModel

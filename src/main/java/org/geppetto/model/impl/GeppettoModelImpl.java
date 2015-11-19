@@ -5,39 +5,32 @@ package org.geppetto.model.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.Root;
-
 import org.geppetto.model.aspect.Aspect;
-
 import org.geppetto.model.variables.Variable;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Root</b></em>'.
+ * An implementation of the model object '<em><b>Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.RootImpl#getVariables <em>Variables</em>}</li>
- *   <li>{@link org.geppetto.model.impl.RootImpl#getAspects <em>Aspects</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getAspects <em>Aspects</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class RootImpl extends MinimalEObjectImpl.Container implements Root
+public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements GeppettoModel
 {
 	/**
 	 * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference list.
@@ -64,7 +57,7 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RootImpl()
+	protected GeppettoModelImpl()
 	{
 		super();
 	}
@@ -77,7 +70,7 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.ROOT;
+		return GeppettoPackage.Literals.GEPPETTO_MODEL;
 	}
 
 	/**
@@ -89,7 +82,7 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
 	{
 		if (variables == null)
 		{
-			variables = new EObjectContainmentEList<Variable>(Variable.class, this, GeppettoPackage.ROOT__VARIABLES);
+			variables = new EObjectContainmentEList<Variable>(Variable.class, this, GeppettoPackage.GEPPETTO_MODEL__VARIABLES);
 		}
 		return variables;
 	}
@@ -103,7 +96,7 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
 	{
 		if (aspects == null)
 		{
-			aspects = new EObjectContainmentEList<Aspect>(Aspect.class, this, GeppettoPackage.ROOT__ASPECTS);
+			aspects = new EObjectContainmentEList<Aspect>(Aspect.class, this, GeppettoPackage.GEPPETTO_MODEL__ASPECTS);
 		}
 		return aspects;
 	}
@@ -118,9 +111,9 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.ROOT__VARIABLES:
+			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				return ((InternalEList<?>)getVariables()).basicRemove(otherEnd, msgs);
-			case GeppettoPackage.ROOT__ASPECTS:
+			case GeppettoPackage.GEPPETTO_MODEL__ASPECTS:
 				return ((InternalEList<?>)getAspects()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -136,9 +129,9 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.ROOT__VARIABLES:
+			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				return getVariables();
-			case GeppettoPackage.ROOT__ASPECTS:
+			case GeppettoPackage.GEPPETTO_MODEL__ASPECTS:
 				return getAspects();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -155,11 +148,11 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.ROOT__VARIABLES:
+			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				getVariables().clear();
 				getVariables().addAll((Collection<? extends Variable>)newValue);
 				return;
-			case GeppettoPackage.ROOT__ASPECTS:
+			case GeppettoPackage.GEPPETTO_MODEL__ASPECTS:
 				getAspects().clear();
 				getAspects().addAll((Collection<? extends Aspect>)newValue);
 				return;
@@ -177,10 +170,10 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.ROOT__VARIABLES:
+			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				getVariables().clear();
 				return;
-			case GeppettoPackage.ROOT__ASPECTS:
+			case GeppettoPackage.GEPPETTO_MODEL__ASPECTS:
 				getAspects().clear();
 				return;
 		}
@@ -197,12 +190,12 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.ROOT__VARIABLES:
+			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				return variables != null && !variables.isEmpty();
-			case GeppettoPackage.ROOT__ASPECTS:
+			case GeppettoPackage.GEPPETTO_MODEL__ASPECTS:
 				return aspects != null && !aspects.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //RootImpl
+} //GeppettoModelImpl

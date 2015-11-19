@@ -216,7 +216,17 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 */
 	public EReference getType_Aspect()
 	{
-		return (EReference)typeEClass.getEStructuralFeatures().get(0);
+		return (EReference)typeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getType_DomainModel()
+	{
+		return (EAttribute)typeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -226,7 +236,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 */
 	public EReference getType_ReferencedVariables()
 	{
-		return (EReference)typeEClass.getEStructuralFeatures().get(1);
+		return (EReference)typeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -236,7 +246,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 */
 	public EReference getType_SuperType()
 	{
-		return (EReference)typeEClass.getEStructuralFeatures().get(2);
+		return (EReference)typeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -450,9 +460,10 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		// Create classes and their features
 		typeEClass = createEClass(TYPE);
-		createEReference(typeEClass, TYPE__ASPECT);
 		createEReference(typeEClass, TYPE__REFERENCED_VARIABLES);
 		createEReference(typeEClass, TYPE__SUPER_TYPE);
+		createEReference(typeEClass, TYPE__ASPECT);
+		createEAttribute(typeEClass, TYPE__DOMAIN_MODEL);
 		createEOperation(typeEClass, TYPE___GET_DEFAULT_VALUE);
 
 		primitiveTypeEClass = createEClass(PRIMITIVE_TYPE);
@@ -508,8 +519,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		// Obtain other dependent packages
 		GeppettoPackage theGeppettoPackage = (GeppettoPackage)EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI);
-		AspectPackage theAspectPackage = (AspectPackage)EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI);
 		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
+		AspectPackage theAspectPackage = (AspectPackage)EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI);
 		ValuesPackage theValuesPackage = (ValuesPackage)EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
@@ -531,9 +542,10 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getType_Aspect(), theAspectPackage.getAspect(), theAspectPackage.getAspect_Types(), "aspect", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_ReferencedVariables(), theVariablesPackage.getVariable(), theVariablesPackage.getVariable_Types(), "referencedVariables", null, 0, -1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getType_Aspect(), theAspectPackage.getAspect(), theAspectPackage.getAspect_Types(), "aspect", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getType_DomainModel(), ecorePackage.getEJavaObject(), "domainModel", null, 0, 1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getType__GetDefaultValue(), theValuesPackage.getValue(), "getDefaultValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 

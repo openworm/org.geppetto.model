@@ -59,14 +59,14 @@ public interface GeppettoPackage extends EPackage
 	GeppettoPackage eINSTANCE = org.geppetto.model.impl.GeppettoPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.impl.RootImpl <em>Root</em>}' class.
+	 * The meta object id for the '{@link org.geppetto.model.impl.GeppettoModelImpl <em>Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.impl.RootImpl
-	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getRoot()
+	 * @see org.geppetto.model.impl.GeppettoModelImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getGeppettoModel()
 	 * @generated
 	 */
-	int ROOT = 0;
+	int GEPPETTO_MODEL = 0;
 
 	/**
 	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -75,7 +75,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROOT__VARIABLES = 0;
+	int GEPPETTO_MODEL__VARIABLES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Aspects</b></em>' containment reference list.
@@ -84,25 +84,25 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROOT__ASPECTS = 1;
+	int GEPPETTO_MODEL__ASPECTS = 1;
 
 	/**
-	 * The number of structural features of the '<em>Root</em>' class.
+	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOT_FEATURE_COUNT = 2;
+	int GEPPETTO_MODEL_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Root</em>' class.
+	 * The number of operations of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOT_OPERATION_COUNT = 0;
+	int GEPPETTO_MODEL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.NodeImpl <em>Node</em>}' class.
@@ -152,36 +152,36 @@ public interface GeppettoPackage extends EPackage
 
 
 	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.Root <em>Root</em>}'.
+	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Root</em>'.
-	 * @see org.geppetto.model.Root
+	 * @return the meta object for class '<em>Model</em>'.
+	 * @see org.geppetto.model.GeppettoModel
 	 * @generated
 	 */
-	EClass getRoot();
+	EClass getGeppettoModel();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.Root#getVariables <em>Variables</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.GeppettoModel#getVariables <em>Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Variables</em>'.
-	 * @see org.geppetto.model.Root#getVariables()
-	 * @see #getRoot()
+	 * @see org.geppetto.model.GeppettoModel#getVariables()
+	 * @see #getGeppettoModel()
 	 * @generated
 	 */
-	EReference getRoot_Variables();
+	EReference getGeppettoModel_Variables();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.Root#getAspects <em>Aspects</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.GeppettoModel#getAspects <em>Aspects</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Aspects</em>'.
-	 * @see org.geppetto.model.Root#getAspects()
-	 * @see #getRoot()
+	 * @see org.geppetto.model.GeppettoModel#getAspects()
+	 * @see #getGeppettoModel()
 	 * @generated
 	 */
-	EReference getRoot_Aspects();
+	EReference getGeppettoModel_Aspects();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.Node <em>Node</em>}'.
@@ -239,14 +239,14 @@ public interface GeppettoPackage extends EPackage
 	interface Literals
 	{
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.impl.RootImpl <em>Root</em>}' class.
+		 * The meta object literal for the '{@link org.geppetto.model.impl.GeppettoModelImpl <em>Model</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.impl.RootImpl
-		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getRoot()
+		 * @see org.geppetto.model.impl.GeppettoModelImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getGeppettoModel()
 		 * @generated
 		 */
-		EClass ROOT = eINSTANCE.getRoot();
+		EClass GEPPETTO_MODEL = eINSTANCE.getGeppettoModel();
 
 		/**
 		 * The meta object literal for the '<em><b>Variables</b></em>' containment reference list feature.
@@ -254,7 +254,7 @@ public interface GeppettoPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROOT__VARIABLES = eINSTANCE.getRoot_Variables();
+		EReference GEPPETTO_MODEL__VARIABLES = eINSTANCE.getGeppettoModel_Variables();
 
 		/**
 		 * The meta object literal for the '<em><b>Aspects</b></em>' containment reference list feature.
@@ -262,7 +262,7 @@ public interface GeppettoPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROOT__ASPECTS = eINSTANCE.getRoot_Aspects();
+		EReference GEPPETTO_MODEL__ASPECTS = eINSTANCE.getGeppettoModel_Aspects();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.NodeImpl <em>Node</em>}' class.

@@ -64,7 +64,7 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		switch (eClass.getClassifierID())
 		{
-			case GeppettoPackage.ROOT: return createRoot();
+			case GeppettoPackage.GEPPETTO_MODEL: return createGeppettoModel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -75,10 +75,10 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Root createRoot()
+	public GeppettoModel createGeppettoModel()
 	{
-		RootImpl root = new RootImpl();
-		return root;
+		GeppettoModelImpl geppettoModel = new GeppettoModelImpl();
+		return geppettoModel;
 	}
 
 	/**

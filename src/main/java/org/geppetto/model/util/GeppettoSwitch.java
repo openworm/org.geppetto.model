@@ -72,10 +72,10 @@ public class GeppettoSwitch<T> extends Switch<T>
 	{
 		switch (classifierID)
 		{
-			case GeppettoPackage.ROOT:
+			case GeppettoPackage.GEPPETTO_MODEL:
 			{
-				Root root = (Root)theEObject;
-				T result = caseRoot(root);
+				GeppettoModel geppettoModel = (GeppettoModel)theEObject;
+				T result = caseGeppettoModel(geppettoModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -91,17 +91,17 @@ public class GeppettoSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Root</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Root</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Model</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoot(Root object)
+	public T caseGeppettoModel(GeppettoModel object)
 	{
 		return null;
 	}

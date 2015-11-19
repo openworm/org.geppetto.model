@@ -40,9 +40,10 @@ import org.geppetto.model.variables.VariablesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getAspect <em>Aspect</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getReferencedVariables <em>Referenced Variables</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getAspect <em>Aspect</em>}</li>
+ *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getDomainModel <em>Domain Model</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,6 +70,26 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	 * @ordered
 	 */
 	protected Type superType;
+
+	/**
+	 * The default value of the '{@link #getDomainModel() <em>Domain Model</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDomainModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Object DOMAIN_MODEL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDomainModel() <em>Domain Model</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDomainModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected Object domainModel = DOMAIN_MODEL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,6 +155,29 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.TYPE__ASPECT, newAspect, newAspect));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Object getDomainModel()
+	{
+		return domainModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDomainModel(Object newDomainModel)
+	{
+		Object oldDomainModel = domainModel;
+		domainModel = newDomainModel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.TYPE__DOMAIN_MODEL, oldDomainModel, domainModel));
 	}
 
 	/**
@@ -216,12 +260,12 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getReferencedVariables()).basicAdd(otherEnd, msgs);
 			case TypesPackage.TYPE__ASPECT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetAspect((Aspect)otherEnd, msgs);
-			case TypesPackage.TYPE__REFERENCED_VARIABLES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getReferencedVariables()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -236,10 +280,10 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
-			case TypesPackage.TYPE__ASPECT:
-				return basicSetAspect(null, msgs);
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				return ((InternalEList<?>)getReferencedVariables()).basicRemove(otherEnd, msgs);
+			case TypesPackage.TYPE__ASPECT:
+				return basicSetAspect(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -270,13 +314,15 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
-			case TypesPackage.TYPE__ASPECT:
-				return getAspect();
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				return getReferencedVariables();
 			case TypesPackage.TYPE__SUPER_TYPE:
 				if (resolve) return getSuperType();
 				return basicGetSuperType();
+			case TypesPackage.TYPE__ASPECT:
+				return getAspect();
+			case TypesPackage.TYPE__DOMAIN_MODEL:
+				return getDomainModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -292,15 +338,18 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
-			case TypesPackage.TYPE__ASPECT:
-				setAspect((Aspect)newValue);
-				return;
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				getReferencedVariables().clear();
 				getReferencedVariables().addAll((Collection<? extends Variable>)newValue);
 				return;
 			case TypesPackage.TYPE__SUPER_TYPE:
 				setSuperType((Type)newValue);
+				return;
+			case TypesPackage.TYPE__ASPECT:
+				setAspect((Aspect)newValue);
+				return;
+			case TypesPackage.TYPE__DOMAIN_MODEL:
+				setDomainModel(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -316,14 +365,17 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
-			case TypesPackage.TYPE__ASPECT:
-				setAspect((Aspect)null);
-				return;
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				getReferencedVariables().clear();
 				return;
 			case TypesPackage.TYPE__SUPER_TYPE:
 				setSuperType((Type)null);
+				return;
+			case TypesPackage.TYPE__ASPECT:
+				setAspect((Aspect)null);
+				return;
+			case TypesPackage.TYPE__DOMAIN_MODEL:
+				setDomainModel(DOMAIN_MODEL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -339,12 +391,14 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
-			case TypesPackage.TYPE__ASPECT:
-				return getAspect() != null;
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				return referencedVariables != null && !referencedVariables.isEmpty();
 			case TypesPackage.TYPE__SUPER_TYPE:
 				return superType != null;
+			case TypesPackage.TYPE__ASPECT:
+				return getAspect() != null;
+			case TypesPackage.TYPE__DOMAIN_MODEL:
+				return DOMAIN_MODEL_EDEFAULT == null ? domainModel != null : !DOMAIN_MODEL_EDEFAULT.equals(domainModel);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -363,6 +417,23 @@ public abstract class TypeImpl extends NodeImpl implements Type
 				return getDefaultValue();
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString()
+	{
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (domainModel: ");
+		result.append(domainModel);
+		result.append(')');
+		return result.toString();
 	}
 
 } //TypeImpl

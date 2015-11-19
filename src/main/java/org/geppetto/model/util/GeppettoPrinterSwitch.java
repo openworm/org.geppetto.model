@@ -33,7 +33,7 @@
 package org.geppetto.model.util;
 
 import org.eclipse.emf.ecore.util.ComposedSwitch;
-import org.geppetto.model.Root;
+import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.aspect.Aspect;
 import org.geppetto.model.aspect.util.AspectSwitch;
 import org.geppetto.model.types.ImportType;
@@ -46,14 +46,14 @@ import org.geppetto.model.variables.util.VariablesSwitch;
  * @author matteocantarelli
  *
  */
-public class GeppettoPrinterSwitch<T> extends ComposedSwitch<T>
+public class GeppettoPrinterSwitch extends ComposedSwitch<Exception>
 {
 
-	class GTypesSwitch<G> extends TypesSwitch<G>
+	class GTypesSwitch extends TypesSwitch<Exception>
 	{
 
 		@Override
-		public G caseType(Type object)
+		public Exception caseType(Type object)
 		{
 			if(object.getSuperType() == null)
 			{
@@ -68,7 +68,7 @@ public class GeppettoPrinterSwitch<T> extends ComposedSwitch<T>
 		}
 
 		@Override
-		public G caseImportType(ImportType object)
+		public Exception caseImportType(ImportType object)
 		{
 			System.out.println("Type: " + object.getName());
 			System.out.println(object.getModelInterpreterId());
@@ -78,23 +78,23 @@ public class GeppettoPrinterSwitch<T> extends ComposedSwitch<T>
 
 	}
 
-	class GGeppettoSwitch<G> extends GeppettoSwitch<G>
+	class GGeppettoSwitch extends GeppettoSwitch<Exception>
 	{
 
 		@Override
-		public G caseRoot(Root object)
+		public Exception caseGeppettoModel(GeppettoModel object)
 		{
 			System.out.println("ROOT");
-			return super.caseRoot(object);
+			return super.caseGeppettoModel(object);
 		}
 
 	}
 
-	class GAspectSwitch<G> extends AspectSwitch<G>
+	class GAspectSwitch extends AspectSwitch<Exception>
 	{
 
 		@Override
-		public G caseAspect(Aspect object)
+		public Exception caseAspect(Aspect object)
 		{
 			System.out.println("Aspect: " + object.getName());
 			return super.caseAspect(object);
@@ -102,11 +102,11 @@ public class GeppettoPrinterSwitch<T> extends ComposedSwitch<T>
 
 	}
 
-	class GVariablesSwitch<G> extends VariablesSwitch<G>
+	class GVariablesSwitch extends VariablesSwitch<Exception>
 	{
 
 		@Override
-		public G caseVariable(Variable object)
+		public Exception caseVariable(Variable object)
 		{
 			System.out.println("Variable: " + object.getName() + " Type: " + object.getTypes().get(0).getName());
 			return super.caseVariable(object);
@@ -117,11 +117,11 @@ public class GeppettoPrinterSwitch<T> extends ComposedSwitch<T>
 	public GeppettoPrinterSwitch()
 	{
 		super();
-		super.addSwitch(new GGeppettoSwitch<T>());
-		super.addSwitch(new GAspectSwitch<T>());
-		super.addSwitch(new GTypesSwitch<T>());
-		super.addSwitch(new GVariablesSwitch<T>());
-		// super.addSwitch(new GValuesSwitch<T>());
+		super.addSwitch(new GGeppettoSwitch());
+		super.addSwitch(new GAspectSwitch());
+		super.addSwitch(new GTypesSwitch());
+		super.addSwitch(new GVariablesSwitch());
+		// super.addSwitch(new GValuesSwitch());
 	}
 
 }

@@ -7,30 +7,19 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-
 import org.geppetto.model.GeppettoFactory;
+import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.Node;
-import org.geppetto.model.Root;
-
 import org.geppetto.model.aspect.AspectPackage;
-
 import org.geppetto.model.aspect.impl.AspectPackageImpl;
-
 import org.geppetto.model.types.TypesPackage;
-
 import org.geppetto.model.types.impl.TypesPackageImpl;
-
 import org.geppetto.model.values.ValuesPackage;
-
 import org.geppetto.model.values.impl.ValuesPackageImpl;
-
 import org.geppetto.model.variables.VariablesPackage;
-
 import org.geppetto.model.variables.impl.VariablesPackageImpl;
 
 /**
@@ -46,7 +35,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rootEClass = null;
+	private EClass geppettoModelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,9 +129,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRoot()
+	public EClass getGeppettoModel()
 	{
-		return rootEClass;
+		return geppettoModelEClass;
 	}
 
 	/**
@@ -150,9 +139,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoot_Variables()
+	public EReference getGeppettoModel_Variables()
 	{
-		return (EReference)rootEClass.getEStructuralFeatures().get(0);
+		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -160,9 +149,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoot_Aspects()
+	public EReference getGeppettoModel_Aspects()
 	{
-		return (EReference)rootEClass.getEStructuralFeatures().get(1);
+		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -225,9 +214,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		isCreated = true;
 
 		// Create classes and their features
-		rootEClass = createEClass(ROOT);
-		createEReference(rootEClass, ROOT__VARIABLES);
-		createEReference(rootEClass, ROOT__ASPECTS);
+		geppettoModelEClass = createEClass(GEPPETTO_MODEL);
+		createEReference(geppettoModelEClass, GEPPETTO_MODEL__VARIABLES);
+		createEReference(geppettoModelEClass, GEPPETTO_MODEL__ASPECTS);
 
 		nodeEClass = createEClass(NODE);
 		createEAttribute(nodeEClass, NODE__NAME);
@@ -278,9 +267,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(rootEClass, Root.class, "Root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRoot_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, Root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRoot_Aspects(), theAspectPackage.getAspect(), null, "aspects", null, 0, -1, Root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(geppettoModelEClass, GeppettoModel.class, "GeppettoModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGeppettoModel_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeppettoModel_Aspects(), theAspectPackage.getAspect(), null, "aspects", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNode_Name(), theXMLTypePackage.getString(), "name", "", 1, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -307,7 +296,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	{
 		String source = null;	
 		addAnnotation
-		  (getRoot_Variables(), 
+		  (getGeppettoModel_Variables(), 
 		   source, 
 		   new String[] 
 		   {
@@ -325,7 +314,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	{
 		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
 		addAnnotation
-		  (getRoot_Variables(), 
+		  (getGeppettoModel_Variables(), 
 		   source, 
 		   new String[] 
 		   {

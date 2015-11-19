@@ -23,13 +23,13 @@ public interface GeppettoFactory extends EFactory
 	GeppettoFactory eINSTANCE = org.geppetto.model.impl.GeppettoFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Root</em>'.
+	 * Returns a new object of class '<em>Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Root</em>'.
+	 * @return a new object of class '<em>Model</em>'.
 	 * @generated
 	 */
-	Root createRoot();
+	GeppettoModel createGeppettoModel();
 
 	/**
 	 * Returns the package supported by this factory.
