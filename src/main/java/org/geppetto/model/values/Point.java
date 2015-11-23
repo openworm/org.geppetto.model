@@ -32,12 +32,12 @@ public interface Point extends Value
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
-	 * @see #setX(float)
+	 * @see #setX(double)
 	 * @see org.geppetto.model.values.ValuesPackage#getPoint_X()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Float" required="true"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Double" required="true"
 	 * @generated
 	 */
-	float getX();
+	double getX();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.values.Point#getX <em>X</em>}' attribute.
@@ -47,7 +47,7 @@ public interface Point extends Value
 	 * @see #getX()
 	 * @generated
 	 */
-	void setX(float value);
+	void setX(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Y</b></em>' attribute.
@@ -58,12 +58,12 @@ public interface Point extends Value
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
-	 * @see #setY(float)
+	 * @see #setY(double)
 	 * @see org.geppetto.model.values.ValuesPackage#getPoint_Y()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Float" required="true"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Double" required="true"
 	 * @generated
 	 */
-	float getY();
+	double getY();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.values.Point#getY <em>Y</em>}' attribute.
@@ -73,7 +73,7 @@ public interface Point extends Value
 	 * @see #getY()
 	 * @generated
 	 */
-	void setY(float value);
+	void setY(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Z</b></em>' attribute.
@@ -84,12 +84,12 @@ public interface Point extends Value
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Z</em>' attribute.
-	 * @see #setZ(float)
+	 * @see #setZ(double)
 	 * @see org.geppetto.model.values.ValuesPackage#getPoint_Z()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Float" required="true"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Double" required="true"
 	 * @generated
 	 */
-	float getZ();
+	double getZ();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.values.Point#getZ <em>Z</em>}' attribute.
@@ -99,6 +99,6 @@ public interface Point extends Value
 	 * @see #getZ()
 	 * @generated
 	 */
-	void setZ(float value);
+	void setZ(double value);
 
 } // Point

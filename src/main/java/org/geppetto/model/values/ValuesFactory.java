@@ -209,7 +209,7 @@ public interface ValuesFactory extends EFactory
 	 * @return a new object of class '<em>Particle</em>'.
 	 * @generated
 	 */
-	org.geppetto.model.values.Particle createParticle();
+	Particle createParticle();
 
 	/**
 	 * Returns a new object of class '<em>Skeleton Animation</em>'.

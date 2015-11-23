@@ -123,9 +123,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="aspect" eType="#//aspect/Aspect"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Point" eSuperTypes="#//values/Value">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Dyamics" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="initialCondition" eType="#//values/PhysicalQuantity"

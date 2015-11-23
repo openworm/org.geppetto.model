@@ -327,7 +327,7 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.geppetto.model.values.Particle createParticle()
+	public Particle createParticle()
 	{
 		ParticleImpl particle = new ParticleImpl();
 		return particle;

@@ -193,7 +193,7 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createCylinderAdapter();
 			}
 			@Override
-			public Adapter caseParticle(org.geppetto.model.values.Particle object)
+			public Adapter caseParticle(Particle object)
 			{
 				return createParticleAdapter();
 			}

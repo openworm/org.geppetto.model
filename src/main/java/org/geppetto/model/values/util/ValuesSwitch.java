@@ -271,7 +271,7 @@ public class ValuesSwitch<T> extends Switch<T>
 			}
 			case ValuesPackage.PARTICLE:
 			{
-				org.geppetto.model.values.Particle particle = (org.geppetto.model.values.Particle)theEObject;
+				Particle particle = (Particle)theEObject;
 				T result = caseParticle(particle);
 				if (result == null) result = caseVisualValue(particle);
 				if (result == null) result = casePoint(particle);
@@ -694,7 +694,7 @@ public class ValuesSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParticle(org.geppetto.model.values.Particle object)
+	public T caseParticle(Particle object)
 	{
 		return null;
 	}

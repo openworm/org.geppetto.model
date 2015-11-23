@@ -36,7 +36,7 @@ public class PointImpl extends ValueImpl implements Point
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float X_EDEFAULT = 0.0F;
+	protected static final double X_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
@@ -46,7 +46,7 @@ public class PointImpl extends ValueImpl implements Point
 	 * @generated
 	 * @ordered
 	 */
-	protected float x = X_EDEFAULT;
+	protected double x = X_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -56,7 +56,7 @@ public class PointImpl extends ValueImpl implements Point
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float Y_EDEFAULT = 0.0F;
+	protected static final double Y_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -66,7 +66,7 @@ public class PointImpl extends ValueImpl implements Point
 	 * @generated
 	 * @ordered
 	 */
-	protected float y = Y_EDEFAULT;
+	protected double y = Y_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getZ() <em>Z</em>}' attribute.
@@ -76,7 +76,7 @@ public class PointImpl extends ValueImpl implements Point
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float Z_EDEFAULT = 0.0F;
+	protected static final double Z_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getZ() <em>Z</em>}' attribute.
@@ -86,7 +86,7 @@ public class PointImpl extends ValueImpl implements Point
 	 * @generated
 	 * @ordered
 	 */
-	protected float z = Z_EDEFAULT;
+	protected double z = Z_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +114,7 @@ public class PointImpl extends ValueImpl implements Point
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getX()
+	public double getX()
 	{
 		return x;
 	}
@@ -124,9 +124,9 @@ public class PointImpl extends ValueImpl implements Point
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setX(float newX)
+	public void setX(double newX)
 	{
-		float oldX = x;
+		double oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINT__X, oldX, x));
@@ -137,7 +137,7 @@ public class PointImpl extends ValueImpl implements Point
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getY()
+	public double getY()
 	{
 		return y;
 	}
@@ -147,9 +147,9 @@ public class PointImpl extends ValueImpl implements Point
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setY(float newY)
+	public void setY(double newY)
 	{
-		float oldY = y;
+		double oldY = y;
 		y = newY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINT__Y, oldY, y));
@@ -160,7 +160,7 @@ public class PointImpl extends ValueImpl implements Point
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getZ()
+	public double getZ()
 	{
 		return z;
 	}
@@ -170,9 +170,9 @@ public class PointImpl extends ValueImpl implements Point
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setZ(float newZ)
+	public void setZ(double newZ)
 	{
-		float oldZ = z;
+		double oldZ = z;
 		z = newZ;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINT__Z, oldZ, z));
@@ -209,13 +209,13 @@ public class PointImpl extends ValueImpl implements Point
 		switch (featureID)
 		{
 			case ValuesPackage.POINT__X:
-				setX((Float)newValue);
+				setX((Double)newValue);
 				return;
 			case ValuesPackage.POINT__Y:
-				setY((Float)newValue);
+				setY((Double)newValue);
 				return;
 			case ValuesPackage.POINT__Z:
-				setZ((Float)newValue);
+				setZ((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

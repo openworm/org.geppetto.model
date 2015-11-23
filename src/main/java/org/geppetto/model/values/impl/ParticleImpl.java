@@ -5,6 +5,7 @@ package org.geppetto.model.values.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.geppetto.model.values.Particle;
 import org.geppetto.model.values.Point;
 import org.geppetto.model.values.ValuesPackage;
 
@@ -23,7 +24,7 @@ import org.geppetto.model.values.ValuesPackage;
  *
  * @generated
  */
-public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.values.Particle
+public class ParticleImpl extends VisualValueImpl implements Particle
 {
 	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
@@ -33,7 +34,7 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float X_EDEFAULT = 0.0F;
+	protected static final double X_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
@@ -43,7 +44,7 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * @generated
 	 * @ordered
 	 */
-	protected float x = X_EDEFAULT;
+	protected double x = X_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -53,7 +54,7 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float Y_EDEFAULT = 0.0F;
+	protected static final double Y_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -63,7 +64,7 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * @generated
 	 * @ordered
 	 */
-	protected float y = Y_EDEFAULT;
+	protected double y = Y_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getZ() <em>Z</em>}' attribute.
@@ -73,7 +74,7 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float Z_EDEFAULT = 0.0F;
+	protected static final double Z_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getZ() <em>Z</em>}' attribute.
@@ -83,7 +84,7 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * @generated
 	 * @ordered
 	 */
-	protected float z = Z_EDEFAULT;
+	protected double z = Z_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,7 +112,7 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getX()
+	public double getX()
 	{
 		return x;
 	}
@@ -121,9 +122,9 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setX(float newX)
+	public void setX(double newX)
 	{
-		float oldX = x;
+		double oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.PARTICLE__X, oldX, x));
@@ -134,7 +135,7 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getY()
+	public double getY()
 	{
 		return y;
 	}
@@ -144,9 +145,9 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setY(float newY)
+	public void setY(double newY)
 	{
-		float oldY = y;
+		double oldY = y;
 		y = newY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.PARTICLE__Y, oldY, y));
@@ -157,7 +158,7 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getZ()
+	public double getZ()
 	{
 		return z;
 	}
@@ -167,9 +168,9 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setZ(float newZ)
+	public void setZ(double newZ)
 	{
-		float oldZ = z;
+		double oldZ = z;
 		z = newZ;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.PARTICLE__Z, oldZ, z));
@@ -206,13 +207,13 @@ public class ParticleImpl extends VisualValueImpl implements org.geppetto.model.
 		switch (featureID)
 		{
 			case ValuesPackage.PARTICLE__X:
-				setX((Float)newValue);
+				setX((Double)newValue);
 				return;
 			case ValuesPackage.PARTICLE__Y:
-				setY((Float)newValue);
+				setY((Double)newValue);
 				return;
 			case ValuesPackage.PARTICLE__Z:
-				setZ((Float)newValue);
+				setZ((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
