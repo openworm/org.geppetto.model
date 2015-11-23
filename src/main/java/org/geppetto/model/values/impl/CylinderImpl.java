@@ -39,7 +39,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float BOTTOM_RADIUS_EDEFAULT = 0.0F;
+	protected static final double BOTTOM_RADIUS_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getBottomRadius() <em>Bottom Radius</em>}' attribute.
@@ -49,7 +49,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * @generated
 	 * @ordered
 	 */
-	protected float bottomRadius = BOTTOM_RADIUS_EDEFAULT;
+	protected double bottomRadius = BOTTOM_RADIUS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTopRadius() <em>Top Radius</em>}' attribute.
@@ -59,7 +59,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float TOP_RADIUS_EDEFAULT = 0.0F;
+	protected static final double TOP_RADIUS_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getTopRadius() <em>Top Radius</em>}' attribute.
@@ -69,7 +69,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * @generated
 	 * @ordered
 	 */
-	protected float topRadius = TOP_RADIUS_EDEFAULT;
+	protected double topRadius = TOP_RADIUS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -79,7 +79,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float HEIGHT_EDEFAULT = 0.0F;
+	protected static final double HEIGHT_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -89,7 +89,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * @generated
 	 * @ordered
 	 */
-	protected float height = HEIGHT_EDEFAULT;
+	protected double height = HEIGHT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDistal() <em>Distal</em>}' reference.
@@ -127,7 +127,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getBottomRadius()
+	public double getBottomRadius()
 	{
 		return bottomRadius;
 	}
@@ -137,9 +137,9 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBottomRadius(float newBottomRadius)
+	public void setBottomRadius(double newBottomRadius)
 	{
-		float oldBottomRadius = bottomRadius;
+		double oldBottomRadius = bottomRadius;
 		bottomRadius = newBottomRadius;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__BOTTOM_RADIUS, oldBottomRadius, bottomRadius));
@@ -150,7 +150,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getTopRadius()
+	public double getTopRadius()
 	{
 		return topRadius;
 	}
@@ -160,9 +160,9 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTopRadius(float newTopRadius)
+	public void setTopRadius(double newTopRadius)
 	{
-		float oldTopRadius = topRadius;
+		double oldTopRadius = topRadius;
 		topRadius = newTopRadius;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__TOP_RADIUS, oldTopRadius, topRadius));
@@ -173,7 +173,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getHeight()
+	public double getHeight()
 	{
 		return height;
 	}
@@ -183,9 +183,9 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeight(float newHeight)
+	public void setHeight(double newHeight)
 	{
-		float oldHeight = height;
+		double oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__HEIGHT, oldHeight, height));
@@ -268,13 +268,13 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 		switch (featureID)
 		{
 			case ValuesPackage.CYLINDER__BOTTOM_RADIUS:
-				setBottomRadius((Float)newValue);
+				setBottomRadius((Double)newValue);
 				return;
 			case ValuesPackage.CYLINDER__TOP_RADIUS:
-				setTopRadius((Float)newValue);
+				setTopRadius((Double)newValue);
 				return;
 			case ValuesPackage.CYLINDER__HEIGHT:
-				setHeight((Float)newValue);
+				setHeight((Double)newValue);
 				return;
 			case ValuesPackage.CYLINDER__DISTAL:
 				setDistal((Point)newValue);

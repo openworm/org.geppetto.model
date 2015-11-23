@@ -161,15 +161,15 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Sphere" eSuperTypes="#//values/VisualValue">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Cylinder" eSuperTypes="#//values/VisualValue">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="bottomRadius" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="topRadius" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="distal" eType="#//values/Point"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Particle" eSuperTypes="#//values/VisualValue #//values/Point"/>

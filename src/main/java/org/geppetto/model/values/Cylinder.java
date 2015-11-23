@@ -33,12 +33,12 @@ public interface Cylinder extends VisualValue
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bottom Radius</em>' attribute.
-	 * @see #setBottomRadius(float)
+	 * @see #setBottomRadius(double)
 	 * @see org.geppetto.model.values.ValuesPackage#getCylinder_BottomRadius()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Float" required="true"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Double" required="true"
 	 * @generated
 	 */
-	float getBottomRadius();
+	double getBottomRadius();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.values.Cylinder#getBottomRadius <em>Bottom Radius</em>}' attribute.
@@ -48,7 +48,7 @@ public interface Cylinder extends VisualValue
 	 * @see #getBottomRadius()
 	 * @generated
 	 */
-	void setBottomRadius(float value);
+	void setBottomRadius(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Top Radius</b></em>' attribute.
@@ -59,12 +59,12 @@ public interface Cylinder extends VisualValue
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Top Radius</em>' attribute.
-	 * @see #setTopRadius(float)
+	 * @see #setTopRadius(double)
 	 * @see org.geppetto.model.values.ValuesPackage#getCylinder_TopRadius()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Float" required="true"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Double" required="true"
 	 * @generated
 	 */
-	float getTopRadius();
+	double getTopRadius();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.values.Cylinder#getTopRadius <em>Top Radius</em>}' attribute.
@@ -74,7 +74,7 @@ public interface Cylinder extends VisualValue
 	 * @see #getTopRadius()
 	 * @generated
 	 */
-	void setTopRadius(float value);
+	void setTopRadius(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Height</b></em>' attribute.
@@ -85,12 +85,12 @@ public interface Cylinder extends VisualValue
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(float)
+	 * @see #setHeight(double)
 	 * @see org.geppetto.model.values.ValuesPackage#getCylinder_Height()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Float" required="true"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Double" required="true"
 	 * @generated
 	 */
-	float getHeight();
+	double getHeight();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.values.Cylinder#getHeight <em>Height</em>}' attribute.
@@ -100,7 +100,7 @@ public interface Cylinder extends VisualValue
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(float value);
+	void setHeight(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Distal</b></em>' reference.

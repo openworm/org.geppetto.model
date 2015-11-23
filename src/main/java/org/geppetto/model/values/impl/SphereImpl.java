@@ -34,7 +34,7 @@ public class SphereImpl extends VisualValueImpl implements Sphere
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float RADIUS_EDEFAULT = 0.0F;
+	protected static final double RADIUS_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getRadius() <em>Radius</em>}' attribute.
@@ -44,7 +44,7 @@ public class SphereImpl extends VisualValueImpl implements Sphere
 	 * @generated
 	 * @ordered
 	 */
-	protected float radius = RADIUS_EDEFAULT;
+	protected double radius = RADIUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,7 +72,7 @@ public class SphereImpl extends VisualValueImpl implements Sphere
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getRadius()
+	public double getRadius()
 	{
 		return radius;
 	}
@@ -82,9 +82,9 @@ public class SphereImpl extends VisualValueImpl implements Sphere
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRadius(float newRadius)
+	public void setRadius(double newRadius)
 	{
-		float oldRadius = radius;
+		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.SPHERE__RADIUS, oldRadius, radius));
@@ -117,7 +117,7 @@ public class SphereImpl extends VisualValueImpl implements Sphere
 		switch (featureID)
 		{
 			case ValuesPackage.SPHERE__RADIUS:
-				setRadius((Float)newValue);
+				setRadius((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

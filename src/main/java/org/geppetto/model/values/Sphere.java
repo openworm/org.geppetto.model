@@ -30,12 +30,12 @@ public interface Sphere extends VisualValue
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
-	 * @see #setRadius(float)
+	 * @see #setRadius(double)
 	 * @see org.geppetto.model.values.ValuesPackage#getSphere_Radius()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Float" required="true"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Double" required="true"
 	 * @generated
 	 */
-	float getRadius();
+	double getRadius();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.values.Sphere#getRadius <em>Radius</em>}' attribute.
@@ -45,6 +45,6 @@ public interface Sphere extends VisualValue
 	 * @see #getRadius()
 	 * @generated
 	 */
-	void setRadius(float value);
+	void setRadius(double value);
 
 } // Sphere
