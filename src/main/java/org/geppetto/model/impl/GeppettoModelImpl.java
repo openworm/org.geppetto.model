@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
@@ -43,7 +44,7 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	protected EList<Variable> variables;
 
 	/**
-	 * The cached value of the '{@link #getAspects() <em>Aspects</em>}' containment reference list.
+	 * The cached value of the '{@link #getAspects() <em>Aspects</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAspects()
@@ -96,7 +97,7 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	{
 		if (aspects == null)
 		{
-			aspects = new EObjectContainmentEList<Aspect>(Aspect.class, this, GeppettoPackage.GEPPETTO_MODEL__ASPECTS);
+			aspects = new EObjectResolvingEList<Aspect>(Aspect.class, this, GeppettoPackage.GEPPETTO_MODEL__ASPECTS);
 		}
 		return aspects;
 	}
@@ -113,8 +114,6 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 		{
 			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				return ((InternalEList<?>)getVariables()).basicRemove(otherEnd, msgs);
-			case GeppettoPackage.GEPPETTO_MODEL__ASPECTS:
-				return ((InternalEList<?>)getAspects()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

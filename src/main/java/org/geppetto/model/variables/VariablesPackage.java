@@ -97,13 +97,31 @@ public interface VariablesPackage extends EPackage
 	int VARIABLE__INITIAL_VALUES = GeppettoPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Static</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__STATIC = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__POSITION = GeppettoPackage.NODE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+	int VARIABLE_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -160,6 +178,24 @@ public interface VariablesPackage extends EPackage
 	 * @ordered
 	 */
 	int ARRAY_VARIABLE__INITIAL_VALUES = VARIABLE__INITIAL_VALUES;
+
+	/**
+	 * The feature id for the '<em><b>Static</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_VARIABLE__STATIC = VARIABLE__STATIC;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_VARIABLE__POSITION = VARIABLE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -231,6 +267,28 @@ public interface VariablesPackage extends EPackage
 	EReference getVariable_InitialValues();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.variables.Variable#isStatic <em>Static</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Static</em>'.
+	 * @see org.geppetto.model.variables.Variable#isStatic()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_Static();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.variables.Variable#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Position</em>'.
+	 * @see org.geppetto.model.variables.Variable#getPosition()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EReference getVariable_Position();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.variables.ArrayVariable <em>Array Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -300,6 +358,22 @@ public interface VariablesPackage extends EPackage
 		 * @generated
 		 */
 		EReference VARIABLE__INITIAL_VALUES = eINSTANCE.getVariable_InitialValues();
+
+		/**
+		 * The meta object literal for the '<em><b>Static</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__STATIC = eINSTANCE.getVariable_Static();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE__POSITION = eINSTANCE.getVariable_Position();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.variables.impl.ArrayVariableImpl <em>Array Variable</em>}' class.

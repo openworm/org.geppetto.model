@@ -10,8 +10,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.GeppettoFactory;
+import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
+import org.geppetto.model.LibraryManager;
 import org.geppetto.model.Node;
 import org.geppetto.model.aspect.AspectPackage;
 import org.geppetto.model.aspect.impl.AspectPackageImpl;
@@ -43,6 +45,20 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * @generated
 	 */
 	private EClass nodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass geppettoLibraryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass libraryManagerEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -189,6 +205,46 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGeppettoLibrary()
+	{
+		return geppettoLibraryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeppettoLibrary_Types()
+	{
+		return (EReference)geppettoLibraryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLibraryManager()
+	{
+		return libraryManagerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLibraryManager_Libraries()
+	{
+		return (EReference)libraryManagerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GeppettoFactory getGeppettoFactory()
 	{
 		return (GeppettoFactory)getEFactoryInstance();
@@ -221,6 +277,12 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		nodeEClass = createEClass(NODE);
 		createEAttribute(nodeEClass, NODE__NAME);
 		createEOperation(nodeEClass, NODE___GET_PATH);
+
+		geppettoLibraryEClass = createEClass(GEPPETTO_LIBRARY);
+		createEReference(geppettoLibraryEClass, GEPPETTO_LIBRARY__TYPES);
+
+		libraryManagerEClass = createEClass(LIBRARY_MANAGER);
+		createEReference(libraryManagerEClass, LIBRARY_MANAGER__LIBRARIES);
 	}
 
 	/**
@@ -265,63 +327,26 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		geppettoLibraryEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(geppettoModelEClass, GeppettoModel.class, "GeppettoModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeppettoModel_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeppettoModel_Aspects(), theAspectPackage.getAspect(), null, "aspects", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeppettoModel_Aspects(), theAspectPackage.getAspect(), null, "aspects", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNode_Name(), theXMLTypePackage.getString(), "name", "", 1, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getNode__GetPath(), theXMLTypePackage.getString(), "getPath", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEClass(geppettoLibraryEClass, GeppettoLibrary.class, "GeppettoLibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGeppettoLibrary_Types(), theTypesPackage.getType(), null, "types", null, 0, -1, GeppettoLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(libraryManagerEClass, LibraryManager.class, "LibraryManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLibraryManager_Libraries(), this.getGeppettoLibrary(), null, "libraries", null, 0, -1, LibraryManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
-
-		// Create annotations
-		// null
-		createNullAnnotations();
-		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
-		createExtendedMetaDataAnnotations();
-	}
-
-	/**
-	 * Initializes the annotations for <b>null</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createNullAnnotations()
-	{
-		String source = null;	
-		addAnnotation
-		  (getGeppettoModel_Variables(), 
-		   source, 
-		   new String[] 
-		   {
-			 "appinfo", "\n\t\t\t\t\t\t\t<jxb:property name=\"variables\" xmlns:jxb=\"http://java.sun.com/xml/ns/jaxb\"/>\n\t\t\t\t\t\t"
-		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createExtendedMetaDataAnnotations()
-	{
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
-		addAnnotation
-		  (getGeppettoModel_Variables(), 
-		   source, 
-		   new String[] 
-		   {
-			 "kind", "element",
-			 "name", "variable",
-			 "namespace", "##targetNamespace"
-		   });
 	}
 
 } //GeppettoPackageImpl

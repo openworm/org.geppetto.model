@@ -4,16 +4,14 @@ package org.geppetto.model.variables.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.geppetto.model.impl.NodeImpl;
 import org.geppetto.model.types.Type;
-import org.geppetto.model.types.TypesPackage;
+import org.geppetto.model.values.Point;
 import org.geppetto.model.values.Value;
 import org.geppetto.model.variables.Variable;
 import org.geppetto.model.variables.VariablesPackage;
@@ -27,6 +25,8 @@ import org.geppetto.model.variables.VariablesPackage;
  * <ul>
  *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#getTypes <em>Types</em>}</li>
  *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#getInitialValues <em>Initial Values</em>}</li>
+ *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#isStatic <em>Static</em>}</li>
+ *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#getPosition <em>Position</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,6 +53,36 @@ public class VariableImpl extends NodeImpl implements Variable
 	 * @ordered
 	 */
 	protected Value initialValues;
+
+	/**
+	 * The default value of the '{@link #isStatic() <em>Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isStatic()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean STATIC_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isStatic() <em>Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isStatic()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean static_ = STATIC_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPosition() <em>Position</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPosition()
+	 * @generated
+	 * @ordered
+	 */
+	protected Point position;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -84,7 +114,7 @@ public class VariableImpl extends NodeImpl implements Variable
 	{
 		if (types == null)
 		{
-			types = new EObjectWithInverseResolvingEList.ManyInverse<Type>(Type.class, this, VariablesPackage.VARIABLE__TYPES, TypesPackage.TYPE__REFERENCED_VARIABLES);
+			types = new EObjectResolvingEList<Type>(Type.class, this, VariablesPackage.VARIABLE__TYPES);
 		}
 		return types;
 	}
@@ -137,16 +167,9 @@ public class VariableImpl extends NodeImpl implements Variable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	public boolean isStatic()
 	{
-		switch (featureID)
-		{
-			case VariablesPackage.VARIABLE__TYPES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTypes()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
+		return static_;
 	}
 
 	/**
@@ -154,15 +177,55 @@ public class VariableImpl extends NodeImpl implements Variable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	public void setStatic(boolean newStatic)
 	{
-		switch (featureID)
+		boolean oldStatic = static_;
+		static_ = newStatic;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__STATIC, oldStatic, static_));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Point getPosition()
+	{
+		if (position != null && position.eIsProxy())
 		{
-			case VariablesPackage.VARIABLE__TYPES:
-				return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
+			InternalEObject oldPosition = (InternalEObject)position;
+			position = (Point)eResolveProxy(oldPosition);
+			if (position != oldPosition)
+			{
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VariablesPackage.VARIABLE__POSITION, oldPosition, position));
+			}
 		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Point basicGetPosition()
+	{
+		return position;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPosition(Point newPosition)
+	{
+		Point oldPosition = position;
+		position = newPosition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__POSITION, oldPosition, position));
 	}
 
 	/**
@@ -180,6 +243,11 @@ public class VariableImpl extends NodeImpl implements Variable
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
 				if (resolve) return getInitialValues();
 				return basicGetInitialValues();
+			case VariablesPackage.VARIABLE__STATIC:
+				return isStatic();
+			case VariablesPackage.VARIABLE__POSITION:
+				if (resolve) return getPosition();
+				return basicGetPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -202,6 +270,12 @@ public class VariableImpl extends NodeImpl implements Variable
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
 				setInitialValues((Value)newValue);
 				return;
+			case VariablesPackage.VARIABLE__STATIC:
+				setStatic((Boolean)newValue);
+				return;
+			case VariablesPackage.VARIABLE__POSITION:
+				setPosition((Point)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -222,6 +296,12 @@ public class VariableImpl extends NodeImpl implements Variable
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
 				setInitialValues((Value)null);
 				return;
+			case VariablesPackage.VARIABLE__STATIC:
+				setStatic(STATIC_EDEFAULT);
+				return;
+			case VariablesPackage.VARIABLE__POSITION:
+				setPosition((Point)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -240,8 +320,29 @@ public class VariableImpl extends NodeImpl implements Variable
 				return types != null && !types.isEmpty();
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
 				return initialValues != null;
+			case VariablesPackage.VARIABLE__STATIC:
+				return static_ != STATIC_EDEFAULT;
+			case VariablesPackage.VARIABLE__POSITION:
+				return position != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString()
+	{
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (static: ");
+		result.append(static_);
+		result.append(')');
+		return result.toString();
 	}
 
 } //VariableImpl

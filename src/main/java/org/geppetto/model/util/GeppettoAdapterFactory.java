@@ -85,6 +85,16 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 				return createNodeAdapter();
 			}
 			@Override
+			public Adapter caseGeppettoLibrary(GeppettoLibrary object)
+			{
+				return createGeppettoLibraryAdapter();
+			}
+			@Override
+			public Adapter caseLibraryManager(LibraryManager object)
+			{
+				return createLibraryManagerAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object)
 			{
 				return createEObjectAdapter();
@@ -132,6 +142,36 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createNodeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.GeppettoLibrary <em>Library</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.GeppettoLibrary
+	 * @generated
+	 */
+	public Adapter createGeppettoLibraryAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.LibraryManager <em>Library Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.LibraryManager
+	 * @generated
+	 */
+	public Adapter createLibraryManagerAdapter()
 	{
 		return null;
 	}

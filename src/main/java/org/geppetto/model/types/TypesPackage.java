@@ -80,31 +80,13 @@ public interface TypesPackage extends EPackage
 	int TYPE__NAME = GeppettoPackage.NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE__REFERENCED_VARIABLES = GeppettoPackage.NODE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__SUPER_TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE__ASPECT = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+	int TYPE__SUPER_TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
@@ -113,7 +95,25 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__DOMAIN_MODEL = GeppettoPackage.NODE_FEATURE_COUNT + 3;
+	int TYPE__DOMAIN_MODEL = GeppettoPackage.NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__ABSTRACT = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__VISUAL_TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -152,14 +152,14 @@ public interface TypesPackage extends EPackage
 	int TYPE_OPERATION_COUNT = GeppettoPackage.NODE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.types.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.VisualTypeImpl <em>Visual Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.types.impl.PrimitiveTypeImpl
-	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getPrimitiveType()
+	 * @see org.geppetto.model.types.impl.VisualTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getVisualType()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE = 1;
+	int VISUAL_TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -168,16 +168,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_TYPE__NAME = TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIMITIVE_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+	int VISUAL_TYPE__NAME = TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -186,16 +177,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIMITIVE_TYPE__ASPECT = TYPE__ASPECT;
+	int VISUAL_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
@@ -204,16 +186,34 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+	int VISUAL_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
-	 * The number of structural features of the '<em>Primitive Type</em>' class.
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
+	int VISUAL_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Visual Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -222,7 +222,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_TYPE___GET_PATH = TYPE___GET_PATH;
+	int VISUAL_TYPE___GET_PATH = TYPE___GET_PATH;
 
 	/**
 	 * The operation id for the '<em>Get Default Value</em>' operation.
@@ -231,116 +231,16 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+	int VISUAL_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
-	 * The number of operations of the '<em>Primitive Type</em>' class.
+	 * The number of operations of the '<em>Visual Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.geppetto.model.types.impl.IntTypeImpl <em>Int Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.types.impl.IntTypeImpl
-	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getIntType()
-	 * @generated
-	 */
-	int INT_TYPE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE__NAME = PRIMITIVE_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE__REFERENCED_VARIABLES = PRIMITIVE_TYPE__REFERENCED_VARIABLES;
-
-	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
-
-	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
-
-	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE__DEFAULT_VALUE = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Int Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Path</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE___GET_PATH = PRIMITIVE_TYPE___GET_PATH;
-
-	/**
-	 * The operation id for the '<em>Get Default Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE___GET_DEFAULT_VALUE = PRIMITIVE_TYPE___GET_DEFAULT_VALUE;
-
-	/**
-	 * The number of operations of the '<em>Int Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INT_TYPE_OPERATION_COUNT = PRIMITIVE_TYPE_OPERATION_COUNT + 0;
+	int VISUAL_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.types.impl.ImportTypeImpl <em>Import Type</em>}' class.
@@ -350,7 +250,7 @@ public interface TypesPackage extends EPackage
 	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getImportType()
 	 * @generated
 	 */
-	int IMPORT_TYPE = 3;
+	int IMPORT_TYPE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -362,15 +262,6 @@ public interface TypesPackage extends EPackage
 	int IMPORT_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
-
-	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -380,15 +271,6 @@ public interface TypesPackage extends EPackage
 	int IMPORT_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TYPE__ASPECT = TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -396,6 +278,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int IMPORT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -468,7 +368,7 @@ public interface TypesPackage extends EPackage
 	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getCompositeType()
 	 * @generated
 	 */
-	int COMPOSITE_TYPE = 4;
+	int COMPOSITE_TYPE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -480,15 +380,6 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
-
-	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -498,15 +389,6 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_TYPE__ASPECT = TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -514,6 +396,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int COMPOSITE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -561,98 +461,6 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.types.impl.AnyPrimitiveTypeImpl <em>Any Primitive Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.types.impl.AnyPrimitiveTypeImpl
-	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getAnyPrimitiveType()
-	 * @generated
-	 */
-	int ANY_PRIMITIVE_TYPE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE__NAME = PRIMITIVE_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE__REFERENCED_VARIABLES = PRIMITIVE_TYPE__REFERENCED_VARIABLES;
-
-	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
-
-	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
-
-	/**
-	 * The number of structural features of the '<em>Any Primitive Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Path</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE___GET_PATH = PRIMITIVE_TYPE___GET_PATH;
-
-	/**
-	 * The operation id for the '<em>Get Default Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE___GET_DEFAULT_VALUE = PRIMITIVE_TYPE___GET_DEFAULT_VALUE;
-
-	/**
-	 * The number of operations of the '<em>Any Primitive Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANY_PRIMITIVE_TYPE_OPERATION_COUNT = PRIMITIVE_TYPE_OPERATION_COUNT + 0;
-
-
-	/**
 	 * The meta object id for the '{@link org.geppetto.model.types.impl.SimpleTypeImpl <em>Simple Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -660,7 +468,7 @@ public interface TypesPackage extends EPackage
 	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getSimpleType()
 	 * @generated
 	 */
-	int SIMPLE_TYPE = 6;
+	int SIMPLE_TYPE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -672,15 +480,6 @@ public interface TypesPackage extends EPackage
 	int SIMPLE_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
-
-	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -690,15 +489,6 @@ public interface TypesPackage extends EPackage
 	int SIMPLE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TYPE__ASPECT = TYPE__ASPECT;
-
-	/**
 	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -706,6 +496,24 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int SIMPLE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
 
 	/**
 	 * The number of structural features of the '<em>Simple Type</em>' class.
@@ -744,14 +552,14 @@ public interface TypesPackage extends EPackage
 	int SIMPLE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.types.impl.FloatTypeImpl <em>Float Type</em>}' class.
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.PointerTypeImpl <em>Pointer Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.types.impl.FloatTypeImpl
-	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getFloatType()
+	 * @see org.geppetto.model.types.impl.PointerTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getPointerType()
 	 * @generated
 	 */
-	int FLOAT_TYPE = 7;
+	int POINTER_TYPE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -760,16 +568,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_TYPE__NAME = PRIMITIVE_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOAT_TYPE__REFERENCED_VARIABLES = PRIMITIVE_TYPE__REFERENCED_VARIABLES;
+	int POINTER_TYPE__NAME = TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -778,16 +577,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOAT_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
+	int POINTER_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
@@ -796,25 +586,43 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
+	int POINTER_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_TYPE__DEFAULT_VALUE = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
+	int POINTER_TYPE__ABSTRACT = TYPE__ABSTRACT;
 
 	/**
-	 * The number of structural features of the '<em>Float Type</em>' class.
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_TYPE_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 1;
+	int POINTER_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINTER_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Pointer Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINTER_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -823,7 +631,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_TYPE___GET_PATH = PRIMITIVE_TYPE___GET_PATH;
+	int POINTER_TYPE___GET_PATH = TYPE___GET_PATH;
 
 	/**
 	 * The operation id for the '<em>Get Default Value</em>' operation.
@@ -832,26 +640,26 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_TYPE___GET_DEFAULT_VALUE = PRIMITIVE_TYPE___GET_DEFAULT_VALUE;
+	int POINTER_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
-	 * The number of operations of the '<em>Float Type</em>' class.
+	 * The number of operations of the '<em>Pointer Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_TYPE_OPERATION_COUNT = PRIMITIVE_TYPE_OPERATION_COUNT + 0;
+	int POINTER_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.types.impl.DoubleTypeImpl <em>Double Type</em>}' class.
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.QuantityTypeImpl <em>Quantity Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.types.impl.DoubleTypeImpl
-	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getDoubleType()
+	 * @see org.geppetto.model.types.impl.QuantityTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getQuantityType()
 	 * @generated
 	 */
-	int DOUBLE_TYPE = 8;
+	int QUANTITY_TYPE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -860,16 +668,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DOUBLE_TYPE__NAME = PRIMITIVE_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOUBLE_TYPE__REFERENCED_VARIABLES = PRIMITIVE_TYPE__REFERENCED_VARIABLES;
+	int QUANTITY_TYPE__NAME = TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -878,16 +677,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DOUBLE_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOUBLE_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
+	int QUANTITY_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
@@ -896,25 +686,43 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DOUBLE_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
+	int QUANTITY_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOUBLE_TYPE__DEFAULT_VALUE = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
+	int QUANTITY_TYPE__ABSTRACT = TYPE__ABSTRACT;
 
 	/**
-	 * The number of structural features of the '<em>Double Type</em>' class.
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOUBLE_TYPE_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 1;
+	int QUANTITY_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Quantity Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -923,7 +731,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DOUBLE_TYPE___GET_PATH = PRIMITIVE_TYPE___GET_PATH;
+	int QUANTITY_TYPE___GET_PATH = TYPE___GET_PATH;
 
 	/**
 	 * The operation id for the '<em>Get Default Value</em>' operation.
@@ -932,26 +740,26 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DOUBLE_TYPE___GET_DEFAULT_VALUE = PRIMITIVE_TYPE___GET_DEFAULT_VALUE;
+	int QUANTITY_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
-	 * The number of operations of the '<em>Double Type</em>' class.
+	 * The number of operations of the '<em>Quantity Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOUBLE_TYPE_OPERATION_COUNT = PRIMITIVE_TYPE_OPERATION_COUNT + 0;
+	int QUANTITY_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.types.impl.StringTypeImpl <em>String Type</em>}' class.
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.ParameterTypeImpl <em>Parameter Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.types.impl.StringTypeImpl
-	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getStringType()
+	 * @see org.geppetto.model.types.impl.ParameterTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int STRING_TYPE = 9;
+	int PARAMETER_TYPE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -960,16 +768,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TYPE__NAME = PRIMITIVE_TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TYPE__REFERENCED_VARIABLES = PRIMITIVE_TYPE__REFERENCED_VARIABLES;
+	int PARAMETER_TYPE__NAME = TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Super Type</b></em>' reference.
@@ -978,16 +777,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TYPE__SUPER_TYPE = PRIMITIVE_TYPE__SUPER_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TYPE__ASPECT = PRIMITIVE_TYPE__ASPECT;
+	int PARAMETER_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
@@ -996,25 +786,43 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TYPE__DOMAIN_MODEL = PRIMITIVE_TYPE__DOMAIN_MODEL;
+	int PARAMETER_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
-	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TYPE__DEFAULT_VALUE = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
+	int PARAMETER_TYPE__ABSTRACT = TYPE__ABSTRACT;
 
 	/**
-	 * The number of structural features of the '<em>String Type</em>' class.
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TYPE_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 1;
+	int PARAMETER_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Parameter Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -1023,7 +831,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TYPE___GET_PATH = PRIMITIVE_TYPE___GET_PATH;
+	int PARAMETER_TYPE___GET_PATH = TYPE___GET_PATH;
 
 	/**
 	 * The operation id for the '<em>Get Default Value</em>' operation.
@@ -1032,16 +840,816 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TYPE___GET_DEFAULT_VALUE = PRIMITIVE_TYPE___GET_DEFAULT_VALUE;
+	int PARAMETER_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
-	 * The number of operations of the '<em>String Type</em>' class.
+	 * The number of operations of the '<em>Parameter Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TYPE_OPERATION_COUNT = PRIMITIVE_TYPE_OPERATION_COUNT + 0;
+	int PARAMETER_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.StateVariableTypeImpl <em>State Variable Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.StateVariableTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getStateVariableType()
+	 * @generated
+	 */
+	int STATE_VARIABLE_TYPE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>State Variable Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>State Variable Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.DynamicsTypeImpl <em>Dynamics Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.DynamicsTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getDynamicsType()
+	 * @generated
+	 */
+	int DYNAMICS_TYPE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Dynamics Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Dynamics Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.ArgumentTypeImpl <em>Argument Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.ArgumentTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getArgumentType()
+	 * @generated
+	 */
+	int ARGUMENT_TYPE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Argument Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Argument Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.ExpressionTypeImpl <em>Expression Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.ExpressionTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getExpressionType()
+	 * @generated
+	 */
+	int EXPRESSION_TYPE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Expression Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Expression Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.HTMLTypeImpl <em>HTML Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.HTMLTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getHTMLType()
+	 * @generated
+	 */
+	int HTML_TYPE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>HTML Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>HTML Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.TextTypeImpl <em>Text Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.TextTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getTextType()
+	 * @generated
+	 */
+	int TEXT_TYPE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Text Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Text Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.URLTypeImpl <em>URL Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.URLTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getURLType()
+	 * @generated
+	 */
+	int URL_TYPE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>URL Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>URL Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.PointTypeImpl <em>Point Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.PointTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getPointType()
+	 * @generated
+	 */
+	int POINT_TYPE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Point Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Point Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1055,15 +1663,15 @@ public interface TypesPackage extends EPackage
 	EClass getType();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.geppetto.model.types.Type#getAspect <em>Aspect</em>}'.
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.Type#getSuperType <em>Super Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Aspect</em>'.
-	 * @see org.geppetto.model.types.Type#getAspect()
+	 * @return the meta object for the reference '<em>Super Type</em>'.
+	 * @see org.geppetto.model.types.Type#getSuperType()
 	 * @see #getType()
 	 * @generated
 	 */
-	EReference getType_Aspect();
+	EReference getType_SuperType();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}'.
@@ -1077,26 +1685,26 @@ public interface TypesPackage extends EPackage
 	EAttribute getType_DomainModel();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.geppetto.model.types.Type#getReferencedVariables <em>Referenced Variables</em>}'.
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.types.Type#isAbstract <em>Abstract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Referenced Variables</em>'.
-	 * @see org.geppetto.model.types.Type#getReferencedVariables()
+	 * @return the meta object for the attribute '<em>Abstract</em>'.
+	 * @see org.geppetto.model.types.Type#isAbstract()
 	 * @see #getType()
 	 * @generated
 	 */
-	EReference getType_ReferencedVariables();
+	EAttribute getType_Abstract();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.types.Type#getSuperType <em>Super Type</em>}'.
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.Type#getVisualType <em>Visual Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Super Type</em>'.
-	 * @see org.geppetto.model.types.Type#getSuperType()
+	 * @return the meta object for the reference '<em>Visual Type</em>'.
+	 * @see org.geppetto.model.types.Type#getVisualType()
 	 * @see #getType()
 	 * @generated
 	 */
-	EReference getType_SuperType();
+	EReference getType_VisualType();
 
 	/**
 	 * Returns the meta object for the '{@link org.geppetto.model.types.Type#getDefaultValue() <em>Get Default Value</em>}' operation.
@@ -1109,35 +1717,14 @@ public interface TypesPackage extends EPackage
 	EOperation getType__GetDefaultValue();
 
 	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.types.PrimitiveType <em>Primitive Type</em>}'.
+	 * Returns the meta object for class '{@link org.geppetto.model.types.VisualType <em>Visual Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Primitive Type</em>'.
-	 * @see org.geppetto.model.types.PrimitiveType
+	 * @return the meta object for class '<em>Visual Type</em>'.
+	 * @see org.geppetto.model.types.VisualType
 	 * @generated
 	 */
-	EClass getPrimitiveType();
-
-	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.types.IntType <em>Int Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Int Type</em>'.
-	 * @see org.geppetto.model.types.IntType
-	 * @generated
-	 */
-	EClass getIntType();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.geppetto.model.types.IntType#getDefaultValue <em>Default Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Default Value</em>'.
-	 * @see org.geppetto.model.types.IntType#getDefaultValue()
-	 * @see #getIntType()
-	 * @generated
-	 */
-	EReference getIntType_DefaultValue();
+	EClass getVisualType();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.types.ImportType <em>Import Type</em>}'.
@@ -1204,16 +1791,6 @@ public interface TypesPackage extends EPackage
 	EReference getCompositeType_Variables();
 
 	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.types.AnyPrimitiveType <em>Any Primitive Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Any Primitive Type</em>'.
-	 * @see org.geppetto.model.types.AnyPrimitiveType
-	 * @generated
-	 */
-	EClass getAnyPrimitiveType();
-
-	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.types.SimpleType <em>Simple Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1224,67 +1801,235 @@ public interface TypesPackage extends EPackage
 	EClass getSimpleType();
 
 	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.types.FloatType <em>Float Type</em>}'.
+	 * Returns the meta object for class '{@link org.geppetto.model.types.PointerType <em>Pointer Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Float Type</em>'.
-	 * @see org.geppetto.model.types.FloatType
+	 * @return the meta object for class '<em>Pointer Type</em>'.
+	 * @see org.geppetto.model.types.PointerType
 	 * @generated
 	 */
-	EClass getFloatType();
+	EClass getPointerType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.geppetto.model.types.FloatType#getDefaultValue <em>Default Value</em>}'.
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.PointerType#getDefaultValue <em>Default Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Default Value</em>'.
-	 * @see org.geppetto.model.types.FloatType#getDefaultValue()
-	 * @see #getFloatType()
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.PointerType#getDefaultValue()
+	 * @see #getPointerType()
 	 * @generated
 	 */
-	EReference getFloatType_DefaultValue();
+	EReference getPointerType_DefaultValue();
 
 	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.types.DoubleType <em>Double Type</em>}'.
+	 * Returns the meta object for class '{@link org.geppetto.model.types.QuantityType <em>Quantity Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Double Type</em>'.
-	 * @see org.geppetto.model.types.DoubleType
+	 * @return the meta object for class '<em>Quantity Type</em>'.
+	 * @see org.geppetto.model.types.QuantityType
 	 * @generated
 	 */
-	EClass getDoubleType();
+	EClass getQuantityType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.geppetto.model.types.DoubleType#getDefaultValue <em>Default Value</em>}'.
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.QuantityType#getDefaultValue <em>Default Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Default Value</em>'.
-	 * @see org.geppetto.model.types.DoubleType#getDefaultValue()
-	 * @see #getDoubleType()
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.QuantityType#getDefaultValue()
+	 * @see #getQuantityType()
 	 * @generated
 	 */
-	EReference getDoubleType_DefaultValue();
+	EReference getQuantityType_DefaultValue();
 
 	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.types.StringType <em>String Type</em>}'.
+	 * Returns the meta object for class '{@link org.geppetto.model.types.ParameterType <em>Parameter Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>String Type</em>'.
-	 * @see org.geppetto.model.types.StringType
+	 * @return the meta object for class '<em>Parameter Type</em>'.
+	 * @see org.geppetto.model.types.ParameterType
 	 * @generated
 	 */
-	EClass getStringType();
+	EClass getParameterType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.geppetto.model.types.StringType#getDefaultValue <em>Default Value</em>}'.
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.ParameterType#getDefaultValue <em>Default Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Default Value</em>'.
-	 * @see org.geppetto.model.types.StringType#getDefaultValue()
-	 * @see #getStringType()
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.ParameterType#getDefaultValue()
+	 * @see #getParameterType()
 	 * @generated
 	 */
-	EReference getStringType_DefaultValue();
+	EReference getParameterType_DefaultValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.StateVariableType <em>State Variable Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>State Variable Type</em>'.
+	 * @see org.geppetto.model.types.StateVariableType
+	 * @generated
+	 */
+	EClass getStateVariableType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.StateVariableType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.StateVariableType#getDefaultValue()
+	 * @see #getStateVariableType()
+	 * @generated
+	 */
+	EReference getStateVariableType_DefaultValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.DynamicsType <em>Dynamics Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dynamics Type</em>'.
+	 * @see org.geppetto.model.types.DynamicsType
+	 * @generated
+	 */
+	EClass getDynamicsType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.DynamicsType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.DynamicsType#getDefaultValue()
+	 * @see #getDynamicsType()
+	 * @generated
+	 */
+	EReference getDynamicsType_DefaultValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.ArgumentType <em>Argument Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Argument Type</em>'.
+	 * @see org.geppetto.model.types.ArgumentType
+	 * @generated
+	 */
+	EClass getArgumentType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.ArgumentType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.ArgumentType#getDefaultValue()
+	 * @see #getArgumentType()
+	 * @generated
+	 */
+	EReference getArgumentType_DefaultValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.ExpressionType <em>Expression Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expression Type</em>'.
+	 * @see org.geppetto.model.types.ExpressionType
+	 * @generated
+	 */
+	EClass getExpressionType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.ExpressionType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.ExpressionType#getDefaultValue()
+	 * @see #getExpressionType()
+	 * @generated
+	 */
+	EReference getExpressionType_DefaultValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.HTMLType <em>HTML Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>HTML Type</em>'.
+	 * @see org.geppetto.model.types.HTMLType
+	 * @generated
+	 */
+	EClass getHTMLType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.HTMLType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.HTMLType#getDefaultValue()
+	 * @see #getHTMLType()
+	 * @generated
+	 */
+	EReference getHTMLType_DefaultValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.TextType <em>Text Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text Type</em>'.
+	 * @see org.geppetto.model.types.TextType
+	 * @generated
+	 */
+	EClass getTextType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.TextType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.TextType#getDefaultValue()
+	 * @see #getTextType()
+	 * @generated
+	 */
+	EReference getTextType_DefaultValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.URLType <em>URL Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>URL Type</em>'.
+	 * @see org.geppetto.model.types.URLType
+	 * @generated
+	 */
+	EClass getURLType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.URLType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.URLType#getDefaultValue()
+	 * @see #getURLType()
+	 * @generated
+	 */
+	EReference getURLType_DefaultValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.PointType <em>Point Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Point Type</em>'.
+	 * @see org.geppetto.model.types.PointType
+	 * @generated
+	 */
+	EClass getPointType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.PointType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.PointType#getDefaultValue()
+	 * @see #getPointType()
+	 * @generated
+	 */
+	EReference getPointType_DefaultValue();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1321,12 +2066,12 @@ public interface TypesPackage extends EPackage
 		EClass TYPE = eINSTANCE.getType();
 
 		/**
-		 * The meta object literal for the '<em><b>Aspect</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TYPE__ASPECT = eINSTANCE.getType_Aspect();
+		EReference TYPE__SUPER_TYPE = eINSTANCE.getType_SuperType();
 
 		/**
 		 * The meta object literal for the '<em><b>Domain Model</b></em>' attribute feature.
@@ -1337,20 +2082,20 @@ public interface TypesPackage extends EPackage
 		EAttribute TYPE__DOMAIN_MODEL = eINSTANCE.getType_DomainModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Referenced Variables</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Abstract</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TYPE__REFERENCED_VARIABLES = eINSTANCE.getType_ReferencedVariables();
+		EAttribute TYPE__ABSTRACT = eINSTANCE.getType_Abstract();
 
 		/**
-		 * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Visual Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TYPE__SUPER_TYPE = eINSTANCE.getType_SuperType();
+		EReference TYPE__VISUAL_TYPE = eINSTANCE.getType_VisualType();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Default Value</b></em>' operation.
@@ -1361,32 +2106,14 @@ public interface TypesPackage extends EPackage
 		EOperation TYPE___GET_DEFAULT_VALUE = eINSTANCE.getType__GetDefaultValue();
 
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.types.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.VisualTypeImpl <em>Visual Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.types.impl.PrimitiveTypeImpl
-		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getPrimitiveType()
+		 * @see org.geppetto.model.types.impl.VisualTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getVisualType()
 		 * @generated
 		 */
-		EClass PRIMITIVE_TYPE = eINSTANCE.getPrimitiveType();
-
-		/**
-		 * The meta object literal for the '{@link org.geppetto.model.types.impl.IntTypeImpl <em>Int Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.types.impl.IntTypeImpl
-		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getIntType()
-		 * @generated
-		 */
-		EClass INT_TYPE = eINSTANCE.getIntType();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Value</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INT_TYPE__DEFAULT_VALUE = eINSTANCE.getIntType_DefaultValue();
+		EClass VISUAL_TYPE = eINSTANCE.getVisualType();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.types.impl.ImportTypeImpl <em>Import Type</em>}' class.
@@ -1441,16 +2168,6 @@ public interface TypesPackage extends EPackage
 		EReference COMPOSITE_TYPE__VARIABLES = eINSTANCE.getCompositeType_Variables();
 
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.types.impl.AnyPrimitiveTypeImpl <em>Any Primitive Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.types.impl.AnyPrimitiveTypeImpl
-		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getAnyPrimitiveType()
-		 * @generated
-		 */
-		EClass ANY_PRIMITIVE_TYPE = eINSTANCE.getAnyPrimitiveType();
-
-		/**
 		 * The meta object literal for the '{@link org.geppetto.model.types.impl.SimpleTypeImpl <em>Simple Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1461,58 +2178,202 @@ public interface TypesPackage extends EPackage
 		EClass SIMPLE_TYPE = eINSTANCE.getSimpleType();
 
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.types.impl.FloatTypeImpl <em>Float Type</em>}' class.
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.PointerTypeImpl <em>Pointer Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.types.impl.FloatTypeImpl
-		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getFloatType()
+		 * @see org.geppetto.model.types.impl.PointerTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getPointerType()
 		 * @generated
 		 */
-		EClass FLOAT_TYPE = eINSTANCE.getFloatType();
+		EClass POINTER_TYPE = eINSTANCE.getPointerType();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Value</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FLOAT_TYPE__DEFAULT_VALUE = eINSTANCE.getFloatType_DefaultValue();
+		EReference POINTER_TYPE__DEFAULT_VALUE = eINSTANCE.getPointerType_DefaultValue();
 
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.types.impl.DoubleTypeImpl <em>Double Type</em>}' class.
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.QuantityTypeImpl <em>Quantity Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.types.impl.DoubleTypeImpl
-		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getDoubleType()
+		 * @see org.geppetto.model.types.impl.QuantityTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getQuantityType()
 		 * @generated
 		 */
-		EClass DOUBLE_TYPE = eINSTANCE.getDoubleType();
+		EClass QUANTITY_TYPE = eINSTANCE.getQuantityType();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Value</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOUBLE_TYPE__DEFAULT_VALUE = eINSTANCE.getDoubleType_DefaultValue();
+		EReference QUANTITY_TYPE__DEFAULT_VALUE = eINSTANCE.getQuantityType_DefaultValue();
 
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.types.impl.StringTypeImpl <em>String Type</em>}' class.
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.ParameterTypeImpl <em>Parameter Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.types.impl.StringTypeImpl
-		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getStringType()
+		 * @see org.geppetto.model.types.impl.ParameterTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getParameterType()
 		 * @generated
 		 */
-		EClass STRING_TYPE = eINSTANCE.getStringType();
+		EClass PARAMETER_TYPE = eINSTANCE.getParameterType();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Value</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STRING_TYPE__DEFAULT_VALUE = eINSTANCE.getStringType_DefaultValue();
+		EReference PARAMETER_TYPE__DEFAULT_VALUE = eINSTANCE.getParameterType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.StateVariableTypeImpl <em>State Variable Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.StateVariableTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getStateVariableType()
+		 * @generated
+		 */
+		EClass STATE_VARIABLE_TYPE = eINSTANCE.getStateVariableType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE_VARIABLE_TYPE__DEFAULT_VALUE = eINSTANCE.getStateVariableType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.DynamicsTypeImpl <em>Dynamics Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.DynamicsTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getDynamicsType()
+		 * @generated
+		 */
+		EClass DYNAMICS_TYPE = eINSTANCE.getDynamicsType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DYNAMICS_TYPE__DEFAULT_VALUE = eINSTANCE.getDynamicsType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.ArgumentTypeImpl <em>Argument Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.ArgumentTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getArgumentType()
+		 * @generated
+		 */
+		EClass ARGUMENT_TYPE = eINSTANCE.getArgumentType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARGUMENT_TYPE__DEFAULT_VALUE = eINSTANCE.getArgumentType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.ExpressionTypeImpl <em>Expression Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.ExpressionTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getExpressionType()
+		 * @generated
+		 */
+		EClass EXPRESSION_TYPE = eINSTANCE.getExpressionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION_TYPE__DEFAULT_VALUE = eINSTANCE.getExpressionType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.HTMLTypeImpl <em>HTML Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.HTMLTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getHTMLType()
+		 * @generated
+		 */
+		EClass HTML_TYPE = eINSTANCE.getHTMLType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HTML_TYPE__DEFAULT_VALUE = eINSTANCE.getHTMLType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.TextTypeImpl <em>Text Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.TextTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getTextType()
+		 * @generated
+		 */
+		EClass TEXT_TYPE = eINSTANCE.getTextType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEXT_TYPE__DEFAULT_VALUE = eINSTANCE.getTextType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.URLTypeImpl <em>URL Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.URLTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getURLType()
+		 * @generated
+		 */
+		EClass URL_TYPE = eINSTANCE.getURLType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference URL_TYPE__DEFAULT_VALUE = eINSTANCE.getURLType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.PointTypeImpl <em>Point Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.PointTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getPointType()
+		 * @generated
+		 */
+		EClass POINT_TYPE = eINSTANCE.getPointType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POINT_TYPE__DEFAULT_VALUE = eINSTANCE.getPointType_DefaultValue();
 
 	}
 

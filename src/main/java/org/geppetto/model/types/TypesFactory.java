@@ -23,13 +23,13 @@ public interface TypesFactory extends EFactory
 	TypesFactory eINSTANCE = org.geppetto.model.types.impl.TypesFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Int Type</em>'.
+	 * Returns a new object of class '<em>Visual Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Int Type</em>'.
+	 * @return a new object of class '<em>Visual Type</em>'.
 	 * @generated
 	 */
-	IntType createIntType();
+	VisualType createVisualType();
 
 	/**
 	 * Returns a new object of class '<em>Import Type</em>'.
@@ -50,15 +50,6 @@ public interface TypesFactory extends EFactory
 	CompositeType createCompositeType();
 
 	/**
-	 * Returns a new object of class '<em>Any Primitive Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Any Primitive Type</em>'.
-	 * @generated
-	 */
-	AnyPrimitiveType createAnyPrimitiveType();
-
-	/**
 	 * Returns a new object of class '<em>Simple Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,31 +59,103 @@ public interface TypesFactory extends EFactory
 	SimpleType createSimpleType();
 
 	/**
-	 * Returns a new object of class '<em>Float Type</em>'.
+	 * Returns a new object of class '<em>Pointer Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Float Type</em>'.
+	 * @return a new object of class '<em>Pointer Type</em>'.
 	 * @generated
 	 */
-	FloatType createFloatType();
+	PointerType createPointerType();
 
 	/**
-	 * Returns a new object of class '<em>Double Type</em>'.
+	 * Returns a new object of class '<em>Quantity Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Double Type</em>'.
+	 * @return a new object of class '<em>Quantity Type</em>'.
 	 * @generated
 	 */
-	DoubleType createDoubleType();
+	QuantityType createQuantityType();
 
 	/**
-	 * Returns a new object of class '<em>String Type</em>'.
+	 * Returns a new object of class '<em>Parameter Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>String Type</em>'.
+	 * @return a new object of class '<em>Parameter Type</em>'.
 	 * @generated
 	 */
-	StringType createStringType();
+	ParameterType createParameterType();
+
+	/**
+	 * Returns a new object of class '<em>State Variable Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>State Variable Type</em>'.
+	 * @generated
+	 */
+	StateVariableType createStateVariableType();
+
+	/**
+	 * Returns a new object of class '<em>Dynamics Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dynamics Type</em>'.
+	 * @generated
+	 */
+	DynamicsType createDynamicsType();
+
+	/**
+	 * Returns a new object of class '<em>Argument Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Argument Type</em>'.
+	 * @generated
+	 */
+	ArgumentType createArgumentType();
+
+	/**
+	 * Returns a new object of class '<em>Expression Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expression Type</em>'.
+	 * @generated
+	 */
+	ExpressionType createExpressionType();
+
+	/**
+	 * Returns a new object of class '<em>HTML Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HTML Type</em>'.
+	 * @generated
+	 */
+	HTMLType createHTMLType();
+
+	/**
+	 * Returns a new object of class '<em>Text Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Text Type</em>'.
+	 * @generated
+	 */
+	TextType createTextType();
+
+	/**
+	 * Returns a new object of class '<em>URL Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>URL Type</em>'.
+	 * @generated
+	 */
+	URLType createURLType();
+
+	/**
+	 * Returns a new object of class '<em>Point Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Point Type</em>'.
+	 * @generated
+	 */
+	PointType createPointType();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -64,14 +64,21 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		switch (eClass.getClassifierID())
 		{
-			case TypesPackage.INT_TYPE: return createIntType();
+			case TypesPackage.VISUAL_TYPE: return createVisualType();
 			case TypesPackage.IMPORT_TYPE: return createImportType();
 			case TypesPackage.COMPOSITE_TYPE: return createCompositeType();
-			case TypesPackage.ANY_PRIMITIVE_TYPE: return createAnyPrimitiveType();
 			case TypesPackage.SIMPLE_TYPE: return createSimpleType();
-			case TypesPackage.FLOAT_TYPE: return createFloatType();
-			case TypesPackage.DOUBLE_TYPE: return createDoubleType();
-			case TypesPackage.STRING_TYPE: return createStringType();
+			case TypesPackage.POINTER_TYPE: return createPointerType();
+			case TypesPackage.QUANTITY_TYPE: return createQuantityType();
+			case TypesPackage.PARAMETER_TYPE: return createParameterType();
+			case TypesPackage.STATE_VARIABLE_TYPE: return createStateVariableType();
+			case TypesPackage.DYNAMICS_TYPE: return createDynamicsType();
+			case TypesPackage.ARGUMENT_TYPE: return createArgumentType();
+			case TypesPackage.EXPRESSION_TYPE: return createExpressionType();
+			case TypesPackage.HTML_TYPE: return createHTMLType();
+			case TypesPackage.TEXT_TYPE: return createTextType();
+			case TypesPackage.URL_TYPE: return createURLType();
+			case TypesPackage.POINT_TYPE: return createPointType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,10 +89,10 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntType createIntType()
+	public VisualType createVisualType()
 	{
-		IntTypeImpl intType = new IntTypeImpl();
-		return intType;
+		VisualTypeImpl visualType = new VisualTypeImpl();
+		return visualType;
 	}
 
 	/**
@@ -115,17 +122,6 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AnyPrimitiveType createAnyPrimitiveType()
-	{
-		AnyPrimitiveTypeImpl anyPrimitiveType = new AnyPrimitiveTypeImpl();
-		return anyPrimitiveType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public SimpleType createSimpleType()
 	{
 		SimpleTypeImpl simpleType = new SimpleTypeImpl();
@@ -137,10 +133,10 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FloatType createFloatType()
+	public PointerType createPointerType()
 	{
-		FloatTypeImpl floatType = new FloatTypeImpl();
-		return floatType;
+		PointerTypeImpl pointerType = new PointerTypeImpl();
+		return pointerType;
 	}
 
 	/**
@@ -148,10 +144,10 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DoubleType createDoubleType()
+	public QuantityType createQuantityType()
 	{
-		DoubleTypeImpl doubleType = new DoubleTypeImpl();
-		return doubleType;
+		QuantityTypeImpl quantityType = new QuantityTypeImpl();
+		return quantityType;
 	}
 
 	/**
@@ -159,10 +155,98 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StringType createStringType()
+	public ParameterType createParameterType()
 	{
-		StringTypeImpl stringType = new StringTypeImpl();
-		return stringType;
+		ParameterTypeImpl parameterType = new ParameterTypeImpl();
+		return parameterType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StateVariableType createStateVariableType()
+	{
+		StateVariableTypeImpl stateVariableType = new StateVariableTypeImpl();
+		return stateVariableType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DynamicsType createDynamicsType()
+	{
+		DynamicsTypeImpl dynamicsType = new DynamicsTypeImpl();
+		return dynamicsType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArgumentType createArgumentType()
+	{
+		ArgumentTypeImpl argumentType = new ArgumentTypeImpl();
+		return argumentType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExpressionType createExpressionType()
+	{
+		ExpressionTypeImpl expressionType = new ExpressionTypeImpl();
+		return expressionType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HTMLType createHTMLType()
+	{
+		HTMLTypeImpl htmlType = new HTMLTypeImpl();
+		return htmlType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TextType createTextType()
+	{
+		TextTypeImpl textType = new TextTypeImpl();
+		return textType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public URLType createURLType()
+	{
+		URLTypeImpl urlType = new URLTypeImpl();
+		return urlType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PointType createPointType()
+	{
+		PointTypeImpl pointType = new PointTypeImpl();
+		return pointType;
 	}
 
 	/**

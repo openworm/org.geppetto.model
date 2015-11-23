@@ -3,24 +3,13 @@
 package org.geppetto.model.aspect.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.geppetto.model.aspect.Aspect;
 import org.geppetto.model.aspect.AspectPackage;
-
 import org.geppetto.model.impl.NodeImpl;
-
 import org.geppetto.model.types.Type;
-import org.geppetto.model.types.TypesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +27,7 @@ import org.geppetto.model.types.TypesPackage;
 public class AspectImpl extends NodeImpl implements Aspect
 {
 	/**
-	 * The cached value of the '{@link #getTypes() <em>Types</em>}' containment reference list.
+	 * The cached value of the '{@link #getTypes() <em>Types</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypes()
@@ -77,42 +66,9 @@ public class AspectImpl extends NodeImpl implements Aspect
 	{
 		if (types == null)
 		{
-			types = new EObjectContainmentWithInverseEList<Type>(Type.class, this, AspectPackage.ASPECT__TYPES, TypesPackage.TYPE__ASPECT);
+			types = new EObjectResolvingEList<Type>(Type.class, this, AspectPackage.ASPECT__TYPES);
 		}
 		return types;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-	{
-		switch (featureID)
-		{
-			case AspectPackage.ASPECT__TYPES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTypes()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-	{
-		switch (featureID)
-		{
-			case AspectPackage.ASPECT__TYPES:
-				return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

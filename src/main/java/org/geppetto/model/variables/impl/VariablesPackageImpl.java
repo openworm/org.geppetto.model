@@ -168,6 +168,26 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVariable_Static()
+	{
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariable_Position()
+	{
+		return (EReference)variableEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getArrayVariable()
 	{
 		return arrayVariableEClass;
@@ -216,6 +236,8 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 		variableEClass = createEClass(VARIABLE);
 		createEReference(variableEClass, VARIABLE__TYPES);
 		createEReference(variableEClass, VARIABLE__INITIAL_VALUES);
+		createEAttribute(variableEClass, VARIABLE__STATIC);
+		createEReference(variableEClass, VARIABLE__POSITION);
 
 		arrayVariableEClass = createEClass(ARRAY_VARIABLE);
 		createEAttribute(arrayVariableEClass, ARRAY_VARIABLE__SIZE);
@@ -261,8 +283,10 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVariable_Types(), theTypesPackage.getType(), theTypesPackage.getType_ReferencedVariables(), "types", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_Types(), theTypesPackage.getType(), null, "types", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariable_InitialValues(), theValuesPackage.getValue(), null, "initialValues", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_Static(), theXMLTypePackage.getBoolean(), "static", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_Position(), theValuesPackage.getPoint(), null, "position", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arrayVariableEClass, ArrayVariable.class, "ArrayVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArrayVariable_Size(), theXMLTypePackage.getInt(), "size", null, 0, 1, ArrayVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

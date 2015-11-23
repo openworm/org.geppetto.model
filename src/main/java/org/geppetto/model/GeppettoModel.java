@@ -41,13 +41,12 @@ public interface GeppettoModel extends EObject
 	 * @return the value of the '<em>Variables</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Variables()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='variable' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<Variable> getVariables();
 
 	/**
-	 * Returns the value of the '<em><b>Aspects</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Aspects</b></em>' reference list.
 	 * The list contents are of type {@link org.geppetto.model.aspect.Aspect}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -55,9 +54,9 @@ public interface GeppettoModel extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Aspects</em>' containment reference list.
+	 * @return the value of the '<em>Aspects</em>' reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Aspects()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Aspect> getAspects();

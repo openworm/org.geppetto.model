@@ -78,7 +78,7 @@ public interface GeppettoPackage extends EPackage
 	int GEPPETTO_MODEL__VARIABLES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Aspects</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Aspects</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -152,6 +152,99 @@ public interface GeppettoPackage extends EPackage
 
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.GeppettoLibraryImpl <em>Library</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.GeppettoLibraryImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getGeppettoLibrary()
+	 * @generated
+	 */
+	int GEPPETTO_LIBRARY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_LIBRARY__NAME = NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_LIBRARY__TYPES = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Library</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_LIBRARY_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_LIBRARY___GET_PATH = NODE___GET_PATH;
+
+	/**
+	 * The number of operations of the '<em>Library</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_LIBRARY_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.LibraryManagerImpl <em>Library Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.LibraryManagerImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getLibraryManager()
+	 * @generated
+	 */
+	int LIBRARY_MANAGER = 3;
+
+	/**
+	 * The feature id for the '<em><b>Libraries</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_MANAGER__LIBRARIES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Library Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_MANAGER_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Library Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_MANAGER_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,10 +266,10 @@ public interface GeppettoPackage extends EPackage
 	EReference getGeppettoModel_Variables();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.GeppettoModel#getAspects <em>Aspects</em>}'.
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.GeppettoModel#getAspects <em>Aspects</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Aspects</em>'.
+	 * @return the meta object for the reference list '<em>Aspects</em>'.
 	 * @see org.geppetto.model.GeppettoModel#getAspects()
 	 * @see #getGeppettoModel()
 	 * @generated
@@ -213,6 +306,48 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EOperation getNode__GetPath();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoLibrary <em>Library</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Library</em>'.
+	 * @see org.geppetto.model.GeppettoLibrary
+	 * @generated
+	 */
+	EClass getGeppettoLibrary();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.GeppettoLibrary#getTypes <em>Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Types</em>'.
+	 * @see org.geppetto.model.GeppettoLibrary#getTypes()
+	 * @see #getGeppettoLibrary()
+	 * @generated
+	 */
+	EReference getGeppettoLibrary_Types();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.LibraryManager <em>Library Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Library Manager</em>'.
+	 * @see org.geppetto.model.LibraryManager
+	 * @generated
+	 */
+	EClass getLibraryManager();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.LibraryManager#getLibraries <em>Libraries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Libraries</em>'.
+	 * @see org.geppetto.model.LibraryManager#getLibraries()
+	 * @see #getLibraryManager()
+	 * @generated
+	 */
+	EReference getLibraryManager_Libraries();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -257,7 +392,7 @@ public interface GeppettoPackage extends EPackage
 		EReference GEPPETTO_MODEL__VARIABLES = eINSTANCE.getGeppettoModel_Variables();
 
 		/**
-		 * The meta object literal for the '<em><b>Aspects</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Aspects</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -289,6 +424,42 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EOperation NODE___GET_PATH = eINSTANCE.getNode__GetPath();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.GeppettoLibraryImpl <em>Library</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.GeppettoLibraryImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getGeppettoLibrary()
+		 * @generated
+		 */
+		EClass GEPPETTO_LIBRARY = eINSTANCE.getGeppettoLibrary();
+
+		/**
+		 * The meta object literal for the '<em><b>Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEPPETTO_LIBRARY__TYPES = eINSTANCE.getGeppettoLibrary_Types();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.LibraryManagerImpl <em>Library Manager</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.LibraryManagerImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getLibraryManager()
+		 * @generated
+		 */
+		EClass LIBRARY_MANAGER = eINSTANCE.getLibraryManager();
+
+		/**
+		 * The meta object literal for the '<em><b>Libraries</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIBRARY_MANAGER__LIBRARIES = eINSTANCE.getLibraryManager_Libraries();
 
 	}
 

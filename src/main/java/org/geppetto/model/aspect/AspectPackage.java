@@ -78,7 +78,7 @@ public interface AspectPackage extends EPackage
 	int ASPECT__NAME = GeppettoPackage.NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Types</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Types</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,10 +125,10 @@ public interface AspectPackage extends EPackage
 	EClass getAspect();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.aspect.Aspect#getTypes <em>Types</em>}'.
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.aspect.Aspect#getTypes <em>Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Types</em>'.
+	 * @return the meta object for the reference list '<em>Types</em>'.
 	 * @see org.geppetto.model.aspect.Aspect#getTypes()
 	 * @see #getAspect()
 	 * @generated
@@ -170,7 +170,7 @@ public interface AspectPackage extends EPackage
 		EClass ASPECT = eINSTANCE.getAspect();
 
 		/**
-		 * The meta object literal for the '<em><b>Types</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Types</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

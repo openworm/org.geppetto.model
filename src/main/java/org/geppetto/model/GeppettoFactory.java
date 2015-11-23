@@ -32,6 +32,24 @@ public interface GeppettoFactory extends EFactory
 	GeppettoModel createGeppettoModel();
 
 	/**
+	 * Returns a new object of class '<em>Library</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Library</em>'.
+	 * @generated
+	 */
+	GeppettoLibrary createGeppettoLibrary();
+
+	/**
+	 * Returns a new object of class '<em>Library Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Library Manager</em>'.
+	 * @generated
+	 */
+	LibraryManager createLibraryManager();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

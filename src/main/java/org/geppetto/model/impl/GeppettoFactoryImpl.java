@@ -65,6 +65,8 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 		switch (eClass.getClassifierID())
 		{
 			case GeppettoPackage.GEPPETTO_MODEL: return createGeppettoModel();
+			case GeppettoPackage.GEPPETTO_LIBRARY: return createGeppettoLibrary();
+			case GeppettoPackage.LIBRARY_MANAGER: return createLibraryManager();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -79,6 +81,28 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		GeppettoModelImpl geppettoModel = new GeppettoModelImpl();
 		return geppettoModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeppettoLibrary createGeppettoLibrary()
+	{
+		GeppettoLibraryImpl geppettoLibrary = new GeppettoLibraryImpl();
+		return geppettoLibrary;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LibraryManager createLibraryManager()
+	{
+		LibraryManagerImpl libraryManager = new LibraryManagerImpl();
+		return libraryManager;
 	}
 
 	/**

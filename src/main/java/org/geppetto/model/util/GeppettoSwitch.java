@@ -86,6 +86,21 @@ public class GeppettoSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeppettoPackage.GEPPETTO_LIBRARY:
+			{
+				GeppettoLibrary geppettoLibrary = (GeppettoLibrary)theEObject;
+				T result = caseGeppettoLibrary(geppettoLibrary);
+				if (result == null) result = caseNode(geppettoLibrary);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.LIBRARY_MANAGER:
+			{
+				LibraryManager libraryManager = (LibraryManager)theEObject;
+				T result = caseLibraryManager(libraryManager);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -118,6 +133,38 @@ public class GeppettoSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseNode(Node object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Library</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Library</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeppettoLibrary(GeppettoLibrary object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Library Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Library Manager</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLibraryManager(LibraryManager object)
 	{
 		return null;
 	}

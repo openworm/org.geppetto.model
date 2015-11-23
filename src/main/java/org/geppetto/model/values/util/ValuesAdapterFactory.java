@@ -5,11 +5,8 @@ package org.geppetto.model.values.util;
 import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.geppetto.model.values.*;
 
 /**
@@ -81,34 +78,134 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createValueAdapter();
 			}
 			@Override
-			public Adapter caseIntValue(IntValue object)
+			public Adapter caseComposite(Composite object)
 			{
-				return createIntValueAdapter();
-			}
-			@Override
-			public Adapter caseFloatValue(FloatValue object)
-			{
-				return createFloatValueAdapter();
-			}
-			@Override
-			public Adapter caseStringValue(StringValue object)
-			{
-				return createStringValueAdapter();
-			}
-			@Override
-			public Adapter caseDoubleValue(DoubleValue object)
-			{
-				return createDoubleValueAdapter();
-			}
-			@Override
-			public Adapter caseCompositeValue(CompositeValue object)
-			{
-				return createCompositeValueAdapter();
+				return createCompositeAdapter();
 			}
 			@Override
 			public Adapter caseStringToValueMap(Map.Entry<String, Value> object)
 			{
 				return createStringToValueMapAdapter();
+			}
+			@Override
+			public Adapter caseQuantity(Quantity object)
+			{
+				return createQuantityAdapter();
+			}
+			@Override
+			public Adapter casePhysicalQuantity(PhysicalQuantity object)
+			{
+				return createPhysicalQuantityAdapter();
+			}
+			@Override
+			public Adapter caseUnit(Unit object)
+			{
+				return createUnitAdapter();
+			}
+			@Override
+			public Adapter caseTimeSeries(TimeSeries object)
+			{
+				return createTimeSeriesAdapter();
+			}
+			@Override
+			public Adapter caseMetadataValue(MetadataValue object)
+			{
+				return createMetadataValueAdapter();
+			}
+			@Override
+			public Adapter caseText(Text object)
+			{
+				return createTextAdapter();
+			}
+			@Override
+			public Adapter caseURL(URL object)
+			{
+				return createURLAdapter();
+			}
+			@Override
+			public Adapter caseHTML(HTML object)
+			{
+				return createHTMLAdapter();
+			}
+			@Override
+			public Adapter casePointer(Pointer object)
+			{
+				return createPointerAdapter();
+			}
+			@Override
+			public Adapter casePointerElement(PointerElement object)
+			{
+				return createPointerElementAdapter();
+			}
+			@Override
+			public Adapter casePoint(Point object)
+			{
+				return createPointAdapter();
+			}
+			@Override
+			public Adapter caseDyamics(Dyamics object)
+			{
+				return createDyamicsAdapter();
+			}
+			@Override
+			public Adapter caseFunction(Function object)
+			{
+				return createFunctionAdapter();
+			}
+			@Override
+			public Adapter caseArgument(Argument object)
+			{
+				return createArgumentAdapter();
+			}
+			@Override
+			public Adapter caseExpression(Expression object)
+			{
+				return createExpressionAdapter();
+			}
+			@Override
+			public Adapter caseVisualValue(VisualValue object)
+			{
+				return createVisualValueAdapter();
+			}
+			@Override
+			public Adapter caseCollada(Collada object)
+			{
+				return createColladaAdapter();
+			}
+			@Override
+			public Adapter caseVisualComposite(VisualComposite object)
+			{
+				return createVisualCompositeAdapter();
+			}
+			@Override
+			public Adapter caseOBJ(OBJ object)
+			{
+				return createOBJAdapter();
+			}
+			@Override
+			public Adapter caseSphere(Sphere object)
+			{
+				return createSphereAdapter();
+			}
+			@Override
+			public Adapter caseCylinder(Cylinder object)
+			{
+				return createCylinderAdapter();
+			}
+			@Override
+			public Adapter caseParticle(org.geppetto.model.values.Particle object)
+			{
+				return createParticleAdapter();
+			}
+			@Override
+			public Adapter caseSkeletonAnimation(SkeletonAnimation object)
+			{
+				return createSkeletonAnimationAdapter();
+			}
+			@Override
+			public Adapter caseSkeletonTransformation(SkeletonTransformation object)
+			{
+				return createSkeletonTransformationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object)
@@ -148,76 +245,16 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.IntValue <em>Int Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Composite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.values.IntValue
+	 * @see org.geppetto.model.values.Composite
 	 * @generated
 	 */
-	public Adapter createIntValueAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.FloatValue <em>Float Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.geppetto.model.values.FloatValue
-	 * @generated
-	 */
-	public Adapter createFloatValueAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.StringValue <em>String Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.geppetto.model.values.StringValue
-	 * @generated
-	 */
-	public Adapter createStringValueAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.DoubleValue <em>Double Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.geppetto.model.values.DoubleValue
-	 * @generated
-	 */
-	public Adapter createDoubleValueAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.CompositeValue <em>Composite Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.geppetto.model.values.CompositeValue
-	 * @generated
-	 */
-	public Adapter createCompositeValueAdapter()
+	public Adapter createCompositeAdapter()
 	{
 		return null;
 	}
@@ -233,6 +270,366 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createStringToValueMapAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Quantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Quantity
+	 * @generated
+	 */
+	public Adapter createQuantityAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.PhysicalQuantity <em>Physical Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.PhysicalQuantity
+	 * @generated
+	 */
+	public Adapter createPhysicalQuantityAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Unit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Unit
+	 * @generated
+	 */
+	public Adapter createUnitAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.TimeSeries <em>Time Series</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.TimeSeries
+	 * @generated
+	 */
+	public Adapter createTimeSeriesAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.MetadataValue <em>Metadata Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.MetadataValue
+	 * @generated
+	 */
+	public Adapter createMetadataValueAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Text <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Text
+	 * @generated
+	 */
+	public Adapter createTextAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.URL <em>URL</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.URL
+	 * @generated
+	 */
+	public Adapter createURLAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.HTML <em>HTML</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.HTML
+	 * @generated
+	 */
+	public Adapter createHTMLAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Pointer <em>Pointer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Pointer
+	 * @generated
+	 */
+	public Adapter createPointerAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.PointerElement <em>Pointer Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.PointerElement
+	 * @generated
+	 */
+	public Adapter createPointerElementAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Point <em>Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Point
+	 * @generated
+	 */
+	public Adapter createPointAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Dyamics <em>Dyamics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Dyamics
+	 * @generated
+	 */
+	public Adapter createDyamicsAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Function <em>Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Function
+	 * @generated
+	 */
+	public Adapter createFunctionAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Argument <em>Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Argument
+	 * @generated
+	 */
+	public Adapter createArgumentAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Expression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Expression
+	 * @generated
+	 */
+	public Adapter createExpressionAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.VisualValue <em>Visual Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.VisualValue
+	 * @generated
+	 */
+	public Adapter createVisualValueAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Collada <em>Collada</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Collada
+	 * @generated
+	 */
+	public Adapter createColladaAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.VisualComposite <em>Visual Composite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.VisualComposite
+	 * @generated
+	 */
+	public Adapter createVisualCompositeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.OBJ <em>OBJ</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.OBJ
+	 * @generated
+	 */
+	public Adapter createOBJAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Sphere <em>Sphere</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Sphere
+	 * @generated
+	 */
+	public Adapter createSphereAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Cylinder <em>Cylinder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Cylinder
+	 * @generated
+	 */
+	public Adapter createCylinderAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Particle <em>Particle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Particle
+	 * @generated
+	 */
+	public Adapter createParticleAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.SkeletonAnimation <em>Skeleton Animation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.SkeletonAnimation
+	 * @generated
+	 */
+	public Adapter createSkeletonAnimationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.SkeletonTransformation <em>Skeleton Transformation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.SkeletonTransformation
+	 * @generated
+	 */
+	public Adapter createSkeletonTransformationAdapter()
 	{
 		return null;
 	}

@@ -3,40 +3,33 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://www.geppetto.org/model" nsPrefix="gep">
   <eClassifiers xsi:type="ecore:EClass" name="GeppettoModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
-        eType="#//variables/Variable" containment="true" resolveProxies="false">
-      <eAnnotations>
-        <details key="appinfo" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;jxb:property name=&quot;variables&quot; xmlns:jxb=&quot;http://java.sun.com/xml/ns/jaxb&quot;/>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;"/>
-      </eAnnotations>
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="variable"/>
-        <details key="namespace" value="##targetNamespace"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+        eType="#//variables/Variable" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="aspects" upperBound="-1"
-        eType="#//aspect/Aspect" containment="true"/>
+        eType="#//aspect/Aspect"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true">
     <eOperations name="getPath" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
         defaultValueLiteral=""/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeppettoLibrary" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
+        eType="#//types/Type" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LibraryManager">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="libraries" upperBound="-1"
+        eType="#//GeppettoLibrary"/>
+  </eClassifiers>
   <eSubpackages name="types" nsURI="http://www.geppetto.org/model/types" nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//Node">
       <eOperations name="getDefaultValue" eType="#//values/Value"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="referencedVariables"
-          upperBound="-1" eType="#//variables/Variable" eOpposite="#//variables/Variable/types"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//types/Type"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="aspect" eType="#//aspect/Aspect"
-          eOpposite="#//aspect/Aspect/types"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainModel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
           transient="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstract" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="visualType" eType="#//types/VisualType"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" abstract="true" eSuperTypes="#//types/Type"/>
-    <eClassifiers xsi:type="ecore:EClass" name="IntType" eSuperTypes="#//types/PrimitiveType">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" lowerBound="1"
-          eType="#//values/IntValue" changeable="false" containment="true"/>
-    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VisualType" eSuperTypes="#//types/Type"/>
     <eClassifiers xsi:type="ecore:EClass" name="ImportType" eSuperTypes="#//types/Type">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceURL" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
@@ -46,43 +39,44 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
           eType="#//variables/Variable" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="AnyPrimitiveType" eSuperTypes="#//types/PrimitiveType"/>
     <eClassifiers xsi:type="ecore:EClass" name="SimpleType" eSuperTypes="#//types/Type"/>
-    <eClassifiers xsi:type="ecore:EClass" name="FloatType" eSuperTypes="#//types/PrimitiveType">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" lowerBound="1"
-          eType="#//values/FloatValue" changeable="false" containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PointerType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Pointer"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DoubleType" eSuperTypes="#//types/PrimitiveType">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" lowerBound="1"
-          eType="#//values/DoubleValue" changeable="false" containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="QuantityType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Quantity"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringType" eSuperTypes="#//types/PrimitiveType">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" lowerBound="1"
-          eType="#//values/StringValue" changeable="false" containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Quantity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StateVariableType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Quantity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DynamicsType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Dyamics"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ArgumentType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Argument"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ExpressionType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Expression"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HTMLType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/HTML"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TextType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Text"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="URLType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/URL"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PointType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Point"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="values" nsURI="http://www.geppetto.org/model/values" nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="IntValue" eSuperTypes="#//values/Value">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int" defaultValueLiteral="0"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FloatValue" eSuperTypes="#//values/Value">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"
-          defaultValueLiteral="0"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringValue" eSuperTypes="#//values/Value">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
-          defaultValueLiteral=""/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DoubleValue" eSuperTypes="#//values/Value">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"
-          defaultValueLiteral="0"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CompositeValue" eSuperTypes="#//values/Value">
+    <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
           eType="#//values/StringToValueMap" containment="true"/>
     </eClassifiers>
@@ -90,12 +84,111 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//values/Value"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Quantity" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="scalingFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PhysicalQuantity" eSuperTypes="#//values/Quantity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="#//values/Unit"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Unit" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TimeSeries" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="quantities" upperBound="-1"
+          eType="#//values/Quantity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="#//values/Unit"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MetadataValue" abstract="true" eSuperTypes="#//values/Value"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//values/MetadataValue">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="URL" eSuperTypes="#//values/MetadataValue">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HTML" eSuperTypes="#//values/MetadataValue">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="html" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pointer" eSuperTypes="#//values/Value">
+      <eOperations name="getValue"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+          eType="#//values/PointerElement" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PointerElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//variables/Variable"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="aspect" eType="#//aspect/Aspect"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Point" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Dyamics" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="initialCondition" eType="#//values/PhysicalQuantity"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dynamics" eType="#//values/Function"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
+          eType="#//values/Argument"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+          eType="#//values/Expression" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Argument" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="argument" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+          defaultValueLiteral=""/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VisualValue" abstract="true" eSuperTypes="#//values/Value"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Collada" eSuperTypes="#//values/VisualValue">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="collada" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VisualComposite" eSuperTypes="#//values/VisualValue">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
+          eType="#//values/VisualValue" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OBJ" eSuperTypes="#//values/VisualValue">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="obj" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sphere" eSuperTypes="#//values/VisualValue">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Cylinder" eSuperTypes="#//values/VisualValue">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="bottomRadius" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="topRadius" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="distal" eType="#//values/Point"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Particle" eSuperTypes="#//values/VisualValue #//values/Point"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SkeletonAnimation" eSuperTypes="#//values/VisualValue">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="skeletonTransformationSeries"
+          upperBound="-1" eType="#//values/SkeletonTransformation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SkeletonTransformation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="skeletonTransformation"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="variables" nsURI="http://www.geppetto.org/model/variables" nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Node">
       <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
-          eType="#//types/Type" eOpposite="#//types/Type/referencedVariables"/>
+          eType="#//types/Type"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="initialValues" eType="#//values/Value"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="static" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//values/Point"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ArrayVariable" eSuperTypes="#//variables/Variable">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
@@ -104,7 +197,7 @@
   <eSubpackages name="aspect" nsURI="http://www.geppetto.org/model/aspect" nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Aspect" eSuperTypes="#//Node">
       <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
-          eType="#//types/Type" containment="true" eOpposite="#//types/Type/aspect"/>
+          eType="#//types/Type"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

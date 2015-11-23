@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.types;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,6 @@ package org.geppetto.model.types;
  * @model
  * @generated
  */
-public interface AnyPrimitiveType extends PrimitiveType
+public interface AnyPrimitiveType extends EObject
 {
 } // AnyPrimitiveType

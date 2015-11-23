@@ -1,0 +1,355 @@
+/**
+ */
+package org.geppetto.model.values.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.geppetto.model.values.Cylinder;
+import org.geppetto.model.values.Point;
+import org.geppetto.model.values.ValuesPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Cylinder</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link org.geppetto.model.values.impl.CylinderImpl#getBottomRadius <em>Bottom Radius</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.CylinderImpl#getTopRadius <em>Top Radius</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.CylinderImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.CylinderImpl#getDistal <em>Distal</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class CylinderImpl extends VisualValueImpl implements Cylinder
+{
+	/**
+	 * The default value of the '{@link #getBottomRadius() <em>Bottom Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBottomRadius()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float BOTTOM_RADIUS_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getBottomRadius() <em>Bottom Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBottomRadius()
+	 * @generated
+	 * @ordered
+	 */
+	protected float bottomRadius = BOTTOM_RADIUS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTopRadius() <em>Top Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTopRadius()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float TOP_RADIUS_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getTopRadius() <em>Top Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTopRadius()
+	 * @generated
+	 * @ordered
+	 */
+	protected float topRadius = TOP_RADIUS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float HEIGHT_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected float height = HEIGHT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getDistal() <em>Distal</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDistal()
+	 * @generated
+	 * @ordered
+	 */
+	protected Point distal;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CylinderImpl()
+	{
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass()
+	{
+		return ValuesPackage.Literals.CYLINDER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public float getBottomRadius()
+	{
+		return bottomRadius;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBottomRadius(float newBottomRadius)
+	{
+		float oldBottomRadius = bottomRadius;
+		bottomRadius = newBottomRadius;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__BOTTOM_RADIUS, oldBottomRadius, bottomRadius));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public float getTopRadius()
+	{
+		return topRadius;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTopRadius(float newTopRadius)
+	{
+		float oldTopRadius = topRadius;
+		topRadius = newTopRadius;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__TOP_RADIUS, oldTopRadius, topRadius));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public float getHeight()
+	{
+		return height;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHeight(float newHeight)
+	{
+		float oldHeight = height;
+		height = newHeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__HEIGHT, oldHeight, height));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Point getDistal()
+	{
+		if (distal != null && distal.eIsProxy())
+		{
+			InternalEObject oldDistal = (InternalEObject)distal;
+			distal = (Point)eResolveProxy(oldDistal);
+			if (distal != oldDistal)
+			{
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ValuesPackage.CYLINDER__DISTAL, oldDistal, distal));
+			}
+		}
+		return distal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Point basicGetDistal()
+	{
+		return distal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDistal(Point newDistal)
+	{
+		Point oldDistal = distal;
+		distal = newDistal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__DISTAL, oldDistal, distal));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
+			case ValuesPackage.CYLINDER__BOTTOM_RADIUS:
+				return getBottomRadius();
+			case ValuesPackage.CYLINDER__TOP_RADIUS:
+				return getTopRadius();
+			case ValuesPackage.CYLINDER__HEIGHT:
+				return getHeight();
+			case ValuesPackage.CYLINDER__DISTAL:
+				if (resolve) return getDistal();
+				return basicGetDistal();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
+			case ValuesPackage.CYLINDER__BOTTOM_RADIUS:
+				setBottomRadius((Float)newValue);
+				return;
+			case ValuesPackage.CYLINDER__TOP_RADIUS:
+				setTopRadius((Float)newValue);
+				return;
+			case ValuesPackage.CYLINDER__HEIGHT:
+				setHeight((Float)newValue);
+				return;
+			case ValuesPackage.CYLINDER__DISTAL:
+				setDistal((Point)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
+			case ValuesPackage.CYLINDER__BOTTOM_RADIUS:
+				setBottomRadius(BOTTOM_RADIUS_EDEFAULT);
+				return;
+			case ValuesPackage.CYLINDER__TOP_RADIUS:
+				setTopRadius(TOP_RADIUS_EDEFAULT);
+				return;
+			case ValuesPackage.CYLINDER__HEIGHT:
+				setHeight(HEIGHT_EDEFAULT);
+				return;
+			case ValuesPackage.CYLINDER__DISTAL:
+				setDistal((Point)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
+			case ValuesPackage.CYLINDER__BOTTOM_RADIUS:
+				return bottomRadius != BOTTOM_RADIUS_EDEFAULT;
+			case ValuesPackage.CYLINDER__TOP_RADIUS:
+				return topRadius != TOP_RADIUS_EDEFAULT;
+			case ValuesPackage.CYLINDER__HEIGHT:
+				return height != HEIGHT_EDEFAULT;
+			case ValuesPackage.CYLINDER__DISTAL:
+				return distal != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString()
+	{
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (bottomRadius: ");
+		result.append(bottomRadius);
+		result.append(", topRadius: ");
+		result.append(topRadius);
+		result.append(", height: ");
+		result.append(height);
+		result.append(')');
+		return result.toString();
+	}
+
+} //CylinderImpl
