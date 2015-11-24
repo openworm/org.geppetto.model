@@ -19,6 +19,4 @@
       name="StateVariable"/>
   <types xsi:type="gep_1:ParameterType"
       name="Parameter"/>
-  <types xsi:type="gep_1:ExpressionType"
-      name="Expression"/>
 </gep:GeppettoLibrary>
