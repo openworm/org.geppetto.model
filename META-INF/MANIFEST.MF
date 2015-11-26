@@ -8,9 +8,6 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: org.geppetto.model,
- org.geppetto.model.aspect,
- org.geppetto.model.aspect.impl,
- org.geppetto.model.aspect.util,
  org.geppetto.model.impl,
  org.geppetto.model.types,
  org.geppetto.model.types.impl,

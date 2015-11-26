@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface LibraryManager extends EObject
 {
 	/**
-	 * Returns the value of the '<em><b>Libraries</b></em>' reference list.
+	 * Returns the value of the '<em><b>Libraries</b></em>' containment reference list.
 	 * The list contents are of type {@link org.geppetto.model.GeppettoLibrary}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -33,9 +33,9 @@ public interface LibraryManager extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Libraries</em>' reference list.
+	 * @return the value of the '<em>Libraries</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getLibraryManager_Libraries()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<GeppettoLibrary> getLibraries();

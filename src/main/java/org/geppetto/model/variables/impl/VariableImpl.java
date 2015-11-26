@@ -4,11 +4,14 @@ package org.geppetto.model.variables.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.impl.NodeImpl;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.values.Point;
@@ -23,6 +26,7 @@ import org.geppetto.model.variables.VariablesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#getAnonymousTypes <em>Anonymous Types</em>}</li>
  *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#getTypes <em>Types</em>}</li>
  *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#getInitialValues <em>Initial Values</em>}</li>
  *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#isStatic <em>Static</em>}</li>
@@ -34,6 +38,16 @@ import org.geppetto.model.variables.VariablesPackage;
  */
 public class VariableImpl extends NodeImpl implements Variable
 {
+	/**
+	 * The cached value of the '{@link #getAnonymousTypes() <em>Anonymous Types</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnonymousTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Type> anonymousTypes;
+
 	/**
 	 * The cached value of the '{@link #getTypes() <em>Types</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -103,6 +117,20 @@ public class VariableImpl extends NodeImpl implements Variable
 	protected EClass eStaticClass()
 	{
 		return VariablesPackage.Literals.VARIABLE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Type> getAnonymousTypes()
+	{
+		if (anonymousTypes == null)
+		{
+			anonymousTypes = new EObjectContainmentEList<Type>(Type.class, this, VariablesPackage.VARIABLE__ANONYMOUS_TYPES);
+		}
+		return anonymousTypes;
 	}
 
 	/**
@@ -234,10 +262,28 @@ public class VariableImpl extends NodeImpl implements Variable
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case VariablesPackage.VARIABLE__ANONYMOUS_TYPES:
+				return ((InternalEList<?>)getAnonymousTypes()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID)
 		{
+			case VariablesPackage.VARIABLE__ANONYMOUS_TYPES:
+				return getAnonymousTypes();
 			case VariablesPackage.VARIABLE__TYPES:
 				return getTypes();
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
@@ -263,6 +309,10 @@ public class VariableImpl extends NodeImpl implements Variable
 	{
 		switch (featureID)
 		{
+			case VariablesPackage.VARIABLE__ANONYMOUS_TYPES:
+				getAnonymousTypes().clear();
+				getAnonymousTypes().addAll((Collection<? extends Type>)newValue);
+				return;
 			case VariablesPackage.VARIABLE__TYPES:
 				getTypes().clear();
 				getTypes().addAll((Collection<? extends Type>)newValue);
@@ -290,6 +340,9 @@ public class VariableImpl extends NodeImpl implements Variable
 	{
 		switch (featureID)
 		{
+			case VariablesPackage.VARIABLE__ANONYMOUS_TYPES:
+				getAnonymousTypes().clear();
+				return;
 			case VariablesPackage.VARIABLE__TYPES:
 				getTypes().clear();
 				return;
@@ -316,6 +369,8 @@ public class VariableImpl extends NodeImpl implements Variable
 	{
 		switch (featureID)
 		{
+			case VariablesPackage.VARIABLE__ANONYMOUS_TYPES:
+				return anonymousTypes != null && !anonymousTypes.isEmpty();
 			case VariablesPackage.VARIABLE__TYPES:
 				return types != null && !types.isEmpty();
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:

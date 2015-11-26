@@ -3,18 +3,13 @@
 package org.geppetto.model.values.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.geppetto.model.aspect.Aspect;
-
+import org.geppetto.model.types.Type;
 import org.geppetto.model.values.PointerElement;
 import org.geppetto.model.values.ValuesPackage;
-
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -25,7 +20,7 @@ import org.geppetto.model.variables.Variable;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.PointerElementImpl#getVariable <em>Variable</em>}</li>
- *   <li>{@link org.geppetto.model.values.impl.PointerElementImpl#getAspect <em>Aspect</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.PointerElementImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,14 +39,14 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	protected Variable variable;
 
 	/**
-	 * The cached value of the '{@link #getAspect() <em>Aspect</em>}' reference.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAspect()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected Aspect aspect;
+	protected Type type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,19 +117,19 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Aspect getAspect()
+	public Type getType()
 	{
-		if (aspect != null && aspect.eIsProxy())
+		if (type != null && type.eIsProxy())
 		{
-			InternalEObject oldAspect = (InternalEObject)aspect;
-			aspect = (Aspect)eResolveProxy(oldAspect);
-			if (aspect != oldAspect)
+			InternalEObject oldType = (InternalEObject)type;
+			type = (Type)eResolveProxy(oldType);
+			if (type != oldType)
 			{
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ValuesPackage.POINTER_ELEMENT__ASPECT, oldAspect, aspect));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ValuesPackage.POINTER_ELEMENT__TYPE, oldType, type));
 			}
 		}
-		return aspect;
+		return type;
 	}
 
 	/**
@@ -142,9 +137,9 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Aspect basicGetAspect()
+	public Type basicGetType()
 	{
-		return aspect;
+		return type;
 	}
 
 	/**
@@ -152,12 +147,12 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAspect(Aspect newAspect)
+	public void setType(Type newType)
 	{
-		Aspect oldAspect = aspect;
-		aspect = newAspect;
+		Type oldType = type;
+		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER_ELEMENT__ASPECT, oldAspect, aspect));
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER_ELEMENT__TYPE, oldType, type));
 	}
 
 	/**
@@ -173,9 +168,9 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 			case ValuesPackage.POINTER_ELEMENT__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
-			case ValuesPackage.POINTER_ELEMENT__ASPECT:
-				if (resolve) return getAspect();
-				return basicGetAspect();
+			case ValuesPackage.POINTER_ELEMENT__TYPE:
+				if (resolve) return getType();
+				return basicGetType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -193,8 +188,8 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 			case ValuesPackage.POINTER_ELEMENT__VARIABLE:
 				setVariable((Variable)newValue);
 				return;
-			case ValuesPackage.POINTER_ELEMENT__ASPECT:
-				setAspect((Aspect)newValue);
+			case ValuesPackage.POINTER_ELEMENT__TYPE:
+				setType((Type)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -213,8 +208,8 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 			case ValuesPackage.POINTER_ELEMENT__VARIABLE:
 				setVariable((Variable)null);
 				return;
-			case ValuesPackage.POINTER_ELEMENT__ASPECT:
-				setAspect((Aspect)null);
+			case ValuesPackage.POINTER_ELEMENT__TYPE:
+				setType((Type)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -232,8 +227,8 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 		{
 			case ValuesPackage.POINTER_ELEMENT__VARIABLE:
 				return variable != null;
-			case ValuesPackage.POINTER_ELEMENT__ASPECT:
-				return aspect != null;
+			case ValuesPackage.POINTER_ELEMENT__TYPE:
+				return type != null;
 		}
 		return super.eIsSet(featureID);
 	}

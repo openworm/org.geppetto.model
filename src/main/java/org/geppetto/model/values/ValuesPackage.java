@@ -558,13 +558,13 @@ public interface ValuesPackage extends EPackage
 	int POINTER_ELEMENT__VARIABLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Aspect</b></em>' reference.
+	 * The feature id for the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINTER_ELEMENT__ASPECT = 1;
+	int POINTER_ELEMENT__TYPE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Pointer Element</em>' class.
@@ -1473,15 +1473,15 @@ public interface ValuesPackage extends EPackage
 	EReference getPointerElement_Variable();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.values.PointerElement#getAspect <em>Aspect</em>}'.
+	 * Returns the meta object for the reference '{@link org.geppetto.model.values.PointerElement#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Aspect</em>'.
-	 * @see org.geppetto.model.values.PointerElement#getAspect()
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see org.geppetto.model.values.PointerElement#getType()
 	 * @see #getPointerElement()
 	 * @generated
 	 */
-	EReference getPointerElement_Aspect();
+	EReference getPointerElement_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Point <em>Point</em>}'.
@@ -2107,12 +2107,12 @@ public interface ValuesPackage extends EPackage
 		EReference POINTER_ELEMENT__VARIABLE = eINSTANCE.getPointerElement_Variable();
 
 		/**
-		 * The meta object literal for the '<em><b>Aspect</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference POINTER_ELEMENT__ASPECT = eINSTANCE.getPointerElement_Aspect();
+		EReference POINTER_ELEMENT__TYPE = eINSTANCE.getPointerElement_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.PointImpl <em>Point</em>}' class.

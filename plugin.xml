@@ -45,11 +45,4 @@
             genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated geppettoModelGenerator -->
-      <package
-            uri="http://www.geppetto.org/model/aspect"
-            class="org.geppetto.model.aspect.AspectPackage"
-            genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
-   </extension>
 </plugin>

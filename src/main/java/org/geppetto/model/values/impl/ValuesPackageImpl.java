@@ -11,8 +11,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.aspect.AspectPackage;
-import org.geppetto.model.aspect.impl.AspectPackageImpl;
 import org.geppetto.model.impl.GeppettoPackageImpl;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
@@ -296,21 +294,18 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) instanceof GeppettoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) : GeppettoPackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) instanceof VariablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) : VariablesPackage.eINSTANCE);
-		AspectPackageImpl theAspectPackage = (AspectPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) instanceof AspectPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) : AspectPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theValuesPackage.createPackageContents();
 		theGeppettoPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 		theVariablesPackage.createPackageContents();
-		theAspectPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theValuesPackage.initializePackageContents();
 		theGeppettoPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 		theVariablesPackage.initializePackageContents();
-		theAspectPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theValuesPackage.freeze();
@@ -606,7 +601,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPointerElement_Aspect()
+	public EReference getPointerElement_Type()
 	{
 		return (EReference)pointerElementEClass.getEStructuralFeatures().get(1);
 	}
@@ -1011,7 +1006,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		pointerElementEClass = createEClass(POINTER_ELEMENT);
 		createEReference(pointerElementEClass, POINTER_ELEMENT__VARIABLE);
-		createEReference(pointerElementEClass, POINTER_ELEMENT__ASPECT);
+		createEReference(pointerElementEClass, POINTER_ELEMENT__TYPE);
 
 		pointEClass = createEClass(POINT);
 		createEAttribute(pointEClass, POINT__X);
@@ -1088,7 +1083,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		// Obtain other dependent packages
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
-		AspectPackage theAspectPackage = (AspectPackage)EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI);
+		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1162,7 +1157,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		initEClass(pointerElementEClass, PointerElement.class, "PointerElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointerElement_Variable(), theVariablesPackage.getVariable(), null, "variable", null, 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPointerElement_Aspect(), theAspectPackage.getAspect(), null, "aspect", null, 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPointerElement_Type(), theTypesPackage.getType(), null, "type", null, 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPoint_X(), theXMLTypePackage.getDouble(), "x", null, 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

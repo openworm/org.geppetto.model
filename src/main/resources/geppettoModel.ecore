@@ -4,21 +4,25 @@
   <eClassifiers xsi:type="ecore:EClass" name="GeppettoModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
         eType="#//variables/Variable" containment="true" resolveProxies="false"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="aspects" upperBound="-1"
-        eType="#//aspect/Aspect"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="libraries" upperBound="-1"
+        eType="#//GeppettoLibrary" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true">
     <eOperations name="getPath" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
         defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeppettoLibrary" eSuperTypes="#//Node">
     <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
         eType="#//types/Type" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sharedTypes" upperBound="-1"
+        eType="#//types/Type"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LibraryManager">
     <eStructuralFeatures xsi:type="ecore:EReference" name="libraries" upperBound="-1"
-        eType="#//GeppettoLibrary"/>
+        eType="#//GeppettoLibrary" containment="true"/>
   </eClassifiers>
   <eSubpackages name="types" nsURI="http://www.geppetto.org/model/types" nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//Node">
@@ -120,7 +124,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PointerElement">
       <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//variables/Variable"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="aspect" eType="#//aspect/Aspect"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//types/Type"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Point" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
@@ -184,6 +188,8 @@
   </eSubpackages>
   <eSubpackages name="variables" nsURI="http://www.geppetto.org/model/variables" nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Node">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="anonymousTypes" upperBound="-1"
+          eType="#//types/Type" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
           eType="#//types/Type"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="initialValues" eType="#//values/Value"/>
@@ -192,12 +198,6 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ArrayVariable" eSuperTypes="#//variables/Variable">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
-    </eClassifiers>
-  </eSubpackages>
-  <eSubpackages name="aspect" nsURI="http://www.geppetto.org/model/aspect" nsPrefix="gep">
-    <eClassifiers xsi:type="ecore:EClass" name="Aspect" eSuperTypes="#//Node">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
-          eType="#//types/Type"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

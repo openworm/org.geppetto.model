@@ -8,6 +8,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoPackage;
@@ -21,6 +22,7 @@ import org.geppetto.model.types.Type;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.geppetto.model.impl.GeppettoLibraryImpl#getTypes <em>Types</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.GeppettoLibraryImpl#getSharedTypes <em>Shared Types</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +39,16 @@ public class GeppettoLibraryImpl extends NodeImpl implements GeppettoLibrary
 	 * @ordered
 	 */
 	protected EList<Type> types;
+
+	/**
+	 * The cached value of the '{@link #getSharedTypes() <em>Shared Types</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSharedTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Type> sharedTypes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,6 +90,20 @@ public class GeppettoLibraryImpl extends NodeImpl implements GeppettoLibrary
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Type> getSharedTypes()
+	{
+		if (sharedTypes == null)
+		{
+			sharedTypes = new EObjectResolvingEList<Type>(Type.class, this, GeppettoPackage.GEPPETTO_LIBRARY__SHARED_TYPES);
+		}
+		return sharedTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -101,6 +127,8 @@ public class GeppettoLibraryImpl extends NodeImpl implements GeppettoLibrary
 		{
 			case GeppettoPackage.GEPPETTO_LIBRARY__TYPES:
 				return getTypes();
+			case GeppettoPackage.GEPPETTO_LIBRARY__SHARED_TYPES:
+				return getSharedTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,6 +148,10 @@ public class GeppettoLibraryImpl extends NodeImpl implements GeppettoLibrary
 				getTypes().clear();
 				getTypes().addAll((Collection<? extends Type>)newValue);
 				return;
+			case GeppettoPackage.GEPPETTO_LIBRARY__SHARED_TYPES:
+				getSharedTypes().clear();
+				getSharedTypes().addAll((Collection<? extends Type>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -137,6 +169,9 @@ public class GeppettoLibraryImpl extends NodeImpl implements GeppettoLibrary
 			case GeppettoPackage.GEPPETTO_LIBRARY__TYPES:
 				getTypes().clear();
 				return;
+			case GeppettoPackage.GEPPETTO_LIBRARY__SHARED_TYPES:
+				getSharedTypes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -153,6 +188,8 @@ public class GeppettoLibraryImpl extends NodeImpl implements GeppettoLibrary
 		{
 			case GeppettoPackage.GEPPETTO_LIBRARY__TYPES:
 				return types != null && !types.isEmpty();
+			case GeppettoPackage.GEPPETTO_LIBRARY__SHARED_TYPES:
+				return sharedTypes != null && !sharedTypes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

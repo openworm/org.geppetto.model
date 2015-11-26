@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gep:GeppettoModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gep="http://www.geppetto.org/model"
+    xmlns:gep_1="http://www.geppetto.org/model/types"
+    xsi:schemaLocation="http://www.geppetto.org/model ../../main/resources/geppettoModel.ecore http://www.geppetto.org/model/types ../../main/resources/geppettoModel.ecore#//types">
+  <variables
+      name="acnet2"
+      types="//@libraries.0/@types.0"/>
+  <libraries
+      name="NeuroML">
+    <types xsi:type="gep_1:ImportType"
+        name="network_ACnet2"
+        url="/projects/AuditoryCortex/MediumNet.net.nml"
+        referenceURL=""
+        modelInterpreterId="neuroMLModelInterpreter"/>
+  </libraries>
+</gep:GeppettoModel>

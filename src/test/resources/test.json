@@ -1,13 +1,21 @@
 {
   "eClass" : "http://www.geppetto.org/model#//GeppettoModel",
-  "aspects" : [ {
-    "$ref" : "#//"
-  } ],
   "variables" : [ {
     "eClass" : "http://www.geppetto.org/model#//variables/Variable",
     "name" : "acnet2",
     "types" : [ {
-      "$ref" : "#//"
+      "$ref" : "//@libraries.0/@types.0"
+    } ]
+  } ],
+  "libraries" : [ {
+    "eClass" : "http://www.geppetto.org/model#//GeppettoLibrary",
+    "name" : "NeuroML",
+    "types" : [ {
+      "eClass" : "http://www.geppetto.org/model#//types/ImportType",
+      "name" : "network_ACnet2",
+      "url" : "/projects/AuditoryCortex/MediumNet.net.nml",
+      "referenceURL" : "",
+      "modelInterpreterId" : "neuroMLModelInterpreter"
     } ]
   } ]
 }

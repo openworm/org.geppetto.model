@@ -23,6 +23,7 @@ import org.geppetto.model.Node;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.geppetto.model.impl.NodeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.impl.NodeImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
@@ -31,6 +32,26 @@ import org.geppetto.model.Node;
  */
 public abstract class NodeImpl extends MinimalEObjectImpl.Container implements Node
 {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,6 +91,29 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	protected EClass eStaticClass()
 	{
 		return GeppettoPackage.Literals.NODE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId()
+	{
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId)
+	{
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.NODE__ID, oldId, id));
 	}
 
 	/**
@@ -117,6 +161,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.NODE__ID:
+				return getId();
 			case GeppettoPackage.NODE__NAME:
 				return getName();
 		}
@@ -133,6 +179,9 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.NODE__ID:
+				setId((String)newValue);
+				return;
 			case GeppettoPackage.NODE__NAME:
 				setName((String)newValue);
 				return;
@@ -150,6 +199,9 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.NODE__ID:
+				setId(ID_EDEFAULT);
+				return;
 			case GeppettoPackage.NODE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -167,6 +219,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.NODE__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case GeppettoPackage.NODE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
@@ -200,7 +254,9 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

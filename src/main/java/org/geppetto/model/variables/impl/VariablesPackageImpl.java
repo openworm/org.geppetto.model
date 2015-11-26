@@ -6,26 +6,14 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.GeppettoPackage;
-
-import org.geppetto.model.aspect.AspectPackage;
-
-import org.geppetto.model.aspect.impl.AspectPackageImpl;
-
 import org.geppetto.model.impl.GeppettoPackageImpl;
-
 import org.geppetto.model.types.TypesPackage;
-
 import org.geppetto.model.types.impl.TypesPackageImpl;
-
 import org.geppetto.model.values.ValuesPackage;
-
 import org.geppetto.model.values.impl.ValuesPackageImpl;
-
 import org.geppetto.model.variables.ArrayVariable;
 import org.geppetto.model.variables.Variable;
 import org.geppetto.model.variables.VariablesFactory;
@@ -108,21 +96,18 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) instanceof GeppettoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) : GeppettoPackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) instanceof ValuesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) : ValuesPackage.eINSTANCE);
-		AspectPackageImpl theAspectPackage = (AspectPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) instanceof AspectPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) : AspectPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theVariablesPackage.createPackageContents();
 		theGeppettoPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 		theValuesPackage.createPackageContents();
-		theAspectPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theVariablesPackage.initializePackageContents();
 		theGeppettoPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 		theValuesPackage.initializePackageContents();
-		theAspectPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theVariablesPackage.freeze();
@@ -148,7 +133,7 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVariable_Types()
+	public EReference getVariable_AnonymousTypes()
 	{
 		return (EReference)variableEClass.getEStructuralFeatures().get(0);
 	}
@@ -158,7 +143,7 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVariable_InitialValues()
+	public EReference getVariable_Types()
 	{
 		return (EReference)variableEClass.getEStructuralFeatures().get(1);
 	}
@@ -168,9 +153,19 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVariable_InitialValues()
+	{
+		return (EReference)variableEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getVariable_Static()
 	{
-		return (EAttribute)variableEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -180,7 +175,7 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 */
 	public EReference getVariable_Position()
 	{
-		return (EReference)variableEClass.getEStructuralFeatures().get(3);
+		return (EReference)variableEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -234,6 +229,7 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 
 		// Create classes and their features
 		variableEClass = createEClass(VARIABLE);
+		createEReference(variableEClass, VARIABLE__ANONYMOUS_TYPES);
 		createEReference(variableEClass, VARIABLE__TYPES);
 		createEReference(variableEClass, VARIABLE__INITIAL_VALUES);
 		createEAttribute(variableEClass, VARIABLE__STATIC);
@@ -283,6 +279,7 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVariable_AnonymousTypes(), theTypesPackage.getType(), null, "anonymousTypes", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariable_Types(), theTypesPackage.getType(), null, "types", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariable_InitialValues(), theValuesPackage.getValue(), null, "initialValues", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Static(), theXMLTypePackage.getBoolean(), "static", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

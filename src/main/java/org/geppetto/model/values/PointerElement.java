@@ -3,9 +3,7 @@
 package org.geppetto.model.values;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.geppetto.model.aspect.Aspect;
-
+import org.geppetto.model.types.Type;
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -17,7 +15,7 @@ import org.geppetto.model.variables.Variable;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.geppetto.model.values.PointerElement#getVariable <em>Variable</em>}</li>
- *   <li>{@link org.geppetto.model.values.PointerElement#getAspect <em>Aspect</em>}</li>
+ *   <li>{@link org.geppetto.model.values.PointerElement#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,29 +52,29 @@ public interface PointerElement extends EObject
 	void setVariable(Variable value);
 
 	/**
-	 * Returns the value of the '<em><b>Aspect</b></em>' reference.
+	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Aspect</em>' reference isn't clear,
+	 * If the meaning of the '<em>Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Aspect</em>' reference.
-	 * @see #setAspect(Aspect)
-	 * @see org.geppetto.model.values.ValuesPackage#getPointerElement_Aspect()
+	 * @return the value of the '<em>Type</em>' reference.
+	 * @see #setType(Type)
+	 * @see org.geppetto.model.values.ValuesPackage#getPointerElement_Type()
 	 * @model
 	 * @generated
 	 */
-	Aspect getAspect();
+	Type getType();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.values.PointerElement#getAspect <em>Aspect</em>}' reference.
+	 * Sets the value of the '{@link org.geppetto.model.values.PointerElement#getType <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Aspect</em>' reference.
-	 * @see #getAspect()
+	 * @param value the new value of the '<em>Type</em>' reference.
+	 * @see #getType()
 	 * @generated
 	 */
-	void setAspect(Aspect value);
+	void setType(Type value);
 
 } // PointerElement

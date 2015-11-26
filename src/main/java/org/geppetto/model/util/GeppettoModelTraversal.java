@@ -43,7 +43,7 @@ import org.geppetto.model.GeppettoModel;
  */
 public class GeppettoModelTraversal extends GeppettoSwitch<EObject>
 {
-	public static void apply(GeppettoModel object, Switch<? extends Exception> visitor) throws Exception
+	public static void apply(GeppettoModel object, Switch<?> visitor) throws Exception
 	{
 		TreeIterator<EObject> iterator = object.eAllContents();
 		while(iterator.hasNext())
@@ -52,11 +52,15 @@ public class GeppettoModelTraversal extends GeppettoSwitch<EObject>
 		}
 	}
 
-	private static void checkException(Exception e) throws Exception
+	private static void checkException(Object e) throws Exception
 	{
+
 		if(e != null)
 		{
-			throw e;
+			if(e instanceof Exception)
+			{
+				throw (Exception) e;
+			}
 		}
 	}
 

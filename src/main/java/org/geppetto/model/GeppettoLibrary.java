@@ -14,6 +14,7 @@ import org.geppetto.model.types.Type;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.geppetto.model.GeppettoLibrary#getTypes <em>Types</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoLibrary#getSharedTypes <em>Shared Types</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,5 +39,21 @@ public interface GeppettoLibrary extends Node
 	 * @generated
 	 */
 	EList<Type> getTypes();
+
+	/**
+	 * Returns the value of the '<em><b>Shared Types</b></em>' reference list.
+	 * The list contents are of type {@link org.geppetto.model.types.Type}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Shared Types</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Shared Types</em>' reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoLibrary_SharedTypes()
+	 * @model
+	 * @generated
+	 */
+	EList<Type> getSharedTypes();
 
 } // GeppettoLibrary

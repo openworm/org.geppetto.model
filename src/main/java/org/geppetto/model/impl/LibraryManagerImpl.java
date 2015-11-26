@@ -3,15 +3,13 @@
 package org.geppetto.model.impl;
 
 import java.util.Collection;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.LibraryManager;
@@ -32,7 +30,7 @@ import org.geppetto.model.LibraryManager;
 public class LibraryManagerImpl extends MinimalEObjectImpl.Container implements LibraryManager
 {
 	/**
-	 * The cached value of the '{@link #getLibraries() <em>Libraries</em>}' reference list.
+	 * The cached value of the '{@link #getLibraries() <em>Libraries</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLibraries()
@@ -71,9 +69,25 @@ public class LibraryManagerImpl extends MinimalEObjectImpl.Container implements 
 	{
 		if (libraries == null)
 		{
-			libraries = new EObjectResolvingEList<GeppettoLibrary>(GeppettoLibrary.class, this, GeppettoPackage.LIBRARY_MANAGER__LIBRARIES);
+			libraries = new EObjectContainmentEList<GeppettoLibrary>(GeppettoLibrary.class, this, GeppettoPackage.LIBRARY_MANAGER__LIBRARIES);
 		}
 		return libraries;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case GeppettoPackage.LIBRARY_MANAGER__LIBRARIES:
+				return ((InternalEList<?>)getLibraries()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

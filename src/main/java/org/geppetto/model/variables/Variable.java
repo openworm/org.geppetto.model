@@ -16,6 +16,7 @@ import org.geppetto.model.values.Value;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.geppetto.model.variables.Variable#getAnonymousTypes <em>Anonymous Types</em>}</li>
  *   <li>{@link org.geppetto.model.variables.Variable#getTypes <em>Types</em>}</li>
  *   <li>{@link org.geppetto.model.variables.Variable#getInitialValues <em>Initial Values</em>}</li>
  *   <li>{@link org.geppetto.model.variables.Variable#isStatic <em>Static</em>}</li>
@@ -29,6 +30,22 @@ import org.geppetto.model.values.Value;
  */
 public interface Variable extends Node
 {
+	/**
+	 * Returns the value of the '<em><b>Anonymous Types</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.types.Type}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Anonymous Types</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Anonymous Types</em>' containment reference list.
+	 * @see org.geppetto.model.variables.VariablesPackage#getVariable_AnonymousTypes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Type> getAnonymousTypes();
+
 	/**
 	 * Returns the value of the '<em><b>Types</b></em>' reference list.
 	 * The list contents are of type {@link org.geppetto.model.types.Type}.

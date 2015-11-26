@@ -15,8 +15,6 @@ import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.LibraryManager;
 import org.geppetto.model.Node;
-import org.geppetto.model.aspect.AspectPackage;
-import org.geppetto.model.aspect.impl.AspectPackageImpl;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
 import org.geppetto.model.values.ValuesPackage;
@@ -115,21 +113,18 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) instanceof ValuesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) : ValuesPackage.eINSTANCE);
 		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) instanceof VariablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) : VariablesPackage.eINSTANCE);
-		AspectPackageImpl theAspectPackage = (AspectPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) instanceof AspectPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) : AspectPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theGeppettoPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 		theValuesPackage.createPackageContents();
 		theVariablesPackage.createPackageContents();
-		theAspectPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theGeppettoPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 		theValuesPackage.initializePackageContents();
 		theVariablesPackage.initializePackageContents();
-		theAspectPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theGeppettoPackage.freeze();
@@ -165,7 +160,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeppettoModel_Aspects()
+	public EReference getGeppettoModel_Libraries()
 	{
 		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -185,9 +180,19 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNode_Name()
+	public EAttribute getNode_Id()
 	{
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNode_Name()
+	{
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -218,6 +223,16 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	public EReference getGeppettoLibrary_Types()
 	{
 		return (EReference)geppettoLibraryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeppettoLibrary_SharedTypes()
+	{
+		return (EReference)geppettoLibraryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -272,14 +287,16 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		// Create classes and their features
 		geppettoModelEClass = createEClass(GEPPETTO_MODEL);
 		createEReference(geppettoModelEClass, GEPPETTO_MODEL__VARIABLES);
-		createEReference(geppettoModelEClass, GEPPETTO_MODEL__ASPECTS);
+		createEReference(geppettoModelEClass, GEPPETTO_MODEL__LIBRARIES);
 
 		nodeEClass = createEClass(NODE);
+		createEAttribute(nodeEClass, NODE__ID);
 		createEAttribute(nodeEClass, NODE__NAME);
 		createEOperation(nodeEClass, NODE___GET_PATH);
 
 		geppettoLibraryEClass = createEClass(GEPPETTO_LIBRARY);
 		createEReference(geppettoLibraryEClass, GEPPETTO_LIBRARY__TYPES);
+		createEReference(geppettoLibraryEClass, GEPPETTO_LIBRARY__SHARED_TYPES);
 
 		libraryManagerEClass = createEClass(LIBRARY_MANAGER);
 		createEReference(libraryManagerEClass, LIBRARY_MANAGER__LIBRARIES);
@@ -313,14 +330,12 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 		ValuesPackage theValuesPackage = (ValuesPackage)EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
 		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
-		AspectPackage theAspectPackage = (AspectPackage)EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theTypesPackage);
 		getESubpackages().add(theValuesPackage);
 		getESubpackages().add(theVariablesPackage);
-		getESubpackages().add(theAspectPackage);
 
 		// Create type parameters
 
@@ -332,18 +347,20 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		// Initialize classes, features, and operations; add parameters
 		initEClass(geppettoModelEClass, GeppettoModel.class, "GeppettoModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeppettoModel_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeppettoModel_Aspects(), theAspectPackage.getAspect(), null, "aspects", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeppettoModel_Libraries(), this.getGeppettoLibrary(), null, "libraries", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNode_Name(), theXMLTypePackage.getString(), "name", "", 1, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_Id(), theXMLTypePackage.getString(), "id", "", 1, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getNode__GetPath(), theXMLTypePackage.getString(), "getPath", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(geppettoLibraryEClass, GeppettoLibrary.class, "GeppettoLibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeppettoLibrary_Types(), theTypesPackage.getType(), null, "types", null, 0, -1, GeppettoLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeppettoLibrary_SharedTypes(), theTypesPackage.getType(), null, "sharedTypes", null, 0, -1, GeppettoLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(libraryManagerEClass, LibraryManager.class, "LibraryManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLibraryManager_Libraries(), this.getGeppettoLibrary(), null, "libraries", null, 0, -1, LibraryManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibraryManager_Libraries(), this.getGeppettoLibrary(), null, "libraries", null, 0, -1, LibraryManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

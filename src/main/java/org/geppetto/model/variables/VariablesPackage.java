@@ -70,6 +70,15 @@ public interface VariablesPackage extends EPackage
 	int VARIABLE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__ID = GeppettoPackage.NODE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,13 +88,22 @@ public interface VariablesPackage extends EPackage
 	int VARIABLE__NAME = GeppettoPackage.NODE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Anonymous Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__ANONYMOUS_TYPES = GeppettoPackage.NODE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Types</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__TYPES = GeppettoPackage.NODE_FEATURE_COUNT + 0;
+	int VARIABLE__TYPES = GeppettoPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Initial Values</b></em>' reference.
@@ -94,7 +112,7 @@ public interface VariablesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__INITIAL_VALUES = GeppettoPackage.NODE_FEATURE_COUNT + 1;
+	int VARIABLE__INITIAL_VALUES = GeppettoPackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Static</b></em>' attribute.
@@ -103,7 +121,7 @@ public interface VariablesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__STATIC = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+	int VARIABLE__STATIC = GeppettoPackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -112,7 +130,7 @@ public interface VariablesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__POSITION = GeppettoPackage.NODE_FEATURE_COUNT + 3;
+	int VARIABLE__POSITION = GeppettoPackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -121,7 +139,7 @@ public interface VariablesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 4;
+	int VARIABLE_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -153,6 +171,15 @@ public interface VariablesPackage extends EPackage
 	int ARRAY_VARIABLE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_VARIABLE__ID = VARIABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -160,6 +187,15 @@ public interface VariablesPackage extends EPackage
 	 * @ordered
 	 */
 	int ARRAY_VARIABLE__NAME = VARIABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Anonymous Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_VARIABLE__ANONYMOUS_TYPES = VARIABLE__ANONYMOUS_TYPES;
 
 	/**
 	 * The feature id for the '<em><b>Types</b></em>' reference list.
@@ -243,6 +279,17 @@ public interface VariablesPackage extends EPackage
 	 * @generated
 	 */
 	EClass getVariable();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.variables.Variable#getAnonymousTypes <em>Anonymous Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Anonymous Types</em>'.
+	 * @see org.geppetto.model.variables.Variable#getAnonymousTypes()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EReference getVariable_AnonymousTypes();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.geppetto.model.variables.Variable#getTypes <em>Types</em>}'.
@@ -342,6 +389,14 @@ public interface VariablesPackage extends EPackage
 		 * @generated
 		 */
 		EClass VARIABLE = eINSTANCE.getVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Anonymous Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE__ANONYMOUS_TYPES = eINSTANCE.getVariable_AnonymousTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Types</b></em>' reference list feature.
