@@ -93,11 +93,6 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 				return createCompositeTypeAdapter();
 			}
 			@Override
-			public Adapter caseSimpleType(SimpleType object)
-			{
-				return createSimpleTypeAdapter();
-			}
-			@Override
 			public Adapter casePointerType(PointerType object)
 			{
 				return createPointerTypeAdapter();
@@ -235,21 +230,6 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createCompositeTypeAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.SimpleType <em>Simple Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.geppetto.model.types.SimpleType
-	 * @generated
-	 */
-	public Adapter createSimpleTypeAdapter()
 	{
 		return null;
 	}

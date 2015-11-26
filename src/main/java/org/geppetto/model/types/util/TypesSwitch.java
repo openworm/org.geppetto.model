@@ -106,15 +106,6 @@ public class TypesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TypesPackage.SIMPLE_TYPE:
-			{
-				SimpleType simpleType = (SimpleType)theEObject;
-				T result = caseSimpleType(simpleType);
-				if (result == null) result = caseType(simpleType);
-				if (result == null) result = caseNode(simpleType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case TypesPackage.POINTER_TYPE:
 			{
 				PointerType pointerType = (PointerType)theEObject;
@@ -278,22 +269,6 @@ public class TypesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseCompositeType(CompositeType object)
-	{
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Simple Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Simple Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSimpleType(SimpleType object)
 	{
 		return null;
 	}

@@ -67,7 +67,6 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.VISUAL_TYPE: return createVisualType();
 			case TypesPackage.IMPORT_TYPE: return createImportType();
 			case TypesPackage.COMPOSITE_TYPE: return createCompositeType();
-			case TypesPackage.SIMPLE_TYPE: return createSimpleType();
 			case TypesPackage.POINTER_TYPE: return createPointerType();
 			case TypesPackage.QUANTITY_TYPE: return createQuantityType();
 			case TypesPackage.PARAMETER_TYPE: return createParameterType();
@@ -115,17 +114,6 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		CompositeTypeImpl compositeType = new CompositeTypeImpl();
 		return compositeType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SimpleType createSimpleType()
-	{
-		SimpleTypeImpl simpleType = new SimpleTypeImpl();
-		return simpleType;
 	}
 
 	/**

@@ -49,6 +49,7 @@ public interface Variable extends Node
 	/**
 	 * Returns the value of the '<em><b>Types</b></em>' reference list.
 	 * The list contents are of type {@link org.geppetto.model.types.Type}.
+	 * It is bidirectional and its opposite is '{@link org.geppetto.model.types.Type#getReferencedVariables <em>Referenced Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Types</em>' reference list isn't clear,
@@ -57,7 +58,8 @@ public interface Variable extends Node
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Types</em>' reference list.
 	 * @see org.geppetto.model.variables.VariablesPackage#getVariable_Types()
-	 * @model
+	 * @see org.geppetto.model.types.Type#getReferencedVariables
+	 * @model opposite="referencedVariables" resolveProxies="false"
 	 * @generated
 	 */
 	EList<Type> getTypes();

@@ -50,15 +50,6 @@ public interface TypesFactory extends EFactory
 	CompositeType createCompositeType();
 
 	/**
-	 * Returns a new object of class '<em>Simple Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Simple Type</em>'.
-	 * @generated
-	 */
-	SimpleType createSimpleType();
-
-	/**
 	 * Returns a new object of class '<em>Pointer Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

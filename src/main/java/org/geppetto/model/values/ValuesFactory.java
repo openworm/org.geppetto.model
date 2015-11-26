@@ -230,6 +230,24 @@ public interface ValuesFactory extends EFactory
 	SkeletonTransformation createSkeletonTransformation();
 
 	/**
+	 * Returns a new object of class '<em>Visual Group Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Visual Group Element</em>'.
+	 * @generated
+	 */
+	VisualGroupElement createVisualGroupElement();
+
+	/**
+	 * Returns a new object of class '<em>Visual Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Visual Group</em>'.
+	 * @generated
+	 */
+	VisualGroup createVisualGroup();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

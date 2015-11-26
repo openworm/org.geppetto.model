@@ -10,10 +10,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.impl.NodeImpl;
 import org.geppetto.model.types.Type;
+import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.values.Point;
 import org.geppetto.model.values.Value;
 import org.geppetto.model.variables.Variable;
@@ -142,7 +143,7 @@ public class VariableImpl extends NodeImpl implements Variable
 	{
 		if (types == null)
 		{
-			types = new EObjectResolvingEList<Type>(Type.class, this, VariablesPackage.VARIABLE__TYPES);
+			types = new EObjectWithInverseEList.ManyInverse<Type>(Type.class, this, VariablesPackage.VARIABLE__TYPES, TypesPackage.TYPE__REFERENCED_VARIABLES);
 		}
 		return types;
 	}
@@ -261,6 +262,23 @@ public class VariableImpl extends NodeImpl implements Variable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case VariablesPackage.VARIABLE__TYPES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTypes()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -268,6 +286,8 @@ public class VariableImpl extends NodeImpl implements Variable
 		{
 			case VariablesPackage.VARIABLE__ANONYMOUS_TYPES:
 				return ((InternalEList<?>)getAnonymousTypes()).basicRemove(otherEnd, msgs);
+			case VariablesPackage.VARIABLE__TYPES:
+				return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

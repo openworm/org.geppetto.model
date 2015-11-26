@@ -38,6 +38,8 @@ import org.geppetto.model.values.Value;
 import org.geppetto.model.values.ValuesFactory;
 import org.geppetto.model.values.ValuesPackage;
 import org.geppetto.model.values.VisualComposite;
+import org.geppetto.model.values.VisualGroup;
+import org.geppetto.model.values.VisualGroupElement;
 import org.geppetto.model.values.VisualValue;
 import org.geppetto.model.variables.VariablesPackage;
 import org.geppetto.model.variables.impl.VariablesPackageImpl;
@@ -238,6 +240,20 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * @generated
 	 */
 	private EClass skeletonTransformationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass visualGroupElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass visualGroupEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -761,6 +777,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVisualValue_GroupElements()
+	{
+		return (EReference)visualValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCollada()
 	{
 		return colladaEClass;
@@ -794,6 +820,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	public EReference getVisualComposite_Value()
 	{
 		return (EReference)visualCompositeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVisualComposite_VisualGroups()
+	{
+		return (EReference)visualCompositeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -941,6 +977,86 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getVisualGroupElement()
+	{
+		return visualGroupElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVisualGroupElement_DefaultColor()
+	{
+		return (EAttribute)visualGroupElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVisualGroupElement_Parameter()
+	{
+		return (EReference)visualGroupElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVisualGroup()
+	{
+		return visualGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVisualGroup_LowSpectrumColor()
+	{
+		return (EAttribute)visualGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVisualGroup_HighSpectrumColor()
+	{
+		return (EAttribute)visualGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVisualGroup_Type()
+	{
+		return (EAttribute)visualGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVisualGroup_VisualGroupElements()
+	{
+		return (EReference)visualGroupEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ValuesFactory getValuesFactory()
 	{
 		return (ValuesFactory)getEFactoryInstance();
@@ -1028,12 +1144,14 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEAttribute(expressionEClass, EXPRESSION__EXPRESSION);
 
 		visualValueEClass = createEClass(VISUAL_VALUE);
+		createEReference(visualValueEClass, VISUAL_VALUE__GROUP_ELEMENTS);
 
 		colladaEClass = createEClass(COLLADA);
 		createEAttribute(colladaEClass, COLLADA__COLLADA);
 
 		visualCompositeEClass = createEClass(VISUAL_COMPOSITE);
 		createEReference(visualCompositeEClass, VISUAL_COMPOSITE__VALUE);
+		createEReference(visualCompositeEClass, VISUAL_COMPOSITE__VISUAL_GROUPS);
 
 		objEClass = createEClass(OBJ);
 		createEAttribute(objEClass, OBJ__OBJ);
@@ -1054,6 +1172,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		skeletonTransformationEClass = createEClass(SKELETON_TRANSFORMATION);
 		createEAttribute(skeletonTransformationEClass, SKELETON_TRANSFORMATION__SKELETON_TRANSFORMATION);
+
+		visualGroupElementEClass = createEClass(VISUAL_GROUP_ELEMENT);
+		createEAttribute(visualGroupElementEClass, VISUAL_GROUP_ELEMENT__DEFAULT_COLOR);
+		createEReference(visualGroupElementEClass, VISUAL_GROUP_ELEMENT__PARAMETER);
+
+		visualGroupEClass = createEClass(VISUAL_GROUP);
+		createEAttribute(visualGroupEClass, VISUAL_GROUP__LOW_SPECTRUM_COLOR);
+		createEAttribute(visualGroupEClass, VISUAL_GROUP__HIGH_SPECTRUM_COLOR);
+		createEAttribute(visualGroupEClass, VISUAL_GROUP__TYPE);
+		createEReference(visualGroupEClass, VISUAL_GROUP__VISUAL_GROUP_ELEMENTS);
 	}
 
 	/**
@@ -1179,12 +1307,14 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEAttribute(getExpression_Expression(), theXMLTypePackage.getString(), "expression", null, 1, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(visualValueEClass, VisualValue.class, "VisualValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVisualValue_GroupElements(), this.getVisualGroupElement(), null, "groupElements", null, 0, -1, VisualValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(colladaEClass, Collada.class, "Collada", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCollada_Collada(), theXMLTypePackage.getString(), "collada", null, 1, 1, Collada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(visualCompositeEClass, VisualComposite.class, "VisualComposite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVisualComposite_Value(), this.getVisualValue(), null, "value", null, 0, -1, VisualComposite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVisualComposite_VisualGroups(), this.getVisualGroup(), null, "visualGroups", null, 0, -1, VisualComposite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(objEClass, org.geppetto.model.values.OBJ.class, "OBJ", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOBJ_Obj(), theXMLTypePackage.getString(), "obj", null, 1, 1, org.geppetto.model.values.OBJ.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1205,6 +1335,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		initEClass(skeletonTransformationEClass, SkeletonTransformation.class, "SkeletonTransformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSkeletonTransformation_SkeletonTransformation(), theXMLTypePackage.getDouble(), "skeletonTransformation", null, 0, -1, SkeletonTransformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(visualGroupElementEClass, VisualGroupElement.class, "VisualGroupElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVisualGroupElement_DefaultColor(), theXMLTypePackage.getString(), "defaultColor", null, 0, 1, VisualGroupElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVisualGroupElement_Parameter(), this.getQuantity(), null, "parameter", null, 0, 1, VisualGroupElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(visualGroupEClass, VisualGroup.class, "VisualGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVisualGroup_LowSpectrumColor(), theXMLTypePackage.getString(), "lowSpectrumColor", null, 0, 1, VisualGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVisualGroup_HighSpectrumColor(), theXMLTypePackage.getString(), "highSpectrumColor", null, 0, 1, VisualGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVisualGroup_Type(), theXMLTypePackage.getString(), "type", null, 0, 1, VisualGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVisualGroup_VisualGroupElements(), this.getVisualGroupElement(), null, "visualGroupElements", null, 1, -1, VisualGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ValuesPackageImpl

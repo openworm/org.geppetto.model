@@ -2,8 +2,10 @@
  */
 package org.geppetto.model.types;
 
+import org.eclipse.emf.common.util.EList;
 import org.geppetto.model.Node;
 import org.geppetto.model.values.Value;
+import org.geppetto.model.variables.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +19,7 @@ import org.geppetto.model.values.Value;
  *   <li>{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}</li>
  *   <li>{@link org.geppetto.model.types.Type#isAbstract <em>Abstract</em>}</li>
  *   <li>{@link org.geppetto.model.types.Type#getVisualType <em>Visual Type</em>}</li>
+ *   <li>{@link org.geppetto.model.types.Type#getReferencedVariables <em>Referenced Variables</em>}</li>
  * </ul>
  * </p>
  *
@@ -129,6 +132,24 @@ public interface Type extends Node
 	 * @generated
 	 */
 	void setVisualType(VisualType value);
+
+	/**
+	 * Returns the value of the '<em><b>Referenced Variables</b></em>' reference list.
+	 * The list contents are of type {@link org.geppetto.model.variables.Variable}.
+	 * It is bidirectional and its opposite is '{@link org.geppetto.model.variables.Variable#getTypes <em>Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Referenced Variables</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Referenced Variables</em>' reference list.
+	 * @see org.geppetto.model.types.TypesPackage#getType_ReferencedVariables()
+	 * @see org.geppetto.model.variables.Variable#getTypes
+	 * @model opposite="types" resolveProxies="false" transient="true"
+	 * @generated
+	 */
+	EList<Variable> getReferencedVariables();
 
 	/**
 	 * <!-- begin-user-doc -->

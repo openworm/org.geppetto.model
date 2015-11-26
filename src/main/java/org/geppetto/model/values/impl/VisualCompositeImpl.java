@@ -12,10 +12,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.geppetto.model.values.ValuesPackage;
 import org.geppetto.model.values.VisualComposite;
+import org.geppetto.model.values.VisualGroup;
 import org.geppetto.model.values.VisualValue;
 
 /**
@@ -26,6 +28,7 @@ import org.geppetto.model.values.VisualValue;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.VisualCompositeImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.VisualCompositeImpl#getVisualGroups <em>Visual Groups</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,6 +45,16 @@ public class VisualCompositeImpl extends VisualValueImpl implements VisualCompos
 	 * @ordered
 	 */
 	protected EList<VisualValue> value;
+
+	/**
+	 * The cached value of the '{@link #getVisualGroups() <em>Visual Groups</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVisualGroups()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VisualGroup> visualGroups;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,6 +96,20 @@ public class VisualCompositeImpl extends VisualValueImpl implements VisualCompos
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<VisualGroup> getVisualGroups()
+	{
+		if (visualGroups == null)
+		{
+			visualGroups = new EObjectResolvingEList<VisualGroup>(VisualGroup.class, this, ValuesPackage.VISUAL_COMPOSITE__VISUAL_GROUPS);
+		}
+		return visualGroups;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -106,6 +133,8 @@ public class VisualCompositeImpl extends VisualValueImpl implements VisualCompos
 		{
 			case ValuesPackage.VISUAL_COMPOSITE__VALUE:
 				return getValue();
+			case ValuesPackage.VISUAL_COMPOSITE__VISUAL_GROUPS:
+				return getVisualGroups();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -125,6 +154,10 @@ public class VisualCompositeImpl extends VisualValueImpl implements VisualCompos
 				getValue().clear();
 				getValue().addAll((Collection<? extends VisualValue>)newValue);
 				return;
+			case ValuesPackage.VISUAL_COMPOSITE__VISUAL_GROUPS:
+				getVisualGroups().clear();
+				getVisualGroups().addAll((Collection<? extends VisualGroup>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -142,6 +175,9 @@ public class VisualCompositeImpl extends VisualValueImpl implements VisualCompos
 			case ValuesPackage.VISUAL_COMPOSITE__VALUE:
 				getValue().clear();
 				return;
+			case ValuesPackage.VISUAL_COMPOSITE__VISUAL_GROUPS:
+				getVisualGroups().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -158,6 +194,8 @@ public class VisualCompositeImpl extends VisualValueImpl implements VisualCompos
 		{
 			case ValuesPackage.VISUAL_COMPOSITE__VALUE:
 				return value != null && !value.isEmpty();
+			case ValuesPackage.VISUAL_COMPOSITE__VISUAL_GROUPS:
+				return visualGroups != null && !visualGroups.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

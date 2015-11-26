@@ -86,6 +86,8 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.PARTICLE: return createParticle();
 			case ValuesPackage.SKELETON_ANIMATION: return createSkeletonAnimation();
 			case ValuesPackage.SKELETON_TRANSFORMATION: return createSkeletonTransformation();
+			case ValuesPackage.VISUAL_GROUP_ELEMENT: return createVisualGroupElement();
+			case ValuesPackage.VISUAL_GROUP: return createVisualGroup();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -353,6 +355,28 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		SkeletonTransformationImpl skeletonTransformation = new SkeletonTransformationImpl();
 		return skeletonTransformation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VisualGroupElement createVisualGroupElement()
+	{
+		VisualGroupElementImpl visualGroupElement = new VisualGroupElementImpl();
+		return visualGroupElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VisualGroup createVisualGroup()
+	{
+		VisualGroupImpl visualGroup = new VisualGroupImpl();
+		return visualGroup;
 	}
 
 	/**

@@ -95,6 +95,16 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 				return createLibraryManagerAdapter();
 			}
 			@Override
+			public Adapter caseGeppettoModelState(GeppettoModelState object)
+			{
+				return createGeppettoModelStateAdapter();
+			}
+			@Override
+			public Adapter caseVariableValue(VariableValue object)
+			{
+				return createVariableValueAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object)
 			{
 				return createEObjectAdapter();
@@ -172,6 +182,36 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createLibraryManagerAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.GeppettoModelState <em>Model State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.GeppettoModelState
+	 * @generated
+	 */
+	public Adapter createGeppettoModelStateAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.VariableValue <em>Variable Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.VariableValue
+	 * @generated
+	 */
+	public Adapter createVariableValueAdapter()
 	{
 		return null;
 	}

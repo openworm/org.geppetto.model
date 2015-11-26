@@ -4,6 +4,7 @@ package org.geppetto.model.types.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -30,7 +31,7 @@ import org.geppetto.model.values.URL;
 public class URLTypeImpl extends TypeImpl implements URLType
 {
 	/**
-	 * The cached value of the '{@link #getDefaultValue() <em>Default Value</em>}' reference.
+	 * The cached value of the '{@link #getDefaultValue() <em>Default Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDefaultValue()
@@ -67,16 +68,6 @@ public class URLTypeImpl extends TypeImpl implements URLType
 	 */
 	public URL getDefaultValue()
 	{
-		if (defaultValue != null && defaultValue.eIsProxy())
-		{
-			InternalEObject oldDefaultValue = (InternalEObject)defaultValue;
-			defaultValue = (URL)eResolveProxy(oldDefaultValue);
-			if (defaultValue != oldDefaultValue)
-			{
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TypesPackage.URL_TYPE__DEFAULT_VALUE, oldDefaultValue, defaultValue));
-			}
-		}
 		return defaultValue;
 	}
 
@@ -85,9 +76,16 @@ public class URLTypeImpl extends TypeImpl implements URLType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public URL basicGetDefaultValue()
+	public NotificationChain basicSetDefaultValue(URL newDefaultValue, NotificationChain msgs)
 	{
-		return defaultValue;
+		URL oldDefaultValue = defaultValue;
+		defaultValue = newDefaultValue;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TypesPackage.URL_TYPE__DEFAULT_VALUE, oldDefaultValue, newDefaultValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -97,10 +95,34 @@ public class URLTypeImpl extends TypeImpl implements URLType
 	 */
 	public void setDefaultValue(URL newDefaultValue)
 	{
-		URL oldDefaultValue = defaultValue;
-		defaultValue = newDefaultValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.URL_TYPE__DEFAULT_VALUE, oldDefaultValue, defaultValue));
+		if (newDefaultValue != defaultValue)
+		{
+			NotificationChain msgs = null;
+			if (defaultValue != null)
+				msgs = ((InternalEObject)defaultValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TypesPackage.URL_TYPE__DEFAULT_VALUE, null, msgs);
+			if (newDefaultValue != null)
+				msgs = ((InternalEObject)newDefaultValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TypesPackage.URL_TYPE__DEFAULT_VALUE, null, msgs);
+			msgs = basicSetDefaultValue(newDefaultValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.URL_TYPE__DEFAULT_VALUE, newDefaultValue, newDefaultValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case TypesPackage.URL_TYPE__DEFAULT_VALUE:
+				return basicSetDefaultValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -114,8 +136,7 @@ public class URLTypeImpl extends TypeImpl implements URLType
 		switch (featureID)
 		{
 			case TypesPackage.URL_TYPE__DEFAULT_VALUE:
-				if (resolve) return getDefaultValue();
-				return basicGetDefaultValue();
+				return getDefaultValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

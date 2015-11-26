@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.geppetto.model.values.VisualComposite#getValue <em>Value</em>}</li>
+ *   <li>{@link org.geppetto.model.values.VisualComposite#getVisualGroups <em>Visual Groups</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,5 +38,21 @@ public interface VisualComposite extends VisualValue
 	 * @generated
 	 */
 	EList<VisualValue> getValue();
+
+	/**
+	 * Returns the value of the '<em><b>Visual Groups</b></em>' reference list.
+	 * The list contents are of type {@link org.geppetto.model.values.VisualGroup}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Visual Groups</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Visual Groups</em>' reference list.
+	 * @see org.geppetto.model.values.ValuesPackage#getVisualComposite_VisualGroups()
+	 * @model
+	 * @generated
+	 */
+	EList<VisualGroup> getVisualGroups();
 
 } // VisualComposite

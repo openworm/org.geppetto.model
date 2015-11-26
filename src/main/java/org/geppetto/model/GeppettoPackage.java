@@ -272,6 +272,98 @@ public interface GeppettoPackage extends EPackage
 
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.GeppettoModelStateImpl <em>Model State</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.GeppettoModelStateImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getGeppettoModelState()
+	 * @generated
+	 */
+	int GEPPETTO_MODEL_STATE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Recorded Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_MODEL_STATE__RECORDED_VARIABLES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Set Parameters</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_MODEL_STATE__SET_PARAMETERS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Model State</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_MODEL_STATE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Model State</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_MODEL_STATE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.VariableValueImpl <em>Variable Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.VariableValueImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getVariableValue()
+	 * @generated
+	 */
+	int VARIABLE_VALUE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Pointer</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_VALUE__POINTER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_VALUE__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Variable Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_VALUE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Variable Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_VALUE_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -397,6 +489,70 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EReference getLibraryManager_Libraries();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModelState <em>Model State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Model State</em>'.
+	 * @see org.geppetto.model.GeppettoModelState
+	 * @generated
+	 */
+	EClass getGeppettoModelState();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.GeppettoModelState#getRecordedVariables <em>Recorded Variables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Recorded Variables</em>'.
+	 * @see org.geppetto.model.GeppettoModelState#getRecordedVariables()
+	 * @see #getGeppettoModelState()
+	 * @generated
+	 */
+	EReference getGeppettoModelState_RecordedVariables();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.GeppettoModelState#getSetParameters <em>Set Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Set Parameters</em>'.
+	 * @see org.geppetto.model.GeppettoModelState#getSetParameters()
+	 * @see #getGeppettoModelState()
+	 * @generated
+	 */
+	EReference getGeppettoModelState_SetParameters();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.VariableValue <em>Variable Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variable Value</em>'.
+	 * @see org.geppetto.model.VariableValue
+	 * @generated
+	 */
+	EClass getVariableValue();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.VariableValue#getPointer <em>Pointer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pointer</em>'.
+	 * @see org.geppetto.model.VariableValue#getPointer()
+	 * @see #getVariableValue()
+	 * @generated
+	 */
+	EReference getVariableValue_Pointer();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.VariableValue#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @see org.geppetto.model.VariableValue#getValue()
+	 * @see #getVariableValue()
+	 * @generated
+	 */
+	EReference getVariableValue_Value();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -525,6 +681,58 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference LIBRARY_MANAGER__LIBRARIES = eINSTANCE.getLibraryManager_Libraries();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.GeppettoModelStateImpl <em>Model State</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.GeppettoModelStateImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getGeppettoModelState()
+		 * @generated
+		 */
+		EClass GEPPETTO_MODEL_STATE = eINSTANCE.getGeppettoModelState();
+
+		/**
+		 * The meta object literal for the '<em><b>Recorded Variables</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEPPETTO_MODEL_STATE__RECORDED_VARIABLES = eINSTANCE.getGeppettoModelState_RecordedVariables();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Parameters</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEPPETTO_MODEL_STATE__SET_PARAMETERS = eINSTANCE.getGeppettoModelState_SetParameters();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.VariableValueImpl <em>Variable Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.VariableValueImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getVariableValue()
+		 * @generated
+		 */
+		EClass VARIABLE_VALUE = eINSTANCE.getVariableValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Pointer</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE_VALUE__POINTER = eINSTANCE.getVariableValue_Pointer();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE_VALUE__VALUE = eINSTANCE.getVariableValue_Value();
 
 	}
 

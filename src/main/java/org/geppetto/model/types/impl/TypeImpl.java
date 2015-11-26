@@ -3,16 +3,22 @@
 package org.geppetto.model.types.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.impl.NodeImpl;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.VisualType;
 import org.geppetto.model.values.Value;
+import org.geppetto.model.variables.Variable;
+import org.geppetto.model.variables.VariablesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +31,7 @@ import org.geppetto.model.values.Value;
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getDomainModel <em>Domain Model</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#isAbstract <em>Abstract</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getVisualType <em>Visual Type</em>}</li>
+ *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getReferencedVariables <em>Referenced Variables</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,6 +98,16 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	 * @ordered
 	 */
 	protected VisualType visualType;
+
+	/**
+	 * The cached value of the '{@link #getReferencedVariables() <em>Referenced Variables</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencedVariables()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Variable> referencedVariables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -250,11 +267,58 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Variable> getReferencedVariables()
+	{
+		if (referencedVariables == null)
+		{
+			referencedVariables = new EObjectWithInverseEList.ManyInverse<Variable>(Variable.class, this, TypesPackage.TYPE__REFERENCED_VARIABLES, VariablesPackage.VARIABLE__TYPES);
+		}
+		return referencedVariables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Value getDefaultValue()
 	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getReferencedVariables()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				return ((InternalEList<?>)getReferencedVariables()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -277,6 +341,8 @@ public abstract class TypeImpl extends NodeImpl implements Type
 			case TypesPackage.TYPE__VISUAL_TYPE:
 				if (resolve) return getVisualType();
 				return basicGetVisualType();
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				return getReferencedVariables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -304,6 +370,10 @@ public abstract class TypeImpl extends NodeImpl implements Type
 			case TypesPackage.TYPE__VISUAL_TYPE:
 				setVisualType((VisualType)newValue);
 				return;
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				getReferencedVariables().clear();
+				getReferencedVariables().addAll((Collection<? extends Variable>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -330,6 +400,9 @@ public abstract class TypeImpl extends NodeImpl implements Type
 			case TypesPackage.TYPE__VISUAL_TYPE:
 				setVisualType((VisualType)null);
 				return;
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				getReferencedVariables().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -352,6 +425,8 @@ public abstract class TypeImpl extends NodeImpl implements Type
 				return abstract_ != ABSTRACT_EDEFAULT;
 			case TypesPackage.TYPE__VISUAL_TYPE:
 				return visualType != null;
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				return referencedVariables != null && !referencedVariables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

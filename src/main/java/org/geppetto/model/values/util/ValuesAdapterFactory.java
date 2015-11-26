@@ -208,6 +208,16 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createSkeletonTransformationAdapter();
 			}
 			@Override
+			public Adapter caseVisualGroupElement(VisualGroupElement object)
+			{
+				return createVisualGroupElementAdapter();
+			}
+			@Override
+			public Adapter caseVisualGroup(VisualGroup object)
+			{
+				return createVisualGroupAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object)
 			{
 				return createEObjectAdapter();
@@ -630,6 +640,36 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createSkeletonTransformationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.VisualGroupElement <em>Visual Group Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.VisualGroupElement
+	 * @generated
+	 */
+	public Adapter createVisualGroupElementAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.VisualGroup <em>Visual Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.VisualGroup
+	 * @generated
+	 */
+	public Adapter createVisualGroupAdapter()
 	{
 		return null;
 	}

@@ -816,13 +816,22 @@ public interface ValuesPackage extends EPackage
 	int VISUAL_VALUE = 18;
 
 	/**
+	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_VALUE__GROUP_ELEMENTS = VALUE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Visual Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 0;
+	int VISUAL_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Visual Value</em>' class.
@@ -842,6 +851,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int COLLADA = 19;
+
+	/**
+	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLADA__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Collada</b></em>' attribute.
@@ -881,6 +899,15 @@ public interface ValuesPackage extends EPackage
 	int VISUAL_COMPOSITE = 20;
 
 	/**
+	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_COMPOSITE__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -890,13 +917,22 @@ public interface ValuesPackage extends EPackage
 	int VISUAL_COMPOSITE__VALUE = VISUAL_VALUE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Visual Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_COMPOSITE__VISUAL_GROUPS = VISUAL_VALUE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Visual Composite</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_COMPOSITE_FEATURE_COUNT = VISUAL_VALUE_FEATURE_COUNT + 1;
+	int VISUAL_COMPOSITE_FEATURE_COUNT = VISUAL_VALUE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Visual Composite</em>' class.
@@ -916,6 +952,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int OBJ = 21;
+
+	/**
+	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJ__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Obj</b></em>' attribute.
@@ -955,6 +1000,15 @@ public interface ValuesPackage extends EPackage
 	int SPHERE = 22;
 
 	/**
+	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPHERE__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
+
+	/**
 	 * The feature id for the '<em><b>Radius</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -990,6 +1044,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int CYLINDER = 23;
+
+	/**
+	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Bottom Radius</b></em>' attribute.
@@ -1056,6 +1119,15 @@ public interface ValuesPackage extends EPackage
 	int PARTICLE = 24;
 
 	/**
+	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTICLE__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
+
+	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1110,6 +1182,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int SKELETON_ANIMATION = 25;
+
+	/**
+	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKELETON_ANIMATION__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Skeleton Transformation Series</b></em>' reference list.
@@ -1174,6 +1255,117 @@ public interface ValuesPackage extends EPackage
 	 * @ordered
 	 */
 	int SKELETON_TRANSFORMATION_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.VisualGroupElementImpl <em>Visual Group Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.VisualGroupElementImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroupElement()
+	 * @generated
+	 */
+	int VISUAL_GROUP_ELEMENT = 27;
+
+	/**
+	 * The feature id for the '<em><b>Default Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_ELEMENT__DEFAULT_COLOR = 0;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_ELEMENT__PARAMETER = 1;
+
+	/**
+	 * The number of structural features of the '<em>Visual Group Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_ELEMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Visual Group Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.VisualGroupImpl <em>Visual Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.VisualGroupImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroup()
+	 * @generated
+	 */
+	int VISUAL_GROUP = 28;
+
+	/**
+	 * The feature id for the '<em><b>Low Spectrum Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP__LOW_SPECTRUM_COLOR = 0;
+
+	/**
+	 * The feature id for the '<em><b>High Spectrum Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP__HIGH_SPECTRUM_COLOR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP__TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Visual Group Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP__VISUAL_GROUP_ELEMENTS = 3;
+
+	/**
+	 * The number of structural features of the '<em>Visual Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Visual Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_OPERATION_COUNT = 0;
 
 
 	/**
@@ -1643,6 +1835,17 @@ public interface ValuesPackage extends EPackage
 	EClass getVisualValue();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.values.VisualValue#getGroupElements <em>Group Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Group Elements</em>'.
+	 * @see org.geppetto.model.values.VisualValue#getGroupElements()
+	 * @see #getVisualValue()
+	 * @generated
+	 */
+	EReference getVisualValue_GroupElements();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Collada <em>Collada</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1683,6 +1886,17 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EReference getVisualComposite_Value();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.values.VisualComposite#getVisualGroups <em>Visual Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Visual Groups</em>'.
+	 * @see org.geppetto.model.values.VisualComposite#getVisualGroups()
+	 * @see #getVisualComposite()
+	 * @generated
+	 */
+	EReference getVisualComposite_VisualGroups();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.OBJ <em>OBJ</em>}'.
@@ -1831,6 +2045,92 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getSkeletonTransformation_SkeletonTransformation();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.VisualGroupElement <em>Visual Group Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Visual Group Element</em>'.
+	 * @see org.geppetto.model.values.VisualGroupElement
+	 * @generated
+	 */
+	EClass getVisualGroupElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.VisualGroupElement#getDefaultColor <em>Default Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Color</em>'.
+	 * @see org.geppetto.model.values.VisualGroupElement#getDefaultColor()
+	 * @see #getVisualGroupElement()
+	 * @generated
+	 */
+	EAttribute getVisualGroupElement_DefaultColor();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.VisualGroupElement#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Parameter</em>'.
+	 * @see org.geppetto.model.values.VisualGroupElement#getParameter()
+	 * @see #getVisualGroupElement()
+	 * @generated
+	 */
+	EReference getVisualGroupElement_Parameter();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.VisualGroup <em>Visual Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Visual Group</em>'.
+	 * @see org.geppetto.model.values.VisualGroup
+	 * @generated
+	 */
+	EClass getVisualGroup();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.VisualGroup#getLowSpectrumColor <em>Low Spectrum Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Low Spectrum Color</em>'.
+	 * @see org.geppetto.model.values.VisualGroup#getLowSpectrumColor()
+	 * @see #getVisualGroup()
+	 * @generated
+	 */
+	EAttribute getVisualGroup_LowSpectrumColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.VisualGroup#getHighSpectrumColor <em>High Spectrum Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>High Spectrum Color</em>'.
+	 * @see org.geppetto.model.values.VisualGroup#getHighSpectrumColor()
+	 * @see #getVisualGroup()
+	 * @generated
+	 */
+	EAttribute getVisualGroup_HighSpectrumColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.VisualGroup#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.geppetto.model.values.VisualGroup#getType()
+	 * @see #getVisualGroup()
+	 * @generated
+	 */
+	EAttribute getVisualGroup_Type();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.values.VisualGroup#getVisualGroupElements <em>Visual Group Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Visual Group Elements</em>'.
+	 * @see org.geppetto.model.values.VisualGroup#getVisualGroupElements()
+	 * @see #getVisualGroup()
+	 * @generated
+	 */
+	EReference getVisualGroup_VisualGroupElements();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2247,6 +2547,14 @@ public interface ValuesPackage extends EPackage
 		EClass VISUAL_VALUE = eINSTANCE.getVisualValue();
 
 		/**
+		 * The meta object literal for the '<em><b>Group Elements</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VISUAL_VALUE__GROUP_ELEMENTS = eINSTANCE.getVisualValue_GroupElements();
+
+		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ColladaImpl <em>Collada</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2281,6 +2589,14 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EReference VISUAL_COMPOSITE__VALUE = eINSTANCE.getVisualComposite_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Visual Groups</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VISUAL_COMPOSITE__VISUAL_GROUPS = eINSTANCE.getVisualComposite_VisualGroups();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.OBJImpl <em>OBJ</em>}' class.
@@ -2405,6 +2721,74 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute SKELETON_TRANSFORMATION__SKELETON_TRANSFORMATION = eINSTANCE.getSkeletonTransformation_SkeletonTransformation();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.VisualGroupElementImpl <em>Visual Group Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.VisualGroupElementImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroupElement()
+		 * @generated
+		 */
+		EClass VISUAL_GROUP_ELEMENT = eINSTANCE.getVisualGroupElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VISUAL_GROUP_ELEMENT__DEFAULT_COLOR = eINSTANCE.getVisualGroupElement_DefaultColor();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VISUAL_GROUP_ELEMENT__PARAMETER = eINSTANCE.getVisualGroupElement_Parameter();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.VisualGroupImpl <em>Visual Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.VisualGroupImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroup()
+		 * @generated
+		 */
+		EClass VISUAL_GROUP = eINSTANCE.getVisualGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Low Spectrum Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VISUAL_GROUP__LOW_SPECTRUM_COLOR = eINSTANCE.getVisualGroup_LowSpectrumColor();
+
+		/**
+		 * The meta object literal for the '<em><b>High Spectrum Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VISUAL_GROUP__HIGH_SPECTRUM_COLOR = eINSTANCE.getVisualGroup_HighSpectrumColor();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VISUAL_GROUP__TYPE = eINSTANCE.getVisualGroup_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Visual Group Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VISUAL_GROUP__VISUAL_GROUP_ELEMENTS = eINSTANCE.getVisualGroup_VisualGroupElements();
 
 	}
 
