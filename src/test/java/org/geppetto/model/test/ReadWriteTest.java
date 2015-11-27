@@ -63,7 +63,7 @@ public class ReadWriteTest
 	}
 
 	@Test
-	public void test() throws Exception
+	public void testReadWrite() throws Exception
 	{
 		// Initialize the factory and the resource set
 		GeppettoPackage.eINSTANCE.eClass();
