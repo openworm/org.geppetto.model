@@ -32,36 +32,31 @@
  *******************************************************************************/
 package org.geppetto.model.util;
 
-import org.eclipse.emf.common.util.TreeIterator;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.util.Switch;
-import org.geppetto.model.GeppettoModel;
-
 /**
  * @author matteocantarelli
  *
  */
-public class GeppettoModelTraversal extends GeppettoSwitch<EObject>
+public class GeppettoModelException extends Exception
 {
-	public static void apply(GeppettoModel object, Switch<?> visitor) throws GeppettoModelException
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public GeppettoModelException(String message, Throwable cause)
 	{
-		TreeIterator<EObject> iterator = object.eAllContents();
-		while(iterator.hasNext())
-		{
-			checkException(visitor.doSwitch(iterator.next()));
-		}
+		super(message, cause);
 	}
 
-	private static void checkException(Object e) throws GeppettoModelException
+	public GeppettoModelException(String message)
 	{
+		super(message);
+	}
 
-		if(e != null)
-		{
-			if(e instanceof GeppettoModelException)
-			{
-				throw (GeppettoModelException) e;
-			}
-		}
+	public GeppettoModelException(Throwable cause)
+	{
+		super(cause);
 	}
 
 }
