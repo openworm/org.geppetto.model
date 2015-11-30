@@ -147,7 +147,7 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Pointer" eSuperTypes="#//values/Value">
-      <eOperations name="getValue"/>
+      <eOperations name="getInstancePath" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
           eType="#//values/PointerElement" containment="true"/>
     </eClassifiers>

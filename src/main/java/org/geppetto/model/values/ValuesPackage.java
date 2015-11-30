@@ -521,13 +521,13 @@ public interface ValuesPackage extends EPackage
 	int POINTER_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
+	 * The operation id for the '<em>Get Instance Path</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINTER___GET_VALUE = VALUE_OPERATION_COUNT + 0;
+	int POINTER___GET_INSTANCE_PATH = VALUE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Pointer</em>' class.
@@ -1634,14 +1634,14 @@ public interface ValuesPackage extends EPackage
 	EReference getPointer_Elements();
 
 	/**
-	 * Returns the meta object for the '{@link org.geppetto.model.values.Pointer#getValue() <em>Get Value</em>}' operation.
+	 * Returns the meta object for the '{@link org.geppetto.model.values.Pointer#getInstancePath() <em>Get Instance Path</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Value</em>' operation.
-	 * @see org.geppetto.model.values.Pointer#getValue()
+	 * @return the meta object for the '<em>Get Instance Path</em>' operation.
+	 * @see org.geppetto.model.values.Pointer#getInstancePath()
 	 * @generated
 	 */
-	EOperation getPointer__GetValue();
+	EOperation getPointer__GetInstancePath();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.PointerElement <em>Pointer Element</em>}'.
@@ -2381,12 +2381,12 @@ public interface ValuesPackage extends EPackage
 		EReference POINTER__ELEMENTS = eINSTANCE.getPointer_Elements();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Instance Path</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation POINTER___GET_VALUE = eINSTANCE.getPointer__GetValue();
+		EOperation POINTER___GET_INSTANCE_PATH = eINSTANCE.getPointer__GetInstancePath();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.PointerElementImpl <em>Pointer Element</em>}' class.

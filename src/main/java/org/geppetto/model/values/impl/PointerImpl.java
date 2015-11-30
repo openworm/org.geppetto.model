@@ -85,7 +85,7 @@ public class PointerImpl extends ValueImpl implements Pointer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getValue()
+	public String getInstancePath()
 	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -186,9 +186,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 	{
 		switch (operationID)
 		{
-			case ValuesPackage.POINTER___GET_VALUE:
-				getValue();
-				return null;
+			case ValuesPackage.POINTER___GET_INSTANCE_PATH:
+				return getInstancePath();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

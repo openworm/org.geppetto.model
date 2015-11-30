@@ -41,9 +41,9 @@ public interface Pointer extends Value
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model kind="operation" dataType="org.eclipse.emf.ecore.xml.type.String"
 	 * @generated
 	 */
-	void getValue();
+	String getInstancePath();
 
 } // Pointer

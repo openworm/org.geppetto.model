@@ -587,7 +587,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPointer__GetValue()
+	public EOperation getPointer__GetInstancePath()
 	{
 		return pointerEClass.getEOperations().get(0);
 	}
@@ -1118,7 +1118,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		pointerEClass = createEClass(POINTER);
 		createEReference(pointerEClass, POINTER__ELEMENTS);
-		createEOperation(pointerEClass, POINTER___GET_VALUE);
+		createEOperation(pointerEClass, POINTER___GET_INSTANCE_PATH);
 
 		pointerElementEClass = createEClass(POINTER_ELEMENT);
 		createEReference(pointerElementEClass, POINTER_ELEMENT__VARIABLE);
@@ -1281,7 +1281,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEClass(pointerEClass, Pointer.class, "Pointer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointer_Elements(), this.getPointerElement(), null, "elements", null, 0, -1, Pointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getPointer__GetValue(), null, "getValue", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getPointer__GetInstancePath(), theXMLTypePackage.getString(), "getInstancePath", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(pointerElementEClass, PointerElement.class, "PointerElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointerElement_Variable(), theVariablesPackage.getVariable(), null, "variable", null, 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
