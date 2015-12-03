@@ -4,13 +4,10 @@ package org.geppetto.model.values.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.geppetto.model.impl.NodeImpl;
 import org.geppetto.model.values.Quantity;
 import org.geppetto.model.values.ValuesPackage;
 import org.geppetto.model.values.VisualGroupElement;
@@ -29,7 +26,7 @@ import org.geppetto.model.values.VisualGroupElement;
  *
  * @generated
  */
-public class VisualGroupElementImpl extends MinimalEObjectImpl.Container implements VisualGroupElement
+public class VisualGroupElementImpl extends NodeImpl implements VisualGroupElement
 {
 	/**
 	 * The default value of the '{@link #getDefaultColor() <em>Default Color</em>}' attribute.

@@ -78,6 +78,8 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.TEXT_TYPE: return createTextType();
 			case TypesPackage.URL_TYPE: return createURLType();
 			case TypesPackage.POINT_TYPE: return createPointType();
+			case TypesPackage.ARRAY_TYPE: return createArrayType();
+			case TypesPackage.COMPOSITE_VISUAL_TYPE: return createCompositeVisualType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -235,6 +237,28 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		PointTypeImpl pointType = new PointTypeImpl();
 		return pointType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArrayType createArrayType()
+	{
+		ArrayTypeImpl arrayType = new ArrayTypeImpl();
+		return arrayType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CompositeVisualType createCompositeVisualType()
+	{
+		CompositeVisualTypeImpl compositeVisualType = new CompositeVisualTypeImpl();
+		return compositeVisualType;
 	}
 
 	/**

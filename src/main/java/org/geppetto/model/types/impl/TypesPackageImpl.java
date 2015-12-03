@@ -12,7 +12,9 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.impl.GeppettoPackageImpl;
 import org.geppetto.model.types.ArgumentType;
+import org.geppetto.model.types.ArrayType;
 import org.geppetto.model.types.CompositeType;
+import org.geppetto.model.types.CompositeVisualType;
 import org.geppetto.model.types.DynamicsType;
 import org.geppetto.model.types.ExpressionType;
 import org.geppetto.model.types.HTMLType;
@@ -145,6 +147,20 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * @generated
 	 */
 	private EClass pointTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arrayTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass compositeVisualTypeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -608,6 +624,56 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getArrayType()
+	{
+		return arrayTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArrayType_Size()
+	{
+		return (EAttribute)arrayTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArrayType_ArrayType()
+	{
+		return (EReference)arrayTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCompositeVisualType()
+	{
+		return compositeVisualTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompositeVisualType_Variables()
+	{
+		return (EReference)compositeVisualTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TypesFactory getTypesFactory()
 	{
 		return (TypesFactory)getEFactoryInstance();
@@ -685,6 +751,13 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		pointTypeEClass = createEClass(POINT_TYPE);
 		createEReference(pointTypeEClass, POINT_TYPE__DEFAULT_VALUE);
+
+		arrayTypeEClass = createEClass(ARRAY_TYPE);
+		createEAttribute(arrayTypeEClass, ARRAY_TYPE__SIZE);
+		createEReference(arrayTypeEClass, ARRAY_TYPE__ARRAY_TYPE);
+
+		compositeVisualTypeEClass = createEClass(COMPOSITE_VISUAL_TYPE);
+		createEReference(compositeVisualTypeEClass, COMPOSITE_VISUAL_TYPE__VARIABLES);
 	}
 
 	/**
@@ -737,6 +810,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		textTypeEClass.getESuperTypes().add(this.getType());
 		urlTypeEClass.getESuperTypes().add(this.getType());
 		pointTypeEClass.getESuperTypes().add(this.getType());
+		arrayTypeEClass.getESuperTypes().add(this.getType());
+		compositeVisualTypeEClass.getESuperTypes().add(this.getVisualType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -792,6 +867,13 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		initEClass(pointTypeEClass, PointType.class, "PointType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointType_DefaultValue(), theValuesPackage.getPoint(), null, "defaultValue", null, 0, 1, PointType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arrayTypeEClass, ArrayType.class, "ArrayType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArrayType_Size(), theXMLTypePackage.getInt(), "size", null, 0, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArrayType_ArrayType(), this.getType(), null, "arrayType", null, 1, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(compositeVisualTypeEClass, CompositeVisualType.class, "CompositeVisualType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCompositeVisualType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, CompositeVisualType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //TypesPackageImpl

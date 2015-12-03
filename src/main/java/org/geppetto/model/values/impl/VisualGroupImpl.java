@@ -3,21 +3,15 @@
 package org.geppetto.model.values.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.geppetto.model.impl.NodeImpl;
 import org.geppetto.model.values.ValuesPackage;
 import org.geppetto.model.values.VisualGroup;
 import org.geppetto.model.values.VisualGroupElement;
@@ -38,7 +32,7 @@ import org.geppetto.model.values.VisualGroupElement;
  *
  * @generated
  */
-public class VisualGroupImpl extends MinimalEObjectImpl.Container implements VisualGroup
+public class VisualGroupImpl extends NodeImpl implements VisualGroup
 {
 	/**
 	 * The default value of the '{@link #getLowSpectrumColor() <em>Low Spectrum Color</em>}' attribute.

@@ -106,6 +106,15 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Point"
           containment="true"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ArrayType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="arrayType" lowerBound="1"
+          eType="#//types/Type"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CompositeVisualType" eSuperTypes="#//types/VisualType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
+          eType="#//variables/Variable" containment="true"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="values" nsURI="http://www.geppetto.org/model/values" nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true"/>
@@ -219,12 +228,12 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="skeletonTransformation"
           upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="VisualGroupElement">
+    <eClassifiers xsi:type="ecore:EClass" name="VisualGroupElement" eSuperTypes="#//Node">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultColor" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" eType="#//values/Quantity"
           containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="VisualGroup">
+    <eClassifiers xsi:type="ecore:EClass" name="VisualGroup" eSuperTypes="#//Node">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowSpectrumColor" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="highSpectrumColor" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>

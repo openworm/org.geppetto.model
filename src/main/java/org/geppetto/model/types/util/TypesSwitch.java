@@ -205,6 +205,25 @@ public class TypesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TypesPackage.ARRAY_TYPE:
+			{
+				ArrayType arrayType = (ArrayType)theEObject;
+				T result = caseArrayType(arrayType);
+				if (result == null) result = caseType(arrayType);
+				if (result == null) result = caseNode(arrayType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.COMPOSITE_VISUAL_TYPE:
+			{
+				CompositeVisualType compositeVisualType = (CompositeVisualType)theEObject;
+				T result = caseCompositeVisualType(compositeVisualType);
+				if (result == null) result = caseVisualType(compositeVisualType);
+				if (result == null) result = caseType(compositeVisualType);
+				if (result == null) result = caseNode(compositeVisualType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -445,6 +464,38 @@ public class TypesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T casePointType(PointType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Array Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Array Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArrayType(ArrayType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Visual Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Visual Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompositeVisualType(CompositeVisualType object)
 	{
 		return null;
 	}

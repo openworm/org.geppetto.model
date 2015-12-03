@@ -1850,6 +1850,261 @@ public interface TypesPackage extends EPackage
 
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.ArrayTypeImpl <em>Array Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.ArrayTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getArrayType()
+	 * @generated
+	 */
+	int ARRAY_TYPE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__ID = TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__SIZE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Array Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__ARRAY_TYPE = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Array Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Array Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.CompositeVisualTypeImpl <em>Composite Visual Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.CompositeVisualTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getCompositeVisualType()
+	 * @generated
+	 */
+	int COMPOSITE_VISUAL_TYPE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__ID = VISUAL_TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__NAME = VISUAL_TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__SUPER_TYPE = VISUAL_TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__DOMAIN_MODEL = VISUAL_TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__ABSTRACT = VISUAL_TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__VISUAL_TYPE = VISUAL_TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__REFERENCED_VARIABLES = VISUAL_TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__DEFAULT_VALUE = VISUAL_TYPE__DEFAULT_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__VARIABLES = VISUAL_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Composite Visual Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE_FEATURE_COUNT = VISUAL_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE___GET_PATH = VISUAL_TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE___GET_DEFAULT_VALUE = VISUAL_TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Composite Visual Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE_OPERATION_COUNT = VISUAL_TYPE_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.types.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2252,6 +2507,59 @@ public interface TypesPackage extends EPackage
 	EReference getPointType_DefaultValue();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.ArrayType <em>Array Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Array Type</em>'.
+	 * @see org.geppetto.model.types.ArrayType
+	 * @generated
+	 */
+	EClass getArrayType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.types.ArrayType#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see org.geppetto.model.types.ArrayType#getSize()
+	 * @see #getArrayType()
+	 * @generated
+	 */
+	EAttribute getArrayType_Size();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.ArrayType#getArrayType <em>Array Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Array Type</em>'.
+	 * @see org.geppetto.model.types.ArrayType#getArrayType()
+	 * @see #getArrayType()
+	 * @generated
+	 */
+	EReference getArrayType_ArrayType();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.CompositeVisualType <em>Composite Visual Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Composite Visual Type</em>'.
+	 * @see org.geppetto.model.types.CompositeVisualType
+	 * @generated
+	 */
+	EClass getCompositeVisualType();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.types.CompositeVisualType#getVariables <em>Variables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Variables</em>'.
+	 * @see org.geppetto.model.types.CompositeVisualType#getVariables()
+	 * @see #getCompositeVisualType()
+	 * @generated
+	 */
+	EReference getCompositeVisualType_Variables();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2608,6 +2916,50 @@ public interface TypesPackage extends EPackage
 		 * @generated
 		 */
 		EReference POINT_TYPE__DEFAULT_VALUE = eINSTANCE.getPointType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.ArrayTypeImpl <em>Array Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.ArrayTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getArrayType()
+		 * @generated
+		 */
+		EClass ARRAY_TYPE = eINSTANCE.getArrayType();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARRAY_TYPE__SIZE = eINSTANCE.getArrayType_Size();
+
+		/**
+		 * The meta object literal for the '<em><b>Array Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARRAY_TYPE__ARRAY_TYPE = eINSTANCE.getArrayType_ArrayType();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.CompositeVisualTypeImpl <em>Composite Visual Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.CompositeVisualTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getCompositeVisualType()
+		 * @generated
+		 */
+		EClass COMPOSITE_VISUAL_TYPE = eINSTANCE.getCompositeVisualType();
+
+		/**
+		 * The meta object literal for the '<em><b>Variables</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSITE_VISUAL_TYPE__VARIABLES = eINSTANCE.getCompositeVisualType_Variables();
 
 	}
 

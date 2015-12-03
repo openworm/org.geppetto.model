@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.geppetto.model.GeppettoPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1268,13 +1269,31 @@ public interface ValuesPackage extends EPackage
 	int VISUAL_GROUP_ELEMENT = 27;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_ELEMENT__ID = GeppettoPackage.NODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_ELEMENT__NAME = GeppettoPackage.NODE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Default Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP_ELEMENT__DEFAULT_COLOR = 0;
+	int VISUAL_GROUP_ELEMENT__DEFAULT_COLOR = GeppettoPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parameter</b></em>' containment reference.
@@ -1283,7 +1302,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP_ELEMENT__PARAMETER = 1;
+	int VISUAL_GROUP_ELEMENT__PARAMETER = GeppettoPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Visual Group Element</em>' class.
@@ -1292,7 +1311,16 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP_ELEMENT_FEATURE_COUNT = 2;
+	int VISUAL_GROUP_ELEMENT_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_ELEMENT___GET_PATH = GeppettoPackage.NODE___GET_PATH;
 
 	/**
 	 * The number of operations of the '<em>Visual Group Element</em>' class.
@@ -1301,7 +1329,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP_ELEMENT_OPERATION_COUNT = 0;
+	int VISUAL_GROUP_ELEMENT_OPERATION_COUNT = GeppettoPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.impl.VisualGroupImpl <em>Visual Group</em>}' class.
@@ -1314,13 +1342,31 @@ public interface ValuesPackage extends EPackage
 	int VISUAL_GROUP = 28;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP__ID = GeppettoPackage.NODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP__NAME = GeppettoPackage.NODE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Low Spectrum Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP__LOW_SPECTRUM_COLOR = 0;
+	int VISUAL_GROUP__LOW_SPECTRUM_COLOR = GeppettoPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>High Spectrum Color</b></em>' attribute.
@@ -1329,7 +1375,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP__HIGH_SPECTRUM_COLOR = 1;
+	int VISUAL_GROUP__HIGH_SPECTRUM_COLOR = GeppettoPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1338,7 +1384,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP__TYPE = 2;
+	int VISUAL_GROUP__TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Visual Group Elements</b></em>' containment reference list.
@@ -1347,7 +1393,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP__VISUAL_GROUP_ELEMENTS = 3;
+	int VISUAL_GROUP__VISUAL_GROUP_ELEMENTS = GeppettoPackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Visual Group</em>' class.
@@ -1356,7 +1402,16 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP_FEATURE_COUNT = 4;
+	int VISUAL_GROUP_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP___GET_PATH = GeppettoPackage.NODE___GET_PATH;
 
 	/**
 	 * The number of operations of the '<em>Visual Group</em>' class.
@@ -1365,7 +1420,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_GROUP_OPERATION_COUNT = 0;
+	int VISUAL_GROUP_OPERATION_COUNT = GeppettoPackage.NODE_OPERATION_COUNT + 0;
 
 
 	/**

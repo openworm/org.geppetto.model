@@ -2,7 +2,7 @@
  */
 package org.geppetto.model.values;
 
-import org.eclipse.emf.ecore.EObject;
+import org.geppetto.model.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface VisualGroupElement extends EObject
+public interface VisualGroupElement extends Node
 {
 	/**
 	 * Returns the value of the '<em><b>Default Color</b></em>' attribute.

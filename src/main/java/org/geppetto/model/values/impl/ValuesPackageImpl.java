@@ -1212,6 +1212,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		GeppettoPackage theGeppettoPackage = (GeppettoPackage)EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1242,6 +1243,8 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		particleEClass.getESuperTypes().add(this.getVisualValue());
 		particleEClass.getESuperTypes().add(this.getPoint());
 		skeletonAnimationEClass.getESuperTypes().add(this.getVisualValue());
+		visualGroupElementEClass.getESuperTypes().add(theGeppettoPackage.getNode());
+		visualGroupEClass.getESuperTypes().add(theGeppettoPackage.getNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(valueEClass, Value.class, "Value", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
