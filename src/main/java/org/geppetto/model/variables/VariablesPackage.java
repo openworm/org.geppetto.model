@@ -106,7 +106,7 @@ public interface VariablesPackage extends EPackage
 	int VARIABLE__TYPES = GeppettoPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Initial Values</b></em>' reference.
+	 * The feature id for the '<em><b>Initial Values</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -207,7 +207,7 @@ public interface VariablesPackage extends EPackage
 	int ARRAY_VARIABLE__TYPES = VARIABLE__TYPES;
 
 	/**
-	 * The feature id for the '<em><b>Initial Values</b></em>' reference.
+	 * The feature id for the '<em><b>Initial Values</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -303,10 +303,10 @@ public interface VariablesPackage extends EPackage
 	EReference getVariable_Types();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.variables.Variable#getInitialValues <em>Initial Values</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.variables.Variable#getInitialValues <em>Initial Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Initial Values</em>'.
+	 * @return the meta object for the containment reference '<em>Initial Values</em>'.
 	 * @see org.geppetto.model.variables.Variable#getInitialValues()
 	 * @see #getVariable()
 	 * @generated
@@ -407,7 +407,7 @@ public interface VariablesPackage extends EPackage
 		EReference VARIABLE__TYPES = eINSTANCE.getVariable_Types();
 
 		/**
-		 * The meta object literal for the '<em><b>Initial Values</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Initial Values</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -247,7 +247,8 @@
           eType="#//types/Type" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
           eType="#//types/Type" resolveProxies="false" eOpposite="#//types/Type/referencedVariables"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="initialValues" eType="#//values/Value"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="initialValues" eType="#//values/Value"
+          containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="static" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//values/Point"/>
     </eClassifiers>
