@@ -4,6 +4,7 @@ package org.geppetto.model.types;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.geppetto.model.values.VisualGroup;
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -15,6 +16,7 @@ import org.geppetto.model.variables.Variable;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.geppetto.model.types.CompositeVisualType#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.geppetto.model.types.CompositeVisualType#getVisualGroups <em>Visual Groups</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,5 +41,21 @@ public interface CompositeVisualType extends VisualType
 	 * @generated
 	 */
 	EList<Variable> getVariables();
+
+	/**
+	 * Returns the value of the '<em><b>Visual Groups</b></em>' reference list.
+	 * The list contents are of type {@link org.geppetto.model.values.VisualGroup}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Visual Groups</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Visual Groups</em>' reference list.
+	 * @see org.geppetto.model.types.TypesPackage#getCompositeVisualType_VisualGroups()
+	 * @model
+	 * @generated
+	 */
+	EList<VisualGroup> getVisualGroups();
 
 } // CompositeVisualType

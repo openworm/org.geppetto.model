@@ -158,6 +158,11 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 				return createCompositeVisualTypeAdapter();
 			}
 			@Override
+			public Adapter caseConnectionType(ConnectionType object)
+			{
+				return createConnectionTypeAdapter();
+			}
+			@Override
 			public Adapter caseNode(Node object)
 			{
 				return createNodeAdapter();
@@ -435,6 +440,21 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createCompositeVisualTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.ConnectionType <em>Connection Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.ConnectionType
+	 * @generated
+	 */
+	public Adapter createConnectionTypeAdapter()
 	{
 		return null;
 	}

@@ -87,13 +87,22 @@ public interface GeppettoPackage extends EPackage
 	int GEPPETTO_MODEL__LIBRARIES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_MODEL__TAGS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL_FEATURE_COUNT = 2;
+	int GEPPETTO_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Model</em>' class.
@@ -133,13 +142,22 @@ public interface GeppettoPackage extends EPackage
 	int NODE__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__TAGS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 2;
+	int NODE_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -187,6 +205,15 @@ public interface GeppettoPackage extends EPackage
 	 * @ordered
 	 */
 	int GEPPETTO_LIBRARY__NAME = NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_LIBRARY__TAGS = NODE__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Types</b></em>' containment reference list.
@@ -364,6 +391,52 @@ public interface GeppettoPackage extends EPackage
 	int VARIABLE_VALUE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.TagImpl <em>Tag</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.TagImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getTag()
+	 * @generated
+	 */
+	int TAG = 6;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__TAGS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Tag</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Tag</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -396,6 +469,17 @@ public interface GeppettoPackage extends EPackage
 	EReference getGeppettoModel_Libraries();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.GeppettoModel#getTags <em>Tags</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tags</em>'.
+	 * @see org.geppetto.model.GeppettoModel#getTags()
+	 * @see #getGeppettoModel()
+	 * @generated
+	 */
+	EReference getGeppettoModel_Tags();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -426,6 +510,17 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getNode_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.Node#getTags <em>Tags</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Tags</em>'.
+	 * @see org.geppetto.model.Node#getTags()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Tags();
 
 	/**
 	 * Returns the meta object for the '{@link org.geppetto.model.Node#getPath() <em>Get Path</em>}' operation.
@@ -555,6 +650,38 @@ public interface GeppettoPackage extends EPackage
 	EReference getVariableValue_Value();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.Tag <em>Tag</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tag</em>'.
+	 * @see org.geppetto.model.Tag
+	 * @generated
+	 */
+	EClass getTag();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.Tag#getTags <em>Tags</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tags</em>'.
+	 * @see org.geppetto.model.Tag#getTags()
+	 * @see #getTag()
+	 * @generated
+	 */
+	EReference getTag_Tags();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.Tag#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.geppetto.model.Tag#getName()
+	 * @see #getTag()
+	 * @generated
+	 */
+	EAttribute getTag_Name();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -605,6 +732,14 @@ public interface GeppettoPackage extends EPackage
 		EReference GEPPETTO_MODEL__LIBRARIES = eINSTANCE.getGeppettoModel_Libraries();
 
 		/**
+		 * The meta object literal for the '<em><b>Tags</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEPPETTO_MODEL__TAGS = eINSTANCE.getGeppettoModel_Tags();
+
+		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.NodeImpl <em>Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -629,6 +764,14 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute NODE__NAME = eINSTANCE.getNode_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Tags</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__TAGS = eINSTANCE.getNode_Tags();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Path</b></em>' operation.
@@ -733,6 +876,32 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference VARIABLE_VALUE__VALUE = eINSTANCE.getVariableValue_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.TagImpl <em>Tag</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.TagImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getTag()
+		 * @generated
+		 */
+		EClass TAG = eINSTANCE.getTag();
+
+		/**
+		 * The meta object literal for the '<em><b>Tags</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TAG__TAGS = eINSTANCE.getTag_Tags();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TAG__NAME = eINSTANCE.getTag_Name();
 
 	}
 

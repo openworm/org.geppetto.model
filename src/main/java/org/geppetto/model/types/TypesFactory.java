@@ -167,6 +167,15 @@ public interface TypesFactory extends EFactory
 	CompositeVisualType createCompositeVisualType();
 
 	/**
+	 * Returns a new object of class '<em>Connection Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connection Type</em>'.
+	 * @generated
+	 */
+	ConnectionType createConnectionType();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

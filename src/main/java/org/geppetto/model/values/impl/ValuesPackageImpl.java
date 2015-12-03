@@ -5,6 +5,7 @@ package org.geppetto.model.values.impl;
 import java.util.Map;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -17,6 +18,8 @@ import org.geppetto.model.types.impl.TypesPackageImpl;
 import org.geppetto.model.values.Argument;
 import org.geppetto.model.values.Collada;
 import org.geppetto.model.values.Composite;
+import org.geppetto.model.values.Connection;
+import org.geppetto.model.values.ConnectionType;
 import org.geppetto.model.values.Cylinder;
 import org.geppetto.model.values.Dyamics;
 import org.geppetto.model.values.Expression;
@@ -37,7 +40,6 @@ import org.geppetto.model.values.Unit;
 import org.geppetto.model.values.Value;
 import org.geppetto.model.values.ValuesFactory;
 import org.geppetto.model.values.ValuesPackage;
-import org.geppetto.model.values.VisualComposite;
 import org.geppetto.model.values.VisualGroup;
 import org.geppetto.model.values.VisualGroupElement;
 import org.geppetto.model.values.VisualValue;
@@ -197,13 +199,6 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass visualCompositeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass objEClass = null;
 
 	/**
@@ -254,6 +249,20 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * @generated
 	 */
 	private EClass visualGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass connectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum connectionTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -627,6 +636,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPointerElement_Index()
+	{
+		return (EAttribute)pointerElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPoint()
 	{
 		return pointEClass;
@@ -800,36 +819,6 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	public EAttribute getCollada_Collada()
 	{
 		return (EAttribute)colladaEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVisualComposite()
-	{
-		return visualCompositeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVisualComposite_Value()
-	{
-		return (EReference)visualCompositeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVisualComposite_VisualGroups()
-	{
-		return (EReference)visualCompositeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1057,6 +1046,56 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getConnection()
+	{
+		return connectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnection_A()
+	{
+		return (EReference)connectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnection_B()
+	{
+		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnection_Type()
+	{
+		return (EReference)connectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getConnectionType()
+	{
+		return connectionTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ValuesFactory getValuesFactory()
 	{
 		return (ValuesFactory)getEFactoryInstance();
@@ -1123,6 +1162,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		pointerElementEClass = createEClass(POINTER_ELEMENT);
 		createEReference(pointerElementEClass, POINTER_ELEMENT__VARIABLE);
 		createEReference(pointerElementEClass, POINTER_ELEMENT__TYPE);
+		createEAttribute(pointerElementEClass, POINTER_ELEMENT__INDEX);
 
 		pointEClass = createEClass(POINT);
 		createEAttribute(pointEClass, POINT__X);
@@ -1148,10 +1188,6 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		colladaEClass = createEClass(COLLADA);
 		createEAttribute(colladaEClass, COLLADA__COLLADA);
-
-		visualCompositeEClass = createEClass(VISUAL_COMPOSITE);
-		createEReference(visualCompositeEClass, VISUAL_COMPOSITE__VALUE);
-		createEReference(visualCompositeEClass, VISUAL_COMPOSITE__VISUAL_GROUPS);
 
 		objEClass = createEClass(OBJ);
 		createEAttribute(objEClass, OBJ__OBJ);
@@ -1182,6 +1218,14 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEAttribute(visualGroupEClass, VISUAL_GROUP__HIGH_SPECTRUM_COLOR);
 		createEAttribute(visualGroupEClass, VISUAL_GROUP__TYPE);
 		createEReference(visualGroupEClass, VISUAL_GROUP__VISUAL_GROUP_ELEMENTS);
+
+		connectionEClass = createEClass(CONNECTION);
+		createEReference(connectionEClass, CONNECTION__A);
+		createEReference(connectionEClass, CONNECTION__B);
+		createEReference(connectionEClass, CONNECTION__TYPE);
+
+		// Create enums
+		connectionTypeEEnum = createEEnum(CONNECTION_TYPE);
 	}
 
 	/**
@@ -1236,7 +1280,6 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		expressionEClass.getESuperTypes().add(this.getValue());
 		visualValueEClass.getESuperTypes().add(this.getValue());
 		colladaEClass.getESuperTypes().add(this.getVisualValue());
-		visualCompositeEClass.getESuperTypes().add(this.getVisualValue());
 		objEClass.getESuperTypes().add(this.getVisualValue());
 		sphereEClass.getESuperTypes().add(this.getVisualValue());
 		cylinderEClass.getESuperTypes().add(this.getVisualValue());
@@ -1245,6 +1288,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		skeletonAnimationEClass.getESuperTypes().add(this.getVisualValue());
 		visualGroupElementEClass.getESuperTypes().add(theGeppettoPackage.getNode());
 		visualGroupEClass.getESuperTypes().add(theGeppettoPackage.getNode());
+		connectionEClass.getESuperTypes().add(this.getValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(valueEClass, Value.class, "Value", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1289,6 +1333,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEClass(pointerElementEClass, PointerElement.class, "PointerElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointerElement_Variable(), theVariablesPackage.getVariable(), null, "variable", null, 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPointerElement_Type(), theTypesPackage.getType(), null, "type", null, 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPointerElement_Index(), theXMLTypePackage.getInt(), "index", null, 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPoint_X(), theXMLTypePackage.getDouble(), "x", null, 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1314,10 +1359,6 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		initEClass(colladaEClass, Collada.class, "Collada", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCollada_Collada(), theXMLTypePackage.getString(), "collada", null, 1, 1, Collada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(visualCompositeEClass, VisualComposite.class, "VisualComposite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVisualComposite_Value(), this.getVisualValue(), null, "value", null, 0, -1, VisualComposite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVisualComposite_VisualGroups(), this.getVisualGroup(), null, "visualGroups", null, 0, -1, VisualComposite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(objEClass, org.geppetto.model.values.OBJ.class, "OBJ", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOBJ_Obj(), theXMLTypePackage.getString(), "obj", null, 1, 1, org.geppetto.model.values.OBJ.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1348,6 +1389,17 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEAttribute(getVisualGroup_HighSpectrumColor(), theXMLTypePackage.getString(), "highSpectrumColor", null, 0, 1, VisualGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVisualGroup_Type(), theXMLTypePackage.getString(), "type", null, 0, 1, VisualGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVisualGroup_VisualGroupElements(), this.getVisualGroupElement(), null, "visualGroupElements", null, 1, -1, VisualGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConnection_A(), this.getPointer(), null, "a", null, 1, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_B(), this.getPointer(), null, "b", null, 1, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_Type(), theTypesPackage.getConnectionType(), null, "type", null, 1, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(connectionTypeEEnum, ConnectionType.class, "ConnectionType");
+		addEEnumLiteral(connectionTypeEEnum, ConnectionType.DIRECTIONAL);
+		addEEnumLiteral(connectionTypeEEnum, ConnectionType.BIDIRECTIONAL);
+		addEEnumLiteral(connectionTypeEEnum, ConnectionType.NON_DIRECTIONAL);
 	}
 
 } //ValuesPackageImpl

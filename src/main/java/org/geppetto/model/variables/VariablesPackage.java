@@ -88,6 +88,15 @@ public interface VariablesPackage extends EPackage
 	int VARIABLE__NAME = GeppettoPackage.NODE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__TAGS = GeppettoPackage.NODE__TAGS;
+
+	/**
 	 * The feature id for the '<em><b>Anonymous Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,6 +196,15 @@ public interface VariablesPackage extends EPackage
 	 * @ordered
 	 */
 	int ARRAY_VARIABLE__NAME = VARIABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_VARIABLE__TAGS = VARIABLE__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Anonymous Types</b></em>' containment reference list.

@@ -15,6 +15,7 @@ import org.geppetto.model.types.ArgumentType;
 import org.geppetto.model.types.ArrayType;
 import org.geppetto.model.types.CompositeType;
 import org.geppetto.model.types.CompositeVisualType;
+import org.geppetto.model.types.ConnectionType;
 import org.geppetto.model.types.DynamicsType;
 import org.geppetto.model.types.ExpressionType;
 import org.geppetto.model.types.HTMLType;
@@ -161,6 +162,13 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * @generated
 	 */
 	private EClass compositeVisualTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass connectionTypeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -674,6 +682,46 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCompositeVisualType_VisualGroups()
+	{
+		return (EReference)compositeVisualTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConnectionType()
+	{
+		return connectionTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnectionType_Variables()
+	{
+		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnectionType_DefaultValue()
+	{
+		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TypesFactory getTypesFactory()
 	{
 		return (TypesFactory)getEFactoryInstance();
@@ -758,6 +806,11 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		compositeVisualTypeEClass = createEClass(COMPOSITE_VISUAL_TYPE);
 		createEReference(compositeVisualTypeEClass, COMPOSITE_VISUAL_TYPE__VARIABLES);
+		createEReference(compositeVisualTypeEClass, COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS);
+
+		connectionTypeEClass = createEClass(CONNECTION_TYPE);
+		createEReference(connectionTypeEClass, CONNECTION_TYPE__VARIABLES);
+		createEReference(connectionTypeEClass, CONNECTION_TYPE__DEFAULT_VALUE);
 	}
 
 	/**
@@ -812,6 +865,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		pointTypeEClass.getESuperTypes().add(this.getType());
 		arrayTypeEClass.getESuperTypes().add(this.getType());
 		compositeVisualTypeEClass.getESuperTypes().add(this.getVisualType());
+		connectionTypeEClass.getESuperTypes().add(this.getType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -874,6 +928,11 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		initEClass(compositeVisualTypeEClass, CompositeVisualType.class, "CompositeVisualType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeVisualType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, CompositeVisualType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCompositeVisualType_VisualGroups(), theValuesPackage.getVisualGroup(), null, "visualGroups", null, 0, -1, CompositeVisualType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(connectionTypeEClass, ConnectionType.class, "ConnectionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConnectionType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionType_DefaultValue(), theValuesPackage.getComposite(), null, "defaultValue", null, 0, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //TypesPackageImpl

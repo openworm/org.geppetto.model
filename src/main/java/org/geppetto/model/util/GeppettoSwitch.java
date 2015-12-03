@@ -115,6 +115,13 @@ public class GeppettoSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeppettoPackage.TAG:
+			{
+				Tag tag = (Tag)theEObject;
+				T result = caseTag(tag);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -211,6 +218,22 @@ public class GeppettoSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseVariableValue(VariableValue object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tag</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tag</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTag(Tag object)
 	{
 		return null;
 	}

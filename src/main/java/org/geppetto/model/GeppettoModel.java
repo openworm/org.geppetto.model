@@ -16,6 +16,7 @@ import org.geppetto.model.variables.Variable;
  * <ul>
  *   <li>{@link org.geppetto.model.GeppettoModel#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getLibraries <em>Libraries</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,5 +57,21 @@ public interface GeppettoModel extends EObject
 	 * @generated
 	 */
 	EList<GeppettoLibrary> getLibraries();
+
+	/**
+	 * Returns the value of the '<em><b>Tags</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.Tag}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tags</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tags</em>' containment reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Tags()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Tag> getTags();
 
 } // GeppettoModel

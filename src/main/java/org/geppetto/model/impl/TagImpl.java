@@ -2,59 +2,50 @@
  */
 package org.geppetto.model.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.Node;
 import org.geppetto.model.Tag;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Node</b></em>'.
+ * An implementation of the model object '<em><b>Tag</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.NodeImpl#getId <em>Id</em>}</li>
- *   <li>{@link org.geppetto.model.impl.NodeImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.geppetto.model.impl.NodeImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.TagImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.TagImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public abstract class NodeImpl extends MinimalEObjectImpl.Container implements Node
+public class TagImpl extends MinimalEObjectImpl.Container implements Tag
 {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getTags()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
+	protected EList<Tag> tags;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -77,21 +68,11 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTags() <em>Tags</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTags()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Tag> tags;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NodeImpl()
+	protected TagImpl()
 	{
 		super();
 	}
@@ -104,7 +85,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.NODE;
+		return GeppettoPackage.Literals.TAG;
 	}
 
 	/**
@@ -112,22 +93,13 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId()
+	public EList<Tag> getTags()
 	{
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId)
-	{
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.NODE__ID, oldId, id));
+		if (tags == null)
+		{
+			tags = new EObjectContainmentEList<Tag>(Tag.class, this, GeppettoPackage.TAG__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -150,7 +122,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.NODE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.TAG__NAME, oldName, name));
 	}
 
 	/**
@@ -158,25 +130,15 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Tag> getTags()
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
-		if (tags == null)
+		switch (featureID)
 		{
-			tags = new EObjectResolvingEList<Tag>(Tag.class, this, GeppettoPackage.NODE__TAGS);
+			case GeppettoPackage.TAG__TAGS:
+				return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
 		}
-		return tags;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getPath()
-	{
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -189,12 +151,10 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.NODE__ID:
-				return getId();
-			case GeppettoPackage.NODE__NAME:
-				return getName();
-			case GeppettoPackage.NODE__TAGS:
+			case GeppettoPackage.TAG__TAGS:
 				return getTags();
+			case GeppettoPackage.TAG__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -210,15 +170,12 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.NODE__ID:
-				setId((String)newValue);
-				return;
-			case GeppettoPackage.NODE__NAME:
-				setName((String)newValue);
-				return;
-			case GeppettoPackage.NODE__TAGS:
+			case GeppettoPackage.TAG__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends Tag>)newValue);
+				return;
+			case GeppettoPackage.TAG__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -234,14 +191,11 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.NODE__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case GeppettoPackage.NODE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case GeppettoPackage.NODE__TAGS:
+			case GeppettoPackage.TAG__TAGS:
 				getTags().clear();
+				return;
+			case GeppettoPackage.TAG__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -257,30 +211,12 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.NODE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case GeppettoPackage.NODE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case GeppettoPackage.NODE__TAGS:
+			case GeppettoPackage.TAG__TAGS:
 				return tags != null && !tags.isEmpty();
+			case GeppettoPackage.TAG__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
-	{
-		switch (operationID)
-		{
-			case GeppettoPackage.NODE___GET_PATH:
-				return getPath();
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -294,12 +230,10 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", name: ");
+		result.append(" (name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
 
-} //NodeImpl
+} //TagImpl

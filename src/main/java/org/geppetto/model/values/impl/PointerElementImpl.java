@@ -21,6 +21,7 @@ import org.geppetto.model.variables.Variable;
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.PointerElementImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.PointerElementImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.PointerElementImpl#getIndex <em>Index</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,6 +48,26 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected Type type;
+
+	/**
+	 * The default value of the '{@link #getIndex() <em>Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int INDEX_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getIndex() <em>Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected int index = INDEX_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,6 +181,29 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getIndex()
+	{
+		return index;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIndex(int newIndex)
+	{
+		int oldIndex = index;
+		index = newIndex;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER_ELEMENT__INDEX, oldIndex, index));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
@@ -171,6 +215,8 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 			case ValuesPackage.POINTER_ELEMENT__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case ValuesPackage.POINTER_ELEMENT__INDEX:
+				return getIndex();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -190,6 +236,9 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case ValuesPackage.POINTER_ELEMENT__TYPE:
 				setType((Type)newValue);
+				return;
+			case ValuesPackage.POINTER_ELEMENT__INDEX:
+				setIndex((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -211,6 +260,9 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 			case ValuesPackage.POINTER_ELEMENT__TYPE:
 				setType((Type)null);
 				return;
+			case ValuesPackage.POINTER_ELEMENT__INDEX:
+				setIndex(INDEX_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -229,8 +281,27 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 				return variable != null;
 			case ValuesPackage.POINTER_ELEMENT__TYPE:
 				return type != null;
+			case ValuesPackage.POINTER_ELEMENT__INDEX:
+				return index != INDEX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString()
+	{
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (index: ");
+		result.append(index);
+		result.append(')');
+		return result.toString();
 	}
 
 } //PointerElementImpl

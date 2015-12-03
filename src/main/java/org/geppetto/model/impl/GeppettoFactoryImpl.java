@@ -69,6 +69,7 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.LIBRARY_MANAGER: return createLibraryManager();
 			case GeppettoPackage.GEPPETTO_MODEL_STATE: return createGeppettoModelState();
 			case GeppettoPackage.VARIABLE_VALUE: return createVariableValue();
+			case GeppettoPackage.TAG: return createTag();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -127,6 +128,17 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		VariableValueImpl variableValue = new VariableValueImpl();
 		return variableValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tag createTag()
+	{
+		TagImpl tag = new TagImpl();
+		return tag;
 	}
 
 	/**

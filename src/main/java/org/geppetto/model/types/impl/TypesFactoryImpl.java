@@ -80,6 +80,7 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.POINT_TYPE: return createPointType();
 			case TypesPackage.ARRAY_TYPE: return createArrayType();
 			case TypesPackage.COMPOSITE_VISUAL_TYPE: return createCompositeVisualType();
+			case TypesPackage.CONNECTION_TYPE: return createConnectionType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -259,6 +260,17 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		CompositeVisualTypeImpl compositeVisualType = new CompositeVisualTypeImpl();
 		return compositeVisualType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConnectionType createConnectionType()
+	{
+		ConnectionTypeImpl connectionType = new ConnectionTypeImpl();
+		return connectionType;
 	}
 
 	/**

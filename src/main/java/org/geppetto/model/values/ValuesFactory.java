@@ -167,15 +167,6 @@ public interface ValuesFactory extends EFactory
 	Collada createCollada();
 
 	/**
-	 * Returns a new object of class '<em>Visual Composite</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Visual Composite</em>'.
-	 * @generated
-	 */
-	VisualComposite createVisualComposite();
-
-	/**
 	 * Returns a new object of class '<em>OBJ</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,6 +237,15 @@ public interface ValuesFactory extends EFactory
 	 * @generated
 	 */
 	VisualGroup createVisualGroup();
+
+	/**
+	 * Returns a new object of class '<em>Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connection</em>'.
+	 * @generated
+	 */
+	Connection createConnection();
 
 	/**
 	 * Returns the package supported by this factory.

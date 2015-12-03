@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
+import org.geppetto.model.Tag;
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -24,6 +25,7 @@ import org.geppetto.model.variables.Variable;
  * <ul>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getLibraries <em>Libraries</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,6 +52,16 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * @ordered
 	 */
 	protected EList<GeppettoLibrary> libraries;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Tag> tags;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,6 +117,20 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Tag> getTags()
+	{
+		if (tags == null)
+		{
+			tags = new EObjectContainmentEList<Tag>(Tag.class, this, GeppettoPackage.GEPPETTO_MODEL__TAGS);
+		}
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -114,6 +140,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return ((InternalEList<?>)getVariables()).basicRemove(otherEnd, msgs);
 			case GeppettoPackage.GEPPETTO_MODEL__LIBRARIES:
 				return ((InternalEList<?>)getLibraries()).basicRemove(otherEnd, msgs);
+			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
+				return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -132,6 +160,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return getVariables();
 			case GeppettoPackage.GEPPETTO_MODEL__LIBRARIES:
 				return getLibraries();
+			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
+				return getTags();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -155,6 +185,10 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				getLibraries().clear();
 				getLibraries().addAll((Collection<? extends GeppettoLibrary>)newValue);
 				return;
+			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends Tag>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -175,6 +209,9 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 			case GeppettoPackage.GEPPETTO_MODEL__LIBRARIES:
 				getLibraries().clear();
 				return;
+			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
+				getTags().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,6 +230,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return variables != null && !variables.isEmpty();
 			case GeppettoPackage.GEPPETTO_MODEL__LIBRARIES:
 				return libraries != null && !libraries.isEmpty();
+			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
+				return tags != null && !tags.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

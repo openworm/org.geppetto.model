@@ -174,11 +174,6 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createColladaAdapter();
 			}
 			@Override
-			public Adapter caseVisualComposite(VisualComposite object)
-			{
-				return createVisualCompositeAdapter();
-			}
-			@Override
 			public Adapter caseOBJ(OBJ object)
 			{
 				return createOBJAdapter();
@@ -217,6 +212,11 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 			public Adapter caseVisualGroup(VisualGroup object)
 			{
 				return createVisualGroupAdapter();
+			}
+			@Override
+			public Adapter caseConnection(Connection object)
+			{
+				return createConnectionAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object)
@@ -546,21 +546,6 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.VisualComposite <em>Visual Composite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.geppetto.model.values.VisualComposite
-	 * @generated
-	 */
-	public Adapter createVisualCompositeAdapter()
-	{
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.OBJ <em>OBJ</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -676,6 +661,21 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createVisualGroupAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Connection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Connection
+	 * @generated
+	 */
+	public Adapter createConnectionAdapter()
 	{
 		return null;
 	}

@@ -234,15 +234,6 @@ public class ValuesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ValuesPackage.VISUAL_COMPOSITE:
-			{
-				VisualComposite visualComposite = (VisualComposite)theEObject;
-				T result = caseVisualComposite(visualComposite);
-				if (result == null) result = caseVisualValue(visualComposite);
-				if (result == null) result = caseValue(visualComposite);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ValuesPackage.OBJ:
 			{
 				OBJ obj = (OBJ)theEObject;
@@ -309,6 +300,14 @@ public class ValuesSwitch<T> extends Switch<T>
 				VisualGroup visualGroup = (VisualGroup)theEObject;
 				T result = caseVisualGroup(visualGroup);
 				if (result == null) result = caseNode(visualGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.CONNECTION:
+			{
+				Connection connection = (Connection)theEObject;
+				T result = caseConnection(connection);
+				if (result == null) result = caseValue(connection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -637,22 +636,6 @@ public class ValuesSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Visual Composite</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Visual Composite</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVisualComposite(VisualComposite object)
-	{
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>OBJ</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -776,6 +759,22 @@ public class ValuesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseVisualGroup(VisualGroup object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConnection(Connection object)
 	{
 		return null;
 	}

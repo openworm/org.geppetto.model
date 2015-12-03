@@ -4,6 +4,7 @@ package org.geppetto.model.values;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -568,13 +569,22 @@ public interface ValuesPackage extends EPackage
 	int POINTER_ELEMENT__TYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINTER_ELEMENT__INDEX = 2;
+
+	/**
 	 * The number of structural features of the '<em>Pointer Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINTER_ELEMENT_FEATURE_COUNT = 2;
+	int POINTER_ELEMENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Pointer Element</em>' class.
@@ -890,61 +900,6 @@ public interface ValuesPackage extends EPackage
 	int COLLADA_OPERATION_COUNT = VISUAL_VALUE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.values.impl.VisualCompositeImpl <em>Visual Composite</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.values.impl.VisualCompositeImpl
-	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualComposite()
-	 * @generated
-	 */
-	int VISUAL_COMPOSITE = 20;
-
-	/**
-	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_COMPOSITE__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_COMPOSITE__VALUE = VISUAL_VALUE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Visual Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_COMPOSITE__VISUAL_GROUPS = VISUAL_VALUE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Visual Composite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_COMPOSITE_FEATURE_COUNT = VISUAL_VALUE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Visual Composite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_COMPOSITE_OPERATION_COUNT = VISUAL_VALUE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.impl.OBJImpl <em>OBJ</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -952,7 +907,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getOBJ()
 	 * @generated
 	 */
-	int OBJ = 21;
+	int OBJ = 20;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -998,7 +953,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSphere()
 	 * @generated
 	 */
-	int SPHERE = 22;
+	int SPHERE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1044,7 +999,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getCylinder()
 	 * @generated
 	 */
-	int CYLINDER = 23;
+	int CYLINDER = 22;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1117,7 +1072,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getParticle()
 	 * @generated
 	 */
-	int PARTICLE = 24;
+	int PARTICLE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1182,7 +1137,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSkeletonAnimation()
 	 * @generated
 	 */
-	int SKELETON_ANIMATION = 25;
+	int SKELETON_ANIMATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1228,7 +1183,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSkeletonTransformation()
 	 * @generated
 	 */
-	int SKELETON_TRANSFORMATION = 26;
+	int SKELETON_TRANSFORMATION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Skeleton Transformation</b></em>' attribute list.
@@ -1266,7 +1221,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroupElement()
 	 * @generated
 	 */
-	int VISUAL_GROUP_ELEMENT = 27;
+	int VISUAL_GROUP_ELEMENT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1285,6 +1240,15 @@ public interface ValuesPackage extends EPackage
 	 * @ordered
 	 */
 	int VISUAL_GROUP_ELEMENT__NAME = GeppettoPackage.NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_ELEMENT__TAGS = GeppettoPackage.NODE__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Default Color</b></em>' attribute.
@@ -1339,7 +1303,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroup()
 	 * @generated
 	 */
-	int VISUAL_GROUP = 28;
+	int VISUAL_GROUP = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1358,6 +1322,15 @@ public interface ValuesPackage extends EPackage
 	 * @ordered
 	 */
 	int VISUAL_GROUP__NAME = GeppettoPackage.NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP__TAGS = GeppettoPackage.NODE__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Low Spectrum Color</b></em>' attribute.
@@ -1421,6 +1394,72 @@ public interface ValuesPackage extends EPackage
 	 * @ordered
 	 */
 	int VISUAL_GROUP_OPERATION_COUNT = GeppettoPackage.NODE_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.ConnectionImpl <em>Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.ConnectionImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnection()
+	 * @generated
+	 */
+	int CONNECTION = 28;
+
+	/**
+	 * The feature id for the '<em><b>A</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__A = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>B</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__B = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__TYPE = VALUE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_FEATURE_COUNT = VALUE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.ConnectionType <em>Connection Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.ConnectionType
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectionType()
+	 * @generated
+	 */
+	int CONNECTION_TYPE = 29;
 
 
 	/**
@@ -1731,6 +1770,17 @@ public interface ValuesPackage extends EPackage
 	EReference getPointerElement_Type();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.PointerElement#getIndex <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Index</em>'.
+	 * @see org.geppetto.model.values.PointerElement#getIndex()
+	 * @see #getPointerElement()
+	 * @generated
+	 */
+	EAttribute getPointerElement_Index();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Point <em>Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1920,38 +1970,6 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getCollada_Collada();
-
-	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.values.VisualComposite <em>Visual Composite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Visual Composite</em>'.
-	 * @see org.geppetto.model.values.VisualComposite
-	 * @generated
-	 */
-	EClass getVisualComposite();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.values.VisualComposite#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Value</em>'.
-	 * @see org.geppetto.model.values.VisualComposite#getValue()
-	 * @see #getVisualComposite()
-	 * @generated
-	 */
-	EReference getVisualComposite_Value();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.geppetto.model.values.VisualComposite#getVisualGroups <em>Visual Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Visual Groups</em>'.
-	 * @see org.geppetto.model.values.VisualComposite#getVisualGroups()
-	 * @see #getVisualComposite()
-	 * @generated
-	 */
-	EReference getVisualComposite_VisualGroups();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.OBJ <em>OBJ</em>}'.
@@ -2186,6 +2204,59 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EReference getVisualGroup_VisualGroupElements();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.Connection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Connection</em>'.
+	 * @see org.geppetto.model.values.Connection
+	 * @generated
+	 */
+	EClass getConnection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.values.Connection#getA <em>A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>A</em>'.
+	 * @see org.geppetto.model.values.Connection#getA()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_A();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.values.Connection#getB <em>B</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>B</em>'.
+	 * @see org.geppetto.model.values.Connection#getB()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_B();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Connection#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Type</em>'.
+	 * @see org.geppetto.model.values.Connection#getType()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_Type();
+
+	/**
+	 * Returns the meta object for enum '{@link org.geppetto.model.values.ConnectionType <em>Connection Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Connection Type</em>'.
+	 * @see org.geppetto.model.values.ConnectionType
+	 * @generated
+	 */
+	EEnum getConnectionType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2470,6 +2541,14 @@ public interface ValuesPackage extends EPackage
 		EReference POINTER_ELEMENT__TYPE = eINSTANCE.getPointerElement_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POINTER_ELEMENT__INDEX = eINSTANCE.getPointerElement_Index();
+
+		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.PointImpl <em>Point</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2626,32 +2705,6 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute COLLADA__COLLADA = eINSTANCE.getCollada_Collada();
-
-		/**
-		 * The meta object literal for the '{@link org.geppetto.model.values.impl.VisualCompositeImpl <em>Visual Composite</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.values.impl.VisualCompositeImpl
-		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualComposite()
-		 * @generated
-		 */
-		EClass VISUAL_COMPOSITE = eINSTANCE.getVisualComposite();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VISUAL_COMPOSITE__VALUE = eINSTANCE.getVisualComposite_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Visual Groups</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VISUAL_COMPOSITE__VISUAL_GROUPS = eINSTANCE.getVisualComposite_VisualGroups();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.OBJImpl <em>OBJ</em>}' class.
@@ -2844,6 +2897,50 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EReference VISUAL_GROUP__VISUAL_GROUP_ELEMENTS = eINSTANCE.getVisualGroup_VisualGroupElements();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ConnectionImpl <em>Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.ConnectionImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnection()
+		 * @generated
+		 */
+		EClass CONNECTION = eINSTANCE.getConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>A</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__A = eINSTANCE.getConnection_A();
+
+		/**
+		 * The meta object literal for the '<em><b>B</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__B = eINSTANCE.getConnection_B();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__TYPE = eINSTANCE.getConnection_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.ConnectionType <em>Connection Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.ConnectionType
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectionType()
+		 * @generated
+		 */
+		EEnum CONNECTION_TYPE = eINSTANCE.getConnectionType();
 
 	}
 

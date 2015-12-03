@@ -16,6 +16,7 @@ import org.geppetto.model.variables.Variable;
  * <ul>
  *   <li>{@link org.geppetto.model.values.PointerElement#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.geppetto.model.values.PointerElement#getType <em>Type</em>}</li>
+ *   <li>{@link org.geppetto.model.values.PointerElement#getIndex <em>Index</em>}</li>
  * </ul>
  * </p>
  *
@@ -76,5 +77,31 @@ public interface PointerElement extends EObject
 	 * @generated
 	 */
 	void setType(Type value);
+
+	/**
+	 * Returns the value of the '<em><b>Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Index</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Index</em>' attribute.
+	 * @see #setIndex(int)
+	 * @see org.geppetto.model.values.ValuesPackage#getPointerElement_Index()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @generated
+	 */
+	int getIndex();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.values.PointerElement#getIndex <em>Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Index</em>' attribute.
+	 * @see #getIndex()
+	 * @generated
+	 */
+	void setIndex(int value);
 
 } // PointerElement

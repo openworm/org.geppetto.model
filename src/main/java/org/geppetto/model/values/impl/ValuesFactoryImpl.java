@@ -4,6 +4,7 @@ package org.geppetto.model.values.impl;
 
 import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
@@ -79,7 +80,6 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.ARGUMENT: return createArgument();
 			case ValuesPackage.EXPRESSION: return createExpression();
 			case ValuesPackage.COLLADA: return createCollada();
-			case ValuesPackage.VISUAL_COMPOSITE: return createVisualComposite();
 			case ValuesPackage.OBJ: return createOBJ();
 			case ValuesPackage.SPHERE: return createSphere();
 			case ValuesPackage.CYLINDER: return createCylinder();
@@ -88,8 +88,43 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.SKELETON_TRANSFORMATION: return createSkeletonTransformation();
 			case ValuesPackage.VISUAL_GROUP_ELEMENT: return createVisualGroupElement();
 			case ValuesPackage.VISUAL_GROUP: return createVisualGroup();
+			case ValuesPackage.CONNECTION: return createConnection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
+			case ValuesPackage.CONNECTION_TYPE:
+				return createConnectionTypeFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
+			case ValuesPackage.CONNECTION_TYPE:
+				return convertConnectionTypeToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -285,17 +320,6 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VisualComposite createVisualComposite()
-	{
-		VisualCompositeImpl visualComposite = new VisualCompositeImpl();
-		return visualComposite;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public OBJ createOBJ()
 	{
 		OBJImpl obj = new OBJImpl();
@@ -377,6 +401,39 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		VisualGroupImpl visualGroup = new VisualGroupImpl();
 		return visualGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Connection createConnection()
+	{
+		ConnectionImpl connection = new ConnectionImpl();
+		return connection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConnectionType createConnectionTypeFromString(EDataType eDataType, String initialValue)
+	{
+		ConnectionType result = ConnectionType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertConnectionTypeToString(EDataType eDataType, Object instanceValue)
+	{
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

@@ -2,6 +2,7 @@
  */
 package org.geppetto.model;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.geppetto.model.Node#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.Node#getName <em>Name</em>}</li>
+ *   <li>{@link org.geppetto.model.Node#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
  *
@@ -76,6 +78,22 @@ public interface Node extends EObject
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Tags</b></em>' reference list.
+	 * The list contents are of type {@link org.geppetto.model.Tag}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tags</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tags</em>' reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getNode_Tags()
+	 * @model
+	 * @generated
+	 */
+	EList<Tag> getTags();
 
 	/**
 	 * <!-- begin-user-doc -->

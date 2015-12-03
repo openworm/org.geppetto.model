@@ -16,6 +16,7 @@ import org.geppetto.model.GeppettoModelState;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.LibraryManager;
 import org.geppetto.model.Node;
+import org.geppetto.model.Tag;
 import org.geppetto.model.VariableValue;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
@@ -73,6 +74,13 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * @generated
 	 */
 	private EClass variableValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tagEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -186,6 +194,16 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getGeppettoModel_Tags()
+	{
+		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNode()
 	{
 		return nodeEClass;
@@ -209,6 +227,16 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	public EAttribute getNode_Name()
 	{
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNode_Tags()
+	{
+		return (EReference)nodeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -336,6 +364,36 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTag()
+	{
+		return tagEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTag_Tags()
+	{
+		return (EReference)tagEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTag_Name()
+	{
+		return (EAttribute)tagEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GeppettoFactory getGeppettoFactory()
 	{
 		return (GeppettoFactory)getEFactoryInstance();
@@ -364,10 +422,12 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		geppettoModelEClass = createEClass(GEPPETTO_MODEL);
 		createEReference(geppettoModelEClass, GEPPETTO_MODEL__VARIABLES);
 		createEReference(geppettoModelEClass, GEPPETTO_MODEL__LIBRARIES);
+		createEReference(geppettoModelEClass, GEPPETTO_MODEL__TAGS);
 
 		nodeEClass = createEClass(NODE);
 		createEAttribute(nodeEClass, NODE__ID);
 		createEAttribute(nodeEClass, NODE__NAME);
+		createEReference(nodeEClass, NODE__TAGS);
 		createEOperation(nodeEClass, NODE___GET_PATH);
 
 		geppettoLibraryEClass = createEClass(GEPPETTO_LIBRARY);
@@ -384,6 +444,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		variableValueEClass = createEClass(VARIABLE_VALUE);
 		createEReference(variableValueEClass, VARIABLE_VALUE__POINTER);
 		createEReference(variableValueEClass, VARIABLE_VALUE__VALUE);
+
+		tagEClass = createEClass(TAG);
+		createEReference(tagEClass, TAG__TAGS);
+		createEAttribute(tagEClass, TAG__NAME);
 	}
 
 	/**
@@ -432,10 +496,12 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEClass(geppettoModelEClass, GeppettoModel.class, "GeppettoModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeppettoModel_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGeppettoModel_Libraries(), this.getGeppettoLibrary(), null, "libraries", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeppettoModel_Tags(), this.getTag(), null, "tags", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNode_Id(), theXMLTypePackage.getString(), "id", "", 1, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Tags(), this.getTag(), null, "tags", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getNode__GetPath(), theXMLTypePackage.getString(), "getPath", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -453,6 +519,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEClass(variableValueEClass, VariableValue.class, "VariableValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableValue_Pointer(), theValuesPackage.getPointer(), null, "pointer", null, 1, 1, VariableValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariableValue_Value(), theValuesPackage.getValue(), null, "value", null, 0, 1, VariableValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tagEClass, Tag.class, "Tag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTag_Tags(), this.getTag(), null, "tags", null, 0, -1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTag_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

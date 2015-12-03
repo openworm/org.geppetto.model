@@ -12,11 +12,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.geppetto.model.types.CompositeVisualType;
 import org.geppetto.model.types.TypesPackage;
 
+import org.geppetto.model.values.VisualGroup;
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -27,6 +29,7 @@ import org.geppetto.model.variables.Variable;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.geppetto.model.types.impl.CompositeVisualTypeImpl#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.geppetto.model.types.impl.CompositeVisualTypeImpl#getVisualGroups <em>Visual Groups</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,6 +46,16 @@ public class CompositeVisualTypeImpl extends VisualTypeImpl implements Composite
 	 * @ordered
 	 */
 	protected EList<Variable> variables;
+
+	/**
+	 * The cached value of the '{@link #getVisualGroups() <em>Visual Groups</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVisualGroups()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VisualGroup> visualGroups;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -84,6 +97,20 @@ public class CompositeVisualTypeImpl extends VisualTypeImpl implements Composite
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<VisualGroup> getVisualGroups()
+	{
+		if (visualGroups == null)
+		{
+			visualGroups = new EObjectResolvingEList<VisualGroup>(VisualGroup.class, this, TypesPackage.COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS);
+		}
+		return visualGroups;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -107,6 +134,8 @@ public class CompositeVisualTypeImpl extends VisualTypeImpl implements Composite
 		{
 			case TypesPackage.COMPOSITE_VISUAL_TYPE__VARIABLES:
 				return getVariables();
+			case TypesPackage.COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS:
+				return getVisualGroups();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -126,6 +155,10 @@ public class CompositeVisualTypeImpl extends VisualTypeImpl implements Composite
 				getVariables().clear();
 				getVariables().addAll((Collection<? extends Variable>)newValue);
 				return;
+			case TypesPackage.COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS:
+				getVisualGroups().clear();
+				getVisualGroups().addAll((Collection<? extends VisualGroup>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -143,6 +176,9 @@ public class CompositeVisualTypeImpl extends VisualTypeImpl implements Composite
 			case TypesPackage.COMPOSITE_VISUAL_TYPE__VARIABLES:
 				getVariables().clear();
 				return;
+			case TypesPackage.COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS:
+				getVisualGroups().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -159,6 +195,8 @@ public class CompositeVisualTypeImpl extends VisualTypeImpl implements Composite
 		{
 			case TypesPackage.COMPOSITE_VISUAL_TYPE__VARIABLES:
 				return variables != null && !variables.isEmpty();
+			case TypesPackage.COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS:
+				return visualGroups != null && !visualGroups.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
