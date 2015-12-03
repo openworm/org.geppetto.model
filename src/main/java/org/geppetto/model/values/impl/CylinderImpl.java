@@ -4,6 +4,7 @@ package org.geppetto.model.values.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -92,7 +93,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	protected double height = HEIGHT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDistal() <em>Distal</em>}' reference.
+	 * The cached value of the '{@link #getDistal() <em>Distal</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDistal()
@@ -198,16 +199,6 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 */
 	public Point getDistal()
 	{
-		if (distal != null && distal.eIsProxy())
-		{
-			InternalEObject oldDistal = (InternalEObject)distal;
-			distal = (Point)eResolveProxy(oldDistal);
-			if (distal != oldDistal)
-			{
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ValuesPackage.CYLINDER__DISTAL, oldDistal, distal));
-			}
-		}
 		return distal;
 	}
 
@@ -216,9 +207,16 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Point basicGetDistal()
+	public NotificationChain basicSetDistal(Point newDistal, NotificationChain msgs)
 	{
-		return distal;
+		Point oldDistal = distal;
+		distal = newDistal;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__DISTAL, oldDistal, newDistal);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -228,10 +226,34 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	 */
 	public void setDistal(Point newDistal)
 	{
-		Point oldDistal = distal;
-		distal = newDistal;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__DISTAL, oldDistal, distal));
+		if (newDistal != distal)
+		{
+			NotificationChain msgs = null;
+			if (distal != null)
+				msgs = ((InternalEObject)distal).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.CYLINDER__DISTAL, null, msgs);
+			if (newDistal != null)
+				msgs = ((InternalEObject)newDistal).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.CYLINDER__DISTAL, null, msgs);
+			msgs = basicSetDistal(newDistal, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CYLINDER__DISTAL, newDistal, newDistal));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case ValuesPackage.CYLINDER__DISTAL:
+				return basicSetDistal(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -251,8 +273,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 			case ValuesPackage.CYLINDER__HEIGHT:
 				return getHeight();
 			case ValuesPackage.CYLINDER__DISTAL:
-				if (resolve) return getDistal();
-				return basicGetDistal();
+				return getDistal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

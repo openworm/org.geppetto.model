@@ -3,17 +3,13 @@
 package org.geppetto.model.types.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.geppetto.model.types.DynamicsType;
 import org.geppetto.model.types.TypesPackage;
-
-import org.geppetto.model.values.Dyamics;
+import org.geppetto.model.values.Dynamics;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +34,7 @@ public class DynamicsTypeImpl extends TypeImpl implements DynamicsType
 	 * @generated
 	 * @ordered
 	 */
-	protected Dyamics defaultValue;
+	protected Dynamics defaultValue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,7 +62,7 @@ public class DynamicsTypeImpl extends TypeImpl implements DynamicsType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Dyamics getDefaultValue()
+	public Dynamics getDefaultValue()
 	{
 		return defaultValue;
 	}
@@ -76,9 +72,9 @@ public class DynamicsTypeImpl extends TypeImpl implements DynamicsType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDefaultValue(Dyamics newDefaultValue, NotificationChain msgs)
+	public NotificationChain basicSetDefaultValue(Dynamics newDefaultValue, NotificationChain msgs)
 	{
-		Dyamics oldDefaultValue = defaultValue;
+		Dynamics oldDefaultValue = defaultValue;
 		defaultValue = newDefaultValue;
 		if (eNotificationRequired())
 		{
@@ -93,7 +89,7 @@ public class DynamicsTypeImpl extends TypeImpl implements DynamicsType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefaultValue(Dyamics newDefaultValue)
+	public void setDefaultValue(Dynamics newDefaultValue)
 	{
 		if (newDefaultValue != defaultValue)
 		{
@@ -152,7 +148,7 @@ public class DynamicsTypeImpl extends TypeImpl implements DynamicsType
 		switch (featureID)
 		{
 			case TypesPackage.DYNAMICS_TYPE__DEFAULT_VALUE:
-				setDefaultValue((Dyamics)newValue);
+				setDefaultValue((Dynamics)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -169,7 +165,7 @@ public class DynamicsTypeImpl extends TypeImpl implements DynamicsType
 		switch (featureID)
 		{
 			case TypesPackage.DYNAMICS_TYPE__DEFAULT_VALUE:
-				setDefaultValue((Dyamics)null);
+				setDefaultValue((Dynamics)null);
 				return;
 		}
 		super.eUnset(featureID);

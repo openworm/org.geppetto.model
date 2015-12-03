@@ -144,9 +144,9 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createPointAdapter();
 			}
 			@Override
-			public Adapter caseDyamics(Dyamics object)
+			public Adapter caseDynamics(Dynamics object)
 			{
-				return createDyamicsAdapter();
+				return createDynamicsAdapter();
 			}
 			@Override
 			public Adapter caseFunction(Function object)
@@ -456,16 +456,16 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Dyamics <em>Dyamics</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Dynamics <em>Dynamics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.values.Dyamics
+	 * @see org.geppetto.model.values.Dynamics
 	 * @generated
 	 */
-	public Adapter createDyamicsAdapter()
+	public Adapter createDynamicsAdapter()
 	{
 		return null;
 	}

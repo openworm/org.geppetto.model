@@ -185,11 +185,11 @@ public class ValuesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ValuesPackage.DYAMICS:
+			case ValuesPackage.DYNAMICS:
 			{
-				Dyamics dyamics = (Dyamics)theEObject;
-				T result = caseDyamics(dyamics);
-				if (result == null) result = caseValue(dyamics);
+				Dynamics dynamics = (Dynamics)theEObject;
+				T result = caseDynamics(dynamics);
+				if (result == null) result = caseValue(dynamics);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -540,17 +540,17 @@ public class ValuesSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dyamics</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dynamics</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dyamics</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dynamics</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDyamics(Dyamics object)
+	public T caseDynamics(Dynamics object)
 	{
 		return null;
 	}

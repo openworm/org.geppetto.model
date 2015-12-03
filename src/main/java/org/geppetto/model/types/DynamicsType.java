@@ -2,7 +2,7 @@
  */
 package org.geppetto.model.types;
 
-import org.geppetto.model.values.Dyamics;
+import org.geppetto.model.values.Dynamics;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,12 +31,12 @@ public interface DynamicsType extends Type
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default Value</em>' containment reference.
-	 * @see #setDefaultValue(Dyamics)
+	 * @see #setDefaultValue(Dynamics)
 	 * @see org.geppetto.model.types.TypesPackage#getDynamicsType_DefaultValue()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Dyamics getDefaultValue();
+	Dynamics getDefaultValue();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.types.DynamicsType#getDefaultValue <em>Default Value</em>}' containment reference.
@@ -46,6 +46,6 @@ public interface DynamicsType extends Type
 	 * @see #getDefaultValue()
 	 * @generated
 	 */
-	void setDefaultValue(Dyamics value);
+	void setDefaultValue(Dynamics value);
 
 } // DynamicsType

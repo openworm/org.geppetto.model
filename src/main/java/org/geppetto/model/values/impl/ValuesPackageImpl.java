@@ -21,7 +21,7 @@ import org.geppetto.model.values.Composite;
 import org.geppetto.model.values.Connection;
 import org.geppetto.model.values.ConnectionType;
 import org.geppetto.model.values.Cylinder;
-import org.geppetto.model.values.Dyamics;
+import org.geppetto.model.values.Dynamics;
 import org.geppetto.model.values.Expression;
 import org.geppetto.model.values.Function;
 import org.geppetto.model.values.MetadataValue;
@@ -157,7 +157,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dyamicsEClass = null;
+	private EClass dynamicsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -686,9 +686,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDyamics()
+	public EClass getDynamics()
 	{
-		return dyamicsEClass;
+		return dynamicsEClass;
 	}
 
 	/**
@@ -696,9 +696,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDyamics_InitialCondition()
+	public EReference getDynamics_InitialCondition()
 	{
-		return (EReference)dyamicsEClass.getEStructuralFeatures().get(0);
+		return (EReference)dynamicsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -706,9 +706,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDyamics_Dynamics()
+	public EReference getDynamics_Dynamics()
 	{
-		return (EReference)dyamicsEClass.getEStructuralFeatures().get(1);
+		return (EReference)dynamicsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -799,6 +799,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	public EReference getVisualValue_GroupElements()
 	{
 		return (EReference)visualValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVisualValue_Position()
+	{
+		return (EReference)visualValueEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1169,9 +1179,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEAttribute(pointEClass, POINT__Y);
 		createEAttribute(pointEClass, POINT__Z);
 
-		dyamicsEClass = createEClass(DYAMICS);
-		createEReference(dyamicsEClass, DYAMICS__INITIAL_CONDITION);
-		createEReference(dyamicsEClass, DYAMICS__DYNAMICS);
+		dynamicsEClass = createEClass(DYNAMICS);
+		createEReference(dynamicsEClass, DYNAMICS__INITIAL_CONDITION);
+		createEReference(dynamicsEClass, DYNAMICS__DYNAMICS);
 
 		functionEClass = createEClass(FUNCTION);
 		createEReference(functionEClass, FUNCTION__ARGUMENTS);
@@ -1185,6 +1195,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		visualValueEClass = createEClass(VISUAL_VALUE);
 		createEReference(visualValueEClass, VISUAL_VALUE__GROUP_ELEMENTS);
+		createEReference(visualValueEClass, VISUAL_VALUE__POSITION);
 
 		colladaEClass = createEClass(COLLADA);
 		createEAttribute(colladaEClass, COLLADA__COLLADA);
@@ -1274,7 +1285,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		htmlEClass.getESuperTypes().add(this.getMetadataValue());
 		pointerEClass.getESuperTypes().add(this.getValue());
 		pointEClass.getESuperTypes().add(this.getValue());
-		dyamicsEClass.getESuperTypes().add(this.getValue());
+		dynamicsEClass.getESuperTypes().add(this.getValue());
 		functionEClass.getESuperTypes().add(this.getValue());
 		argumentEClass.getESuperTypes().add(this.getValue());
 		expressionEClass.getESuperTypes().add(this.getValue());
@@ -1340,9 +1351,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEAttribute(getPoint_Y(), theXMLTypePackage.getDouble(), "y", null, 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPoint_Z(), theXMLTypePackage.getDouble(), "z", null, 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(dyamicsEClass, Dyamics.class, "Dyamics", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDyamics_InitialCondition(), this.getPhysicalQuantity(), null, "initialCondition", null, 0, 1, Dyamics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDyamics_Dynamics(), this.getFunction(), null, "dynamics", null, 0, 1, Dyamics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dynamicsEClass, Dynamics.class, "Dynamics", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDynamics_InitialCondition(), this.getPhysicalQuantity(), null, "initialCondition", null, 0, 1, Dynamics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDynamics_Dynamics(), this.getFunction(), null, "dynamics", null, 0, 1, Dynamics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunction_Arguments(), this.getArgument(), null, "arguments", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1356,6 +1367,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		initEClass(visualValueEClass, VisualValue.class, "VisualValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVisualValue_GroupElements(), this.getVisualGroupElement(), null, "groupElements", null, 0, -1, VisualValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVisualValue_Position(), this.getPoint(), null, "position", null, 0, 1, VisualValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(colladaEClass, Collada.class, "Collada", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCollada_Collada(), theXMLTypePackage.getString(), "collada", null, 1, 1, Collada.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1370,7 +1382,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEAttribute(getCylinder_BottomRadius(), theXMLTypePackage.getDouble(), "bottomRadius", null, 1, 1, Cylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCylinder_TopRadius(), theXMLTypePackage.getDouble(), "topRadius", null, 1, 1, Cylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCylinder_Height(), theXMLTypePackage.getDouble(), "height", null, 1, 1, Cylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCylinder_Distal(), this.getPoint(), null, "distal", null, 0, 1, Cylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCylinder_Distal(), this.getPoint(), null, "distal", null, 0, 1, Cylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(particleEClass, Particle.class, "Particle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -122,13 +122,13 @@ public interface ValuesFactory extends EFactory
 	Point createPoint();
 
 	/**
-	 * Returns a new object of class '<em>Dyamics</em>'.
+	 * Returns a new object of class '<em>Dynamics</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dyamics</em>'.
+	 * @return a new object of class '<em>Dynamics</em>'.
 	 * @generated
 	 */
-	Dyamics createDyamics();
+	Dynamics createDynamics();
 
 	/**
 	 * Returns a new object of class '<em>Function</em>'.
