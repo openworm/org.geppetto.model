@@ -103,26 +103,26 @@ public interface Cylinder extends VisualValue
 	void setHeight(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Distal</b></em>' reference.
+	 * Returns the value of the '<em><b>Distal</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Distal</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distal</em>' reference.
+	 * @return the value of the '<em>Distal</em>' containment reference.
 	 * @see #setDistal(Point)
 	 * @see org.geppetto.model.values.ValuesPackage#getCylinder_Distal()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Point getDistal();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.values.Cylinder#getDistal <em>Distal</em>}' reference.
+	 * Sets the value of the '{@link org.geppetto.model.values.Cylinder#getDistal <em>Distal</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distal</em>' reference.
+	 * @param value the new value of the '<em>Distal</em>' containment reference.
 	 * @see #getDistal()
 	 * @generated
 	 */

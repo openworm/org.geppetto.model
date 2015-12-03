@@ -651,14 +651,14 @@ public interface ValuesPackage extends EPackage
 	int POINT_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.values.impl.DyamicsImpl <em>Dyamics</em>}' class.
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.DynamicsImpl <em>Dynamics</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.values.impl.DyamicsImpl
-	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getDyamics()
+	 * @see org.geppetto.model.values.impl.DynamicsImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getDynamics()
 	 * @generated
 	 */
-	int DYAMICS = 14;
+	int DYNAMICS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Initial Condition</b></em>' containment reference.
@@ -667,7 +667,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DYAMICS__INITIAL_CONDITION = VALUE_FEATURE_COUNT + 0;
+	int DYNAMICS__INITIAL_CONDITION = VALUE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Dynamics</b></em>' reference.
@@ -676,25 +676,25 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DYAMICS__DYNAMICS = VALUE_FEATURE_COUNT + 1;
+	int DYNAMICS__DYNAMICS = VALUE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Dyamics</em>' class.
+	 * The number of structural features of the '<em>Dynamics</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYAMICS_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
+	int DYNAMICS_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Dyamics</em>' class.
+	 * The number of operations of the '<em>Dynamics</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYAMICS_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+	int DYNAMICS_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.impl.FunctionImpl <em>Function</em>}' class.
@@ -836,13 +836,22 @@ public interface ValuesPackage extends EPackage
 	int VISUAL_VALUE__GROUP_ELEMENTS = VALUE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_VALUE__POSITION = VALUE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Visual Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VISUAL_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+	int VISUAL_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Visual Value</em>' class.
@@ -871,6 +880,15 @@ public interface ValuesPackage extends EPackage
 	 * @ordered
 	 */
 	int COLLADA__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLADA__POSITION = VISUAL_VALUE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Collada</b></em>' attribute.
@@ -919,6 +937,15 @@ public interface ValuesPackage extends EPackage
 	int OBJ__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJ__POSITION = VISUAL_VALUE__POSITION;
+
+	/**
 	 * The feature id for the '<em><b>Obj</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -963,6 +990,15 @@ public interface ValuesPackage extends EPackage
 	 * @ordered
 	 */
 	int SPHERE__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPHERE__POSITION = VISUAL_VALUE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Radius</b></em>' attribute.
@@ -1011,6 +1047,15 @@ public interface ValuesPackage extends EPackage
 	int CYLINDER__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER__POSITION = VISUAL_VALUE__POSITION;
+
+	/**
 	 * The feature id for the '<em><b>Bottom Radius</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1038,7 +1083,7 @@ public interface ValuesPackage extends EPackage
 	int CYLINDER__HEIGHT = VISUAL_VALUE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Distal</b></em>' reference.
+	 * The feature id for the '<em><b>Distal</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1082,6 +1127,15 @@ public interface ValuesPackage extends EPackage
 	 * @ordered
 	 */
 	int PARTICLE__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTICLE__POSITION = VISUAL_VALUE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -1147,6 +1201,15 @@ public interface ValuesPackage extends EPackage
 	 * @ordered
 	 */
 	int SKELETON_ANIMATION__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKELETON_ANIMATION__POSITION = VISUAL_VALUE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Skeleton Transformation Series</b></em>' reference list.
@@ -1824,36 +1887,36 @@ public interface ValuesPackage extends EPackage
 	EAttribute getPoint_Z();
 
 	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.values.Dyamics <em>Dyamics</em>}'.
+	 * Returns the meta object for class '{@link org.geppetto.model.values.Dynamics <em>Dynamics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dyamics</em>'.
-	 * @see org.geppetto.model.values.Dyamics
+	 * @return the meta object for class '<em>Dynamics</em>'.
+	 * @see org.geppetto.model.values.Dynamics
 	 * @generated
 	 */
-	EClass getDyamics();
+	EClass getDynamics();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Dyamics#getInitialCondition <em>Initial Condition</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Dynamics#getInitialCondition <em>Initial Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Initial Condition</em>'.
-	 * @see org.geppetto.model.values.Dyamics#getInitialCondition()
-	 * @see #getDyamics()
+	 * @see org.geppetto.model.values.Dynamics#getInitialCondition()
+	 * @see #getDynamics()
 	 * @generated
 	 */
-	EReference getDyamics_InitialCondition();
+	EReference getDynamics_InitialCondition();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.values.Dyamics#getDynamics <em>Dynamics</em>}'.
+	 * Returns the meta object for the reference '{@link org.geppetto.model.values.Dynamics#getDynamics <em>Dynamics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Dynamics</em>'.
-	 * @see org.geppetto.model.values.Dyamics#getDynamics()
-	 * @see #getDyamics()
+	 * @see org.geppetto.model.values.Dynamics#getDynamics()
+	 * @see #getDynamics()
 	 * @generated
 	 */
-	EReference getDyamics_Dynamics();
+	EReference getDynamics_Dynamics();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Function <em>Function</em>}'.
@@ -1949,6 +2012,17 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EReference getVisualValue_GroupElements();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.VisualValue#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Position</em>'.
+	 * @see org.geppetto.model.values.VisualValue#getPosition()
+	 * @see #getVisualValue()
+	 * @generated
+	 */
+	EReference getVisualValue_Position();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Collada <em>Collada</em>}'.
@@ -2057,10 +2131,10 @@ public interface ValuesPackage extends EPackage
 	EAttribute getCylinder_Height();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.values.Cylinder#getDistal <em>Distal</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Cylinder#getDistal <em>Distal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Distal</em>'.
+	 * @return the meta object for the containment reference '<em>Distal</em>'.
 	 * @see org.geppetto.model.values.Cylinder#getDistal()
 	 * @see #getCylinder()
 	 * @generated
@@ -2583,14 +2657,14 @@ public interface ValuesPackage extends EPackage
 		EAttribute POINT__Z = eINSTANCE.getPoint_Z();
 
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.values.impl.DyamicsImpl <em>Dyamics</em>}' class.
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.DynamicsImpl <em>Dynamics</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.values.impl.DyamicsImpl
-		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getDyamics()
+		 * @see org.geppetto.model.values.impl.DynamicsImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getDynamics()
 		 * @generated
 		 */
-		EClass DYAMICS = eINSTANCE.getDyamics();
+		EClass DYNAMICS = eINSTANCE.getDynamics();
 
 		/**
 		 * The meta object literal for the '<em><b>Initial Condition</b></em>' containment reference feature.
@@ -2598,7 +2672,7 @@ public interface ValuesPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DYAMICS__INITIAL_CONDITION = eINSTANCE.getDyamics_InitialCondition();
+		EReference DYNAMICS__INITIAL_CONDITION = eINSTANCE.getDynamics_InitialCondition();
 
 		/**
 		 * The meta object literal for the '<em><b>Dynamics</b></em>' reference feature.
@@ -2606,7 +2680,7 @@ public interface ValuesPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DYAMICS__DYNAMICS = eINSTANCE.getDyamics_Dynamics();
+		EReference DYNAMICS__DYNAMICS = eINSTANCE.getDynamics_Dynamics();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.FunctionImpl <em>Function</em>}' class.
@@ -2687,6 +2761,14 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EReference VISUAL_VALUE__GROUP_ELEMENTS = eINSTANCE.getVisualValue_GroupElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VISUAL_VALUE__POSITION = eINSTANCE.getVisualValue_Position();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ColladaImpl <em>Collada</em>}' class.
@@ -2777,7 +2859,7 @@ public interface ValuesPackage extends EPackage
 		EAttribute CYLINDER__HEIGHT = eINSTANCE.getCylinder_Height();
 
 		/**
-		 * The meta object literal for the '<em><b>Distal</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Distal</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

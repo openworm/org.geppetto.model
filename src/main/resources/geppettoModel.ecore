@@ -88,7 +88,7 @@
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DynamicsType" eSuperTypes="#//types/Type">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Dyamics"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Dynamics"
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ArgumentType" eSuperTypes="#//types/Type">
@@ -187,7 +187,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Dyamics" eSuperTypes="#//values/Value">
+    <eClassifiers xsi:type="ecore:EClass" name="Dynamics" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="initialCondition" eType="#//values/PhysicalQuantity"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="dynamics" eType="#//values/Function"/>
@@ -210,6 +210,8 @@
     <eClassifiers xsi:type="ecore:EClass" name="VisualValue" abstract="true" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="groupElements" upperBound="-1"
           eType="#//values/VisualGroupElement"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//values/Point"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Collada" eSuperTypes="#//values/VisualValue">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="collada" lowerBound="1"
@@ -229,7 +231,8 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="distal" eType="#//values/Point"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="distal" eType="#//values/Point"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Particle" eSuperTypes="#//values/VisualValue #//values/Point"/>
     <eClassifiers xsi:type="ecore:EClass" name="SkeletonAnimation" eSuperTypes="#//values/VisualValue">
