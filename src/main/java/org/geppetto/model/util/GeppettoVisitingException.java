@@ -36,7 +36,7 @@ package org.geppetto.model.util;
  * @author matteocantarelli
  *
  */
-public class GeppettoModelException extends Exception
+public class GeppettoVisitingException extends Exception
 {
 
 	/**
@@ -44,17 +44,17 @@ public class GeppettoModelException extends Exception
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public GeppettoModelException(String message, Throwable cause)
+	public GeppettoVisitingException(String message, Throwable cause)
 	{
 		super(message, cause);
 	}
 
-	public GeppettoModelException(String message)
+	public GeppettoVisitingException(String message)
 	{
 		super(message);
 	}
 
-	public GeppettoModelException(Throwable cause)
+	public GeppettoVisitingException(Throwable cause)
 	{
 		super(cause);
 	}
