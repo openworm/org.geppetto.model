@@ -65,26 +65,26 @@ public interface Variable extends Node
 	EList<Type> getTypes();
 
 	/**
-	 * Returns the value of the '<em><b>Initial Values</b></em>' reference.
+	 * Returns the value of the '<em><b>Initial Values</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Initial Values</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Initial Values</em>' reference.
+	 * @return the value of the '<em>Initial Values</em>' containment reference.
 	 * @see #setInitialValues(Value)
 	 * @see org.geppetto.model.variables.VariablesPackage#getVariable_InitialValues()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Value getInitialValues();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.variables.Variable#getInitialValues <em>Initial Values</em>}' reference.
+	 * Sets the value of the '{@link org.geppetto.model.variables.Variable#getInitialValues <em>Initial Values</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Initial Values</em>' reference.
+	 * @param value the new value of the '<em>Initial Values</em>' containment reference.
 	 * @see #getInitialValues()
 	 * @generated
 	 */

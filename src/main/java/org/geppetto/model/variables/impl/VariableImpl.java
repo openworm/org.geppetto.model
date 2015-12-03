@@ -60,7 +60,7 @@ public class VariableImpl extends NodeImpl implements Variable
 	protected EList<Type> types;
 
 	/**
-	 * The cached value of the '{@link #getInitialValues() <em>Initial Values</em>}' reference.
+	 * The cached value of the '{@link #getInitialValues() <em>Initial Values</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInitialValues()
@@ -155,16 +155,6 @@ public class VariableImpl extends NodeImpl implements Variable
 	 */
 	public Value getInitialValues()
 	{
-		if (initialValues != null && initialValues.eIsProxy())
-		{
-			InternalEObject oldInitialValues = (InternalEObject)initialValues;
-			initialValues = (Value)eResolveProxy(oldInitialValues);
-			if (initialValues != oldInitialValues)
-			{
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VariablesPackage.VARIABLE__INITIAL_VALUES, oldInitialValues, initialValues));
-			}
-		}
 		return initialValues;
 	}
 
@@ -173,9 +163,16 @@ public class VariableImpl extends NodeImpl implements Variable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value basicGetInitialValues()
+	public NotificationChain basicSetInitialValues(Value newInitialValues, NotificationChain msgs)
 	{
-		return initialValues;
+		Value oldInitialValues = initialValues;
+		initialValues = newInitialValues;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__INITIAL_VALUES, oldInitialValues, newInitialValues);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -185,10 +182,18 @@ public class VariableImpl extends NodeImpl implements Variable
 	 */
 	public void setInitialValues(Value newInitialValues)
 	{
-		Value oldInitialValues = initialValues;
-		initialValues = newInitialValues;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__INITIAL_VALUES, oldInitialValues, initialValues));
+		if (newInitialValues != initialValues)
+		{
+			NotificationChain msgs = null;
+			if (initialValues != null)
+				msgs = ((InternalEObject)initialValues).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VariablesPackage.VARIABLE__INITIAL_VALUES, null, msgs);
+			if (newInitialValues != null)
+				msgs = ((InternalEObject)newInitialValues).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VariablesPackage.VARIABLE__INITIAL_VALUES, null, msgs);
+			msgs = basicSetInitialValues(newInitialValues, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__INITIAL_VALUES, newInitialValues, newInitialValues));
 	}
 
 	/**
@@ -288,6 +293,8 @@ public class VariableImpl extends NodeImpl implements Variable
 				return ((InternalEList<?>)getAnonymousTypes()).basicRemove(otherEnd, msgs);
 			case VariablesPackage.VARIABLE__TYPES:
 				return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
+			case VariablesPackage.VARIABLE__INITIAL_VALUES:
+				return basicSetInitialValues(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -307,8 +314,7 @@ public class VariableImpl extends NodeImpl implements Variable
 			case VariablesPackage.VARIABLE__TYPES:
 				return getTypes();
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
-				if (resolve) return getInitialValues();
-				return basicGetInitialValues();
+				return getInitialValues();
 			case VariablesPackage.VARIABLE__STATIC:
 				return isStatic();
 			case VariablesPackage.VARIABLE__POSITION:
