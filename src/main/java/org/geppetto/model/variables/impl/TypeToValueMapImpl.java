@@ -4,6 +4,7 @@ package org.geppetto.model.variables.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
 
@@ -47,7 +48,7 @@ public class TypeToValueMapImpl extends MinimalEObjectImpl.Container implements 
 	protected Type key;
 
 	/**
-	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' reference.
+	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedValue()
@@ -127,16 +128,6 @@ public class TypeToValueMapImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public Value getTypedValue()
 	{
-		if (value != null && value.eIsProxy())
-		{
-			InternalEObject oldValue = (InternalEObject)value;
-			value = (Value)eResolveProxy(oldValue);
-			if (value != oldValue)
-			{
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VariablesPackage.TYPE_TO_VALUE_MAP__VALUE, oldValue, value));
-			}
-		}
 		return value;
 	}
 
@@ -145,9 +136,16 @@ public class TypeToValueMapImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value basicGetTypedValue()
+	public NotificationChain basicSetTypedValue(Value newValue, NotificationChain msgs)
 	{
-		return value;
+		Value oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VariablesPackage.TYPE_TO_VALUE_MAP__VALUE, oldValue, newValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -157,10 +155,34 @@ public class TypeToValueMapImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public void setTypedValue(Value newValue)
 	{
-		Value oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VariablesPackage.TYPE_TO_VALUE_MAP__VALUE, oldValue, value));
+		if (newValue != value)
+		{
+			NotificationChain msgs = null;
+			if (value != null)
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VariablesPackage.TYPE_TO_VALUE_MAP__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VariablesPackage.TYPE_TO_VALUE_MAP__VALUE, null, msgs);
+			msgs = basicSetTypedValue(newValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VariablesPackage.TYPE_TO_VALUE_MAP__VALUE, newValue, newValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case VariablesPackage.TYPE_TO_VALUE_MAP__VALUE:
+				return basicSetTypedValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -177,8 +199,7 @@ public class TypeToValueMapImpl extends MinimalEObjectImpl.Container implements 
 				if (resolve) return getTypedKey();
 				return basicGetTypedKey();
 			case VariablesPackage.TYPE_TO_VALUE_MAP__VALUE:
-				if (resolve) return getTypedValue();
-				return basicGetTypedValue();
+				return getTypedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

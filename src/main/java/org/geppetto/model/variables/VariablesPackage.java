@@ -308,7 +308,7 @@ public interface VariablesPackage extends EPackage
 	int TYPE_TO_VALUE_MAP__KEY = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -428,7 +428,7 @@ public interface VariablesPackage extends EPackage
 	 * @return the meta object for class '<em>Type To Value Map</em>'.
 	 * @see java.util.Map.Entry
 	 * @model keyType="org.geppetto.model.types.Type" keyRequired="true"
-	 *        valueType="org.geppetto.model.values.Value" valueRequired="true"
+	 *        valueType="org.geppetto.model.values.Value" valueContainment="true" valueRequired="true"
 	 * @generated
 	 */
 	EClass getTypeToValueMap();
@@ -445,10 +445,10 @@ public interface VariablesPackage extends EPackage
 	EReference getTypeToValueMap_Key();
 
 	/**
-	 * Returns the meta object for the reference '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link java.util.Map.Entry <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see java.util.Map.Entry
 	 * @see #getTypeToValueMap()
 	 * @generated
@@ -566,7 +566,7 @@ public interface VariablesPackage extends EPackage
 		EReference TYPE_TO_VALUE_MAP__KEY = eINSTANCE.getTypeToValueMap_Key();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

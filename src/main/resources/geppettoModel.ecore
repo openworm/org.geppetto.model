@@ -289,7 +289,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="TypeToValueMap" instanceClassName="java.util.Map$Entry">
       <eStructuralFeatures xsi:type="ecore:EReference" name="key" lowerBound="1" eType="#//types/Type"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1"
-          eType="#//values/Value"/>
+          eType="#//values/Value" containment="true"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
