@@ -31,33 +31,51 @@ public class PointerUtility
 			element.setType(findType(getType(token)));
 			if((element.getVariable() instanceof ArrayVariable))
 			{
-				//element.set
-				
+				// element.set
+
 			}
-			else if( element.getType() instanceof ArrayType)
+			else if(element.getType() instanceof ArrayType)
 			{
-				
+
 			}
 			pointer.getElements().add(element);
 		}
 		return pointer;
 	}
 
-	private static Type findType(Object type)
+	public static Variable getVariable(Pointer pointer)
+	{
+		// IT FIXME Implement
+		return null;
+	}
+
+	public static Type getType(Pointer pointer)
 	{
 		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static String getUnit(Pointer pointer)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static Type findType(Object type)
+	{
+		// IT FIXME Implement
 		return null;
 	}
 
 	private static Variable findVariable(Object variable)
 	{
-		// TODO Auto-generated method stub
+		// IT FIXME Implement
 		return null;
 	}
 
 	private static String getType(String token)
 	{
-		// TODO Auto-generated method stub
+		// IT FIXME Implement
 		return null;
 	}
 
@@ -65,10 +83,10 @@ public class PointerUtility
 	{
 		return token.substring(0, token.indexOf("("));
 	}
-	
+
 	private static String getIndex(String token)
 	{
-		// TODO Auto-generated method stub
+		// IT FIXME Implement
 		return null;
 	}
 
@@ -79,6 +97,7 @@ public class PointerUtility
 	 */
 	public static String getInstancePath(Variable variable, Type type)
 	{
-		return variable.getId()+"("+type.getId()+")";
+		return variable.getId() + "(" + type.getId() + ")";
 	}
+
 }
