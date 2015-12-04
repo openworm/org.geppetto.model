@@ -27,11 +27,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="libraries" upperBound="-1"
         eType="#//GeppettoLibrary" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GeppettoModelState">
+  <eClassifiers xsi:type="ecore:EClass" name="ExperimentState">
     <eStructuralFeatures xsi:type="ecore:EReference" name="recordedVariables" upperBound="-1"
         eType="#//VariableValue"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="setParameters" upperBound="-1"
         eType="#//VariableValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="experimentId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Long"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VariableValue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pointer" lowerBound="1"

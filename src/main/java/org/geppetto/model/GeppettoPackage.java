@@ -299,14 +299,14 @@ public interface GeppettoPackage extends EPackage
 
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.impl.GeppettoModelStateImpl <em>Model State</em>}' class.
+	 * The meta object id for the '{@link org.geppetto.model.impl.ExperimentStateImpl <em>Experiment State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.impl.GeppettoModelStateImpl
-	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getGeppettoModelState()
+	 * @see org.geppetto.model.impl.ExperimentStateImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getExperimentState()
 	 * @generated
 	 */
-	int GEPPETTO_MODEL_STATE = 4;
+	int EXPERIMENT_STATE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Recorded Variables</b></em>' reference list.
@@ -315,7 +315,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL_STATE__RECORDED_VARIABLES = 0;
+	int EXPERIMENT_STATE__RECORDED_VARIABLES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Set Parameters</b></em>' reference list.
@@ -324,25 +324,34 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL_STATE__SET_PARAMETERS = 1;
+	int EXPERIMENT_STATE__SET_PARAMETERS = 1;
 
 	/**
-	 * The number of structural features of the '<em>Model State</em>' class.
+	 * The feature id for the '<em><b>Experiment Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL_STATE_FEATURE_COUNT = 2;
+	int EXPERIMENT_STATE__EXPERIMENT_ID = 2;
 
 	/**
-	 * The number of operations of the '<em>Model State</em>' class.
+	 * The number of structural features of the '<em>Experiment State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL_STATE_OPERATION_COUNT = 0;
+	int EXPERIMENT_STATE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Experiment State</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPERIMENT_STATE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.VariableValueImpl <em>Variable Value</em>}' class.
@@ -586,36 +595,47 @@ public interface GeppettoPackage extends EPackage
 	EReference getLibraryManager_Libraries();
 
 	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModelState <em>Model State</em>}'.
+	 * Returns the meta object for class '{@link org.geppetto.model.ExperimentState <em>Experiment State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Model State</em>'.
-	 * @see org.geppetto.model.GeppettoModelState
+	 * @return the meta object for class '<em>Experiment State</em>'.
+	 * @see org.geppetto.model.ExperimentState
 	 * @generated
 	 */
-	EClass getGeppettoModelState();
+	EClass getExperimentState();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.geppetto.model.GeppettoModelState#getRecordedVariables <em>Recorded Variables</em>}'.
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.ExperimentState#getRecordedVariables <em>Recorded Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Recorded Variables</em>'.
-	 * @see org.geppetto.model.GeppettoModelState#getRecordedVariables()
-	 * @see #getGeppettoModelState()
+	 * @see org.geppetto.model.ExperimentState#getRecordedVariables()
+	 * @see #getExperimentState()
 	 * @generated
 	 */
-	EReference getGeppettoModelState_RecordedVariables();
+	EReference getExperimentState_RecordedVariables();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.geppetto.model.GeppettoModelState#getSetParameters <em>Set Parameters</em>}'.
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.ExperimentState#getSetParameters <em>Set Parameters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Set Parameters</em>'.
-	 * @see org.geppetto.model.GeppettoModelState#getSetParameters()
-	 * @see #getGeppettoModelState()
+	 * @see org.geppetto.model.ExperimentState#getSetParameters()
+	 * @see #getExperimentState()
 	 * @generated
 	 */
-	EReference getGeppettoModelState_SetParameters();
+	EReference getExperimentState_SetParameters();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.ExperimentState#getExperimentId <em>Experiment Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Experiment Id</em>'.
+	 * @see org.geppetto.model.ExperimentState#getExperimentId()
+	 * @see #getExperimentState()
+	 * @generated
+	 */
+	EAttribute getExperimentState_ExperimentId();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.VariableValue <em>Variable Value</em>}'.
@@ -826,14 +846,14 @@ public interface GeppettoPackage extends EPackage
 		EReference LIBRARY_MANAGER__LIBRARIES = eINSTANCE.getLibraryManager_Libraries();
 
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.impl.GeppettoModelStateImpl <em>Model State</em>}' class.
+		 * The meta object literal for the '{@link org.geppetto.model.impl.ExperimentStateImpl <em>Experiment State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.impl.GeppettoModelStateImpl
-		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getGeppettoModelState()
+		 * @see org.geppetto.model.impl.ExperimentStateImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getExperimentState()
 		 * @generated
 		 */
-		EClass GEPPETTO_MODEL_STATE = eINSTANCE.getGeppettoModelState();
+		EClass EXPERIMENT_STATE = eINSTANCE.getExperimentState();
 
 		/**
 		 * The meta object literal for the '<em><b>Recorded Variables</b></em>' reference list feature.
@@ -841,7 +861,7 @@ public interface GeppettoPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GEPPETTO_MODEL_STATE__RECORDED_VARIABLES = eINSTANCE.getGeppettoModelState_RecordedVariables();
+		EReference EXPERIMENT_STATE__RECORDED_VARIABLES = eINSTANCE.getExperimentState_RecordedVariables();
 
 		/**
 		 * The meta object literal for the '<em><b>Set Parameters</b></em>' reference list feature.
@@ -849,7 +869,15 @@ public interface GeppettoPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GEPPETTO_MODEL_STATE__SET_PARAMETERS = eINSTANCE.getGeppettoModelState_SetParameters();
+		EReference EXPERIMENT_STATE__SET_PARAMETERS = eINSTANCE.getExperimentState_SetParameters();
+
+		/**
+		 * The meta object literal for the '<em><b>Experiment Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPERIMENT_STATE__EXPERIMENT_ID = eINSTANCE.getExperimentState_ExperimentId();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.VariableValueImpl <em>Variable Value</em>}' class.

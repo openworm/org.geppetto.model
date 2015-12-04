@@ -50,13 +50,13 @@ public interface GeppettoFactory extends EFactory
 	LibraryManager createLibraryManager();
 
 	/**
-	 * Returns a new object of class '<em>Model State</em>'.
+	 * Returns a new object of class '<em>Experiment State</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Model State</em>'.
+	 * @return a new object of class '<em>Experiment State</em>'.
 	 * @generated
 	 */
-	GeppettoModelState createGeppettoModelState();
+	ExperimentState createExperimentState();
 
 	/**
 	 * Returns a new object of class '<em>Variable Value</em>'.

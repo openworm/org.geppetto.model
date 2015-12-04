@@ -67,7 +67,7 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.GEPPETTO_MODEL: return createGeppettoModel();
 			case GeppettoPackage.GEPPETTO_LIBRARY: return createGeppettoLibrary();
 			case GeppettoPackage.LIBRARY_MANAGER: return createLibraryManager();
-			case GeppettoPackage.GEPPETTO_MODEL_STATE: return createGeppettoModelState();
+			case GeppettoPackage.EXPERIMENT_STATE: return createExperimentState();
 			case GeppettoPackage.VARIABLE_VALUE: return createVariableValue();
 			case GeppettoPackage.TAG: return createTag();
 			default:
@@ -113,10 +113,10 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GeppettoModelState createGeppettoModelState()
+	public ExperimentState createExperimentState()
 	{
-		GeppettoModelStateImpl geppettoModelState = new GeppettoModelStateImpl();
-		return geppettoModelState;
+		ExperimentStateImpl experimentState = new ExperimentStateImpl();
+		return experimentState;
 	}
 
 	/**

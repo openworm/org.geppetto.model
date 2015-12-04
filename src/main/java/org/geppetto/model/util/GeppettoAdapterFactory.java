@@ -95,9 +95,9 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 				return createLibraryManagerAdapter();
 			}
 			@Override
-			public Adapter caseGeppettoModelState(GeppettoModelState object)
+			public Adapter caseExperimentState(ExperimentState object)
 			{
-				return createGeppettoModelStateAdapter();
+				return createExperimentStateAdapter();
 			}
 			@Override
 			public Adapter caseVariableValue(VariableValue object)
@@ -192,16 +192,16 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.GeppettoModelState <em>Model State</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.ExperimentState <em>Experiment State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.GeppettoModelState
+	 * @see org.geppetto.model.ExperimentState
 	 * @generated
 	 */
-	public Adapter createGeppettoModelStateAdapter()
+	public Adapter createExperimentStateAdapter()
 	{
 		return null;
 	}

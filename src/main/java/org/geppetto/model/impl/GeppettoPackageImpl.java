@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+import org.geppetto.model.ExperimentState;
 import org.geppetto.model.GeppettoFactory;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
-import org.geppetto.model.GeppettoModelState;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.LibraryManager;
 import org.geppetto.model.Node;
@@ -66,7 +66,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass geppettoModelStateEClass = null;
+	private EClass experimentStateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -304,9 +304,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGeppettoModelState()
+	public EClass getExperimentState()
 	{
-		return geppettoModelStateEClass;
+		return experimentStateEClass;
 	}
 
 	/**
@@ -314,9 +314,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeppettoModelState_RecordedVariables()
+	public EReference getExperimentState_RecordedVariables()
 	{
-		return (EReference)geppettoModelStateEClass.getEStructuralFeatures().get(0);
+		return (EReference)experimentStateEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -324,9 +324,19 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeppettoModelState_SetParameters()
+	public EReference getExperimentState_SetParameters()
 	{
-		return (EReference)geppettoModelStateEClass.getEStructuralFeatures().get(1);
+		return (EReference)experimentStateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExperimentState_ExperimentId()
+	{
+		return (EAttribute)experimentStateEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -437,9 +447,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		libraryManagerEClass = createEClass(LIBRARY_MANAGER);
 		createEReference(libraryManagerEClass, LIBRARY_MANAGER__LIBRARIES);
 
-		geppettoModelStateEClass = createEClass(GEPPETTO_MODEL_STATE);
-		createEReference(geppettoModelStateEClass, GEPPETTO_MODEL_STATE__RECORDED_VARIABLES);
-		createEReference(geppettoModelStateEClass, GEPPETTO_MODEL_STATE__SET_PARAMETERS);
+		experimentStateEClass = createEClass(EXPERIMENT_STATE);
+		createEReference(experimentStateEClass, EXPERIMENT_STATE__RECORDED_VARIABLES);
+		createEReference(experimentStateEClass, EXPERIMENT_STATE__SET_PARAMETERS);
+		createEAttribute(experimentStateEClass, EXPERIMENT_STATE__EXPERIMENT_ID);
 
 		variableValueEClass = createEClass(VARIABLE_VALUE);
 		createEReference(variableValueEClass, VARIABLE_VALUE__POINTER);
@@ -512,9 +523,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEClass(libraryManagerEClass, LibraryManager.class, "LibraryManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLibraryManager_Libraries(), this.getGeppettoLibrary(), null, "libraries", null, 0, -1, LibraryManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(geppettoModelStateEClass, GeppettoModelState.class, "GeppettoModelState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGeppettoModelState_RecordedVariables(), this.getVariableValue(), null, "recordedVariables", null, 0, -1, GeppettoModelState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeppettoModelState_SetParameters(), this.getVariableValue(), null, "setParameters", null, 0, -1, GeppettoModelState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(experimentStateEClass, ExperimentState.class, "ExperimentState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExperimentState_RecordedVariables(), this.getVariableValue(), null, "recordedVariables", null, 0, -1, ExperimentState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExperimentState_SetParameters(), this.getVariableValue(), null, "setParameters", null, 0, -1, ExperimentState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExperimentState_ExperimentId(), theXMLTypePackage.getLong(), "experimentId", null, 1, 1, ExperimentState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableValueEClass, VariableValue.class, "VariableValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableValue_Pointer(), theValuesPackage.getPointer(), null, "pointer", null, 1, 1, VariableValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
