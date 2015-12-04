@@ -115,7 +115,7 @@ public interface VariablesPackage extends EPackage
 	int VARIABLE__TYPES = GeppettoPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Initial Values</b></em>' containment reference.
+	 * The feature id for the '<em><b>Initial Values</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -133,7 +133,7 @@ public interface VariablesPackage extends EPackage
 	int VARIABLE__STATIC = GeppettoPackage.NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -225,7 +225,7 @@ public interface VariablesPackage extends EPackage
 	int ARRAY_VARIABLE__TYPES = VARIABLE__TYPES;
 
 	/**
-	 * The feature id for the '<em><b>Initial Values</b></em>' containment reference.
+	 * The feature id for the '<em><b>Initial Values</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -243,7 +243,7 @@ public interface VariablesPackage extends EPackage
 	int ARRAY_VARIABLE__STATIC = VARIABLE__STATIC;
 
 	/**
-	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -289,6 +289,53 @@ public interface VariablesPackage extends EPackage
 
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.variables.impl.TypeToValueMapImpl <em>Type To Value Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.variables.impl.TypeToValueMapImpl
+	 * @see org.geppetto.model.variables.impl.VariablesPackageImpl#getTypeToValueMap()
+	 * @generated
+	 */
+	int TYPE_TO_VALUE_MAP = 2;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_TO_VALUE_MAP__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_TO_VALUE_MAP__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Type To Value Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_TO_VALUE_MAP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Type To Value Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_TO_VALUE_MAP_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.variables.Variable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -321,10 +368,10 @@ public interface VariablesPackage extends EPackage
 	EReference getVariable_Types();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.geppetto.model.variables.Variable#getInitialValues <em>Initial Values</em>}'.
+	 * Returns the meta object for the map '{@link org.geppetto.model.variables.Variable#getInitialValues <em>Initial Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Initial Values</em>'.
+	 * @return the meta object for the map '<em>Initial Values</em>'.
 	 * @see org.geppetto.model.variables.Variable#getInitialValues()
 	 * @see #getVariable()
 	 * @generated
@@ -343,10 +390,10 @@ public interface VariablesPackage extends EPackage
 	EAttribute getVariable_Static();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.variables.Variable#getPosition <em>Position</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.variables.Variable#getPosition <em>Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Position</em>'.
+	 * @return the meta object for the containment reference '<em>Position</em>'.
 	 * @see org.geppetto.model.variables.Variable#getPosition()
 	 * @see #getVariable()
 	 * @generated
@@ -373,6 +420,40 @@ public interface VariablesPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getArrayVariable_Size();
+
+	/**
+	 * Returns the meta object for class '{@link java.util.Map.Entry <em>Type To Value Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Type To Value Map</em>'.
+	 * @see java.util.Map.Entry
+	 * @model keyType="org.geppetto.model.types.Type" keyRequired="true"
+	 *        valueType="org.geppetto.model.values.Value" valueRequired="true"
+	 * @generated
+	 */
+	EClass getTypeToValueMap();
+
+	/**
+	 * Returns the meta object for the reference '{@link java.util.Map.Entry <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Key</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getTypeToValueMap()
+	 * @generated
+	 */
+	EReference getTypeToValueMap_Key();
+
+	/**
+	 * Returns the meta object for the reference '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getTypeToValueMap()
+	 * @generated
+	 */
+	EReference getTypeToValueMap_Value();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -425,7 +506,7 @@ public interface VariablesPackage extends EPackage
 		EReference VARIABLE__TYPES = eINSTANCE.getVariable_Types();
 
 		/**
-		 * The meta object literal for the '<em><b>Initial Values</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Initial Values</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -441,7 +522,7 @@ public interface VariablesPackage extends EPackage
 		EAttribute VARIABLE__STATIC = eINSTANCE.getVariable_Static();
 
 		/**
-		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Position</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -465,6 +546,32 @@ public interface VariablesPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute ARRAY_VARIABLE__SIZE = eINSTANCE.getArrayVariable_Size();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.variables.impl.TypeToValueMapImpl <em>Type To Value Map</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.variables.impl.TypeToValueMapImpl
+		 * @see org.geppetto.model.variables.impl.VariablesPackageImpl#getTypeToValueMap()
+		 * @generated
+		 */
+		EClass TYPE_TO_VALUE_MAP = eINSTANCE.getTypeToValueMap();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TYPE_TO_VALUE_MAP__KEY = eINSTANCE.getTypeToValueMap_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TYPE_TO_VALUE_MAP__VALUE = eINSTANCE.getTypeToValueMap_Value();
 
 	}
 

@@ -6,11 +6,14 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.impl.NodeImpl;
 import org.geppetto.model.types.Type;
@@ -60,14 +63,14 @@ public class VariableImpl extends NodeImpl implements Variable
 	protected EList<Type> types;
 
 	/**
-	 * The cached value of the '{@link #getInitialValues() <em>Initial Values</em>}' containment reference.
+	 * The cached value of the '{@link #getInitialValues() <em>Initial Values</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInitialValues()
 	 * @generated
 	 * @ordered
 	 */
-	protected Value initialValues;
+	protected EMap<Type, Value> initialValues;
 
 	/**
 	 * The default value of the '{@link #isStatic() <em>Static</em>}' attribute.
@@ -90,7 +93,7 @@ public class VariableImpl extends NodeImpl implements Variable
 	protected boolean static_ = STATIC_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPosition() <em>Position</em>}' reference.
+	 * The cached value of the '{@link #getPosition() <em>Position</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPosition()
@@ -153,47 +156,13 @@ public class VariableImpl extends NodeImpl implements Variable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value getInitialValues()
+	public EMap<Type, Value> getInitialValues()
 	{
+		if (initialValues == null)
+		{
+			initialValues = new EcoreEMap<Type,Value>(VariablesPackage.Literals.TYPE_TO_VALUE_MAP, TypeToValueMapImpl.class, this, VariablesPackage.VARIABLE__INITIAL_VALUES);
+		}
 		return initialValues;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetInitialValues(Value newInitialValues, NotificationChain msgs)
-	{
-		Value oldInitialValues = initialValues;
-		initialValues = newInitialValues;
-		if (eNotificationRequired())
-		{
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__INITIAL_VALUES, oldInitialValues, newInitialValues);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInitialValues(Value newInitialValues)
-	{
-		if (newInitialValues != initialValues)
-		{
-			NotificationChain msgs = null;
-			if (initialValues != null)
-				msgs = ((InternalEObject)initialValues).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VariablesPackage.VARIABLE__INITIAL_VALUES, null, msgs);
-			if (newInitialValues != null)
-				msgs = ((InternalEObject)newInitialValues).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VariablesPackage.VARIABLE__INITIAL_VALUES, null, msgs);
-			msgs = basicSetInitialValues(newInitialValues, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__INITIAL_VALUES, newInitialValues, newInitialValues));
 	}
 
 	/**
@@ -226,16 +195,6 @@ public class VariableImpl extends NodeImpl implements Variable
 	 */
 	public Point getPosition()
 	{
-		if (position != null && position.eIsProxy())
-		{
-			InternalEObject oldPosition = (InternalEObject)position;
-			position = (Point)eResolveProxy(oldPosition);
-			if (position != oldPosition)
-			{
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VariablesPackage.VARIABLE__POSITION, oldPosition, position));
-			}
-		}
 		return position;
 	}
 
@@ -244,9 +203,16 @@ public class VariableImpl extends NodeImpl implements Variable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Point basicGetPosition()
+	public NotificationChain basicSetPosition(Point newPosition, NotificationChain msgs)
 	{
-		return position;
+		Point oldPosition = position;
+		position = newPosition;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__POSITION, oldPosition, newPosition);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -256,10 +222,18 @@ public class VariableImpl extends NodeImpl implements Variable
 	 */
 	public void setPosition(Point newPosition)
 	{
-		Point oldPosition = position;
-		position = newPosition;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__POSITION, oldPosition, position));
+		if (newPosition != position)
+		{
+			NotificationChain msgs = null;
+			if (position != null)
+				msgs = ((InternalEObject)position).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VariablesPackage.VARIABLE__POSITION, null, msgs);
+			if (newPosition != null)
+				msgs = ((InternalEObject)newPosition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VariablesPackage.VARIABLE__POSITION, null, msgs);
+			msgs = basicSetPosition(newPosition, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VariablesPackage.VARIABLE__POSITION, newPosition, newPosition));
 	}
 
 	/**
@@ -294,7 +268,9 @@ public class VariableImpl extends NodeImpl implements Variable
 			case VariablesPackage.VARIABLE__TYPES:
 				return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
-				return basicSetInitialValues(null, msgs);
+				return ((InternalEList<?>)getInitialValues()).basicRemove(otherEnd, msgs);
+			case VariablesPackage.VARIABLE__POSITION:
+				return basicSetPosition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -314,12 +290,12 @@ public class VariableImpl extends NodeImpl implements Variable
 			case VariablesPackage.VARIABLE__TYPES:
 				return getTypes();
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
-				return getInitialValues();
+				if (coreType) return getInitialValues();
+				else return getInitialValues().map();
 			case VariablesPackage.VARIABLE__STATIC:
 				return isStatic();
 			case VariablesPackage.VARIABLE__POSITION:
-				if (resolve) return getPosition();
-				return basicGetPosition();
+				return getPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -344,7 +320,7 @@ public class VariableImpl extends NodeImpl implements Variable
 				getTypes().addAll((Collection<? extends Type>)newValue);
 				return;
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
-				setInitialValues((Value)newValue);
+				((EStructuralFeature.Setting)getInitialValues()).set(newValue);
 				return;
 			case VariablesPackage.VARIABLE__STATIC:
 				setStatic((Boolean)newValue);
@@ -373,7 +349,7 @@ public class VariableImpl extends NodeImpl implements Variable
 				getTypes().clear();
 				return;
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
-				setInitialValues((Value)null);
+				getInitialValues().clear();
 				return;
 			case VariablesPackage.VARIABLE__STATIC:
 				setStatic(STATIC_EDEFAULT);
@@ -400,7 +376,7 @@ public class VariableImpl extends NodeImpl implements Variable
 			case VariablesPackage.VARIABLE__TYPES:
 				return types != null && !types.isEmpty();
 			case VariablesPackage.VARIABLE__INITIAL_VALUES:
-				return initialValues != null;
+				return initialValues != null && !initialValues.isEmpty();
 			case VariablesPackage.VARIABLE__STATIC:
 				return static_ != STATIC_EDEFAULT;
 			case VariablesPackage.VARIABLE__POSITION:

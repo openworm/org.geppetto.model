@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.variables.util;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -9,6 +10,8 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import org.geppetto.model.Node;
 
+import org.geppetto.model.types.Type;
+import org.geppetto.model.values.Value;
 import org.geppetto.model.variables.*;
 
 /**
@@ -91,6 +94,13 @@ public class VariablesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case VariablesPackage.TYPE_TO_VALUE_MAP:
+			{
+				@SuppressWarnings("unchecked") Map.Entry<Type, Value> typeToValueMap = (Map.Entry<Type, Value>)theEObject;
+				T result = caseTypeToValueMap(typeToValueMap);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -123,6 +133,22 @@ public class VariablesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseArrayVariable(ArrayVariable object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Type To Value Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Type To Value Map</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTypeToValueMap(Map.Entry<Type, Value> object)
 	{
 		return null;
 	}

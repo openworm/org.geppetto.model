@@ -277,13 +277,19 @@
           eType="#//types/Type" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
           eType="#//types/Type" resolveProxies="false" eOpposite="#//types/Type/referencedVariables"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="initialValues" eType="#//values/Value"
-          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="initialValues" upperBound="-1"
+          eType="#//variables/TypeToValueMap" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="static" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//values/Point"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//values/Point"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ArrayVariable" eSuperTypes="#//variables/Variable">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TypeToValueMap" instanceClassName="java.util.Map$Entry">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="key" lowerBound="1" eType="#//types/Type"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1"
+          eType="#//values/Value"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

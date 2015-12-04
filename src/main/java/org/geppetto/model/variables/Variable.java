@@ -3,6 +3,7 @@
 package org.geppetto.model.variables;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.geppetto.model.Node;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.values.Point;
@@ -65,30 +66,21 @@ public interface Variable extends Node
 	EList<Type> getTypes();
 
 	/**
-	 * Returns the value of the '<em><b>Initial Values</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Initial Values</b></em>' map.
+	 * The key is of type {@link org.geppetto.model.types.Type},
+	 * and the value is of type {@link org.geppetto.model.values.Value},
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Initial Values</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Initial Values</em>' containment reference.
-	 * @see #setInitialValues(Value)
+	 * @return the value of the '<em>Initial Values</em>' map.
 	 * @see org.geppetto.model.variables.VariablesPackage#getVariable_InitialValues()
-	 * @model containment="true"
+	 * @model mapType="org.geppetto.model.variables.TypeToValueMap<org.geppetto.model.types.Type, org.geppetto.model.values.Value>"
 	 * @generated
 	 */
-	Value getInitialValues();
-
-	/**
-	 * Sets the value of the '{@link org.geppetto.model.variables.Variable#getInitialValues <em>Initial Values</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Initial Values</em>' containment reference.
-	 * @see #getInitialValues()
-	 * @generated
-	 */
-	void setInitialValues(Value value);
+	EMap<Type, Value> getInitialValues();
 
 	/**
 	 * Returns the value of the '<em><b>Static</b></em>' attribute.
@@ -117,26 +109,26 @@ public interface Variable extends Node
 	void setStatic(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Position</b></em>' reference.
+	 * Returns the value of the '<em><b>Position</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Position</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Position</em>' reference.
+	 * @return the value of the '<em>Position</em>' containment reference.
 	 * @see #setPosition(Point)
 	 * @see org.geppetto.model.variables.VariablesPackage#getVariable_Position()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Point getPosition();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.variables.Variable#getPosition <em>Position</em>}' reference.
+	 * Sets the value of the '{@link org.geppetto.model.variables.Variable#getPosition <em>Position</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Position</em>' reference.
+	 * @param value the new value of the '<em>Position</em>' containment reference.
 	 * @see #getPosition()
 	 * @generated
 	 */
