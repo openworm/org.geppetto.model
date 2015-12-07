@@ -35,6 +35,7 @@ package org.geppetto.model.util;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.Switch;
+import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 
 /**
@@ -52,6 +53,15 @@ public class GeppettoModelTraversal extends GeppettoSwitch<EObject>
 		}
 	}
 
+	public static void apply(GeppettoLibrary object, Switch<?> visitor) throws GeppettoVisitingException
+	{
+		TreeIterator<EObject> iterator = object.eAllContents();
+		while(iterator.hasNext())
+		{
+			checkException(visitor.doSwitch(iterator.next()));
+		}
+	}
+	
 	private static void checkException(Object e) throws GeppettoVisitingException
 	{
 
