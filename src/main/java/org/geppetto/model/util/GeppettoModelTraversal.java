@@ -52,15 +52,6 @@ public class GeppettoModelTraversal extends GeppettoSwitch<EObject>
 			checkException(visitor.doSwitch(iterator.next()));
 		}
 	}
-
-	public static void apply(GeppettoLibrary object, Switch<?> visitor) throws GeppettoVisitingException
-	{
-		TreeIterator<EObject> iterator = object.eAllContents();
-		while(iterator.hasNext())
-		{
-			checkException(visitor.doSwitch(iterator.next()));
-		}
-	}
 	
 	private static void checkException(Object e) throws GeppettoVisitingException
 	{
