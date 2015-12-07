@@ -2221,7 +2221,7 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_VISUAL_TYPE__VARIABLES = VISUAL_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Visual Groups</b></em>' reference list.
+	 * The feature id for the '<em><b>Visual Groups</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2859,10 +2859,10 @@ public interface TypesPackage extends EPackage
 	EReference getCompositeVisualType_Variables();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.geppetto.model.types.CompositeVisualType#getVisualGroups <em>Visual Groups</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.types.CompositeVisualType#getVisualGroups <em>Visual Groups</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Visual Groups</em>'.
+	 * @return the meta object for the containment reference list '<em>Visual Groups</em>'.
 	 * @see org.geppetto.model.types.CompositeVisualType#getVisualGroups()
 	 * @see #getCompositeVisualType()
 	 * @generated
@@ -3304,7 +3304,7 @@ public interface TypesPackage extends EPackage
 		EReference COMPOSITE_VISUAL_TYPE__VARIABLES = eINSTANCE.getCompositeVisualType_Variables();
 
 		/**
-		 * The meta object literal for the '<em><b>Visual Groups</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Visual Groups</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

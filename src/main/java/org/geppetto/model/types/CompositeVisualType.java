@@ -43,7 +43,7 @@ public interface CompositeVisualType extends VisualType
 	EList<Variable> getVariables();
 
 	/**
-	 * Returns the value of the '<em><b>Visual Groups</b></em>' reference list.
+	 * Returns the value of the '<em><b>Visual Groups</b></em>' containment reference list.
 	 * The list contents are of type {@link org.geppetto.model.values.VisualGroup}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -51,9 +51,9 @@ public interface CompositeVisualType extends VisualType
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visual Groups</em>' reference list.
+	 * @return the value of the '<em>Visual Groups</em>' containment reference list.
 	 * @see org.geppetto.model.types.TypesPackage#getCompositeVisualType_VisualGroups()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<VisualGroup> getVisualGroups();
