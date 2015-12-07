@@ -170,125 +170,6 @@ public interface VariablesPackage extends EPackage
 
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.variables.impl.ArrayVariableImpl <em>Array Variable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.variables.impl.ArrayVariableImpl
-	 * @see org.geppetto.model.variables.impl.VariablesPackageImpl#getArrayVariable()
-	 * @generated
-	 */
-	int ARRAY_VARIABLE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE__ID = VARIABLE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE__NAME = VARIABLE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Tags</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE__TAGS = VARIABLE__TAGS;
-
-	/**
-	 * The feature id for the '<em><b>Anonymous Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE__ANONYMOUS_TYPES = VARIABLE__ANONYMOUS_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Types</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE__TYPES = VARIABLE__TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Initial Values</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE__INITIAL_VALUES = VARIABLE__INITIAL_VALUES;
-
-	/**
-	 * The feature id for the '<em><b>Static</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE__STATIC = VARIABLE__STATIC;
-
-	/**
-	 * The feature id for the '<em><b>Position</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE__POSITION = VARIABLE__POSITION;
-
-	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE__SIZE = VARIABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Array Variable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Path</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE___GET_PATH = VARIABLE___GET_PATH;
-
-	/**
-	 * The number of operations of the '<em>Array Variable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_VARIABLE_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
-
-
-	/**
 	 * The meta object id for the '{@link org.geppetto.model.variables.impl.TypeToValueMapImpl <em>Type To Value Map</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -296,7 +177,7 @@ public interface VariablesPackage extends EPackage
 	 * @see org.geppetto.model.variables.impl.VariablesPackageImpl#getTypeToValueMap()
 	 * @generated
 	 */
-	int TYPE_TO_VALUE_MAP = 2;
+	int TYPE_TO_VALUE_MAP = 1;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' reference.
@@ -399,27 +280,6 @@ public interface VariablesPackage extends EPackage
 	 * @generated
 	 */
 	EReference getVariable_Position();
-
-	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.variables.ArrayVariable <em>Array Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Array Variable</em>'.
-	 * @see org.geppetto.model.variables.ArrayVariable
-	 * @generated
-	 */
-	EClass getArrayVariable();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.geppetto.model.variables.ArrayVariable#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see org.geppetto.model.variables.ArrayVariable#getSize()
-	 * @see #getArrayVariable()
-	 * @generated
-	 */
-	EAttribute getArrayVariable_Size();
 
 	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>Type To Value Map</em>}'.
@@ -528,24 +388,6 @@ public interface VariablesPackage extends EPackage
 		 * @generated
 		 */
 		EReference VARIABLE__POSITION = eINSTANCE.getVariable_Position();
-
-		/**
-		 * The meta object literal for the '{@link org.geppetto.model.variables.impl.ArrayVariableImpl <em>Array Variable</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.variables.impl.ArrayVariableImpl
-		 * @see org.geppetto.model.variables.impl.VariablesPackageImpl#getArrayVariable()
-		 * @generated
-		 */
-		EClass ARRAY_VARIABLE = eINSTANCE.getArrayVariable();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ARRAY_VARIABLE__SIZE = eINSTANCE.getArrayVariable_Size();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.variables.impl.TypeToValueMapImpl <em>Type To Value Map</em>}' class.

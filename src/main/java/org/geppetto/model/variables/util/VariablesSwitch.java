@@ -85,15 +85,6 @@ public class VariablesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VariablesPackage.ARRAY_VARIABLE:
-			{
-				ArrayVariable arrayVariable = (ArrayVariable)theEObject;
-				T result = caseArrayVariable(arrayVariable);
-				if (result == null) result = caseVariable(arrayVariable);
-				if (result == null) result = caseNode(arrayVariable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case VariablesPackage.TYPE_TO_VALUE_MAP:
 			{
 				@SuppressWarnings("unchecked") Map.Entry<Type, Value> typeToValueMap = (Map.Entry<Type, Value>)theEObject;
@@ -117,22 +108,6 @@ public class VariablesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseVariable(Variable object)
-	{
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Array Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Array Variable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseArrayVariable(ArrayVariable object)
 	{
 		return null;
 	}

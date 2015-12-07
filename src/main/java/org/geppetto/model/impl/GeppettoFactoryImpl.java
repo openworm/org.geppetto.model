@@ -70,6 +70,9 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.EXPERIMENT_STATE: return createExperimentState();
 			case GeppettoPackage.VARIABLE_VALUE: return createVariableValue();
 			case GeppettoPackage.TAG: return createTag();
+			case GeppettoPackage.DOMAIN_MODEL: return createDomainModel();
+			case GeppettoPackage.MODEL_FORMAT: return createModelFormat();
+			case GeppettoPackage.EXTERNAL_DOMAIN_MODEL: return createExternalDomainModel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -139,6 +142,39 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		TagImpl tag = new TagImpl();
 		return tag;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DomainModel createDomainModel()
+	{
+		DomainModelImpl domainModel = new DomainModelImpl();
+		return domainModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModelFormat createModelFormat()
+	{
+		ModelFormatImpl modelFormat = new ModelFormatImpl();
+		return modelFormat;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExternalDomainModel createExternalDomainModel()
+	{
+		ExternalDomainModelImpl externalDomainModel = new ExternalDomainModelImpl();
+		return externalDomainModel;
 	}
 
 	/**

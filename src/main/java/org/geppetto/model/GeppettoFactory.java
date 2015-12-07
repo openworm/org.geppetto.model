@@ -77,6 +77,33 @@ public interface GeppettoFactory extends EFactory
 	Tag createTag();
 
 	/**
+	 * Returns a new object of class '<em>Domain Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Domain Model</em>'.
+	 * @generated
+	 */
+	DomainModel createDomainModel();
+
+	/**
+	 * Returns a new object of class '<em>Model Format</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model Format</em>'.
+	 * @generated
+	 */
+	ModelFormat createModelFormat();
+
+	/**
+	 * Returns a new object of class '<em>External Domain Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>External Domain Model</em>'.
+	 * @generated
+	 */
+	ExternalDomainModel createExternalDomainModel();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

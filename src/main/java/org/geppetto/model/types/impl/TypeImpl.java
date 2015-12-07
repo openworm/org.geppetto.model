@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.geppetto.model.DomainModel;
 import org.geppetto.model.impl.NodeImpl;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.types.TypesPackage;
@@ -28,10 +29,10 @@ import org.geppetto.model.variables.VariablesPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getDomainModel <em>Domain Model</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#isAbstract <em>Abstract</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getVisualType <em>Visual Type</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getReferencedVariables <em>Referenced Variables</em>}</li>
+ *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getDomainModel <em>Domain Model</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,26 +49,6 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	 * @ordered
 	 */
 	protected Type superType;
-
-	/**
-	 * The default value of the '{@link #getDomainModel() <em>Domain Model</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDomainModel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Object DOMAIN_MODEL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDomainModel() <em>Domain Model</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDomainModel()
-	 * @generated
-	 * @ordered
-	 */
-	protected Object domainModel = DOMAIN_MODEL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isAbstract() <em>Abstract</em>}' attribute.
@@ -108,6 +89,16 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	 * @ordered
 	 */
 	protected EList<Variable> referencedVariables;
+
+	/**
+	 * The cached value of the '{@link #getDomainModel() <em>Domain Model</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDomainModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected DomainModel domainModel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,7 +169,27 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getDomainModel()
+	public DomainModel getDomainModel()
+	{
+		if (domainModel != null && domainModel.eIsProxy())
+		{
+			InternalEObject oldDomainModel = (InternalEObject)domainModel;
+			domainModel = (DomainModel)eResolveProxy(oldDomainModel);
+			if (domainModel != oldDomainModel)
+			{
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TypesPackage.TYPE__DOMAIN_MODEL, oldDomainModel, domainModel));
+			}
+		}
+		return domainModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DomainModel basicGetDomainModel()
 	{
 		return domainModel;
 	}
@@ -188,9 +199,9 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDomainModel(Object newDomainModel)
+	public void setDomainModel(DomainModel newDomainModel)
 	{
-		Object oldDomainModel = domainModel;
+		DomainModel oldDomainModel = domainModel;
 		domainModel = newDomainModel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.TYPE__DOMAIN_MODEL, oldDomainModel, domainModel));
@@ -334,8 +345,6 @@ public abstract class TypeImpl extends NodeImpl implements Type
 			case TypesPackage.TYPE__SUPER_TYPE:
 				if (resolve) return getSuperType();
 				return basicGetSuperType();
-			case TypesPackage.TYPE__DOMAIN_MODEL:
-				return getDomainModel();
 			case TypesPackage.TYPE__ABSTRACT:
 				return isAbstract();
 			case TypesPackage.TYPE__VISUAL_TYPE:
@@ -343,6 +352,9 @@ public abstract class TypeImpl extends NodeImpl implements Type
 				return basicGetVisualType();
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				return getReferencedVariables();
+			case TypesPackage.TYPE__DOMAIN_MODEL:
+				if (resolve) return getDomainModel();
+				return basicGetDomainModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -361,9 +373,6 @@ public abstract class TypeImpl extends NodeImpl implements Type
 			case TypesPackage.TYPE__SUPER_TYPE:
 				setSuperType((Type)newValue);
 				return;
-			case TypesPackage.TYPE__DOMAIN_MODEL:
-				setDomainModel(newValue);
-				return;
 			case TypesPackage.TYPE__ABSTRACT:
 				setAbstract((Boolean)newValue);
 				return;
@@ -373,6 +382,9 @@ public abstract class TypeImpl extends NodeImpl implements Type
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				getReferencedVariables().clear();
 				getReferencedVariables().addAll((Collection<? extends Variable>)newValue);
+				return;
+			case TypesPackage.TYPE__DOMAIN_MODEL:
+				setDomainModel((DomainModel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -391,9 +403,6 @@ public abstract class TypeImpl extends NodeImpl implements Type
 			case TypesPackage.TYPE__SUPER_TYPE:
 				setSuperType((Type)null);
 				return;
-			case TypesPackage.TYPE__DOMAIN_MODEL:
-				setDomainModel(DOMAIN_MODEL_EDEFAULT);
-				return;
 			case TypesPackage.TYPE__ABSTRACT:
 				setAbstract(ABSTRACT_EDEFAULT);
 				return;
@@ -402,6 +411,9 @@ public abstract class TypeImpl extends NodeImpl implements Type
 				return;
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				getReferencedVariables().clear();
+				return;
+			case TypesPackage.TYPE__DOMAIN_MODEL:
+				setDomainModel((DomainModel)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -419,14 +431,14 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		{
 			case TypesPackage.TYPE__SUPER_TYPE:
 				return superType != null;
-			case TypesPackage.TYPE__DOMAIN_MODEL:
-				return DOMAIN_MODEL_EDEFAULT == null ? domainModel != null : !DOMAIN_MODEL_EDEFAULT.equals(domainModel);
 			case TypesPackage.TYPE__ABSTRACT:
 				return abstract_ != ABSTRACT_EDEFAULT;
 			case TypesPackage.TYPE__VISUAL_TYPE:
 				return visualType != null;
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				return referencedVariables != null && !referencedVariables.isEmpty();
+			case TypesPackage.TYPE__DOMAIN_MODEL:
+				return domainModel != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -458,9 +470,7 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (domainModel: ");
-		result.append(domainModel);
-		result.append(", abstract: ");
+		result.append(" (abstract: ");
 		result.append(abstract_);
 		result.append(')');
 		return result.toString();

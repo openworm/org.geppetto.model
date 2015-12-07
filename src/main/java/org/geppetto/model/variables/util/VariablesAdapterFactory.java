@@ -85,11 +85,6 @@ public class VariablesAdapterFactory extends AdapterFactoryImpl
 				return createVariableAdapter();
 			}
 			@Override
-			public Adapter caseArrayVariable(ArrayVariable object)
-			{
-				return createArrayVariableAdapter();
-			}
-			@Override
 			public Adapter caseTypeToValueMap(Map.Entry<Type, Value> object)
 			{
 				return createTypeToValueMapAdapter();
@@ -132,21 +127,6 @@ public class VariablesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createVariableAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.variables.ArrayVariable <em>Array Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.geppetto.model.variables.ArrayVariable
-	 * @generated
-	 */
-	public Adapter createArrayVariableAdapter()
 	{
 		return null;
 	}

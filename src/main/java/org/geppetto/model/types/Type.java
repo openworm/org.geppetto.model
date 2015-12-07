@@ -3,6 +3,7 @@
 package org.geppetto.model.types;
 
 import org.eclipse.emf.common.util.EList;
+import org.geppetto.model.DomainModel;
 import org.geppetto.model.Node;
 import org.geppetto.model.values.Value;
 import org.geppetto.model.variables.Variable;
@@ -16,10 +17,10 @@ import org.geppetto.model.variables.Variable;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.geppetto.model.types.Type#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}</li>
  *   <li>{@link org.geppetto.model.types.Type#isAbstract <em>Abstract</em>}</li>
  *   <li>{@link org.geppetto.model.types.Type#getVisualType <em>Visual Type</em>}</li>
  *   <li>{@link org.geppetto.model.types.Type#getReferencedVariables <em>Referenced Variables</em>}</li>
+ *   <li>{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,30 +57,30 @@ public interface Type extends Node
 	void setSuperType(Type value);
 
 	/**
-	 * Returns the value of the '<em><b>Domain Model</b></em>' attribute.
+	 * Returns the value of the '<em><b>Domain Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Domain Model</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Domain Model</em>' attribute.
-	 * @see #setDomainModel(Object)
+	 * @return the value of the '<em>Domain Model</em>' reference.
+	 * @see #setDomainModel(DomainModel)
 	 * @see org.geppetto.model.types.TypesPackage#getType_DomainModel()
 	 * @model transient="true"
 	 * @generated
 	 */
-	Object getDomainModel();
+	DomainModel getDomainModel();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Domain Model</em>' attribute.
+	 * @param value the new value of the '<em>Domain Model</em>' reference.
 	 * @see #getDomainModel()
 	 * @generated
 	 */
-	void setDomainModel(Object value);
+	void setDomainModel(DomainModel value);
 
 	/**
 	 * Returns the value of the '<em><b>Abstract</b></em>' attribute.

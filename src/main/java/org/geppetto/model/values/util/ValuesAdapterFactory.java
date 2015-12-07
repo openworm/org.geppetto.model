@@ -219,6 +219,16 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createConnectionAdapter();
 			}
 			@Override
+			public Adapter caseArrayElement(ArrayElement object)
+			{
+				return createArrayElementAdapter();
+			}
+			@Override
+			public Adapter caseArrayValue(ArrayValue object)
+			{
+				return createArrayValueAdapter();
+			}
+			@Override
 			public Adapter caseNode(Node object)
 			{
 				return createNodeAdapter();
@@ -676,6 +686,36 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createConnectionAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.ArrayElement <em>Array Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.ArrayElement
+	 * @generated
+	 */
+	public Adapter createArrayElementAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.ArrayValue <em>Array Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.ArrayValue
+	 * @generated
+	 */
+	public Adapter createArrayValueAdapter()
 	{
 		return null;
 	}

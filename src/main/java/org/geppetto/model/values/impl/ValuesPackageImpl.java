@@ -16,6 +16,8 @@ import org.geppetto.model.impl.GeppettoPackageImpl;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
 import org.geppetto.model.values.Argument;
+import org.geppetto.model.values.ArrayElement;
+import org.geppetto.model.values.ArrayValue;
 import org.geppetto.model.values.Collada;
 import org.geppetto.model.values.Composite;
 import org.geppetto.model.values.Connection;
@@ -256,6 +258,20 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * @generated
 	 */
 	private EClass connectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arrayElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arrayValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1096,6 +1112,66 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getArrayElement()
+	{
+		return arrayElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArrayElement_Index()
+	{
+		return (EAttribute)arrayElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArrayElement_Position()
+	{
+		return (EReference)arrayElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArrayElement_InitialValue()
+	{
+		return (EReference)arrayElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArrayValue()
+	{
+		return arrayValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArrayValue_Elements()
+	{
+		return (EReference)arrayValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getConnectionType()
 	{
 		return connectionTypeEEnum;
@@ -1235,6 +1311,14 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEReference(connectionEClass, CONNECTION__B);
 		createEReference(connectionEClass, CONNECTION__TYPE);
 
+		arrayElementEClass = createEClass(ARRAY_ELEMENT);
+		createEAttribute(arrayElementEClass, ARRAY_ELEMENT__INDEX);
+		createEReference(arrayElementEClass, ARRAY_ELEMENT__POSITION);
+		createEReference(arrayElementEClass, ARRAY_ELEMENT__INITIAL_VALUE);
+
+		arrayValueEClass = createEClass(ARRAY_VALUE);
+		createEReference(arrayValueEClass, ARRAY_VALUE__ELEMENTS);
+
 		// Create enums
 		connectionTypeEEnum = createEEnum(CONNECTION_TYPE);
 	}
@@ -1300,6 +1384,8 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		visualGroupElementEClass.getESuperTypes().add(theGeppettoPackage.getNode());
 		visualGroupEClass.getESuperTypes().add(theGeppettoPackage.getNode());
 		connectionEClass.getESuperTypes().add(this.getValue());
+		arrayElementEClass.getESuperTypes().add(this.getValue());
+		arrayValueEClass.getESuperTypes().add(this.getValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(valueEClass, Value.class, "Value", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1406,6 +1492,14 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEReference(getConnection_A(), this.getPointer(), null, "a", null, 1, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_B(), this.getPointer(), null, "b", null, 1, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Type(), theTypesPackage.getConnectionType(), null, "type", null, 1, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arrayElementEClass, ArrayElement.class, "ArrayElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArrayElement_Index(), theXMLTypePackage.getInt(), "index", null, 1, 1, ArrayElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArrayElement_Position(), this.getPoint(), null, "position", null, 0, 1, ArrayElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArrayElement_InitialValue(), this.getValue(), null, "initialValue", null, 0, 1, ArrayElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arrayValueEClass, ArrayValue.class, "ArrayValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getArrayValue_Elements(), this.getArrayElement(), null, "elements", null, 1, -1, ArrayValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(connectionTypeEEnum, ConnectionType.class, "ConnectionType");

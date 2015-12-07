@@ -446,6 +446,135 @@ public interface GeppettoPackage extends EPackage
 	int TAG_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.DomainModelImpl <em>Domain Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.DomainModelImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getDomainModel()
+	 * @generated
+	 */
+	int DOMAIN_MODEL = 7;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_MODEL__DOMAIN_MODEL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Format</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_MODEL__FORMAT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Domain Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_MODEL_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Domain Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_MODEL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.ModelFormatImpl <em>Model Format</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.ModelFormatImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getModelFormat()
+	 * @generated
+	 */
+	int MODEL_FORMAT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Model Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FORMAT__MODEL_FORMAT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Model Format</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FORMAT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Model Format</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FORMAT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.ExternalDomainModelImpl <em>External Domain Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.ExternalDomainModelImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getExternalDomainModel()
+	 * @generated
+	 */
+	int EXTERNAL_DOMAIN_MODEL = 9;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTERNAL_DOMAIN_MODEL__DOMAIN_MODEL = DOMAIN_MODEL__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Format</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTERNAL_DOMAIN_MODEL__FORMAT = DOMAIN_MODEL__FORMAT;
+
+	/**
+	 * The number of structural features of the '<em>External Domain Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTERNAL_DOMAIN_MODEL_FEATURE_COUNT = DOMAIN_MODEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>External Domain Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTERNAL_DOMAIN_MODEL_OPERATION_COUNT = DOMAIN_MODEL_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -702,6 +831,69 @@ public interface GeppettoPackage extends EPackage
 	EAttribute getTag_Name();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.DomainModel <em>Domain Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Domain Model</em>'.
+	 * @see org.geppetto.model.DomainModel
+	 * @generated
+	 */
+	EClass getDomainModel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.DomainModel#getDomainModel <em>Domain Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Domain Model</em>'.
+	 * @see org.geppetto.model.DomainModel#getDomainModel()
+	 * @see #getDomainModel()
+	 * @generated
+	 */
+	EAttribute getDomainModel_DomainModel();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.DomainModel#getFormat <em>Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Format</em>'.
+	 * @see org.geppetto.model.DomainModel#getFormat()
+	 * @see #getDomainModel()
+	 * @generated
+	 */
+	EReference getDomainModel_Format();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.ModelFormat <em>Model Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Model Format</em>'.
+	 * @see org.geppetto.model.ModelFormat
+	 * @generated
+	 */
+	EClass getModelFormat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.ModelFormat#getModelFormat <em>Model Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Model Format</em>'.
+	 * @see org.geppetto.model.ModelFormat#getModelFormat()
+	 * @see #getModelFormat()
+	 * @generated
+	 */
+	EAttribute getModelFormat_ModelFormat();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.ExternalDomainModel <em>External Domain Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>External Domain Model</em>'.
+	 * @see org.geppetto.model.ExternalDomainModel
+	 * @generated
+	 */
+	EClass getExternalDomainModel();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -930,6 +1122,60 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute TAG__NAME = eINSTANCE.getTag_Name();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.DomainModelImpl <em>Domain Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.DomainModelImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getDomainModel()
+		 * @generated
+		 */
+		EClass DOMAIN_MODEL = eINSTANCE.getDomainModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Domain Model</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOMAIN_MODEL__DOMAIN_MODEL = eINSTANCE.getDomainModel_DomainModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Format</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_MODEL__FORMAT = eINSTANCE.getDomainModel_Format();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.ModelFormatImpl <em>Model Format</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.ModelFormatImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getModelFormat()
+		 * @generated
+		 */
+		EClass MODEL_FORMAT = eINSTANCE.getModelFormat();
+
+		/**
+		 * The meta object literal for the '<em><b>Model Format</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_FORMAT__MODEL_FORMAT = eINSTANCE.getModelFormat_ModelFormat();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.ExternalDomainModelImpl <em>External Domain Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.ExternalDomainModelImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getExternalDomainModel()
+		 * @generated
+		 */
+		EClass EXTERNAL_DOMAIN_MODEL = eINSTANCE.getExternalDomainModel();
 
 	}
 

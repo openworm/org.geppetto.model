@@ -2,6 +2,8 @@
  */
 package org.geppetto.model.types;
 
+import org.geppetto.model.values.ArrayValue;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +15,7 @@ package org.geppetto.model.types;
  * <ul>
  *   <li>{@link org.geppetto.model.types.ArrayType#getSize <em>Size</em>}</li>
  *   <li>{@link org.geppetto.model.types.ArrayType#getArrayType <em>Array Type</em>}</li>
+ *   <li>{@link org.geppetto.model.types.ArrayType#getDefaultValue <em>Default Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,5 +76,31 @@ public interface ArrayType extends Type
 	 * @generated
 	 */
 	void setArrayType(Type value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Default Value</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Value</em>' containment reference.
+	 * @see #setDefaultValue(ArrayValue)
+	 * @see org.geppetto.model.types.TypesPackage#getArrayType_DefaultValue()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ArrayValue getDefaultValue();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.types.ArrayType#getDefaultValue <em>Default Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Value</em>' containment reference.
+	 * @see #getDefaultValue()
+	 * @generated
+	 */
+	void setDefaultValue(ArrayValue value);
 
 } // ArrayType

@@ -15,7 +15,6 @@ import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
 import org.geppetto.model.values.ValuesPackage;
 import org.geppetto.model.values.impl.ValuesPackageImpl;
-import org.geppetto.model.variables.ArrayVariable;
 import org.geppetto.model.variables.Variable;
 import org.geppetto.model.variables.VariablesFactory;
 import org.geppetto.model.variables.VariablesPackage;
@@ -34,13 +33,6 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * @generated
 	 */
 	private EClass variableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass arrayVariableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -191,26 +183,6 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getArrayVariable()
-	{
-		return arrayVariableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getArrayVariable_Size()
-	{
-		return (EAttribute)arrayVariableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTypeToValueMap()
 	{
 		return typeToValueMapEClass;
@@ -273,9 +245,6 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 		createEAttribute(variableEClass, VARIABLE__STATIC);
 		createEReference(variableEClass, VARIABLE__POSITION);
 
-		arrayVariableEClass = createEClass(ARRAY_VARIABLE);
-		createEAttribute(arrayVariableEClass, ARRAY_VARIABLE__SIZE);
-
 		typeToValueMapEClass = createEClass(TYPE_TO_VALUE_MAP);
 		createEReference(typeToValueMapEClass, TYPE_TO_VALUE_MAP__KEY);
 		createEReference(typeToValueMapEClass, TYPE_TO_VALUE_MAP__VALUE);
@@ -317,7 +286,6 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 
 		// Add supertypes to classes
 		variableEClass.getESuperTypes().add(theGeppettoPackage.getNode());
-		arrayVariableEClass.getESuperTypes().add(this.getVariable());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -326,9 +294,6 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 		initEReference(getVariable_InitialValues(), this.getTypeToValueMap(), null, "initialValues", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Static(), theXMLTypePackage.getBoolean(), "static", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariable_Position(), theValuesPackage.getPoint(), null, "position", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(arrayVariableEClass, ArrayVariable.class, "ArrayVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArrayVariable_Size(), theXMLTypePackage.getInt(), "size", null, 0, 1, ArrayVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeToValueMapEClass, Map.Entry.class, "TypeToValueMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTypeToValueMap_Key(), theTypesPackage.getType(), null, "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

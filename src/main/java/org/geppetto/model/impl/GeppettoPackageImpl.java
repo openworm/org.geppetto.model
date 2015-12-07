@@ -9,12 +9,15 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+import org.geppetto.model.DomainModel;
 import org.geppetto.model.ExperimentState;
+import org.geppetto.model.ExternalDomainModel;
 import org.geppetto.model.GeppettoFactory;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.LibraryManager;
+import org.geppetto.model.ModelFormat;
 import org.geppetto.model.Node;
 import org.geppetto.model.Tag;
 import org.geppetto.model.VariableValue;
@@ -81,6 +84,27 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * @generated
 	 */
 	private EClass tagEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass domainModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modelFormatEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass externalDomainModelEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -404,6 +428,66 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDomainModel()
+	{
+		return domainModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDomainModel_DomainModel()
+	{
+		return (EAttribute)domainModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomainModel_Format()
+	{
+		return (EReference)domainModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModelFormat()
+	{
+		return modelFormatEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelFormat_ModelFormat()
+	{
+		return (EAttribute)modelFormatEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExternalDomainModel()
+	{
+		return externalDomainModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GeppettoFactory getGeppettoFactory()
 	{
 		return (GeppettoFactory)getEFactoryInstance();
@@ -459,6 +543,15 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		tagEClass = createEClass(TAG);
 		createEReference(tagEClass, TAG__TAGS);
 		createEAttribute(tagEClass, TAG__NAME);
+
+		domainModelEClass = createEClass(DOMAIN_MODEL);
+		createEAttribute(domainModelEClass, DOMAIN_MODEL__DOMAIN_MODEL);
+		createEReference(domainModelEClass, DOMAIN_MODEL__FORMAT);
+
+		modelFormatEClass = createEClass(MODEL_FORMAT);
+		createEAttribute(modelFormatEClass, MODEL_FORMAT__MODEL_FORMAT);
+
+		externalDomainModelEClass = createEClass(EXTERNAL_DOMAIN_MODEL);
 	}
 
 	/**
@@ -502,6 +595,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 
 		// Add supertypes to classes
 		geppettoLibraryEClass.getESuperTypes().add(this.getNode());
+		externalDomainModelEClass.getESuperTypes().add(this.getDomainModel());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(geppettoModelEClass, GeppettoModel.class, "GeppettoModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -535,6 +629,15 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEClass(tagEClass, Tag.class, "Tag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTag_Tags(), this.getTag(), null, "tags", null, 0, -1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTag_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(domainModelEClass, DomainModel.class, "DomainModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDomainModel_DomainModel(), ecorePackage.getEJavaObject(), "domainModel", null, 0, 1, DomainModel.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainModel_Format(), this.getModelFormat(), null, "format", null, 0, 1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(modelFormatEClass, ModelFormat.class, "ModelFormat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getModelFormat_ModelFormat(), theXMLTypePackage.getString(), "modelFormat", null, 0, 1, ModelFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(externalDomainModelEClass, ExternalDomainModel.class, "ExternalDomainModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -107,22 +107,13 @@ public interface TypesPackage extends EPackage
 	int TYPE__SUPER_TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE__DOMAIN_MODEL = GeppettoPackage.NODE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__ABSTRACT = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+	int TYPE__ABSTRACT = GeppettoPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
@@ -131,7 +122,7 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__VISUAL_TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 3;
+	int TYPE__VISUAL_TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
@@ -140,7 +131,16 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__REFERENCED_VARIABLES = GeppettoPackage.NODE_FEATURE_COUNT + 4;
+	int TYPE__REFERENCED_VARIABLES = GeppettoPackage.NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__DOMAIN_MODEL = GeppettoPackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -225,15 +225,6 @@ public interface TypesPackage extends EPackage
 	int VISUAL_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -259,6 +250,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int VISUAL_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -352,15 +352,6 @@ public interface TypesPackage extends EPackage
 	int IMPORT_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -386,6 +377,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int IMPORT_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -497,15 +497,6 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -531,6 +522,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int COMPOSITE_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -633,15 +633,6 @@ public interface TypesPackage extends EPackage
 	int POINTER_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTER_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -667,6 +658,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int POINTER_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINTER_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -760,15 +760,6 @@ public interface TypesPackage extends EPackage
 	int QUANTITY_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTITY_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -794,6 +785,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int QUANTITY_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -887,15 +887,6 @@ public interface TypesPackage extends EPackage
 	int PARAMETER_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -921,6 +912,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int PARAMETER_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -1014,15 +1014,6 @@ public interface TypesPackage extends EPackage
 	int STATE_VARIABLE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_VARIABLE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1048,6 +1039,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int STATE_VARIABLE_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -1141,15 +1141,6 @@ public interface TypesPackage extends EPackage
 	int DYNAMICS_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DYNAMICS_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1175,6 +1166,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int DYNAMICS_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -1268,15 +1268,6 @@ public interface TypesPackage extends EPackage
 	int ARGUMENT_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1302,6 +1293,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int ARGUMENT_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -1395,15 +1395,6 @@ public interface TypesPackage extends EPackage
 	int EXPRESSION_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1429,6 +1420,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int EXPRESSION_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -1522,15 +1522,6 @@ public interface TypesPackage extends EPackage
 	int HTML_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HTML_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1556,6 +1547,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int HTML_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -1649,15 +1649,6 @@ public interface TypesPackage extends EPackage
 	int TEXT_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1683,6 +1674,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int TEXT_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -1776,15 +1776,6 @@ public interface TypesPackage extends EPackage
 	int URL_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1810,6 +1801,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int URL_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -1903,15 +1903,6 @@ public interface TypesPackage extends EPackage
 	int POINT_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1937,6 +1928,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int POINT_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -2031,15 +2031,6 @@ public interface TypesPackage extends EPackage
 	int ARRAY_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2067,6 +2058,15 @@ public interface TypesPackage extends EPackage
 	int ARRAY_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
 
 	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2085,13 +2085,22 @@ public interface TypesPackage extends EPackage
 	int ARRAY_TYPE__ARRAY_TYPE = TYPE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Array Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARRAY_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
+	int ARRAY_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -2167,15 +2176,6 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_VISUAL_TYPE__SUPER_TYPE = VISUAL_TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_VISUAL_TYPE__DOMAIN_MODEL = VISUAL_TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2201,6 +2201,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int COMPOSITE_VISUAL_TYPE__REFERENCED_VARIABLES = VISUAL_TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__DOMAIN_MODEL = VISUAL_TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -2313,15 +2322,6 @@ public interface TypesPackage extends EPackage
 	int CONNECTION_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTION_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
-
-	/**
 	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2347,6 +2347,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int CONNECTION_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
 
 	/**
 	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -2425,15 +2434,15 @@ public interface TypesPackage extends EPackage
 	EReference getType_SuperType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}'.
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Domain Model</em>'.
+	 * @return the meta object for the reference '<em>Domain Model</em>'.
 	 * @see org.geppetto.model.types.Type#getDomainModel()
 	 * @see #getType()
 	 * @generated
 	 */
-	EAttribute getType_DomainModel();
+	EReference getType_DomainModel();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.geppetto.model.types.Type#isAbstract <em>Abstract</em>}'.
@@ -2838,6 +2847,17 @@ public interface TypesPackage extends EPackage
 	EReference getArrayType_ArrayType();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.types.ArrayType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.ArrayType#getDefaultValue()
+	 * @see #getArrayType()
+	 * @generated
+	 */
+	EReference getArrayType_DefaultValue();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.types.CompositeVisualType <em>Composite Visual Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2944,12 +2964,12 @@ public interface TypesPackage extends EPackage
 		EReference TYPE__SUPER_TYPE = eINSTANCE.getType_SuperType();
 
 		/**
-		 * The meta object literal for the '<em><b>Domain Model</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Domain Model</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TYPE__DOMAIN_MODEL = eINSTANCE.getType_DomainModel();
+		EReference TYPE__DOMAIN_MODEL = eINSTANCE.getType_DomainModel();
 
 		/**
 		 * The meta object literal for the '<em><b>Abstract</b></em>' attribute feature.
@@ -3284,6 +3304,14 @@ public interface TypesPackage extends EPackage
 		 * @generated
 		 */
 		EReference ARRAY_TYPE__ARRAY_TYPE = eINSTANCE.getArrayType_ArrayType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARRAY_TYPE__DEFAULT_VALUE = eINSTANCE.getArrayType_DefaultValue();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.types.impl.CompositeVisualTypeImpl <em>Composite Visual Type</em>}' class.

@@ -68,7 +68,6 @@ public class VariablesFactoryImpl extends EFactoryImpl implements VariablesFacto
 		switch (eClass.getClassifierID())
 		{
 			case VariablesPackage.VARIABLE: return createVariable();
-			case VariablesPackage.ARRAY_VARIABLE: return createArrayVariable();
 			case VariablesPackage.TYPE_TO_VALUE_MAP: return (EObject)createTypeToValueMap();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -84,17 +83,6 @@ public class VariablesFactoryImpl extends EFactoryImpl implements VariablesFacto
 	{
 		VariableImpl variable = new VariableImpl();
 		return variable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ArrayVariable createArrayVariable()
-	{
-		ArrayVariableImpl arrayVariable = new ArrayVariableImpl();
-		return arrayVariable;
 	}
 
 	/**

@@ -89,6 +89,8 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.VISUAL_GROUP_ELEMENT: return createVisualGroupElement();
 			case ValuesPackage.VISUAL_GROUP: return createVisualGroup();
 			case ValuesPackage.CONNECTION: return createConnection();
+			case ValuesPackage.ARRAY_ELEMENT: return createArrayElement();
+			case ValuesPackage.ARRAY_VALUE: return createArrayValue();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -412,6 +414,28 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		ConnectionImpl connection = new ConnectionImpl();
 		return connection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArrayElement createArrayElement()
+	{
+		ArrayElementImpl arrayElement = new ArrayElementImpl();
+		return arrayElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArrayValue createArrayValue()
+	{
+		ArrayValueImpl arrayValue = new ArrayValueImpl();
+		return arrayValue;
 	}
 
 	/**

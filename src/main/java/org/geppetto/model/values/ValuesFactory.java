@@ -248,6 +248,24 @@ public interface ValuesFactory extends EFactory
 	Connection createConnection();
 
 	/**
+	 * Returns a new object of class '<em>Array Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Array Element</em>'.
+	 * @generated
+	 */
+	ArrayElement createArrayElement();
+
+	/**
+	 * Returns a new object of class '<em>Array Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Array Value</em>'.
+	 * @generated
+	 */
+	ArrayValue createArrayValue();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

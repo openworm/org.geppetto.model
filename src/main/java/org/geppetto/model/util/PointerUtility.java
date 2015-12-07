@@ -12,7 +12,6 @@ import org.geppetto.model.types.Type;
 import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
 import org.geppetto.model.values.ValuesFactory;
-import org.geppetto.model.variables.ArrayVariable;
 import org.geppetto.model.variables.Variable;
 
 public class PointerUtility
@@ -59,7 +58,7 @@ public class PointerUtility
 			lastType = findType(getType(token), v);
 			element.setVariable(v);
 			element.setType(lastType);
-			if((element.getVariable() instanceof ArrayVariable) || element.getType() instanceof ArrayType)
+			if(element.getType() instanceof ArrayType)
 			{
 				Integer index = getIndex(token);
 				if(index != null)

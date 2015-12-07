@@ -110,6 +110,21 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 				return createTagAdapter();
 			}
 			@Override
+			public Adapter caseDomainModel(DomainModel object)
+			{
+				return createDomainModelAdapter();
+			}
+			@Override
+			public Adapter caseModelFormat(ModelFormat object)
+			{
+				return createModelFormatAdapter();
+			}
+			@Override
+			public Adapter caseExternalDomainModel(ExternalDomainModel object)
+			{
+				return createExternalDomainModelAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object)
 			{
 				return createEObjectAdapter();
@@ -232,6 +247,51 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createTagAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.DomainModel <em>Domain Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.DomainModel
+	 * @generated
+	 */
+	public Adapter createDomainModelAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.ModelFormat <em>Model Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.ModelFormat
+	 * @generated
+	 */
+	public Adapter createModelFormatAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.ExternalDomainModel <em>External Domain Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.ExternalDomainModel
+	 * @generated
+	 */
+	public Adapter createExternalDomainModelAdapter()
 	{
 		return null;
 	}

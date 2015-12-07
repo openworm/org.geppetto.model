@@ -272,9 +272,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getType_DomainModel()
+	public EReference getType_DomainModel()
 	{
-		return (EAttribute)typeEClass.getEStructuralFeatures().get(1);
+		return (EReference)typeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -284,7 +284,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 */
 	public EAttribute getType_Abstract()
 	{
-		return (EAttribute)typeEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)typeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -294,7 +294,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 */
 	public EReference getType_VisualType()
 	{
-		return (EReference)typeEClass.getEStructuralFeatures().get(3);
+		return (EReference)typeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -304,7 +304,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 */
 	public EReference getType_ReferencedVariables()
 	{
-		return (EReference)typeEClass.getEStructuralFeatures().get(4);
+		return (EReference)typeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -662,6 +662,16 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getArrayType_DefaultValue()
+	{
+		return (EReference)arrayTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCompositeVisualType()
 	{
 		return compositeVisualTypeEClass;
@@ -749,10 +759,10 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		// Create classes and their features
 		typeEClass = createEClass(TYPE);
 		createEReference(typeEClass, TYPE__SUPER_TYPE);
-		createEAttribute(typeEClass, TYPE__DOMAIN_MODEL);
 		createEAttribute(typeEClass, TYPE__ABSTRACT);
 		createEReference(typeEClass, TYPE__VISUAL_TYPE);
 		createEReference(typeEClass, TYPE__REFERENCED_VARIABLES);
+		createEReference(typeEClass, TYPE__DOMAIN_MODEL);
 		createEOperation(typeEClass, TYPE___GET_DEFAULT_VALUE);
 
 		visualTypeEClass = createEClass(VISUAL_TYPE);
@@ -803,6 +813,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		arrayTypeEClass = createEClass(ARRAY_TYPE);
 		createEAttribute(arrayTypeEClass, ARRAY_TYPE__SIZE);
 		createEReference(arrayTypeEClass, ARRAY_TYPE__ARRAY_TYPE);
+		createEReference(arrayTypeEClass, ARRAY_TYPE__DEFAULT_VALUE);
 
 		compositeVisualTypeEClass = createEClass(COMPOSITE_VISUAL_TYPE);
 		createEReference(compositeVisualTypeEClass, COMPOSITE_VISUAL_TYPE__VARIABLES);
@@ -870,10 +881,10 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getType_DomainModel(), ecorePackage.getEJavaObject(), "domainModel", null, 0, 1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getType_Abstract(), theXMLTypePackage.getBoolean(), "abstract", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_VisualType(), this.getVisualType(), null, "visualType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_ReferencedVariables(), theVariablesPackage.getVariable(), theVariablesPackage.getVariable_Types(), "referencedVariables", null, 0, -1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getType_DomainModel(), theGeppettoPackage.getDomainModel(), null, "domainModel", null, 0, 1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getType__GetDefaultValue(), theValuesPackage.getValue(), "getDefaultValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -925,6 +936,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		initEClass(arrayTypeEClass, ArrayType.class, "ArrayType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArrayType_Size(), theXMLTypePackage.getInt(), "size", null, 0, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArrayType_ArrayType(), this.getType(), null, "arrayType", null, 1, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArrayType_DefaultValue(), theValuesPackage.getArrayValue(), null, "defaultValue", null, 0, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositeVisualTypeEClass, CompositeVisualType.class, "CompositeVisualType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeVisualType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, CompositeVisualType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

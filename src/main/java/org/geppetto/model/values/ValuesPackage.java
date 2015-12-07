@@ -1515,6 +1515,98 @@ public interface ValuesPackage extends EPackage
 	int CONNECTION_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.ArrayElementImpl <em>Array Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.ArrayElementImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayElement()
+	 * @generated
+	 */
+	int ARRAY_ELEMENT = 29;
+
+	/**
+	 * The feature id for the '<em><b>Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_ELEMENT__INDEX = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_ELEMENT__POSITION = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Initial Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_ELEMENT__INITIAL_VALUE = VALUE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Array Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_ELEMENT_FEATURE_COUNT = VALUE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Array Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_ELEMENT_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.ArrayValueImpl <em>Array Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.ArrayValueImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayValue()
+	 * @generated
+	 */
+	int ARRAY_VALUE = 30;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_VALUE__ELEMENTS = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Array Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Array Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.ConnectionType <em>Connection Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1522,7 +1614,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectionType()
 	 * @generated
 	 */
-	int CONNECTION_TYPE = 29;
+	int CONNECTION_TYPE = 31;
 
 
 	/**
@@ -2323,6 +2415,70 @@ public interface ValuesPackage extends EPackage
 	EReference getConnection_Type();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.ArrayElement <em>Array Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Array Element</em>'.
+	 * @see org.geppetto.model.values.ArrayElement
+	 * @generated
+	 */
+	EClass getArrayElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.ArrayElement#getIndex <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Index</em>'.
+	 * @see org.geppetto.model.values.ArrayElement#getIndex()
+	 * @see #getArrayElement()
+	 * @generated
+	 */
+	EAttribute getArrayElement_Index();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.ArrayElement#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Position</em>'.
+	 * @see org.geppetto.model.values.ArrayElement#getPosition()
+	 * @see #getArrayElement()
+	 * @generated
+	 */
+	EReference getArrayElement_Position();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.ArrayElement#getInitialValue <em>Initial Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Initial Value</em>'.
+	 * @see org.geppetto.model.values.ArrayElement#getInitialValue()
+	 * @see #getArrayElement()
+	 * @generated
+	 */
+	EReference getArrayElement_InitialValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.ArrayValue <em>Array Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Array Value</em>'.
+	 * @see org.geppetto.model.values.ArrayValue
+	 * @generated
+	 */
+	EClass getArrayValue();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.values.ArrayValue#getElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Elements</em>'.
+	 * @see org.geppetto.model.values.ArrayValue#getElements()
+	 * @see #getArrayValue()
+	 * @generated
+	 */
+	EReference getArrayValue_Elements();
+
+	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.values.ConnectionType <em>Connection Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3013,6 +3169,58 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EReference CONNECTION__TYPE = eINSTANCE.getConnection_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ArrayElementImpl <em>Array Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.ArrayElementImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayElement()
+		 * @generated
+		 */
+		EClass ARRAY_ELEMENT = eINSTANCE.getArrayElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARRAY_ELEMENT__INDEX = eINSTANCE.getArrayElement_Index();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARRAY_ELEMENT__POSITION = eINSTANCE.getArrayElement_Position();
+
+		/**
+		 * The meta object literal for the '<em><b>Initial Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARRAY_ELEMENT__INITIAL_VALUE = eINSTANCE.getArrayElement_InitialValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ArrayValueImpl <em>Array Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.ArrayValueImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayValue()
+		 * @generated
+		 */
+		EClass ARRAY_VALUE = eINSTANCE.getArrayValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARRAY_VALUE__ELEMENTS = eINSTANCE.getArrayValue_Elements();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.ConnectionType <em>Connection Type</em>}' enum.
