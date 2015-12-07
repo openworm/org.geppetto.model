@@ -60,7 +60,7 @@ public class GeppettoSerializerTest
 {
 
 	@Test
-	public void test() throws IOException, URISyntaxException
+	public void testSerializer() throws IOException, URISyntaxException
 	{
 		// Initialize the factory and the resource set
 		GeppettoPackage.eINSTANCE.eClass();
