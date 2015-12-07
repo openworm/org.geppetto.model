@@ -32,8 +32,6 @@
  *******************************************************************************/
 package org.geppetto.model.test;
 
-import static org.junit.Assert.fail;
-
 import java.util.Map;
 
 import junit.framework.Assert;
