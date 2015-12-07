@@ -2,6 +2,7 @@ package org.geppetto.model.util;
 
 import java.util.StringTokenizer;
 
+import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.types.ArrayType;
 import org.geppetto.model.types.Type;
@@ -50,6 +51,16 @@ public class PointerUtility
 	}
 
 	public static Type getType(Pointer pointer)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	/**
+	 * @param pointer
+	 * @return the library to which the type pointed by a given pointer belongs to
+	 */
+	public static GeppettoLibrary getGeppettoLibrary(Pointer pointer)
 	{
 		// TODO Auto-generated method stub
 		return null;
