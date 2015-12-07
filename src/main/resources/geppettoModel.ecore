@@ -126,7 +126,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
           eType="#//variables/Variable" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="visualGroups" upperBound="-1"
-          eType="#//values/VisualGroup"/>
+          eType="#//values/VisualGroup" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ConnectionType" eSuperTypes="#//types/Type">
       <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"

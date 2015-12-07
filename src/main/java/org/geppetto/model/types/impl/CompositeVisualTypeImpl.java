@@ -3,21 +3,14 @@
 package org.geppetto.model.types.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.geppetto.model.types.CompositeVisualType;
 import org.geppetto.model.types.TypesPackage;
-
 import org.geppetto.model.values.VisualGroup;
 import org.geppetto.model.variables.Variable;
 
@@ -48,7 +41,7 @@ public class CompositeVisualTypeImpl extends VisualTypeImpl implements Composite
 	protected EList<Variable> variables;
 
 	/**
-	 * The cached value of the '{@link #getVisualGroups() <em>Visual Groups</em>}' reference list.
+	 * The cached value of the '{@link #getVisualGroups() <em>Visual Groups</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVisualGroups()
@@ -101,7 +94,7 @@ public class CompositeVisualTypeImpl extends VisualTypeImpl implements Composite
 	{
 		if (visualGroups == null)
 		{
-			visualGroups = new EObjectResolvingEList<VisualGroup>(VisualGroup.class, this, TypesPackage.COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS);
+			visualGroups = new EObjectContainmentEList<VisualGroup>(VisualGroup.class, this, TypesPackage.COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS);
 		}
 		return visualGroups;
 	}
@@ -118,6 +111,8 @@ public class CompositeVisualTypeImpl extends VisualTypeImpl implements Composite
 		{
 			case TypesPackage.COMPOSITE_VISUAL_TYPE__VARIABLES:
 				return ((InternalEList<?>)getVariables()).basicRemove(otherEnd, msgs);
+			case TypesPackage.COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS:
+				return ((InternalEList<?>)getVisualGroups()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
