@@ -1,10 +1,13 @@
 package org.geppetto.model.util;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.types.ArrayType;
+import org.geppetto.model.types.CompositeType;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
@@ -20,85 +23,85 @@ public class PointerUtility
 	 * @param instancePath
 	 * @return
 	 */
-	public static Pointer getPointer(GeppettoModel model, String instancePath)
+	public static Pointer getPointer(GeppettoModel model, String instancePath) throws GeppettoModelException
 	{
 		Pointer pointer = ValuesFactory.eINSTANCE.createPointer();
 		StringTokenizer st = new StringTokenizer(instancePath, ".");
+		Type lastType = null;
 		while(st.hasMoreElements())
 		{
 			String token = st.nextToken();
 			PointerElement element = ValuesFactory.eINSTANCE.createPointerElement();
-			element.setVariable(findVariable(getVariable(token)));
-			element.setType(findType(getType(token)));
-			if((element.getVariable() instanceof ArrayVariable))
+			Variable v = null;
+			if(lastType == null)
 			{
-				// element.set
-
+				v = findVariable(getVariable(token), model);
 			}
-			else if(element.getType() instanceof ArrayType)
+			else
 			{
+				if(lastType instanceof CompositeType)
+				{
+					v = findVariable(getVariable(token), (CompositeType) lastType);
+				}
+				else
+				{
+					if(lastType instanceof ArrayType && ((ArrayType) lastType).getArrayType() instanceof CompositeType)
+					{
+						v = findVariable(getVariable(token), (CompositeType) ((ArrayType) lastType).getArrayType());
+					}
+					else
+					{
+						throw new GeppettoModelException(lastType.getId() + " is not of type CompositeType there can't be nested variables");
+					}
+				}
+			}
 
+			lastType = findType(getType(token), v);
+			element.setVariable(v);
+			element.setType(lastType);
+			if((element.getVariable() instanceof ArrayVariable) || element.getType() instanceof ArrayType)
+			{
+				Integer index = getIndex(token);
+				if(index != null)
+				{
+					element.setIndex(getIndex(token));
+				}
 			}
 			pointer.getElements().add(element);
 		}
 		return pointer;
 	}
 
+	/**
+	 * @param pointer
+	 * @return
+	 */
 	public static Variable getVariable(Pointer pointer)
 	{
-		// IT FIXME Implement
-		return null;
+		return pointer.getElements().get(pointer.getElements().size()-1).getVariable();
 	}
 
+	/**
+	 * @param pointer
+	 * @return
+	 */
 	public static Type getType(Pointer pointer)
 	{
-		// TODO Auto-generated method stub
-		return null;
+		return pointer.getElements().get(pointer.getElements().size()-1).getType();
 	}
-	
+
 	/**
 	 * @param pointer
 	 * @return the library to which the type pointed by a given pointer belongs to
 	 */
 	public static GeppettoLibrary getGeppettoLibrary(Pointer pointer)
 	{
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public static String getUnit(Pointer pointer)
-	{
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private static Type findType(Object type)
-	{
-		// IT FIXME Implement
-		return null;
-	}
-
-	private static Variable findVariable(Object variable)
-	{
-		// IT FIXME Implement
-		return null;
-	}
-
-	private static String getType(String token)
-	{
-		// IT FIXME Implement
-		return null;
-	}
-
-	private static String getVariable(String token)
-	{
-		return token.substring(0, token.indexOf("("));
-	}
-
-	private static String getIndex(String token)
-	{
-		// IT FIXME Implement
-		return null;
+		Type type=getType(pointer);
+		while(!(type.eContainer() instanceof GeppettoLibrary))
+		{
+			type=(Type) type.eContainer().eContainer();
+		}
+		return (GeppettoLibrary) type.eContainer();
 	}
 
 	/**
@@ -109,6 +112,123 @@ public class PointerUtility
 	public static String getInstancePath(Variable variable, Type type)
 	{
 		return variable.getId() + "(" + type.getId() + ")";
+	}
+
+	/**
+	 * @param type
+	 * @return
+	 */
+	private static Type findType(String type, Variable variable) throws GeppettoModelException
+	{
+		if(type == null)
+		{
+			List<Type> types = new ArrayList<Type>();
+			types.addAll(variable.getAnonymousTypes());
+			types.addAll(variable.getTypes());
+			if(types.size() == 1)
+			{
+				return types.get(0);
+			}
+			else
+			{
+				throw new GeppettoModelException("The instance path does not specify a type but more than one type are present for the variable " + variable.getId());
+			}
+		}
+		else
+		{
+			for(Type t : variable.getTypes())
+			{
+				if(t.getId().equals(type))
+				{
+					return t;
+				}
+			}
+			throw new GeppettoModelException("The type " + type + " was not found in the variable " + variable.getId());
+		}
+	}
+
+	/**
+	 * @param variable
+	 * @return
+	 */
+	private static Variable findVariable(String variable, GeppettoModel model) throws GeppettoModelException
+	{
+		for(Variable v : model.getVariables())
+		{
+			if(v.getId().equals(variable))
+			{
+				return v;
+			}
+		}
+		throw new GeppettoModelException("The variable " + variable + " was not found in the Geppetto model");
+	}
+
+	/**
+	 * @param variable
+	 * @return
+	 */
+	private static Variable findVariable(String variable, CompositeType type) throws GeppettoModelException
+	{
+		for(Variable v : type.getVariables())
+		{
+			if(v.getId().equals(variable))
+			{
+				return v;
+			}
+		}
+		throw new GeppettoModelException("The variable " + variable + " was not found in the type " + type.getId());
+	}
+
+	/**
+	 * @param token
+	 * @return
+	 */
+	private static String getType(String token)
+	{
+		if(token.contains("("))
+		{
+			return token.substring(token.indexOf("(") + 1, token.indexOf(")"));
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+	/**
+	 * @param token
+	 * @return
+	 */
+	private static String getVariable(String token)
+	{
+		if(token.contains("("))
+		{
+			return token.substring(0, token.indexOf("("));
+		}
+		else if(token.contains("["))
+		{
+			return token.substring(0, token.indexOf("["));
+		}
+		else
+		{
+			return token;
+		}
+	}
+
+	/**
+	 * @param token
+	 * @return
+	 */
+	private static Integer getIndex(String token)
+	{
+		if(token.contains("["))
+		{
+			return Integer.parseInt(token.substring(token.indexOf("[") + 1, token.indexOf("]")));
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 }
