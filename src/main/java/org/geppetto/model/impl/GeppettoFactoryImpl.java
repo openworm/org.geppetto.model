@@ -3,6 +3,7 @@
 package org.geppetto.model.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -75,6 +76,40 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.EXTERNAL_DOMAIN_MODEL: return createExternalDomainModel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
+			case GeppettoPackage.FILE_FORMAT:
+				return createFileFormatFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
+			case GeppettoPackage.FILE_FORMAT:
+				return convertFileFormatToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -175,6 +210,28 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		ExternalDomainModelImpl externalDomainModel = new ExternalDomainModelImpl();
 		return externalDomainModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FileFormat createFileFormatFromString(EDataType eDataType, String initialValue)
+	{
+		FileFormat result = FileFormat.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFileFormatToString(EDataType eDataType, Object instanceValue)
+	{
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

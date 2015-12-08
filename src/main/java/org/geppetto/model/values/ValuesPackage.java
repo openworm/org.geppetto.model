@@ -42,7 +42,7 @@ public interface ValuesPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.geppetto.org/model/values";
+	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//values";
 
 	/**
 	 * The package namespace name.

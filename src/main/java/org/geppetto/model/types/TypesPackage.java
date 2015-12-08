@@ -42,7 +42,7 @@ public interface TypesPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.geppetto.org/model/types";
+	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//types";
 
 	/**
 	 * The package namespace name.

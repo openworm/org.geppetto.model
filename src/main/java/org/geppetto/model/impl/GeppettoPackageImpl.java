@@ -4,6 +4,7 @@ package org.geppetto.model.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -12,6 +13,7 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.DomainModel;
 import org.geppetto.model.ExperimentState;
 import org.geppetto.model.ExternalDomainModel;
+import org.geppetto.model.FileFormat;
 import org.geppetto.model.GeppettoFactory;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
@@ -105,6 +107,13 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * @generated
 	 */
 	private EClass externalDomainModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum fileFormatEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -488,6 +497,26 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getExternalDomainModel_FileFormat()
+	{
+		return (EAttribute)externalDomainModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getFileFormat()
+	{
+		return fileFormatEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GeppettoFactory getGeppettoFactory()
 	{
 		return (GeppettoFactory)getEFactoryInstance();
@@ -552,6 +581,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		createEAttribute(modelFormatEClass, MODEL_FORMAT__MODEL_FORMAT);
 
 		externalDomainModelEClass = createEClass(EXTERNAL_DOMAIN_MODEL);
+		createEAttribute(externalDomainModelEClass, EXTERNAL_DOMAIN_MODEL__FILE_FORMAT);
+
+		// Create enums
+		fileFormatEEnum = createEEnum(FILE_FORMAT);
 	}
 
 	/**
@@ -638,6 +671,12 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEAttribute(getModelFormat_ModelFormat(), theXMLTypePackage.getString(), "modelFormat", null, 0, 1, ModelFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(externalDomainModelEClass, ExternalDomainModel.class, "ExternalDomainModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExternalDomainModel_FileFormat(), this.getFileFormat(), "fileFormat", "ZIP", 1, 1, ExternalDomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(fileFormatEEnum, FileFormat.class, "FileFormat");
+		addEEnumLiteral(fileFormatEEnum, FileFormat.ZIP);
+		addEEnumLiteral(fileFormatEEnum, FileFormat.HDF5);
 
 		// Create resource
 		createResource(eNS_URI);

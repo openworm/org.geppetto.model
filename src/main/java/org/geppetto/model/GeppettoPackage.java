@@ -4,6 +4,7 @@ package org.geppetto.model;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -40,7 +41,7 @@ public interface GeppettoPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.geppetto.org/model";
+	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore";
 
 	/**
 	 * The package namespace name.
@@ -557,13 +558,22 @@ public interface GeppettoPackage extends EPackage
 	int EXTERNAL_DOMAIN_MODEL__FORMAT = DOMAIN_MODEL__FORMAT;
 
 	/**
+	 * The feature id for the '<em><b>File Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTERNAL_DOMAIN_MODEL__FILE_FORMAT = DOMAIN_MODEL_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>External Domain Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTERNAL_DOMAIN_MODEL_FEATURE_COUNT = DOMAIN_MODEL_FEATURE_COUNT + 0;
+	int EXTERNAL_DOMAIN_MODEL_FEATURE_COUNT = DOMAIN_MODEL_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>External Domain Model</em>' class.
@@ -573,6 +583,16 @@ public interface GeppettoPackage extends EPackage
 	 * @ordered
 	 */
 	int EXTERNAL_DOMAIN_MODEL_OPERATION_COUNT = DOMAIN_MODEL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.FileFormat
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getFileFormat()
+	 * @generated
+	 */
+	int FILE_FORMAT = 10;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
@@ -894,6 +914,27 @@ public interface GeppettoPackage extends EPackage
 	EClass getExternalDomainModel();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.ExternalDomainModel#getFileFormat <em>File Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>File Format</em>'.
+	 * @see org.geppetto.model.ExternalDomainModel#getFileFormat()
+	 * @see #getExternalDomainModel()
+	 * @generated
+	 */
+	EAttribute getExternalDomainModel_FileFormat();
+
+	/**
+	 * Returns the meta object for enum '{@link org.geppetto.model.FileFormat <em>File Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>File Format</em>'.
+	 * @see org.geppetto.model.FileFormat
+	 * @generated
+	 */
+	EEnum getFileFormat();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1176,6 +1217,24 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EClass EXTERNAL_DOMAIN_MODEL = eINSTANCE.getExternalDomainModel();
+
+		/**
+		 * The meta object literal for the '<em><b>File Format</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXTERNAL_DOMAIN_MODEL__FILE_FORMAT = eINSTANCE.getExternalDomainModel_FileFormat();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.FileFormat
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getFileFormat()
+		 * @generated
+		 */
+		EEnum FILE_FORMAT = eINSTANCE.getFileFormat();
 
 	}
 
