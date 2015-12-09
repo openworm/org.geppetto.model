@@ -41,7 +41,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.emfjson.jackson.resource.JsonResourceFactory;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.util.GeppettoModelException;
@@ -71,7 +70,6 @@ public class PointerUtilityTest
 		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> m = reg.getExtensionToFactoryMap();
 		m.put("xmi", new XMIResourceFactoryImpl()); // sets the factory for the XMI type
-		m.put("json", new JsonResourceFactory()); // sets the factory for the JSON type
 		ResourceSet resSet = new ResourceSetImpl();
 
 		// How to read

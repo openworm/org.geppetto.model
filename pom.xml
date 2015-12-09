@@ -27,11 +27,6 @@
 			<artifactId>emfwrapper</artifactId>
 			<version>2.11.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.emfjson</groupId>
-			<artifactId>emfjson-jackson</artifactId>
-			<version>0.13.0</version>
-		</dependency>
 		<!-- test dependencies -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -162,6 +157,7 @@
 						<Import-Package>
 							*
 						</Import-Package>
+						<Provide-Capability>osgi.ee;osgi.ee=JavaSE;version=1.7</Provide-Capability> 
 					</instructions>
 				</configuration>
 			</plugin>
