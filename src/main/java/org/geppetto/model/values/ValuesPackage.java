@@ -670,7 +670,7 @@ public interface ValuesPackage extends EPackage
 	int DYNAMICS__INITIAL_CONDITION = VALUE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Dynamics</b></em>' reference.
+	 * The feature id for the '<em><b>Dynamics</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -707,7 +707,7 @@ public interface ValuesPackage extends EPackage
 	int FUNCTION = 15;
 
 	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' reference list.
+	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2000,10 +2000,10 @@ public interface ValuesPackage extends EPackage
 	EReference getDynamics_InitialCondition();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.values.Dynamics#getDynamics <em>Dynamics</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Dynamics#getDynamics <em>Dynamics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Dynamics</em>'.
+	 * @return the meta object for the containment reference '<em>Dynamics</em>'.
 	 * @see org.geppetto.model.values.Dynamics#getDynamics()
 	 * @see #getDynamics()
 	 * @generated
@@ -2021,10 +2021,10 @@ public interface ValuesPackage extends EPackage
 	EClass getFunction();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.geppetto.model.values.Function#getArguments <em>Arguments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.values.Function#getArguments <em>Arguments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Arguments</em>'.
+	 * @return the meta object for the containment reference list '<em>Arguments</em>'.
 	 * @see org.geppetto.model.values.Function#getArguments()
 	 * @see #getFunction()
 	 * @generated
@@ -2831,7 +2831,7 @@ public interface ValuesPackage extends EPackage
 		EReference DYNAMICS__INITIAL_CONDITION = eINSTANCE.getDynamics_InitialCondition();
 
 		/**
-		 * The meta object literal for the '<em><b>Dynamics</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Dynamics</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2849,7 +2849,7 @@ public interface ValuesPackage extends EPackage
 		EClass FUNCTION = eINSTANCE.getFunction();
 
 		/**
-		 * The meta object literal for the '<em><b>Arguments</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Arguments</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

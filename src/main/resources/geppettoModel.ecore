@@ -214,11 +214,12 @@
     <eClassifiers xsi:type="ecore:EClass" name="Dynamics" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="initialCondition" eType="#//values/PhysicalQuantity"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="dynamics" eType="#//values/Function"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dynamics" eType="#//values/Function"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
-          eType="#//values/Argument"/>
+          eType="#//values/Argument" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
           eType="#//values/Expression" containment="true"/>
     </eClassifiers>

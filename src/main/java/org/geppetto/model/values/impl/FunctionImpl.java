@@ -3,19 +3,14 @@
 package org.geppetto.model.values.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.values.Argument;
 import org.geppetto.model.values.Expression;
 import org.geppetto.model.values.Function;
@@ -38,7 +33,7 @@ import org.geppetto.model.values.ValuesPackage;
 public class FunctionImpl extends ValueImpl implements Function
 {
 	/**
-	 * The cached value of the '{@link #getArguments() <em>Arguments</em>}' reference list.
+	 * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getArguments()
@@ -87,7 +82,7 @@ public class FunctionImpl extends ValueImpl implements Function
 	{
 		if (arguments == null)
 		{
-			arguments = new EObjectResolvingEList<Argument>(Argument.class, this, ValuesPackage.FUNCTION__ARGUMENTS);
+			arguments = new EObjectContainmentEList<Argument>(Argument.class, this, ValuesPackage.FUNCTION__ARGUMENTS);
 		}
 		return arguments;
 	}
@@ -150,6 +145,8 @@ public class FunctionImpl extends ValueImpl implements Function
 	{
 		switch (featureID)
 		{
+			case ValuesPackage.FUNCTION__ARGUMENTS:
+				return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
 			case ValuesPackage.FUNCTION__EXPRESSION:
 				return basicSetExpression(null, msgs);
 		}

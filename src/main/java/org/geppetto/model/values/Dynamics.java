@@ -49,26 +49,26 @@ public interface Dynamics extends Value
 	void setInitialCondition(PhysicalQuantity value);
 
 	/**
-	 * Returns the value of the '<em><b>Dynamics</b></em>' reference.
+	 * Returns the value of the '<em><b>Dynamics</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dynamics</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dynamics</em>' reference.
+	 * @return the value of the '<em>Dynamics</em>' containment reference.
 	 * @see #setDynamics(Function)
 	 * @see org.geppetto.model.values.ValuesPackage#getDynamics_Dynamics()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Function getDynamics();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.values.Dynamics#getDynamics <em>Dynamics</em>}' reference.
+	 * Sets the value of the '{@link org.geppetto.model.values.Dynamics#getDynamics <em>Dynamics</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dynamics</em>' reference.
+	 * @param value the new value of the '<em>Dynamics</em>' containment reference.
 	 * @see #getDynamics()
 	 * @generated
 	 */

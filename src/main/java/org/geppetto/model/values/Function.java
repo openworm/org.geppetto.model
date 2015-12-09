@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Function extends Value
 {
 	/**
-	 * Returns the value of the '<em><b>Arguments</b></em>' reference list.
+	 * Returns the value of the '<em><b>Arguments</b></em>' containment reference list.
 	 * The list contents are of type {@link org.geppetto.model.values.Argument}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -32,9 +32,9 @@ public interface Function extends Value
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Arguments</em>' reference list.
+	 * @return the value of the '<em>Arguments</em>' containment reference list.
 	 * @see org.geppetto.model.values.ValuesPackage#getFunction_Arguments()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Argument> getArguments();

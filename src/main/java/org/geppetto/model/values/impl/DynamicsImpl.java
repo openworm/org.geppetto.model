@@ -42,7 +42,7 @@ public class DynamicsImpl extends ValueImpl implements Dynamics
 	protected PhysicalQuantity initialCondition;
 
 	/**
-	 * The cached value of the '{@link #getDynamics() <em>Dynamics</em>}' reference.
+	 * The cached value of the '{@link #getDynamics() <em>Dynamics</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDynamics()
@@ -127,16 +127,6 @@ public class DynamicsImpl extends ValueImpl implements Dynamics
 	 */
 	public Function getDynamics()
 	{
-		if (dynamics != null && dynamics.eIsProxy())
-		{
-			InternalEObject oldDynamics = (InternalEObject)dynamics;
-			dynamics = (Function)eResolveProxy(oldDynamics);
-			if (dynamics != oldDynamics)
-			{
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ValuesPackage.DYNAMICS__DYNAMICS, oldDynamics, dynamics));
-			}
-		}
 		return dynamics;
 	}
 
@@ -145,9 +135,16 @@ public class DynamicsImpl extends ValueImpl implements Dynamics
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Function basicGetDynamics()
+	public NotificationChain basicSetDynamics(Function newDynamics, NotificationChain msgs)
 	{
-		return dynamics;
+		Function oldDynamics = dynamics;
+		dynamics = newDynamics;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ValuesPackage.DYNAMICS__DYNAMICS, oldDynamics, newDynamics);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -157,10 +154,18 @@ public class DynamicsImpl extends ValueImpl implements Dynamics
 	 */
 	public void setDynamics(Function newDynamics)
 	{
-		Function oldDynamics = dynamics;
-		dynamics = newDynamics;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.DYNAMICS__DYNAMICS, oldDynamics, dynamics));
+		if (newDynamics != dynamics)
+		{
+			NotificationChain msgs = null;
+			if (dynamics != null)
+				msgs = ((InternalEObject)dynamics).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.DYNAMICS__DYNAMICS, null, msgs);
+			if (newDynamics != null)
+				msgs = ((InternalEObject)newDynamics).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.DYNAMICS__DYNAMICS, null, msgs);
+			msgs = basicSetDynamics(newDynamics, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.DYNAMICS__DYNAMICS, newDynamics, newDynamics));
 	}
 
 	/**
@@ -175,6 +180,8 @@ public class DynamicsImpl extends ValueImpl implements Dynamics
 		{
 			case ValuesPackage.DYNAMICS__INITIAL_CONDITION:
 				return basicSetInitialCondition(null, msgs);
+			case ValuesPackage.DYNAMICS__DYNAMICS:
+				return basicSetDynamics(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -192,8 +199,7 @@ public class DynamicsImpl extends ValueImpl implements Dynamics
 			case ValuesPackage.DYNAMICS__INITIAL_CONDITION:
 				return getInitialCondition();
 			case ValuesPackage.DYNAMICS__DYNAMICS:
-				if (resolve) return getDynamics();
-				return basicGetDynamics();
+				return getDynamics();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
