@@ -93,10 +93,6 @@ public class ReadWriteTest
 		// visitor.doSwitch(eObject);
 		// }
 
-		// How to save to JSON
-		Resource jsonResource = resSet.createResource(URI.createURI("./src/test/resources/test.json"));
-		jsonResource.getContents().add(geppettoModel);
-		jsonResource.save(null);
 
 	}
 
