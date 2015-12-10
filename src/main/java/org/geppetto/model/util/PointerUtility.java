@@ -73,11 +73,42 @@ public class PointerUtility
 
 	/**
 	 * @param pointer
+	 * @param pointer2
+	 * @return true if the two pointers point to the same variables and types
+	 */
+	public static boolean equals(Pointer pointer, Pointer pointer2)
+	{
+		if(!pointer.equals(pointer2))
+		{
+			for(PointerElement pe : pointer.getElements())
+			{
+				PointerElement pe2 = pointer2.getElements().get(pointer.getElements().indexOf(pe));
+				if(pe2==null || !equals(pe, pe2))
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * @param pointer
+	 * @param pointer2
+	 * @return
+	 */
+	public static boolean equals(PointerElement pointer, PointerElement pointer2)
+	{
+		return pointer.getType().equals(pointer2.getType()) && pointer.getVariable().equals(pointer2.getVariable()) && (pointer.getIndex() == pointer2.getIndex());
+	}
+
+	/**
+	 * @param pointer
 	 * @return
 	 */
 	public static Variable getVariable(Pointer pointer)
 	{
-		return pointer.getElements().get(pointer.getElements().size()-1).getVariable();
+		return pointer.getElements().get(pointer.getElements().size() - 1).getVariable();
 	}
 
 	/**
@@ -86,7 +117,7 @@ public class PointerUtility
 	 */
 	public static Type getType(Pointer pointer)
 	{
-		return pointer.getElements().get(pointer.getElements().size()-1).getType();
+		return pointer.getElements().get(pointer.getElements().size() - 1).getType();
 	}
 
 	/**
@@ -95,10 +126,10 @@ public class PointerUtility
 	 */
 	public static GeppettoLibrary getGeppettoLibrary(Pointer pointer)
 	{
-		Type type=getType(pointer);
+		Type type = getType(pointer);
 		while(!(type.eContainer() instanceof GeppettoLibrary))
 		{
-			type=(Type) type.eContainer().eContainer();
+			type = (Type) type.eContainer().eContainer();
 		}
 		return (GeppettoLibrary) type.eContainer();
 	}
