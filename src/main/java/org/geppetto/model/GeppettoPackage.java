@@ -97,13 +97,31 @@ public interface GeppettoPackage extends EPackage
 	int GEPPETTO_MODEL__TAGS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_MODEL__ID = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_MODEL__NAME = 4;
+
+	/**
 	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL_FEATURE_COUNT = 3;
+	int GEPPETTO_MODEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Model</em>' class.
@@ -638,6 +656,28 @@ public interface GeppettoPackage extends EPackage
 	EReference getGeppettoModel_Tags();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.GeppettoModel#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.geppetto.model.GeppettoModel#getId()
+	 * @see #getGeppettoModel()
+	 * @generated
+	 */
+	EAttribute getGeppettoModel_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.GeppettoModel#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.geppetto.model.GeppettoModel#getName()
+	 * @see #getGeppettoModel()
+	 * @generated
+	 */
+	EAttribute getGeppettoModel_Name();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -991,6 +1031,22 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference GEPPETTO_MODEL__TAGS = eINSTANCE.getGeppettoModel_Tags();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEPPETTO_MODEL__ID = eINSTANCE.getGeppettoModel_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEPPETTO_MODEL__NAME = eINSTANCE.getGeppettoModel_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.NodeImpl <em>Node</em>}' class.

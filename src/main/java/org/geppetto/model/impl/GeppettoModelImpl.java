@@ -3,10 +3,12 @@
 package org.geppetto.model.impl;
 
 import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -26,6 +28,8 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getLibraries <em>Libraries</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -62,6 +66,46 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * @ordered
 	 */
 	protected EList<Tag> tags;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,6 +175,52 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId()
+	{
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId)
+	{
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.GEPPETTO_MODEL__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName()
+	{
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName)
+	{
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.GEPPETTO_MODEL__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -162,6 +252,10 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return getLibraries();
 			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
 				return getTags();
+			case GeppettoPackage.GEPPETTO_MODEL__ID:
+				return getId();
+			case GeppettoPackage.GEPPETTO_MODEL__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -189,6 +283,12 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				getTags().clear();
 				getTags().addAll((Collection<? extends Tag>)newValue);
 				return;
+			case GeppettoPackage.GEPPETTO_MODEL__ID:
+				setId((String)newValue);
+				return;
+			case GeppettoPackage.GEPPETTO_MODEL__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -212,6 +312,12 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
 				getTags().clear();
 				return;
+			case GeppettoPackage.GEPPETTO_MODEL__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case GeppettoPackage.GEPPETTO_MODEL__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -232,8 +338,31 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return libraries != null && !libraries.isEmpty();
 			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
 				return tags != null && !tags.isEmpty();
+			case GeppettoPackage.GEPPETTO_MODEL__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case GeppettoPackage.GEPPETTO_MODEL__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString()
+	{
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //GeppettoModelImpl
