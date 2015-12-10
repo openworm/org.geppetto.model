@@ -149,6 +149,11 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createDynamicsAdapter();
 			}
 			@Override
+			public Adapter caseFunctionPlot(FunctionPlot object)
+			{
+				return createFunctionPlotAdapter();
+			}
+			@Override
 			public Adapter caseFunction(Function object)
 			{
 				return createFunctionAdapter();
@@ -476,6 +481,21 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createDynamicsAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.FunctionPlot <em>Function Plot</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.FunctionPlot
+	 * @generated
+	 */
+	public Adapter createFunctionPlotAdapter()
 	{
 		return null;
 	}

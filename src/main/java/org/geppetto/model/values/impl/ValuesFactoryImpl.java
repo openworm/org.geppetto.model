@@ -76,6 +76,7 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.POINTER_ELEMENT: return createPointerElement();
 			case ValuesPackage.POINT: return createPoint();
 			case ValuesPackage.DYNAMICS: return createDynamics();
+			case ValuesPackage.FUNCTION_PLOT: return createFunctionPlot();
 			case ValuesPackage.FUNCTION: return createFunction();
 			case ValuesPackage.ARGUMENT: return createArgument();
 			case ValuesPackage.EXPRESSION: return createExpression();
@@ -271,6 +272,17 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		DynamicsImpl dynamics = new DynamicsImpl();
 		return dynamics;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FunctionPlot createFunctionPlot()
+	{
+		FunctionPlotImpl functionPlot = new FunctionPlotImpl();
+		return functionPlot;
 	}
 
 	/**

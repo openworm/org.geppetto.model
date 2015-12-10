@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.geppetto.model.values.Function#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.geppetto.model.values.Function#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.geppetto.model.values.Function#getFunctionPlot <em>Function Plot</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,5 +65,31 @@ public interface Function extends Value
 	 * @generated
 	 */
 	void setExpression(Expression value);
+
+	/**
+	 * Returns the value of the '<em><b>Function Plot</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Function Plot</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Function Plot</em>' containment reference.
+	 * @see #setFunctionPlot(FunctionPlot)
+	 * @see org.geppetto.model.values.ValuesPackage#getFunction_FunctionPlot()
+	 * @model containment="true"
+	 * @generated
+	 */
+	FunctionPlot getFunctionPlot();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.values.Function#getFunctionPlot <em>Function Plot</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Function Plot</em>' containment reference.
+	 * @see #getFunctionPlot()
+	 * @generated
+	 */
+	void setFunctionPlot(FunctionPlot value);
 
 } // Function

@@ -697,6 +697,88 @@ public interface ValuesPackage extends EPackage
 	int DYNAMICS_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.FunctionPlotImpl <em>Function Plot</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.FunctionPlotImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getFunctionPlot()
+	 * @generated
+	 */
+	int FUNCTION_PLOT = 15;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_PLOT__TITLE = 0;
+
+	/**
+	 * The feature id for the '<em><b>XAxis Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_PLOT__XAXIS_LABEL = 1;
+
+	/**
+	 * The feature id for the '<em><b>YAxis Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_PLOT__YAXIS_LABEL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Initial Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_PLOT__INITIAL_VALUE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Final Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_PLOT__FINAL_VALUE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Step Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_PLOT__STEP_VALUE = 5;
+
+	/**
+	 * The number of structural features of the '<em>Function Plot</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_PLOT_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Function Plot</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_PLOT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.impl.FunctionImpl <em>Function</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -704,7 +786,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getFunction()
 	 * @generated
 	 */
-	int FUNCTION = 15;
+	int FUNCTION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
@@ -725,13 +807,22 @@ public interface ValuesPackage extends EPackage
 	int FUNCTION__EXPRESSION = VALUE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Function Plot</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__FUNCTION_PLOT = VALUE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Function</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
+	int FUNCTION_FEATURE_COUNT = VALUE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -750,7 +841,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArgument()
 	 * @generated
 	 */
-	int ARGUMENT = 16;
+	int ARGUMENT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Argument</b></em>' attribute.
@@ -787,7 +878,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getExpression()
 	 * @generated
 	 */
-	int EXPRESSION = 17;
+	int EXPRESSION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -824,7 +915,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualValue()
 	 * @generated
 	 */
-	int VISUAL_VALUE = 18;
+	int VISUAL_VALUE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -870,7 +961,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getCollada()
 	 * @generated
 	 */
-	int COLLADA = 19;
+	int COLLADA = 20;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -925,7 +1016,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getOBJ()
 	 * @generated
 	 */
-	int OBJ = 20;
+	int OBJ = 21;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -980,7 +1071,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSphere()
 	 * @generated
 	 */
-	int SPHERE = 21;
+	int SPHERE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1035,7 +1126,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getCylinder()
 	 * @generated
 	 */
-	int CYLINDER = 22;
+	int CYLINDER = 23;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1117,7 +1208,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getParticle()
 	 * @generated
 	 */
-	int PARTICLE = 23;
+	int PARTICLE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1191,7 +1282,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSkeletonAnimation()
 	 * @generated
 	 */
-	int SKELETON_ANIMATION = 24;
+	int SKELETON_ANIMATION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1246,7 +1337,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSkeletonTransformation()
 	 * @generated
 	 */
-	int SKELETON_TRANSFORMATION = 25;
+	int SKELETON_TRANSFORMATION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Skeleton Transformation</b></em>' attribute list.
@@ -1284,7 +1375,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroupElement()
 	 * @generated
 	 */
-	int VISUAL_GROUP_ELEMENT = 26;
+	int VISUAL_GROUP_ELEMENT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1366,7 +1457,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroup()
 	 * @generated
 	 */
-	int VISUAL_GROUP = 27;
+	int VISUAL_GROUP = 28;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1467,7 +1558,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnection()
 	 * @generated
 	 */
-	int CONNECTION = 28;
+	int CONNECTION = 29;
 
 	/**
 	 * The feature id for the '<em><b>A</b></em>' containment reference list.
@@ -1522,7 +1613,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayElement()
 	 * @generated
 	 */
-	int ARRAY_ELEMENT = 29;
+	int ARRAY_ELEMENT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Index</b></em>' attribute.
@@ -1577,7 +1668,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayValue()
 	 * @generated
 	 */
-	int ARRAY_VALUE = 30;
+	int ARRAY_VALUE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -1614,7 +1705,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectionType()
 	 * @generated
 	 */
-	int CONNECTION_TYPE = 31;
+	int CONNECTION_TYPE = 32;
 
 
 	/**
@@ -2011,6 +2102,82 @@ public interface ValuesPackage extends EPackage
 	EReference getDynamics_Dynamics();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.FunctionPlot <em>Function Plot</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Plot</em>'.
+	 * @see org.geppetto.model.values.FunctionPlot
+	 * @generated
+	 */
+	EClass getFunctionPlot();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.FunctionPlot#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see org.geppetto.model.values.FunctionPlot#getTitle()
+	 * @see #getFunctionPlot()
+	 * @generated
+	 */
+	EAttribute getFunctionPlot_Title();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.FunctionPlot#getXAxisLabel <em>XAxis Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>XAxis Label</em>'.
+	 * @see org.geppetto.model.values.FunctionPlot#getXAxisLabel()
+	 * @see #getFunctionPlot()
+	 * @generated
+	 */
+	EAttribute getFunctionPlot_XAxisLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.FunctionPlot#getYAxisLabel <em>YAxis Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>YAxis Label</em>'.
+	 * @see org.geppetto.model.values.FunctionPlot#getYAxisLabel()
+	 * @see #getFunctionPlot()
+	 * @generated
+	 */
+	EAttribute getFunctionPlot_YAxisLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.FunctionPlot#getInitialValue <em>Initial Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Initial Value</em>'.
+	 * @see org.geppetto.model.values.FunctionPlot#getInitialValue()
+	 * @see #getFunctionPlot()
+	 * @generated
+	 */
+	EAttribute getFunctionPlot_InitialValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.FunctionPlot#getFinalValue <em>Final Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Final Value</em>'.
+	 * @see org.geppetto.model.values.FunctionPlot#getFinalValue()
+	 * @see #getFunctionPlot()
+	 * @generated
+	 */
+	EAttribute getFunctionPlot_FinalValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.FunctionPlot#getStepValue <em>Step Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Step Value</em>'.
+	 * @see org.geppetto.model.values.FunctionPlot#getStepValue()
+	 * @see #getFunctionPlot()
+	 * @generated
+	 */
+	EAttribute getFunctionPlot_StepValue();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Function <em>Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2041,6 +2208,17 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EReference getFunction_Expression();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Function#getFunctionPlot <em>Function Plot</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Function Plot</em>'.
+	 * @see org.geppetto.model.values.Function#getFunctionPlot()
+	 * @see #getFunction()
+	 * @generated
+	 */
+	EReference getFunction_FunctionPlot();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Argument <em>Argument</em>}'.
@@ -2839,6 +3017,64 @@ public interface ValuesPackage extends EPackage
 		EReference DYNAMICS__DYNAMICS = eINSTANCE.getDynamics_Dynamics();
 
 		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.FunctionPlotImpl <em>Function Plot</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.FunctionPlotImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getFunctionPlot()
+		 * @generated
+		 */
+		EClass FUNCTION_PLOT = eINSTANCE.getFunctionPlot();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_PLOT__TITLE = eINSTANCE.getFunctionPlot_Title();
+
+		/**
+		 * The meta object literal for the '<em><b>XAxis Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_PLOT__XAXIS_LABEL = eINSTANCE.getFunctionPlot_XAxisLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>YAxis Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_PLOT__YAXIS_LABEL = eINSTANCE.getFunctionPlot_YAxisLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Initial Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_PLOT__INITIAL_VALUE = eINSTANCE.getFunctionPlot_InitialValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Final Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_PLOT__FINAL_VALUE = eINSTANCE.getFunctionPlot_FinalValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Step Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_PLOT__STEP_VALUE = eINSTANCE.getFunctionPlot_StepValue();
+
+		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.FunctionImpl <em>Function</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2863,6 +3099,14 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EReference FUNCTION__EXPRESSION = eINSTANCE.getFunction_Expression();
+
+		/**
+		 * The meta object literal for the '<em><b>Function Plot</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION__FUNCTION_PLOT = eINSTANCE.getFunction_FunctionPlot();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ArgumentImpl <em>Argument</em>}' class.

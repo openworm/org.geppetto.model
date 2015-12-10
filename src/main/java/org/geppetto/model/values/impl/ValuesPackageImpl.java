@@ -26,6 +26,7 @@ import org.geppetto.model.values.Cylinder;
 import org.geppetto.model.values.Dynamics;
 import org.geppetto.model.values.Expression;
 import org.geppetto.model.values.Function;
+import org.geppetto.model.values.FunctionPlot;
 import org.geppetto.model.values.MetadataValue;
 import org.geppetto.model.values.Particle;
 import org.geppetto.model.values.PhysicalQuantity;
@@ -160,6 +161,13 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * @generated
 	 */
 	private EClass dynamicsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionPlotEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -732,6 +740,76 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFunctionPlot()
+	{
+		return functionPlotEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionPlot_Title()
+	{
+		return (EAttribute)functionPlotEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionPlot_XAxisLabel()
+	{
+		return (EAttribute)functionPlotEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionPlot_YAxisLabel()
+	{
+		return (EAttribute)functionPlotEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionPlot_InitialValue()
+	{
+		return (EAttribute)functionPlotEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionPlot_FinalValue()
+	{
+		return (EAttribute)functionPlotEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionPlot_StepValue()
+	{
+		return (EAttribute)functionPlotEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFunction()
 	{
 		return functionEClass;
@@ -755,6 +833,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	public EReference getFunction_Expression()
 	{
 		return (EReference)functionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunction_FunctionPlot()
+	{
+		return (EReference)functionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1259,9 +1347,18 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEReference(dynamicsEClass, DYNAMICS__INITIAL_CONDITION);
 		createEReference(dynamicsEClass, DYNAMICS__DYNAMICS);
 
+		functionPlotEClass = createEClass(FUNCTION_PLOT);
+		createEAttribute(functionPlotEClass, FUNCTION_PLOT__TITLE);
+		createEAttribute(functionPlotEClass, FUNCTION_PLOT__XAXIS_LABEL);
+		createEAttribute(functionPlotEClass, FUNCTION_PLOT__YAXIS_LABEL);
+		createEAttribute(functionPlotEClass, FUNCTION_PLOT__INITIAL_VALUE);
+		createEAttribute(functionPlotEClass, FUNCTION_PLOT__FINAL_VALUE);
+		createEAttribute(functionPlotEClass, FUNCTION_PLOT__STEP_VALUE);
+
 		functionEClass = createEClass(FUNCTION);
 		createEReference(functionEClass, FUNCTION__ARGUMENTS);
 		createEReference(functionEClass, FUNCTION__EXPRESSION);
+		createEReference(functionEClass, FUNCTION__FUNCTION_PLOT);
 
 		argumentEClass = createEClass(ARGUMENT);
 		createEAttribute(argumentEClass, ARGUMENT__ARGUMENT);
@@ -1441,9 +1538,18 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEReference(getDynamics_InitialCondition(), this.getPhysicalQuantity(), null, "initialCondition", null, 0, 1, Dynamics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDynamics_Dynamics(), this.getFunction(), null, "dynamics", null, 0, 1, Dynamics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(functionPlotEClass, FunctionPlot.class, "FunctionPlot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionPlot_Title(), theXMLTypePackage.getString(), "title", null, 0, 1, FunctionPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionPlot_XAxisLabel(), theXMLTypePackage.getString(), "xAxisLabel", null, 0, 1, FunctionPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionPlot_YAxisLabel(), theXMLTypePackage.getString(), "yAxisLabel", null, 0, 1, FunctionPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionPlot_InitialValue(), theXMLTypePackage.getDouble(), "initialValue", null, 0, 1, FunctionPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionPlot_FinalValue(), theXMLTypePackage.getDouble(), "finalValue", null, 0, 1, FunctionPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionPlot_StepValue(), theXMLTypePackage.getDouble(), "stepValue", null, 0, 1, FunctionPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunction_Arguments(), this.getArgument(), null, "arguments", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunction_Expression(), this.getExpression(), null, "expression", null, 1, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunction_FunctionPlot(), this.getFunctionPlot(), null, "functionPlot", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argumentEClass, Argument.class, "Argument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArgument_Argument(), theXMLTypePackage.getString(), "argument", "", 1, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -131,6 +131,15 @@ public interface ValuesFactory extends EFactory
 	Dynamics createDynamics();
 
 	/**
+	 * Returns a new object of class '<em>Function Plot</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Plot</em>'.
+	 * @generated
+	 */
+	FunctionPlot createFunctionPlot();
+
+	/**
 	 * Returns a new object of class '<em>Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

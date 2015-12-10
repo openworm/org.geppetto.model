@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.values.Argument;
 import org.geppetto.model.values.Expression;
 import org.geppetto.model.values.Function;
+import org.geppetto.model.values.FunctionPlot;
 import org.geppetto.model.values.ValuesPackage;
 
 /**
@@ -25,6 +26,7 @@ import org.geppetto.model.values.ValuesPackage;
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.FunctionImpl#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.FunctionImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.FunctionImpl#getFunctionPlot <em>Function Plot</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,6 +53,16 @@ public class FunctionImpl extends ValueImpl implements Function
 	 * @ordered
 	 */
 	protected Expression expression;
+
+	/**
+	 * The cached value of the '{@link #getFunctionPlot() <em>Function Plot</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFunctionPlot()
+	 * @generated
+	 * @ordered
+	 */
+	protected FunctionPlot functionPlot;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,6 +152,54 @@ public class FunctionImpl extends ValueImpl implements Function
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public FunctionPlot getFunctionPlot()
+	{
+		return functionPlot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFunctionPlot(FunctionPlot newFunctionPlot, NotificationChain msgs)
+	{
+		FunctionPlot oldFunctionPlot = functionPlot;
+		functionPlot = newFunctionPlot;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ValuesPackage.FUNCTION__FUNCTION_PLOT, oldFunctionPlot, newFunctionPlot);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFunctionPlot(FunctionPlot newFunctionPlot)
+	{
+		if (newFunctionPlot != functionPlot)
+		{
+			NotificationChain msgs = null;
+			if (functionPlot != null)
+				msgs = ((InternalEObject)functionPlot).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.FUNCTION__FUNCTION_PLOT, null, msgs);
+			if (newFunctionPlot != null)
+				msgs = ((InternalEObject)newFunctionPlot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.FUNCTION__FUNCTION_PLOT, null, msgs);
+			msgs = basicSetFunctionPlot(newFunctionPlot, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.FUNCTION__FUNCTION_PLOT, newFunctionPlot, newFunctionPlot));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -149,6 +209,8 @@ public class FunctionImpl extends ValueImpl implements Function
 				return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
 			case ValuesPackage.FUNCTION__EXPRESSION:
 				return basicSetExpression(null, msgs);
+			case ValuesPackage.FUNCTION__FUNCTION_PLOT:
+				return basicSetFunctionPlot(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -167,6 +229,8 @@ public class FunctionImpl extends ValueImpl implements Function
 				return getArguments();
 			case ValuesPackage.FUNCTION__EXPRESSION:
 				return getExpression();
+			case ValuesPackage.FUNCTION__FUNCTION_PLOT:
+				return getFunctionPlot();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -189,6 +253,9 @@ public class FunctionImpl extends ValueImpl implements Function
 			case ValuesPackage.FUNCTION__EXPRESSION:
 				setExpression((Expression)newValue);
 				return;
+			case ValuesPackage.FUNCTION__FUNCTION_PLOT:
+				setFunctionPlot((FunctionPlot)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -209,6 +276,9 @@ public class FunctionImpl extends ValueImpl implements Function
 			case ValuesPackage.FUNCTION__EXPRESSION:
 				setExpression((Expression)null);
 				return;
+			case ValuesPackage.FUNCTION__FUNCTION_PLOT:
+				setFunctionPlot((FunctionPlot)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -227,6 +297,8 @@ public class FunctionImpl extends ValueImpl implements Function
 				return arguments != null && !arguments.isEmpty();
 			case ValuesPackage.FUNCTION__EXPRESSION:
 				return expression != null;
+			case ValuesPackage.FUNCTION__FUNCTION_PLOT:
+				return functionPlot != null;
 		}
 		return super.eIsSet(featureID);
 	}

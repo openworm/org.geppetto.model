@@ -217,11 +217,21 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="dynamics" eType="#//values/Function"
           containment="true"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FunctionPlot">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="xAxisLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="yAxisLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialValue" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="finalValue" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="stepValue" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
           eType="#//values/Argument" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
           eType="#//values/Expression" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="functionPlot" eType="#//values/FunctionPlot"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Argument" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="argument" lowerBound="1"
