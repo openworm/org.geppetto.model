@@ -87,12 +87,12 @@ public interface PointerElement extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Index</em>' attribute.
-	 * @see #setIndex(int)
+	 * @see #setIndex(Integer)
 	 * @see org.geppetto.model.values.ValuesPackage#getPointerElement_Index()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.IntObject"
 	 * @generated
 	 */
-	int getIndex();
+	Integer getIndex();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.values.PointerElement#getIndex <em>Index</em>}' attribute.
@@ -102,6 +102,6 @@ public interface PointerElement extends EObject
 	 * @see #getIndex()
 	 * @generated
 	 */
-	void setIndex(int value);
+	void setIndex(Integer value);
 
 } // PointerElement

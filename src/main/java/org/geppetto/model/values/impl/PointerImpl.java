@@ -83,13 +83,25 @@ public class PointerImpl extends ValueImpl implements Pointer
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getInstancePath()
 	{
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		StringBuilder instancePath=new StringBuilder();
+		for(PointerElement element:getElements())
+		{
+			instancePath.append(element.getVariable().getId());
+			instancePath.append("("+element.getType().getId()+")");
+			if(element.getIndex()!=null)
+			{
+				instancePath.append("["+element.getIndex()+"]");	
+			}			
+			if(getElements().indexOf(element)<(getElements().size()-1))
+			{
+				instancePath.append(".");
+			}
+		}
+		return instancePath.toString();
 	}
 
 	/**

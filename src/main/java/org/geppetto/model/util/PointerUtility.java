@@ -80,6 +80,10 @@ public class PointerUtility
 	{
 		if(!pointer.equals(pointer2))
 		{
+			if(pointer.getElements().size()!=pointer2.getElements().size())
+			{
+				return false;
+			}
 			for(PointerElement pe : pointer.getElements())
 			{
 				PointerElement pe2 = pointer2.getElements().get(pointer.getElements().indexOf(pe));

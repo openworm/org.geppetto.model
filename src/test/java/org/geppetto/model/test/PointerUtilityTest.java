@@ -92,6 +92,29 @@ public class PointerUtilityTest
 		PointerUtility.getPointer(geppettoModel, "addressBook(addressBook)[30].address(address).zone(zone)[4].area(genericParameter)");
 		PointerUtility.getPointer(geppettoModel, "addressBook[30].address.zone[4].area");
 	}
+	
+	/**
+	 * Test method for {@link org.geppetto.model.util.PointerUtility#getPointer(org.geppetto.model.GeppettoModel, java.lang.String)}.
+	 * 
+	 * @throws GeppettoModelException
+	 */
+	@Test
+	public void testEquals() throws GeppettoModelException
+	{
+		Pointer p1=PointerUtility.getPointer(geppettoModel, "addressBook(addressBook)[3].name(genericParameter)");
+		Pointer p2=PointerUtility.getPointer(geppettoModel, "addressBook(addressBook)[3].name(genericParameter)");
+		Assert.assertNotSame(p1, p2);
+		Assert.assertEquals("addressBook(addressBook)[3].name(genericParameter)", p1.getInstancePath());
+		Assert.assertEquals(p1.getInstancePath(), p2.getInstancePath());
+		Assert.assertTrue(PointerUtility.equals(p1, p2));
+		Pointer p3=PointerUtility.getPointer(geppettoModel, "addressBook(addressBook)[3]");
+		Assert.assertNotSame(p1, p3);
+		Assert.assertFalse(PointerUtility.equals(p1, p3));
+		Pointer p4=PointerUtility.getPointer(geppettoModel, "addressBook(addressBook)[3].address(address)");
+		Assert.assertNotSame(p1, p3);
+		Assert.assertFalse(PointerUtility.equals(p1, p4));
+		Assert.assertFalse(PointerUtility.equals(p3, p4));
+	}
 
 	/**
 	 * Test method for {@link org.geppetto.model.util.PointerUtility#getPointer(org.geppetto.model.GeppettoModel, java.lang.String)}.
@@ -198,21 +221,21 @@ public class PointerUtilityTest
 		Assert.assertEquals("addressBook", PointerUtility.getVariable(p).getId());
 		Assert.assertEquals("addressBook", PointerUtility.getVariable(p).getName());
 		Assert.assertEquals("addressBook", PointerUtility.getVariable(p).getTypes().get(0).getId());
-		Assert.assertEquals(6, p.getElements().get(0).getIndex());
+		Assert.assertEquals((Integer)6, p.getElements().get(0).getIndex());
 		p = PointerUtility.getPointer(geppettoModel, "addressBook(addressBook)[30].address(address).zone(zone)[4].area(genericParameter)");
 		Assert.assertEquals("area", PointerUtility.getVariable(p).getId());
 		Assert.assertEquals("area", PointerUtility.getVariable(p).getName());
 		Assert.assertEquals("genericParameter", PointerUtility.getVariable(p).getTypes().get(0).getId());
-		Assert.assertEquals(30, p.getElements().get(0).getIndex());
-		Assert.assertEquals(0, p.getElements().get(1).getIndex());
-		Assert.assertEquals(4, p.getElements().get(2).getIndex());
+		Assert.assertEquals((Integer)30, p.getElements().get(0).getIndex());
+		Assert.assertEquals(null, p.getElements().get(1).getIndex());
+		Assert.assertEquals((Integer)4, p.getElements().get(2).getIndex());
 		p = PointerUtility.getPointer(geppettoModel, "addressBook[30].address.zone[4].area");
 		Assert.assertEquals("area", PointerUtility.getVariable(p).getId());
 		Assert.assertEquals("area", PointerUtility.getVariable(p).getName());
 		Assert.assertEquals("genericParameter", PointerUtility.getVariable(p).getTypes().get(0).getId());
-		Assert.assertEquals(30, p.getElements().get(0).getIndex());
-		Assert.assertEquals(0, p.getElements().get(1).getIndex());
-		Assert.assertEquals(4, p.getElements().get(2).getIndex());
+		Assert.assertEquals((Integer)30, p.getElements().get(0).getIndex());
+		Assert.assertEquals(null, p.getElements().get(1).getIndex());
+		Assert.assertEquals((Integer)4, p.getElements().get(2).getIndex());
 	}
 
 	/**
@@ -232,7 +255,7 @@ public class PointerUtilityTest
 		p = PointerUtility.getPointer(geppettoModel, "addressBook[6]");
 		Assert.assertEquals("addressBook", PointerUtility.getType(p).getId());
 		Assert.assertEquals("addressBook", PointerUtility.getType(p).getName());
-		Assert.assertEquals(6, p.getElements().get(0).getIndex());
+		Assert.assertEquals((Integer)6, p.getElements().get(0).getIndex());
 		p = PointerUtility.getPointer(geppettoModel, "addressBook(addressBook)[30].address(address).zone(zone)[4].area(genericParameter)");
 		Assert.assertEquals("genericParameter", PointerUtility.getType(p).getId());
 		Assert.assertEquals("genericParameter", PointerUtility.getType(p).getName());

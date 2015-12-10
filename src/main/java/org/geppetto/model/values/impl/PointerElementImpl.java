@@ -57,7 +57,7 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int INDEX_EDEFAULT = 0;
+	protected static final Integer INDEX_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getIndex() <em>Index</em>}' attribute.
@@ -67,7 +67,7 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected int index = INDEX_EDEFAULT;
+	protected Integer index = INDEX_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,7 +181,7 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIndex()
+	public Integer getIndex()
 	{
 		return index;
 	}
@@ -191,9 +191,9 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIndex(int newIndex)
+	public void setIndex(Integer newIndex)
 	{
-		int oldIndex = index;
+		Integer oldIndex = index;
 		index = newIndex;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER_ELEMENT__INDEX, oldIndex, index));
@@ -282,7 +282,7 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 			case ValuesPackage.POINTER_ELEMENT__TYPE:
 				return type != null;
 			case ValuesPackage.POINTER_ELEMENT__INDEX:
-				return index != INDEX_EDEFAULT;
+				return INDEX_EDEFAULT == null ? index != null : !INDEX_EDEFAULT.equals(index);
 		}
 		return super.eIsSet(featureID);
 	}
