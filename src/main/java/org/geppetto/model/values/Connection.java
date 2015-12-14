@@ -4,8 +4,6 @@ package org.geppetto.model.values;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.geppetto.model.types.ConnectionType;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Connection</b></em>'.
@@ -16,7 +14,7 @@ import org.geppetto.model.types.ConnectionType;
  * <ul>
  *   <li>{@link org.geppetto.model.values.Connection#getA <em>A</em>}</li>
  *   <li>{@link org.geppetto.model.values.Connection#getB <em>B</em>}</li>
- *   <li>{@link org.geppetto.model.values.Connection#getType <em>Type</em>}</li>
+ *   <li>{@link org.geppetto.model.values.Connection#getConnectivity <em>Connectivity</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,29 +57,32 @@ public interface Connection extends Value
 	EList<Pointer> getB();
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Connectivity</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.geppetto.model.values.Connectivity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Connectivity</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' containment reference.
-	 * @see #setType(ConnectionType)
-	 * @see org.geppetto.model.values.ValuesPackage#getConnection_Type()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Connectivity</em>' attribute.
+	 * @see org.geppetto.model.values.Connectivity
+	 * @see #setConnectivity(Connectivity)
+	 * @see org.geppetto.model.values.ValuesPackage#getConnection_Connectivity()
+	 * @model
 	 * @generated
 	 */
-	ConnectionType getType();
+	Connectivity getConnectivity();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.values.Connection#getType <em>Type</em>}' containment reference.
+	 * Sets the value of the '{@link org.geppetto.model.values.Connection#getConnectivity <em>Connectivity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' containment reference.
-	 * @see #getType()
+	 * @param value the new value of the '<em>Connectivity</em>' attribute.
+	 * @see org.geppetto.model.values.Connectivity
+	 * @see #getConnectivity()
 	 * @generated
 	 */
-	void setType(ConnectionType value);
+	void setConnectivity(Connectivity value);
 
 } // Connection

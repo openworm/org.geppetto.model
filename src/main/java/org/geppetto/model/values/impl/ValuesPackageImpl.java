@@ -21,7 +21,7 @@ import org.geppetto.model.values.ArrayValue;
 import org.geppetto.model.values.Collada;
 import org.geppetto.model.values.Composite;
 import org.geppetto.model.values.Connection;
-import org.geppetto.model.values.ConnectionType;
+import org.geppetto.model.values.Connectivity;
 import org.geppetto.model.values.Cylinder;
 import org.geppetto.model.values.Dynamics;
 import org.geppetto.model.values.Expression;
@@ -286,7 +286,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum connectionTypeEEnum = null;
+	private EEnum connectivityEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1190,9 +1190,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_Type()
+	public EAttribute getConnection_Connectivity()
 	{
-		return (EReference)connectionEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)connectionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1260,9 +1260,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getConnectionType()
+	public EEnum getConnectivity()
 	{
-		return connectionTypeEEnum;
+		return connectivityEEnum;
 	}
 
 	/**
@@ -1406,7 +1406,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		connectionEClass = createEClass(CONNECTION);
 		createEReference(connectionEClass, CONNECTION__A);
 		createEReference(connectionEClass, CONNECTION__B);
-		createEReference(connectionEClass, CONNECTION__TYPE);
+		createEAttribute(connectionEClass, CONNECTION__CONNECTIVITY);
 
 		arrayElementEClass = createEClass(ARRAY_ELEMENT);
 		createEAttribute(arrayElementEClass, ARRAY_ELEMENT__INDEX);
@@ -1417,7 +1417,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEReference(arrayValueEClass, ARRAY_VALUE__ELEMENTS);
 
 		// Create enums
-		connectionTypeEEnum = createEEnum(CONNECTION_TYPE);
+		connectivityEEnum = createEEnum(CONNECTIVITY);
 	}
 
 	/**
@@ -1597,7 +1597,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnection_A(), this.getPointer(), null, "a", null, 1, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_B(), this.getPointer(), null, "b", null, 1, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnection_Type(), theTypesPackage.getConnectionType(), null, "type", null, 1, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConnection_Connectivity(), this.getConnectivity(), "connectivity", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arrayElementEClass, ArrayElement.class, "ArrayElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArrayElement_Index(), theXMLTypePackage.getInt(), "index", null, 1, 1, ArrayElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1608,10 +1608,10 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEReference(getArrayValue_Elements(), this.getArrayElement(), null, "elements", null, 1, -1, ArrayValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(connectionTypeEEnum, ConnectionType.class, "ConnectionType");
-		addEEnumLiteral(connectionTypeEEnum, ConnectionType.DIRECTIONAL);
-		addEEnumLiteral(connectionTypeEEnum, ConnectionType.BIDIRECTIONAL);
-		addEEnumLiteral(connectionTypeEEnum, ConnectionType.NON_DIRECTIONAL);
+		initEEnum(connectivityEEnum, Connectivity.class, "Connectivity");
+		addEEnumLiteral(connectivityEEnum, Connectivity.DIRECTIONAL);
+		addEEnumLiteral(connectivityEEnum, Connectivity.BIDIRECTIONAL);
+		addEEnumLiteral(connectivityEEnum, Connectivity.NON_DIRECTIONAL);
 	}
 
 } //ValuesPackageImpl

@@ -3,23 +3,16 @@
 package org.geppetto.model.values.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.geppetto.model.types.ConnectionType;
-
 import org.geppetto.model.values.Connection;
+import org.geppetto.model.values.Connectivity;
 import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.ValuesPackage;
 
@@ -32,7 +25,7 @@ import org.geppetto.model.values.ValuesPackage;
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.ConnectionImpl#getA <em>A</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ConnectionImpl#getB <em>B</em>}</li>
- *   <li>{@link org.geppetto.model.values.impl.ConnectionImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.ConnectionImpl#getConnectivity <em>Connectivity</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,14 +54,24 @@ public class ConnectionImpl extends ValueImpl implements Connection
 	protected EList<Pointer> b;
 
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+	 * The default value of the '{@link #getConnectivity() <em>Connectivity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getConnectivity()
 	 * @generated
 	 * @ordered
 	 */
-	protected ConnectionType type;
+	protected static final Connectivity CONNECTIVITY_EDEFAULT = Connectivity.DIRECTIONAL;
+
+	/**
+	 * The cached value of the '{@link #getConnectivity() <em>Connectivity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnectivity()
+	 * @generated
+	 * @ordered
+	 */
+	protected Connectivity connectivity = CONNECTIVITY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,9 +127,9 @@ public class ConnectionImpl extends ValueImpl implements Connection
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConnectionType getType()
+	public Connectivity getConnectivity()
 	{
-		return type;
+		return connectivity;
 	}
 
 	/**
@@ -134,37 +137,12 @@ public class ConnectionImpl extends ValueImpl implements Connection
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(ConnectionType newType, NotificationChain msgs)
+	public void setConnectivity(Connectivity newConnectivity)
 	{
-		ConnectionType oldType = type;
-		type = newType;
+		Connectivity oldConnectivity = connectivity;
+		connectivity = newConnectivity == null ? CONNECTIVITY_EDEFAULT : newConnectivity;
 		if (eNotificationRequired())
-		{
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ValuesPackage.CONNECTION__TYPE, oldType, newType);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(ConnectionType newType)
-	{
-		if (newType != type)
-		{
-			NotificationChain msgs = null;
-			if (type != null)
-				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.CONNECTION__TYPE, null, msgs);
-			if (newType != null)
-				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.CONNECTION__TYPE, null, msgs);
-			msgs = basicSetType(newType, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CONNECTION__TYPE, newType, newType));
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.CONNECTION__CONNECTIVITY, oldConnectivity, connectivity));
 	}
 
 	/**
@@ -181,8 +159,6 @@ public class ConnectionImpl extends ValueImpl implements Connection
 				return ((InternalEList<?>)getA()).basicRemove(otherEnd, msgs);
 			case ValuesPackage.CONNECTION__B:
 				return ((InternalEList<?>)getB()).basicRemove(otherEnd, msgs);
-			case ValuesPackage.CONNECTION__TYPE:
-				return basicSetType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -201,8 +177,8 @@ public class ConnectionImpl extends ValueImpl implements Connection
 				return getA();
 			case ValuesPackage.CONNECTION__B:
 				return getB();
-			case ValuesPackage.CONNECTION__TYPE:
-				return getType();
+			case ValuesPackage.CONNECTION__CONNECTIVITY:
+				return getConnectivity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -226,8 +202,8 @@ public class ConnectionImpl extends ValueImpl implements Connection
 				getB().clear();
 				getB().addAll((Collection<? extends Pointer>)newValue);
 				return;
-			case ValuesPackage.CONNECTION__TYPE:
-				setType((ConnectionType)newValue);
+			case ValuesPackage.CONNECTION__CONNECTIVITY:
+				setConnectivity((Connectivity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -249,8 +225,8 @@ public class ConnectionImpl extends ValueImpl implements Connection
 			case ValuesPackage.CONNECTION__B:
 				getB().clear();
 				return;
-			case ValuesPackage.CONNECTION__TYPE:
-				setType((ConnectionType)null);
+			case ValuesPackage.CONNECTION__CONNECTIVITY:
+				setConnectivity(CONNECTIVITY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -270,10 +246,27 @@ public class ConnectionImpl extends ValueImpl implements Connection
 				return a != null && !a.isEmpty();
 			case ValuesPackage.CONNECTION__B:
 				return b != null && !b.isEmpty();
-			case ValuesPackage.CONNECTION__TYPE:
-				return type != null;
+			case ValuesPackage.CONNECTION__CONNECTIVITY:
+				return connectivity != CONNECTIVITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString()
+	{
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (connectivity: ");
+		result.append(connectivity);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ConnectionImpl

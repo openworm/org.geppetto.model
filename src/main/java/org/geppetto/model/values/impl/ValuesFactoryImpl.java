@@ -107,8 +107,8 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		switch (eDataType.getClassifierID())
 		{
-			case ValuesPackage.CONNECTION_TYPE:
-				return createConnectionTypeFromString(eDataType, initialValue);
+			case ValuesPackage.CONNECTIVITY:
+				return createConnectivityFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -124,8 +124,8 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		switch (eDataType.getClassifierID())
 		{
-			case ValuesPackage.CONNECTION_TYPE:
-				return convertConnectionTypeToString(eDataType, instanceValue);
+			case ValuesPackage.CONNECTIVITY:
+				return convertConnectivityToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -455,9 +455,9 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConnectionType createConnectionTypeFromString(EDataType eDataType, String initialValue)
+	public Connectivity createConnectivityFromString(EDataType eDataType, String initialValue)
 	{
-		ConnectionType result = ConnectionType.get(initialValue);
+		Connectivity result = Connectivity.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -467,7 +467,7 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertConnectionTypeToString(EDataType eDataType, Object instanceValue)
+	public String convertConnectivityToString(EDataType eDataType, Object instanceValue)
 	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}

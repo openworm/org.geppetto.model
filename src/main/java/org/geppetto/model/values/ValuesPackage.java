@@ -1579,13 +1579,13 @@ public interface ValuesPackage extends EPackage
 	int CONNECTION__B = VALUE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * The feature id for the '<em><b>Connectivity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__TYPE = VALUE_FEATURE_COUNT + 2;
+	int CONNECTION__CONNECTIVITY = VALUE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Connection</em>' class.
@@ -1698,15 +1698,14 @@ public interface ValuesPackage extends EPackage
 	int ARRAY_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.values.ConnectionType <em>Connection Type</em>}' enum.
+	 * The meta object id for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.values.ConnectionType
-	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectionType()
+	 * @see org.geppetto.model.values.Connectivity
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectivity()
 	 * @generated
 	 */
-	int CONNECTION_TYPE = 32;
-
+	int CONNECTIVITY = 32;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Value <em>Value</em>}'.
@@ -2582,15 +2581,15 @@ public interface ValuesPackage extends EPackage
 	EReference getConnection_B();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Connection#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Connection#getConnectivity <em>Connectivity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.geppetto.model.values.Connection#getType()
+	 * @return the meta object for the attribute '<em>Connectivity</em>'.
+	 * @see org.geppetto.model.values.Connection#getConnectivity()
 	 * @see #getConnection()
 	 * @generated
 	 */
-	EReference getConnection_Type();
+	EAttribute getConnection_Connectivity();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.ArrayElement <em>Array Element</em>}'.
@@ -2657,14 +2656,14 @@ public interface ValuesPackage extends EPackage
 	EReference getArrayValue_Elements();
 
 	/**
-	 * Returns the meta object for enum '{@link org.geppetto.model.values.ConnectionType <em>Connection Type</em>}'.
+	 * Returns the meta object for enum '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Connection Type</em>'.
-	 * @see org.geppetto.model.values.ConnectionType
+	 * @return the meta object for enum '<em>Connectivity</em>'.
+	 * @see org.geppetto.model.values.Connectivity
 	 * @generated
 	 */
-	EEnum getConnectionType();
+	EEnum getConnectivity();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3407,12 +3406,12 @@ public interface ValuesPackage extends EPackage
 		EReference CONNECTION__B = eINSTANCE.getConnection_B();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Connectivity</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONNECTION__TYPE = eINSTANCE.getConnection_Type();
+		EAttribute CONNECTION__CONNECTIVITY = eINSTANCE.getConnection_Connectivity();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ArrayElementImpl <em>Array Element</em>}' class.
@@ -3467,14 +3466,14 @@ public interface ValuesPackage extends EPackage
 		EReference ARRAY_VALUE__ELEMENTS = eINSTANCE.getArrayValue_Elements();
 
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.values.ConnectionType <em>Connection Type</em>}' enum.
+		 * The meta object literal for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.values.ConnectionType
-		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectionType()
+		 * @see org.geppetto.model.values.Connectivity
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectivity()
 		 * @generated
 		 */
-		EEnum CONNECTION_TYPE = eINSTANCE.getConnectionType();
+		EEnum CONNECTIVITY = eINSTANCE.getConnectivity();
 
 	}
 

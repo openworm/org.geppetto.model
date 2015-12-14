@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Connection Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Connectivity</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.geppetto.model.values.ValuesPackage#getConnectionType()
+ * @see org.geppetto.model.values.ValuesPackage#getConnectivity()
  * @model
  * @generated
  */
-public enum ConnectionType implements Enumerator
+public enum Connectivity implements Enumerator
 {
 	/**
 	 * The '<em><b>DIRECTIONAL</b></em>' literal object.
@@ -95,13 +95,13 @@ public enum ConnectionType implements Enumerator
 	public static final int NON_DIRECTIONAL_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>Connection Type</b></em>' enumerators.
+	 * An array of all the '<em><b>Connectivity</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ConnectionType[] VALUES_ARRAY =
-		new ConnectionType[]
+	private static final Connectivity[] VALUES_ARRAY =
+		new Connectivity[]
 		{
 			DIRECTIONAL,
 			BIDIRECTIONAL,
@@ -109,24 +109,24 @@ public enum ConnectionType implements Enumerator
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Connection Type</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Connectivity</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<ConnectionType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<Connectivity> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Connection Type</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Connectivity</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ConnectionType get(String literal)
+	public static Connectivity get(String literal)
 	{
 		for (int i = 0; i < VALUES_ARRAY.length; ++i)
 		{
-			ConnectionType result = VALUES_ARRAY[i];
+			Connectivity result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal))
 			{
 				return result;
@@ -136,16 +136,16 @@ public enum ConnectionType implements Enumerator
 	}
 
 	/**
-	 * Returns the '<em><b>Connection Type</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Connectivity</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ConnectionType getByName(String name)
+	public static Connectivity getByName(String name)
 	{
 		for (int i = 0; i < VALUES_ARRAY.length; ++i)
 		{
-			ConnectionType result = VALUES_ARRAY[i];
+			Connectivity result = VALUES_ARRAY[i];
 			if (result.getName().equals(name))
 			{
 				return result;
@@ -155,12 +155,12 @@ public enum ConnectionType implements Enumerator
 	}
 
 	/**
-	 * Returns the '<em><b>Connection Type</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Connectivity</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ConnectionType get(int value)
+	public static Connectivity get(int value)
 	{
 		switch (value)
 		{
@@ -198,7 +198,7 @@ public enum ConnectionType implements Enumerator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private ConnectionType(int value, String name, String literal)
+	private Connectivity(int value, String name, String literal)
 	{
 		this.value = value;
 		this.name = name;
@@ -247,4 +247,4 @@ public enum ConnectionType implements Enumerator
 		return literal;
 	}
 	
-} //ConnectionType
+} //Connectivity

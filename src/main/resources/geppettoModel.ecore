@@ -299,10 +299,9 @@
           eType="#//values/Pointer" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="b" lowerBound="1" upperBound="-1"
           eType="#//values/Pointer" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
-          eType="#//types/ConnectionType" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="connectivity" eType="#//values/Connectivity"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="ConnectionType">
+    <eClassifiers xsi:type="ecore:EEnum" name="Connectivity">
       <eLiterals name="DIRECTIONAL"/>
       <eLiterals name="BIDIRECTIONAL" value="1"/>
       <eLiterals name="NON_DIRECTIONAL" value="2"/>
