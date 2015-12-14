@@ -18,6 +18,25 @@ public class PointerUtility
 {
 
 	/**
+	 * @param variable
+	 * @param type
+	 * @param index
+	 * @return 
+	 */
+	public static Pointer getPointer(Variable variable, Type type, Integer index){
+		Pointer pointer = ValuesFactory.eINSTANCE.createPointer();
+		
+		PointerElement pointerElement = ValuesFactory.eINSTANCE.createPointerElement();
+		pointerElement.setIndex(index);
+		pointerElement.setVariable(variable);
+		pointerElement.setType(type);
+		
+		pointer.getElements().add(pointerElement);
+		
+		return pointer;
+	}
+	
+	/**
 	 * @param model
 	 * @param instancePath
 	 * @return
