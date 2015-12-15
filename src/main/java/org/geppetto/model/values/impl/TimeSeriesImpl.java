@@ -3,20 +3,13 @@
 package org.geppetto.model.values.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import org.geppetto.model.values.Quantity;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.geppetto.model.values.TimeSeries;
 import org.geppetto.model.values.Unit;
 import org.geppetto.model.values.ValuesPackage;
@@ -28,8 +21,9 @@ import org.geppetto.model.values.ValuesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.values.impl.TimeSeriesImpl#getQuantities <em>Quantities</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.TimeSeriesImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.TimeSeriesImpl#getScalingFactor <em>Scaling Factor</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.TimeSeriesImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,16 +31,6 @@ import org.geppetto.model.values.ValuesPackage;
  */
 public class TimeSeriesImpl extends ValueImpl implements TimeSeries
 {
-	/**
-	 * The cached value of the '{@link #getQuantities() <em>Quantities</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getQuantities()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Quantity> quantities;
-
 	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -56,6 +40,36 @@ public class TimeSeriesImpl extends ValueImpl implements TimeSeries
 	 * @ordered
 	 */
 	protected Unit unit;
+
+	/**
+	 * The default value of the '{@link #getScalingFactor() <em>Scaling Factor</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScalingFactor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SCALING_FACTOR_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getScalingFactor() <em>Scaling Factor</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScalingFactor()
+	 * @generated
+	 * @ordered
+	 */
+	protected int scalingFactor = SCALING_FACTOR_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Double> value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,20 +90,6 @@ public class TimeSeriesImpl extends ValueImpl implements TimeSeries
 	protected EClass eStaticClass()
 	{
 		return ValuesPackage.Literals.TIME_SERIES;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Quantity> getQuantities()
-	{
-		if (quantities == null)
-		{
-			quantities = new EObjectResolvingEList<Quantity>(Quantity.class, this, ValuesPackage.TIME_SERIES__QUANTITIES);
-		}
-		return quantities;
 	}
 
 	/**
@@ -145,6 +145,43 @@ public class TimeSeriesImpl extends ValueImpl implements TimeSeries
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getScalingFactor()
+	{
+		return scalingFactor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScalingFactor(int newScalingFactor)
+	{
+		int oldScalingFactor = scalingFactor;
+		scalingFactor = newScalingFactor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.TIME_SERIES__SCALING_FACTOR, oldScalingFactor, scalingFactor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Double> getValue()
+	{
+		if (value == null)
+		{
+			value = new EDataTypeEList<Double>(Double.class, this, ValuesPackage.TIME_SERIES__VALUE);
+		}
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -166,10 +203,12 @@ public class TimeSeriesImpl extends ValueImpl implements TimeSeries
 	{
 		switch (featureID)
 		{
-			case ValuesPackage.TIME_SERIES__QUANTITIES:
-				return getQuantities();
 			case ValuesPackage.TIME_SERIES__UNIT:
 				return getUnit();
+			case ValuesPackage.TIME_SERIES__SCALING_FACTOR:
+				return getScalingFactor();
+			case ValuesPackage.TIME_SERIES__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -185,12 +224,15 @@ public class TimeSeriesImpl extends ValueImpl implements TimeSeries
 	{
 		switch (featureID)
 		{
-			case ValuesPackage.TIME_SERIES__QUANTITIES:
-				getQuantities().clear();
-				getQuantities().addAll((Collection<? extends Quantity>)newValue);
-				return;
 			case ValuesPackage.TIME_SERIES__UNIT:
 				setUnit((Unit)newValue);
+				return;
+			case ValuesPackage.TIME_SERIES__SCALING_FACTOR:
+				setScalingFactor((Integer)newValue);
+				return;
+			case ValuesPackage.TIME_SERIES__VALUE:
+				getValue().clear();
+				getValue().addAll((Collection<? extends Double>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -206,11 +248,14 @@ public class TimeSeriesImpl extends ValueImpl implements TimeSeries
 	{
 		switch (featureID)
 		{
-			case ValuesPackage.TIME_SERIES__QUANTITIES:
-				getQuantities().clear();
-				return;
 			case ValuesPackage.TIME_SERIES__UNIT:
 				setUnit((Unit)null);
+				return;
+			case ValuesPackage.TIME_SERIES__SCALING_FACTOR:
+				setScalingFactor(SCALING_FACTOR_EDEFAULT);
+				return;
+			case ValuesPackage.TIME_SERIES__VALUE:
+				getValue().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -226,12 +271,33 @@ public class TimeSeriesImpl extends ValueImpl implements TimeSeries
 	{
 		switch (featureID)
 		{
-			case ValuesPackage.TIME_SERIES__QUANTITIES:
-				return quantities != null && !quantities.isEmpty();
 			case ValuesPackage.TIME_SERIES__UNIT:
 				return unit != null;
+			case ValuesPackage.TIME_SERIES__SCALING_FACTOR:
+				return scalingFactor != SCALING_FACTOR_EDEFAULT;
+			case ValuesPackage.TIME_SERIES__VALUE:
+				return value != null && !value.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString()
+	{
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (scalingFactor: ");
+		result.append(scalingFactor);
+		result.append(", value: ");
+		result.append(value);
+		result.append(')');
+		return result.toString();
 	}
 
 } //TimeSeriesImpl

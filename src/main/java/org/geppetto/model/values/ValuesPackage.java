@@ -320,22 +320,31 @@ public interface ValuesPackage extends EPackage
 	int TIME_SERIES = 6;
 
 	/**
-	 * The feature id for the '<em><b>Quantities</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME_SERIES__QUANTITIES = VALUE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SERIES__UNIT = VALUE_FEATURE_COUNT + 1;
+	int TIME_SERIES__UNIT = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Scaling Factor</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SERIES__SCALING_FACTOR = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SERIES__VALUE = VALUE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Time Series</em>' class.
@@ -344,7 +353,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SERIES_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
+	int TIME_SERIES_FEATURE_COUNT = VALUE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Time Series</em>' class.
@@ -1857,17 +1866,6 @@ public interface ValuesPackage extends EPackage
 	EClass getTimeSeries();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.geppetto.model.values.TimeSeries#getQuantities <em>Quantities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Quantities</em>'.
-	 * @see org.geppetto.model.values.TimeSeries#getQuantities()
-	 * @see #getTimeSeries()
-	 * @generated
-	 */
-	EReference getTimeSeries_Quantities();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.TimeSeries#getUnit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1877,6 +1875,28 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EReference getTimeSeries_Unit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.TimeSeries#getScalingFactor <em>Scaling Factor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Scaling Factor</em>'.
+	 * @see org.geppetto.model.values.TimeSeries#getScalingFactor()
+	 * @see #getTimeSeries()
+	 * @generated
+	 */
+	EAttribute getTimeSeries_ScalingFactor();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.geppetto.model.values.TimeSeries#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see org.geppetto.model.values.TimeSeries#getValue()
+	 * @see #getTimeSeries()
+	 * @generated
+	 */
+	EAttribute getTimeSeries_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.MetadataValue <em>Metadata Value</em>}'.
@@ -2816,20 +2836,28 @@ public interface ValuesPackage extends EPackage
 		EClass TIME_SERIES = eINSTANCE.getTimeSeries();
 
 		/**
-		 * The meta object literal for the '<em><b>Quantities</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TIME_SERIES__QUANTITIES = eINSTANCE.getTimeSeries_Quantities();
-
-		/**
 		 * The meta object literal for the '<em><b>Unit</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TIME_SERIES__UNIT = eINSTANCE.getTimeSeries_Unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Scaling Factor</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TIME_SERIES__SCALING_FACTOR = eINSTANCE.getTimeSeries_ScalingFactor();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TIME_SERIES__VALUE = eINSTANCE.getTimeSeries_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.MetadataValueImpl <em>Metadata Value</em>}' class.

@@ -12,8 +12,9 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.values.TimeSeries#getQuantities <em>Quantities</em>}</li>
  *   <li>{@link org.geppetto.model.values.TimeSeries#getUnit <em>Unit</em>}</li>
+ *   <li>{@link org.geppetto.model.values.TimeSeries#getScalingFactor <em>Scaling Factor</em>}</li>
+ *   <li>{@link org.geppetto.model.values.TimeSeries#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,22 +24,6 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface TimeSeries extends Value
 {
-	/**
-	 * Returns the value of the '<em><b>Quantities</b></em>' reference list.
-	 * The list contents are of type {@link org.geppetto.model.values.Quantity}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Quantities</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quantities</em>' reference list.
-	 * @see org.geppetto.model.values.ValuesPackage#getTimeSeries_Quantities()
-	 * @model
-	 * @generated
-	 */
-	EList<Quantity> getQuantities();
-
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -64,5 +49,47 @@ public interface TimeSeries extends Value
 	 * @generated
 	 */
 	void setUnit(Unit value);
+
+	/**
+	 * Returns the value of the '<em><b>Scaling Factor</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Scaling Factor</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Scaling Factor</em>' attribute.
+	 * @see #setScalingFactor(int)
+	 * @see org.geppetto.model.values.ValuesPackage#getTimeSeries_ScalingFactor()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @generated
+	 */
+	int getScalingFactor();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.values.TimeSeries#getScalingFactor <em>Scaling Factor</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Scaling Factor</em>' attribute.
+	 * @see #getScalingFactor()
+	 * @generated
+	 */
+	void setScalingFactor(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Double}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' attribute list.
+	 * @see org.geppetto.model.values.ValuesPackage#getTimeSeries_Value()
+	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.Double"
+	 * @generated
+	 */
+	EList<Double> getValue();
 
 } // TimeSeries

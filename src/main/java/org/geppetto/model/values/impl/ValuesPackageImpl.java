@@ -510,7 +510,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTimeSeries_Quantities()
+	public EReference getTimeSeries_Unit()
 	{
 		return (EReference)timeSeriesEClass.getEStructuralFeatures().get(0);
 	}
@@ -520,9 +520,19 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTimeSeries_Unit()
+	public EAttribute getTimeSeries_ScalingFactor()
 	{
-		return (EReference)timeSeriesEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)timeSeriesEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTimeSeries_Value()
+	{
+		return (EAttribute)timeSeriesEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1315,8 +1325,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEAttribute(unitEClass, UNIT__UNIT);
 
 		timeSeriesEClass = createEClass(TIME_SERIES);
-		createEReference(timeSeriesEClass, TIME_SERIES__QUANTITIES);
 		createEReference(timeSeriesEClass, TIME_SERIES__UNIT);
+		createEAttribute(timeSeriesEClass, TIME_SERIES__SCALING_FACTOR);
+		createEAttribute(timeSeriesEClass, TIME_SERIES__VALUE);
 
 		metadataValueEClass = createEClass(METADATA_VALUE);
 
@@ -1505,8 +1516,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEAttribute(getUnit_Unit(), theXMLTypePackage.getString(), "unit", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timeSeriesEClass, TimeSeries.class, "TimeSeries", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTimeSeries_Quantities(), this.getQuantity(), null, "quantities", null, 0, -1, TimeSeries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTimeSeries_Unit(), this.getUnit(), null, "unit", null, 0, 1, TimeSeries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTimeSeries_ScalingFactor(), theXMLTypePackage.getInt(), "scalingFactor", null, 0, 1, TimeSeries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTimeSeries_Value(), theXMLTypePackage.getDouble(), "value", null, 0, -1, TimeSeries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(metadataValueEClass, MetadataValue.class, "MetadataValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

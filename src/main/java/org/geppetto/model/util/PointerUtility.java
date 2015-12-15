@@ -21,21 +21,22 @@ public class PointerUtility
 	 * @param variable
 	 * @param type
 	 * @param index
-	 * @return 
+	 * @return
 	 */
-	public static Pointer getPointer(Variable variable, Type type, Integer index){
+	public static Pointer getPointer(Variable variable, Type type, Integer index)
+	{
 		Pointer pointer = ValuesFactory.eINSTANCE.createPointer();
-		
+
 		PointerElement pointerElement = ValuesFactory.eINSTANCE.createPointerElement();
 		pointerElement.setIndex(index);
 		pointerElement.setVariable(variable);
 		pointerElement.setType(type);
-		
+
 		pointer.getElements().add(pointerElement);
-		
+
 		return pointer;
 	}
-	
+
 	/**
 	 * @param model
 	 * @param instancePath
@@ -99,14 +100,14 @@ public class PointerUtility
 	{
 		if(!pointer.equals(pointer2))
 		{
-			if(pointer.getElements().size()!=pointer2.getElements().size())
+			if(pointer.getElements().size() != pointer2.getElements().size())
 			{
 				return false;
 			}
 			for(PointerElement pe : pointer.getElements())
 			{
 				PointerElement pe2 = pointer2.getElements().get(pointer.getElements().indexOf(pe));
-				if(pe2==null || !equals(pe, pe2))
+				if(pe2 == null || !equals(pe, pe2))
 				{
 					return false;
 				}
@@ -150,9 +151,20 @@ public class PointerUtility
 	public static GeppettoLibrary getGeppettoLibrary(Pointer pointer)
 	{
 		Type type = getType(pointer);
+		// In case it's an anonymous type it won't be contained inside a library
 		while(!(type.eContainer() instanceof GeppettoLibrary))
 		{
 			type = (Type) type.eContainer().eContainer();
+		}
+		// if it's the common library we move up until we find the type that contains it
+		if(((GeppettoLibrary) type.eContainer()).getId().equals("common"))
+		{
+			Variable var = getVariable(pointer);
+			type = (Type) var.eContainer();
+			while(!(type.eContainer() instanceof GeppettoLibrary))
+			{
+				type = (Type) type.eContainer().eContainer();
+			}
 		}
 		return (GeppettoLibrary) type.eContainer();
 	}
