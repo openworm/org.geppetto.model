@@ -208,6 +208,14 @@ public class PointerUtility
 					return t;
 				}
 			}
+			for(Type t : variable.getAnonymousTypes())
+			{
+				if(t.getId().equals(type))
+				{
+					return t;
+				}
+			}
+			
 			throw new GeppettoModelException("The type " + type + " was not found in the variable " + variable.getId());
 		}
 	}
