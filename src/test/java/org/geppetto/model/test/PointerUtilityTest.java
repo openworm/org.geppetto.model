@@ -46,7 +46,7 @@ import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.util.GeppettoModelException;
 import org.geppetto.model.util.PointerUtility;
 import org.geppetto.model.values.Pointer;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -60,10 +60,10 @@ public class PointerUtilityTest
 	@Rule
 	public final ExpectedException exception = ExpectedException.none();
 
-	private GeppettoModel geppettoModel;
+	private static GeppettoModel geppettoModel;
 
-	@Before
-	public void setUp() throws Exception
+	@BeforeClass
+	public static void setUp() throws Exception
 	{
 		// Initialize the factory and the resource set
 		GeppettoPackage.eINSTANCE.eClass();
@@ -73,8 +73,9 @@ public class PointerUtilityTest
 		ResourceSet resSet = new ResourceSetImpl();
 
 		// How to read
-		Resource resource = resSet.getResource(URI.createURI("./src/test/resources/GeppettoModelTest2.xmi"), true);
-		this.geppettoModel = (GeppettoModel) resource.getContents().get(0);
+		Resource resource = resSet.createResource(URI.createURI("/GeppettoModelTest2.xmi"));
+		resource.load(PointerUtilityTest.class.getResourceAsStream("/GeppettoModelTest2.xmi"),null);
+		geppettoModel = (GeppettoModel) resource.getContents().get(0);
 	}
 
 	/**

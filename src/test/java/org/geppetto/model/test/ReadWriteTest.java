@@ -72,7 +72,8 @@ public class ReadWriteTest
 		ResourceSet resSet = new ResourceSetImpl();
 
 		// How to read
-		Resource resource = resSet.getResource(URI.createURI("./src/test/resources/GeppettoModelTest.xmi"), true);
+		Resource resource = resSet.createResource(URI.createURI("/GeppettoModelTest.xmi"));
+		resource.load(ReadWriteTest.class.getResourceAsStream("/GeppettoModelTest.xmi"),null);
 		GeppettoModel geppettoModel = (GeppettoModel) resource.getContents().get(0);
 
 		// How to visit
