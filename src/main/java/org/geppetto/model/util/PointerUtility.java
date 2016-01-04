@@ -256,7 +256,7 @@ public class PointerUtility
 	 * @param token
 	 * @return
 	 */
-	private static String getType(String token)
+	public static String getType(String token)
 	{
 		if(token.contains("("))
 		{
@@ -272,7 +272,7 @@ public class PointerUtility
 	 * @param token
 	 * @return
 	 */
-	private static String getVariable(String token)
+	public static String getVariable(String token)
 	{
 		if(token.contains("("))
 		{
@@ -292,7 +292,7 @@ public class PointerUtility
 	 * @param token
 	 * @return
 	 */
-	private static Integer getIndex(String token)
+	public static Integer getIndex(String token)
 	{
 		if(token.contains("["))
 		{
