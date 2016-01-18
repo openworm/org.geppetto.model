@@ -33,7 +33,6 @@ public class PointerUtility
 		pointerElement.setType(type);
 
 		pointer.getElements().add(pointerElement);
-
 		return pointer;
 	}
 
@@ -302,6 +301,15 @@ public class PointerUtility
 		{
 			return null;
 		}
+	}
+
+	/**
+	 * @param path
+	 * @return
+	 */
+	public static String getPathWithoutTypes(String path)
+	{
+		return path.replaceAll("\\([^)]*\\)", "");
 	}
 
 }

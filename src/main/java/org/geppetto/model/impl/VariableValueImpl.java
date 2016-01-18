@@ -40,7 +40,7 @@ public class VariableValueImpl extends MinimalEObjectImpl.Container implements V
 	protected Pointer pointer;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValue()
@@ -125,16 +125,6 @@ public class VariableValueImpl extends MinimalEObjectImpl.Container implements V
 	 */
 	public Value getValue()
 	{
-		if (value != null && value.eIsProxy())
-		{
-			InternalEObject oldValue = (InternalEObject)value;
-			value = (Value)eResolveProxy(oldValue);
-			if (value != oldValue)
-			{
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeppettoPackage.VARIABLE_VALUE__VALUE, oldValue, value));
-			}
-		}
 		return value;
 	}
 
@@ -143,9 +133,16 @@ public class VariableValueImpl extends MinimalEObjectImpl.Container implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value basicGetValue()
+	public NotificationChain basicSetValue(Value newValue, NotificationChain msgs)
 	{
-		return value;
+		Value oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeppettoPackage.VARIABLE_VALUE__VALUE, oldValue, newValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -155,10 +152,18 @@ public class VariableValueImpl extends MinimalEObjectImpl.Container implements V
 	 */
 	public void setValue(Value newValue)
 	{
-		Value oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.VARIABLE_VALUE__VALUE, oldValue, value));
+		if (newValue != value)
+		{
+			NotificationChain msgs = null;
+			if (value != null)
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeppettoPackage.VARIABLE_VALUE__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeppettoPackage.VARIABLE_VALUE__VALUE, null, msgs);
+			msgs = basicSetValue(newValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.VARIABLE_VALUE__VALUE, newValue, newValue));
 	}
 
 	/**
@@ -173,6 +178,8 @@ public class VariableValueImpl extends MinimalEObjectImpl.Container implements V
 		{
 			case GeppettoPackage.VARIABLE_VALUE__POINTER:
 				return basicSetPointer(null, msgs);
+			case GeppettoPackage.VARIABLE_VALUE__VALUE:
+				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -190,8 +197,7 @@ public class VariableValueImpl extends MinimalEObjectImpl.Container implements V
 			case GeppettoPackage.VARIABLE_VALUE__POINTER:
 				return getPointer();
 			case GeppettoPackage.VARIABLE_VALUE__VALUE:
-				if (resolve) return getValue();
-				return basicGetValue();
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

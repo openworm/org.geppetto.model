@@ -3,18 +3,15 @@
 package org.geppetto.model.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.ExperimentState;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.VariableValue;
@@ -37,7 +34,7 @@ import org.geppetto.model.VariableValue;
 public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements ExperimentState
 {
 	/**
-	 * The cached value of the '{@link #getRecordedVariables() <em>Recorded Variables</em>}' reference list.
+	 * The cached value of the '{@link #getRecordedVariables() <em>Recorded Variables</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRecordedVariables()
@@ -47,7 +44,7 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 	protected EList<VariableValue> recordedVariables;
 
 	/**
-	 * The cached value of the '{@link #getSetParameters() <em>Set Parameters</em>}' reference list.
+	 * The cached value of the '{@link #getSetParameters() <em>Set Parameters</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSetParameters()
@@ -106,7 +103,7 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 	{
 		if (recordedVariables == null)
 		{
-			recordedVariables = new EObjectResolvingEList<VariableValue>(VariableValue.class, this, GeppettoPackage.EXPERIMENT_STATE__RECORDED_VARIABLES);
+			recordedVariables = new EObjectContainmentEList<VariableValue>(VariableValue.class, this, GeppettoPackage.EXPERIMENT_STATE__RECORDED_VARIABLES);
 		}
 		return recordedVariables;
 	}
@@ -120,7 +117,7 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 	{
 		if (setParameters == null)
 		{
-			setParameters = new EObjectResolvingEList<VariableValue>(VariableValue.class, this, GeppettoPackage.EXPERIMENT_STATE__SET_PARAMETERS);
+			setParameters = new EObjectContainmentEList<VariableValue>(VariableValue.class, this, GeppettoPackage.EXPERIMENT_STATE__SET_PARAMETERS);
 		}
 		return setParameters;
 	}
@@ -146,6 +143,24 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 		experimentId = newExperimentId;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.EXPERIMENT_STATE__EXPERIMENT_ID, oldExperimentId, experimentId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case GeppettoPackage.EXPERIMENT_STATE__RECORDED_VARIABLES:
+				return ((InternalEList<?>)getRecordedVariables()).basicRemove(otherEnd, msgs);
+			case GeppettoPackage.EXPERIMENT_STATE__SET_PARAMETERS:
+				return ((InternalEList<?>)getSetParameters()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

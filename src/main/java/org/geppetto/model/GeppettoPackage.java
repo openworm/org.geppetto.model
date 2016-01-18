@@ -328,7 +328,7 @@ public interface GeppettoPackage extends EPackage
 	int EXPERIMENT_STATE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Recorded Variables</b></em>' reference list.
+	 * The feature id for the '<em><b>Recorded Variables</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -337,7 +337,7 @@ public interface GeppettoPackage extends EPackage
 	int EXPERIMENT_STATE__RECORDED_VARIABLES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Set Parameters</b></em>' reference list.
+	 * The feature id for the '<em><b>Set Parameters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -392,7 +392,7 @@ public interface GeppettoPackage extends EPackage
 	int VARIABLE_VALUE__POINTER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -794,10 +794,10 @@ public interface GeppettoPackage extends EPackage
 	EClass getExperimentState();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.geppetto.model.ExperimentState#getRecordedVariables <em>Recorded Variables</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.ExperimentState#getRecordedVariables <em>Recorded Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Recorded Variables</em>'.
+	 * @return the meta object for the containment reference list '<em>Recorded Variables</em>'.
 	 * @see org.geppetto.model.ExperimentState#getRecordedVariables()
 	 * @see #getExperimentState()
 	 * @generated
@@ -805,10 +805,10 @@ public interface GeppettoPackage extends EPackage
 	EReference getExperimentState_RecordedVariables();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.geppetto.model.ExperimentState#getSetParameters <em>Set Parameters</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.ExperimentState#getSetParameters <em>Set Parameters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Set Parameters</em>'.
+	 * @return the meta object for the containment reference list '<em>Set Parameters</em>'.
 	 * @see org.geppetto.model.ExperimentState#getSetParameters()
 	 * @see #getExperimentState()
 	 * @generated
@@ -848,10 +848,10 @@ public interface GeppettoPackage extends EPackage
 	EReference getVariableValue_Pointer();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.VariableValue#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.VariableValue#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see org.geppetto.model.VariableValue#getValue()
 	 * @see #getVariableValue()
 	 * @generated
@@ -1145,7 +1145,7 @@ public interface GeppettoPackage extends EPackage
 		EClass EXPERIMENT_STATE = eINSTANCE.getExperimentState();
 
 		/**
-		 * The meta object literal for the '<em><b>Recorded Variables</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Recorded Variables</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1153,7 +1153,7 @@ public interface GeppettoPackage extends EPackage
 		EReference EXPERIMENT_STATE__RECORDED_VARIABLES = eINSTANCE.getExperimentState_RecordedVariables();
 
 		/**
-		 * The meta object literal for the '<em><b>Set Parameters</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Set Parameters</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1187,7 +1187,7 @@ public interface GeppettoPackage extends EPackage
 		EReference VARIABLE_VALUE__POINTER = eINSTANCE.getVariableValue_Pointer();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

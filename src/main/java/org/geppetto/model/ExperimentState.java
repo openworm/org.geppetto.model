@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ExperimentState extends EObject
 {
 	/**
-	 * Returns the value of the '<em><b>Recorded Variables</b></em>' reference list.
+	 * Returns the value of the '<em><b>Recorded Variables</b></em>' containment reference list.
 	 * The list contents are of type {@link org.geppetto.model.VariableValue}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -35,15 +35,15 @@ public interface ExperimentState extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Recorded Variables</em>' reference list.
+	 * @return the value of the '<em>Recorded Variables</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getExperimentState_RecordedVariables()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<VariableValue> getRecordedVariables();
 
 	/**
-	 * Returns the value of the '<em><b>Set Parameters</b></em>' reference list.
+	 * Returns the value of the '<em><b>Set Parameters</b></em>' containment reference list.
 	 * The list contents are of type {@link org.geppetto.model.VariableValue}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -51,9 +51,9 @@ public interface ExperimentState extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Set Parameters</em>' reference list.
+	 * @return the value of the '<em>Set Parameters</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getExperimentState_SetParameters()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<VariableValue> getSetParameters();

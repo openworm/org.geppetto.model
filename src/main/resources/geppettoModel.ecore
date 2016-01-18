@@ -34,16 +34,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExperimentState">
     <eStructuralFeatures xsi:type="ecore:EReference" name="recordedVariables" upperBound="-1"
-        eType="#//VariableValue"/>
+        eType="#//VariableValue" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="setParameters" upperBound="-1"
-        eType="#//VariableValue"/>
+        eType="#//VariableValue" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="experimentId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Long"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VariableValue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pointer" lowerBound="1"
         eType="#//values/Pointer" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//values/Value"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//values/Value"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tag">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tags" upperBound="-1" eType="#//Tag"
