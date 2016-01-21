@@ -86,7 +86,7 @@ public class PointerUtility
 			if(element.getType() instanceof ArrayType)
 			{
 				Integer index = getIndex(token);
-				if(index != null && index > 0)
+				if(index != null)
 				{
 					element.setIndex(getIndex(token));
 				}
