@@ -21,13 +21,11 @@ import org.geppetto.model.values.PointerElement;
 import org.geppetto.model.values.ValuesPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Pointer</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Pointer</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.values.impl.PointerImpl#getElements <em>Elements</em>}</li>
+ * <li>{@link org.geppetto.model.values.impl.PointerImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,9 +34,8 @@ import org.geppetto.model.values.ValuesPackage;
 public class PointerImpl extends ValueImpl implements Pointer
 {
 	/**
-	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getElements()
 	 * @generated
 	 * @ordered
@@ -46,8 +43,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 	protected EList<PointerElement> elements;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected PointerImpl()
@@ -56,8 +53,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -67,13 +64,13 @@ public class PointerImpl extends ValueImpl implements Pointer
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public EList<PointerElement> getElements()
 	{
-		if (elements == null)
+		if(elements == null)
 		{
 			elements = new EObjectContainmentEList<PointerElement>(PointerElement.class, this, ValuesPackage.POINTER__ELEMENTS);
 		}
@@ -81,22 +78,22 @@ public class PointerImpl extends ValueImpl implements Pointer
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public String getInstancePath()
 	{
-		StringBuilder instancePath=new StringBuilder();
-		for(PointerElement element:getElements())
+		StringBuilder instancePath = new StringBuilder();
+		for(PointerElement element : getElements())
 		{
 			instancePath.append(element.getVariable().getId());
-			instancePath.append("("+element.getType().getId()+")");
-			if(element.getIndex()!=null)
+			instancePath.append("(" + element.getType().getId() + ")");
+			if(element.getIndex() != null && element.getIndex() > 0)
 			{
-				instancePath.append("["+element.getIndex()+"]");	
-			}			
-			if(getElements().indexOf(element)<(getElements().size()-1))
+				instancePath.append("[" + element.getIndex() + "]");
+			}
+			if(getElements().indexOf(element) < (getElements().size() - 1))
 			{
 				instancePath.append(".");
 			}
@@ -105,30 +102,30 @@ public class PointerImpl extends ValueImpl implements Pointer
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
-		switch (featureID)
+		switch(featureID)
 		{
 			case ValuesPackage.POINTER__ELEMENTS:
-				return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
+				return ((InternalEList<?>) getElements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
-		switch (featureID)
+		switch(featureID)
 		{
 			case ValuesPackage.POINTER__ELEMENTS:
 				return getElements();
@@ -137,33 +134,33 @@ public class PointerImpl extends ValueImpl implements Pointer
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue)
 	{
-		switch (featureID)
+		switch(featureID)
 		{
 			case ValuesPackage.POINTER__ELEMENTS:
 				getElements().clear();
-				getElements().addAll((Collection<? extends PointerElement>)newValue);
+				getElements().addAll((Collection<? extends PointerElement>) newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID)
 	{
-		switch (featureID)
+		switch(featureID)
 		{
 			case ValuesPackage.POINTER__ELEMENTS:
 				getElements().clear();
@@ -173,14 +170,14 @@ public class PointerImpl extends ValueImpl implements Pointer
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID)
 	{
-		switch (featureID)
+		switch(featureID)
 		{
 			case ValuesPackage.POINTER__ELEMENTS:
 				return elements != null && !elements.isEmpty();
@@ -189,14 +186,14 @@ public class PointerImpl extends ValueImpl implements Pointer
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
-		switch (operationID)
+		switch(operationID)
 		{
 			case ValuesPackage.POINTER___GET_INSTANCE_PATH:
 				return getInstancePath();
@@ -204,4 +201,4 @@ public class PointerImpl extends ValueImpl implements Pointer
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //PointerImpl
+} // PointerImpl

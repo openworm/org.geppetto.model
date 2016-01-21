@@ -228,14 +228,14 @@ public class PointerUtilityTest
 		Assert.assertEquals("area", PointerUtility.getVariable(p).getName());
 		Assert.assertEquals("genericParameter", PointerUtility.getVariable(p).getTypes().get(0).getId());
 		Assert.assertEquals((Integer)30, p.getElements().get(0).getIndex());
-		Assert.assertEquals(null, p.getElements().get(1).getIndex());
+		Assert.assertEquals(new Integer(-1), p.getElements().get(1).getIndex());
 		Assert.assertEquals((Integer)4, p.getElements().get(2).getIndex());
 		p = PointerUtility.getPointer(geppettoModel, "addressBook[30].address.zone[4].area");
 		Assert.assertEquals("area", PointerUtility.getVariable(p).getId());
 		Assert.assertEquals("area", PointerUtility.getVariable(p).getName());
 		Assert.assertEquals("genericParameter", PointerUtility.getVariable(p).getTypes().get(0).getId());
 		Assert.assertEquals((Integer)30, p.getElements().get(0).getIndex());
-		Assert.assertEquals(null, p.getElements().get(1).getIndex());
+		Assert.assertEquals(new Integer(-1), p.getElements().get(1).getIndex());
 		Assert.assertEquals((Integer)4, p.getElements().get(2).getIndex());
 	}
 

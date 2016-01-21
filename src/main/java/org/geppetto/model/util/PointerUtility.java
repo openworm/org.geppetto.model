@@ -41,6 +41,12 @@ public class PointerUtility
 	 * @param instancePath
 	 * @return
 	 */
+	/**
+	 * @param model
+	 * @param instancePath
+	 * @return
+	 * @throws GeppettoModelException
+	 */
 	public static Pointer getPointer(GeppettoModel model, String instancePath) throws GeppettoModelException
 	{
 		Pointer pointer = ValuesFactory.eINSTANCE.createPointer();
@@ -80,7 +86,7 @@ public class PointerUtility
 			if(element.getType() instanceof ArrayType)
 			{
 				Integer index = getIndex(token);
-				if(index != null)
+				if(index != null && index > 0)
 				{
 					element.setIndex(getIndex(token));
 				}
@@ -214,7 +220,7 @@ public class PointerUtility
 					return t;
 				}
 			}
-			
+
 			throw new GeppettoModelException("The type " + type + " was not found in the variable " + variable.getId());
 		}
 	}
