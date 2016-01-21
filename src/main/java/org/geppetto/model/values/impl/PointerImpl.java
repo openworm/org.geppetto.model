@@ -89,7 +89,7 @@ public class PointerImpl extends ValueImpl implements Pointer
 		{
 			instancePath.append(element.getVariable().getId());
 			instancePath.append("(" + element.getType().getId() + ")");
-			if(element.getIndex() != null && element.getIndex() > 0)
+			if(element.getIndex() != null && element.getIndex() > -1)
 			{
 				instancePath.append("[" + element.getIndex() + "]");
 			}
