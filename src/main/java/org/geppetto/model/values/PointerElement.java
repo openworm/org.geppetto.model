@@ -80,6 +80,7 @@ public interface PointerElement extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Index</b></em>' attribute.
+	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Index</em>' attribute isn't clear,
@@ -89,7 +90,7 @@ public interface PointerElement extends EObject
 	 * @return the value of the '<em>Index</em>' attribute.
 	 * @see #setIndex(Integer)
 	 * @see org.geppetto.model.values.ValuesPackage#getPointerElement_Index()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.IntObject"
+	 * @model default="-1" dataType="org.eclipse.emf.ecore.xml.type.IntObject"
 	 * @generated
 	 */
 	Integer getIndex();

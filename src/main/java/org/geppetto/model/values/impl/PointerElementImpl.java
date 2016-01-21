@@ -57,7 +57,7 @@ public class PointerElementImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer INDEX_EDEFAULT = null;
+	protected static final Integer INDEX_EDEFAULT = new Integer(-1);
 
 	/**
 	 * The cached value of the '{@link #getIndex() <em>Index</em>}' attribute.
