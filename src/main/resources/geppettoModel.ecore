@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore"
     nsPrefix="gep">
   <eClassifiers xsi:type="ecore:EClass" name="GeppettoModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
@@ -69,7 +69,7 @@
     <eLiterals name="ZIP"/>
     <eLiterals name="HDF5"/>
   </eClassifiers>
-  <eSubpackages name="types" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//types"
+  <eSubpackages name="types" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//types"
       nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//Node">
       <eOperations name="getDefaultValue" eType="#//values/Value"/>
@@ -161,7 +161,7 @@
           containment="true"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="values" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//values"
+  <eSubpackages name="values" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//values"
       nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//values/Value">
@@ -322,7 +322,7 @@
           upperBound="-1" eType="#//values/ArrayElement" containment="true"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="variables" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//variables"
+  <eSubpackages name="variables" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//variables"
       nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Node">
       <eStructuralFeatures xsi:type="ecore:EReference" name="anonymousTypes" upperBound="-1"
