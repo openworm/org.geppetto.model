@@ -104,6 +104,60 @@ public interface GeppettoFactory extends EFactory
 	ExternalDomainModel createExternalDomainModel();
 
 	/**
+	 * Returns a new object of class '<em>Data Source</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Source</em>'.
+	 * @generated
+	 */
+	DataSource createDataSource();
+
+	/**
+	 * Returns a new object of class '<em>Data Source Library Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Source Library Configuration</em>'.
+	 * @generated
+	 */
+	DataSourceLibraryConfiguration createDataSourceLibraryConfiguration();
+
+	/**
+	 * Returns a new object of class '<em>Simple Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Query</em>'.
+	 * @generated
+	 */
+	SimpleQuery createSimpleQuery();
+
+	/**
+	 * Returns a new object of class '<em>Compound Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Compound Query</em>'.
+	 * @generated
+	 */
+	CompoundQuery createCompoundQuery();
+
+	/**
+	 * Returns a new object of class '<em>Query Results</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Query Results</em>'.
+	 * @generated
+	 */
+	QueryResults createQueryResults();
+
+	/**
+	 * Returns a new object of class '<em>Query Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Query Result</em>'.
+	 * @generated
+	 */
+	QueryResult createQueryResult();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

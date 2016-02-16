@@ -19,6 +19,7 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.GeppettoModel#getTags <em>Tags</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getName <em>Name</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getDataSources <em>Data Sources</em>}</li>
  * </ul>
  * </p>
  *
@@ -129,5 +130,21 @@ public interface GeppettoModel extends EObject
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Data Sources</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.DataSource}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Data Sources</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Data Sources</em>' containment reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_DataSources()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<DataSource> getDataSources();
 
 } // GeppettoModel

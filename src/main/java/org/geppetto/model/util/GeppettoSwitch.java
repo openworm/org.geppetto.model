@@ -144,6 +144,58 @@ public class GeppettoSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeppettoPackage.DATA_SOURCE:
+			{
+				DataSource dataSource = (DataSource)theEObject;
+				T result = caseDataSource(dataSource);
+				if (result == null) result = caseNode(dataSource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION:
+			{
+				DataSourceLibraryConfiguration dataSourceLibraryConfiguration = (DataSourceLibraryConfiguration)theEObject;
+				T result = caseDataSourceLibraryConfiguration(dataSourceLibraryConfiguration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.QUERY:
+			{
+				Query query = (Query)theEObject;
+				T result = caseQuery(query);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.SIMPLE_QUERY:
+			{
+				SimpleQuery simpleQuery = (SimpleQuery)theEObject;
+				T result = caseSimpleQuery(simpleQuery);
+				if (result == null) result = caseQuery(simpleQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.COMPOUND_QUERY:
+			{
+				CompoundQuery compoundQuery = (CompoundQuery)theEObject;
+				T result = caseCompoundQuery(compoundQuery);
+				if (result == null) result = caseQuery(compoundQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.QUERY_RESULTS:
+			{
+				QueryResults queryResults = (QueryResults)theEObject;
+				T result = caseQueryResults(queryResults);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.QUERY_RESULT:
+			{
+				QueryResult queryResult = (QueryResult)theEObject;
+				T result = caseQueryResult(queryResult);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -304,6 +356,118 @@ public class GeppettoSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseExternalDomainModel(ExternalDomainModel object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Source</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Source</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataSource(DataSource object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Source Library Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Source Library Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataSourceLibraryConfiguration(DataSourceLibraryConfiguration object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQuery(Query object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSimpleQuery(SimpleQuery object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Compound Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Compound Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompoundQuery(CompoundQuery object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Query Results</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Query Results</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQueryResults(QueryResults object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Query Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Query Result</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQueryResult(QueryResult object)
 	{
 		return null;
 	}
