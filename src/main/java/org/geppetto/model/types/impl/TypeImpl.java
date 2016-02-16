@@ -3,33 +3,21 @@
 package org.geppetto.model.types.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.geppetto.model.aspect.Aspect;
-import org.geppetto.model.aspect.AspectPackage;
-
+import org.geppetto.model.DomainModel;
 import org.geppetto.model.impl.NodeImpl;
-
 import org.geppetto.model.types.Type;
 import org.geppetto.model.types.TypesPackage;
-
+import org.geppetto.model.types.VisualType;
 import org.geppetto.model.values.Value;
-
 import org.geppetto.model.variables.Variable;
 import org.geppetto.model.variables.VariablesPackage;
 
@@ -40,9 +28,10 @@ import org.geppetto.model.variables.VariablesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getReferencedVariables <em>Referenced Variables</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getAspect <em>Aspect</em>}</li>
+ *   <li>{@link org.geppetto.model.types.impl.TypeImpl#isAbstract <em>Abstract</em>}</li>
+ *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getVisualType <em>Visual Type</em>}</li>
+ *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getReferencedVariables <em>Referenced Variables</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getDomainModel <em>Domain Model</em>}</li>
  * </ul>
  * </p>
@@ -51,16 +40,6 @@ import org.geppetto.model.variables.VariablesPackage;
  */
 public abstract class TypeImpl extends NodeImpl implements Type
 {
-	/**
-	 * The cached value of the '{@link #getReferencedVariables() <em>Referenced Variables</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReferencedVariables()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Variable> referencedVariables;
-
 	/**
 	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -72,24 +51,54 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	protected Type superType;
 
 	/**
-	 * The default value of the '{@link #getDomainModel() <em>Domain Model</em>}' attribute.
+	 * The default value of the '{@link #isAbstract() <em>Abstract</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDomainModel()
+	 * @see #isAbstract()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object DOMAIN_MODEL_EDEFAULT = null;
+	protected static final boolean ABSTRACT_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getDomainModel() <em>Domain Model</em>}' attribute.
+	 * The cached value of the '{@link #isAbstract() <em>Abstract</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAbstract()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean abstract_ = ABSTRACT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getVisualType() <em>Visual Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVisualType()
+	 * @generated
+	 * @ordered
+	 */
+	protected VisualType visualType;
+
+	/**
+	 * The cached value of the '{@link #getReferencedVariables() <em>Referenced Variables</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferencedVariables()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Variable> referencedVariables;
+
+	/**
+	 * The cached value of the '{@link #getDomainModel() <em>Domain Model</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDomainModel()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object domainModel = DOMAIN_MODEL_EDEFAULT;
+	protected DomainModel domainModel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,88 +119,6 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	protected EClass eStaticClass()
 	{
 		return TypesPackage.Literals.TYPE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Aspect getAspect()
-	{
-		if (eContainerFeatureID() != TypesPackage.TYPE__ASPECT) return null;
-		return (Aspect)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetAspect(Aspect newAspect, NotificationChain msgs)
-	{
-		msgs = eBasicSetContainer((InternalEObject)newAspect, TypesPackage.TYPE__ASPECT, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAspect(Aspect newAspect)
-	{
-		if (newAspect != eInternalContainer() || (eContainerFeatureID() != TypesPackage.TYPE__ASPECT && newAspect != null))
-		{
-			if (EcoreUtil.isAncestor(this, newAspect))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newAspect != null)
-				msgs = ((InternalEObject)newAspect).eInverseAdd(this, AspectPackage.ASPECT__TYPES, Aspect.class, msgs);
-			msgs = basicSetAspect(newAspect, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.TYPE__ASPECT, newAspect, newAspect));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Object getDomainModel()
-	{
-		return domainModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDomainModel(Object newDomainModel)
-	{
-		Object oldDomainModel = domainModel;
-		domainModel = newDomainModel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.TYPE__DOMAIN_MODEL, oldDomainModel, domainModel));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Variable> getReferencedVariables()
-	{
-		if (referencedVariables == null)
-		{
-			referencedVariables = new EObjectWithInverseResolvingEList.ManyInverse<Variable>(Variable.class, this, TypesPackage.TYPE__REFERENCED_VARIABLES, VariablesPackage.VARIABLE__TYPES);
-		}
-		return referencedVariables;
 	}
 
 	/**
@@ -242,6 +169,129 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DomainModel getDomainModel()
+	{
+		if (domainModel != null && domainModel.eIsProxy())
+		{
+			InternalEObject oldDomainModel = (InternalEObject)domainModel;
+			domainModel = (DomainModel)eResolveProxy(oldDomainModel);
+			if (domainModel != oldDomainModel)
+			{
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TypesPackage.TYPE__DOMAIN_MODEL, oldDomainModel, domainModel));
+			}
+		}
+		return domainModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DomainModel basicGetDomainModel()
+	{
+		return domainModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDomainModel(DomainModel newDomainModel)
+	{
+		DomainModel oldDomainModel = domainModel;
+		domainModel = newDomainModel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.TYPE__DOMAIN_MODEL, oldDomainModel, domainModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isAbstract()
+	{
+		return abstract_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAbstract(boolean newAbstract)
+	{
+		boolean oldAbstract = abstract_;
+		abstract_ = newAbstract;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.TYPE__ABSTRACT, oldAbstract, abstract_));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VisualType getVisualType()
+	{
+		if (visualType != null && visualType.eIsProxy())
+		{
+			InternalEObject oldVisualType = (InternalEObject)visualType;
+			visualType = (VisualType)eResolveProxy(oldVisualType);
+			if (visualType != oldVisualType)
+			{
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TypesPackage.TYPE__VISUAL_TYPE, oldVisualType, visualType));
+			}
+		}
+		return visualType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VisualType basicGetVisualType()
+	{
+		return visualType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVisualType(VisualType newVisualType)
+	{
+		VisualType oldVisualType = visualType;
+		visualType = newVisualType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.TYPE__VISUAL_TYPE, oldVisualType, visualType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Variable> getReferencedVariables()
+	{
+		if (referencedVariables == null)
+		{
+			referencedVariables = new EObjectWithInverseEList.ManyInverse<Variable>(Variable.class, this, TypesPackage.TYPE__REFERENCED_VARIABLES, VariablesPackage.VARIABLE__TYPES);
+		}
+		return referencedVariables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Value getDefaultValue()
 	{
 		// TODO: implement this method
@@ -262,10 +312,6 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		{
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getReferencedVariables()).basicAdd(otherEnd, msgs);
-			case TypesPackage.TYPE__ASPECT:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetAspect((Aspect)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -282,26 +328,8 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		{
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				return ((InternalEList<?>)getReferencedVariables()).basicRemove(otherEnd, msgs);
-			case TypesPackage.TYPE__ASPECT:
-				return basicSetAspect(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
-	{
-		switch (eContainerFeatureID())
-		{
-			case TypesPackage.TYPE__ASPECT:
-				return eInternalContainer().eInverseRemove(this, AspectPackage.ASPECT__TYPES, Aspect.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -314,15 +342,19 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
-			case TypesPackage.TYPE__REFERENCED_VARIABLES:
-				return getReferencedVariables();
 			case TypesPackage.TYPE__SUPER_TYPE:
 				if (resolve) return getSuperType();
 				return basicGetSuperType();
-			case TypesPackage.TYPE__ASPECT:
-				return getAspect();
+			case TypesPackage.TYPE__ABSTRACT:
+				return isAbstract();
+			case TypesPackage.TYPE__VISUAL_TYPE:
+				if (resolve) return getVisualType();
+				return basicGetVisualType();
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				return getReferencedVariables();
 			case TypesPackage.TYPE__DOMAIN_MODEL:
-				return getDomainModel();
+				if (resolve) return getDomainModel();
+				return basicGetDomainModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -338,18 +370,21 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
+			case TypesPackage.TYPE__SUPER_TYPE:
+				setSuperType((Type)newValue);
+				return;
+			case TypesPackage.TYPE__ABSTRACT:
+				setAbstract((Boolean)newValue);
+				return;
+			case TypesPackage.TYPE__VISUAL_TYPE:
+				setVisualType((VisualType)newValue);
+				return;
 			case TypesPackage.TYPE__REFERENCED_VARIABLES:
 				getReferencedVariables().clear();
 				getReferencedVariables().addAll((Collection<? extends Variable>)newValue);
 				return;
-			case TypesPackage.TYPE__SUPER_TYPE:
-				setSuperType((Type)newValue);
-				return;
-			case TypesPackage.TYPE__ASPECT:
-				setAspect((Aspect)newValue);
-				return;
 			case TypesPackage.TYPE__DOMAIN_MODEL:
-				setDomainModel(newValue);
+				setDomainModel((DomainModel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -365,17 +400,20 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
-			case TypesPackage.TYPE__REFERENCED_VARIABLES:
-				getReferencedVariables().clear();
-				return;
 			case TypesPackage.TYPE__SUPER_TYPE:
 				setSuperType((Type)null);
 				return;
-			case TypesPackage.TYPE__ASPECT:
-				setAspect((Aspect)null);
+			case TypesPackage.TYPE__ABSTRACT:
+				setAbstract(ABSTRACT_EDEFAULT);
+				return;
+			case TypesPackage.TYPE__VISUAL_TYPE:
+				setVisualType((VisualType)null);
+				return;
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				getReferencedVariables().clear();
 				return;
 			case TypesPackage.TYPE__DOMAIN_MODEL:
-				setDomainModel(DOMAIN_MODEL_EDEFAULT);
+				setDomainModel((DomainModel)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -391,14 +429,16 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	{
 		switch (featureID)
 		{
-			case TypesPackage.TYPE__REFERENCED_VARIABLES:
-				return referencedVariables != null && !referencedVariables.isEmpty();
 			case TypesPackage.TYPE__SUPER_TYPE:
 				return superType != null;
-			case TypesPackage.TYPE__ASPECT:
-				return getAspect() != null;
+			case TypesPackage.TYPE__ABSTRACT:
+				return abstract_ != ABSTRACT_EDEFAULT;
+			case TypesPackage.TYPE__VISUAL_TYPE:
+				return visualType != null;
+			case TypesPackage.TYPE__REFERENCED_VARIABLES:
+				return referencedVariables != null && !referencedVariables.isEmpty();
 			case TypesPackage.TYPE__DOMAIN_MODEL:
-				return DOMAIN_MODEL_EDEFAULT == null ? domainModel != null : !DOMAIN_MODEL_EDEFAULT.equals(domainModel);
+				return domainModel != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -430,8 +470,8 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (domainModel: ");
-		result.append(domainModel);
+		result.append(" (abstract: ");
+		result.append(abstract_);
 		result.append(')');
 		return result.toString();
 	}

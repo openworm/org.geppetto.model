@@ -2,31 +2,19 @@
  */
 package org.geppetto.model.variables.impl;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.GeppettoPackage;
-
-import org.geppetto.model.aspect.AspectPackage;
-
-import org.geppetto.model.aspect.impl.AspectPackageImpl;
-
 import org.geppetto.model.impl.GeppettoPackageImpl;
-
 import org.geppetto.model.types.TypesPackage;
-
 import org.geppetto.model.types.impl.TypesPackageImpl;
-
 import org.geppetto.model.values.ValuesPackage;
-
 import org.geppetto.model.values.impl.ValuesPackageImpl;
-
-import org.geppetto.model.variables.ArrayVariable;
 import org.geppetto.model.variables.Variable;
 import org.geppetto.model.variables.VariablesFactory;
 import org.geppetto.model.variables.VariablesPackage;
@@ -51,7 +39,7 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass arrayVariableEClass = null;
+	private EClass typeToValueMapEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -108,21 +96,18 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) instanceof GeppettoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) : GeppettoPackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) instanceof ValuesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) : ValuesPackage.eINSTANCE);
-		AspectPackageImpl theAspectPackage = (AspectPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) instanceof AspectPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) : AspectPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theVariablesPackage.createPackageContents();
 		theGeppettoPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 		theValuesPackage.createPackageContents();
-		theAspectPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theVariablesPackage.initializePackageContents();
 		theGeppettoPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 		theValuesPackage.initializePackageContents();
-		theAspectPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theVariablesPackage.freeze();
@@ -148,7 +133,7 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVariable_Types()
+	public EReference getVariable_AnonymousTypes()
 	{
 		return (EReference)variableEClass.getEStructuralFeatures().get(0);
 	}
@@ -158,7 +143,7 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVariable_InitialValues()
+	public EReference getVariable_Types()
 	{
 		return (EReference)variableEClass.getEStructuralFeatures().get(1);
 	}
@@ -168,9 +153,9 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getArrayVariable()
+	public EReference getVariable_InitialValues()
 	{
-		return arrayVariableEClass;
+		return (EReference)variableEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -178,9 +163,49 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getArrayVariable_Size()
+	public EAttribute getVariable_Static()
 	{
-		return (EAttribute)arrayVariableEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariable_Position()
+	{
+		return (EReference)variableEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTypeToValueMap()
+	{
+		return typeToValueMapEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTypeToValueMap_Key()
+	{
+		return (EReference)typeToValueMapEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTypeToValueMap_Value()
+	{
+		return (EReference)typeToValueMapEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -214,11 +239,15 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 
 		// Create classes and their features
 		variableEClass = createEClass(VARIABLE);
+		createEReference(variableEClass, VARIABLE__ANONYMOUS_TYPES);
 		createEReference(variableEClass, VARIABLE__TYPES);
 		createEReference(variableEClass, VARIABLE__INITIAL_VALUES);
+		createEAttribute(variableEClass, VARIABLE__STATIC);
+		createEReference(variableEClass, VARIABLE__POSITION);
 
-		arrayVariableEClass = createEClass(ARRAY_VARIABLE);
-		createEAttribute(arrayVariableEClass, ARRAY_VARIABLE__SIZE);
+		typeToValueMapEClass = createEClass(TYPE_TO_VALUE_MAP);
+		createEReference(typeToValueMapEClass, TYPE_TO_VALUE_MAP__KEY);
+		createEReference(typeToValueMapEClass, TYPE_TO_VALUE_MAP__VALUE);
 	}
 
 	/**
@@ -248,8 +277,8 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 		// Obtain other dependent packages
 		GeppettoPackage theGeppettoPackage = (GeppettoPackage)EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI);
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
-		ValuesPackage theValuesPackage = (ValuesPackage)EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
+		ValuesPackage theValuesPackage = (ValuesPackage)EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -257,15 +286,18 @@ public class VariablesPackageImpl extends EPackageImpl implements VariablesPacka
 
 		// Add supertypes to classes
 		variableEClass.getESuperTypes().add(theGeppettoPackage.getNode());
-		arrayVariableEClass.getESuperTypes().add(this.getVariable());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVariable_Types(), theTypesPackage.getType(), theTypesPackage.getType_ReferencedVariables(), "types", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariable_InitialValues(), theValuesPackage.getValue(), null, "initialValues", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_AnonymousTypes(), theTypesPackage.getType(), null, "anonymousTypes", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_Types(), theTypesPackage.getType(), theTypesPackage.getType_ReferencedVariables(), "types", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_InitialValues(), this.getTypeToValueMap(), null, "initialValues", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_Static(), theXMLTypePackage.getBoolean(), "static", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_Position(), theValuesPackage.getPoint(), null, "position", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(arrayVariableEClass, ArrayVariable.class, "ArrayVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArrayVariable_Size(), theXMLTypePackage.getInt(), "size", null, 0, 1, ArrayVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(typeToValueMapEClass, Map.Entry.class, "TypeToValueMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTypeToValueMap_Key(), theTypesPackage.getType(), null, "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTypeToValueMap_Value(), theValuesPackage.getValue(), null, "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //VariablesPackageImpl

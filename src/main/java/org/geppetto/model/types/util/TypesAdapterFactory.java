@@ -4,13 +4,9 @@ package org.geppetto.model.types.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.geppetto.model.Node;
-
 import org.geppetto.model.types.*;
 
 /**
@@ -82,14 +78,9 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 				return createTypeAdapter();
 			}
 			@Override
-			public Adapter casePrimitiveType(PrimitiveType object)
+			public Adapter caseVisualType(VisualType object)
 			{
-				return createPrimitiveTypeAdapter();
-			}
-			@Override
-			public Adapter caseIntType(IntType object)
-			{
-				return createIntTypeAdapter();
+				return createVisualTypeAdapter();
 			}
 			@Override
 			public Adapter caseImportType(ImportType object)
@@ -102,29 +93,74 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 				return createCompositeTypeAdapter();
 			}
 			@Override
-			public Adapter caseAnyPrimitiveType(AnyPrimitiveType object)
+			public Adapter casePointerType(PointerType object)
 			{
-				return createAnyPrimitiveTypeAdapter();
+				return createPointerTypeAdapter();
 			}
 			@Override
-			public Adapter caseSimpleType(SimpleType object)
+			public Adapter caseQuantityType(QuantityType object)
 			{
-				return createSimpleTypeAdapter();
+				return createQuantityTypeAdapter();
 			}
 			@Override
-			public Adapter caseFloatType(FloatType object)
+			public Adapter caseParameterType(ParameterType object)
 			{
-				return createFloatTypeAdapter();
+				return createParameterTypeAdapter();
 			}
 			@Override
-			public Adapter caseDoubleType(DoubleType object)
+			public Adapter caseStateVariableType(StateVariableType object)
 			{
-				return createDoubleTypeAdapter();
+				return createStateVariableTypeAdapter();
 			}
 			@Override
-			public Adapter caseStringType(StringType object)
+			public Adapter caseDynamicsType(DynamicsType object)
 			{
-				return createStringTypeAdapter();
+				return createDynamicsTypeAdapter();
+			}
+			@Override
+			public Adapter caseArgumentType(ArgumentType object)
+			{
+				return createArgumentTypeAdapter();
+			}
+			@Override
+			public Adapter caseExpressionType(ExpressionType object)
+			{
+				return createExpressionTypeAdapter();
+			}
+			@Override
+			public Adapter caseHTMLType(HTMLType object)
+			{
+				return createHTMLTypeAdapter();
+			}
+			@Override
+			public Adapter caseTextType(TextType object)
+			{
+				return createTextTypeAdapter();
+			}
+			@Override
+			public Adapter caseURLType(URLType object)
+			{
+				return createURLTypeAdapter();
+			}
+			@Override
+			public Adapter casePointType(PointType object)
+			{
+				return createPointTypeAdapter();
+			}
+			@Override
+			public Adapter caseArrayType(ArrayType object)
+			{
+				return createArrayTypeAdapter();
+			}
+			@Override
+			public Adapter caseCompositeVisualType(CompositeVisualType object)
+			{
+				return createCompositeVisualTypeAdapter();
+			}
+			@Override
+			public Adapter caseConnectionType(ConnectionType object)
+			{
+				return createConnectionTypeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object)
@@ -169,31 +205,16 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.PrimitiveType <em>Primitive Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.VisualType <em>Visual Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.types.PrimitiveType
+	 * @see org.geppetto.model.types.VisualType
 	 * @generated
 	 */
-	public Adapter createPrimitiveTypeAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.IntType <em>Int Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.geppetto.model.types.IntType
-	 * @generated
-	 */
-	public Adapter createIntTypeAdapter()
+	public Adapter createVisualTypeAdapter()
 	{
 		return null;
 	}
@@ -229,76 +250,211 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.AnyPrimitiveType <em>Any Primitive Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.PointerType <em>Pointer Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.types.AnyPrimitiveType
+	 * @see org.geppetto.model.types.PointerType
 	 * @generated
 	 */
-	public Adapter createAnyPrimitiveTypeAdapter()
+	public Adapter createPointerTypeAdapter()
 	{
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.SimpleType <em>Simple Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.QuantityType <em>Quantity Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.types.SimpleType
+	 * @see org.geppetto.model.types.QuantityType
 	 * @generated
 	 */
-	public Adapter createSimpleTypeAdapter()
+	public Adapter createQuantityTypeAdapter()
 	{
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.FloatType <em>Float Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.ParameterType <em>Parameter Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.types.FloatType
+	 * @see org.geppetto.model.types.ParameterType
 	 * @generated
 	 */
-	public Adapter createFloatTypeAdapter()
+	public Adapter createParameterTypeAdapter()
 	{
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.DoubleType <em>Double Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.StateVariableType <em>State Variable Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.types.DoubleType
+	 * @see org.geppetto.model.types.StateVariableType
 	 * @generated
 	 */
-	public Adapter createDoubleTypeAdapter()
+	public Adapter createStateVariableTypeAdapter()
 	{
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.StringType <em>String Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.DynamicsType <em>Dynamics Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.types.StringType
+	 * @see org.geppetto.model.types.DynamicsType
 	 * @generated
 	 */
-	public Adapter createStringTypeAdapter()
+	public Adapter createDynamicsTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.ArgumentType <em>Argument Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.ArgumentType
+	 * @generated
+	 */
+	public Adapter createArgumentTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.ExpressionType <em>Expression Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.ExpressionType
+	 * @generated
+	 */
+	public Adapter createExpressionTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.HTMLType <em>HTML Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.HTMLType
+	 * @generated
+	 */
+	public Adapter createHTMLTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.TextType <em>Text Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.TextType
+	 * @generated
+	 */
+	public Adapter createTextTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.URLType <em>URL Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.URLType
+	 * @generated
+	 */
+	public Adapter createURLTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.PointType <em>Point Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.PointType
+	 * @generated
+	 */
+	public Adapter createPointTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.ArrayType <em>Array Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.ArrayType
+	 * @generated
+	 */
+	public Adapter createArrayTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.CompositeVisualType <em>Composite Visual Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.CompositeVisualType
+	 * @generated
+	 */
+	public Adapter createCompositeVisualTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.ConnectionType <em>Connection Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.ConnectionType
+	 * @generated
+	 */
+	public Adapter createConnectionTypeAdapter()
 	{
 		return null;
 	}

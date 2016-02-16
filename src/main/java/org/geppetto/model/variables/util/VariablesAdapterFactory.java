@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.variables.util;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -11,6 +12,8 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.geppetto.model.Node;
 
+import org.geppetto.model.types.Type;
+import org.geppetto.model.values.Value;
 import org.geppetto.model.variables.*;
 
 /**
@@ -82,9 +85,9 @@ public class VariablesAdapterFactory extends AdapterFactoryImpl
 				return createVariableAdapter();
 			}
 			@Override
-			public Adapter caseArrayVariable(ArrayVariable object)
+			public Adapter caseTypeToValueMap(Map.Entry<Type, Value> object)
 			{
-				return createArrayVariableAdapter();
+				return createTypeToValueMapAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object)
@@ -129,16 +132,16 @@ public class VariablesAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.variables.ArrayVariable <em>Array Variable</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Type To Value Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.variables.ArrayVariable
+	 * @see java.util.Map.Entry
 	 * @generated
 	 */
-	public Adapter createArrayVariableAdapter()
+	public Adapter createTypeToValueMapAdapter()
 	{
 		return null;
 	}

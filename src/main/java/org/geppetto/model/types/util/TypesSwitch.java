@@ -4,11 +4,8 @@ package org.geppetto.model.types.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
 import org.geppetto.model.Node;
-
 import org.geppetto.model.types.*;
 
 /**
@@ -82,22 +79,12 @@ public class TypesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TypesPackage.PRIMITIVE_TYPE:
+			case TypesPackage.VISUAL_TYPE:
 			{
-				PrimitiveType primitiveType = (PrimitiveType)theEObject;
-				T result = casePrimitiveType(primitiveType);
-				if (result == null) result = caseType(primitiveType);
-				if (result == null) result = caseNode(primitiveType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TypesPackage.INT_TYPE:
-			{
-				IntType intType = (IntType)theEObject;
-				T result = caseIntType(intType);
-				if (result == null) result = casePrimitiveType(intType);
-				if (result == null) result = caseType(intType);
-				if (result == null) result = caseNode(intType);
+				VisualType visualType = (VisualType)theEObject;
+				T result = caseVisualType(visualType);
+				if (result == null) result = caseType(visualType);
+				if (result == null) result = caseNode(visualType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -119,52 +106,130 @@ public class TypesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TypesPackage.ANY_PRIMITIVE_TYPE:
+			case TypesPackage.POINTER_TYPE:
 			{
-				AnyPrimitiveType anyPrimitiveType = (AnyPrimitiveType)theEObject;
-				T result = caseAnyPrimitiveType(anyPrimitiveType);
-				if (result == null) result = casePrimitiveType(anyPrimitiveType);
-				if (result == null) result = caseType(anyPrimitiveType);
-				if (result == null) result = caseNode(anyPrimitiveType);
+				PointerType pointerType = (PointerType)theEObject;
+				T result = casePointerType(pointerType);
+				if (result == null) result = caseType(pointerType);
+				if (result == null) result = caseNode(pointerType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TypesPackage.SIMPLE_TYPE:
+			case TypesPackage.QUANTITY_TYPE:
 			{
-				SimpleType simpleType = (SimpleType)theEObject;
-				T result = caseSimpleType(simpleType);
-				if (result == null) result = caseType(simpleType);
-				if (result == null) result = caseNode(simpleType);
+				QuantityType quantityType = (QuantityType)theEObject;
+				T result = caseQuantityType(quantityType);
+				if (result == null) result = caseType(quantityType);
+				if (result == null) result = caseNode(quantityType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TypesPackage.FLOAT_TYPE:
+			case TypesPackage.PARAMETER_TYPE:
 			{
-				FloatType floatType = (FloatType)theEObject;
-				T result = caseFloatType(floatType);
-				if (result == null) result = casePrimitiveType(floatType);
-				if (result == null) result = caseType(floatType);
-				if (result == null) result = caseNode(floatType);
+				ParameterType parameterType = (ParameterType)theEObject;
+				T result = caseParameterType(parameterType);
+				if (result == null) result = caseType(parameterType);
+				if (result == null) result = caseNode(parameterType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TypesPackage.DOUBLE_TYPE:
+			case TypesPackage.STATE_VARIABLE_TYPE:
 			{
-				DoubleType doubleType = (DoubleType)theEObject;
-				T result = caseDoubleType(doubleType);
-				if (result == null) result = casePrimitiveType(doubleType);
-				if (result == null) result = caseType(doubleType);
-				if (result == null) result = caseNode(doubleType);
+				StateVariableType stateVariableType = (StateVariableType)theEObject;
+				T result = caseStateVariableType(stateVariableType);
+				if (result == null) result = caseType(stateVariableType);
+				if (result == null) result = caseNode(stateVariableType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TypesPackage.STRING_TYPE:
+			case TypesPackage.DYNAMICS_TYPE:
 			{
-				StringType stringType = (StringType)theEObject;
-				T result = caseStringType(stringType);
-				if (result == null) result = casePrimitiveType(stringType);
-				if (result == null) result = caseType(stringType);
-				if (result == null) result = caseNode(stringType);
+				DynamicsType dynamicsType = (DynamicsType)theEObject;
+				T result = caseDynamicsType(dynamicsType);
+				if (result == null) result = caseType(dynamicsType);
+				if (result == null) result = caseNode(dynamicsType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.ARGUMENT_TYPE:
+			{
+				ArgumentType argumentType = (ArgumentType)theEObject;
+				T result = caseArgumentType(argumentType);
+				if (result == null) result = caseType(argumentType);
+				if (result == null) result = caseNode(argumentType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.EXPRESSION_TYPE:
+			{
+				ExpressionType expressionType = (ExpressionType)theEObject;
+				T result = caseExpressionType(expressionType);
+				if (result == null) result = caseType(expressionType);
+				if (result == null) result = caseNode(expressionType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.HTML_TYPE:
+			{
+				HTMLType htmlType = (HTMLType)theEObject;
+				T result = caseHTMLType(htmlType);
+				if (result == null) result = caseType(htmlType);
+				if (result == null) result = caseNode(htmlType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.TEXT_TYPE:
+			{
+				TextType textType = (TextType)theEObject;
+				T result = caseTextType(textType);
+				if (result == null) result = caseType(textType);
+				if (result == null) result = caseNode(textType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.URL_TYPE:
+			{
+				URLType urlType = (URLType)theEObject;
+				T result = caseURLType(urlType);
+				if (result == null) result = caseType(urlType);
+				if (result == null) result = caseNode(urlType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.POINT_TYPE:
+			{
+				PointType pointType = (PointType)theEObject;
+				T result = casePointType(pointType);
+				if (result == null) result = caseType(pointType);
+				if (result == null) result = caseNode(pointType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.ARRAY_TYPE:
+			{
+				ArrayType arrayType = (ArrayType)theEObject;
+				T result = caseArrayType(arrayType);
+				if (result == null) result = caseType(arrayType);
+				if (result == null) result = caseNode(arrayType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.COMPOSITE_VISUAL_TYPE:
+			{
+				CompositeVisualType compositeVisualType = (CompositeVisualType)theEObject;
+				T result = caseCompositeVisualType(compositeVisualType);
+				if (result == null) result = caseVisualType(compositeVisualType);
+				if (result == null) result = caseType(compositeVisualType);
+				if (result == null) result = caseNode(compositeVisualType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.CONNECTION_TYPE:
+			{
+				ConnectionType connectionType = (ConnectionType)theEObject;
+				T result = caseConnectionType(connectionType);
+				if (result == null) result = caseType(connectionType);
+				if (result == null) result = caseNode(connectionType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -189,33 +254,17 @@ public class TypesSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Visual Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Visual Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrimitiveType(PrimitiveType object)
-	{
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Int Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Int Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIntType(IntType object)
+	public T caseVisualType(VisualType object)
 	{
 		return null;
 	}
@@ -253,81 +302,225 @@ public class TypesSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Any Primitive Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Pointer Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Any Primitive Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Pointer Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAnyPrimitiveType(AnyPrimitiveType object)
+	public T casePointerType(PointerType object)
 	{
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Simple Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Quantity Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Simple Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Quantity Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSimpleType(SimpleType object)
+	public T caseQuantityType(QuantityType object)
 	{
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Float Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Float Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFloatType(FloatType object)
+	public T caseParameterType(ParameterType object)
 	{
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Double Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>State Variable Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Double Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>State Variable Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDoubleType(DoubleType object)
+	public T caseStateVariableType(StateVariableType object)
 	{
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dynamics Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dynamics Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStringType(StringType object)
+	public T caseDynamicsType(DynamicsType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Argument Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Argument Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArgumentType(ArgumentType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expression Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expression Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpressionType(ExpressionType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>HTML Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>HTML Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHTMLType(HTMLType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextType(TextType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>URL Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>URL Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseURLType(URLType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Point Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Point Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePointType(PointType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Array Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Array Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArrayType(ArrayType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Visual Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Visual Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompositeVisualType(CompositeVisualType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Connection Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Connection Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConnectionType(ConnectionType object)
 	{
 		return null;
 	}

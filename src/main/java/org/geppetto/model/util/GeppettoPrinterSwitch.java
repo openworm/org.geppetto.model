@@ -33,9 +33,8 @@
 package org.geppetto.model.util;
 
 import org.eclipse.emf.ecore.util.ComposedSwitch;
+import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
-import org.geppetto.model.aspect.Aspect;
-import org.geppetto.model.aspect.util.AspectSwitch;
 import org.geppetto.model.types.ImportType;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.types.util.TypesSwitch;
@@ -46,14 +45,14 @@ import org.geppetto.model.variables.util.VariablesSwitch;
  * @author matteocantarelli
  *
  */
-public class GeppettoPrinterSwitch extends ComposedSwitch<Exception>
+public class GeppettoPrinterSwitch extends ComposedSwitch<Object>
 {
 
-	class GTypesSwitch extends TypesSwitch<Exception>
+	class GTypesSwitch extends TypesSwitch<Object>
 	{
 
 		@Override
-		public Exception caseType(Type object)
+		public Object caseType(Type object)
 		{
 			if(object.getSuperType() == null)
 			{
@@ -62,54 +61,50 @@ public class GeppettoPrinterSwitch extends ComposedSwitch<Exception>
 
 			else
 			{
-				System.out.println("Type: " + object.getName() + " extends " + object.getSuperType().getName());
+				System.out.println("Type: " + object.getName() + " extends: " + object.getSuperType().getName());
 			}
 			return super.caseType(object);
 		}
 
 		@Override
-		public Exception caseImportType(ImportType object)
+		public Object caseImportType(ImportType object)
 		{
 			System.out.println("Type: " + object.getName());
 			System.out.println(object.getModelInterpreterId());
 			System.out.println(object.getUrl());
-			return super.caseImportType(object);
+			return object;
 		}
 
 	}
 
-	class GGeppettoSwitch extends GeppettoSwitch<Exception>
+	class GGeppettoSwitch extends GeppettoSwitch<Object>
 	{
 
 		@Override
-		public Exception caseGeppettoModel(GeppettoModel object)
+		public Object caseGeppettoLibrary(GeppettoLibrary object)
+		{
+			System.out.println("Library: " + object.getName());
+			return object;
+		}
+
+		@Override
+		public Object caseGeppettoModel(GeppettoModel object)
 		{
 			System.out.println("ROOT");
-			return super.caseGeppettoModel(object);
+			return object;
 		}
 
 	}
 
-	class GAspectSwitch extends AspectSwitch<Exception>
+	
+	class GVariablesSwitch extends VariablesSwitch<Object>
 	{
 
 		@Override
-		public Exception caseAspect(Aspect object)
-		{
-			System.out.println("Aspect: " + object.getName());
-			return super.caseAspect(object);
-		}
-
-	}
-
-	class GVariablesSwitch extends VariablesSwitch<Exception>
-	{
-
-		@Override
-		public Exception caseVariable(Variable object)
+		public Object caseVariable(Variable object)
 		{
 			System.out.println("Variable: " + object.getName() + " Type: " + object.getTypes().get(0).getName());
-			return super.caseVariable(object);
+			return object;
 		}
 
 	}
@@ -118,7 +113,6 @@ public class GeppettoPrinterSwitch extends ComposedSwitch<Exception>
 	{
 		super();
 		super.addSwitch(new GGeppettoSwitch());
-		super.addSwitch(new GAspectSwitch());
 		super.addSwitch(new GTypesSwitch());
 		super.addSwitch(new GVariablesSwitch());
 		// super.addSwitch(new GValuesSwitch());

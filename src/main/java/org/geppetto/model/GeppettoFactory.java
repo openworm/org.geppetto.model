@@ -32,6 +32,78 @@ public interface GeppettoFactory extends EFactory
 	GeppettoModel createGeppettoModel();
 
 	/**
+	 * Returns a new object of class '<em>Library</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Library</em>'.
+	 * @generated
+	 */
+	GeppettoLibrary createGeppettoLibrary();
+
+	/**
+	 * Returns a new object of class '<em>Library Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Library Manager</em>'.
+	 * @generated
+	 */
+	LibraryManager createLibraryManager();
+
+	/**
+	 * Returns a new object of class '<em>Experiment State</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Experiment State</em>'.
+	 * @generated
+	 */
+	ExperimentState createExperimentState();
+
+	/**
+	 * Returns a new object of class '<em>Variable Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variable Value</em>'.
+	 * @generated
+	 */
+	VariableValue createVariableValue();
+
+	/**
+	 * Returns a new object of class '<em>Tag</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tag</em>'.
+	 * @generated
+	 */
+	Tag createTag();
+
+	/**
+	 * Returns a new object of class '<em>Domain Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Domain Model</em>'.
+	 * @generated
+	 */
+	DomainModel createDomainModel();
+
+	/**
+	 * Returns a new object of class '<em>Model Format</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model Format</em>'.
+	 * @generated
+	 */
+	ModelFormat createModelFormat();
+
+	/**
+	 * Returns a new object of class '<em>External Domain Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>External Domain Model</em>'.
+	 * @generated
+	 */
+	ExternalDomainModel createExternalDomainModel();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -32,15 +32,6 @@ public interface VariablesFactory extends EFactory
 	Variable createVariable();
 
 	/**
-	 * Returns a new object of class '<em>Array Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Array Variable</em>'.
-	 * @generated
-	 */
-	ArrayVariable createArrayVariable();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

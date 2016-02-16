@@ -4,6 +4,7 @@ package org.geppetto.model.types;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.geppetto.model.values.Composite;
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -15,6 +16,7 @@ import org.geppetto.model.variables.Variable;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.geppetto.model.types.CompositeType#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.geppetto.model.types.CompositeType#getDefaultValue <em>Default Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,5 +41,31 @@ public interface CompositeType extends Type
 	 * @generated
 	 */
 	EList<Variable> getVariables();
+
+	/**
+	 * Returns the value of the '<em><b>Default Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Default Value</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Value</em>' containment reference.
+	 * @see #setDefaultValue(Composite)
+	 * @see org.geppetto.model.types.TypesPackage#getCompositeType_DefaultValue()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Composite getDefaultValue();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.types.CompositeType#getDefaultValue <em>Default Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Value</em>' containment reference.
+	 * @see #getDefaultValue()
+	 * @generated
+	 */
+	void setDefaultValue(Composite value);
 
 } // CompositeType

@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.variables.impl;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -10,6 +11,8 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import org.geppetto.model.types.Type;
+import org.geppetto.model.values.Value;
 import org.geppetto.model.variables.*;
 
 /**
@@ -65,7 +68,7 @@ public class VariablesFactoryImpl extends EFactoryImpl implements VariablesFacto
 		switch (eClass.getClassifierID())
 		{
 			case VariablesPackage.VARIABLE: return createVariable();
-			case VariablesPackage.ARRAY_VARIABLE: return createArrayVariable();
+			case VariablesPackage.TYPE_TO_VALUE_MAP: return (EObject)createTypeToValueMap();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -87,10 +90,10 @@ public class VariablesFactoryImpl extends EFactoryImpl implements VariablesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArrayVariable createArrayVariable()
+	public Map.Entry<Type, Value> createTypeToValueMap()
 	{
-		ArrayVariableImpl arrayVariable = new ArrayVariableImpl();
-		return arrayVariable;
+		TypeToValueMapImpl typeToValueMap = new TypeToValueMapImpl();
+		return typeToValueMap;
 	}
 
 	/**

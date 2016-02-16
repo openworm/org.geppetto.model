@@ -7,38 +7,33 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-
 import org.geppetto.model.GeppettoPackage;
-
-import org.geppetto.model.aspect.AspectPackage;
-
-import org.geppetto.model.aspect.impl.AspectPackageImpl;
-
 import org.geppetto.model.impl.GeppettoPackageImpl;
-
-import org.geppetto.model.types.AnyPrimitiveType;
+import org.geppetto.model.types.ArgumentType;
+import org.geppetto.model.types.ArrayType;
 import org.geppetto.model.types.CompositeType;
-import org.geppetto.model.types.DoubleType;
-import org.geppetto.model.types.FloatType;
+import org.geppetto.model.types.CompositeVisualType;
+import org.geppetto.model.types.ConnectionType;
+import org.geppetto.model.types.DynamicsType;
+import org.geppetto.model.types.ExpressionType;
+import org.geppetto.model.types.HTMLType;
 import org.geppetto.model.types.ImportType;
-import org.geppetto.model.types.IntType;
-import org.geppetto.model.types.PrimitiveType;
-import org.geppetto.model.types.SimpleType;
-import org.geppetto.model.types.StringType;
+import org.geppetto.model.types.ParameterType;
+import org.geppetto.model.types.PointType;
+import org.geppetto.model.types.PointerType;
+import org.geppetto.model.types.QuantityType;
+import org.geppetto.model.types.StateVariableType;
+import org.geppetto.model.types.TextType;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.types.TypesFactory;
 import org.geppetto.model.types.TypesPackage;
-
+import org.geppetto.model.types.URLType;
+import org.geppetto.model.types.VisualType;
 import org.geppetto.model.values.ValuesPackage;
-
 import org.geppetto.model.values.impl.ValuesPackageImpl;
-
 import org.geppetto.model.variables.VariablesPackage;
-
 import org.geppetto.model.variables.impl.VariablesPackageImpl;
 
 /**
@@ -61,14 +56,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass primitiveTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass intTypeEClass = null;
+	private EClass visualTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -89,35 +77,98 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass anyPrimitiveTypeEClass = null;
+	private EClass pointerTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass simpleTypeEClass = null;
+	private EClass quantityTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass floatTypeEClass = null;
+	private EClass parameterTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass doubleTypeEClass = null;
+	private EClass stateVariableTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stringTypeEClass = null;
+	private EClass dynamicsTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass argumentTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass expressionTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass htmlTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass urlTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pointTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arrayTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass compositeVisualTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass connectionTypeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -174,21 +225,18 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) instanceof GeppettoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) : GeppettoPackage.eINSTANCE);
 		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) instanceof ValuesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) : ValuesPackage.eINSTANCE);
 		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) instanceof VariablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) : VariablesPackage.eINSTANCE);
-		AspectPackageImpl theAspectPackage = (AspectPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) instanceof AspectPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI) : AspectPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theTypesPackage.createPackageContents();
 		theGeppettoPackage.createPackageContents();
 		theValuesPackage.createPackageContents();
 		theVariablesPackage.createPackageContents();
-		theAspectPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theTypesPackage.initializePackageContents();
 		theGeppettoPackage.initializePackageContents();
 		theValuesPackage.initializePackageContents();
 		theVariablesPackage.initializePackageContents();
-		theAspectPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theTypesPackage.freeze();
@@ -214,27 +262,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getType_Aspect()
-	{
-		return (EReference)typeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getType_DomainModel()
-	{
-		return (EAttribute)typeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getType_ReferencedVariables()
+	public EReference getType_SuperType()
 	{
 		return (EReference)typeEClass.getEStructuralFeatures().get(0);
 	}
@@ -244,9 +272,39 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getType_SuperType()
+	public EReference getType_DomainModel()
 	{
-		return (EReference)typeEClass.getEStructuralFeatures().get(1);
+		return (EReference)typeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getType_Abstract()
+	{
+		return (EAttribute)typeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getType_VisualType()
+	{
+		return (EReference)typeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getType_ReferencedVariables()
+	{
+		return (EReference)typeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -264,9 +322,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPrimitiveType()
+	public EClass getVisualType()
 	{
-		return primitiveTypeEClass;
+		return visualTypeEClass;
 	}
 
 	/**
@@ -274,19 +332,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIntType()
+	public EReference getVisualType_DefaultValue()
 	{
-		return intTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIntType_DefaultValue()
-	{
-		return (EReference)intTypeEClass.getEStructuralFeatures().get(0);
+		return (EReference)visualTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -354,9 +402,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAnyPrimitiveType()
+	public EReference getCompositeType_DefaultValue()
 	{
-		return anyPrimitiveTypeEClass;
+		return (EReference)compositeTypeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -364,9 +412,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSimpleType()
+	public EClass getPointerType()
 	{
-		return simpleTypeEClass;
+		return pointerTypeEClass;
 	}
 
 	/**
@@ -374,9 +422,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFloatType()
+	public EReference getPointerType_DefaultValue()
 	{
-		return floatTypeEClass;
+		return (EReference)pointerTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -384,9 +432,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFloatType_DefaultValue()
+	public EClass getQuantityType()
 	{
-		return (EReference)floatTypeEClass.getEStructuralFeatures().get(0);
+		return quantityTypeEClass;
 	}
 
 	/**
@@ -394,9 +442,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDoubleType()
+	public EReference getQuantityType_DefaultValue()
 	{
-		return doubleTypeEClass;
+		return (EReference)quantityTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -404,9 +452,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDoubleType_DefaultValue()
+	public EClass getParameterType()
 	{
-		return (EReference)doubleTypeEClass.getEStructuralFeatures().get(0);
+		return parameterTypeEClass;
 	}
 
 	/**
@@ -414,9 +462,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStringType()
+	public EReference getParameterType_DefaultValue()
 	{
-		return stringTypeEClass;
+		return (EReference)parameterTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -424,9 +472,259 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStringType_DefaultValue()
+	public EClass getStateVariableType()
 	{
-		return (EReference)stringTypeEClass.getEStructuralFeatures().get(0);
+		return stateVariableTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStateVariableType_DefaultValue()
+	{
+		return (EReference)stateVariableTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDynamicsType()
+	{
+		return dynamicsTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDynamicsType_DefaultValue()
+	{
+		return (EReference)dynamicsTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArgumentType()
+	{
+		return argumentTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArgumentType_DefaultValue()
+	{
+		return (EReference)argumentTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExpressionType()
+	{
+		return expressionTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExpressionType_DefaultValue()
+	{
+		return (EReference)expressionTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHTMLType()
+	{
+		return htmlTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHTMLType_DefaultValue()
+	{
+		return (EReference)htmlTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTextType()
+	{
+		return textTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTextType_DefaultValue()
+	{
+		return (EReference)textTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getURLType()
+	{
+		return urlTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getURLType_DefaultValue()
+	{
+		return (EReference)urlTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPointType()
+	{
+		return pointTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPointType_DefaultValue()
+	{
+		return (EReference)pointTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArrayType()
+	{
+		return arrayTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArrayType_Size()
+	{
+		return (EAttribute)arrayTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArrayType_ArrayType()
+	{
+		return (EReference)arrayTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArrayType_DefaultValue()
+	{
+		return (EReference)arrayTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCompositeVisualType()
+	{
+		return compositeVisualTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompositeVisualType_Variables()
+	{
+		return (EReference)compositeVisualTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompositeVisualType_VisualGroups()
+	{
+		return (EReference)compositeVisualTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConnectionType()
+	{
+		return connectionTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnectionType_Variables()
+	{
+		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnectionType_DefaultValue()
+	{
+		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -460,16 +758,15 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		// Create classes and their features
 		typeEClass = createEClass(TYPE);
-		createEReference(typeEClass, TYPE__REFERENCED_VARIABLES);
 		createEReference(typeEClass, TYPE__SUPER_TYPE);
-		createEReference(typeEClass, TYPE__ASPECT);
-		createEAttribute(typeEClass, TYPE__DOMAIN_MODEL);
+		createEAttribute(typeEClass, TYPE__ABSTRACT);
+		createEReference(typeEClass, TYPE__VISUAL_TYPE);
+		createEReference(typeEClass, TYPE__REFERENCED_VARIABLES);
+		createEReference(typeEClass, TYPE__DOMAIN_MODEL);
 		createEOperation(typeEClass, TYPE___GET_DEFAULT_VALUE);
 
-		primitiveTypeEClass = createEClass(PRIMITIVE_TYPE);
-
-		intTypeEClass = createEClass(INT_TYPE);
-		createEReference(intTypeEClass, INT_TYPE__DEFAULT_VALUE);
+		visualTypeEClass = createEClass(VISUAL_TYPE);
+		createEReference(visualTypeEClass, VISUAL_TYPE__DEFAULT_VALUE);
 
 		importTypeEClass = createEClass(IMPORT_TYPE);
 		createEAttribute(importTypeEClass, IMPORT_TYPE__URL);
@@ -478,19 +775,53 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		compositeTypeEClass = createEClass(COMPOSITE_TYPE);
 		createEReference(compositeTypeEClass, COMPOSITE_TYPE__VARIABLES);
+		createEReference(compositeTypeEClass, COMPOSITE_TYPE__DEFAULT_VALUE);
 
-		anyPrimitiveTypeEClass = createEClass(ANY_PRIMITIVE_TYPE);
+		pointerTypeEClass = createEClass(POINTER_TYPE);
+		createEReference(pointerTypeEClass, POINTER_TYPE__DEFAULT_VALUE);
 
-		simpleTypeEClass = createEClass(SIMPLE_TYPE);
+		quantityTypeEClass = createEClass(QUANTITY_TYPE);
+		createEReference(quantityTypeEClass, QUANTITY_TYPE__DEFAULT_VALUE);
 
-		floatTypeEClass = createEClass(FLOAT_TYPE);
-		createEReference(floatTypeEClass, FLOAT_TYPE__DEFAULT_VALUE);
+		parameterTypeEClass = createEClass(PARAMETER_TYPE);
+		createEReference(parameterTypeEClass, PARAMETER_TYPE__DEFAULT_VALUE);
 
-		doubleTypeEClass = createEClass(DOUBLE_TYPE);
-		createEReference(doubleTypeEClass, DOUBLE_TYPE__DEFAULT_VALUE);
+		stateVariableTypeEClass = createEClass(STATE_VARIABLE_TYPE);
+		createEReference(stateVariableTypeEClass, STATE_VARIABLE_TYPE__DEFAULT_VALUE);
 
-		stringTypeEClass = createEClass(STRING_TYPE);
-		createEReference(stringTypeEClass, STRING_TYPE__DEFAULT_VALUE);
+		dynamicsTypeEClass = createEClass(DYNAMICS_TYPE);
+		createEReference(dynamicsTypeEClass, DYNAMICS_TYPE__DEFAULT_VALUE);
+
+		argumentTypeEClass = createEClass(ARGUMENT_TYPE);
+		createEReference(argumentTypeEClass, ARGUMENT_TYPE__DEFAULT_VALUE);
+
+		expressionTypeEClass = createEClass(EXPRESSION_TYPE);
+		createEReference(expressionTypeEClass, EXPRESSION_TYPE__DEFAULT_VALUE);
+
+		htmlTypeEClass = createEClass(HTML_TYPE);
+		createEReference(htmlTypeEClass, HTML_TYPE__DEFAULT_VALUE);
+
+		textTypeEClass = createEClass(TEXT_TYPE);
+		createEReference(textTypeEClass, TEXT_TYPE__DEFAULT_VALUE);
+
+		urlTypeEClass = createEClass(URL_TYPE);
+		createEReference(urlTypeEClass, URL_TYPE__DEFAULT_VALUE);
+
+		pointTypeEClass = createEClass(POINT_TYPE);
+		createEReference(pointTypeEClass, POINT_TYPE__DEFAULT_VALUE);
+
+		arrayTypeEClass = createEClass(ARRAY_TYPE);
+		createEAttribute(arrayTypeEClass, ARRAY_TYPE__SIZE);
+		createEReference(arrayTypeEClass, ARRAY_TYPE__ARRAY_TYPE);
+		createEReference(arrayTypeEClass, ARRAY_TYPE__DEFAULT_VALUE);
+
+		compositeVisualTypeEClass = createEClass(COMPOSITE_VISUAL_TYPE);
+		createEReference(compositeVisualTypeEClass, COMPOSITE_VISUAL_TYPE__VARIABLES);
+		createEReference(compositeVisualTypeEClass, COMPOSITE_VISUAL_TYPE__VISUAL_GROUPS);
+
+		connectionTypeEClass = createEClass(CONNECTION_TYPE);
+		createEReference(connectionTypeEClass, CONNECTION_TYPE__VARIABLES);
+		createEReference(connectionTypeEClass, CONNECTION_TYPE__DEFAULT_VALUE);
 	}
 
 	/**
@@ -519,10 +850,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		// Obtain other dependent packages
 		GeppettoPackage theGeppettoPackage = (GeppettoPackage)EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI);
-		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
-		AspectPackage theAspectPackage = (AspectPackage)EPackage.Registry.INSTANCE.getEPackage(AspectPackage.eNS_URI);
-		ValuesPackage theValuesPackage = (ValuesPackage)EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
+		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
+		ValuesPackage theValuesPackage = (ValuesPackage)EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -530,29 +860,36 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		// Add supertypes to classes
 		typeEClass.getESuperTypes().add(theGeppettoPackage.getNode());
-		primitiveTypeEClass.getESuperTypes().add(this.getType());
-		intTypeEClass.getESuperTypes().add(this.getPrimitiveType());
+		visualTypeEClass.getESuperTypes().add(this.getType());
 		importTypeEClass.getESuperTypes().add(this.getType());
 		compositeTypeEClass.getESuperTypes().add(this.getType());
-		anyPrimitiveTypeEClass.getESuperTypes().add(this.getPrimitiveType());
-		simpleTypeEClass.getESuperTypes().add(this.getType());
-		floatTypeEClass.getESuperTypes().add(this.getPrimitiveType());
-		doubleTypeEClass.getESuperTypes().add(this.getPrimitiveType());
-		stringTypeEClass.getESuperTypes().add(this.getPrimitiveType());
+		pointerTypeEClass.getESuperTypes().add(this.getType());
+		quantityTypeEClass.getESuperTypes().add(this.getType());
+		parameterTypeEClass.getESuperTypes().add(this.getType());
+		stateVariableTypeEClass.getESuperTypes().add(this.getType());
+		dynamicsTypeEClass.getESuperTypes().add(this.getType());
+		argumentTypeEClass.getESuperTypes().add(this.getType());
+		expressionTypeEClass.getESuperTypes().add(this.getType());
+		htmlTypeEClass.getESuperTypes().add(this.getType());
+		textTypeEClass.getESuperTypes().add(this.getType());
+		urlTypeEClass.getESuperTypes().add(this.getType());
+		pointTypeEClass.getESuperTypes().add(this.getType());
+		arrayTypeEClass.getESuperTypes().add(this.getType());
+		compositeVisualTypeEClass.getESuperTypes().add(this.getVisualType());
+		connectionTypeEClass.getESuperTypes().add(this.getType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getType_ReferencedVariables(), theVariablesPackage.getVariable(), theVariablesPackage.getVariable_Types(), "referencedVariables", null, 0, -1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getType_Aspect(), theAspectPackage.getAspect(), theAspectPackage.getAspect_Types(), "aspect", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getType_DomainModel(), ecorePackage.getEJavaObject(), "domainModel", null, 0, 1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getType_Abstract(), theXMLTypePackage.getBoolean(), "abstract", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getType_VisualType(), this.getVisualType(), null, "visualType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getType_ReferencedVariables(), theVariablesPackage.getVariable(), theVariablesPackage.getVariable_Types(), "referencedVariables", null, 0, -1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getType_DomainModel(), theGeppettoPackage.getDomainModel(), null, "domainModel", null, 0, 1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getType__GetDefaultValue(), theValuesPackage.getValue(), "getDefaultValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(primitiveTypeEClass, PrimitiveType.class, "PrimitiveType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(intTypeEClass, IntType.class, "IntType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIntType_DefaultValue(), theValuesPackage.getIntValue(), null, "defaultValue", null, 1, 1, IntType.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(visualTypeEClass, VisualType.class, "VisualType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVisualType_DefaultValue(), theValuesPackage.getVisualValue(), null, "defaultValue", null, 0, 1, VisualType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(importTypeEClass, ImportType.class, "ImportType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImportType_Url(), theXMLTypePackage.getString(), "url", null, 0, 1, ImportType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -561,19 +898,53 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		initEClass(compositeTypeEClass, CompositeType.class, "CompositeType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, CompositeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCompositeType_DefaultValue(), theValuesPackage.getComposite(), null, "defaultValue", null, 0, 1, CompositeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(anyPrimitiveTypeEClass, AnyPrimitiveType.class, "AnyPrimitiveType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(pointerTypeEClass, PointerType.class, "PointerType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPointerType_DefaultValue(), theValuesPackage.getPointer(), null, "defaultValue", null, 0, 1, PointerType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(simpleTypeEClass, SimpleType.class, "SimpleType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(quantityTypeEClass, QuantityType.class, "QuantityType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getQuantityType_DefaultValue(), theValuesPackage.getQuantity(), null, "defaultValue", null, 0, 1, QuantityType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(floatTypeEClass, FloatType.class, "FloatType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFloatType_DefaultValue(), theValuesPackage.getFloatValue(), null, "defaultValue", null, 1, 1, FloatType.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(parameterTypeEClass, ParameterType.class, "ParameterType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getParameterType_DefaultValue(), theValuesPackage.getQuantity(), null, "defaultValue", null, 0, 1, ParameterType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(doubleTypeEClass, DoubleType.class, "DoubleType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDoubleType_DefaultValue(), theValuesPackage.getDoubleValue(), null, "defaultValue", null, 1, 1, DoubleType.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(stateVariableTypeEClass, StateVariableType.class, "StateVariableType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStateVariableType_DefaultValue(), theValuesPackage.getQuantity(), null, "defaultValue", null, 0, 1, StateVariableType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(stringTypeEClass, StringType.class, "StringType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStringType_DefaultValue(), theValuesPackage.getStringValue(), null, "defaultValue", null, 1, 1, StringType.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dynamicsTypeEClass, DynamicsType.class, "DynamicsType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDynamicsType_DefaultValue(), theValuesPackage.getDynamics(), null, "defaultValue", null, 0, 1, DynamicsType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(argumentTypeEClass, ArgumentType.class, "ArgumentType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getArgumentType_DefaultValue(), theValuesPackage.getArgument(), null, "defaultValue", null, 0, 1, ArgumentType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(expressionTypeEClass, ExpressionType.class, "ExpressionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExpressionType_DefaultValue(), theValuesPackage.getExpression(), null, "defaultValue", null, 0, 1, ExpressionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(htmlTypeEClass, HTMLType.class, "HTMLType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getHTMLType_DefaultValue(), theValuesPackage.getHTML(), null, "defaultValue", null, 0, 1, HTMLType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(textTypeEClass, TextType.class, "TextType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTextType_DefaultValue(), theValuesPackage.getText(), null, "defaultValue", null, 0, 1, TextType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(urlTypeEClass, URLType.class, "URLType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getURLType_DefaultValue(), theValuesPackage.getURL(), null, "defaultValue", null, 0, 1, URLType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pointTypeEClass, PointType.class, "PointType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPointType_DefaultValue(), theValuesPackage.getPoint(), null, "defaultValue", null, 0, 1, PointType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arrayTypeEClass, ArrayType.class, "ArrayType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArrayType_Size(), theXMLTypePackage.getInt(), "size", null, 0, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArrayType_ArrayType(), this.getType(), null, "arrayType", null, 1, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArrayType_DefaultValue(), theValuesPackage.getArrayValue(), null, "defaultValue", null, 0, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(compositeVisualTypeEClass, CompositeVisualType.class, "CompositeVisualType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCompositeVisualType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, CompositeVisualType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCompositeVisualType_VisualGroups(), theValuesPackage.getVisualGroup(), null, "visualGroups", null, 0, -1, CompositeVisualType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(connectionTypeEClass, ConnectionType.class, "ConnectionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConnectionType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionType_DefaultValue(), theValuesPackage.getComposite(), null, "defaultValue", null, 0, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //TypesPackageImpl

@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.variables.util;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -9,6 +10,8 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import org.geppetto.model.Node;
 
+import org.geppetto.model.types.Type;
+import org.geppetto.model.values.Value;
 import org.geppetto.model.variables.*;
 
 /**
@@ -82,12 +85,10 @@ public class VariablesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VariablesPackage.ARRAY_VARIABLE:
+			case VariablesPackage.TYPE_TO_VALUE_MAP:
 			{
-				ArrayVariable arrayVariable = (ArrayVariable)theEObject;
-				T result = caseArrayVariable(arrayVariable);
-				if (result == null) result = caseVariable(arrayVariable);
-				if (result == null) result = caseNode(arrayVariable);
+				@SuppressWarnings("unchecked") Map.Entry<Type, Value> typeToValueMap = (Map.Entry<Type, Value>)theEObject;
+				T result = caseTypeToValueMap(typeToValueMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,17 +113,17 @@ public class VariablesSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Array Variable</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Type To Value Map</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Array Variable</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Type To Value Map</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArrayVariable(ArrayVariable object)
+	public T caseTypeToValueMap(Map.Entry<Type, Value> object)
 	{
 		return null;
 	}

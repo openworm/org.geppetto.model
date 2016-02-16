@@ -3,11 +3,7 @@
 package org.geppetto.model;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.geppetto.model.aspect.Aspect;
-
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -19,7 +15,10 @@ import org.geppetto.model.variables.Variable;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.geppetto.model.GeppettoModel#getVariables <em>Variables</em>}</li>
- *   <li>{@link org.geppetto.model.GeppettoModel#getAspects <em>Aspects</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getLibraries <em>Libraries</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getId <em>Id</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,25 +40,94 @@ public interface GeppettoModel extends EObject
 	 * @return the value of the '<em>Variables</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Variables()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='variable' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<Variable> getVariables();
 
 	/**
-	 * Returns the value of the '<em><b>Aspects</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.aspect.Aspect}.
+	 * Returns the value of the '<em><b>Libraries</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.GeppettoLibrary}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Aspects</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Libraries</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Aspects</em>' containment reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Aspects()
+	 * @return the value of the '<em>Libraries</em>' containment reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Libraries()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Aspect> getAspects();
+	EList<GeppettoLibrary> getLibraries();
+
+	/**
+	 * Returns the value of the '<em><b>Tags</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.Tag}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tags</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tags</em>' containment reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Tags()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Tag> getTags();
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Id()
+	 * @model default="" dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.GeppettoModel#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Name()
+	 * @model default="" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.GeppettoModel#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // GeppettoModel
