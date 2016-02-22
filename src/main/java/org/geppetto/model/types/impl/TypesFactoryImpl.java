@@ -81,6 +81,7 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.ARRAY_TYPE: return createArrayType();
 			case TypesPackage.COMPOSITE_VISUAL_TYPE: return createCompositeVisualType();
 			case TypesPackage.CONNECTION_TYPE: return createConnectionType();
+			case TypesPackage.SIMPLE_TYPE: return createSimpleType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -271,6 +272,17 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		ConnectionTypeImpl connectionType = new ConnectionTypeImpl();
 		return connectionType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleType createSimpleType()
+	{
+		SimpleTypeImpl simpleType = new SimpleTypeImpl();
+		return simpleType;
 	}
 
 	/**

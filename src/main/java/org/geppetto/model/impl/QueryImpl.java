@@ -2,15 +2,22 @@
  */
 package org.geppetto.model.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.Query;
+import org.geppetto.model.QueryMatchingCriteria;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +28,7 @@ import org.geppetto.model.Query;
  * <ul>
  *   <li>{@link org.geppetto.model.impl.QueryImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.geppetto.model.impl.QueryImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.QueryImpl#getMatchingCriteria <em>Matching Criteria</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,6 +75,16 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getMatchingCriteria() <em>Matching Criteria</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMatchingCriteria()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<QueryMatchingCriteria> matchingCriteria;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,6 +158,36 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<QueryMatchingCriteria> getMatchingCriteria()
+	{
+		if (matchingCriteria == null)
+		{
+			matchingCriteria = new EObjectContainmentEList<QueryMatchingCriteria>(QueryMatchingCriteria.class, this, GeppettoPackage.QUERY__MATCHING_CRITERIA);
+		}
+		return matchingCriteria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+				return ((InternalEList<?>)getMatchingCriteria()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
@@ -149,6 +197,8 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 				return getLabel();
 			case GeppettoPackage.QUERY__DESCRIPTION:
 				return getDescription();
+			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+				return getMatchingCriteria();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +208,7 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue)
 	{
@@ -168,6 +219,10 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case GeppettoPackage.QUERY__DESCRIPTION:
 				setDescription((String)newValue);
+				return;
+			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+				getMatchingCriteria().clear();
+				getMatchingCriteria().addAll((Collection<? extends QueryMatchingCriteria>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -189,6 +244,9 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 			case GeppettoPackage.QUERY__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+				getMatchingCriteria().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -207,6 +265,8 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
 			case GeppettoPackage.QUERY__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+				return matchingCriteria != null && !matchingCriteria.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

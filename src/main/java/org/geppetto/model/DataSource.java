@@ -16,6 +16,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.geppetto.model.DataSource#getLibraryConfigurations <em>Library Configurations</em>}</li>
  *   <li>{@link org.geppetto.model.DataSource#getUrl <em>Url</em>}</li>
  *   <li>{@link org.geppetto.model.DataSource#getQueries <em>Queries</em>}</li>
+ *   <li>{@link org.geppetto.model.DataSource#getDependenciesLibrary <em>Dependencies Library</em>}</li>
+ *   <li>{@link org.geppetto.model.DataSource#getTargetLibrary <em>Target Library</em>}</li>
  * </ul>
  * </p>
  *
@@ -108,5 +110,47 @@ public interface DataSource extends Node
 	 * @generated
 	 */
 	EList<Query> getQueries();
+
+	/**
+	 * Returns the value of the '<em><b>Dependencies Library</b></em>' reference list.
+	 * The list contents are of type {@link org.geppetto.model.GeppettoLibrary}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Dependencies Library</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dependencies Library</em>' reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getDataSource_DependenciesLibrary()
+	 * @model
+	 * @generated
+	 */
+	EList<GeppettoLibrary> getDependenciesLibrary();
+
+	/**
+	 * Returns the value of the '<em><b>Target Library</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Target Library</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Target Library</em>' reference.
+	 * @see #setTargetLibrary(GeppettoLibrary)
+	 * @see org.geppetto.model.GeppettoPackage#getDataSource_TargetLibrary()
+	 * @model required="true"
+	 * @generated
+	 */
+	GeppettoLibrary getTargetLibrary();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.DataSource#getTargetLibrary <em>Target Library</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Target Library</em>' reference.
+	 * @see #getTargetLibrary()
+	 * @generated
+	 */
+	void setTargetLibrary(GeppettoLibrary value);
 
 } // DataSource

@@ -685,13 +685,31 @@ public interface GeppettoPackage extends EPackage
 	int DATA_SOURCE__QUERIES = NODE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Dependencies Library</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SOURCE__DEPENDENCIES_LIBRARY = NODE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Target Library</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SOURCE__TARGET_LIBRARY = NODE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Data Source</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SOURCE_FEATURE_COUNT = NODE_FEATURE_COUNT + 4;
+	int DATA_SOURCE_FEATURE_COUNT = NODE_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -795,13 +813,22 @@ public interface GeppettoPackage extends EPackage
 	int QUERY__DESCRIPTION = 1;
 
 	/**
+	 * The feature id for the '<em><b>Matching Criteria</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY__MATCHING_CRITERIA = 2;
+
+	/**
 	 * The number of structural features of the '<em>Query</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_FEATURE_COUNT = 2;
+	int QUERY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Query</em>' class.
@@ -839,6 +866,15 @@ public interface GeppettoPackage extends EPackage
 	 * @ordered
 	 */
 	int SIMPLE_QUERY__DESCRIPTION = QUERY__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Matching Criteria</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_QUERY__MATCHING_CRITERIA = QUERY__MATCHING_CRITERIA;
 
 	/**
 	 * The feature id for the '<em><b>Query</b></em>' attribute.
@@ -903,6 +939,15 @@ public interface GeppettoPackage extends EPackage
 	 * @ordered
 	 */
 	int COMPOUND_QUERY__DESCRIPTION = QUERY__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Matching Criteria</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_QUERY__MATCHING_CRITERIA = QUERY__MATCHING_CRITERIA;
 
 	/**
 	 * The feature id for the '<em><b>Query Chain</b></em>' containment reference list.
@@ -1024,6 +1069,43 @@ public interface GeppettoPackage extends EPackage
 	int QUERY_RESULT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.QueryMatchingCriteriaImpl <em>Query Matching Criteria</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.QueryMatchingCriteriaImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryMatchingCriteria()
+	 * @generated
+	 */
+	int QUERY_MATCHING_CRITERIA = 17;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_MATCHING_CRITERIA__TYPE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Query Matching Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_MATCHING_CRITERIA_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Query Matching Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_MATCHING_CRITERIA_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1031,7 +1113,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getFileFormat()
 	 * @generated
 	 */
-	int FILE_FORMAT = 17;
+	int FILE_FORMAT = 18;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
@@ -1451,6 +1533,28 @@ public interface GeppettoPackage extends EPackage
 	EReference getDataSource_Queries();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.DataSource#getDependenciesLibrary <em>Dependencies Library</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Dependencies Library</em>'.
+	 * @see org.geppetto.model.DataSource#getDependenciesLibrary()
+	 * @see #getDataSource()
+	 * @generated
+	 */
+	EReference getDataSource_DependenciesLibrary();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.DataSource#getTargetLibrary <em>Target Library</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target Library</em>'.
+	 * @see org.geppetto.model.DataSource#getTargetLibrary()
+	 * @see #getDataSource()
+	 * @generated
+	 */
+	EReference getDataSource_TargetLibrary();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.DataSourceLibraryConfiguration <em>Data Source Library Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1524,6 +1628,17 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getQuery_Description();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.Query#getMatchingCriteria <em>Matching Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Matching Criteria</em>'.
+	 * @see org.geppetto.model.Query#getMatchingCriteria()
+	 * @see #getQuery()
+	 * @generated
+	 */
+	EReference getQuery_MatchingCriteria();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.SimpleQuery <em>Simple Query</em>}'.
@@ -1641,6 +1756,27 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getQueryResult_Values();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.QueryMatchingCriteria <em>Query Matching Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Query Matching Criteria</em>'.
+	 * @see org.geppetto.model.QueryMatchingCriteria
+	 * @generated
+	 */
+	EClass getQueryMatchingCriteria();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.QueryMatchingCriteria#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Type</em>'.
+	 * @see org.geppetto.model.QueryMatchingCriteria#getType()
+	 * @see #getQueryMatchingCriteria()
+	 * @generated
+	 */
+	EReference getQueryMatchingCriteria_Type();
 
 	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.FileFormat <em>File Format</em>}'.
@@ -2011,6 +2147,22 @@ public interface GeppettoPackage extends EPackage
 		EReference DATA_SOURCE__QUERIES = eINSTANCE.getDataSource_Queries();
 
 		/**
+		 * The meta object literal for the '<em><b>Dependencies Library</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SOURCE__DEPENDENCIES_LIBRARY = eINSTANCE.getDataSource_DependenciesLibrary();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Library</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SOURCE__TARGET_LIBRARY = eINSTANCE.getDataSource_TargetLibrary();
+
+		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.DataSourceLibraryConfigurationImpl <em>Data Source Library Configuration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2069,6 +2221,14 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute QUERY__DESCRIPTION = eINSTANCE.getQuery_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Matching Criteria</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUERY__MATCHING_CRITERIA = eINSTANCE.getQuery_MatchingCriteria();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.SimpleQueryImpl <em>Simple Query</em>}' class.
@@ -2165,6 +2325,24 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute QUERY_RESULT__VALUES = eINSTANCE.getQueryResult_Values();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.QueryMatchingCriteriaImpl <em>Query Matching Criteria</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.QueryMatchingCriteriaImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryMatchingCriteria()
+		 * @generated
+		 */
+		EClass QUERY_MATCHING_CRITERIA = eINSTANCE.getQueryMatchingCriteria();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUERY_MATCHING_CRITERIA__TYPE = eINSTANCE.getQueryMatchingCriteria_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.

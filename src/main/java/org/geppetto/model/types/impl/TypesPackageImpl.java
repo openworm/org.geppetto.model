@@ -24,6 +24,7 @@ import org.geppetto.model.types.ParameterType;
 import org.geppetto.model.types.PointType;
 import org.geppetto.model.types.PointerType;
 import org.geppetto.model.types.QuantityType;
+import org.geppetto.model.types.SimpleType;
 import org.geppetto.model.types.StateVariableType;
 import org.geppetto.model.types.TextType;
 import org.geppetto.model.types.Type;
@@ -169,6 +170,13 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * @generated
 	 */
 	private EClass connectionTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass simpleTypeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -732,6 +740,16 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSimpleType()
+	{
+		return simpleTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TypesFactory getTypesFactory()
 	{
 		return (TypesFactory)getEFactoryInstance();
@@ -822,6 +840,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		connectionTypeEClass = createEClass(CONNECTION_TYPE);
 		createEReference(connectionTypeEClass, CONNECTION_TYPE__VARIABLES);
 		createEReference(connectionTypeEClass, CONNECTION_TYPE__DEFAULT_VALUE);
+
+		simpleTypeEClass = createEClass(SIMPLE_TYPE);
 	}
 
 	/**
@@ -877,10 +897,11 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		arrayTypeEClass.getESuperTypes().add(this.getType());
 		compositeVisualTypeEClass.getESuperTypes().add(this.getVisualType());
 		connectionTypeEClass.getESuperTypes().add(this.getType());
+		simpleTypeEClass.getESuperTypes().add(this.getType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, -1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getType_Abstract(), theXMLTypePackage.getBoolean(), "abstract", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_VisualType(), this.getVisualType(), null, "visualType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_ReferencedVariables(), theVariablesPackage.getVariable(), theVariablesPackage.getVariable_Types(), "referencedVariables", null, 0, -1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -945,6 +966,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		initEClass(connectionTypeEClass, ConnectionType.class, "ConnectionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnectionType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnectionType_DefaultValue(), theValuesPackage.getComposite(), null, "defaultValue", null, 0, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(simpleTypeEClass, SimpleType.class, "SimpleType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //TypesPackageImpl

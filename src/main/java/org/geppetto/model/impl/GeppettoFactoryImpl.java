@@ -80,6 +80,7 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.COMPOUND_QUERY: return createCompoundQuery();
 			case GeppettoPackage.QUERY_RESULTS: return createQueryResults();
 			case GeppettoPackage.QUERY_RESULT: return createQueryResult();
+			case GeppettoPackage.QUERY_MATCHING_CRITERIA: return createQueryMatchingCriteria();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -282,6 +283,17 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		QueryResultImpl queryResult = new QueryResultImpl();
 		return queryResult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QueryMatchingCriteria createQueryMatchingCriteria()
+	{
+		QueryMatchingCriteriaImpl queryMatchingCriteria = new QueryMatchingCriteriaImpl();
+		return queryMatchingCriteria;
 	}
 
 	/**

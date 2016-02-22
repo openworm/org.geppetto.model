@@ -15,10 +15,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.geppetto.model.DataSource;
 import org.geppetto.model.DataSourceLibraryConfiguration;
+import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.Query;
 
@@ -33,6 +35,8 @@ import org.geppetto.model.Query;
  *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getLibraryConfigurations <em>Library Configurations</em>}</li>
  *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getQueries <em>Queries</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getDependenciesLibrary <em>Dependencies Library</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getTargetLibrary <em>Target Library</em>}</li>
  * </ul>
  * </p>
  *
@@ -99,6 +103,26 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	 * @ordered
 	 */
 	protected EList<Query> queries;
+
+	/**
+	 * The cached value of the '{@link #getDependenciesLibrary() <em>Dependencies Library</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDependenciesLibrary()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GeppettoLibrary> dependenciesLibrary;
+
+	/**
+	 * The cached value of the '{@link #getTargetLibrary() <em>Target Library</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTargetLibrary()
+	 * @generated
+	 * @ordered
+	 */
+	protected GeppettoLibrary targetLibrary;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -200,6 +224,63 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<GeppettoLibrary> getDependenciesLibrary()
+	{
+		if (dependenciesLibrary == null)
+		{
+			dependenciesLibrary = new EObjectResolvingEList<GeppettoLibrary>(GeppettoLibrary.class, this, GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY);
+		}
+		return dependenciesLibrary;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeppettoLibrary getTargetLibrary()
+	{
+		if (targetLibrary != null && targetLibrary.eIsProxy())
+		{
+			InternalEObject oldTargetLibrary = (InternalEObject)targetLibrary;
+			targetLibrary = (GeppettoLibrary)eResolveProxy(oldTargetLibrary);
+			if (targetLibrary != oldTargetLibrary)
+			{
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY, oldTargetLibrary, targetLibrary));
+			}
+		}
+		return targetLibrary;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeppettoLibrary basicGetTargetLibrary()
+	{
+		return targetLibrary;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTargetLibrary(GeppettoLibrary newTargetLibrary)
+	{
+		GeppettoLibrary oldTargetLibrary = targetLibrary;
+		targetLibrary = newTargetLibrary;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY, oldTargetLibrary, targetLibrary));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -231,6 +312,11 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 				return getUrl();
 			case GeppettoPackage.DATA_SOURCE__QUERIES:
 				return getQueries();
+			case GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
+				return getDependenciesLibrary();
+			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
+				if (resolve) return getTargetLibrary();
+				return basicGetTargetLibrary();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,6 +346,13 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 				getQueries().clear();
 				getQueries().addAll((Collection<? extends Query>)newValue);
 				return;
+			case GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
+				getDependenciesLibrary().clear();
+				getDependenciesLibrary().addAll((Collection<? extends GeppettoLibrary>)newValue);
+				return;
+			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
+				setTargetLibrary((GeppettoLibrary)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -286,6 +379,12 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 			case GeppettoPackage.DATA_SOURCE__QUERIES:
 				getQueries().clear();
 				return;
+			case GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
+				getDependenciesLibrary().clear();
+				return;
+			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
+				setTargetLibrary((GeppettoLibrary)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -308,6 +407,10 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 			case GeppettoPackage.DATA_SOURCE__QUERIES:
 				return queries != null && !queries.isEmpty();
+			case GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
+				return dependenciesLibrary != null && !dependenciesLibrary.isEmpty();
+			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
+				return targetLibrary != null;
 		}
 		return super.eIsSet(featureID);
 	}

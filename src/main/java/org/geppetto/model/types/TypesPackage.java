@@ -98,7 +98,7 @@ public interface TypesPackage extends EPackage
 	int TYPE__TAGS = GeppettoPackage.NODE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -216,7 +216,7 @@ public interface TypesPackage extends EPackage
 	int VISUAL_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -343,7 +343,7 @@ public interface TypesPackage extends EPackage
 	int IMPORT_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -488,7 +488,7 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -624,7 +624,7 @@ public interface TypesPackage extends EPackage
 	int POINTER_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -751,7 +751,7 @@ public interface TypesPackage extends EPackage
 	int QUANTITY_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -878,7 +878,7 @@ public interface TypesPackage extends EPackage
 	int PARAMETER_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1005,7 +1005,7 @@ public interface TypesPackage extends EPackage
 	int STATE_VARIABLE_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1132,7 +1132,7 @@ public interface TypesPackage extends EPackage
 	int DYNAMICS_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1259,7 +1259,7 @@ public interface TypesPackage extends EPackage
 	int ARGUMENT_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1386,7 +1386,7 @@ public interface TypesPackage extends EPackage
 	int EXPRESSION_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1513,7 +1513,7 @@ public interface TypesPackage extends EPackage
 	int HTML_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1640,7 +1640,7 @@ public interface TypesPackage extends EPackage
 	int TEXT_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1767,7 +1767,7 @@ public interface TypesPackage extends EPackage
 	int URL_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1894,7 +1894,7 @@ public interface TypesPackage extends EPackage
 	int POINT_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2022,7 +2022,7 @@ public interface TypesPackage extends EPackage
 	int ARRAY_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2167,7 +2167,7 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_VISUAL_TYPE__TAGS = VISUAL_TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2313,7 +2313,7 @@ public interface TypesPackage extends EPackage
 	int CONNECTION_TYPE__TAGS = TYPE__TAGS;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' reference.
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2413,6 +2413,125 @@ public interface TypesPackage extends EPackage
 
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.SimpleTypeImpl <em>Simple Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.SimpleTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getSimpleType()
+	 * @generated
+	 */
+	int SIMPLE_TYPE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__ID = TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__TAGS = TYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Simple Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Simple Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.types.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2423,10 +2542,10 @@ public interface TypesPackage extends EPackage
 	EClass getType();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.types.Type#getSuperType <em>Super Type</em>}'.
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.types.Type#getSuperType <em>Super Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Super Type</em>'.
+	 * @return the meta object for the reference list '<em>Super Type</em>'.
 	 * @see org.geppetto.model.types.Type#getSuperType()
 	 * @see #getType()
 	 * @generated
@@ -2922,6 +3041,16 @@ public interface TypesPackage extends EPackage
 	EReference getConnectionType_DefaultValue();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.SimpleType <em>Simple Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Simple Type</em>'.
+	 * @see org.geppetto.model.types.SimpleType
+	 * @generated
+	 */
+	EClass getSimpleType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2956,7 +3085,7 @@ public interface TypesPackage extends EPackage
 		EClass TYPE = eINSTANCE.getType();
 
 		/**
-		 * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Super Type</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3364,6 +3493,16 @@ public interface TypesPackage extends EPackage
 		 * @generated
 		 */
 		EReference CONNECTION_TYPE__DEFAULT_VALUE = eINSTANCE.getConnectionType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.SimpleTypeImpl <em>Simple Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.SimpleTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getSimpleType()
+		 * @generated
+		 */
+		EClass SIMPLE_TYPE = eINSTANCE.getSimpleType();
 
 	}
 

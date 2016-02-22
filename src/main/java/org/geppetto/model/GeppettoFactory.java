@@ -158,6 +158,15 @@ public interface GeppettoFactory extends EFactory
 	QueryResult createQueryResult();
 
 	/**
+	 * Returns a new object of class '<em>Query Matching Criteria</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Query Matching Criteria</em>'.
+	 * @generated
+	 */
+	QueryMatchingCriteria createQueryMatchingCriteria();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

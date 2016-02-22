@@ -176,6 +176,15 @@ public interface TypesFactory extends EFactory
 	ConnectionType createConnectionType();
 
 	/**
+	 * Returns a new object of class '<em>Simple Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Type</em>'.
+	 * @generated
+	 */
+	SimpleType createSimpleType();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

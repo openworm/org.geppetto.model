@@ -2,6 +2,7 @@
  */
 package org.geppetto.model;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.geppetto.model.Query#getLabel <em>Label</em>}</li>
  *   <li>{@link org.geppetto.model.Query#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.geppetto.model.Query#getMatchingCriteria <em>Matching Criteria</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,5 +76,21 @@ public interface Query extends EObject
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Matching Criteria</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.QueryMatchingCriteria}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Matching Criteria</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Matching Criteria</em>' containment reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getQuery_MatchingCriteria()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<QueryMatchingCriteria> getMatchingCriteria();
 
 } // Query
