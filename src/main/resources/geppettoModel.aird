@@ -1,13 +1,581 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_CQg4MI4REeWICeuZmPX_rQ" selectedViews="_dE3EcI4REeWICeuZmPX_rQ _dFAOYI4REeWICeuZmPX_rQ" version="8.1.1">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_CQg4MI4REeWICeuZmPX_rQ" selectedViews="_dE3EcI4REeWICeuZmPX_rQ _dFAOYI4REeWICeuZmPX_rQ" version="8.1.1">
   <models xmi:type="ecore:EPackage" href="geppettoModel.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2003/XMLType#/"/>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_dE3EcI4REeWICeuZmPX_rQ" initialized="true">
-    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']"/>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_Qhd08Nl2EeWt9uLySzBD-w" name="model documentation table" headerColumnWidth="256">
+      <target xmi:type="ecore:EPackage" href="geppettoModel.ecore#/"/>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd08dl2EeWt9uLySzBD-w" label="EClass : GeppettoModel">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//GeppettoModel"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd08tl2EeWt9uLySzBD-w" label="EReference : variables">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoModel/variables"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoModel/variables"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Qhd089l2EeWt9uLySzBD-w" label="The top level variables instantiated inside the Geppetto Model.  The type of the variables will be coming from inside Libraries available inside this GeppettoModel." column="_QhecPtl2EeWt9uLySzBD-w">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/variables/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/variables/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_Qhd09Nl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd09dl2EeWt9uLySzBD-w" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd09tl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd099l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd0-Nl2EeWt9uLySzBD-w" label="EReference : libraries">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoModel/libraries"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoModel/libraries"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Qhd0-dl2EeWt9uLySzBD-w" label="The libraries are container of types. A library can be associated to a modelInterpreter." column="_QhecPtl2EeWt9uLySzBD-w">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/libraries/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/libraries/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_Qhd0-tl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd0-9l2EeWt9uLySzBD-w" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd0_Nl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd0_dl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd0_tl2EeWt9uLySzBD-w" label="EReference : tags">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoModel/tags"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoModel/tags"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Qhd0_9l2EeWt9uLySzBD-w" label="The tags available in the GeppettoModel." column="_QhecPtl2EeWt9uLySzBD-w">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/tags/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/tags/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_Qhd1ANl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Adl2EeWt9uLySzBD-w" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Atl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1A9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1BNl2EeWt9uLySzBD-w" label="EAttribute : id">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//GeppettoModel/id"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//GeppettoModel/id"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Qhd1Bdl2EeWt9uLySzBD-w" label="The id of the GeppettoModel." column="_QhecPtl2EeWt9uLySzBD-w">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/id/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/id/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_Qhd1Btl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1B9l2EeWt9uLySzBD-w" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1CNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Cdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1Ctl2EeWt9uLySzBD-w" label="EAttribute : name">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//GeppettoModel/name"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//GeppettoModel/name"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Qhd1C9l2EeWt9uLySzBD-w" label="The name of the GeppettoModel." column="_QhecPtl2EeWt9uLySzBD-w">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/name/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/name/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_Qhd1DNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Ddl2EeWt9uLySzBD-w" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Dtl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1D9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1ENl2EeWt9uLySzBD-w" label="EReference : dataSources">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoModel/dataSources"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoModel/dataSources"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <cells xmi:type="table:DCell" xmi:id="_Qhd1Edl2EeWt9uLySzBD-w" label="The data sources available for this model." column="_QhecPtl2EeWt9uLySzBD-w">
+            <target xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/dataSources/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/dataSources/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+            <currentStyle xmi:type="table:DCellStyle" xmi:id="_Qhd1Etl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1E9l2EeWt9uLySzBD-w" red="220" green="234" blue="183"/>
+              <backgroundStyleOrigin xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+            </currentStyle>
+            <intersectionMapping xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </cells>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1FNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Fdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//GeppettoModel"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <cells xmi:type="table:DCell" xmi:id="_Qhd1Ftl2EeWt9uLySzBD-w" label="The root of every Geppetto model" column="_QhecPtl2EeWt9uLySzBD-w">
+          <target xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+          <semanticElements xmi:type="ecore:EStringToStringMapEntry" href="geppettoModel.ecore#//GeppettoModel/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FGenModel%/@details.0"/>
+          <currentStyle xmi:type="table:DCellStyle" xmi:id="_Qhd1F9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1GNl2EeWt9uLySzBD-w" red="220" green="234" blue="183"/>
+            <backgroundStyleOrigin xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+          </currentStyle>
+          <intersectionMapping xmi:type="description:IntersectionMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@intersection.0"/>
+        </cells>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Gdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Gtl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1G9l2EeWt9uLySzBD-w" label="EClass : Node">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//Node"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1HNl2EeWt9uLySzBD-w" label="EAttribute : id">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Node/id"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Node/id"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Hdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Htl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1H9l2EeWt9uLySzBD-w" label="EAttribute : name">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Node/name"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Node/name"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1INl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Idl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1Itl2EeWt9uLySzBD-w" label="EReference : tags">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//Node/tags"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//Node/tags"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1I9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1JNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//Node"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Jdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Jtl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1J9l2EeWt9uLySzBD-w" label="EClass : GeppettoLibrary">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//GeppettoLibrary"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1KNl2EeWt9uLySzBD-w" label="EReference : types">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoLibrary/types"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoLibrary/types"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Kdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Ktl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1K9l2EeWt9uLySzBD-w" label="EReference : sharedTypes">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoLibrary/sharedTypes"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//GeppettoLibrary/sharedTypes"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1LNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Ldl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//GeppettoLibrary"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Ltl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1L9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1MNl2EeWt9uLySzBD-w" label="EClass : LibraryManager">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//LibraryManager"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1Mdl2EeWt9uLySzBD-w" label="EReference : libraries">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//LibraryManager/libraries"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//LibraryManager/libraries"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Mtl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1M9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//LibraryManager"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1NNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Ndl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1Ntl2EeWt9uLySzBD-w" label="EClass : ExperimentState">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//ExperimentState"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1N9l2EeWt9uLySzBD-w" label="EReference : recordedVariables">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//ExperimentState/recordedVariables"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//ExperimentState/recordedVariables"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1ONl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Odl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1Otl2EeWt9uLySzBD-w" label="EReference : setParameters">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//ExperimentState/setParameters"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//ExperimentState/setParameters"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1O9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1PNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1Pdl2EeWt9uLySzBD-w" label="EAttribute : experimentId">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//ExperimentState/experimentId"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//ExperimentState/experimentId"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Ptl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1P9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//ExperimentState"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1QNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Qdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1Qtl2EeWt9uLySzBD-w" label="EClass : VariableValue">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//VariableValue"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1Q9l2EeWt9uLySzBD-w" label="EReference : pointer">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//VariableValue/pointer"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//VariableValue/pointer"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1RNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Rdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1Rtl2EeWt9uLySzBD-w" label="EReference : value">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//VariableValue/value"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//VariableValue/value"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1R9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1SNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//VariableValue"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Sdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Stl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1S9l2EeWt9uLySzBD-w" label="EClass : Tag">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//Tag"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1TNl2EeWt9uLySzBD-w" label="EReference : tags">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//Tag/tags"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//Tag/tags"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Tdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Ttl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1T9l2EeWt9uLySzBD-w" label="EAttribute : name">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Tag/name"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Tag/name"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1UNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Udl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//Tag"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Utl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1U9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1VNl2EeWt9uLySzBD-w" label="EClass : DomainModel">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//DomainModel"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1Vdl2EeWt9uLySzBD-w" label="EAttribute : domainModel">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DomainModel/domainModel"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DomainModel/domainModel"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Vtl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1V9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1WNl2EeWt9uLySzBD-w" label="EReference : format">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//DomainModel/format"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//DomainModel/format"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Wdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Wtl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//DomainModel"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1W9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1XNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1Xdl2EeWt9uLySzBD-w" label="EClass : ModelFormat">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//ModelFormat"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1Xtl2EeWt9uLySzBD-w" label="EAttribute : modelFormat">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//ModelFormat/modelFormat"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//ModelFormat/modelFormat"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1X9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1YNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//ModelFormat"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Ydl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Ytl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1Y9l2EeWt9uLySzBD-w" label="EClass : ExternalDomainModel">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//ExternalDomainModel"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1ZNl2EeWt9uLySzBD-w" label="EAttribute : fileFormat">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//ExternalDomainModel/fileFormat"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//ExternalDomainModel/fileFormat"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Zdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1Ztl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//ExternalDomainModel"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1Z9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1aNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1adl2EeWt9uLySzBD-w" label="EEnum : FileFormat">
+        <target xmi:type="ecore:EEnum" href="geppettoModel.ecore#//FileFormat"/>
+        <semanticElements xmi:type="ecore:EEnum" href="geppettoModel.ecore#//FileFormat"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1atl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1a9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1bNl2EeWt9uLySzBD-w" label="EClass : DataSource">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//DataSource"/>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1bdl2EeWt9uLySzBD-w" label="EAttribute : dataSourceService">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSource/dataSourceService"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSource/dataSourceService"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1btl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1b9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1cNl2EeWt9uLySzBD-w" label="EReference : libraryConfigurations">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/libraryConfigurations"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/libraryConfigurations"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1cdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1ctl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1c9l2EeWt9uLySzBD-w" label="EAttribute : url">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSource/url"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSource/url"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1dNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1ddl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1dtl2EeWt9uLySzBD-w" label="EReference : queries">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/queries"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/queries"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1d9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1eNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1edl2EeWt9uLySzBD-w" label="EReference : dependenciesLibrary">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/dependenciesLibrary"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/dependenciesLibrary"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1etl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1e9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_Qhd1fNl2EeWt9uLySzBD-w" label="EReference : targetLibrary">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/targetLibrary"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/targetLibrary"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1fdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1ftl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//DataSource"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_Qhd1f9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Qhd1gNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_Qhd1gdl2EeWt9uLySzBD-w" label="EClass : DataSourceLibraryConfiguration">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//DataSourceLibraryConfiguration"/>
+        <lines xmi:type="table:DLine" xmi:id="_QhecANl2EeWt9uLySzBD-w" label="EReference : library">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSourceLibraryConfiguration/library"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSourceLibraryConfiguration/library"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecAdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecAtl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_QhecA9l2EeWt9uLySzBD-w" label="EAttribute : modelInterpreterId">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSourceLibraryConfiguration/modelInterpreterId"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSourceLibraryConfiguration/modelInterpreterId"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecBNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecBdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_QhecBtl2EeWt9uLySzBD-w" label="EAttribute : format">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSourceLibraryConfiguration/format"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSourceLibraryConfiguration/format"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecB9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecCNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//DataSourceLibraryConfiguration"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecCdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecCtl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_QhecC9l2EeWt9uLySzBD-w" label="EClass : Query">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//Query"/>
+        <lines xmi:type="table:DLine" xmi:id="_QhecDNl2EeWt9uLySzBD-w" label="EAttribute : label">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Query/label"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Query/label"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecDdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecDtl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_QhecD9l2EeWt9uLySzBD-w" label="EAttribute : description">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Query/description"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Query/description"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecENl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecEdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_QhecEtl2EeWt9uLySzBD-w" label="EReference : matchingCriteria">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//Query/matchingCriteria"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//Query/matchingCriteria"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecE9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecFNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//Query"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecFdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecFtl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_QhecF9l2EeWt9uLySzBD-w" label="EClass : SimpleQuery">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//SimpleQuery"/>
+        <lines xmi:type="table:DLine" xmi:id="_QhecGNl2EeWt9uLySzBD-w" label="EAttribute : query">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//SimpleQuery/query"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//SimpleQuery/query"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecGdl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecGtl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_QhecG9l2EeWt9uLySzBD-w" label="EAttribute : countQuery">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//SimpleQuery/countQuery"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//SimpleQuery/countQuery"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecHNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecHdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//SimpleQuery"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecHtl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecH9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_QhecINl2EeWt9uLySzBD-w" label="EClass : CompoundQuery">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//CompoundQuery"/>
+        <lines xmi:type="table:DLine" xmi:id="_QhecIdl2EeWt9uLySzBD-w" label="EReference : queryChain">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//CompoundQuery/queryChain"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//CompoundQuery/queryChain"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecItl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecI9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//CompoundQuery"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecJNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecJdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_QhecJtl2EeWt9uLySzBD-w" label="EClass : QueryResults">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//QueryResults"/>
+        <lines xmi:type="table:DLine" xmi:id="_QhecJ9l2EeWt9uLySzBD-w" label="EAttribute : id">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResults/id"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResults/id"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecKNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecKdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_QhecKtl2EeWt9uLySzBD-w" label="EAttribute : header">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResults/header"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResults/header"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecK9l2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecLNl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <lines xmi:type="table:DLine" xmi:id="_QhecLdl2EeWt9uLySzBD-w" label="EReference : results">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//QueryResults/results"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//QueryResults/results"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecLtl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecL9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//QueryResults"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecMNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecMdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_QhecMtl2EeWt9uLySzBD-w" label="EClass : QueryResult">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//QueryResult"/>
+        <lines xmi:type="table:DLine" xmi:id="_QhecM9l2EeWt9uLySzBD-w" label="EAttribute : values">
+          <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResult/values"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResult/values"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecNNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecNdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//QueryResult"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecNtl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecN9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_QhecONl2EeWt9uLySzBD-w" label="EClass : QueryMatchingCriteria">
+        <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//QueryMatchingCriteria"/>
+        <lines xmi:type="table:DLine" xmi:id="_QhecOdl2EeWt9uLySzBD-w" label="EReference : type">
+          <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//QueryMatchingCriteria/type"/>
+          <semanticElements xmi:type="ecore:EReference" href="geppettoModel.ecore#//QueryMatchingCriteria/type"/>
+          <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+          <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecOtl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecO9l2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+          </currentStyle>
+        </lines>
+        <semanticElements xmi:type="ecore:EClass" href="geppettoModel.ecore#//QueryMatchingCriteria"/>
+        <originMapping xmi:type="description:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+        <currentStyle xmi:type="table:DTableElementStyle" xmi:id="_QhecPNl2EeWt9uLySzBD-w" defaultBackgroundStyle="true">
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_QhecPdl2EeWt9uLySzBD-w" red="255" green="255" blue="255"/>
+        </currentStyle>
+      </lines>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_QhecPtl2EeWt9uLySzBD-w" label="Domain Documentation" cells="_Qhd1Ftl2EeWt9uLySzBD-w _Qhd089l2EeWt9uLySzBD-w _Qhd0-dl2EeWt9uLySzBD-w _Qhd0_9l2EeWt9uLySzBD-w _Qhd1Bdl2EeWt9uLySzBD-w _Qhd1C9l2EeWt9uLySzBD-w _Qhd1Edl2EeWt9uLySzBD-w" width="543">
+        <target xmi:type="ecore:EPackage" href="geppettoModel.ecore#/"/>
+        <semanticElements xmi:type="ecore:EPackage" href="geppettoModel.ecore#/"/>
+        <originMapping xmi:type="description:ElementColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedColumnMappings.0"/>
+      </columns>
+      <description xmi:type="description:CrossTableDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description_1:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']"/>
   </ownedViews>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_dFAOYI4REeWICeuZmPX_rQ" initialized="true">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_kzAb4I4REeWICeuZmPX_rQ" name="Query model class diagram">
-      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_kzBC8I4REeWICeuZmPX_rQ" source="GMF_DIAGRAMS">
+      <ownedAnnotationEntries xmi:type="description_1:AnnotationEntry" xmi:id="_kzBC8I4REeWICeuZmPX_rQ" source="GMF_DIAGRAMS">
         <data xmi:type="notation:Diagram" xmi:id="_kzBC8Y4REeWICeuZmPX_rQ" type="Sirius" element="_kzAb4I4REeWICeuZmPX_rQ" measurementUnit="Pixel">
           <children xmi:type="notation:Node" xmi:id="_LGdioNlnEeWckddxA0NFPA" type="2003" element="_LFcO8NlnEeWckddxA0NFPA">
             <children xmi:type="notation:Node" xmi:id="_LGfX0NlnEeWckddxA0NFPA" type="5007"/>
@@ -249,105 +817,105 @@
           </edges>
         </data>
       </ownedAnnotationEntries>
-      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_TZhVoI4TEeWICeuZmPX_rQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <ownedAnnotationEntries xmi:type="description_1:AnnotationEntry" xmi:id="_TZhVoI4TEeWICeuZmPX_rQ" source="DANNOTATION_CUSTOMIZATION_KEY">
         <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_TZh8sI4TEeWICeuZmPX_rQ">
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_LGHkY9lnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_LGJZktlnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_LGL10NlnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_LGND8tlnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_LGPgMtlnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_LGQuUdlnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_LGU_w9lnEeWckddxA0NFPA" sourceArrow="FillDiamond" sizeComputationExpression="1" routingStyle="manhattan">
-            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <strokeColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_LGU_xNlnEeWckddxA0NFPA" showIcon="false" labelExpression="service:render">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
             <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_LGU_xdlnEeWckddxA0NFPA" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             </endLabelStyleDescription>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_LGW08tlnEeWckddxA0NFPA" sourceArrow="FillDiamond" sizeComputationExpression="1" routingStyle="manhattan">
-            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <strokeColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_LGW089lnEeWckddxA0NFPA" showIcon="false" labelExpression="service:render">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
             <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_LGW09NlnEeWckddxA0NFPA" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             </endLabelStyleDescription>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_NNncYtlnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_NNoqgtlnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_NNp4o9lnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_NNrGwtlnEeWckddxA0NFPA" labelFormat="bold" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_NNzCktlnEeWckddxA0NFPA" sourceArrow="FillDiamond" sizeComputationExpression="1" routingStyle="manhattan">
-            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <strokeColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_NNzCk9lnEeWckddxA0NFPA" labelFormat="bold" showIcon="false" labelExpression="service:render">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
             <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_NNzClNlnEeWckddxA0NFPA" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             </endLabelStyleDescription>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_NN0QstlnEeWckddxA0NFPA" sourceArrow="FillDiamond" sizeComputationExpression="1" routingStyle="manhattan">
-            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <strokeColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_NN0Qs9lnEeWckddxA0NFPA" showIcon="false" labelExpression="service:render">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
             <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_NN0QtNlnEeWckddxA0NFPA" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             </endLabelStyleDescription>
           </computedStyleDescriptions>
           <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_NN2F4tlnEeWckddxA0NFPA" sourceArrow="FillDiamond" sizeComputationExpression="1" routingStyle="manhattan">
-            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <strokeColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_NN2F49lnEeWckddxA0NFPA" showIcon="false" labelExpression="service:render">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
             <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_NN2F5NlnEeWckddxA0NFPA" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
-              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelColor xmi:type="description_1:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             </endLabelStyleDescription>
           </computedStyleDescriptions>
           <cache xmi:type="diagram:DiagramElementMapping2ModelElement" xmi:id="_LGHkYNlnEeWckddxA0NFPA">
-            <key xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+            <key xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
             <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_LGHkYdlnEeWckddxA0NFPA">
               <key xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Query/label"/>
               <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_LGHkYtlnEeWckddxA0NFPA" key="_LGGWQNlnEeWckddxA0NFPA">
@@ -430,7 +998,7 @@
             </value>
           </cache>
           <cache xmi:type="diagram:DiagramElementMapping2ModelElement" xmi:id="_LGU_wNlnEeWckddxA0NFPA">
-            <key xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+            <key xmi:type="description_2:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
             <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_LGU_wdlnEeWckddxA0NFPA">
               <key xmi:type="ecore:EReference" href="geppettoModel.ecore#//Query/matchingCriteria"/>
               <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_LGU_wtlnEeWckddxA0NFPA" key="_LGUYsNlnEeWckddxA0NFPA">
@@ -487,7 +1055,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFddE9lnEeWckddxA0NFPA" red="255" green="255" blue="255"/>
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFddFNlnEeWckddxA0NFPA" red="228" green="228" blue="228"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_LGGWQNlnEeWckddxA0NFPA" name="label : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Query/label"/>
           <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Query/label"/>
@@ -496,7 +1064,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_LGILc9lnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_LGILdNlnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_LGIygNlnEeWckddxA0NFPA" name="description : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//Query/description"/>
@@ -506,7 +1074,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_LGKAotlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_LGKAo9lnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_LFfSQNlnEeWckddxA0NFPA" name="QueryMatchingCriteria" tooltipText="" incomingEdges="_LGUYsNlnEeWckddxA0NFPA" width="12" height="10">
@@ -522,7 +1090,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFfSRNlnEeWckddxA0NFPA" red="255" green="255" blue="255"/>
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFfSRdlnEeWckddxA0NFPA" red="255" green="252" blue="216"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_LFggYNlnEeWckddxA0NFPA" name="QueryResult" tooltipText="" incomingEdges="_LGWN4NlnEeWckddxA0NFPA" width="12" height="10">
         <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//QueryResult"/>
@@ -537,7 +1105,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFhHc9lnEeWckddxA0NFPA" red="255" green="255" blue="255"/>
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFhHdNlnEeWckddxA0NFPA" red="255" green="252" blue="216"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_LGLOwNlnEeWckddxA0NFPA" name="values : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResult/values"/>
           <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResult/values"/>
@@ -546,7 +1114,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_LGL11NlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_LGL11dlnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_LFiVkNlnEeWckddxA0NFPA" name="QueryResults" tooltipText="" outgoingEdges="_LGWN4NlnEeWckddxA0NFPA" width="12" height="10">
@@ -562,7 +1130,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFi8o9lnEeWckddxA0NFPA" red="255" green="255" blue="255"/>
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFi8pNlnEeWckddxA0NFPA" red="255" green="252" blue="216"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_LGMc4NlnEeWckddxA0NFPA" name="id : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResults/id"/>
           <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResults/id"/>
@@ -571,7 +1139,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_LGNrAtlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_LGNrA9lnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_LGNrBNlnEeWckddxA0NFPA" name="header : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//QueryResults/header"/>
@@ -582,7 +1150,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_LGOSEtlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_LGOSE9lnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_LFkKwNlnEeWckddxA0NFPA" name="SimpleQuery" tooltipText="" outgoingEdges="_LGYDENlnEeWckddxA0NFPA" width="12" height="10">
@@ -598,7 +1166,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFkx09lnEeWckddxA0NFPA" red="255" green="255" blue="255"/>
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_LFkx1NlnEeWckddxA0NFPA" red="255" green="252" blue="216"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_LGO5INlnEeWckddxA0NFPA" name="query : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//SimpleQuery/query"/>
           <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//SimpleQuery/query"/>
@@ -607,7 +1175,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_LGPgNtlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_LGPgN9lnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_LGQHQNlnEeWckddxA0NFPA" name="countQuery : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//SimpleQuery/countQuery"/>
@@ -617,7 +1185,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_LGQuVdlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_LGQuVtlnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_LGUYsNlnEeWckddxA0NFPA" name="[0..*] matchingCriteria" sourceNode="_LFcO8NlnEeWckddxA0NFPA" targetNode="_LFfSQNlnEeWckddxA0NFPA">
@@ -634,7 +1202,7 @@
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_LGVm1dlnEeWckddxA0NFPA" red="39" green="76" blue="114"/>
           </endLabelStyle>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+        <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_LGWN4NlnEeWckddxA0NFPA" name="[0..*] results" sourceNode="_LFiVkNlnEeWckddxA0NFPA" targetNode="_LFggYNlnEeWckddxA0NFPA">
         <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//QueryResults/results"/>
@@ -650,7 +1218,7 @@
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_LGXcBdlnEeWckddxA0NFPA" red="39" green="76" blue="114"/>
           </endLabelStyle>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+        <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_LGYDENlnEeWckddxA0NFPA" sourceNode="_LFkKwNlnEeWckddxA0NFPA" targetNode="_LFcO8NlnEeWckddxA0NFPA">
         <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//SimpleQuery"/>
@@ -665,7 +1233,7 @@
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_LGZRNdlnEeWckddxA0NFPA"/>
           </centerLabelStyle>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
+        <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_NM1ZQNlnEeWckddxA0NFPA" name="CompoundQuery" tooltipText="" outgoingEdges="_NNx0cNlnEeWckddxA0NFPA _NN37ENlnEeWckddxA0NFPA" width="12" height="10">
         <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//CompoundQuery"/>
@@ -680,7 +1248,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_NM2nY9lnEeWckddxA0NFPA" red="255" green="255" blue="255"/>
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_NM2nZNlnEeWckddxA0NFPA" red="255" green="252" blue="216"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_NM31gNlnEeWckddxA0NFPA" name="DataSource" tooltipText="" outgoingEdges="_NNzpoNlnEeWckddxA0NFPA _NN1e0NlnEeWckddxA0NFPA" width="12" height="10">
         <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//DataSource"/>
@@ -695,7 +1263,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_NM5Do9lnEeWckddxA0NFPA" red="255" green="255" blue="255"/>
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_NM5DpNlnEeWckddxA0NFPA" red="255" green="252" blue="216"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_NNm1UNlnEeWckddxA0NFPA" name="dataSourceService : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSource/dataSourceService"/>
           <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSource/dataSourceService"/>
@@ -704,7 +1272,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_NNoDctlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_NNoDc9lnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_NNoDdNlnEeWckddxA0NFPA" name="url : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSource/url"/>
@@ -714,7 +1282,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_NNpRktlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_NNpRk9lnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_NM6RwNlnEeWckddxA0NFPA" name="DataSourceLibraryConfiguration" tooltipText="" incomingEdges="_NNzpoNlnEeWckddxA0NFPA" width="12" height="10">
@@ -730,7 +1298,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_NM6409lnEeWckddxA0NFPA" red="255" green="255" blue="255"/>
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_NM641NlnEeWckddxA0NFPA" red="255" green="252" blue="216"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_NNp4oNlnEeWckddxA0NFPA" name="modelInterpreterId : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSourceLibraryConfiguration/modelInterpreterId"/>
           <semanticElements xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSourceLibraryConfiguration/modelInterpreterId"/>
@@ -739,7 +1307,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_NNqfstlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_NNqfs9lnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_NNqftNlnEeWckddxA0NFPA" name="format : String" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="geppettoModel.ecore#//DataSourceLibraryConfiguration/format"/>
@@ -749,7 +1317,7 @@
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_NNrt0tlnEeWckddxA0NFPA"/>
             <color xmi:type="viewpoint:RGBValues" xmi:id="_NNrt09lnEeWckddxA0NFPA"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NNx0cNlnEeWckddxA0NFPA" name="[1..*] queryChain" sourceNode="_NM1ZQNlnEeWckddxA0NFPA" targetNode="_LFcO8NlnEeWckddxA0NFPA">
@@ -766,7 +1334,7 @@
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_NNzCm9lnEeWckddxA0NFPA" red="39" green="76" blue="114"/>
           </endLabelStyle>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+        <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NNzpoNlnEeWckddxA0NFPA" name="[0..*] libraryConfigurations" sourceNode="_NM31gNlnEeWckddxA0NFPA" targetNode="_NM6RwNlnEeWckddxA0NFPA">
         <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/libraryConfigurations"/>
@@ -782,7 +1350,7 @@
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_NN03xdlnEeWckddxA0NFPA" red="39" green="76" blue="114"/>
           </endLabelStyle>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+        <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NN1e0NlnEeWckddxA0NFPA" name="[0..*] queries" sourceNode="_NM31gNlnEeWckddxA0NFPA" targetNode="_LFcO8NlnEeWckddxA0NFPA">
         <target xmi:type="ecore:EReference" href="geppettoModel.ecore#//DataSource/queries"/>
@@ -798,7 +1366,7 @@
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_NN2F69lnEeWckddxA0NFPA" red="39" green="76" blue="114"/>
           </endLabelStyle>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+        <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NN37ENlnEeWckddxA0NFPA" sourceNode="_NM1ZQNlnEeWckddxA0NFPA" targetNode="_LFcO8NlnEeWckddxA0NFPA">
         <target xmi:type="ecore:EClass" href="geppettoModel.ecore#//CompoundQuery"/>
@@ -813,15 +1381,15 @@
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_NN4iJdlnEeWckddxA0NFPA"/>
           </centerLabelStyle>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
+        <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
       </ownedDiagramElements>
-      <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+      <description xmi:type="description_2:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_kzAb5Y4REeWICeuZmPX_rQ"/>
-      <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
-      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
-      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+      <activatedLayers xmi:type="description_2:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
+      <activatedLayers xmi:type="description_2:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
+      <activatedLayers xmi:type="description_2:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
       <target xmi:type="ecore:EPackage" href="geppettoModel.ecore#/"/>
     </ownedRepresentations>
-    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+    <viewpoint xmi:type="description_1:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
   </ownedViews>
 </viewpoint:DAnalysis>
