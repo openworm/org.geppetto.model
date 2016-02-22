@@ -3,18 +3,45 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore"
     nsPrefix="gep">
   <eClassifiers xsi:type="ecore:EClass" name="GeppettoModel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The root of every Geppetto model"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
-        eType="#//variables/Variable" containment="true" resolveProxies="false"/>
+        eType="#//variables/Variable" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The top level variables instantiated inside the Geppetto Model.  The type of the variables will be coming from inside Libraries available inside this GeppettoModel."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="libraries" upperBound="-1"
-        eType="#//GeppettoLibrary" containment="true"/>
+        eType="#//GeppettoLibrary" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The libraries are container of types. A library can be associated to a modelInterpreter."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tags" upperBound="-1" eType="#//Tag"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The tags available in the GeppettoModel."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
-        defaultValueLiteral=""/>
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The id of the GeppettoModel."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
-        defaultValueLiteral=""/>
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name of the GeppettoModel."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataSources" upperBound="-1"
-        eType="#//DataSource" containment="true"/>
+        eType="#//DataSource" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The data sources available for this model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true">
     <eOperations name="getPath" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
