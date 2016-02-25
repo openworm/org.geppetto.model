@@ -122,6 +122,15 @@ public interface GeppettoFactory extends EFactory
 	DataSourceLibraryConfiguration createDataSourceLibraryConfiguration();
 
 	/**
+	 * Returns a new object of class '<em>Process Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Process Query</em>'.
+	 * @generated
+	 */
+	ProcessQuery createProcessQuery();
+
+	/**
 	 * Returns a new object of class '<em>Simple Query</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

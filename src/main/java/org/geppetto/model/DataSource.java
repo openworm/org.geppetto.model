@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.geppetto.model.DataSource#getQueries <em>Queries</em>}</li>
  *   <li>{@link org.geppetto.model.DataSource#getDependenciesLibrary <em>Dependencies Library</em>}</li>
  *   <li>{@link org.geppetto.model.DataSource#getTargetLibrary <em>Target Library</em>}</li>
+ *   <li>{@link org.geppetto.model.DataSource#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
  * </ul>
  * </p>
  *
@@ -152,5 +153,31 @@ public interface DataSource extends Node
 	 * @generated
 	 */
 	void setTargetLibrary(GeppettoLibrary value);
+
+	/**
+	 * Returns the value of the '<em><b>Fetch Variable Query</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fetch Variable Query</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fetch Variable Query</em>' containment reference.
+	 * @see #setFetchVariableQuery(Query)
+	 * @see org.geppetto.model.GeppettoPackage#getDataSource_FetchVariableQuery()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Query getFetchVariableQuery();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.DataSource#getFetchVariableQuery <em>Fetch Variable Query</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fetch Variable Query</em>' containment reference.
+	 * @see #getFetchVariableQuery()
+	 * @generated
+	 */
+	void setFetchVariableQuery(Query value);
 
 } // DataSource

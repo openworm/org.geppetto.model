@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.impl;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -24,6 +25,7 @@ import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.LibraryManager;
 import org.geppetto.model.ModelFormat;
 import org.geppetto.model.Node;
+import org.geppetto.model.ProcessQuery;
 import org.geppetto.model.Query;
 import org.geppetto.model.QueryMatchingCriteria;
 import org.geppetto.model.QueryResult;
@@ -142,6 +144,13 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass processQueryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass simpleQueryEClass = null;
 
 	/**
@@ -171,6 +180,13 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * @generated
 	 */
 	private EClass queryMatchingCriteriaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringToStringMapEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -671,6 +687,16 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDataSource_FetchVariableQuery()
+	{
+		return (EReference)dataSourceEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDataSourceLibraryConfiguration()
 	{
 		return dataSourceLibraryConfigurationEClass;
@@ -744,6 +770,36 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	public EReference getQuery_MatchingCriteria()
 	{
 		return (EReference)queryEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProcessQuery()
+	{
+		return processQueryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProcessQuery_Parameters()
+	{
+		return (EReference)processQueryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProcessQuery_QueryProcessorId()
+	{
+		return (EAttribute)processQueryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -881,6 +937,36 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getStringToStringMap()
+	{
+		return stringToStringMapEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStringToStringMap_Key()
+	{
+		return (EAttribute)stringToStringMapEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStringToStringMap_Value()
+	{
+		return (EAttribute)stringToStringMapEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getFileFormat()
 	{
 		return fileFormatEEnum;
@@ -967,6 +1053,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		createEReference(dataSourceEClass, DATA_SOURCE__QUERIES);
 		createEReference(dataSourceEClass, DATA_SOURCE__DEPENDENCIES_LIBRARY);
 		createEReference(dataSourceEClass, DATA_SOURCE__TARGET_LIBRARY);
+		createEReference(dataSourceEClass, DATA_SOURCE__FETCH_VARIABLE_QUERY);
 
 		dataSourceLibraryConfigurationEClass = createEClass(DATA_SOURCE_LIBRARY_CONFIGURATION);
 		createEReference(dataSourceLibraryConfigurationEClass, DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY);
@@ -977,6 +1064,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		createEAttribute(queryEClass, QUERY__LABEL);
 		createEAttribute(queryEClass, QUERY__DESCRIPTION);
 		createEReference(queryEClass, QUERY__MATCHING_CRITERIA);
+
+		processQueryEClass = createEClass(PROCESS_QUERY);
+		createEReference(processQueryEClass, PROCESS_QUERY__PARAMETERS);
+		createEAttribute(processQueryEClass, PROCESS_QUERY__QUERY_PROCESSOR_ID);
 
 		simpleQueryEClass = createEClass(SIMPLE_QUERY);
 		createEAttribute(simpleQueryEClass, SIMPLE_QUERY__QUERY);
@@ -995,6 +1086,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 
 		queryMatchingCriteriaEClass = createEClass(QUERY_MATCHING_CRITERIA);
 		createEReference(queryMatchingCriteriaEClass, QUERY_MATCHING_CRITERIA__TYPE);
+
+		stringToStringMapEClass = createEClass(STRING_TO_STRING_MAP);
+		createEAttribute(stringToStringMapEClass, STRING_TO_STRING_MAP__KEY);
+		createEAttribute(stringToStringMapEClass, STRING_TO_STRING_MAP__VALUE);
 
 		// Create enums
 		fileFormatEEnum = createEEnum(FILE_FORMAT);
@@ -1043,6 +1138,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		geppettoLibraryEClass.getESuperTypes().add(this.getNode());
 		externalDomainModelEClass.getESuperTypes().add(this.getDomainModel());
 		dataSourceEClass.getESuperTypes().add(this.getNode());
+		processQueryEClass.getESuperTypes().add(this.getQuery());
 		simpleQueryEClass.getESuperTypes().add(this.getQuery());
 		compoundQueryEClass.getESuperTypes().add(this.getQuery());
 
@@ -1099,6 +1195,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEReference(getDataSource_Queries(), this.getQuery(), null, "queries", null, 0, -1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSource_DependenciesLibrary(), this.getGeppettoLibrary(), null, "dependenciesLibrary", null, 0, -1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSource_TargetLibrary(), this.getGeppettoLibrary(), null, "targetLibrary", null, 1, 1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataSource_FetchVariableQuery(), this.getQuery(), null, "fetchVariableQuery", null, 0, 1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataSourceLibraryConfigurationEClass, DataSourceLibraryConfiguration.class, "DataSourceLibraryConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataSourceLibraryConfiguration_Library(), this.getGeppettoLibrary(), null, "library", null, 1, 1, DataSourceLibraryConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1109,6 +1206,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEAttribute(getQuery_Label(), theXMLTypePackage.getString(), "label", null, 1, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuery_Description(), theXMLTypePackage.getString(), "description", null, 1, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuery_MatchingCriteria(), this.getQueryMatchingCriteria(), null, "matchingCriteria", null, 0, -1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(processQueryEClass, ProcessQuery.class, "ProcessQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProcessQuery_Parameters(), this.getStringToStringMap(), null, "parameters", null, 0, -1, ProcessQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProcessQuery_QueryProcessorId(), theXMLTypePackage.getString(), "queryProcessorId", null, 1, 1, ProcessQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(simpleQueryEClass, SimpleQuery.class, "SimpleQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSimpleQuery_Query(), theXMLTypePackage.getString(), "query", null, 1, 1, SimpleQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1127,6 +1228,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 
 		initEClass(queryMatchingCriteriaEClass, QueryMatchingCriteria.class, "QueryMatchingCriteria", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQueryMatchingCriteria_Type(), theTypesPackage.getType(), null, "type", null, 0, -1, QueryMatchingCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stringToStringMapEClass, Map.Entry.class, "StringToStringMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringToStringMap_Key(), theXMLTypePackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStringToStringMap_Value(), theXMLTypePackage.getString(), "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(fileFormatEEnum, FileFormat.class, "FileFormat");

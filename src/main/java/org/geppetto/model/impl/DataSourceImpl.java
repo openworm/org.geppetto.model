@@ -37,6 +37,7 @@ import org.geppetto.model.Query;
  *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getQueries <em>Queries</em>}</li>
  *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getDependenciesLibrary <em>Dependencies Library</em>}</li>
  *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getTargetLibrary <em>Target Library</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
  * </ul>
  * </p>
  *
@@ -123,6 +124,16 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	 * @ordered
 	 */
 	protected GeppettoLibrary targetLibrary;
+
+	/**
+	 * The cached value of the '{@link #getFetchVariableQuery() <em>Fetch Variable Query</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFetchVariableQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected Query fetchVariableQuery;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -281,6 +292,54 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Query getFetchVariableQuery()
+	{
+		return fetchVariableQuery;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFetchVariableQuery(Query newFetchVariableQuery, NotificationChain msgs)
+	{
+		Query oldFetchVariableQuery = fetchVariableQuery;
+		fetchVariableQuery = newFetchVariableQuery;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, oldFetchVariableQuery, newFetchVariableQuery);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFetchVariableQuery(Query newFetchVariableQuery)
+	{
+		if (newFetchVariableQuery != fetchVariableQuery)
+		{
+			NotificationChain msgs = null;
+			if (fetchVariableQuery != null)
+				msgs = ((InternalEObject)fetchVariableQuery).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, null, msgs);
+			if (newFetchVariableQuery != null)
+				msgs = ((InternalEObject)newFetchVariableQuery).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, null, msgs);
+			msgs = basicSetFetchVariableQuery(newFetchVariableQuery, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, newFetchVariableQuery, newFetchVariableQuery));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -290,6 +349,8 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 				return ((InternalEList<?>)getLibraryConfigurations()).basicRemove(otherEnd, msgs);
 			case GeppettoPackage.DATA_SOURCE__QUERIES:
 				return ((InternalEList<?>)getQueries()).basicRemove(otherEnd, msgs);
+			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+				return basicSetFetchVariableQuery(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -317,6 +378,8 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
 				if (resolve) return getTargetLibrary();
 				return basicGetTargetLibrary();
+			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+				return getFetchVariableQuery();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -353,6 +416,9 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
 				setTargetLibrary((GeppettoLibrary)newValue);
 				return;
+			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+				setFetchVariableQuery((Query)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -385,6 +451,9 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
 				setTargetLibrary((GeppettoLibrary)null);
 				return;
+			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+				setFetchVariableQuery((Query)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -411,6 +480,8 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 				return dependenciesLibrary != null && !dependenciesLibrary.isEmpty();
 			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
 				return targetLibrary != null;
+			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+				return fetchVariableQuery != null;
 		}
 		return super.eIsSet(featureID);
 	}

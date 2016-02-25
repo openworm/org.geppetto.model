@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.util;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -140,6 +141,11 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 				return createQueryAdapter();
 			}
 			@Override
+			public Adapter caseProcessQuery(ProcessQuery object)
+			{
+				return createProcessQueryAdapter();
+			}
+			@Override
 			public Adapter caseSimpleQuery(SimpleQuery object)
 			{
 				return createSimpleQueryAdapter();
@@ -163,6 +169,11 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 			public Adapter caseQueryMatchingCriteria(QueryMatchingCriteria object)
 			{
 				return createQueryMatchingCriteriaAdapter();
+			}
+			@Override
+			public Adapter caseStringToStringMap(Map.Entry<String, String> object)
+			{
+				return createStringToStringMapAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object)
@@ -382,6 +393,21 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.ProcessQuery <em>Process Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.ProcessQuery
+	 * @generated
+	 */
+	public Adapter createProcessQueryAdapter()
+	{
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.geppetto.model.SimpleQuery <em>Simple Query</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -452,6 +478,21 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createQueryMatchingCriteriaAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To String Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createStringToStringMapAdapter()
 	{
 		return null;
 	}

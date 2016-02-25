@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.impl;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -76,11 +77,13 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.EXTERNAL_DOMAIN_MODEL: return createExternalDomainModel();
 			case GeppettoPackage.DATA_SOURCE: return createDataSource();
 			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION: return createDataSourceLibraryConfiguration();
+			case GeppettoPackage.PROCESS_QUERY: return createProcessQuery();
 			case GeppettoPackage.SIMPLE_QUERY: return createSimpleQuery();
 			case GeppettoPackage.COMPOUND_QUERY: return createCompoundQuery();
 			case GeppettoPackage.QUERY_RESULTS: return createQueryResults();
 			case GeppettoPackage.QUERY_RESULT: return createQueryResult();
 			case GeppettoPackage.QUERY_MATCHING_CRITERIA: return createQueryMatchingCriteria();
+			case GeppettoPackage.STRING_TO_STRING_MAP: return (EObject)createStringToStringMap();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -246,6 +249,17 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ProcessQuery createProcessQuery()
+	{
+		ProcessQueryImpl processQuery = new ProcessQueryImpl();
+		return processQuery;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SimpleQuery createSimpleQuery()
 	{
 		SimpleQueryImpl simpleQuery = new SimpleQueryImpl();
@@ -294,6 +308,17 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		QueryMatchingCriteriaImpl queryMatchingCriteria = new QueryMatchingCriteriaImpl();
 		return queryMatchingCriteria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<String, String> createStringToStringMap()
+	{
+		StringToStringMapImpl stringToStringMap = new StringToStringMapImpl();
+		return stringToStringMap;
 	}
 
 	/**

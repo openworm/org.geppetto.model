@@ -703,13 +703,22 @@ public interface GeppettoPackage extends EPackage
 	int DATA_SOURCE__TARGET_LIBRARY = NODE_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Fetch Variable Query</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SOURCE__FETCH_VARIABLE_QUERY = NODE_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Data Source</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SOURCE_FEATURE_COUNT = NODE_FEATURE_COUNT + 6;
+	int DATA_SOURCE_FEATURE_COUNT = NODE_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -840,6 +849,79 @@ public interface GeppettoPackage extends EPackage
 	int QUERY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.ProcessQueryImpl <em>Process Query</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.ProcessQueryImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getProcessQuery()
+	 * @generated
+	 */
+	int PROCESS_QUERY = 13;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__LABEL = QUERY__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__DESCRIPTION = QUERY__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Matching Criteria</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__MATCHING_CRITERIA = QUERY__MATCHING_CRITERIA;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__PARAMETERS = QUERY_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Query Processor Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__QUERY_PROCESSOR_ID = QUERY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Process Query</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY_FEATURE_COUNT = QUERY_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Process Query</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY_OPERATION_COUNT = QUERY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.SimpleQueryImpl <em>Simple Query</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -847,7 +929,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getSimpleQuery()
 	 * @generated
 	 */
-	int SIMPLE_QUERY = 13;
+	int SIMPLE_QUERY = 14;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -920,7 +1002,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getCompoundQuery()
 	 * @generated
 	 */
-	int COMPOUND_QUERY = 14;
+	int COMPOUND_QUERY = 15;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -984,7 +1066,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryResults()
 	 * @generated
 	 */
-	int QUERY_RESULTS = 15;
+	int QUERY_RESULTS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1039,7 +1121,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryResult()
 	 * @generated
 	 */
-	int QUERY_RESULT = 16;
+	int QUERY_RESULT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Values</b></em>' attribute list.
@@ -1076,7 +1158,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryMatchingCriteria()
 	 * @generated
 	 */
-	int QUERY_MATCHING_CRITERIA = 17;
+	int QUERY_MATCHING_CRITERIA = 18;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference list.
@@ -1106,6 +1188,52 @@ public interface GeppettoPackage extends EPackage
 	int QUERY_MATCHING_CRITERIA_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.StringToStringMapImpl <em>String To String Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.StringToStringMapImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getStringToStringMap()
+	 * @generated
+	 */
+	int STRING_TO_STRING_MAP = 19;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>String To String Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>String To String Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1113,7 +1241,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getFileFormat()
 	 * @generated
 	 */
-	int FILE_FORMAT = 18;
+	int FILE_FORMAT = 20;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
@@ -1555,6 +1683,17 @@ public interface GeppettoPackage extends EPackage
 	EReference getDataSource_TargetLibrary();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.DataSource#getFetchVariableQuery <em>Fetch Variable Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Fetch Variable Query</em>'.
+	 * @see org.geppetto.model.DataSource#getFetchVariableQuery()
+	 * @see #getDataSource()
+	 * @generated
+	 */
+	EReference getDataSource_FetchVariableQuery();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.DataSourceLibraryConfiguration <em>Data Source Library Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1639,6 +1778,38 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EReference getQuery_MatchingCriteria();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.ProcessQuery <em>Process Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Process Query</em>'.
+	 * @see org.geppetto.model.ProcessQuery
+	 * @generated
+	 */
+	EClass getProcessQuery();
+
+	/**
+	 * Returns the meta object for the map '{@link org.geppetto.model.ProcessQuery#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Parameters</em>'.
+	 * @see org.geppetto.model.ProcessQuery#getParameters()
+	 * @see #getProcessQuery()
+	 * @generated
+	 */
+	EReference getProcessQuery_Parameters();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.ProcessQuery#getQueryProcessorId <em>Query Processor Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Query Processor Id</em>'.
+	 * @see org.geppetto.model.ProcessQuery#getQueryProcessorId()
+	 * @see #getProcessQuery()
+	 * @generated
+	 */
+	EAttribute getProcessQuery_QueryProcessorId();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.SimpleQuery <em>Simple Query</em>}'.
@@ -1777,6 +1948,40 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EReference getQueryMatchingCriteria_Type();
+
+	/**
+	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To String Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String To String Map</em>'.
+	 * @see java.util.Map.Entry
+	 * @model keyDataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        valueDataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	EClass getStringToStringMap();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToStringMap()
+	 * @generated
+	 */
+	EAttribute getStringToStringMap_Key();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToStringMap()
+	 * @generated
+	 */
+	EAttribute getStringToStringMap_Value();
 
 	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.FileFormat <em>File Format</em>}'.
@@ -2163,6 +2368,14 @@ public interface GeppettoPackage extends EPackage
 		EReference DATA_SOURCE__TARGET_LIBRARY = eINSTANCE.getDataSource_TargetLibrary();
 
 		/**
+		 * The meta object literal for the '<em><b>Fetch Variable Query</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SOURCE__FETCH_VARIABLE_QUERY = eINSTANCE.getDataSource_FetchVariableQuery();
+
+		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.DataSourceLibraryConfigurationImpl <em>Data Source Library Configuration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2229,6 +2442,32 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference QUERY__MATCHING_CRITERIA = eINSTANCE.getQuery_MatchingCriteria();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.ProcessQueryImpl <em>Process Query</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.ProcessQueryImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getProcessQuery()
+		 * @generated
+		 */
+		EClass PROCESS_QUERY = eINSTANCE.getProcessQuery();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS_QUERY__PARAMETERS = eINSTANCE.getProcessQuery_Parameters();
+
+		/**
+		 * The meta object literal for the '<em><b>Query Processor Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCESS_QUERY__QUERY_PROCESSOR_ID = eINSTANCE.getProcessQuery_QueryProcessorId();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.SimpleQueryImpl <em>Simple Query</em>}' class.
@@ -2343,6 +2582,32 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference QUERY_MATCHING_CRITERIA__TYPE = eINSTANCE.getQueryMatchingCriteria_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.StringToStringMapImpl <em>String To String Map</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.StringToStringMapImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getStringToStringMap()
+		 * @generated
+		 */
+		EClass STRING_TO_STRING_MAP = eINSTANCE.getStringToStringMap();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_TO_STRING_MAP__KEY = eINSTANCE.getStringToStringMap_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_TO_STRING_MAP__VALUE = eINSTANCE.getStringToStringMap_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.

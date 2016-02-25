@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.util;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -166,6 +167,14 @@ public class GeppettoSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeppettoPackage.PROCESS_QUERY:
+			{
+				ProcessQuery processQuery = (ProcessQuery)theEObject;
+				T result = caseProcessQuery(processQuery);
+				if (result == null) result = caseQuery(processQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GeppettoPackage.SIMPLE_QUERY:
 			{
 				SimpleQuery simpleQuery = (SimpleQuery)theEObject;
@@ -200,6 +209,13 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				QueryMatchingCriteria queryMatchingCriteria = (QueryMatchingCriteria)theEObject;
 				T result = caseQueryMatchingCriteria(queryMatchingCriteria);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.STRING_TO_STRING_MAP:
+			{
+				@SuppressWarnings("unchecked") Map.Entry<String, String> stringToStringMap = (Map.Entry<String, String>)theEObject;
+				T result = caseStringToStringMap(stringToStringMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -416,6 +432,22 @@ public class GeppettoSwitch<T> extends Switch<T>
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Process Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Process Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProcessQuery(ProcessQuery object)
+	{
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Simple Query</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -491,6 +523,22 @@ public class GeppettoSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseQueryMatchingCriteria(QueryMatchingCriteria object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String To String Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String To String Map</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringToStringMap(Map.Entry<String, String> object)
 	{
 		return null;
 	}

@@ -9,6 +9,10 @@ import org.eclipse.emf.common.util.EList;
  * A representation of the model object '<em><b>Compound Query</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Compound queries allow creating composite queries which chain together multiple queries. The results of a query in the chain will be fed to the subsequent query.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -31,6 +35,9 @@ public interface CompoundQuery extends Query
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The chain of queries for this Compound query.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Query Chain</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getCompoundQuery_QueryChain()
 	 * @model containment="true" required="true"
