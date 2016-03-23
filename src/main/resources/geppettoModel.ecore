@@ -266,10 +266,6 @@
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SimpleType" eSuperTypes="#//types/Type"/>
-    <eClassifiers xsi:type="ecore:EClass" name="StringToTypeMap" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//types/Type"/>
-    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="values" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/ontology/src/main/resources/geppettoModel.ecore#//values"
       nsPrefix="gep">

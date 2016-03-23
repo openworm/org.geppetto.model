@@ -2,7 +2,6 @@
  */
 package org.geppetto.model.types.impl;
 
-import java.util.Map;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -178,13 +177,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * @generated
 	 */
 	private EClass simpleTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass stringToTypeMapEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -758,36 +750,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStringToTypeMap()
-	{
-		return stringToTypeMapEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStringToTypeMap_Key()
-	{
-		return (EAttribute)stringToTypeMapEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStringToTypeMap_Value()
-	{
-		return (EReference)stringToTypeMapEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TypesFactory getTypesFactory()
 	{
 		return (TypesFactory)getEFactoryInstance();
@@ -880,10 +842,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		createEReference(connectionTypeEClass, CONNECTION_TYPE__DEFAULT_VALUE);
 
 		simpleTypeEClass = createEClass(SIMPLE_TYPE);
-
-		stringToTypeMapEClass = createEClass(STRING_TO_TYPE_MAP);
-		createEAttribute(stringToTypeMapEClass, STRING_TO_TYPE_MAP__KEY);
-		createEReference(stringToTypeMapEClass, STRING_TO_TYPE_MAP__VALUE);
 	}
 
 	/**
@@ -1010,10 +968,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		initEReference(getConnectionType_DefaultValue(), theValuesPackage.getComposite(), null, "defaultValue", null, 0, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(simpleTypeEClass, SimpleType.class, "SimpleType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(stringToTypeMapEClass, Map.Entry.class, "StringToTypeMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStringToTypeMap_Key(), theXMLTypePackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStringToTypeMap_Value(), this.getType(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //TypesPackageImpl
