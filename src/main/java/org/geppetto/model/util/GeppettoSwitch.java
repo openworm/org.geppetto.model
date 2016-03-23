@@ -84,6 +84,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
+				if (result == null) result = caseISynchable(node);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -92,6 +93,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				GeppettoLibrary geppettoLibrary = (GeppettoLibrary)theEObject;
 				T result = caseGeppettoLibrary(geppettoLibrary);
 				if (result == null) result = caseNode(geppettoLibrary);
+				if (result == null) result = caseISynchable(geppettoLibrary);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -120,6 +122,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				Tag tag = (Tag)theEObject;
 				T result = caseTag(tag);
+				if (result == null) result = caseISynchable(tag);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,6 +153,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				DataSource dataSource = (DataSource)theEObject;
 				T result = caseDataSource(dataSource);
 				if (result == null) result = caseNode(dataSource);
+				if (result == null) result = caseISynchable(dataSource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -164,6 +168,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				Query query = (Query)theEObject;
 				T result = caseQuery(query);
+				if (result == null) result = caseISynchable(query);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -172,6 +177,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				ProcessQuery processQuery = (ProcessQuery)theEObject;
 				T result = caseProcessQuery(processQuery);
 				if (result == null) result = caseQuery(processQuery);
+				if (result == null) result = caseISynchable(processQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -180,6 +186,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				SimpleQuery simpleQuery = (SimpleQuery)theEObject;
 				T result = caseSimpleQuery(simpleQuery);
 				if (result == null) result = caseQuery(simpleQuery);
+				if (result == null) result = caseISynchable(simpleQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -188,6 +195,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				CompoundQuery compoundQuery = (CompoundQuery)theEObject;
 				T result = caseCompoundQuery(compoundQuery);
 				if (result == null) result = caseQuery(compoundQuery);
+				if (result == null) result = caseISynchable(compoundQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -216,6 +224,13 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				@SuppressWarnings("unchecked") Map.Entry<String, String> stringToStringMap = (Map.Entry<String, String>)theEObject;
 				T result = caseStringToStringMap(stringToStringMap);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.ISYNCHABLE:
+			{
+				ISynchable iSynchable = (ISynchable)theEObject;
+				T result = caseISynchable(iSynchable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -539,6 +554,22 @@ public class GeppettoSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseStringToStringMap(Map.Entry<String, String> object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseISynchable(ISynchable object)
 	{
 		return null;
 	}

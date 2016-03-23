@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.types.impl;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -82,6 +83,7 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.COMPOSITE_VISUAL_TYPE: return createCompositeVisualType();
 			case TypesPackage.CONNECTION_TYPE: return createConnectionType();
 			case TypesPackage.SIMPLE_TYPE: return createSimpleType();
+			case TypesPackage.STRING_TO_TYPE_MAP: return (EObject)createStringToTypeMap();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -283,6 +285,17 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		SimpleTypeImpl simpleType = new SimpleTypeImpl();
 		return simpleType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<String, Type> createStringToTypeMap()
+	{
+		StringToTypeMapImpl stringToTypeMap = new StringToTypeMapImpl();
+		return stringToTypeMap;
 	}
 
 	/**

@@ -22,6 +22,7 @@ import org.geppetto.model.GeppettoFactory;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
+import org.geppetto.model.ISynchable;
 import org.geppetto.model.LibraryManager;
 import org.geppetto.model.ModelFormat;
 import org.geppetto.model.Node;
@@ -187,6 +188,13 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * @generated
 	 */
 	private EClass stringToStringMapEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iSynchableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -967,6 +975,26 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getISynchable()
+	{
+		return iSynchableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getISynchable_Synched()
+	{
+		return (EAttribute)iSynchableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getFileFormat()
 	{
 		return fileFormatEEnum;
@@ -1091,6 +1119,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		createEAttribute(stringToStringMapEClass, STRING_TO_STRING_MAP__KEY);
 		createEAttribute(stringToStringMapEClass, STRING_TO_STRING_MAP__VALUE);
 
+		iSynchableEClass = createEClass(ISYNCHABLE);
+		createEAttribute(iSynchableEClass, ISYNCHABLE__SYNCHED);
+
 		// Create enums
 		fileFormatEEnum = createEEnum(FILE_FORMAT);
 	}
@@ -1135,9 +1166,12 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		nodeEClass.getESuperTypes().add(this.getISynchable());
 		geppettoLibraryEClass.getESuperTypes().add(this.getNode());
+		tagEClass.getESuperTypes().add(this.getISynchable());
 		externalDomainModelEClass.getESuperTypes().add(this.getDomainModel());
 		dataSourceEClass.getESuperTypes().add(this.getNode());
+		queryEClass.getESuperTypes().add(this.getISynchable());
 		processQueryEClass.getESuperTypes().add(this.getQuery());
 		simpleQueryEClass.getESuperTypes().add(this.getQuery());
 		compoundQueryEClass.getESuperTypes().add(this.getQuery());
@@ -1232,6 +1266,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEClass(stringToStringMapEClass, Map.Entry.class, "StringToStringMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToStringMap_Key(), theXMLTypePackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStringToStringMap_Value(), theXMLTypePackage.getString(), "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(iSynchableEClass, ISynchable.class, "ISynchable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getISynchable_Synched(), theXMLTypePackage.getBoolean(), "synched", null, 1, 1, ISynchable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(fileFormatEEnum, FileFormat.class, "FileFormat");

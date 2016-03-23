@@ -2,10 +2,12 @@
  */
 package org.geppetto.model.types.util;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.geppetto.model.ISynchable;
 import org.geppetto.model.Node;
 import org.geppetto.model.types.*;
 
@@ -166,6 +168,16 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 			public Adapter caseSimpleType(SimpleType object)
 			{
 				return createSimpleTypeAdapter();
+			}
+			@Override
+			public Adapter caseStringToTypeMap(Map.Entry<String, Type> object)
+			{
+				return createStringToTypeMapAdapter();
+			}
+			@Override
+			public Adapter caseISynchable(ISynchable object)
+			{
+				return createISynchableAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object)
@@ -475,6 +487,36 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createSimpleTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Type Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createStringToTypeMapAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.ISynchable <em>ISynchable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.ISynchable
+	 * @generated
+	 */
+	public Adapter createISynchableAdapter()
 	{
 		return null;
 	}

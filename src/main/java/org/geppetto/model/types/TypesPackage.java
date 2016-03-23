@@ -71,6 +71,15 @@ public interface TypesPackage extends EPackage
 	int TYPE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__SYNCHED = GeppettoPackage.NODE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,6 +196,15 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	int VISUAL_TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_TYPE__SYNCHED = TYPE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -314,6 +332,15 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	int IMPORT_TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TYPE__SYNCHED = TYPE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -461,6 +488,15 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_TYPE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -597,6 +633,15 @@ public interface TypesPackage extends EPackage
 	int POINTER_TYPE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINTER_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -722,6 +767,15 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	int QUANTITY_TYPE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY_TYPE__SYNCHED = TYPE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -851,6 +905,15 @@ public interface TypesPackage extends EPackage
 	int PARAMETER_TYPE = 6;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -976,6 +1039,15 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	int STATE_VARIABLE_TYPE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE__SYNCHED = TYPE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1105,6 +1177,15 @@ public interface TypesPackage extends EPackage
 	int DYNAMICS_TYPE = 8;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1230,6 +1311,15 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	int ARGUMENT_TYPE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE__SYNCHED = TYPE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1359,6 +1449,15 @@ public interface TypesPackage extends EPackage
 	int EXPRESSION_TYPE = 10;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1484,6 +1583,15 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	int HTML_TYPE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE__SYNCHED = TYPE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1613,6 +1721,15 @@ public interface TypesPackage extends EPackage
 	int TEXT_TYPE = 12;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1738,6 +1855,15 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	int URL_TYPE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE__SYNCHED = TYPE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1867,6 +1993,15 @@ public interface TypesPackage extends EPackage
 	int POINT_TYPE = 14;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1993,6 +2128,15 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	int ARRAY_TYPE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__SYNCHED = TYPE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2138,6 +2282,15 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	int COMPOSITE_VISUAL_TYPE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE__SYNCHED = VISUAL_TYPE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2286,6 +2439,15 @@ public interface TypesPackage extends EPackage
 	int CONNECTION_TYPE = 17;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2423,6 +2585,15 @@ public interface TypesPackage extends EPackage
 	int SIMPLE_TYPE = 18;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2529,6 +2700,53 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int SIMPLE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.StringToTypeMapImpl <em>String To Type Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.StringToTypeMapImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getStringToTypeMap()
+	 * @generated
+	 */
+	int STRING_TO_TYPE_MAP = 19;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_TYPE_MAP__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_TYPE_MAP__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>String To Type Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_TYPE_MAP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>String To Type Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_TYPE_MAP_OPERATION_COUNT = 0;
 
 
 	/**
@@ -3051,6 +3269,40 @@ public interface TypesPackage extends EPackage
 	EClass getSimpleType();
 
 	/**
+	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Type Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String To Type Map</em>'.
+	 * @see java.util.Map.Entry
+	 * @model keyDataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        valueType="org.geppetto.model.types.Type"
+	 * @generated
+	 */
+	EClass getStringToTypeMap();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToTypeMap()
+	 * @generated
+	 */
+	EAttribute getStringToTypeMap_Key();
+
+	/**
+	 * Returns the meta object for the reference '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToTypeMap()
+	 * @generated
+	 */
+	EReference getStringToTypeMap_Value();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3503,6 +3755,32 @@ public interface TypesPackage extends EPackage
 		 * @generated
 		 */
 		EClass SIMPLE_TYPE = eINSTANCE.getSimpleType();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.StringToTypeMapImpl <em>String To Type Map</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.StringToTypeMapImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getStringToTypeMap()
+		 * @generated
+		 */
+		EClass STRING_TO_TYPE_MAP = eINSTANCE.getStringToTypeMap();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_TO_TYPE_MAP__KEY = eINSTANCE.getStringToTypeMap_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRING_TO_TYPE_MAP__VALUE = eINSTANCE.getStringToTypeMap_Value();
 
 	}
 

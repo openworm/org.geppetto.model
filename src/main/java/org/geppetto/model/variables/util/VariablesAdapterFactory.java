@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.geppetto.model.ISynchable;
 import org.geppetto.model.Node;
 
 import org.geppetto.model.types.Type;
@@ -90,6 +91,11 @@ public class VariablesAdapterFactory extends AdapterFactoryImpl
 				return createTypeToValueMapAdapter();
 			}
 			@Override
+			public Adapter caseISynchable(ISynchable object)
+			{
+				return createISynchableAdapter();
+			}
+			@Override
 			public Adapter caseNode(Node object)
 			{
 				return createNodeAdapter();
@@ -142,6 +148,21 @@ public class VariablesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createTypeToValueMapAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.ISynchable <em>ISynchable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.ISynchable
+	 * @generated
+	 */
+	public Adapter createISynchableAdapter()
 	{
 		return null;
 	}

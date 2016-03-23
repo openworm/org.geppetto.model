@@ -1456,16 +1456,17 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		GeppettoPackage theGeppettoPackage = (GeppettoPackage)EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
-		GeppettoPackage theGeppettoPackage = (GeppettoPackage)EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		valueEClass.getESuperTypes().add(theGeppettoPackage.getISynchable());
 		compositeEClass.getESuperTypes().add(this.getValue());
 		quantityEClass.getESuperTypes().add(this.getValue());
 		physicalQuantityEClass.getESuperTypes().add(this.getQuantity());

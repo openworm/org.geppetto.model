@@ -142,6 +142,43 @@ public interface GeppettoPackage extends EPackage
 	int GEPPETTO_MODEL_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.ISynchable <em>ISynchable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.ISynchable
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getISynchable()
+	 * @generated
+	 */
+	int ISYNCHABLE = 20;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ISYNCHABLE__SYNCHED = 0;
+
+	/**
+	 * The number of structural features of the '<em>ISynchable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ISYNCHABLE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>ISynchable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ISYNCHABLE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.NodeImpl <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,13 +189,22 @@ public interface GeppettoPackage extends EPackage
 	int NODE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__SYNCHED = ISYNCHABLE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__ID = 0;
+	int NODE__ID = ISYNCHABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -167,7 +213,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__NAME = 1;
+	int NODE__NAME = ISYNCHABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Tags</b></em>' reference list.
@@ -176,7 +222,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__TAGS = 2;
+	int NODE__TAGS = ISYNCHABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -185,7 +231,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 3;
+	int NODE_FEATURE_COUNT = ISYNCHABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -194,7 +240,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NODE___GET_PATH = 0;
+	int NODE___GET_PATH = ISYNCHABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -203,7 +249,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_OPERATION_COUNT = 1;
+	int NODE_OPERATION_COUNT = ISYNCHABLE_OPERATION_COUNT + 1;
 
 
 	/**
@@ -215,6 +261,15 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	int GEPPETTO_LIBRARY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_LIBRARY__SYNCHED = NODE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -438,13 +493,22 @@ public interface GeppettoPackage extends EPackage
 	int TAG = 6;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__SYNCHED = ISYNCHABLE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Tags</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TAG__TAGS = 0;
+	int TAG__TAGS = ISYNCHABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -453,7 +517,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TAG__NAME = 1;
+	int TAG__NAME = ISYNCHABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Tag</em>' class.
@@ -462,7 +526,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TAG_FEATURE_COUNT = 2;
+	int TAG_FEATURE_COUNT = ISYNCHABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Tag</em>' class.
@@ -471,7 +535,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TAG_OPERATION_COUNT = 0;
+	int TAG_OPERATION_COUNT = ISYNCHABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.DomainModelImpl <em>Domain Model</em>}' class.
@@ -620,6 +684,15 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	int DATA_SOURCE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SOURCE__SYNCHED = NODE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -804,13 +877,22 @@ public interface GeppettoPackage extends EPackage
 	int QUERY = 12;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY__SYNCHED = ISYNCHABLE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__LABEL = 0;
+	int QUERY__LABEL = ISYNCHABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -819,7 +901,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__DESCRIPTION = 1;
+	int QUERY__DESCRIPTION = ISYNCHABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Matching Criteria</b></em>' containment reference list.
@@ -828,7 +910,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__MATCHING_CRITERIA = 2;
+	int QUERY__MATCHING_CRITERIA = ISYNCHABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Query</em>' class.
@@ -837,7 +919,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_FEATURE_COUNT = 3;
+	int QUERY_FEATURE_COUNT = ISYNCHABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Query</em>' class.
@@ -846,7 +928,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_OPERATION_COUNT = 0;
+	int QUERY_OPERATION_COUNT = ISYNCHABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.ProcessQueryImpl <em>Process Query</em>}' class.
@@ -857,6 +939,15 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	int PROCESS_QUERY = 13;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__SYNCHED = QUERY__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -932,6 +1023,15 @@ public interface GeppettoPackage extends EPackage
 	int SIMPLE_QUERY = 14;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_QUERY__SYNCHED = QUERY__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1003,6 +1103,15 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	int COMPOUND_QUERY = 15;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_QUERY__SYNCHED = QUERY__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -1241,7 +1350,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getFileFormat()
 	 * @generated
 	 */
-	int FILE_FORMAT = 20;
+	int FILE_FORMAT = 21;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
@@ -1984,6 +2093,27 @@ public interface GeppettoPackage extends EPackage
 	EAttribute getStringToStringMap_Value();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.ISynchable <em>ISynchable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ISynchable</em>'.
+	 * @see org.geppetto.model.ISynchable
+	 * @generated
+	 */
+	EClass getISynchable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.ISynchable#isSynched <em>Synched</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Synched</em>'.
+	 * @see org.geppetto.model.ISynchable#isSynched()
+	 * @see #getISynchable()
+	 * @generated
+	 */
+	EAttribute getISynchable_Synched();
+
+	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.FileFormat <em>File Format</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2608,6 +2738,24 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute STRING_TO_STRING_MAP__VALUE = eINSTANCE.getStringToStringMap_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.ISynchable <em>ISynchable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.ISynchable
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getISynchable()
+		 * @generated
+		 */
+		EClass ISYNCHABLE = eINSTANCE.getISynchable();
+
+		/**
+		 * The meta object literal for the '<em><b>Synched</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ISYNCHABLE__SYNCHED = eINSTANCE.getISynchable_Synched();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.

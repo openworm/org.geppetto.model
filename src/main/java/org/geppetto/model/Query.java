@@ -3,7 +3,6 @@
 package org.geppetto.model;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface Query extends EObject
+public interface Query extends ISynchable
 {
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' attribute.

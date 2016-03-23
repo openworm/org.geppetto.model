@@ -28,6 +28,7 @@ import org.geppetto.model.Tag;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.geppetto.model.impl.TagImpl#isSynched <em>Synched</em>}</li>
  *   <li>{@link org.geppetto.model.impl.TagImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.geppetto.model.impl.TagImpl#getName <em>Name</em>}</li>
  * </ul>
@@ -37,6 +38,26 @@ import org.geppetto.model.Tag;
  */
 public class TagImpl extends MinimalEObjectImpl.Container implements Tag
 {
+	/**
+	 * The default value of the '{@link #isSynched() <em>Synched</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSynched()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SYNCHED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isSynched() <em>Synched</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSynched()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean synched = SYNCHED_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getTags() <em>Tags</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -86,6 +107,29 @@ public class TagImpl extends MinimalEObjectImpl.Container implements Tag
 	protected EClass eStaticClass()
 	{
 		return GeppettoPackage.Literals.TAG;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSynched()
+	{
+		return synched;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSynched(boolean newSynched)
+	{
+		boolean oldSynched = synched;
+		synched = newSynched;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.TAG__SYNCHED, oldSynched, synched));
 	}
 
 	/**
@@ -151,6 +195,8 @@ public class TagImpl extends MinimalEObjectImpl.Container implements Tag
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.TAG__SYNCHED:
+				return isSynched();
 			case GeppettoPackage.TAG__TAGS:
 				return getTags();
 			case GeppettoPackage.TAG__NAME:
@@ -170,6 +216,9 @@ public class TagImpl extends MinimalEObjectImpl.Container implements Tag
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.TAG__SYNCHED:
+				setSynched((Boolean)newValue);
+				return;
 			case GeppettoPackage.TAG__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends Tag>)newValue);
@@ -191,6 +240,9 @@ public class TagImpl extends MinimalEObjectImpl.Container implements Tag
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.TAG__SYNCHED:
+				setSynched(SYNCHED_EDEFAULT);
+				return;
 			case GeppettoPackage.TAG__TAGS:
 				getTags().clear();
 				return;
@@ -211,6 +263,8 @@ public class TagImpl extends MinimalEObjectImpl.Container implements Tag
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.TAG__SYNCHED:
+				return synched != SYNCHED_EDEFAULT;
 			case GeppettoPackage.TAG__TAGS:
 				return tags != null && !tags.isEmpty();
 			case GeppettoPackage.TAG__NAME:
@@ -230,7 +284,9 @@ public class TagImpl extends MinimalEObjectImpl.Container implements Tag
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		result.append(" (synched: ");
+		result.append(synched);
+		result.append(", name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();
