@@ -84,4 +84,12 @@ public interface QueryResults extends EObject
 	 */
 	EList<QueryResult> getResults();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model fieldDataType="org.eclipse.emf.ecore.xml.type.String" rowDataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @generated
+	 */
+	Object getValue(String field, int row);
+
 } // QueryResults

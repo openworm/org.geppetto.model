@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -155,6 +156,26 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public Object getValue(String field, int row)
+	{
+		if(getResults().size()>row)
+		{
+			for(String header:getHeader()){
+				if(header.equals(field)){
+					int column=getHeader().indexOf(header);
+					QueryResult resultRow=getResults().get(row);
+					return resultRow.getValues().get(column);
+				}
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -255,6 +276,22 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 				return results != null && !results.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
+	{
+		switch (operationID)
+		{
+			case GeppettoPackage.QUERY_RESULTS___GET_VALUE__STRING_INT:
+				return getValue((String)arguments.get(0), (Integer)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

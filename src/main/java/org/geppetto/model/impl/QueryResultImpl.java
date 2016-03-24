@@ -38,7 +38,7 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> values;
+	protected EList<Object> values;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,11 +66,11 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getValues()
+	public EList<Object> getValues()
 	{
 		if (values == null)
 		{
-			values = new EDataTypeUniqueEList<String>(String.class, this, GeppettoPackage.QUERY_RESULT__VALUES);
+			values = new EDataTypeUniqueEList<Object>(Object.class, this, GeppettoPackage.QUERY_RESULT__VALUES);
 		}
 		return values;
 	}
@@ -104,7 +104,7 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 		{
 			case GeppettoPackage.QUERY_RESULT__VALUES:
 				getValues().clear();
-				getValues().addAll((Collection<? extends String>)newValue);
+				getValues().addAll((Collection<? extends Object>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -1214,13 +1214,22 @@ public interface GeppettoPackage extends EPackage
 	int QUERY_RESULTS_FEATURE_COUNT = 3;
 
 	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_RESULTS___GET_VALUE__STRING_INT = 0;
+
+	/**
 	 * The number of operations of the '<em>Query Results</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_RESULTS_OPERATION_COUNT = 0;
+	int QUERY_RESULTS_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.QueryResultImpl <em>Query Result</em>}' class.
@@ -2017,6 +2026,16 @@ public interface GeppettoPackage extends EPackage
 	EReference getQueryResults_Results();
 
 	/**
+	 * Returns the meta object for the '{@link org.geppetto.model.QueryResults#getValue(java.lang.String, int) <em>Get Value</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Value</em>' operation.
+	 * @see org.geppetto.model.QueryResults#getValue(java.lang.String, int)
+	 * @generated
+	 */
+	EOperation getQueryResults__GetValue__String_int();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.QueryResult <em>Query Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2676,6 +2695,14 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference QUERY_RESULTS__RESULTS = eINSTANCE.getQueryResults_Results();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation QUERY_RESULTS___GET_VALUE__STRING_INT = eINSTANCE.getQueryResults__GetValue__String_int();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.QueryResultImpl <em>Query Result</em>}' class.
