@@ -3,18 +3,15 @@
 package org.geppetto.model.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.Node;
 import org.geppetto.model.Tag;
@@ -214,13 +211,18 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getPath()
 	{
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+       if(!(this.eContainer instanceof GeppettoModel) && this.eContainer instanceof Node)
+       {
+    	   return ((Node)this.eContainer).getPath()+"."+this.getId();
+       }
+       else
+       {
+    	   return this.getId();
+       }
 	}
 
 	/**

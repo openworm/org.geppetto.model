@@ -32,8 +32,10 @@
  *******************************************************************************/
 package org.geppetto.model.util;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.variables.Variable;
 
@@ -46,8 +48,26 @@ public class ModelUtility
 
 	public static List<Type> getAllTypesOf(Variable variable)
 	{
-		List<Type> types = null;
-		// TODO Auto-generated method stub
-		return types;
+		List<Type> allTypes = new ArrayList<Type>();
+		allTypes.addAll(variable.getTypes());
+		allTypes.addAll(variable.getAnonymousTypes());
+		return allTypes;
+	}
+
+	/**
+	 * @param typeId
+	 * @param targetLibrary
+	 * @return
+	 */
+	public static Type getTypeFromLibrary(String typeId, GeppettoLibrary targetLibrary)
+	{
+		for(Type type : targetLibrary.getTypes())
+		{
+			if(type.getId().equals(typeId))
+			{
+				return type;
+			}
+		}
+		return null;
 	}
 }

@@ -274,6 +274,21 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean extendsType(Type type)
+	{
+		for(Type superType:getSuperType()){
+			if(superType.equals(type) || superType.extendsType(type)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -427,6 +442,8 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		{
 			case TypesPackage.TYPE___GET_DEFAULT_VALUE:
 				return getDefaultValue();
+			case TypesPackage.TYPE___EXTENDS_TYPE__TYPE:
+				return extendsType((Type)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

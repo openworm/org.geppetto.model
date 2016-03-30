@@ -179,13 +179,22 @@ public interface TypesPackage extends EPackage
 	int TYPE___GET_DEFAULT_VALUE = GeppettoPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE___EXTENDS_TYPE__TYPE = GeppettoPackage.NODE_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_OPERATION_COUNT = GeppettoPackage.NODE_OPERATION_COUNT + 1;
+	int TYPE_OPERATION_COUNT = GeppettoPackage.NODE_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.types.impl.VisualTypeImpl <em>Visual Type</em>}' class.
@@ -313,6 +322,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int VISUAL_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
 
 	/**
 	 * The number of operations of the '<em>Visual Type</em>' class.
@@ -469,6 +487,15 @@ public interface TypesPackage extends EPackage
 	int IMPORT_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>Import Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -614,6 +641,15 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>Composite Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -748,6 +784,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int POINTER_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINTER_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
 
 	/**
 	 * The number of operations of the '<em>Pointer Type</em>' class.
@@ -886,6 +931,15 @@ public interface TypesPackage extends EPackage
 	int QUANTITY_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>Quantity Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1020,6 +1074,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int PARAMETER_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
 
 	/**
 	 * The number of operations of the '<em>Parameter Type</em>' class.
@@ -1158,6 +1221,15 @@ public interface TypesPackage extends EPackage
 	int STATE_VARIABLE_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_VARIABLE_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>State Variable Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1292,6 +1364,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int DYNAMICS_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
 
 	/**
 	 * The number of operations of the '<em>Dynamics Type</em>' class.
@@ -1430,6 +1511,15 @@ public interface TypesPackage extends EPackage
 	int ARGUMENT_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>Argument Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1564,6 +1654,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int EXPRESSION_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
 
 	/**
 	 * The number of operations of the '<em>Expression Type</em>' class.
@@ -1702,6 +1801,15 @@ public interface TypesPackage extends EPackage
 	int HTML_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>HTML Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1836,6 +1944,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int TEXT_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
 
 	/**
 	 * The number of operations of the '<em>Text Type</em>' class.
@@ -1974,6 +2091,15 @@ public interface TypesPackage extends EPackage
 	int URL_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>URL Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2108,6 +2234,15 @@ public interface TypesPackage extends EPackage
 	 * @ordered
 	 */
 	int POINT_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
 
 	/**
 	 * The number of operations of the '<em>Point Type</em>' class.
@@ -2265,6 +2400,15 @@ public interface TypesPackage extends EPackage
 	int ARRAY_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>Array Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2419,6 +2563,15 @@ public interface TypesPackage extends EPackage
 	int COMPOSITE_VISUAL_TYPE___GET_DEFAULT_VALUE = VISUAL_TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_VISUAL_TYPE___EXTENDS_TYPE__TYPE = VISUAL_TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>Composite Visual Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2565,6 +2718,15 @@ public interface TypesPackage extends EPackage
 	int CONNECTION_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>Connection Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2693,6 +2855,15 @@ public interface TypesPackage extends EPackage
 	int SIMPLE_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
 
 	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
 	 * The number of operations of the '<em>Simple Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2776,6 +2947,16 @@ public interface TypesPackage extends EPackage
 	 * @generated
 	 */
 	EOperation getType__GetDefaultValue();
+
+	/**
+	 * Returns the meta object for the '{@link org.geppetto.model.types.Type#extendsType(org.geppetto.model.types.Type) <em>Extends Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Extends Type</em>' operation.
+	 * @see org.geppetto.model.types.Type#extendsType(org.geppetto.model.types.Type)
+	 * @generated
+	 */
+	EOperation getType__ExtendsType__Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.types.VisualType <em>Visual Type</em>}'.
@@ -3302,6 +3483,14 @@ public interface TypesPackage extends EPackage
 		 * @generated
 		 */
 		EOperation TYPE___GET_DEFAULT_VALUE = eINSTANCE.getType__GetDefaultValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Extends Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TYPE___EXTENDS_TYPE__TYPE = eINSTANCE.getType__ExtendsType__Type();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.types.impl.VisualTypeImpl <em>Visual Type</em>}' class.

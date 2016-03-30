@@ -330,6 +330,16 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getType__ExtendsType__Type()
+	{
+		return typeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVisualType()
 	{
 		return visualTypeEClass;
@@ -782,6 +792,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		createEReference(typeEClass, TYPE__REFERENCED_VARIABLES);
 		createEReference(typeEClass, TYPE__DOMAIN_MODEL);
 		createEOperation(typeEClass, TYPE___GET_DEFAULT_VALUE);
+		createEOperation(typeEClass, TYPE___EXTENDS_TYPE__TYPE);
 
 		visualTypeEClass = createEClass(VISUAL_TYPE);
 		createEReference(visualTypeEClass, VISUAL_TYPE__DEFAULT_VALUE);
@@ -908,6 +919,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		initEReference(getType_DomainModel(), theGeppettoPackage.getDomainModel(), null, "domainModel", null, 0, 1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getType__GetDefaultValue(), theValuesPackage.getValue(), "getDefaultValue", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		EOperation op = initEOperation(getType__ExtendsType__Type(), theXMLTypePackage.getBoolean(), "extendsType", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getType(), "type", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(visualTypeEClass, VisualType.class, "VisualType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVisualType_DefaultValue(), theValuesPackage.getVisualValue(), null, "defaultValue", null, 0, 1, VisualType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

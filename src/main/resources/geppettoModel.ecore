@@ -181,6 +181,9 @@
       nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//Node">
       <eOperations name="getDefaultValue" eType="#//values/Value"/>
+      <eOperations name="extendsType" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean">
+        <eParameters name="type" lowerBound="1" eType="#//types/Type"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="superType" upperBound="-1"
           eType="#//types/Type"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstract" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>

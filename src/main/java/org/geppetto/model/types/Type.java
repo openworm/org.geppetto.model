@@ -150,4 +150,12 @@ public interface Type extends Node
 	 */
 	Value getDefaultValue();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Boolean" typeRequired="true"
+	 * @generated
+	 */
+	boolean extendsType(Type type);
+
 } // Type
