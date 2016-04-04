@@ -35,7 +35,7 @@ public interface QueryResult extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' attribute list.
 	 * @see org.geppetto.model.GeppettoPackage#getQueryResult_Values()
-	 * @model required="true"
+	 * @model unique="false" required="true"
 	 * @generated
 	 */
 	EList<Object> getValues();

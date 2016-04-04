@@ -3,15 +3,10 @@
 package org.geppetto.model.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.QueryResult;
 
@@ -70,7 +65,7 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 	{
 		if (values == null)
 		{
-			values = new EDataTypeUniqueEList<Object>(Object.class, this, GeppettoPackage.QUERY_RESULT__VALUES);
+			values = new EDataTypeEList<Object>(Object.class, this, GeppettoPackage.QUERY_RESULT__VALUES);
 		}
 		return values;
 	}
