@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.values;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -10,97 +10,97 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>File Format</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Image Format</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.geppetto.model.GeppettoPackage#getFileFormat()
+ * @see org.geppetto.model.values.ValuesPackage#getImageFormat()
  * @model
  * @generated
  */
-public enum FileFormat implements Enumerator
+public enum ImageFormat implements Enumerator
 {
 	/**
-	 * The '<em><b>ZIP</b></em>' literal object.
+	 * The '<em><b>PNG</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ZIP_VALUE
+	 * @see #PNG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ZIP(0, "ZIP", "ZIP"),
+	PNG(0, "PNG", "PNG"),
 
 	/**
-	 * The '<em><b>HDF5</b></em>' literal object.
+	 * The '<em><b>JPEG</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #HDF5_VALUE
+	 * @see #JPEG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	HDF5(1, "HDF5", "HDF5");
+	JPEG(1, "JPEG", "JPEG");
 
 	/**
-	 * The '<em><b>ZIP</b></em>' literal value.
+	 * The '<em><b>PNG</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>ZIP</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>PNG</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ZIP
+	 * @see #PNG
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ZIP_VALUE = 0;
+	public static final int PNG_VALUE = 0;
 
 	/**
-	 * The '<em><b>HDF5</b></em>' literal value.
+	 * The '<em><b>JPEG</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>HDF5</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>JPEG</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #HDF5
+	 * @see #JPEG
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HDF5_VALUE = 1;
+	public static final int JPEG_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>File Format</b></em>' enumerators.
+	 * An array of all the '<em><b>Image Format</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final FileFormat[] VALUES_ARRAY =
-		new FileFormat[]
+	private static final ImageFormat[] VALUES_ARRAY =
+		new ImageFormat[]
 		{
-			ZIP,
-			HDF5,
+			PNG,
+			JPEG,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>File Format</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Image Format</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<FileFormat> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<ImageFormat> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>File Format</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Image Format</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static FileFormat get(String literal)
+	public static ImageFormat get(String literal)
 	{
 		for (int i = 0; i < VALUES_ARRAY.length; ++i)
 		{
-			FileFormat result = VALUES_ARRAY[i];
+			ImageFormat result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal))
 			{
 				return result;
@@ -110,16 +110,16 @@ public enum FileFormat implements Enumerator
 	}
 
 	/**
-	 * Returns the '<em><b>File Format</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Image Format</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static FileFormat getByName(String name)
+	public static ImageFormat getByName(String name)
 	{
 		for (int i = 0; i < VALUES_ARRAY.length; ++i)
 		{
-			FileFormat result = VALUES_ARRAY[i];
+			ImageFormat result = VALUES_ARRAY[i];
 			if (result.getName().equals(name))
 			{
 				return result;
@@ -129,17 +129,17 @@ public enum FileFormat implements Enumerator
 	}
 
 	/**
-	 * Returns the '<em><b>File Format</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Image Format</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static FileFormat get(int value)
+	public static ImageFormat get(int value)
 	{
 		switch (value)
 		{
-			case ZIP_VALUE: return ZIP;
-			case HDF5_VALUE: return HDF5;
+			case PNG_VALUE: return PNG;
+			case JPEG_VALUE: return JPEG;
 		}
 		return null;
 	}
@@ -171,7 +171,7 @@ public enum FileFormat implements Enumerator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private FileFormat(int value, String name, String literal)
+	private ImageFormat(int value, String name, String literal)
 	{
 		this.value = value;
 		this.name = name;
@@ -220,4 +220,4 @@ public enum FileFormat implements Enumerator
 		return literal;
 	}
 	
-} //FileFormat
+} //ImageFormat

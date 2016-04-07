@@ -1978,13 +1978,40 @@ public interface ValuesPackage extends EPackage
 	int IMAGE__SYNCHED = VALUE__SYNCHED;
 
 	/**
-	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * The feature id for the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE__URL = VALUE_FEATURE_COUNT + 0;
+	int IMAGE__DATA = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__NAME = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Reference</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__REFERENCE = VALUE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__FORMAT = VALUE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Image</em>' class.
@@ -1993,7 +2020,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+	int IMAGE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Image</em>' class.
@@ -2013,6 +2040,16 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int CONNECTIVITY = 33;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.ImageFormat
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImageFormat()
+	 * @generated
+	 */
+	int IMAGE_FORMAT = 34;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Value <em>Value</em>}'.
@@ -2984,15 +3021,48 @@ public interface ValuesPackage extends EPackage
 	EClass getImage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see org.geppetto.model.values.Image#getUrl()
+	 * @return the meta object for the attribute '<em>Data</em>'.
+	 * @see org.geppetto.model.values.Image#getData()
 	 * @see #getImage()
 	 * @generated
 	 */
-	EAttribute getImage_Url();
+	EAttribute getImage_Data();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.geppetto.model.values.Image#getName()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getReference <em>Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reference</em>'.
+	 * @see org.geppetto.model.values.Image#getReference()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Reference();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getFormat <em>Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Format</em>'.
+	 * @see org.geppetto.model.values.Image#getFormat()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Format();
 
 	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}'.
@@ -3003,6 +3073,16 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EEnum getConnectivity();
+
+	/**
+	 * Returns the meta object for enum '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Image Format</em>'.
+	 * @see org.geppetto.model.values.ImageFormat
+	 * @generated
+	 */
+	EEnum getImageFormat();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3823,12 +3903,36 @@ public interface ValuesPackage extends EPackage
 		EClass IMAGE = eINSTANCE.getImage();
 
 		/**
-		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMAGE__URL = eINSTANCE.getImage_Url();
+		EAttribute IMAGE__DATA = eINSTANCE.getImage_Data();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__NAME = eINSTANCE.getImage_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Reference</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__REFERENCE = eINSTANCE.getImage_Reference();
+
+		/**
+		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__FORMAT = eINSTANCE.getImage_Format();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.
@@ -3839,6 +3943,16 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EEnum CONNECTIVITY = eINSTANCE.getConnectivity();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.ImageFormat
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImageFormat()
+		 * @generated
+		 */
+		EEnum IMAGE_FORMAT = eINSTANCE.getImageFormat();
 
 	}
 

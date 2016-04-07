@@ -28,6 +28,7 @@ import org.geppetto.model.values.Expression;
 import org.geppetto.model.values.Function;
 import org.geppetto.model.values.FunctionPlot;
 import org.geppetto.model.values.Image;
+import org.geppetto.model.values.ImageFormat;
 import org.geppetto.model.values.MetadataValue;
 import org.geppetto.model.values.Particle;
 import org.geppetto.model.values.PhysicalQuantity;
@@ -295,6 +296,13 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * @generated
 	 */
 	private EEnum connectivityEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum imageFormatEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1288,9 +1296,39 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getImage_Url()
+	public EAttribute getImage_Data()
 	{
 		return (EAttribute)imageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImage_Name()
+	{
+		return (EAttribute)imageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImage_Reference()
+	{
+		return (EAttribute)imageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImage_Format()
+	{
+		return (EAttribute)imageEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1301,6 +1339,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	public EEnum getConnectivity()
 	{
 		return connectivityEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getImageFormat()
+	{
+		return imageFormatEEnum;
 	}
 
 	/**
@@ -1456,10 +1504,14 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEReference(arrayValueEClass, ARRAY_VALUE__ELEMENTS);
 
 		imageEClass = createEClass(IMAGE);
-		createEAttribute(imageEClass, IMAGE__URL);
+		createEAttribute(imageEClass, IMAGE__DATA);
+		createEAttribute(imageEClass, IMAGE__NAME);
+		createEAttribute(imageEClass, IMAGE__REFERENCE);
+		createEAttribute(imageEClass, IMAGE__FORMAT);
 
 		// Create enums
 		connectivityEEnum = createEEnum(CONNECTIVITY);
+		imageFormatEEnum = createEEnum(IMAGE_FORMAT);
 	}
 
 	/**
@@ -1653,13 +1705,20 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEReference(getArrayValue_Elements(), this.getArrayElement(), null, "elements", null, 1, -1, ArrayValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getImage_Url(), theXMLTypePackage.getString(), "url", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImage_Data(), theXMLTypePackage.getString(), "data", null, 1, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImage_Name(), theXMLTypePackage.getString(), "name", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImage_Reference(), theXMLTypePackage.getString(), "reference", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImage_Format(), this.getImageFormat(), "format", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(connectivityEEnum, Connectivity.class, "Connectivity");
 		addEEnumLiteral(connectivityEEnum, Connectivity.DIRECTIONAL);
 		addEEnumLiteral(connectivityEEnum, Connectivity.BIDIRECTIONAL);
 		addEEnumLiteral(connectivityEEnum, Connectivity.NON_DIRECTIONAL);
+
+		initEEnum(imageFormatEEnum, ImageFormat.class, "ImageFormat");
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.PNG);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.JPEG);
 	}
 
 } //ValuesPackageImpl

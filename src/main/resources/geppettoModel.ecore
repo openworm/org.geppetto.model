@@ -96,7 +96,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FileFormat">
     <eLiterals name="ZIP"/>
-    <eLiterals name="HDF5"/>
+    <eLiterals name="HDF5" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataSource" eSuperTypes="#//Node">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSourceService" lowerBound="1"
@@ -438,7 +438,15 @@
           upperBound="-1" eType="#//values/ArrayElement" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//values/Value">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="reference" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="#//values/ImageFormat"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ImageFormat">
+      <eLiterals name="PNG" literal="PNG"/>
+      <eLiterals name="JPEG" value="1" literal="JPEG"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="variables" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/ontology/src/main/resources/geppettoModel.ecore#//variables"

@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.geppetto.model.values.Image;
+import org.geppetto.model.values.ImageFormat;
 import org.geppetto.model.values.ValuesPackage;
 
 /**
@@ -18,7 +19,10 @@ import org.geppetto.model.values.ValuesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.values.impl.ImageImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.ImageImpl#getData <em>Data</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.ImageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.ImageImpl#getReference <em>Reference</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.ImageImpl#getFormat <em>Format</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,24 +31,84 @@ import org.geppetto.model.values.ValuesPackage;
 public class ImageImpl extends ValueImpl implements Image
 {
 	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * The default value of the '{@link #getData() <em>Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrl()
+	 * @see #getData()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String URL_EDEFAULT = null;
+	protected static final String DATA_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * The cached value of the '{@link #getData() <em>Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrl()
+	 * @see #getData()
 	 * @generated
 	 * @ordered
 	 */
-	protected String url = URL_EDEFAULT;
+	protected String data = DATA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getReference() <em>Reference</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReference()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REFERENCE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReference() <em>Reference</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReference()
+	 * @generated
+	 * @ordered
+	 */
+	protected String reference = REFERENCE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ImageFormat FORMAT_EDEFAULT = ImageFormat.PNG;
+
+	/**
+	 * The cached value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected ImageFormat format = FORMAT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,9 +136,9 @@ public class ImageImpl extends ValueImpl implements Image
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrl()
+	public String getData()
 	{
-		return url;
+		return data;
 	}
 
 	/**
@@ -82,12 +146,81 @@ public class ImageImpl extends ValueImpl implements Image
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUrl(String newUrl)
+	public void setData(String newData)
 	{
-		String oldUrl = url;
-		url = newUrl;
+		String oldData = data;
+		data = newData;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.IMAGE__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.IMAGE__DATA, oldData, data));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName()
+	{
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName)
+	{
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.IMAGE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getReference()
+	{
+		return reference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReference(String newReference)
+	{
+		String oldReference = reference;
+		reference = newReference;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.IMAGE__REFERENCE, oldReference, reference));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageFormat getFormat()
+	{
+		return format;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormat(ImageFormat newFormat)
+	{
+		ImageFormat oldFormat = format;
+		format = newFormat == null ? FORMAT_EDEFAULT : newFormat;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.IMAGE__FORMAT, oldFormat, format));
 	}
 
 	/**
@@ -100,8 +233,14 @@ public class ImageImpl extends ValueImpl implements Image
 	{
 		switch (featureID)
 		{
-			case ValuesPackage.IMAGE__URL:
-				return getUrl();
+			case ValuesPackage.IMAGE__DATA:
+				return getData();
+			case ValuesPackage.IMAGE__NAME:
+				return getName();
+			case ValuesPackage.IMAGE__REFERENCE:
+				return getReference();
+			case ValuesPackage.IMAGE__FORMAT:
+				return getFormat();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,8 +255,17 @@ public class ImageImpl extends ValueImpl implements Image
 	{
 		switch (featureID)
 		{
-			case ValuesPackage.IMAGE__URL:
-				setUrl((String)newValue);
+			case ValuesPackage.IMAGE__DATA:
+				setData((String)newValue);
+				return;
+			case ValuesPackage.IMAGE__NAME:
+				setName((String)newValue);
+				return;
+			case ValuesPackage.IMAGE__REFERENCE:
+				setReference((String)newValue);
+				return;
+			case ValuesPackage.IMAGE__FORMAT:
+				setFormat((ImageFormat)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,8 +281,17 @@ public class ImageImpl extends ValueImpl implements Image
 	{
 		switch (featureID)
 		{
-			case ValuesPackage.IMAGE__URL:
-				setUrl(URL_EDEFAULT);
+			case ValuesPackage.IMAGE__DATA:
+				setData(DATA_EDEFAULT);
+				return;
+			case ValuesPackage.IMAGE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case ValuesPackage.IMAGE__REFERENCE:
+				setReference(REFERENCE_EDEFAULT);
+				return;
+			case ValuesPackage.IMAGE__FORMAT:
+				setFormat(FORMAT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -150,8 +307,14 @@ public class ImageImpl extends ValueImpl implements Image
 	{
 		switch (featureID)
 		{
-			case ValuesPackage.IMAGE__URL:
-				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
+			case ValuesPackage.IMAGE__DATA:
+				return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
+			case ValuesPackage.IMAGE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ValuesPackage.IMAGE__REFERENCE:
+				return REFERENCE_EDEFAULT == null ? reference != null : !REFERENCE_EDEFAULT.equals(reference);
+			case ValuesPackage.IMAGE__FORMAT:
+				return format != FORMAT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -167,8 +330,14 @@ public class ImageImpl extends ValueImpl implements Image
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (url: ");
-		result.append(url);
+		result.append(" (data: ");
+		result.append(data);
+		result.append(", name: ");
+		result.append(name);
+		result.append(", reference: ");
+		result.append(reference);
+		result.append(", format: ");
+		result.append(format);
 		result.append(')');
 		return result.toString();
 	}
