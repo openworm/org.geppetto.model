@@ -19,6 +19,7 @@ import org.geppetto.model.types.ConnectionType;
 import org.geppetto.model.types.DynamicsType;
 import org.geppetto.model.types.ExpressionType;
 import org.geppetto.model.types.HTMLType;
+import org.geppetto.model.types.ImageType;
 import org.geppetto.model.types.ImportType;
 import org.geppetto.model.types.ParameterType;
 import org.geppetto.model.types.PointType;
@@ -177,6 +178,13 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * @generated
 	 */
 	private EClass simpleTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass imageTypeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -760,6 +768,26 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getImageType()
+	{
+		return imageTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImageType_DefaultValue()
+	{
+		return (EReference)imageTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TypesFactory getTypesFactory()
 	{
 		return (TypesFactory)getEFactoryInstance();
@@ -853,6 +881,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		createEReference(connectionTypeEClass, CONNECTION_TYPE__DEFAULT_VALUE);
 
 		simpleTypeEClass = createEClass(SIMPLE_TYPE);
+
+		imageTypeEClass = createEClass(IMAGE_TYPE);
+		createEReference(imageTypeEClass, IMAGE_TYPE__DEFAULT_VALUE);
 	}
 
 	/**
@@ -909,6 +940,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		compositeVisualTypeEClass.getESuperTypes().add(this.getVisualType());
 		connectionTypeEClass.getESuperTypes().add(this.getType());
 		simpleTypeEClass.getESuperTypes().add(this.getType());
+		imageTypeEClass.getESuperTypes().add(this.getType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -982,6 +1014,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		initEReference(getConnectionType_DefaultValue(), theValuesPackage.getComposite(), null, "defaultValue", null, 0, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(simpleTypeEClass, SimpleType.class, "SimpleType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(imageTypeEClass, ImageType.class, "ImageType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getImageType_DefaultValue(), theValuesPackage.getImage(), null, "defaultValue", null, 0, 1, ImageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //TypesPackageImpl

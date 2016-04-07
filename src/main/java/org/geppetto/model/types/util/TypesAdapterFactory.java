@@ -169,6 +169,11 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 				return createSimpleTypeAdapter();
 			}
 			@Override
+			public Adapter caseImageType(ImageType object)
+			{
+				return createImageTypeAdapter();
+			}
+			@Override
 			public Adapter caseISynchable(ISynchable object)
 			{
 				return createISynchableAdapter();
@@ -481,6 +486,21 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createSimpleTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.ImageType <em>Image Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.ImageType
+	 * @generated
+	 */
+	public Adapter createImageTypeAdapter()
 	{
 		return null;
 	}

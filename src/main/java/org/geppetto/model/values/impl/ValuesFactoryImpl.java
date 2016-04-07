@@ -92,6 +92,7 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.CONNECTION: return createConnection();
 			case ValuesPackage.ARRAY_ELEMENT: return createArrayElement();
 			case ValuesPackage.ARRAY_VALUE: return createArrayValue();
+			case ValuesPackage.IMAGE: return createImage();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -448,6 +449,17 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		ArrayValueImpl arrayValue = new ArrayValueImpl();
 		return arrayValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Image createImage()
+	{
+		ImageImpl image = new ImageImpl();
+		return image;
 	}
 
 	/**

@@ -185,6 +185,15 @@ public interface TypesFactory extends EFactory
 	SimpleType createSimpleType();
 
 	/**
+	 * Returns a new object of class '<em>Image Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Image Type</em>'.
+	 * @generated
+	 */
+	ImageType createImageType();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -79,6 +79,7 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.COMPOSITE_VISUAL_TYPE: return createCompositeVisualType();
 			case TypesPackage.CONNECTION_TYPE: return createConnectionType();
 			case TypesPackage.SIMPLE_TYPE: return createSimpleType();
+			case TypesPackage.IMAGE_TYPE: return createImageType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -280,6 +281,17 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		SimpleTypeImpl simpleType = new SimpleTypeImpl();
 		return simpleType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageType createImageType()
+	{
+		ImageTypeImpl imageType = new ImageTypeImpl();
+		return imageType;
 	}
 
 	/**

@@ -2874,6 +2874,152 @@ public interface TypesPackage extends EPackage
 
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.ImageTypeImpl <em>Image Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.ImageTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getImageType()
+	 * @generated
+	 */
+	int IMAGE_TYPE = 19;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__ID = TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__TAGS = TYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Default Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE__DEFAULT_VALUE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Image Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
+	 * The number of operations of the '<em>Image Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.types.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3403,6 +3549,27 @@ public interface TypesPackage extends EPackage
 	EClass getSimpleType();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.ImageType <em>Image Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Image Type</em>'.
+	 * @see org.geppetto.model.types.ImageType
+	 * @generated
+	 */
+	EClass getImageType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.types.ImageType#getDefaultValue <em>Default Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Value</em>'.
+	 * @see org.geppetto.model.types.ImageType#getDefaultValue()
+	 * @see #getImageType()
+	 * @generated
+	 */
+	EReference getImageType_DefaultValue();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3863,6 +4030,24 @@ public interface TypesPackage extends EPackage
 		 * @generated
 		 */
 		EClass SIMPLE_TYPE = eINSTANCE.getSimpleType();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.ImageTypeImpl <em>Image Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.ImageTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getImageType()
+		 * @generated
+		 */
+		EClass IMAGE_TYPE = eINSTANCE.getImageType();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMAGE_TYPE__DEFAULT_VALUE = eINSTANCE.getImageType_DefaultValue();
 
 	}
 

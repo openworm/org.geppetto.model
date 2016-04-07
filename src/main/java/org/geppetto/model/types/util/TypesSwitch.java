@@ -262,6 +262,16 @@ public class TypesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TypesPackage.IMAGE_TYPE:
+			{
+				ImageType imageType = (ImageType)theEObject;
+				T result = caseImageType(imageType);
+				if (result == null) result = caseType(imageType);
+				if (result == null) result = caseNode(imageType);
+				if (result == null) result = caseISynchable(imageType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -566,6 +576,22 @@ public class TypesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseSimpleType(SimpleType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Image Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Image Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImageType(ImageType object)
 	{
 		return null;
 	}

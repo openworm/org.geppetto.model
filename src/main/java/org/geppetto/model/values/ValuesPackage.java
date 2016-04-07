@@ -1959,6 +1959,52 @@ public interface ValuesPackage extends EPackage
 	int ARRAY_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.ImageImpl <em>Image</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.ImageImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImage()
+	 * @generated
+	 */
+	int IMAGE = 32;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__SYNCHED = VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__URL = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1966,7 +2012,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectivity()
 	 * @generated
 	 */
-	int CONNECTIVITY = 32;
+	int CONNECTIVITY = 33;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Value <em>Value</em>}'.
@@ -2928,6 +2974,27 @@ public interface ValuesPackage extends EPackage
 	EReference getArrayValue_Elements();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.Image <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Image</em>'.
+	 * @see org.geppetto.model.values.Image
+	 * @generated
+	 */
+	EClass getImage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see org.geppetto.model.values.Image#getUrl()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Url();
+
+	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3744,6 +3811,24 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EReference ARRAY_VALUE__ELEMENTS = eINSTANCE.getArrayValue_Elements();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ImageImpl <em>Image</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.ImageImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImage()
+		 * @generated
+		 */
+		EClass IMAGE = eINSTANCE.getImage();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__URL = eINSTANCE.getImage_Url();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.
