@@ -273,6 +273,9 @@
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SimpleType" eSuperTypes="#//types/Type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ImageType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Image"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="values" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/ontology/src/main/resources/geppettoModel.ecore#//values"
       nsPrefix="gep">
@@ -433,6 +436,9 @@
     <eClassifiers xsi:type="ecore:EClass" name="ArrayValue" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
           upperBound="-1" eType="#//values/ArrayElement" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="variables" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/ontology/src/main/resources/geppettoModel.ecore#//variables"
