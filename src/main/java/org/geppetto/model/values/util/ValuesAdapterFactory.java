@@ -240,6 +240,11 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createImageAdapter();
 			}
 			@Override
+			public Adapter caseImportValue(ImportValue object)
+			{
+				return createImportValueAdapter();
+			}
+			@Override
 			public Adapter caseISynchable(ISynchable object)
 			{
 				return createISynchableAdapter();
@@ -762,6 +767,21 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createImageAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.ImportValue <em>Import Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.ImportValue
+	 * @generated
+	 */
+	public Adapter createImportValueAdapter()
 	{
 		return null;
 	}

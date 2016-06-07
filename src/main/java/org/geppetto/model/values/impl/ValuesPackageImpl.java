@@ -29,6 +29,7 @@ import org.geppetto.model.values.Function;
 import org.geppetto.model.values.FunctionPlot;
 import org.geppetto.model.values.Image;
 import org.geppetto.model.values.ImageFormat;
+import org.geppetto.model.values.ImportValue;
 import org.geppetto.model.values.MetadataValue;
 import org.geppetto.model.values.Particle;
 import org.geppetto.model.values.PhysicalQuantity;
@@ -289,6 +290,13 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * @generated
 	 */
 	private EClass imageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass importValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1336,6 +1344,26 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getImportValue()
+	{
+		return importValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImportValue_ModelInterpreterId()
+	{
+		return (EAttribute)importValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getConnectivity()
 	{
 		return connectivityEEnum;
@@ -1509,6 +1537,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEAttribute(imageEClass, IMAGE__REFERENCE);
 		createEAttribute(imageEClass, IMAGE__FORMAT);
 
+		importValueEClass = createEClass(IMPORT_VALUE);
+		createEAttribute(importValueEClass, IMPORT_VALUE__MODEL_INTERPRETER_ID);
+
 		// Create enums
 		connectivityEEnum = createEEnum(CONNECTIVITY);
 		imageFormatEEnum = createEEnum(IMAGE_FORMAT);
@@ -1579,6 +1610,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		arrayElementEClass.getESuperTypes().add(this.getValue());
 		arrayValueEClass.getESuperTypes().add(this.getValue());
 		imageEClass.getESuperTypes().add(this.getValue());
+		importValueEClass.getESuperTypes().add(this.getValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(valueEClass, Value.class, "Value", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1709,6 +1741,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEAttribute(getImage_Name(), theXMLTypePackage.getString(), "name", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_Reference(), theXMLTypePackage.getString(), "reference", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_Format(), this.getImageFormat(), "format", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(importValueEClass, ImportValue.class, "ImportValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getImportValue_ModelInterpreterId(), theXMLTypePackage.getString(), "modelInterpreterId", null, 0, 1, ImportValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(connectivityEEnum, Connectivity.class, "Connectivity");
