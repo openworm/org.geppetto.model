@@ -10,6 +10,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.DomainModel;
@@ -41,14 +42,14 @@ import org.geppetto.model.variables.VariablesPackage;
 public abstract class TypeImpl extends NodeImpl implements Type
 {
 	/**
-	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
+	 * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSuperType()
 	 * @generated
 	 * @ordered
 	 */
-	protected Type superType;
+	protected EList<Type> superType;
 
 	/**
 	 * The default value of the '{@link #isAbstract() <em>Abstract</em>}' attribute.
@@ -126,42 +127,13 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getSuperType()
+	public EList<Type> getSuperType()
 	{
-		if (superType != null && superType.eIsProxy())
+		if (superType == null)
 		{
-			InternalEObject oldSuperType = (InternalEObject)superType;
-			superType = (Type)eResolveProxy(oldSuperType);
-			if (superType != oldSuperType)
-			{
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TypesPackage.TYPE__SUPER_TYPE, oldSuperType, superType));
-			}
+			superType = new EObjectResolvingEList<Type>(Type.class, this, TypesPackage.TYPE__SUPER_TYPE);
 		}
 		return superType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Type basicGetSuperType()
-	{
-		return superType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSuperType(Type newSuperType)
-	{
-		Type oldSuperType = superType;
-		superType = newSuperType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.TYPE__SUPER_TYPE, oldSuperType, superType));
 	}
 
 	/**
@@ -302,6 +274,21 @@ public abstract class TypeImpl extends NodeImpl implements Type
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean extendsType(Type type)
+	{
+		for(Type superType:getSuperType()){
+			if(superType.equals(type) || superType.extendsType(type)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -343,8 +330,7 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		switch (featureID)
 		{
 			case TypesPackage.TYPE__SUPER_TYPE:
-				if (resolve) return getSuperType();
-				return basicGetSuperType();
+				return getSuperType();
 			case TypesPackage.TYPE__ABSTRACT:
 				return isAbstract();
 			case TypesPackage.TYPE__VISUAL_TYPE:
@@ -371,7 +357,8 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		switch (featureID)
 		{
 			case TypesPackage.TYPE__SUPER_TYPE:
-				setSuperType((Type)newValue);
+				getSuperType().clear();
+				getSuperType().addAll((Collection<? extends Type>)newValue);
 				return;
 			case TypesPackage.TYPE__ABSTRACT:
 				setAbstract((Boolean)newValue);
@@ -401,7 +388,7 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		switch (featureID)
 		{
 			case TypesPackage.TYPE__SUPER_TYPE:
-				setSuperType((Type)null);
+				getSuperType().clear();
 				return;
 			case TypesPackage.TYPE__ABSTRACT:
 				setAbstract(ABSTRACT_EDEFAULT);
@@ -430,7 +417,7 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		switch (featureID)
 		{
 			case TypesPackage.TYPE__SUPER_TYPE:
-				return superType != null;
+				return superType != null && !superType.isEmpty();
 			case TypesPackage.TYPE__ABSTRACT:
 				return abstract_ != ABSTRACT_EDEFAULT;
 			case TypesPackage.TYPE__VISUAL_TYPE:
@@ -455,6 +442,8 @@ public abstract class TypeImpl extends NodeImpl implements Type
 		{
 			case TypesPackage.TYPE___GET_DEFAULT_VALUE:
 				return getDefaultValue();
+			case TypesPackage.TYPE___EXTENDS_TYPE__TYPE:
+				return extendsType((Type)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

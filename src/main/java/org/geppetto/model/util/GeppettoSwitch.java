@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.util;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -83,6 +84,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
+				if (result == null) result = caseISynchable(node);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -91,6 +93,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				GeppettoLibrary geppettoLibrary = (GeppettoLibrary)theEObject;
 				T result = caseGeppettoLibrary(geppettoLibrary);
 				if (result == null) result = caseNode(geppettoLibrary);
+				if (result == null) result = caseISynchable(geppettoLibrary);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -119,6 +122,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				Tag tag = (Tag)theEObject;
 				T result = caseTag(tag);
+				if (result == null) result = caseISynchable(tag);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -141,6 +145,92 @@ public class GeppettoSwitch<T> extends Switch<T>
 				ExternalDomainModel externalDomainModel = (ExternalDomainModel)theEObject;
 				T result = caseExternalDomainModel(externalDomainModel);
 				if (result == null) result = caseDomainModel(externalDomainModel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.DATA_SOURCE:
+			{
+				DataSource dataSource = (DataSource)theEObject;
+				T result = caseDataSource(dataSource);
+				if (result == null) result = caseNode(dataSource);
+				if (result == null) result = caseISynchable(dataSource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION:
+			{
+				DataSourceLibraryConfiguration dataSourceLibraryConfiguration = (DataSourceLibraryConfiguration)theEObject;
+				T result = caseDataSourceLibraryConfiguration(dataSourceLibraryConfiguration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.QUERY:
+			{
+				Query query = (Query)theEObject;
+				T result = caseQuery(query);
+				if (result == null) result = caseISynchable(query);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.PROCESS_QUERY:
+			{
+				ProcessQuery processQuery = (ProcessQuery)theEObject;
+				T result = caseProcessQuery(processQuery);
+				if (result == null) result = caseQuery(processQuery);
+				if (result == null) result = caseISynchable(processQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.SIMPLE_QUERY:
+			{
+				SimpleQuery simpleQuery = (SimpleQuery)theEObject;
+				T result = caseSimpleQuery(simpleQuery);
+				if (result == null) result = caseQuery(simpleQuery);
+				if (result == null) result = caseISynchable(simpleQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.COMPOUND_QUERY:
+			{
+				CompoundQuery compoundQuery = (CompoundQuery)theEObject;
+				T result = caseCompoundQuery(compoundQuery);
+				if (result == null) result = caseQuery(compoundQuery);
+				if (result == null) result = caseISynchable(compoundQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.QUERY_RESULTS:
+			{
+				QueryResults queryResults = (QueryResults)theEObject;
+				T result = caseQueryResults(queryResults);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.QUERY_RESULT:
+			{
+				QueryResult queryResult = (QueryResult)theEObject;
+				T result = caseQueryResult(queryResult);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.QUERY_MATCHING_CRITERIA:
+			{
+				QueryMatchingCriteria queryMatchingCriteria = (QueryMatchingCriteria)theEObject;
+				T result = caseQueryMatchingCriteria(queryMatchingCriteria);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.STRING_TO_STRING_MAP:
+			{
+				@SuppressWarnings("unchecked") Map.Entry<String, String> stringToStringMap = (Map.Entry<String, String>)theEObject;
+				T result = caseStringToStringMap(stringToStringMap);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.ISYNCHABLE:
+			{
+				ISynchable iSynchable = (ISynchable)theEObject;
+				T result = caseISynchable(iSynchable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -304,6 +394,182 @@ public class GeppettoSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseExternalDomainModel(ExternalDomainModel object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Source</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Source</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataSource(DataSource object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Source Library Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Source Library Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataSourceLibraryConfiguration(DataSourceLibraryConfiguration object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQuery(Query object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Process Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Process Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProcessQuery(ProcessQuery object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSimpleQuery(SimpleQuery object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Compound Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Compound Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompoundQuery(CompoundQuery object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Query Results</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Query Results</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQueryResults(QueryResults object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Query Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Query Result</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQueryResult(QueryResult object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Query Matching Criteria</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Query Matching Criteria</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQueryMatchingCriteria(QueryMatchingCriteria object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String To String Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String To String Map</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringToStringMap(Map.Entry<String, String> object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseISynchable(ISynchable object)
 	{
 		return null;
 	}

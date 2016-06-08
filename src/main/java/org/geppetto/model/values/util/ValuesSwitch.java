@@ -6,6 +6,7 @@ import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.geppetto.model.ISynchable;
 import org.geppetto.model.Node;
 import org.geppetto.model.values.*;
 
@@ -76,6 +77,7 @@ public class ValuesSwitch<T> extends Switch<T>
 			{
 				Value value = (Value)theEObject;
 				T result = caseValue(value);
+				if (result == null) result = caseISynchable(value);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -84,6 +86,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Composite composite = (Composite)theEObject;
 				T result = caseComposite(composite);
 				if (result == null) result = caseValue(composite);
+				if (result == null) result = caseISynchable(composite);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -99,6 +102,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Quantity quantity = (Quantity)theEObject;
 				T result = caseQuantity(quantity);
 				if (result == null) result = caseValue(quantity);
+				if (result == null) result = caseISynchable(quantity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -108,6 +112,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				T result = casePhysicalQuantity(physicalQuantity);
 				if (result == null) result = caseQuantity(physicalQuantity);
 				if (result == null) result = caseValue(physicalQuantity);
+				if (result == null) result = caseISynchable(physicalQuantity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -116,6 +121,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Unit unit = (Unit)theEObject;
 				T result = caseUnit(unit);
 				if (result == null) result = caseValue(unit);
+				if (result == null) result = caseISynchable(unit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -124,6 +130,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				TimeSeries timeSeries = (TimeSeries)theEObject;
 				T result = caseTimeSeries(timeSeries);
 				if (result == null) result = caseValue(timeSeries);
+				if (result == null) result = caseISynchable(timeSeries);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -132,6 +139,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				MetadataValue metadataValue = (MetadataValue)theEObject;
 				T result = caseMetadataValue(metadataValue);
 				if (result == null) result = caseValue(metadataValue);
+				if (result == null) result = caseISynchable(metadataValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -141,6 +149,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				T result = caseText(text);
 				if (result == null) result = caseMetadataValue(text);
 				if (result == null) result = caseValue(text);
+				if (result == null) result = caseISynchable(text);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,6 +159,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				T result = caseURL(url);
 				if (result == null) result = caseMetadataValue(url);
 				if (result == null) result = caseValue(url);
+				if (result == null) result = caseISynchable(url);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -159,6 +169,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				T result = caseHTML(html);
 				if (result == null) result = caseMetadataValue(html);
 				if (result == null) result = caseValue(html);
+				if (result == null) result = caseISynchable(html);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -167,6 +178,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Pointer pointer = (Pointer)theEObject;
 				T result = casePointer(pointer);
 				if (result == null) result = caseValue(pointer);
+				if (result == null) result = caseISynchable(pointer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -182,6 +194,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Point point = (Point)theEObject;
 				T result = casePoint(point);
 				if (result == null) result = caseValue(point);
+				if (result == null) result = caseISynchable(point);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -190,6 +203,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Dynamics dynamics = (Dynamics)theEObject;
 				T result = caseDynamics(dynamics);
 				if (result == null) result = caseValue(dynamics);
+				if (result == null) result = caseISynchable(dynamics);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -205,6 +219,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Function function = (Function)theEObject;
 				T result = caseFunction(function);
 				if (result == null) result = caseValue(function);
+				if (result == null) result = caseISynchable(function);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -213,6 +228,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Argument argument = (Argument)theEObject;
 				T result = caseArgument(argument);
 				if (result == null) result = caseValue(argument);
+				if (result == null) result = caseISynchable(argument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -221,6 +237,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Expression expression = (Expression)theEObject;
 				T result = caseExpression(expression);
 				if (result == null) result = caseValue(expression);
+				if (result == null) result = caseISynchable(expression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -229,6 +246,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				VisualValue visualValue = (VisualValue)theEObject;
 				T result = caseVisualValue(visualValue);
 				if (result == null) result = caseValue(visualValue);
+				if (result == null) result = caseISynchable(visualValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -238,6 +256,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				T result = caseCollada(collada);
 				if (result == null) result = caseVisualValue(collada);
 				if (result == null) result = caseValue(collada);
+				if (result == null) result = caseISynchable(collada);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -247,6 +266,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				T result = caseOBJ(obj);
 				if (result == null) result = caseVisualValue(obj);
 				if (result == null) result = caseValue(obj);
+				if (result == null) result = caseISynchable(obj);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -256,6 +276,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				T result = caseSphere(sphere);
 				if (result == null) result = caseVisualValue(sphere);
 				if (result == null) result = caseValue(sphere);
+				if (result == null) result = caseISynchable(sphere);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -265,6 +286,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				T result = caseCylinder(cylinder);
 				if (result == null) result = caseVisualValue(cylinder);
 				if (result == null) result = caseValue(cylinder);
+				if (result == null) result = caseISynchable(cylinder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -275,6 +297,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				if (result == null) result = caseVisualValue(particle);
 				if (result == null) result = casePoint(particle);
 				if (result == null) result = caseValue(particle);
+				if (result == null) result = caseISynchable(particle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -284,6 +307,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				T result = caseSkeletonAnimation(skeletonAnimation);
 				if (result == null) result = caseVisualValue(skeletonAnimation);
 				if (result == null) result = caseValue(skeletonAnimation);
+				if (result == null) result = caseISynchable(skeletonAnimation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -299,6 +323,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				VisualGroupElement visualGroupElement = (VisualGroupElement)theEObject;
 				T result = caseVisualGroupElement(visualGroupElement);
 				if (result == null) result = caseNode(visualGroupElement);
+				if (result == null) result = caseISynchable(visualGroupElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -307,6 +332,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				VisualGroup visualGroup = (VisualGroup)theEObject;
 				T result = caseVisualGroup(visualGroup);
 				if (result == null) result = caseNode(visualGroup);
+				if (result == null) result = caseISynchable(visualGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -315,6 +341,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				Connection connection = (Connection)theEObject;
 				T result = caseConnection(connection);
 				if (result == null) result = caseValue(connection);
+				if (result == null) result = caseISynchable(connection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -323,6 +350,7 @@ public class ValuesSwitch<T> extends Switch<T>
 				ArrayElement arrayElement = (ArrayElement)theEObject;
 				T result = caseArrayElement(arrayElement);
 				if (result == null) result = caseValue(arrayElement);
+				if (result == null) result = caseISynchable(arrayElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -331,6 +359,16 @@ public class ValuesSwitch<T> extends Switch<T>
 				ArrayValue arrayValue = (ArrayValue)theEObject;
 				T result = caseArrayValue(arrayValue);
 				if (result == null) result = caseValue(arrayValue);
+				if (result == null) result = caseISynchable(arrayValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.IMAGE:
+			{
+				Image image = (Image)theEObject;
+				T result = caseImage(image);
+				if (result == null) result = caseValue(image);
+				if (result == null) result = caseISynchable(image);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -846,6 +884,38 @@ public class ValuesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseArrayValue(ArrayValue object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Image</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImage(Image object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseISynchable(ISynchable object)
 	{
 		return null;
 	}

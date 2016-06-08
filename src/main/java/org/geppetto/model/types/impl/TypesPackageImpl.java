@@ -19,11 +19,13 @@ import org.geppetto.model.types.ConnectionType;
 import org.geppetto.model.types.DynamicsType;
 import org.geppetto.model.types.ExpressionType;
 import org.geppetto.model.types.HTMLType;
+import org.geppetto.model.types.ImageType;
 import org.geppetto.model.types.ImportType;
 import org.geppetto.model.types.ParameterType;
 import org.geppetto.model.types.PointType;
 import org.geppetto.model.types.PointerType;
 import org.geppetto.model.types.QuantityType;
+import org.geppetto.model.types.SimpleType;
 import org.geppetto.model.types.StateVariableType;
 import org.geppetto.model.types.TextType;
 import org.geppetto.model.types.Type;
@@ -171,6 +173,20 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	private EClass connectionTypeEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass simpleTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass imageTypeEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -315,6 +331,16 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	public EOperation getType__GetDefaultValue()
 	{
 		return typeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getType__ExtendsType__Type()
+	{
+		return typeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -732,6 +758,36 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSimpleType()
+	{
+		return simpleTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getImageType()
+	{
+		return imageTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImageType_DefaultValue()
+	{
+		return (EReference)imageTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TypesFactory getTypesFactory()
 	{
 		return (TypesFactory)getEFactoryInstance();
@@ -764,6 +820,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		createEReference(typeEClass, TYPE__REFERENCED_VARIABLES);
 		createEReference(typeEClass, TYPE__DOMAIN_MODEL);
 		createEOperation(typeEClass, TYPE___GET_DEFAULT_VALUE);
+		createEOperation(typeEClass, TYPE___EXTENDS_TYPE__TYPE);
 
 		visualTypeEClass = createEClass(VISUAL_TYPE);
 		createEReference(visualTypeEClass, VISUAL_TYPE__DEFAULT_VALUE);
@@ -822,6 +879,11 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		connectionTypeEClass = createEClass(CONNECTION_TYPE);
 		createEReference(connectionTypeEClass, CONNECTION_TYPE__VARIABLES);
 		createEReference(connectionTypeEClass, CONNECTION_TYPE__DEFAULT_VALUE);
+
+		simpleTypeEClass = createEClass(SIMPLE_TYPE);
+
+		imageTypeEClass = createEClass(IMAGE_TYPE);
+		createEReference(imageTypeEClass, IMAGE_TYPE__DEFAULT_VALUE);
 	}
 
 	/**
@@ -877,16 +939,21 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		arrayTypeEClass.getESuperTypes().add(this.getType());
 		compositeVisualTypeEClass.getESuperTypes().add(this.getVisualType());
 		connectionTypeEClass.getESuperTypes().add(this.getType());
+		simpleTypeEClass.getESuperTypes().add(this.getType());
+		imageTypeEClass.getESuperTypes().add(this.getType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, -1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getType_Abstract(), theXMLTypePackage.getBoolean(), "abstract", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_VisualType(), this.getVisualType(), null, "visualType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_ReferencedVariables(), theVariablesPackage.getVariable(), theVariablesPackage.getVariable_Types(), "referencedVariables", null, 0, -1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_DomainModel(), theGeppettoPackage.getDomainModel(), null, "domainModel", null, 0, 1, Type.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getType__GetDefaultValue(), theValuesPackage.getValue(), "getDefaultValue", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		EOperation op = initEOperation(getType__ExtendsType__Type(), theXMLTypePackage.getBoolean(), "extendsType", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getType(), "type", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(visualTypeEClass, VisualType.class, "VisualType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVisualType_DefaultValue(), theValuesPackage.getVisualValue(), null, "defaultValue", null, 0, 1, VisualType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -945,6 +1012,11 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		initEClass(connectionTypeEClass, ConnectionType.class, "ConnectionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnectionType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnectionType_DefaultValue(), theValuesPackage.getComposite(), null, "defaultValue", null, 0, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(simpleTypeEClass, SimpleType.class, "SimpleType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(imageTypeEClass, ImageType.class, "ImageType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getImageType_DefaultValue(), theValuesPackage.getImage(), null, "defaultValue", null, 0, 1, ImageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //TypesPackageImpl

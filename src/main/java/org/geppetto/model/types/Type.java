@@ -31,30 +31,20 @@ import org.geppetto.model.variables.Variable;
 public interface Type extends Node
 {
 	/**
-	 * Returns the value of the '<em><b>Super Type</b></em>' reference.
+	 * Returns the value of the '<em><b>Super Type</b></em>' reference list.
+	 * The list contents are of type {@link org.geppetto.model.types.Type}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Super Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Super Type</em>' reference.
-	 * @see #setSuperType(Type)
+	 * @return the value of the '<em>Super Type</em>' reference list.
 	 * @see org.geppetto.model.types.TypesPackage#getType_SuperType()
 	 * @model
 	 * @generated
 	 */
-	Type getSuperType();
-
-	/**
-	 * Sets the value of the '{@link org.geppetto.model.types.Type#getSuperType <em>Super Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Super Type</em>' reference.
-	 * @see #getSuperType()
-	 * @generated
-	 */
-	void setSuperType(Type value);
+	EList<Type> getSuperType();
 
 	/**
 	 * Returns the value of the '<em><b>Domain Model</b></em>' reference.
@@ -159,5 +149,13 @@ public interface Type extends Node
 	 * @generated
 	 */
 	Value getDefaultValue();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Boolean" typeRequired="true"
+	 * @generated
+	 */
+	boolean extendsType(Type type);
 
 } // Type

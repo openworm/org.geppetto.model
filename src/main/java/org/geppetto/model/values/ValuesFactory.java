@@ -275,6 +275,15 @@ public interface ValuesFactory extends EFactory
 	ArrayValue createArrayValue();
 
 	/**
+	 * Returns a new object of class '<em>Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Image</em>'.
+	 * @generated
+	 */
+	Image createImage();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -71,13 +71,22 @@ public interface ValuesPackage extends EPackage
 	int VALUE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE__SYNCHED = GeppettoPackage.ISYNCHABLE__SYNCHED;
+
+	/**
 	 * The number of structural features of the '<em>Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_FEATURE_COUNT = 0;
+	int VALUE_FEATURE_COUNT = GeppettoPackage.ISYNCHABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Value</em>' class.
@@ -86,7 +95,7 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_OPERATION_COUNT = 0;
+	int VALUE_OPERATION_COUNT = GeppettoPackage.ISYNCHABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.impl.CompositeImpl <em>Composite</em>}' class.
@@ -97,6 +106,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int COMPOSITE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__SYNCHED = VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' map.
@@ -182,6 +200,15 @@ public interface ValuesPackage extends EPackage
 	int QUANTITY = 3;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY__SYNCHED = VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Scaling Factor</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -226,6 +253,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int PHYSICAL_QUANTITY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_QUANTITY__SYNCHED = QUANTITY__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Scaling Factor</b></em>' attribute.
@@ -283,6 +319,15 @@ public interface ValuesPackage extends EPackage
 	int UNIT = 5;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__SYNCHED = VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Unit</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -318,6 +363,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int TIME_SERIES = 6;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SERIES__SYNCHED = VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
@@ -375,6 +429,15 @@ public interface ValuesPackage extends EPackage
 	int METADATA_VALUE = 7;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_VALUE__SYNCHED = VALUE__SYNCHED;
+
+	/**
 	 * The number of structural features of the '<em>Metadata Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -401,6 +464,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int TEXT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT__SYNCHED = METADATA_VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -440,6 +512,15 @@ public interface ValuesPackage extends EPackage
 	int URL = 9;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL__SYNCHED = METADATA_VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -477,6 +558,15 @@ public interface ValuesPackage extends EPackage
 	int HTML = 10;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML__SYNCHED = METADATA_VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Html</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -512,6 +602,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int POINTER = 11;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINTER__SYNCHED = VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -615,6 +714,15 @@ public interface ValuesPackage extends EPackage
 	int POINT = 13;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT__SYNCHED = VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -668,6 +776,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int DYNAMICS = 14;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMICS__SYNCHED = VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Initial Condition</b></em>' containment reference.
@@ -798,6 +915,15 @@ public interface ValuesPackage extends EPackage
 	int FUNCTION = 16;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__SYNCHED = VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -853,6 +979,15 @@ public interface ValuesPackage extends EPackage
 	int ARGUMENT = 17;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__SYNCHED = VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Argument</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -890,6 +1025,15 @@ public interface ValuesPackage extends EPackage
 	int EXPRESSION = 18;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__SYNCHED = VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Expression</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -925,6 +1069,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int VISUAL_VALUE = 19;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_VALUE__SYNCHED = VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -971,6 +1124,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int COLLADA = 20;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLADA__SYNCHED = VISUAL_VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1028,6 +1190,15 @@ public interface ValuesPackage extends EPackage
 	int OBJ = 21;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJ__SYNCHED = VISUAL_VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1083,6 +1254,15 @@ public interface ValuesPackage extends EPackage
 	int SPHERE = 22;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPHERE__SYNCHED = VISUAL_VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1136,6 +1316,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int CYLINDER = 23;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER__SYNCHED = VISUAL_VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1220,6 +1409,15 @@ public interface ValuesPackage extends EPackage
 	int PARTICLE = 24;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTICLE__SYNCHED = VISUAL_VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1292,6 +1490,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int SKELETON_ANIMATION = 25;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKELETON_ANIMATION__SYNCHED = VISUAL_VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
@@ -1387,6 +1594,15 @@ public interface ValuesPackage extends EPackage
 	int VISUAL_GROUP_ELEMENT = 27;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP_ELEMENT__SYNCHED = GeppettoPackage.NODE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1467,6 +1683,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int VISUAL_GROUP = 28;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISUAL_GROUP__SYNCHED = GeppettoPackage.NODE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1570,6 +1795,15 @@ public interface ValuesPackage extends EPackage
 	int CONNECTION = 29;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__SYNCHED = VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>A</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1623,6 +1857,15 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	int ARRAY_ELEMENT = 30;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_ELEMENT__SYNCHED = VALUE__SYNCHED;
 
 	/**
 	 * The feature id for the '<em><b>Index</b></em>' attribute.
@@ -1680,6 +1923,15 @@ public interface ValuesPackage extends EPackage
 	int ARRAY_VALUE = 31;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_VALUE__SYNCHED = VALUE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1707,6 +1959,79 @@ public interface ValuesPackage extends EPackage
 	int ARRAY_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.ImageImpl <em>Image</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.ImageImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImage()
+	 * @generated
+	 */
+	int IMAGE = 32;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__SYNCHED = VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__DATA = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__NAME = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Reference</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__REFERENCE = VALUE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__FORMAT = VALUE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1714,7 +2039,17 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectivity()
 	 * @generated
 	 */
-	int CONNECTIVITY = 32;
+	int CONNECTIVITY = 33;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.ImageFormat
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImageFormat()
+	 * @generated
+	 */
+	int IMAGE_FORMAT = 34;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Value <em>Value</em>}'.
@@ -2676,6 +3011,60 @@ public interface ValuesPackage extends EPackage
 	EReference getArrayValue_Elements();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.Image <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Image</em>'.
+	 * @see org.geppetto.model.values.Image
+	 * @generated
+	 */
+	EClass getImage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getData <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Data</em>'.
+	 * @see org.geppetto.model.values.Image#getData()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Data();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.geppetto.model.values.Image#getName()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getReference <em>Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reference</em>'.
+	 * @see org.geppetto.model.values.Image#getReference()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Reference();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Image#getFormat <em>Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Format</em>'.
+	 * @see org.geppetto.model.values.Image#getFormat()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Format();
+
+	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2684,6 +3073,16 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EEnum getConnectivity();
+
+	/**
+	 * Returns the meta object for enum '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Image Format</em>'.
+	 * @see org.geppetto.model.values.ImageFormat
+	 * @generated
+	 */
+	EEnum getImageFormat();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3494,6 +3893,48 @@ public interface ValuesPackage extends EPackage
 		EReference ARRAY_VALUE__ELEMENTS = eINSTANCE.getArrayValue_Elements();
 
 		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ImageImpl <em>Image</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.ImageImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImage()
+		 * @generated
+		 */
+		EClass IMAGE = eINSTANCE.getImage();
+
+		/**
+		 * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__DATA = eINSTANCE.getImage_Data();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__NAME = eINSTANCE.getImage_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Reference</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__REFERENCE = eINSTANCE.getImage_Reference();
+
+		/**
+		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__FORMAT = eINSTANCE.getImage_Format();
+
+		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3502,6 +3943,16 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EEnum CONNECTIVITY = eINSTANCE.getConnectivity();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.ImageFormat
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImageFormat()
+		 * @generated
+		 */
+		EEnum IMAGE_FORMAT = eINSTANCE.getImageFormat();
 
 	}
 

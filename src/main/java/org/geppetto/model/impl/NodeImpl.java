@@ -3,18 +3,15 @@
 package org.geppetto.model.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.Node;
 import org.geppetto.model.Tag;
@@ -26,6 +23,7 @@ import org.geppetto.model.Tag;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.geppetto.model.impl.NodeImpl#isSynched <em>Synched</em>}</li>
  *   <li>{@link org.geppetto.model.impl.NodeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.impl.NodeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.geppetto.model.impl.NodeImpl#getTags <em>Tags</em>}</li>
@@ -36,6 +34,26 @@ import org.geppetto.model.Tag;
  */
 public abstract class NodeImpl extends MinimalEObjectImpl.Container implements Node
 {
+	/**
+	 * The default value of the '{@link #isSynched() <em>Synched</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSynched()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SYNCHED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isSynched() <em>Synched</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSynched()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean synched = SYNCHED_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -112,6 +130,29 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isSynched()
+	{
+		return synched;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSynched(boolean newSynched)
+	{
+		boolean oldSynched = synched;
+		synched = newSynched;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.NODE__SYNCHED, oldSynched, synched));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getId()
 	{
 		return id;
@@ -170,13 +211,18 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getPath()
 	{
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+       if(!(this.eContainer instanceof GeppettoModel) && this.eContainer instanceof Node)
+       {
+    	   return ((Node)this.eContainer).getPath()+"."+this.getId();
+       }
+       else
+       {
+    	   return this.getId();
+       }
 	}
 
 	/**
@@ -189,6 +235,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.NODE__SYNCHED:
+				return isSynched();
 			case GeppettoPackage.NODE__ID:
 				return getId();
 			case GeppettoPackage.NODE__NAME:
@@ -210,6 +258,9 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.NODE__SYNCHED:
+				setSynched((Boolean)newValue);
+				return;
 			case GeppettoPackage.NODE__ID:
 				setId((String)newValue);
 				return;
@@ -234,6 +285,9 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.NODE__SYNCHED:
+				setSynched(SYNCHED_EDEFAULT);
+				return;
 			case GeppettoPackage.NODE__ID:
 				setId(ID_EDEFAULT);
 				return;
@@ -257,6 +311,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		switch (featureID)
 		{
+			case GeppettoPackage.NODE__SYNCHED:
+				return synched != SYNCHED_EDEFAULT;
 			case GeppettoPackage.NODE__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case GeppettoPackage.NODE__NAME:
@@ -294,7 +350,9 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
+		result.append(" (synched: ");
+		result.append(synched);
+		result.append(", id: ");
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);

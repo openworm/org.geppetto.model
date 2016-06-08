@@ -70,6 +70,15 @@ public interface VariablesPackage extends EPackage
 	int VARIABLE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__SYNCHED = GeppettoPackage.NODE__SYNCHED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

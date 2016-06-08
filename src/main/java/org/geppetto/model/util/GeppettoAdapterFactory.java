@@ -2,6 +2,7 @@
  */
 package org.geppetto.model.util;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -123,6 +124,61 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 			public Adapter caseExternalDomainModel(ExternalDomainModel object)
 			{
 				return createExternalDomainModelAdapter();
+			}
+			@Override
+			public Adapter caseDataSource(DataSource object)
+			{
+				return createDataSourceAdapter();
+			}
+			@Override
+			public Adapter caseDataSourceLibraryConfiguration(DataSourceLibraryConfiguration object)
+			{
+				return createDataSourceLibraryConfigurationAdapter();
+			}
+			@Override
+			public Adapter caseQuery(Query object)
+			{
+				return createQueryAdapter();
+			}
+			@Override
+			public Adapter caseProcessQuery(ProcessQuery object)
+			{
+				return createProcessQueryAdapter();
+			}
+			@Override
+			public Adapter caseSimpleQuery(SimpleQuery object)
+			{
+				return createSimpleQueryAdapter();
+			}
+			@Override
+			public Adapter caseCompoundQuery(CompoundQuery object)
+			{
+				return createCompoundQueryAdapter();
+			}
+			@Override
+			public Adapter caseQueryResults(QueryResults object)
+			{
+				return createQueryResultsAdapter();
+			}
+			@Override
+			public Adapter caseQueryResult(QueryResult object)
+			{
+				return createQueryResultAdapter();
+			}
+			@Override
+			public Adapter caseQueryMatchingCriteria(QueryMatchingCriteria object)
+			{
+				return createQueryMatchingCriteriaAdapter();
+			}
+			@Override
+			public Adapter caseStringToStringMap(Map.Entry<String, String> object)
+			{
+				return createStringToStringMapAdapter();
+			}
+			@Override
+			public Adapter caseISynchable(ISynchable object)
+			{
+				return createISynchableAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object)
@@ -292,6 +348,171 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createExternalDomainModelAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.DataSource <em>Data Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.DataSource
+	 * @generated
+	 */
+	public Adapter createDataSourceAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.DataSourceLibraryConfiguration <em>Data Source Library Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.DataSourceLibraryConfiguration
+	 * @generated
+	 */
+	public Adapter createDataSourceLibraryConfigurationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.Query <em>Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.Query
+	 * @generated
+	 */
+	public Adapter createQueryAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.ProcessQuery <em>Process Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.ProcessQuery
+	 * @generated
+	 */
+	public Adapter createProcessQueryAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.SimpleQuery <em>Simple Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.SimpleQuery
+	 * @generated
+	 */
+	public Adapter createSimpleQueryAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.CompoundQuery <em>Compound Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.CompoundQuery
+	 * @generated
+	 */
+	public Adapter createCompoundQueryAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.QueryResults <em>Query Results</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.QueryResults
+	 * @generated
+	 */
+	public Adapter createQueryResultsAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.QueryResult <em>Query Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.QueryResult
+	 * @generated
+	 */
+	public Adapter createQueryResultAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.QueryMatchingCriteria <em>Query Matching Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.QueryMatchingCriteria
+	 * @generated
+	 */
+	public Adapter createQueryMatchingCriteriaAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To String Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createStringToStringMapAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.ISynchable <em>ISynchable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.ISynchable
+	 * @generated
+	 */
+	public Adapter createISynchableAdapter()
 	{
 		return null;
 	}

@@ -61,7 +61,12 @@ public class GeppettoPrinterSwitch extends ComposedSwitch<Object>
 
 			else
 			{
-				System.out.println("Type: " + object.getName() + " extends: " + object.getSuperType().getName());
+				String types = "";
+				for(Type type : object.getSuperType())
+				{
+					types += type.getName() + ";";
+				}
+				System.out.println("Type: " + object.getName() + " extends: " + types);
 			}
 			return super.caseType(object);
 		}
@@ -96,7 +101,6 @@ public class GeppettoPrinterSwitch extends ComposedSwitch<Object>
 
 	}
 
-	
 	class GVariablesSwitch extends VariablesSwitch<Object>
 	{
 

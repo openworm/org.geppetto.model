@@ -5,6 +5,7 @@ package org.geppetto.model.types.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.geppetto.model.ISynchable;
 import org.geppetto.model.Node;
 import org.geppetto.model.types.*;
 
@@ -76,6 +77,7 @@ public class TypesSwitch<T> extends Switch<T>
 				Type type = (Type)theEObject;
 				T result = caseType(type);
 				if (result == null) result = caseNode(type);
+				if (result == null) result = caseISynchable(type);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -85,6 +87,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseVisualType(visualType);
 				if (result == null) result = caseType(visualType);
 				if (result == null) result = caseNode(visualType);
+				if (result == null) result = caseISynchable(visualType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -94,6 +97,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseImportType(importType);
 				if (result == null) result = caseType(importType);
 				if (result == null) result = caseNode(importType);
+				if (result == null) result = caseISynchable(importType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -103,6 +107,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseCompositeType(compositeType);
 				if (result == null) result = caseType(compositeType);
 				if (result == null) result = caseNode(compositeType);
+				if (result == null) result = caseISynchable(compositeType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,6 +117,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = casePointerType(pointerType);
 				if (result == null) result = caseType(pointerType);
 				if (result == null) result = caseNode(pointerType);
+				if (result == null) result = caseISynchable(pointerType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -121,6 +127,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseQuantityType(quantityType);
 				if (result == null) result = caseType(quantityType);
 				if (result == null) result = caseNode(quantityType);
+				if (result == null) result = caseISynchable(quantityType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -130,6 +137,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseParameterType(parameterType);
 				if (result == null) result = caseType(parameterType);
 				if (result == null) result = caseNode(parameterType);
+				if (result == null) result = caseISynchable(parameterType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -139,6 +147,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseStateVariableType(stateVariableType);
 				if (result == null) result = caseType(stateVariableType);
 				if (result == null) result = caseNode(stateVariableType);
+				if (result == null) result = caseISynchable(stateVariableType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -148,6 +157,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseDynamicsType(dynamicsType);
 				if (result == null) result = caseType(dynamicsType);
 				if (result == null) result = caseNode(dynamicsType);
+				if (result == null) result = caseISynchable(dynamicsType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -157,6 +167,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseArgumentType(argumentType);
 				if (result == null) result = caseType(argumentType);
 				if (result == null) result = caseNode(argumentType);
+				if (result == null) result = caseISynchable(argumentType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -166,6 +177,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseExpressionType(expressionType);
 				if (result == null) result = caseType(expressionType);
 				if (result == null) result = caseNode(expressionType);
+				if (result == null) result = caseISynchable(expressionType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -175,6 +187,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseHTMLType(htmlType);
 				if (result == null) result = caseType(htmlType);
 				if (result == null) result = caseNode(htmlType);
+				if (result == null) result = caseISynchable(htmlType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -184,6 +197,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseTextType(textType);
 				if (result == null) result = caseType(textType);
 				if (result == null) result = caseNode(textType);
+				if (result == null) result = caseISynchable(textType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -193,6 +207,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseURLType(urlType);
 				if (result == null) result = caseType(urlType);
 				if (result == null) result = caseNode(urlType);
+				if (result == null) result = caseISynchable(urlType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -202,6 +217,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = casePointType(pointType);
 				if (result == null) result = caseType(pointType);
 				if (result == null) result = caseNode(pointType);
+				if (result == null) result = caseISynchable(pointType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -211,6 +227,7 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseArrayType(arrayType);
 				if (result == null) result = caseType(arrayType);
 				if (result == null) result = caseNode(arrayType);
+				if (result == null) result = caseISynchable(arrayType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -221,6 +238,7 @@ public class TypesSwitch<T> extends Switch<T>
 				if (result == null) result = caseVisualType(compositeVisualType);
 				if (result == null) result = caseType(compositeVisualType);
 				if (result == null) result = caseNode(compositeVisualType);
+				if (result == null) result = caseISynchable(compositeVisualType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -230,6 +248,27 @@ public class TypesSwitch<T> extends Switch<T>
 				T result = caseConnectionType(connectionType);
 				if (result == null) result = caseType(connectionType);
 				if (result == null) result = caseNode(connectionType);
+				if (result == null) result = caseISynchable(connectionType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.SIMPLE_TYPE:
+			{
+				SimpleType simpleType = (SimpleType)theEObject;
+				T result = caseSimpleType(simpleType);
+				if (result == null) result = caseType(simpleType);
+				if (result == null) result = caseNode(simpleType);
+				if (result == null) result = caseISynchable(simpleType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.IMAGE_TYPE:
+			{
+				ImageType imageType = (ImageType)theEObject;
+				T result = caseImageType(imageType);
+				if (result == null) result = caseType(imageType);
+				if (result == null) result = caseNode(imageType);
+				if (result == null) result = caseISynchable(imageType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -521,6 +560,54 @@ public class TypesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseConnectionType(ConnectionType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSimpleType(SimpleType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Image Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Image Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImageType(ImageType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseISynchable(ISynchable object)
 	{
 		return null;
 	}

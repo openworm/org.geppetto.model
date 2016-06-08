@@ -37,7 +37,7 @@ public enum FileFormat implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-	HDF5(0, "HDF5", "HDF5");
+	HDF5(1, "HDF5", "HDF5");
 
 	/**
 	 * The '<em><b>ZIP</b></em>' literal value.
@@ -67,7 +67,7 @@ public enum FileFormat implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HDF5_VALUE = 0;
+	public static final int HDF5_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>File Format</b></em>' enumerators.
@@ -139,6 +139,7 @@ public enum FileFormat implements Enumerator
 		switch (value)
 		{
 			case ZIP_VALUE: return ZIP;
+			case HDF5_VALUE: return HDF5;
 		}
 		return null;
 	}

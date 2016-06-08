@@ -3,7 +3,6 @@
 package org.geppetto.model;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface Node extends EObject
+public interface Node extends ISynchable
 {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

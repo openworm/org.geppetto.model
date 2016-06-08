@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.geppetto.model.DataSource;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
@@ -30,6 +31,7 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getDataSources <em>Data Sources</em>}</li>
  * </ul>
  * </p>
  *
@@ -106,6 +108,16 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getDataSources() <em>Data Sources</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataSources()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DataSource> dataSources;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -221,6 +233,20 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DataSource> getDataSources()
+	{
+		if (dataSources == null)
+		{
+			dataSources = new EObjectContainmentEList<DataSource>(DataSource.class, this, GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES);
+		}
+		return dataSources;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -232,6 +258,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return ((InternalEList<?>)getLibraries()).basicRemove(otherEnd, msgs);
 			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
 				return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
+			case GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES:
+				return ((InternalEList<?>)getDataSources()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -256,6 +284,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return getId();
 			case GeppettoPackage.GEPPETTO_MODEL__NAME:
 				return getName();
+			case GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES:
+				return getDataSources();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -289,6 +319,10 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 			case GeppettoPackage.GEPPETTO_MODEL__NAME:
 				setName((String)newValue);
 				return;
+			case GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES:
+				getDataSources().clear();
+				getDataSources().addAll((Collection<? extends DataSource>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -318,6 +352,9 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 			case GeppettoPackage.GEPPETTO_MODEL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES:
+				getDataSources().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -342,6 +379,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case GeppettoPackage.GEPPETTO_MODEL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES:
+				return dataSources != null && !dataSources.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

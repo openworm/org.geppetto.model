@@ -92,6 +92,7 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.CONNECTION: return createConnection();
 			case ValuesPackage.ARRAY_ELEMENT: return createArrayElement();
 			case ValuesPackage.ARRAY_VALUE: return createArrayValue();
+			case ValuesPackage.IMAGE: return createImage();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -109,6 +110,8 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 		{
 			case ValuesPackage.CONNECTIVITY:
 				return createConnectivityFromString(eDataType, initialValue);
+			case ValuesPackage.IMAGE_FORMAT:
+				return createImageFormatFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -126,6 +129,8 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 		{
 			case ValuesPackage.CONNECTIVITY:
 				return convertConnectivityToString(eDataType, instanceValue);
+			case ValuesPackage.IMAGE_FORMAT:
+				return convertImageFormatToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -455,6 +460,17 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Image createImage()
+	{
+		ImageImpl image = new ImageImpl();
+		return image;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Connectivity createConnectivityFromString(EDataType eDataType, String initialValue)
 	{
 		Connectivity result = Connectivity.get(initialValue);
@@ -468,6 +484,28 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	 * @generated
 	 */
 	public String convertConnectivityToString(EDataType eDataType, Object instanceValue)
+	{
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageFormat createImageFormatFromString(EDataType eDataType, String initialValue)
+	{
+		ImageFormat result = ImageFormat.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertImageFormatToString(EDataType eDataType, Object instanceValue)
 	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}

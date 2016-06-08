@@ -97,6 +97,111 @@ public class PointerUtility
 	}
 
 	/**
+	 * @param model
+	 * @param instancePath
+	 * @return
+	 */
+	/**
+	 * @param model
+	 * @param instancePath
+	 * @return
+	 * @throws GeppettoModelException
+	 */
+	public static Type getType(GeppettoModel model, String path) throws GeppettoModelException
+	{
+		StringTokenizer st = new StringTokenizer(path, ".");
+		Type lastType = null;
+		Variable lastVar = null;
+		GeppettoLibrary library = null;
+		while(st.hasMoreElements())
+		{
+			String token = st.nextToken();
+			// token can be a library, a type or a variable
+
+			if(lastType != null)
+			{
+				if(lastType instanceof CompositeType)
+				{
+					lastVar = findVariable(getVariable(token), (CompositeType) lastType);
+				}
+				else
+				{
+					if(lastType instanceof ArrayType && ((ArrayType) lastType).getArrayType() instanceof CompositeType)
+					{
+						lastVar = findVariable(getVariable(token), (CompositeType) ((ArrayType) lastType).getArrayType());
+					}
+					else
+					{
+						throw new GeppettoModelException(lastType.getId() + " is not of type CompositeType there can't be nested variables");
+					}
+				}
+			}
+			else if(lastVar != null)
+			{
+				lastType = findType(getType(token), lastVar);
+			}
+			else if(library != null)
+			{
+				lastType = findType(token, library);
+			}
+			else
+			{
+				// they are all null
+				library = findLibrary(model, token);
+				if(library == null)
+				{
+					throw new GeppettoModelException("Can't find a type for the path " + path);
+				}
+			}
+
+		}
+
+		if(lastType != null && lastType.getPath().equals(path))
+		{
+			return lastType;
+		}
+		else
+		{
+			throw new GeppettoModelException("Couldn't find a type for the path " + path);
+		}
+	}
+
+	/**
+	 * @param typeId
+	 * @param library
+	 * @return
+	 */
+	private static Type findType(String typeId, GeppettoLibrary library)
+	{
+		for(Type type : library.getTypes())
+		{
+			if(type.getId().equals(typeId))
+			{
+				return type;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * @param model
+	 * @param libraryId
+	 * @return
+	 * @throws GeppettoModelException
+	 */
+	private static GeppettoLibrary findLibrary(GeppettoModel model, String libraryId)
+	{
+		for(GeppettoLibrary library : model.getLibraries())
+		{
+			if(library.getId().equals(libraryId))
+			{
+				return library;
+			}
+		}
+		return null;
+	}
+
+	/**
 	 * @param pointer
 	 * @param pointer2
 	 * @return true if the two pointers point to the same variables and types

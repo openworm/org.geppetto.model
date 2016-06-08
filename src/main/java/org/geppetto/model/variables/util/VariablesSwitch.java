@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
+import org.geppetto.model.ISynchable;
 import org.geppetto.model.Node;
 
 import org.geppetto.model.types.Type;
@@ -82,6 +83,7 @@ public class VariablesSwitch<T> extends Switch<T>
 				Variable variable = (Variable)theEObject;
 				T result = caseVariable(variable);
 				if (result == null) result = caseNode(variable);
+				if (result == null) result = caseISynchable(variable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -124,6 +126,22 @@ public class VariablesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseTypeToValueMap(Map.Entry<Type, Value> object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ISynchable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseISynchable(ISynchable object)
 	{
 		return null;
 	}

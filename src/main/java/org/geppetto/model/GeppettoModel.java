@@ -11,6 +11,10 @@ import org.geppetto.model.variables.Variable;
  * A representation of the model object '<em><b>Model</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * The root of every Geppetto model
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -19,6 +23,7 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.GeppettoModel#getTags <em>Tags</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getName <em>Name</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getDataSources <em>Data Sources</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +42,9 @@ public interface GeppettoModel extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The top level variables instantiated inside the Geppetto Model.  The type of the variables will be coming from inside Libraries available inside this GeppettoModel.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variables</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Variables()
 	 * @model containment="true"
@@ -53,6 +61,9 @@ public interface GeppettoModel extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The libraries are container of types. A library can be associated to a modelInterpreter.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Libraries</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Libraries()
 	 * @model containment="true"
@@ -69,6 +80,9 @@ public interface GeppettoModel extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The tags available in the GeppettoModel.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tags</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Tags()
 	 * @model containment="true"
@@ -85,6 +99,9 @@ public interface GeppettoModel extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The id of the GeppettoModel.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Id()
@@ -112,6 +129,9 @@ public interface GeppettoModel extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The name of the GeppettoModel.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Name()
@@ -129,5 +149,24 @@ public interface GeppettoModel extends EObject
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Data Sources</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.DataSource}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Data Sources</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The data sources available for this model.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Data Sources</em>' containment reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_DataSources()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<DataSource> getDataSources();
 
 } // GeppettoModel

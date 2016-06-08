@@ -5,11 +5,8 @@ package org.geppetto.model.types.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.geppetto.model.types.*;
 
 /**
@@ -81,6 +78,8 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.ARRAY_TYPE: return createArrayType();
 			case TypesPackage.COMPOSITE_VISUAL_TYPE: return createCompositeVisualType();
 			case TypesPackage.CONNECTION_TYPE: return createConnectionType();
+			case TypesPackage.SIMPLE_TYPE: return createSimpleType();
+			case TypesPackage.IMAGE_TYPE: return createImageType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -271,6 +270,28 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		ConnectionTypeImpl connectionType = new ConnectionTypeImpl();
 		return connectionType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleType createSimpleType()
+	{
+		SimpleTypeImpl simpleType = new SimpleTypeImpl();
+		return simpleType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageType createImageType()
+	{
+		ImageTypeImpl imageType = new ImageTypeImpl();
+		return imageType;
 	}
 
 	/**

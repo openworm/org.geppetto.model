@@ -3,18 +3,47 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore"
     nsPrefix="gep">
   <eClassifiers xsi:type="ecore:EClass" name="GeppettoModel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The root of every Geppetto model"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
-        eType="#//variables/Variable" containment="true" resolveProxies="false"/>
+        eType="#//variables/Variable" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The top level variables instantiated inside the Geppetto Model.  The type of the variables will be coming from inside Libraries available inside this GeppettoModel."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="libraries" upperBound="-1"
-        eType="#//GeppettoLibrary" containment="true"/>
+        eType="#//GeppettoLibrary" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The libraries are container of types. A library can be associated to a modelInterpreter."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tags" upperBound="-1" eType="#//Tag"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The tags available in the GeppettoModel."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
-        defaultValueLiteral=""/>
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The id of the GeppettoModel."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
-        defaultValueLiteral=""/>
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name of the GeppettoModel."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataSources" upperBound="-1"
+        eType="#//DataSource" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The data sources available for this model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true" eSuperTypes="#//ISynchable">
     <eOperations name="getPath" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
         defaultValueLiteral=""/>
@@ -46,7 +75,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//values/Value"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tag">
+  <eClassifiers xsi:type="ecore:EClass" name="Tag" eSuperTypes="#//ISynchable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tags" upperBound="-1" eType="#//Tag"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
@@ -67,13 +96,96 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FileFormat">
     <eLiterals name="ZIP"/>
-    <eLiterals name="HDF5"/>
+    <eLiterals name="HDF5" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataSource" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSourceService" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="libraryConfigurations"
+        upperBound="-1" eType="#//DataSourceLibraryConfiguration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="queries" upperBound="-1"
+        eType="#//Query" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependenciesLibrary" upperBound="-1"
+        eType="#//GeppettoLibrary"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetLibrary" lowerBound="1"
+        eType="#//GeppettoLibrary"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fetchVariableQuery" eType="#//Query"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataSourceLibraryConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="library" lowerBound="1"
+        eType="#//GeppettoLibrary"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelInterpreterId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Query" abstract="true" eSuperTypes="#//ISynchable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matchingCriteria" upperBound="-1"
+        eType="#//QueryMatchingCriteria" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessQuery" eSuperTypes="#//Query">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//StringToStringMap" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="queryProcessorId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleQuery" eSuperTypes="#//Query">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="query" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="countQuery" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompoundQuery" eSuperTypes="#//Query">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Compound queries allow creating composite queries which chain together multiple queries. The results of a query in the chain will be fed to the subsequent query."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="queryChain" lowerBound="1"
+        upperBound="-1" eType="#//Query" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The chain of queries for this Compound query."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryResults">
+    <eOperations name="getValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject">
+      <eParameters name="field" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eParameters name="row" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="header" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="results" upperBound="-1"
+        eType="#//QueryResult" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryResult">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
+        lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryMatchingCriteria">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//types/Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringToStringMap" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ISynchable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="synched" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        transient="true"/>
   </eClassifiers>
   <eSubpackages name="types" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//types"
       nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//Node">
       <eOperations name="getDefaultValue" eType="#//values/Value"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//types/Type"/>
+      <eOperations name="extendsType" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean">
+        <eParameters name="type" lowerBound="1" eType="#//types/Type"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="superType" upperBound="-1"
+          eType="#//types/Type"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstract" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="visualType" eType="#//types/VisualType"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="referencedVariables"
@@ -160,10 +272,14 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Composite"
           containment="true"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SimpleType" eSuperTypes="#//types/Type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ImageType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//values/Image"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="values" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//values"
       nsPrefix="gep">
-    <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true" eSuperTypes="#//ISynchable"/>
     <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
           eType="#//values/StringToValueMap" containment="true"/>
@@ -320,6 +436,17 @@
     <eClassifiers xsi:type="ecore:EClass" name="ArrayValue" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
           upperBound="-1" eType="#//values/ArrayElement" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="reference" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="#//values/ImageFormat"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ImageFormat">
+      <eLiterals name="PNG" literal="PNG"/>
+      <eLiterals name="JPEG" value="1" literal="JPEG"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="variables" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//variables"

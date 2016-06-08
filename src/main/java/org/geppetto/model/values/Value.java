@@ -2,7 +2,7 @@
  */
 package org.geppetto.model.values;
 
-import org.eclipse.emf.ecore.EObject;
+import org.geppetto.model.ISynchable;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface Value extends EObject
+public interface Value extends ISynchable
 {
 } // Value
