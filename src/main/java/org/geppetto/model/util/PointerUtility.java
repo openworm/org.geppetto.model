@@ -12,6 +12,7 @@ import org.geppetto.model.types.Type;
 import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
 import org.geppetto.model.values.ValuesFactory;
+import org.geppetto.model.values.VisualReference;
 import org.geppetto.model.variables.Variable;
 
 public class PointerUtility
@@ -35,7 +36,7 @@ public class PointerUtility
 		pointer.getElements().add(pointerElement);
 		return pointer;
 	}
-
+	
 	/**
 	 * @param model
 	 * @param instancePath

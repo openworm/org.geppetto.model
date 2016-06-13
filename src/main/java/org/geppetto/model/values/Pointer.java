@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.geppetto.model.values.Pointer#getElements <em>Elements</em>}</li>
+ *   <li>{@link org.geppetto.model.values.Pointer#getVisualReference <em>Visual Reference</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +38,32 @@ public interface Pointer extends Value
 	 * @generated
 	 */
 	EList<PointerElement> getElements();
+
+	/**
+	 * Returns the value of the '<em><b>Visual Reference</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Visual Reference</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Visual Reference</em>' reference.
+	 * @see #setVisualReference(VisualReference)
+	 * @see org.geppetto.model.values.ValuesPackage#getPointer_VisualReference()
+	 * @model
+	 * @generated
+	 */
+	VisualReference getVisualReference();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.values.Pointer#getVisualReference <em>Visual Reference</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Visual Reference</em>' reference.
+	 * @see #getVisualReference()
+	 * @generated
+	 */
+	void setVisualReference(VisualReference value);
 
 	/**
 	 * <!-- begin-user-doc -->
