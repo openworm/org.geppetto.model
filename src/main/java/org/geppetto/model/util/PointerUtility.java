@@ -9,6 +9,7 @@ import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.types.ArrayType;
 import org.geppetto.model.types.CompositeType;
 import org.geppetto.model.types.Type;
+import org.geppetto.model.values.ImportValue;
 import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
 import org.geppetto.model.values.ValuesFactory;
@@ -226,6 +227,18 @@ public class PointerUtility
 		return true;
 	}
 
+	
+	/**
+	 * @param geppettoModel
+	 * @param path
+	 * @return
+	 */
+	public static ImportValue getValue(GeppettoModel geppettoModel, String path)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	/**
 	 * @param pointer
 	 * @param pointer2
@@ -422,5 +435,7 @@ public class PointerUtility
 	{
 		return path.replaceAll("\\([^)]*\\)", "");
 	}
+
+
 
 }
