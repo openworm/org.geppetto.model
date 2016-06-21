@@ -322,7 +322,8 @@
       <eOperations name="getInstancePath" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
           eType="#//values/PointerElement" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="visualReference" eType="#//values/VisualReference"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="visualReference" eType="#//values/VisualReference"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PointerElement">
       <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//variables/Variable"/>

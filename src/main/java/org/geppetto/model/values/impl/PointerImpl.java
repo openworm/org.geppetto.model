@@ -41,7 +41,7 @@ public class PointerImpl extends ValueImpl implements Pointer
 	protected EList<PointerElement> elements;
 
 	/**
-	 * The cached value of the '{@link #getVisualReference() <em>Visual Reference</em>}' reference.
+	 * The cached value of the '{@link #getVisualReference() <em>Visual Reference</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVisualReference()
@@ -89,16 +89,6 @@ public class PointerImpl extends ValueImpl implements Pointer
 	 */
 	public VisualReference getVisualReference()
 	{
-		if (visualReference != null && visualReference.eIsProxy())
-		{
-			InternalEObject oldVisualReference = (InternalEObject)visualReference;
-			visualReference = (VisualReference)eResolveProxy(oldVisualReference);
-			if (visualReference != oldVisualReference)
-			{
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ValuesPackage.POINTER__VISUAL_REFERENCE, oldVisualReference, visualReference));
-			}
-		}
 		return visualReference;
 	}
 
@@ -107,9 +97,16 @@ public class PointerImpl extends ValueImpl implements Pointer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VisualReference basicGetVisualReference()
+	public NotificationChain basicSetVisualReference(VisualReference newVisualReference, NotificationChain msgs)
 	{
-		return visualReference;
+		VisualReference oldVisualReference = visualReference;
+		visualReference = newVisualReference;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER__VISUAL_REFERENCE, oldVisualReference, newVisualReference);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -119,10 +116,18 @@ public class PointerImpl extends ValueImpl implements Pointer
 	 */
 	public void setVisualReference(VisualReference newVisualReference)
 	{
-		VisualReference oldVisualReference = visualReference;
-		visualReference = newVisualReference;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER__VISUAL_REFERENCE, oldVisualReference, visualReference));
+		if (newVisualReference != visualReference)
+		{
+			NotificationChain msgs = null;
+			if (visualReference != null)
+				msgs = ((InternalEObject)visualReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.POINTER__VISUAL_REFERENCE, null, msgs);
+			if (newVisualReference != null)
+				msgs = ((InternalEObject)newVisualReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.POINTER__VISUAL_REFERENCE, null, msgs);
+			msgs = basicSetVisualReference(newVisualReference, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER__VISUAL_REFERENCE, newVisualReference, newVisualReference));
 	}
 
 	/**
@@ -160,6 +165,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 		{
 			case ValuesPackage.POINTER__ELEMENTS:
 				return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
+			case ValuesPackage.POINTER__VISUAL_REFERENCE:
+				return basicSetVisualReference(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -176,8 +183,7 @@ public class PointerImpl extends ValueImpl implements Pointer
 			case ValuesPackage.POINTER__ELEMENTS:
 				return getElements();
 			case ValuesPackage.POINTER__VISUAL_REFERENCE:
-				if (resolve) return getVisualReference();
-				return basicGetVisualReference();
+				return getVisualReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

@@ -40,26 +40,26 @@ public interface Pointer extends Value
 	EList<PointerElement> getElements();
 
 	/**
-	 * Returns the value of the '<em><b>Visual Reference</b></em>' reference.
+	 * Returns the value of the '<em><b>Visual Reference</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Visual Reference</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visual Reference</em>' reference.
+	 * @return the value of the '<em>Visual Reference</em>' containment reference.
 	 * @see #setVisualReference(VisualReference)
 	 * @see org.geppetto.model.values.ValuesPackage#getPointer_VisualReference()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	VisualReference getVisualReference();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.values.Pointer#getVisualReference <em>Visual Reference</em>}' reference.
+	 * Sets the value of the '{@link org.geppetto.model.values.Pointer#getVisualReference <em>Visual Reference</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visual Reference</em>' reference.
+	 * @param value the new value of the '<em>Visual Reference</em>' containment reference.
 	 * @see #getVisualReference()
 	 * @generated
 	 */

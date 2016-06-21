@@ -622,7 +622,7 @@ public interface ValuesPackage extends EPackage
 	int POINTER__ELEMENTS = VALUE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Visual Reference</b></em>' reference.
+	 * The feature id for the '<em><b>Visual Reference</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2392,10 +2392,10 @@ public interface ValuesPackage extends EPackage
 	EReference getPointer_Elements();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.values.Pointer#getVisualReference <em>Visual Reference</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Pointer#getVisualReference <em>Visual Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Visual Reference</em>'.
+	 * @return the meta object for the containment reference '<em>Visual Reference</em>'.
 	 * @see org.geppetto.model.values.Pointer#getVisualReference()
 	 * @see #getPointer()
 	 * @generated
@@ -3448,7 +3448,7 @@ public interface ValuesPackage extends EPackage
 		EReference POINTER__ELEMENTS = eINSTANCE.getPointer_Elements();
 
 		/**
-		 * The meta object literal for the '<em><b>Visual Reference</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Visual Reference</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

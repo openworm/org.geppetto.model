@@ -36,7 +36,7 @@ public class PointerUtility
 		pointer.getElements().add(pointerElement);
 		return pointer;
 	}
-	
+
 	/**
 	 * @param model
 	 * @param instancePath
@@ -304,6 +304,10 @@ public class PointerUtility
 			if(types.size() == 1)
 			{
 				return types.get(0);
+			}
+			else if(types.size() == 0)
+			{
+				throw new GeppettoModelException("The variable " + variable.getId() + " has not types");
 			}
 			else
 			{
