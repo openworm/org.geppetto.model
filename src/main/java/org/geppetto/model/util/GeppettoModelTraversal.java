@@ -32,6 +32,9 @@
  *******************************************************************************/
 package org.geppetto.model.util;
 
+import java.util.Iterator;
+
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.Switch;
@@ -61,6 +64,15 @@ public class GeppettoModelTraversal extends GeppettoSwitch<EObject>
 			{
 				throw (GeppettoVisitingException) e;
 			}
+		}
+	}
+
+	public static void apply(EList<? extends EObject> objects, Switch<?> visitor) throws GeppettoVisitingException
+	{
+		Iterator<? extends EObject> iterator = objects.iterator();
+		while(iterator.hasNext())
+		{
+			GeppettoModelTraversal.apply(iterator.next(), visitor);
 		}
 	}
 
