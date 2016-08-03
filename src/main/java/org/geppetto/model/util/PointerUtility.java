@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import org.eclipse.emf.common.util.EMap;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.types.ArrayType;
@@ -11,6 +12,7 @@ import org.geppetto.model.types.CompositeType;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
+import org.geppetto.model.values.Value;
 import org.geppetto.model.values.ValuesFactory;
 import org.geppetto.model.variables.Variable;
 
@@ -59,7 +61,7 @@ public class PointerUtility
 			Variable v = null;
 			if(lastType == null)
 			{
-				v = findVariable(getVariable(token), model);
+				v = findVariable(getVariable(token), model); // why ? fo
 			}
 			else
 			{
@@ -155,8 +157,9 @@ public class PointerUtility
 			}
 
 		}
-
-		if(lastType != null && lastType.getPath().equals(path))
+		//&& lastType.getPath().equals(path)
+		String str = lastType.getPath(); //nwbLibrary.stimulusT_Sweep_8
+		if(lastType != null )
 		{
 			return lastType;
 		}
@@ -166,6 +169,69 @@ public class PointerUtility
 		}
 	}
 
+	public static Value getValue(GeppettoModel model, String path, Type stateVariablType) throws GeppettoModelException
+	{
+		StringTokenizer st = new StringTokenizer(path, ".");
+		Type lastType = null;
+		Variable lastVar = null;
+		Value lastValue = null;
+		GeppettoLibrary library = null;
+		while(st.hasMoreElements())
+		{
+			String token = st.nextToken();
+			// token can be a library, a type or a variable
+
+			if(lastType != null)
+			{
+				if(lastType instanceof CompositeType)
+				{
+					lastValue = lastVar.getInitialValues().get(stateVariablType);
+					Value lastValue2 = lastVar.getInitialValues().get(lastVar.getTypes());
+					EMap<Type, Value> abc = lastVar.getInitialValues();
+				}
+				else
+				{
+					if(lastType instanceof ArrayType && ((ArrayType) lastType).getArrayType() instanceof CompositeType)
+					{
+						lastVar = findVariable(getVariable(token), (CompositeType) ((ArrayType) lastType).getArrayType());
+					}
+					else
+					{
+						throw new GeppettoModelException(lastType.getId() + " is not of type CompositeType there can't be nested variables");
+					}
+				}
+			}
+			else if(lastVar != null)
+			{
+				lastType = findType(getType(token), lastVar);
+			}
+			else if(library != null)
+			{
+				lastType = findType(token, library);
+			}
+			else
+			{
+				// they are all null
+				library = findLibrary(model, token);
+				if(library == null)
+				{
+					throw new GeppettoModelException("Can't find a type for the path " + path);
+				}
+			}
+
+		}
+		//&& lastType.getPath().equals(path)
+				String str = lastType.getPath(); //nwbLibrary.stimulusT_Sweep_8
+		if(lastType != null )
+		{
+			return lastValue;
+		}
+		else
+		{
+			throw new GeppettoModelException("Couldn't find a type for the path " + path);
+		}
+		
+	}
 	/**
 	 * @param typeId
 	 * @param library

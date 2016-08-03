@@ -41,7 +41,7 @@ public interface VariablesPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//variables";
+	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/importValue/src/main/resources/geppettoModel.ecore#//variables";
 
 	/**
 	 * The package namespace name.
