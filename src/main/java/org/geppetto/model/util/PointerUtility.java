@@ -158,9 +158,7 @@ public class PointerUtility
 			}
 
 		}
-		//&& lastType.getPath().equals(path)
-		String str = lastType.getPath(); //nwbLibrary.stimulusT_Sweep_8
-		if(lastType != null )
+		if(lastType != null && lastType.getPath().equals(path))
 		{
 			return lastType;
 		}
@@ -175,7 +173,6 @@ public class PointerUtility
 		StringTokenizer st = new StringTokenizer(path, ".");
 		Type lastType = null;
 		Variable lastVar = null;
-		Value lastValue = null;
 		GeppettoLibrary library = null;
 		while(st.hasMoreElements())
 		{
@@ -186,9 +183,8 @@ public class PointerUtility
 			{
 				if(lastType instanceof CompositeType)
 				{
-					lastValue = lastVar.getInitialValues().get(stateVariablType);
-					Value lastValue2 = lastVar.getInitialValues().get(lastVar.getTypes());
-					EMap<Type, Value> abc = lastVar.getInitialValues();
+					lastVar = findVariable(getVariable(token), (CompositeType) lastType);
+					lastType = null;
 				}
 				else
 				{
@@ -221,17 +217,17 @@ public class PointerUtility
 			}
 
 		}
-		//&& lastType.getPath().equals(path)
-				String str = lastType.getPath(); //nwbLibrary.stimulusT_Sweep_8
-		if(lastType != null )
+
+		if(lastType != null && lastType.getPath().equals(path) )
 		{
-			return lastValue;
+			return lastType.getDefaultValue();
+		}else if(lastVar != null){
+			return (Value) lastVar.getInitialValues().get(stateVariablType);
 		}
 		else
 		{
 			throw new GeppettoModelException("Couldn't find a type for the path " + path);
-		}
-		
+		}		
 	}
 	/**
 	 * @param typeId
