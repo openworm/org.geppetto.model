@@ -15,6 +15,7 @@ import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
 import org.geppetto.model.values.Value;
 import org.geppetto.model.values.ValuesFactory;
+import org.geppetto.model.values.VisualReference;
 import org.geppetto.model.variables.Variable;
 
 public class PointerUtility
@@ -378,6 +379,10 @@ public class PointerUtility
 			if(types.size() == 1)
 			{
 				return types.get(0);
+			}
+			else if(types.size() == 0)
+			{
+				throw new GeppettoModelException("The variable " + variable.getId() + " has not types");
 			}
 			else
 			{

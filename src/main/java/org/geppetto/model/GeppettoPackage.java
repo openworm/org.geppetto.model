@@ -1352,6 +1352,52 @@ public interface GeppettoPackage extends EPackage
 	int STRING_TO_STRING_MAP_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.RunnableQueryImpl <em>Runnable Query</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.RunnableQueryImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getRunnableQuery()
+	 * @generated
+	 */
+	int RUNNABLE_QUERY = 21;
+
+	/**
+	 * The feature id for the '<em><b>Query</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNNABLE_QUERY__QUERY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNNABLE_QUERY__ID = 1;
+
+	/**
+	 * The number of structural features of the '<em>Runnable Query</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNNABLE_QUERY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Runnable Query</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNNABLE_QUERY_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1359,7 +1405,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getFileFormat()
 	 * @generated
 	 */
-	int FILE_FORMAT = 21;
+	int FILE_FORMAT = 22;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
@@ -2133,6 +2179,38 @@ public interface GeppettoPackage extends EPackage
 	EAttribute getISynchable_Synched();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.RunnableQuery <em>Runnable Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Runnable Query</em>'.
+	 * @see org.geppetto.model.RunnableQuery
+	 * @generated
+	 */
+	EClass getRunnableQuery();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.RunnableQuery#getQuery <em>Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Query</em>'.
+	 * @see org.geppetto.model.RunnableQuery#getQuery()
+	 * @see #getRunnableQuery()
+	 * @generated
+	 */
+	EReference getRunnableQuery_Query();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.RunnableQuery#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.geppetto.model.RunnableQuery#getId()
+	 * @see #getRunnableQuery()
+	 * @generated
+	 */
+	EAttribute getRunnableQuery_Id();
+
+	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.FileFormat <em>File Format</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2783,6 +2861,32 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute ISYNCHABLE__SYNCHED = eINSTANCE.getISynchable_Synched();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.RunnableQueryImpl <em>Runnable Query</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.RunnableQueryImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getRunnableQuery()
+		 * @generated
+		 */
+		EClass RUNNABLE_QUERY = eINSTANCE.getRunnableQuery();
+
+		/**
+		 * The meta object literal for the '<em><b>Query</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RUNNABLE_QUERY__QUERY = eINSTANCE.getRunnableQuery_Query();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RUNNABLE_QUERY__ID = eINSTANCE.getRunnableQuery_Id();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.

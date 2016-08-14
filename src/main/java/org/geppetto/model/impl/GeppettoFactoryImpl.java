@@ -84,6 +84,7 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.QUERY_RESULT: return createQueryResult();
 			case GeppettoPackage.QUERY_MATCHING_CRITERIA: return createQueryMatchingCriteria();
 			case GeppettoPackage.STRING_TO_STRING_MAP: return (EObject)createStringToStringMap();
+			case GeppettoPackage.RUNNABLE_QUERY: return createRunnableQuery();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -319,6 +320,17 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		StringToStringMapImpl stringToStringMap = new StringToStringMapImpl();
 		return stringToStringMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RunnableQuery createRunnableQuery()
+	{
+		RunnableQueryImpl runnableQuery = new RunnableQueryImpl();
+		return runnableQuery;
 	}
 
 	/**

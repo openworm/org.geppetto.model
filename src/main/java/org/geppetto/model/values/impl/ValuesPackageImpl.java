@@ -48,6 +48,7 @@ import org.geppetto.model.values.ValuesFactory;
 import org.geppetto.model.values.ValuesPackage;
 import org.geppetto.model.values.VisualGroup;
 import org.geppetto.model.values.VisualGroupElement;
+import org.geppetto.model.values.VisualReference;
 import org.geppetto.model.values.VisualValue;
 import org.geppetto.model.variables.VariablesPackage;
 import org.geppetto.model.variables.impl.VariablesPackageImpl;
@@ -150,6 +151,13 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * @generated
 	 */
 	private EClass pointerElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass visualReferenceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -654,6 +662,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPointer_VisualReference()
+	{
+		return (EReference)pointerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getPointer__GetInstancePath()
 	{
 		return pointerEClass.getEOperations().get(0);
@@ -697,6 +715,36 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	public EAttribute getPointerElement_Index()
 	{
 		return (EAttribute)pointerElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVisualReference()
+	{
+		return visualReferenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVisualReference_VisualVariable()
+	{
+		return (EReference)visualReferenceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVisualReference_Fraction()
+	{
+		return (EAttribute)visualReferenceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1446,12 +1494,17 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		pointerEClass = createEClass(POINTER);
 		createEReference(pointerEClass, POINTER__ELEMENTS);
+		createEReference(pointerEClass, POINTER__VISUAL_REFERENCE);
 		createEOperation(pointerEClass, POINTER___GET_INSTANCE_PATH);
 
 		pointerElementEClass = createEClass(POINTER_ELEMENT);
 		createEReference(pointerElementEClass, POINTER_ELEMENT__VARIABLE);
 		createEReference(pointerElementEClass, POINTER_ELEMENT__TYPE);
 		createEAttribute(pointerElementEClass, POINTER_ELEMENT__INDEX);
+
+		visualReferenceEClass = createEClass(VISUAL_REFERENCE);
+		createEReference(visualReferenceEClass, VISUAL_REFERENCE__VISUAL_VARIABLE);
+		createEAttribute(visualReferenceEClass, VISUAL_REFERENCE__FRACTION);
 
 		pointEClass = createEClass(POINT);
 		createEAttribute(pointEClass, POINT__X);
@@ -1591,6 +1644,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		urlEClass.getESuperTypes().add(this.getMetadataValue());
 		htmlEClass.getESuperTypes().add(this.getMetadataValue());
 		pointerEClass.getESuperTypes().add(this.getValue());
+		visualReferenceEClass.getESuperTypes().add(this.getValue());
 		pointEClass.getESuperTypes().add(this.getValue());
 		dynamicsEClass.getESuperTypes().add(this.getValue());
 		functionEClass.getESuperTypes().add(this.getValue());
@@ -1650,6 +1704,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		initEClass(pointerEClass, Pointer.class, "Pointer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointer_Elements(), this.getPointerElement(), null, "elements", null, 0, -1, Pointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPointer_VisualReference(), this.getVisualReference(), null, "visualReference", null, 0, 1, Pointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getPointer__GetInstancePath(), theXMLTypePackage.getString(), "getInstancePath", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1657,6 +1712,10 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEReference(getPointerElement_Variable(), theVariablesPackage.getVariable(), null, "variable", null, 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPointerElement_Type(), theTypesPackage.getType(), null, "type", null, 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPointerElement_Index(), theXMLTypePackage.getIntObject(), "index", "-1", 0, 1, PointerElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(visualReferenceEClass, VisualReference.class, "VisualReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVisualReference_VisualVariable(), theVariablesPackage.getVariable(), null, "visualVariable", null, 1, 1, VisualReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVisualReference_Fraction(), ecorePackage.getEFloat(), "fraction", null, 0, 1, VisualReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPoint_X(), theXMLTypePackage.getDouble(), "x", null, 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1724,8 +1783,8 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEReference(getVisualGroup_VisualGroupElements(), this.getVisualGroupElement(), null, "visualGroupElements", null, 1, -1, VisualGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConnection_A(), this.getPointer(), null, "a", null, 1, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnection_B(), this.getPointer(), null, "b", null, 1, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_A(), this.getPointer(), null, "a", null, 1, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_B(), this.getPointer(), null, "b", null, 1, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Connectivity(), this.getConnectivity(), "connectivity", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arrayElementEClass, ArrayElement.class, "ArrayElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

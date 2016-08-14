@@ -74,6 +74,7 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.HTML: return createHTML();
 			case ValuesPackage.POINTER: return createPointer();
 			case ValuesPackage.POINTER_ELEMENT: return createPointerElement();
+			case ValuesPackage.VISUAL_REFERENCE: return createVisualReference();
 			case ValuesPackage.POINT: return createPoint();
 			case ValuesPackage.DYNAMICS: return createDynamics();
 			case ValuesPackage.FUNCTION_PLOT: return createFunctionPlot();
@@ -256,6 +257,17 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		PointerElementImpl pointerElement = new PointerElementImpl();
 		return pointerElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VisualReference createVisualReference()
+	{
+		VisualReferenceImpl visualReference = new VisualReferenceImpl();
+		return visualReference;
 	}
 
 	/**
