@@ -31,6 +31,7 @@ import org.geppetto.model.Query;
 import org.geppetto.model.QueryMatchingCriteria;
 import org.geppetto.model.QueryResult;
 import org.geppetto.model.QueryResults;
+import org.geppetto.model.RunnableQuery;
 import org.geppetto.model.SimpleQuery;
 import org.geppetto.model.Tag;
 import org.geppetto.model.VariableValue;
@@ -195,6 +196,13 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * @generated
 	 */
 	private EClass iSynchableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass runnableQueryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1005,6 +1013,36 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRunnableQuery()
+	{
+		return runnableQueryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRunnableQuery_Query()
+	{
+		return (EReference)runnableQueryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRunnableQuery_Id()
+	{
+		return (EAttribute)runnableQueryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getFileFormat()
 	{
 		return fileFormatEEnum;
@@ -1132,6 +1170,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 
 		iSynchableEClass = createEClass(ISYNCHABLE);
 		createEAttribute(iSynchableEClass, ISYNCHABLE__SYNCHED);
+
+		runnableQueryEClass = createEClass(RUNNABLE_QUERY);
+		createEReference(runnableQueryEClass, RUNNABLE_QUERY__QUERY);
+		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__ID);
 
 		// Create enums
 		fileFormatEEnum = createEEnum(FILE_FORMAT);
@@ -1284,6 +1326,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 
 		initEClass(iSynchableEClass, ISynchable.class, "ISynchable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getISynchable_Synched(), theXMLTypePackage.getBoolean(), "synched", null, 1, 1, ISynchable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(runnableQueryEClass, RunnableQuery.class, "RunnableQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRunnableQuery_Query(), this.getQuery(), null, "query", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRunnableQuery_Id(), theXMLTypePackage.getString(), "id", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(fileFormatEEnum, FileFormat.class, "FileFormat");
