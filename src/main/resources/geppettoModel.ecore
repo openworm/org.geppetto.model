@@ -158,11 +158,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="header" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="results" upperBound="-1"
-        eType="#//QueryResult" containment="true"/>
+        eType="#//AQueryResult" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QueryResult">
+  <eClassifiers xsi:type="ecore:EClass" name="AQueryResult" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryResult" eSuperTypes="#//AQueryResult">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
         lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SerializableQueryResult" eSuperTypes="#//AQueryResult">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
+        lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QueryMatchingCriteria">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//types/Type"/>

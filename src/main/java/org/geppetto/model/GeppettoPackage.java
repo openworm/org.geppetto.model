@@ -149,7 +149,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getISynchable()
 	 * @generated
 	 */
-	int ISYNCHABLE = 20;
+	int ISYNCHABLE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1340,6 +1340,34 @@ public interface GeppettoPackage extends EPackage
 	int QUERY_RESULTS_OPERATION_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.AQueryResultImpl <em>AQuery Result</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.AQueryResultImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getAQueryResult()
+	 * @generated
+	 */
+	int AQUERY_RESULT = 17;
+
+	/**
+	 * The number of structural features of the '<em>AQuery Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AQUERY_RESULT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>AQuery Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AQUERY_RESULT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.QueryResultImpl <em>Query Result</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1347,7 +1375,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryResult()
 	 * @generated
 	 */
-	int QUERY_RESULT = 17;
+	int QUERY_RESULT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Values</b></em>' attribute list.
@@ -1356,7 +1384,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_RESULT__VALUES = 0;
+	int QUERY_RESULT__VALUES = AQUERY_RESULT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Query Result</em>' class.
@@ -1365,7 +1393,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_RESULT_FEATURE_COUNT = 1;
+	int QUERY_RESULT_FEATURE_COUNT = AQUERY_RESULT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Query Result</em>' class.
@@ -1374,7 +1402,44 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_RESULT_OPERATION_COUNT = 0;
+	int QUERY_RESULT_OPERATION_COUNT = AQUERY_RESULT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.SerializableQueryResultImpl <em>Serializable Query Result</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.SerializableQueryResultImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getSerializableQueryResult()
+	 * @generated
+	 */
+	int SERIALIZABLE_QUERY_RESULT = 19;
+
+	/**
+	 * The feature id for the '<em><b>Values</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERIALIZABLE_QUERY_RESULT__VALUES = AQUERY_RESULT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Serializable Query Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERIALIZABLE_QUERY_RESULT_FEATURE_COUNT = AQUERY_RESULT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Serializable Query Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERIALIZABLE_QUERY_RESULT_OPERATION_COUNT = AQUERY_RESULT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.QueryMatchingCriteriaImpl <em>Query Matching Criteria</em>}' class.
@@ -1384,7 +1449,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryMatchingCriteria()
 	 * @generated
 	 */
-	int QUERY_MATCHING_CRITERIA = 18;
+	int QUERY_MATCHING_CRITERIA = 20;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference list.
@@ -1421,7 +1486,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getStringToStringMap()
 	 * @generated
 	 */
-	int STRING_TO_STRING_MAP = 19;
+	int STRING_TO_STRING_MAP = 21;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1467,7 +1532,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getRunnableQuery()
 	 * @generated
 	 */
-	int RUNNABLE_QUERY = 21;
+	int RUNNABLE_QUERY = 23;
 
 	/**
 	 * The feature id for the '<em><b>Query</b></em>' reference.
@@ -1513,7 +1578,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getFileFormat()
 	 * @generated
 	 */
-	int FILE_FORMAT = 22;
+	int FILE_FORMAT = 24;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
@@ -2179,6 +2244,16 @@ public interface GeppettoPackage extends EPackage
 	EOperation getQueryResults__GetValue__String_int();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.AQueryResult <em>AQuery Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>AQuery Result</em>'.
+	 * @see org.geppetto.model.AQueryResult
+	 * @generated
+	 */
+	EClass getAQueryResult();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.QueryResult <em>Query Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2198,6 +2273,27 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getQueryResult_Values();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.SerializableQueryResult <em>Serializable Query Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Serializable Query Result</em>'.
+	 * @see org.geppetto.model.SerializableQueryResult
+	 * @generated
+	 */
+	EClass getSerializableQueryResult();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.geppetto.model.SerializableQueryResult#getValues <em>Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Values</em>'.
+	 * @see org.geppetto.model.SerializableQueryResult#getValues()
+	 * @see #getSerializableQueryResult()
+	 * @generated
+	 */
+	EAttribute getSerializableQueryResult_Values();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.QueryMatchingCriteria <em>Query Matching Criteria</em>}'.
@@ -2872,6 +2968,16 @@ public interface GeppettoPackage extends EPackage
 		EOperation QUERY_RESULTS___GET_VALUE__STRING_INT = eINSTANCE.getQueryResults__GetValue__String_int();
 
 		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.AQueryResultImpl <em>AQuery Result</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.AQueryResultImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getAQueryResult()
+		 * @generated
+		 */
+		EClass AQUERY_RESULT = eINSTANCE.getAQueryResult();
+
+		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.QueryResultImpl <em>Query Result</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2888,6 +2994,24 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute QUERY_RESULT__VALUES = eINSTANCE.getQueryResult_Values();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.SerializableQueryResultImpl <em>Serializable Query Result</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.SerializableQueryResultImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getSerializableQueryResult()
+		 * @generated
+		 */
+		EClass SERIALIZABLE_QUERY_RESULT = eINSTANCE.getSerializableQueryResult();
+
+		/**
+		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERIALIZABLE_QUERY_RESULT__VALUES = eINSTANCE.getSerializableQueryResult_Values();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.QueryMatchingCriteriaImpl <em>Query Matching Criteria</em>}' class.

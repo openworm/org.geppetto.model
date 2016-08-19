@@ -161,9 +161,19 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 				return createQueryResultsAdapter();
 			}
 			@Override
+			public Adapter caseAQueryResult(AQueryResult object)
+			{
+				return createAQueryResultAdapter();
+			}
+			@Override
 			public Adapter caseQueryResult(QueryResult object)
 			{
 				return createQueryResultAdapter();
+			}
+			@Override
+			public Adapter caseSerializableQueryResult(SerializableQueryResult object)
+			{
+				return createSerializableQueryResultAdapter();
 			}
 			@Override
 			public Adapter caseQueryMatchingCriteria(QueryMatchingCriteria object)
@@ -463,6 +473,21 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.AQueryResult <em>AQuery Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.AQueryResult
+	 * @generated
+	 */
+	public Adapter createAQueryResultAdapter()
+	{
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.geppetto.model.QueryResult <em>Query Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -473,6 +498,21 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createQueryResultAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.SerializableQueryResult <em>Serializable Query Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.SerializableQueryResult
+	 * @generated
+	 */
+	public Adapter createSerializableQueryResultAdapter()
 	{
 		return null;
 	}

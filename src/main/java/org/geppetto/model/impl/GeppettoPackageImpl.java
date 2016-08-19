@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+import org.geppetto.model.AQueryResult;
 import org.geppetto.model.CompoundQuery;
 import org.geppetto.model.DataSource;
 import org.geppetto.model.DataSourceLibraryConfiguration;
@@ -32,6 +33,7 @@ import org.geppetto.model.QueryMatchingCriteria;
 import org.geppetto.model.QueryResult;
 import org.geppetto.model.QueryResults;
 import org.geppetto.model.RunnableQuery;
+import org.geppetto.model.SerializableQueryResult;
 import org.geppetto.model.SimpleQuery;
 import org.geppetto.model.Tag;
 import org.geppetto.model.VariableValue;
@@ -174,7 +176,21 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass aQueryResultEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass queryResultEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass serializableQueryResultEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -913,6 +929,16 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAQueryResult()
+	{
+		return aQueryResultEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQueryResult()
 	{
 		return queryResultEClass;
@@ -926,6 +952,26 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	public EAttribute getQueryResult_Values()
 	{
 		return (EAttribute)queryResultEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSerializableQueryResult()
+	{
+		return serializableQueryResultEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSerializableQueryResult_Values()
+	{
+		return (EAttribute)serializableQueryResultEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1147,8 +1193,13 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		createEReference(queryResultsEClass, QUERY_RESULTS__RESULTS);
 		createEOperation(queryResultsEClass, QUERY_RESULTS___GET_VALUE__STRING_INT);
 
+		aQueryResultEClass = createEClass(AQUERY_RESULT);
+
 		queryResultEClass = createEClass(QUERY_RESULT);
 		createEAttribute(queryResultEClass, QUERY_RESULT__VALUES);
+
+		serializableQueryResultEClass = createEClass(SERIALIZABLE_QUERY_RESULT);
+		createEAttribute(serializableQueryResultEClass, SERIALIZABLE_QUERY_RESULT__VALUES);
 
 		queryMatchingCriteriaEClass = createEClass(QUERY_MATCHING_CRITERIA);
 		createEReference(queryMatchingCriteriaEClass, QUERY_MATCHING_CRITERIA__TYPE);
@@ -1217,6 +1268,8 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		processQueryEClass.getESuperTypes().add(this.getQuery());
 		simpleQueryEClass.getESuperTypes().add(this.getQuery());
 		compoundQueryEClass.getESuperTypes().add(this.getQuery());
+		queryResultEClass.getESuperTypes().add(this.getAQueryResult());
+		serializableQueryResultEClass.getESuperTypes().add(this.getAQueryResult());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(geppettoModelEClass, GeppettoModel.class, "GeppettoModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1296,14 +1349,19 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEClass(queryResultsEClass, QueryResults.class, "QueryResults", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQueryResults_Id(), theXMLTypePackage.getString(), "id", null, 1, 1, QueryResults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQueryResults_Header(), theXMLTypePackage.getString(), "header", null, 0, -1, QueryResults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQueryResults_Results(), this.getQueryResult(), null, "results", null, 0, -1, QueryResults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQueryResults_Results(), this.getAQueryResult(), null, "results", null, 0, -1, QueryResults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getQueryResults__GetValue__String_int(), ecorePackage.getEJavaObject(), "getValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theXMLTypePackage.getString(), "field", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theXMLTypePackage.getInt(), "row", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEClass(aQueryResultEClass, AQueryResult.class, "AQueryResult", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(queryResultEClass, QueryResult.class, "QueryResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQueryResult_Values(), ecorePackage.getEJavaObject(), "values", null, 1, -1, QueryResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(serializableQueryResultEClass, SerializableQueryResult.class, "SerializableQueryResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSerializableQueryResult_Values(), theXMLTypePackage.getString(), "values", null, 1, -1, SerializableQueryResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(queryMatchingCriteriaEClass, QueryMatchingCriteria.class, "QueryMatchingCriteria", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQueryMatchingCriteria_Type(), theTypesPackage.getType(), null, "type", null, 0, -1, QueryMatchingCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
