@@ -1479,13 +1479,13 @@ public interface GeppettoPackage extends EPackage
 	int RUNNABLE_QUERY__QUERY = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Target Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RUNNABLE_QUERY__ID = 1;
+	int RUNNABLE_QUERY__TARGET_PATH = 1;
 
 	/**
 	 * The number of structural features of the '<em>Runnable Query</em>' class.
@@ -2297,15 +2297,15 @@ public interface GeppettoPackage extends EPackage
 	EReference getRunnableQuery_Query();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.geppetto.model.RunnableQuery#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.RunnableQuery#getTargetPath <em>Target Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see org.geppetto.model.RunnableQuery#getId()
+	 * @return the meta object for the attribute '<em>Target Path</em>'.
+	 * @see org.geppetto.model.RunnableQuery#getTargetPath()
 	 * @see #getRunnableQuery()
 	 * @generated
 	 */
-	EAttribute getRunnableQuery_Id();
+	EAttribute getRunnableQuery_TargetPath();
 
 	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.FileFormat <em>File Format</em>}'.
@@ -2970,12 +2970,12 @@ public interface GeppettoPackage extends EPackage
 		EReference RUNNABLE_QUERY__QUERY = eINSTANCE.getRunnableQuery_Query();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Target Path</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RUNNABLE_QUERY__ID = eINSTANCE.getRunnableQuery_Id();
+		EAttribute RUNNABLE_QUERY__TARGET_PATH = eINSTANCE.getRunnableQuery_TargetPath();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.

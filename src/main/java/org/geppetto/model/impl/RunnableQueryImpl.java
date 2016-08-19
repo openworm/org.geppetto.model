@@ -22,7 +22,7 @@ import org.geppetto.model.RunnableQuery;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.geppetto.model.impl.RunnableQueryImpl#getQuery <em>Query</em>}</li>
- *   <li>{@link org.geppetto.model.impl.RunnableQueryImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.RunnableQueryImpl#getTargetPath <em>Target Path</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,24 +41,24 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	protected Query query;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getTargetPath() <em>Target Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getTargetPath()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String TARGET_PATH_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getTargetPath() <em>Target Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getTargetPath()
 	 * @generated
 	 * @ordered
 	 */
-	protected String id = ID_EDEFAULT;
+	protected String targetPath = TARGET_PATH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,9 +129,9 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId()
+	public String getTargetPath()
 	{
-		return id;
+		return targetPath;
 	}
 
 	/**
@@ -139,12 +139,12 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(String newId)
+	public void setTargetPath(String newTargetPath)
 	{
-		String oldId = id;
-		id = newId;
+		String oldTargetPath = targetPath;
+		targetPath = newTargetPath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.RUNNABLE_QUERY__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.RUNNABLE_QUERY__TARGET_PATH, oldTargetPath, targetPath));
 	}
 
 	/**
@@ -160,8 +160,8 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 			case GeppettoPackage.RUNNABLE_QUERY__QUERY:
 				if (resolve) return getQuery();
 				return basicGetQuery();
-			case GeppettoPackage.RUNNABLE_QUERY__ID:
-				return getId();
+			case GeppettoPackage.RUNNABLE_QUERY__TARGET_PATH:
+				return getTargetPath();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,8 +179,8 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 			case GeppettoPackage.RUNNABLE_QUERY__QUERY:
 				setQuery((Query)newValue);
 				return;
-			case GeppettoPackage.RUNNABLE_QUERY__ID:
-				setId((String)newValue);
+			case GeppettoPackage.RUNNABLE_QUERY__TARGET_PATH:
+				setTargetPath((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -199,8 +199,8 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 			case GeppettoPackage.RUNNABLE_QUERY__QUERY:
 				setQuery((Query)null);
 				return;
-			case GeppettoPackage.RUNNABLE_QUERY__ID:
-				setId(ID_EDEFAULT);
+			case GeppettoPackage.RUNNABLE_QUERY__TARGET_PATH:
+				setTargetPath(TARGET_PATH_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -218,8 +218,8 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 		{
 			case GeppettoPackage.RUNNABLE_QUERY__QUERY:
 				return query != null;
-			case GeppettoPackage.RUNNABLE_QUERY__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case GeppettoPackage.RUNNABLE_QUERY__TARGET_PATH:
+				return TARGET_PATH_EDEFAULT == null ? targetPath != null : !TARGET_PATH_EDEFAULT.equals(targetPath);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -235,8 +235,8 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
+		result.append(" (targetPath: ");
+		result.append(targetPath);
 		result.append(')');
 		return result.toString();
 	}
