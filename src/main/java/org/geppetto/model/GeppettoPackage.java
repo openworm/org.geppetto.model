@@ -883,16 +883,34 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__SYNCHED = ISYNCHABLE__SYNCHED;
+	int QUERY__SYNCHED = NODE__SYNCHED;
 
 	/**
-	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__LABEL = ISYNCHABLE_FEATURE_COUNT + 0;
+	int QUERY__ID = NODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY__NAME = NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY__TAGS = NODE__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -901,7 +919,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__DESCRIPTION = ISYNCHABLE_FEATURE_COUNT + 1;
+	int QUERY__DESCRIPTION = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Matching Criteria</b></em>' containment reference list.
@@ -910,7 +928,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY__MATCHING_CRITERIA = ISYNCHABLE_FEATURE_COUNT + 2;
+	int QUERY__MATCHING_CRITERIA = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Query</em>' class.
@@ -919,7 +937,16 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_FEATURE_COUNT = ISYNCHABLE_FEATURE_COUNT + 3;
+	int QUERY_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY___GET_PATH = NODE___GET_PATH;
 
 	/**
 	 * The number of operations of the '<em>Query</em>' class.
@@ -928,7 +955,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_OPERATION_COUNT = ISYNCHABLE_OPERATION_COUNT + 0;
+	int QUERY_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.ProcessQueryImpl <em>Process Query</em>}' class.
@@ -950,13 +977,31 @@ public interface GeppettoPackage extends EPackage
 	int PROCESS_QUERY__SYNCHED = QUERY__SYNCHED;
 
 	/**
-	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_QUERY__LABEL = QUERY__LABEL;
+	int PROCESS_QUERY__ID = QUERY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__NAME = QUERY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__TAGS = QUERY__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1004,6 +1049,15 @@ public interface GeppettoPackage extends EPackage
 	int PROCESS_QUERY_FEATURE_COUNT = QUERY_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY___GET_PATH = QUERY___GET_PATH;
+
+	/**
 	 * The number of operations of the '<em>Process Query</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1032,13 +1086,31 @@ public interface GeppettoPackage extends EPackage
 	int SIMPLE_QUERY__SYNCHED = QUERY__SYNCHED;
 
 	/**
-	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_QUERY__LABEL = QUERY__LABEL;
+	int SIMPLE_QUERY__ID = QUERY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_QUERY__NAME = QUERY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_QUERY__TAGS = QUERY__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1086,6 +1158,15 @@ public interface GeppettoPackage extends EPackage
 	int SIMPLE_QUERY_FEATURE_COUNT = QUERY_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_QUERY___GET_PATH = QUERY___GET_PATH;
+
+	/**
 	 * The number of operations of the '<em>Simple Query</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1114,13 +1195,31 @@ public interface GeppettoPackage extends EPackage
 	int COMPOUND_QUERY__SYNCHED = QUERY__SYNCHED;
 
 	/**
-	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOUND_QUERY__LABEL = QUERY__LABEL;
+	int COMPOUND_QUERY__ID = QUERY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_QUERY__NAME = QUERY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_QUERY__TAGS = QUERY__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1157,6 +1256,15 @@ public interface GeppettoPackage extends EPackage
 	 * @ordered
 	 */
 	int COMPOUND_QUERY_FEATURE_COUNT = QUERY_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_QUERY___GET_PATH = QUERY___GET_PATH;
 
 	/**
 	 * The number of operations of the '<em>Compound Query</em>' class.
@@ -1911,17 +2019,6 @@ public interface GeppettoPackage extends EPackage
 	EClass getQuery();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.geppetto.model.Query#getLabel <em>Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Label</em>'.
-	 * @see org.geppetto.model.Query#getLabel()
-	 * @see #getQuery()
-	 * @generated
-	 */
-	EAttribute getQuery_Label();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.geppetto.model.Query#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2645,14 +2742,6 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EClass QUERY = eINSTANCE.getQuery();
-
-		/**
-		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QUERY__LABEL = eINSTANCE.getQuery_Label();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.

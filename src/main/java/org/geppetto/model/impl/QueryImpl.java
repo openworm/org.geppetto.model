@@ -4,15 +4,11 @@ package org.geppetto.model.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.geppetto.model.GeppettoPackage;
@@ -26,8 +22,6 @@ import org.geppetto.model.QueryMatchingCriteria;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.QueryImpl#isSynched <em>Synched</em>}</li>
- *   <li>{@link org.geppetto.model.impl.QueryImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.geppetto.model.impl.QueryImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.geppetto.model.impl.QueryImpl#getMatchingCriteria <em>Matching Criteria</em>}</li>
  * </ul>
@@ -35,48 +29,8 @@ import org.geppetto.model.QueryMatchingCriteria;
  *
  * @generated
  */
-public abstract class QueryImpl extends MinimalEObjectImpl.Container implements Query
+public abstract class QueryImpl extends NodeImpl implements Query
 {
-	/**
-	 * The default value of the '{@link #isSynched() <em>Synched</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSynched()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean SYNCHED_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isSynched() <em>Synched</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSynched()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean synched = SYNCHED_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LABEL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected String label = LABEL_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -126,52 +80,6 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 	protected EClass eStaticClass()
 	{
 		return GeppettoPackage.Literals.QUERY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSynched()
-	{
-		return synched;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSynched(boolean newSynched)
-	{
-		boolean oldSynched = synched;
-		synched = newSynched;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.QUERY__SYNCHED, oldSynched, synched));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getLabel()
-	{
-		return label;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLabel(String newLabel)
-	{
-		String oldLabel = label;
-		label = newLabel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.QUERY__LABEL, oldLabel, label));
 	}
 
 	/**
@@ -237,10 +145,6 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY__SYNCHED:
-				return isSynched();
-			case GeppettoPackage.QUERY__LABEL:
-				return getLabel();
 			case GeppettoPackage.QUERY__DESCRIPTION:
 				return getDescription();
 			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
@@ -260,12 +164,6 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY__SYNCHED:
-				setSynched((Boolean)newValue);
-				return;
-			case GeppettoPackage.QUERY__LABEL:
-				setLabel((String)newValue);
-				return;
 			case GeppettoPackage.QUERY__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
@@ -287,12 +185,6 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY__SYNCHED:
-				setSynched(SYNCHED_EDEFAULT);
-				return;
-			case GeppettoPackage.QUERY__LABEL:
-				setLabel(LABEL_EDEFAULT);
-				return;
 			case GeppettoPackage.QUERY__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -313,10 +205,6 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY__SYNCHED:
-				return synched != SYNCHED_EDEFAULT;
-			case GeppettoPackage.QUERY__LABEL:
-				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
 			case GeppettoPackage.QUERY__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
@@ -336,11 +224,7 @@ public abstract class QueryImpl extends MinimalEObjectImpl.Container implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (synched: ");
-		result.append(synched);
-		result.append(", label: ");
-		result.append(label);
-		result.append(", description: ");
+		result.append(" (description: ");
 		result.append(description);
 		result.append(')');
 		return result.toString();

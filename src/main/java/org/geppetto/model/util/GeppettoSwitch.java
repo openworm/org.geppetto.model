@@ -168,6 +168,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				Query query = (Query)theEObject;
 				T result = caseQuery(query);
+				if (result == null) result = caseNode(query);
 				if (result == null) result = caseISynchable(query);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -177,6 +178,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				ProcessQuery processQuery = (ProcessQuery)theEObject;
 				T result = caseProcessQuery(processQuery);
 				if (result == null) result = caseQuery(processQuery);
+				if (result == null) result = caseNode(processQuery);
 				if (result == null) result = caseISynchable(processQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -186,6 +188,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				SimpleQuery simpleQuery = (SimpleQuery)theEObject;
 				T result = caseSimpleQuery(simpleQuery);
 				if (result == null) result = caseQuery(simpleQuery);
+				if (result == null) result = caseNode(simpleQuery);
 				if (result == null) result = caseISynchable(simpleQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -195,6 +198,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				CompoundQuery compoundQuery = (CompoundQuery)theEObject;
 				T result = caseCompoundQuery(compoundQuery);
 				if (result == null) result = caseQuery(compoundQuery);
+				if (result == null) result = caseNode(compoundQuery);
 				if (result == null) result = caseISynchable(compoundQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

@@ -763,7 +763,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuery_Label()
+	public EAttribute getQuery_Description()
 	{
 		return (EAttribute)queryEClass.getEStructuralFeatures().get(0);
 	}
@@ -773,19 +773,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuery_Description()
-	{
-		return (EAttribute)queryEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getQuery_MatchingCriteria()
 	{
-		return (EReference)queryEClass.getEStructuralFeatures().get(2);
+		return (EReference)queryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1137,7 +1127,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		createEAttribute(dataSourceLibraryConfigurationEClass, DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT);
 
 		queryEClass = createEClass(QUERY);
-		createEAttribute(queryEClass, QUERY__LABEL);
 		createEAttribute(queryEClass, QUERY__DESCRIPTION);
 		createEReference(queryEClass, QUERY__MATCHING_CRITERIA);
 
@@ -1224,7 +1213,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		tagEClass.getESuperTypes().add(this.getISynchable());
 		externalDomainModelEClass.getESuperTypes().add(this.getDomainModel());
 		dataSourceEClass.getESuperTypes().add(this.getNode());
-		queryEClass.getESuperTypes().add(this.getISynchable());
+		queryEClass.getESuperTypes().add(this.getNode());
 		processQueryEClass.getESuperTypes().add(this.getQuery());
 		simpleQueryEClass.getESuperTypes().add(this.getQuery());
 		compoundQueryEClass.getESuperTypes().add(this.getQuery());
@@ -1290,7 +1279,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEAttribute(getDataSourceLibraryConfiguration_Format(), theXMLTypePackage.getString(), "format", null, 1, 1, DataSourceLibraryConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(queryEClass, Query.class, "Query", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getQuery_Label(), theXMLTypePackage.getString(), "label", null, 1, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuery_Description(), theXMLTypePackage.getString(), "description", null, 1, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuery_MatchingCriteria(), this.getQueryMatchingCriteria(), null, "matchingCriteria", null, 0, -1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
