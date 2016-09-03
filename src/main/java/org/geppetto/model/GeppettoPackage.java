@@ -1535,22 +1535,22 @@ public interface GeppettoPackage extends EPackage
 	int RUNNABLE_QUERY = 23;
 
 	/**
-	 * The feature id for the '<em><b>Query</b></em>' reference.
+	 * The feature id for the '<em><b>Target Variable Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RUNNABLE_QUERY__QUERY = 0;
+	int RUNNABLE_QUERY__TARGET_VARIABLE_PATH = 0;
 
 	/**
-	 * The feature id for the '<em><b>Target Path</b></em>' attribute.
+	 * The feature id for the '<em><b>Query Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RUNNABLE_QUERY__TARGET_PATH = 1;
+	int RUNNABLE_QUERY__QUERY_PATH = 1;
 
 	/**
 	 * The number of structural features of the '<em>Runnable Query</em>' class.
@@ -2382,26 +2382,26 @@ public interface GeppettoPackage extends EPackage
 	EClass getRunnableQuery();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.RunnableQuery#getQuery <em>Query</em>}'.
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.RunnableQuery#getTargetVariablePath <em>Target Variable Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Query</em>'.
-	 * @see org.geppetto.model.RunnableQuery#getQuery()
+	 * @return the meta object for the attribute '<em>Target Variable Path</em>'.
+	 * @see org.geppetto.model.RunnableQuery#getTargetVariablePath()
 	 * @see #getRunnableQuery()
 	 * @generated
 	 */
-	EReference getRunnableQuery_Query();
+	EAttribute getRunnableQuery_TargetVariablePath();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.geppetto.model.RunnableQuery#getTargetPath <em>Target Path</em>}'.
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.RunnableQuery#getQueryPath <em>Query Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Path</em>'.
-	 * @see org.geppetto.model.RunnableQuery#getTargetPath()
+	 * @return the meta object for the attribute '<em>Query Path</em>'.
+	 * @see org.geppetto.model.RunnableQuery#getQueryPath()
 	 * @see #getRunnableQuery()
 	 * @generated
 	 */
-	EAttribute getRunnableQuery_TargetPath();
+	EAttribute getRunnableQuery_QueryPath();
 
 	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.FileFormat <em>File Format</em>}'.
@@ -3086,20 +3086,20 @@ public interface GeppettoPackage extends EPackage
 		EClass RUNNABLE_QUERY = eINSTANCE.getRunnableQuery();
 
 		/**
-		 * The meta object literal for the '<em><b>Query</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Target Variable Path</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RUNNABLE_QUERY__QUERY = eINSTANCE.getRunnableQuery_Query();
+		EAttribute RUNNABLE_QUERY__TARGET_VARIABLE_PATH = eINSTANCE.getRunnableQuery_TargetVariablePath();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Path</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Query Path</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RUNNABLE_QUERY__TARGET_PATH = eINSTANCE.getRunnableQuery_TargetPath();
+		EAttribute RUNNABLE_QUERY__QUERY_PATH = eINSTANCE.getRunnableQuery_QueryPath();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.

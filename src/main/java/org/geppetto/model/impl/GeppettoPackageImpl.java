@@ -1059,9 +1059,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRunnableQuery_Query()
+	public EAttribute getRunnableQuery_TargetVariablePath()
 	{
-		return (EReference)runnableQueryEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)runnableQueryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1069,7 +1069,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRunnableQuery_TargetPath()
+	public EAttribute getRunnableQuery_QueryPath()
 	{
 		return (EAttribute)runnableQueryEClass.getEStructuralFeatures().get(1);
 	}
@@ -1212,8 +1212,8 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		createEAttribute(iSynchableEClass, ISYNCHABLE__SYNCHED);
 
 		runnableQueryEClass = createEClass(RUNNABLE_QUERY);
-		createEReference(runnableQueryEClass, RUNNABLE_QUERY__QUERY);
-		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__TARGET_PATH);
+		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__TARGET_VARIABLE_PATH);
+		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__QUERY_PATH);
 
 		// Create enums
 		fileFormatEEnum = createEEnum(FILE_FORMAT);
@@ -1374,8 +1374,8 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEAttribute(getISynchable_Synched(), theXMLTypePackage.getBoolean(), "synched", null, 1, 1, ISynchable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(runnableQueryEClass, RunnableQuery.class, "RunnableQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRunnableQuery_Query(), this.getQuery(), null, "query", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRunnableQuery_TargetPath(), theXMLTypePackage.getString(), "targetPath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRunnableQuery_TargetVariablePath(), theXMLTypePackage.getString(), "targetVariablePath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRunnableQuery_QueryPath(), theXMLTypePackage.getString(), "queryPath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(fileFormatEEnum, FileFormat.class, "FileFormat");
