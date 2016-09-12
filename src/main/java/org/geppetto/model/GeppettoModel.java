@@ -24,6 +24,7 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.GeppettoModel#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getName <em>Name</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getDataSources <em>Data Sources</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getQueries <em>Queries</em>}</li>
  * </ul>
  * </p>
  *
@@ -168,5 +169,21 @@ public interface GeppettoModel extends EObject
 	 * @generated
 	 */
 	EList<DataSource> getDataSources();
+
+	/**
+	 * Returns the value of the '<em><b>Queries</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.Query}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Queries</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Queries</em>' containment reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Queries()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Query> getQueries();
 
 } // GeppettoModel

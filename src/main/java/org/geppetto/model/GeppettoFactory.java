@@ -149,6 +149,15 @@ public interface GeppettoFactory extends EFactory
 	CompoundQuery createCompoundQuery();
 
 	/**
+	 * Returns a new object of class '<em>Compound Ref Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Compound Ref Query</em>'.
+	 * @generated
+	 */
+	CompoundRefQuery createCompoundRefQuery();
+
+	/**
 	 * Returns a new object of class '<em>Query Results</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

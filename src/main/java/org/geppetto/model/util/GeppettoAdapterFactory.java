@@ -156,9 +156,19 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 				return createCompoundQueryAdapter();
 			}
 			@Override
+			public Adapter caseCompoundRefQuery(CompoundRefQuery object)
+			{
+				return createCompoundRefQueryAdapter();
+			}
+			@Override
 			public Adapter caseQueryResults(QueryResults object)
 			{
 				return createQueryResultsAdapter();
+			}
+			@Override
+			public Adapter caseRunnableQuery(RunnableQuery object)
+			{
+				return createRunnableQueryAdapter();
 			}
 			@Override
 			public Adapter caseAQueryResult(AQueryResult object)
@@ -189,11 +199,6 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 			public Adapter caseISynchable(ISynchable object)
 			{
 				return createISynchableAdapter();
-			}
-			@Override
-			public Adapter caseRunnableQuery(RunnableQuery object)
-			{
-				return createRunnableQueryAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object)
@@ -453,6 +458,21 @@ public class GeppettoAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createCompoundQueryAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.CompoundRefQuery <em>Compound Ref Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.CompoundRefQuery
+	 * @generated
+	 */
+	public Adapter createCompoundRefQueryAdapter()
 	{
 		return null;
 	}

@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.AQueryResult;
 import org.geppetto.model.CompoundQuery;
+import org.geppetto.model.CompoundRefQuery;
 import org.geppetto.model.DataSource;
 import org.geppetto.model.DataSourceLibraryConfiguration;
 import org.geppetto.model.DomainModel;
@@ -163,6 +164,13 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * @generated
 	 */
 	private EClass compoundQueryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass compoundRefQueryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -372,6 +380,16 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	public EReference getGeppettoModel_DataSources()
 	{
 		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeppettoModel_Queries()
+	{
+		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -879,6 +897,26 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCompoundRefQuery()
+	{
+		return compoundRefQueryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompoundRefQuery_QueryChain()
+	{
+		return (EReference)compoundRefQueryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQueryResults()
 	{
 		return queryResultsEClass;
@@ -1121,6 +1159,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		createEAttribute(geppettoModelEClass, GEPPETTO_MODEL__ID);
 		createEAttribute(geppettoModelEClass, GEPPETTO_MODEL__NAME);
 		createEReference(geppettoModelEClass, GEPPETTO_MODEL__DATA_SOURCES);
+		createEReference(geppettoModelEClass, GEPPETTO_MODEL__QUERIES);
 
 		nodeEClass = createEClass(NODE);
 		createEAttribute(nodeEClass, NODE__ID);
@@ -1187,11 +1226,18 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		compoundQueryEClass = createEClass(COMPOUND_QUERY);
 		createEReference(compoundQueryEClass, COMPOUND_QUERY__QUERY_CHAIN);
 
+		compoundRefQueryEClass = createEClass(COMPOUND_REF_QUERY);
+		createEReference(compoundRefQueryEClass, COMPOUND_REF_QUERY__QUERY_CHAIN);
+
 		queryResultsEClass = createEClass(QUERY_RESULTS);
 		createEAttribute(queryResultsEClass, QUERY_RESULTS__ID);
 		createEAttribute(queryResultsEClass, QUERY_RESULTS__HEADER);
 		createEReference(queryResultsEClass, QUERY_RESULTS__RESULTS);
 		createEOperation(queryResultsEClass, QUERY_RESULTS___GET_VALUE__STRING_INT);
+
+		runnableQueryEClass = createEClass(RUNNABLE_QUERY);
+		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__TARGET_VARIABLE_PATH);
+		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__QUERY_PATH);
 
 		aQueryResultEClass = createEClass(AQUERY_RESULT);
 
@@ -1210,10 +1256,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 
 		iSynchableEClass = createEClass(ISYNCHABLE);
 		createEAttribute(iSynchableEClass, ISYNCHABLE__SYNCHED);
-
-		runnableQueryEClass = createEClass(RUNNABLE_QUERY);
-		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__TARGET_VARIABLE_PATH);
-		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__QUERY_PATH);
 
 		// Create enums
 		fileFormatEEnum = createEEnum(FILE_FORMAT);
@@ -1268,6 +1310,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		processQueryEClass.getESuperTypes().add(this.getQuery());
 		simpleQueryEClass.getESuperTypes().add(this.getQuery());
 		compoundQueryEClass.getESuperTypes().add(this.getQuery());
+		compoundRefQueryEClass.getESuperTypes().add(this.getQuery());
 		queryResultEClass.getESuperTypes().add(this.getAQueryResult());
 		serializableQueryResultEClass.getESuperTypes().add(this.getAQueryResult());
 
@@ -1279,6 +1322,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEAttribute(getGeppettoModel_Id(), theXMLTypePackage.getString(), "id", "", 1, 1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeppettoModel_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGeppettoModel_DataSources(), this.getDataSource(), null, "dataSources", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeppettoModel_Queries(), this.getQuery(), null, "queries", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNode_Id(), theXMLTypePackage.getString(), "id", "", 1, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1346,6 +1390,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEClass(compoundQueryEClass, CompoundQuery.class, "CompoundQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompoundQuery_QueryChain(), this.getQuery(), null, "queryChain", null, 1, -1, CompoundQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(compoundRefQueryEClass, CompoundRefQuery.class, "CompoundRefQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCompoundRefQuery_QueryChain(), this.getQuery(), null, "queryChain", null, 1, -1, CompoundRefQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(queryResultsEClass, QueryResults.class, "QueryResults", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQueryResults_Id(), theXMLTypePackage.getString(), "id", null, 1, 1, QueryResults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQueryResults_Header(), theXMLTypePackage.getString(), "header", null, 0, -1, QueryResults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1354,6 +1401,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		EOperation op = initEOperation(getQueryResults__GetValue__String_int(), ecorePackage.getEJavaObject(), "getValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theXMLTypePackage.getString(), "field", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theXMLTypePackage.getInt(), "row", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(runnableQueryEClass, RunnableQuery.class, "RunnableQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRunnableQuery_TargetVariablePath(), theXMLTypePackage.getString(), "targetVariablePath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRunnableQuery_QueryPath(), theXMLTypePackage.getString(), "queryPath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aQueryResultEClass, AQueryResult.class, "AQueryResult", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1372,10 +1423,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 
 		initEClass(iSynchableEClass, ISynchable.class, "ISynchable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getISynchable_Synched(), theXMLTypePackage.getBoolean(), "synched", null, 1, 1, ISynchable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(runnableQueryEClass, RunnableQuery.class, "RunnableQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRunnableQuery_TargetVariablePath(), theXMLTypePackage.getString(), "targetVariablePath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRunnableQuery_QueryPath(), theXMLTypePackage.getString(), "queryPath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(fileFormatEEnum, FileFormat.class, "FileFormat");

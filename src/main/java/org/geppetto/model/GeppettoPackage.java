@@ -41,7 +41,7 @@ public interface GeppettoPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore";
+	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/query/src/main/resources/geppettoModel.ecore";
 
 	/**
 	 * The package namespace name.
@@ -124,13 +124,22 @@ public interface GeppettoPackage extends EPackage
 	int GEPPETTO_MODEL__DATA_SOURCES = 5;
 
 	/**
+	 * The feature id for the '<em><b>Queries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_MODEL__QUERIES = 6;
+
+	/**
 	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL_FEATURE_COUNT = 6;
+	int GEPPETTO_MODEL_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Model</em>' class.
@@ -149,7 +158,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getISynchable()
 	 * @generated
 	 */
-	int ISYNCHABLE = 22;
+	int ISYNCHABLE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1276,6 +1285,106 @@ public interface GeppettoPackage extends EPackage
 	int COMPOUND_QUERY_OPERATION_COUNT = QUERY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.CompoundRefQueryImpl <em>Compound Ref Query</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.CompoundRefQueryImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getCompoundRefQuery()
+	 * @generated
+	 */
+	int COMPOUND_REF_QUERY = 16;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY__SYNCHED = QUERY__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY__ID = QUERY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY__NAME = QUERY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY__TAGS = QUERY__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY__DESCRIPTION = QUERY__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Matching Criteria</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY__MATCHING_CRITERIA = QUERY__MATCHING_CRITERIA;
+
+	/**
+	 * The feature id for the '<em><b>Query Chain</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY__QUERY_CHAIN = QUERY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Compound Ref Query</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY_FEATURE_COUNT = QUERY_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY___GET_PATH = QUERY___GET_PATH;
+
+	/**
+	 * The number of operations of the '<em>Compound Ref Query</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY_OPERATION_COUNT = QUERY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.QueryResultsImpl <em>Query Results</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1283,7 +1392,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryResults()
 	 * @generated
 	 */
-	int QUERY_RESULTS = 16;
+	int QUERY_RESULTS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1347,25 +1456,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getAQueryResult()
 	 * @generated
 	 */
-	int AQUERY_RESULT = 17;
-
-	/**
-	 * The number of structural features of the '<em>AQuery Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AQUERY_RESULT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>AQuery Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AQUERY_RESULT_OPERATION_COUNT = 0;
+	int AQUERY_RESULT = 19;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.QueryResultImpl <em>Query Result</em>}' class.
@@ -1375,34 +1466,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryResult()
 	 * @generated
 	 */
-	int QUERY_RESULT = 18;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUERY_RESULT__VALUES = AQUERY_RESULT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Query Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUERY_RESULT_FEATURE_COUNT = AQUERY_RESULT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Query Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUERY_RESULT_OPERATION_COUNT = AQUERY_RESULT_OPERATION_COUNT + 0;
+	int QUERY_RESULT = 20;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.SerializableQueryResultImpl <em>Serializable Query Result</em>}' class.
@@ -1412,34 +1476,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getSerializableQueryResult()
 	 * @generated
 	 */
-	int SERIALIZABLE_QUERY_RESULT = 19;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERIALIZABLE_QUERY_RESULT__VALUES = AQUERY_RESULT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Serializable Query Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERIALIZABLE_QUERY_RESULT_FEATURE_COUNT = AQUERY_RESULT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Serializable Query Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERIALIZABLE_QUERY_RESULT_OPERATION_COUNT = AQUERY_RESULT_OPERATION_COUNT + 0;
+	int SERIALIZABLE_QUERY_RESULT = 21;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.QueryMatchingCriteriaImpl <em>Query Matching Criteria</em>}' class.
@@ -1449,34 +1486,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getQueryMatchingCriteria()
 	 * @generated
 	 */
-	int QUERY_MATCHING_CRITERIA = 20;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUERY_MATCHING_CRITERIA__TYPE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Query Matching Criteria</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUERY_MATCHING_CRITERIA_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Query Matching Criteria</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUERY_MATCHING_CRITERIA_OPERATION_COUNT = 0;
+	int QUERY_MATCHING_CRITERIA = 22;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.StringToStringMapImpl <em>String To String Map</em>}' class.
@@ -1486,43 +1496,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getStringToStringMap()
 	 * @generated
 	 */
-	int STRING_TO_STRING_MAP = 21;
-
-	/**
-	 * The feature id for the '<em><b>Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TO_STRING_MAP__KEY = 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TO_STRING_MAP__VALUE = 1;
-
-	/**
-	 * The number of structural features of the '<em>String To String Map</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TO_STRING_MAP_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>String To String Map</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_TO_STRING_MAP_OPERATION_COUNT = 0;
+	int STRING_TO_STRING_MAP = 23;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.RunnableQueryImpl <em>Runnable Query</em>}' class.
@@ -1532,7 +1506,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getRunnableQuery()
 	 * @generated
 	 */
-	int RUNNABLE_QUERY = 23;
+	int RUNNABLE_QUERY = 18;
 
 	/**
 	 * The feature id for the '<em><b>Target Variable Path</b></em>' attribute.
@@ -1571,6 +1545,141 @@ public interface GeppettoPackage extends EPackage
 	int RUNNABLE_QUERY_OPERATION_COUNT = 0;
 
 	/**
+	 * The number of structural features of the '<em>AQuery Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AQUERY_RESULT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>AQuery Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AQUERY_RESULT_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Values</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_RESULT__VALUES = AQUERY_RESULT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Query Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_RESULT_FEATURE_COUNT = AQUERY_RESULT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Query Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_RESULT_OPERATION_COUNT = AQUERY_RESULT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Values</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERIALIZABLE_QUERY_RESULT__VALUES = AQUERY_RESULT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Serializable Query Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERIALIZABLE_QUERY_RESULT_FEATURE_COUNT = AQUERY_RESULT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Serializable Query Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERIALIZABLE_QUERY_RESULT_OPERATION_COUNT = AQUERY_RESULT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_MATCHING_CRITERIA__TYPE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Query Matching Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_MATCHING_CRITERIA_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Query Matching Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_MATCHING_CRITERIA_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>String To String Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>String To String Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1578,7 +1687,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getFileFormat()
 	 * @generated
 	 */
-	int FILE_FORMAT = 24;
+	int FILE_FORMAT = 25;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
@@ -1655,6 +1764,17 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EReference getGeppettoModel_DataSources();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.GeppettoModel#getQueries <em>Queries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Queries</em>'.
+	 * @see org.geppetto.model.GeppettoModel#getQueries()
+	 * @see #getGeppettoModel()
+	 * @generated
+	 */
+	EReference getGeppettoModel_Queries();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.Node <em>Node</em>}'.
@@ -2191,6 +2311,27 @@ public interface GeppettoPackage extends EPackage
 	EReference getCompoundQuery_QueryChain();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.CompoundRefQuery <em>Compound Ref Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Compound Ref Query</em>'.
+	 * @see org.geppetto.model.CompoundRefQuery
+	 * @generated
+	 */
+	EClass getCompoundRefQuery();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.geppetto.model.CompoundRefQuery#getQueryChain <em>Query Chain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Query Chain</em>'.
+	 * @see org.geppetto.model.CompoundRefQuery#getQueryChain()
+	 * @see #getCompoundRefQuery()
+	 * @generated
+	 */
+	EReference getCompoundRefQuery_QueryChain();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.QueryResults <em>Query Results</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2494,6 +2635,14 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference GEPPETTO_MODEL__DATA_SOURCES = eINSTANCE.getGeppettoModel_DataSources();
+
+		/**
+		 * The meta object literal for the '<em><b>Queries</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEPPETTO_MODEL__QUERIES = eINSTANCE.getGeppettoModel_Queries();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.NodeImpl <em>Node</em>}' class.
@@ -2924,6 +3073,24 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference COMPOUND_QUERY__QUERY_CHAIN = eINSTANCE.getCompoundQuery_QueryChain();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.CompoundRefQueryImpl <em>Compound Ref Query</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.CompoundRefQueryImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getCompoundRefQuery()
+		 * @generated
+		 */
+		EClass COMPOUND_REF_QUERY = eINSTANCE.getCompoundRefQuery();
+
+		/**
+		 * The meta object literal for the '<em><b>Query Chain</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOUND_REF_QUERY__QUERY_CHAIN = eINSTANCE.getCompoundRefQuery_QueryChain();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.QueryResultsImpl <em>Query Results</em>}' class.

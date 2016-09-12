@@ -80,12 +80,13 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.PROCESS_QUERY: return createProcessQuery();
 			case GeppettoPackage.SIMPLE_QUERY: return createSimpleQuery();
 			case GeppettoPackage.COMPOUND_QUERY: return createCompoundQuery();
+			case GeppettoPackage.COMPOUND_REF_QUERY: return createCompoundRefQuery();
 			case GeppettoPackage.QUERY_RESULTS: return createQueryResults();
+			case GeppettoPackage.RUNNABLE_QUERY: return createRunnableQuery();
 			case GeppettoPackage.QUERY_RESULT: return createQueryResult();
 			case GeppettoPackage.SERIALIZABLE_QUERY_RESULT: return createSerializableQueryResult();
 			case GeppettoPackage.QUERY_MATCHING_CRITERIA: return createQueryMatchingCriteria();
 			case GeppettoPackage.STRING_TO_STRING_MAP: return (EObject)createStringToStringMap();
-			case GeppettoPackage.RUNNABLE_QUERY: return createRunnableQuery();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -277,6 +278,17 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		CompoundQueryImpl compoundQuery = new CompoundQueryImpl();
 		return compoundQuery;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CompoundRefQuery createCompoundRefQuery()
+	{
+		CompoundRefQueryImpl compoundRefQuery = new CompoundRefQueryImpl();
+		return compoundRefQuery;
 	}
 
 	/**

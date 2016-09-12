@@ -203,10 +203,27 @@ public class GeppettoSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeppettoPackage.COMPOUND_REF_QUERY:
+			{
+				CompoundRefQuery compoundRefQuery = (CompoundRefQuery)theEObject;
+				T result = caseCompoundRefQuery(compoundRefQuery);
+				if (result == null) result = caseQuery(compoundRefQuery);
+				if (result == null) result = caseNode(compoundRefQuery);
+				if (result == null) result = caseISynchable(compoundRefQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GeppettoPackage.QUERY_RESULTS:
 			{
 				QueryResults queryResults = (QueryResults)theEObject;
 				T result = caseQueryResults(queryResults);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.RUNNABLE_QUERY:
+			{
+				RunnableQuery runnableQuery = (RunnableQuery)theEObject;
+				T result = caseRunnableQuery(runnableQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -251,13 +268,6 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				ISynchable iSynchable = (ISynchable)theEObject;
 				T result = caseISynchable(iSynchable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GeppettoPackage.RUNNABLE_QUERY:
-			{
-				RunnableQuery runnableQuery = (RunnableQuery)theEObject;
-				T result = caseRunnableQuery(runnableQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -517,6 +527,22 @@ public class GeppettoSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseCompoundQuery(CompoundQuery object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Compound Ref Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Compound Ref Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompoundRefQuery(CompoundRefQuery object)
 	{
 		return null;
 	}
