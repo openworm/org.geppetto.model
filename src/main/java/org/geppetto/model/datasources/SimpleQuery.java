@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 
 /**
@@ -11,12 +11,12 @@ package org.geppetto.model;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.SimpleQuery#getQuery <em>Query</em>}</li>
- *   <li>{@link org.geppetto.model.SimpleQuery#getCountQuery <em>Count Query</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.SimpleQuery#getQuery <em>Query</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.SimpleQuery#getCountQuery <em>Count Query</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getSimpleQuery()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getSimpleQuery()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface SimpleQuery extends Query
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Query</em>' attribute.
 	 * @see #setQuery(String)
-	 * @see org.geppetto.model.GeppettoPackage#getSimpleQuery_Query()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getSimpleQuery_Query()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getQuery();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.SimpleQuery#getQuery <em>Query</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.SimpleQuery#getQuery <em>Query</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Query</em>' attribute.
@@ -58,14 +58,14 @@ public interface SimpleQuery extends Query
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Count Query</em>' attribute.
 	 * @see #setCountQuery(String)
-	 * @see org.geppetto.model.GeppettoPackage#getSimpleQuery_CountQuery()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getSimpleQuery_CountQuery()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getCountQuery();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.SimpleQuery#getCountQuery <em>Count Query</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.SimpleQuery#getCountQuery <em>Count Query</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Count Query</em>' attribute.

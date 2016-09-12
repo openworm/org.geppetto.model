@@ -1,8 +1,11 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.common.util.EList;
+
+import org.geppetto.model.GeppettoLibrary;
+import org.geppetto.model.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,17 +15,17 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.DataSource#getDataSourceService <em>Data Source Service</em>}</li>
- *   <li>{@link org.geppetto.model.DataSource#getLibraryConfigurations <em>Library Configurations</em>}</li>
- *   <li>{@link org.geppetto.model.DataSource#getUrl <em>Url</em>}</li>
- *   <li>{@link org.geppetto.model.DataSource#getQueries <em>Queries</em>}</li>
- *   <li>{@link org.geppetto.model.DataSource#getDependenciesLibrary <em>Dependencies Library</em>}</li>
- *   <li>{@link org.geppetto.model.DataSource#getTargetLibrary <em>Target Library</em>}</li>
- *   <li>{@link org.geppetto.model.DataSource#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSource#getDataSourceService <em>Data Source Service</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSource#getLibraryConfigurations <em>Library Configurations</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSource#getUrl <em>Url</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSource#getQueries <em>Queries</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSource#getDependenciesLibrary <em>Dependencies Library</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSource#getTargetLibrary <em>Target Library</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSource#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getDataSource()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource()
  * @model
  * @generated
  */
@@ -38,14 +41,14 @@ public interface DataSource extends Node
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Source Service</em>' attribute.
 	 * @see #setDataSourceService(String)
-	 * @see org.geppetto.model.GeppettoPackage#getDataSource_DataSourceService()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource_DataSourceService()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getDataSourceService();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.DataSource#getDataSourceService <em>Data Source Service</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.DataSource#getDataSourceService <em>Data Source Service</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Data Source Service</em>' attribute.
@@ -56,7 +59,7 @@ public interface DataSource extends Node
 
 	/**
 	 * Returns the value of the '<em><b>Library Configurations</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.DataSourceLibraryConfiguration}.
+	 * The list contents are of type {@link org.geppetto.model.datasources.DataSourceLibraryConfiguration}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Library Configurations</em>' containment reference list isn't clear,
@@ -64,7 +67,7 @@ public interface DataSource extends Node
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Library Configurations</em>' containment reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getDataSource_LibraryConfigurations()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource_LibraryConfigurations()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -80,14 +83,14 @@ public interface DataSource extends Node
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.geppetto.model.GeppettoPackage#getDataSource_Url()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource_Url()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getUrl();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.DataSource#getUrl <em>Url</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.DataSource#getUrl <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Url</em>' attribute.
@@ -98,7 +101,7 @@ public interface DataSource extends Node
 
 	/**
 	 * Returns the value of the '<em><b>Queries</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.Query}.
+	 * The list contents are of type {@link org.geppetto.model.datasources.Query}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Queries</em>' containment reference list isn't clear,
@@ -106,7 +109,7 @@ public interface DataSource extends Node
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Queries</em>' containment reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getDataSource_Queries()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource_Queries()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -122,7 +125,7 @@ public interface DataSource extends Node
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dependencies Library</em>' reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getDataSource_DependenciesLibrary()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource_DependenciesLibrary()
 	 * @model
 	 * @generated
 	 */
@@ -138,14 +141,14 @@ public interface DataSource extends Node
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Library</em>' reference.
 	 * @see #setTargetLibrary(GeppettoLibrary)
-	 * @see org.geppetto.model.GeppettoPackage#getDataSource_TargetLibrary()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource_TargetLibrary()
 	 * @model required="true"
 	 * @generated
 	 */
 	GeppettoLibrary getTargetLibrary();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.DataSource#getTargetLibrary <em>Target Library</em>}' reference.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.DataSource#getTargetLibrary <em>Target Library</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Target Library</em>' reference.
@@ -164,14 +167,14 @@ public interface DataSource extends Node
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fetch Variable Query</em>' containment reference.
 	 * @see #setFetchVariableQuery(Query)
-	 * @see org.geppetto.model.GeppettoPackage#getDataSource_FetchVariableQuery()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource_FetchVariableQuery()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Query getFetchVariableQuery();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.DataSource#getFetchVariableQuery <em>Fetch Variable Query</em>}' containment reference.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.DataSource#getFetchVariableQuery <em>Fetch Variable Query</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fetch Variable Query</em>' containment reference.

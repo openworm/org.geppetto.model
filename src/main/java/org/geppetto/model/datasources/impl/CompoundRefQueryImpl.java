@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import java.util.Collection;
 
@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import org.geppetto.model.CompoundRefQuery;
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.Query;
+import org.geppetto.model.datasources.CompoundRefQuery;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.Query;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.geppetto.model.Query;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.CompoundRefQueryImpl#getQueryChain <em>Query Chain</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.CompoundRefQueryImpl#getQueryChain <em>Query Chain</em>}</li>
  * </ul>
  * </p>
  *
@@ -57,7 +57,7 @@ public class CompoundRefQueryImpl extends QueryImpl implements CompoundRefQuery
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.COMPOUND_REF_QUERY;
+		return DatasourcesPackage.Literals.COMPOUND_REF_QUERY;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class CompoundRefQueryImpl extends QueryImpl implements CompoundRefQuery
 	{
 		if (queryChain == null)
 		{
-			queryChain = new EObjectResolvingEList<Query>(Query.class, this, GeppettoPackage.COMPOUND_REF_QUERY__QUERY_CHAIN);
+			queryChain = new EObjectResolvingEList<Query>(Query.class, this, DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN);
 		}
 		return queryChain;
 	}
@@ -84,7 +84,7 @@ public class CompoundRefQueryImpl extends QueryImpl implements CompoundRefQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
+			case DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
 				return getQueryChain();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -101,7 +101,7 @@ public class CompoundRefQueryImpl extends QueryImpl implements CompoundRefQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
+			case DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
 				getQueryChain().clear();
 				getQueryChain().addAll((Collection<? extends Query>)newValue);
 				return;
@@ -119,7 +119,7 @@ public class CompoundRefQueryImpl extends QueryImpl implements CompoundRefQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
+			case DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
 				getQueryChain().clear();
 				return;
 		}
@@ -136,7 +136,7 @@ public class CompoundRefQueryImpl extends QueryImpl implements CompoundRefQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
+			case DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
 				return queryChain != null && !queryChain.isEmpty();
 		}
 		return super.eIsSet(featureID);

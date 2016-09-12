@@ -1,13 +1,16 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.RunnableQuery;
+
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.RunnableQuery;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,8 +19,8 @@ import org.geppetto.model.RunnableQuery;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.RunnableQueryImpl#getTargetVariablePath <em>Target Variable Path</em>}</li>
- *   <li>{@link org.geppetto.model.impl.RunnableQueryImpl#getQueryPath <em>Query Path</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.RunnableQueryImpl#getTargetVariablePath <em>Target Variable Path</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.RunnableQueryImpl#getQueryPath <em>Query Path</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,7 +86,7 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.RUNNABLE_QUERY;
+		return DatasourcesPackage.Literals.RUNNABLE_QUERY;
 	}
 
 	/**
@@ -106,7 +109,7 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 		String oldTargetVariablePath = targetVariablePath;
 		targetVariablePath = newTargetVariablePath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH, oldTargetVariablePath, targetVariablePath));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH, oldTargetVariablePath, targetVariablePath));
 	}
 
 	/**
@@ -129,7 +132,7 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 		String oldQueryPath = queryPath;
 		queryPath = newQueryPath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.RUNNABLE_QUERY__QUERY_PATH, oldQueryPath, queryPath));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.RUNNABLE_QUERY__QUERY_PATH, oldQueryPath, queryPath));
 	}
 
 	/**
@@ -142,9 +145,9 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH:
+			case DatasourcesPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH:
 				return getTargetVariablePath();
-			case GeppettoPackage.RUNNABLE_QUERY__QUERY_PATH:
+			case DatasourcesPackage.RUNNABLE_QUERY__QUERY_PATH:
 				return getQueryPath();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -160,10 +163,10 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH:
+			case DatasourcesPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH:
 				setTargetVariablePath((String)newValue);
 				return;
-			case GeppettoPackage.RUNNABLE_QUERY__QUERY_PATH:
+			case DatasourcesPackage.RUNNABLE_QUERY__QUERY_PATH:
 				setQueryPath((String)newValue);
 				return;
 		}
@@ -180,10 +183,10 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH:
+			case DatasourcesPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH:
 				setTargetVariablePath(TARGET_VARIABLE_PATH_EDEFAULT);
 				return;
-			case GeppettoPackage.RUNNABLE_QUERY__QUERY_PATH:
+			case DatasourcesPackage.RUNNABLE_QUERY__QUERY_PATH:
 				setQueryPath(QUERY_PATH_EDEFAULT);
 				return;
 		}
@@ -200,9 +203,9 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH:
+			case DatasourcesPackage.RUNNABLE_QUERY__TARGET_VARIABLE_PATH:
 				return TARGET_VARIABLE_PATH_EDEFAULT == null ? targetVariablePath != null : !TARGET_VARIABLE_PATH_EDEFAULT.equals(targetVariablePath);
-			case GeppettoPackage.RUNNABLE_QUERY__QUERY_PATH:
+			case DatasourcesPackage.RUNNABLE_QUERY__QUERY_PATH:
 				return QUERY_PATH_EDEFAULT == null ? queryPath != null : !QUERY_PATH_EDEFAULT.equals(queryPath);
 		}
 		return super.eIsSet(featureID);

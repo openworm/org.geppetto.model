@@ -36,10 +36,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import org.geppetto.model.DataSource;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
-import org.geppetto.model.Query;
+import org.geppetto.model.datasources.DataSource;
+import org.geppetto.model.datasources.Query;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.variables.Variable;
 

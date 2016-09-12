@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,11 +16,11 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.CompoundRefQuery#getQueryChain <em>Query Chain</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.CompoundRefQuery#getQueryChain <em>Query Chain</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getCompoundRefQuery()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getCompoundRefQuery()
  * @model
  * @generated
  */
@@ -28,14 +28,14 @@ public interface CompoundRefQuery extends Query
 {
 	/**
 	 * Returns the value of the '<em><b>Query Chain</b></em>' reference list.
-	 * The list contents are of type {@link org.geppetto.model.Query}.
+	 * The list contents are of type {@link org.geppetto.model.datasources.Query}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The chain of queries for this Compound query.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Query Chain</em>' reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getCompoundRefQuery_QueryChain()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getCompoundRefQuery_QueryChain()
 	 * @model required="true"
 	 * @generated
 	 */

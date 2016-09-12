@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import java.util.Collection;
 
@@ -10,23 +10,23 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.SerializableQueryResult;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.QueryResult;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Serializable Query Result</b></em>'.
+ * An implementation of the model object '<em><b>Query Result</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.SerializableQueryResultImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.QueryResultImpl#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SerializableQueryResultImpl extends AQueryResultImpl implements SerializableQueryResult
+public class QueryResultImpl extends AQueryResultImpl implements QueryResult
 {
 	/**
 	 * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
@@ -36,14 +36,14 @@ public class SerializableQueryResultImpl extends AQueryResultImpl implements Ser
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> values;
+	protected EList<Object> values;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SerializableQueryResultImpl()
+	protected QueryResultImpl()
 	{
 		super();
 	}
@@ -56,7 +56,7 @@ public class SerializableQueryResultImpl extends AQueryResultImpl implements Ser
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.SERIALIZABLE_QUERY_RESULT;
+		return DatasourcesPackage.Literals.QUERY_RESULT;
 	}
 
 	/**
@@ -64,11 +64,11 @@ public class SerializableQueryResultImpl extends AQueryResultImpl implements Ser
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getValues()
+	public EList<Object> getValues()
 	{
 		if (values == null)
 		{
-			values = new EDataTypeEList<String>(String.class, this, GeppettoPackage.SERIALIZABLE_QUERY_RESULT__VALUES);
+			values = new EDataTypeEList<Object>(Object.class, this, DatasourcesPackage.QUERY_RESULT__VALUES);
 		}
 		return values;
 	}
@@ -83,7 +83,7 @@ public class SerializableQueryResultImpl extends AQueryResultImpl implements Ser
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.SERIALIZABLE_QUERY_RESULT__VALUES:
+			case DatasourcesPackage.QUERY_RESULT__VALUES:
 				return getValues();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -100,9 +100,9 @@ public class SerializableQueryResultImpl extends AQueryResultImpl implements Ser
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.SERIALIZABLE_QUERY_RESULT__VALUES:
+			case DatasourcesPackage.QUERY_RESULT__VALUES:
 				getValues().clear();
-				getValues().addAll((Collection<? extends String>)newValue);
+				getValues().addAll((Collection<? extends Object>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -118,7 +118,7 @@ public class SerializableQueryResultImpl extends AQueryResultImpl implements Ser
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.SERIALIZABLE_QUERY_RESULT__VALUES:
+			case DatasourcesPackage.QUERY_RESULT__VALUES:
 				getValues().clear();
 				return;
 		}
@@ -135,7 +135,7 @@ public class SerializableQueryResultImpl extends AQueryResultImpl implements Ser
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.SERIALIZABLE_QUERY_RESULT__VALUES:
+			case DatasourcesPackage.QUERY_RESULT__VALUES:
 				return values != null && !values.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -158,4 +158,4 @@ public class SerializableQueryResultImpl extends AQueryResultImpl implements Ser
 		return result.toString();
 	}
 
-} //SerializableQueryResultImpl
+} //QueryResultImpl

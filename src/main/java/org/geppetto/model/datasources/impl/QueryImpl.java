@@ -1,19 +1,27 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.Query;
-import org.geppetto.model.QueryMatchingCriteria;
+
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.Query;
+import org.geppetto.model.datasources.QueryMatchingCriteria;
+
+import org.geppetto.model.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,8 +30,8 @@ import org.geppetto.model.QueryMatchingCriteria;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.QueryImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.geppetto.model.impl.QueryImpl#getMatchingCriteria <em>Matching Criteria</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.QueryImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.QueryImpl#getMatchingCriteria <em>Matching Criteria</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,7 +87,7 @@ public abstract class QueryImpl extends NodeImpl implements Query
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.QUERY;
+		return DatasourcesPackage.Literals.QUERY;
 	}
 
 	/**
@@ -102,7 +110,7 @@ public abstract class QueryImpl extends NodeImpl implements Query
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.QUERY__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.QUERY__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -114,7 +122,7 @@ public abstract class QueryImpl extends NodeImpl implements Query
 	{
 		if (matchingCriteria == null)
 		{
-			matchingCriteria = new EObjectContainmentEList<QueryMatchingCriteria>(QueryMatchingCriteria.class, this, GeppettoPackage.QUERY__MATCHING_CRITERIA);
+			matchingCriteria = new EObjectContainmentEList<QueryMatchingCriteria>(QueryMatchingCriteria.class, this, DatasourcesPackage.QUERY__MATCHING_CRITERIA);
 		}
 		return matchingCriteria;
 	}
@@ -129,7 +137,7 @@ public abstract class QueryImpl extends NodeImpl implements Query
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+			case DatasourcesPackage.QUERY__MATCHING_CRITERIA:
 				return ((InternalEList<?>)getMatchingCriteria()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -145,9 +153,9 @@ public abstract class QueryImpl extends NodeImpl implements Query
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY__DESCRIPTION:
+			case DatasourcesPackage.QUERY__DESCRIPTION:
 				return getDescription();
-			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+			case DatasourcesPackage.QUERY__MATCHING_CRITERIA:
 				return getMatchingCriteria();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -164,10 +172,10 @@ public abstract class QueryImpl extends NodeImpl implements Query
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY__DESCRIPTION:
+			case DatasourcesPackage.QUERY__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+			case DatasourcesPackage.QUERY__MATCHING_CRITERIA:
 				getMatchingCriteria().clear();
 				getMatchingCriteria().addAll((Collection<? extends QueryMatchingCriteria>)newValue);
 				return;
@@ -185,10 +193,10 @@ public abstract class QueryImpl extends NodeImpl implements Query
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY__DESCRIPTION:
+			case DatasourcesPackage.QUERY__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+			case DatasourcesPackage.QUERY__MATCHING_CRITERIA:
 				getMatchingCriteria().clear();
 				return;
 		}
@@ -205,9 +213,9 @@ public abstract class QueryImpl extends NodeImpl implements Query
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY__DESCRIPTION:
+			case DatasourcesPackage.QUERY__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case GeppettoPackage.QUERY__MATCHING_CRITERIA:
+			case DatasourcesPackage.QUERY__MATCHING_CRITERIA:
 				return matchingCriteria != null && !matchingCriteria.isEmpty();
 		}
 		return super.eIsSet(featureID);

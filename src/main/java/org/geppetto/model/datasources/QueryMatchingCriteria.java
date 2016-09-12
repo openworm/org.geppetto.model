@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,11 +16,11 @@ import org.geppetto.model.types.Type;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.QueryMatchingCriteria#getType <em>Type</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.QueryMatchingCriteria#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getQueryMatchingCriteria()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryMatchingCriteria()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface QueryMatchingCriteria extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getQueryMatchingCriteria_Type()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryMatchingCriteria_Type()
 	 * @model
 	 * @generated
 	 */

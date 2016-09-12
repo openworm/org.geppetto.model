@@ -1,8 +1,10 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.common.util.EList;
+
+import org.geppetto.model.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,12 +14,12 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.Query#getDescription <em>Description</em>}</li>
- *   <li>{@link org.geppetto.model.Query#getMatchingCriteria <em>Matching Criteria</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.Query#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.Query#getMatchingCriteria <em>Matching Criteria</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getQuery()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getQuery()
  * @model abstract="true"
  * @generated
  */
@@ -33,14 +35,14 @@ public interface Query extends Node
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.geppetto.model.GeppettoPackage#getQuery_Description()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getQuery_Description()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.Query#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.Query#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.
@@ -51,7 +53,7 @@ public interface Query extends Node
 
 	/**
 	 * Returns the value of the '<em><b>Matching Criteria</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.QueryMatchingCriteria}.
+	 * The list contents are of type {@link org.geppetto.model.datasources.QueryMatchingCriteria}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Matching Criteria</em>' containment reference list isn't clear,
@@ -59,7 +61,7 @@ public interface Query extends Node
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Matching Criteria</em>' containment reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getQuery_MatchingCriteria()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getQuery_MatchingCriteria()
 	 * @model containment="true"
 	 * @generated
 	 */

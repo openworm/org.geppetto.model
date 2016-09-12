@@ -1,25 +1,29 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.geppetto.model.AQueryResult;
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.QueryResult;
-import org.geppetto.model.QueryResults;
-import org.geppetto.model.SerializableQueryResult;
+
+import org.geppetto.model.datasources.AQueryResult;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.QueryResults;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +32,9 @@ import org.geppetto.model.SerializableQueryResult;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.QueryResultsImpl#getId <em>Id</em>}</li>
- *   <li>{@link org.geppetto.model.impl.QueryResultsImpl#getHeader <em>Header</em>}</li>
- *   <li>{@link org.geppetto.model.impl.QueryResultsImpl#getResults <em>Results</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.QueryResultsImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.QueryResultsImpl#getHeader <em>Header</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.QueryResultsImpl#getResults <em>Results</em>}</li>
  * </ul>
  * </p>
  *
@@ -96,7 +100,7 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.QUERY_RESULTS;
+		return DatasourcesPackage.Literals.QUERY_RESULTS;
 	}
 
 	/**
@@ -119,7 +123,7 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.QUERY_RESULTS__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.QUERY_RESULTS__ID, oldId, id));
 	}
 
 	/**
@@ -131,7 +135,7 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	{
 		if (header == null)
 		{
-			header = new EDataTypeUniqueEList<String>(String.class, this, GeppettoPackage.QUERY_RESULTS__HEADER);
+			header = new EDataTypeUniqueEList<String>(String.class, this, DatasourcesPackage.QUERY_RESULTS__HEADER);
 		}
 		return header;
 	}
@@ -145,7 +149,7 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	{
 		if (results == null)
 		{
-			results = new EObjectContainmentEList<AQueryResult>(AQueryResult.class, this, GeppettoPackage.QUERY_RESULTS__RESULTS);
+			results = new EObjectContainmentEList<AQueryResult>(AQueryResult.class, this, DatasourcesPackage.QUERY_RESULTS__RESULTS);
 		}
 		return results;
 	}
@@ -153,27 +157,13 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public Object getValue(String field, int row)
 	{
-		if(getResults().size()>row)
-		{
-			for(String header:getHeader()){
-				if(header.equals(field)){
-					int column=getHeader().indexOf(header);
-					if(getResults().get(row) instanceof QueryResult){
-						QueryResult resultRow=(QueryResult) getResults().get(row);
-						return resultRow.getValues().get(column);
-					}
-					else if(getResults().get(row) instanceof QueryResult){
-						SerializableQueryResult resultRow=(SerializableQueryResult) getResults().get(row);
-						return resultRow.getValues().get(column);
-					}
-				}
-			}
-		}
-		return null;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -186,7 +176,7 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_RESULTS__RESULTS:
+			case DatasourcesPackage.QUERY_RESULTS__RESULTS:
 				return ((InternalEList<?>)getResults()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -202,11 +192,11 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_RESULTS__ID:
+			case DatasourcesPackage.QUERY_RESULTS__ID:
 				return getId();
-			case GeppettoPackage.QUERY_RESULTS__HEADER:
+			case DatasourcesPackage.QUERY_RESULTS__HEADER:
 				return getHeader();
-			case GeppettoPackage.QUERY_RESULTS__RESULTS:
+			case DatasourcesPackage.QUERY_RESULTS__RESULTS:
 				return getResults();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -223,14 +213,14 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_RESULTS__ID:
+			case DatasourcesPackage.QUERY_RESULTS__ID:
 				setId((String)newValue);
 				return;
-			case GeppettoPackage.QUERY_RESULTS__HEADER:
+			case DatasourcesPackage.QUERY_RESULTS__HEADER:
 				getHeader().clear();
 				getHeader().addAll((Collection<? extends String>)newValue);
 				return;
-			case GeppettoPackage.QUERY_RESULTS__RESULTS:
+			case DatasourcesPackage.QUERY_RESULTS__RESULTS:
 				getResults().clear();
 				getResults().addAll((Collection<? extends AQueryResult>)newValue);
 				return;
@@ -248,13 +238,13 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_RESULTS__ID:
+			case DatasourcesPackage.QUERY_RESULTS__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case GeppettoPackage.QUERY_RESULTS__HEADER:
+			case DatasourcesPackage.QUERY_RESULTS__HEADER:
 				getHeader().clear();
 				return;
-			case GeppettoPackage.QUERY_RESULTS__RESULTS:
+			case DatasourcesPackage.QUERY_RESULTS__RESULTS:
 				getResults().clear();
 				return;
 		}
@@ -271,11 +261,11 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_RESULTS__ID:
+			case DatasourcesPackage.QUERY_RESULTS__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case GeppettoPackage.QUERY_RESULTS__HEADER:
+			case DatasourcesPackage.QUERY_RESULTS__HEADER:
 				return header != null && !header.isEmpty();
-			case GeppettoPackage.QUERY_RESULTS__RESULTS:
+			case DatasourcesPackage.QUERY_RESULTS__RESULTS:
 				return results != null && !results.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -291,7 +281,7 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	{
 		switch (operationID)
 		{
-			case GeppettoPackage.QUERY_RESULTS___GET_VALUE__STRING_INT:
+			case DatasourcesPackage.QUERY_RESULTS___GET_VALUE__STRING_INT:
 				return getValue((String)arguments.get(0), (Integer)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

@@ -11,11 +11,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-import org.geppetto.model.AQueryResult;
-import org.geppetto.model.CompoundQuery;
-import org.geppetto.model.CompoundRefQuery;
-import org.geppetto.model.DataSource;
-import org.geppetto.model.DataSourceLibraryConfiguration;
 import org.geppetto.model.DomainModel;
 import org.geppetto.model.ExperimentState;
 import org.geppetto.model.ExternalDomainModel;
@@ -28,16 +23,10 @@ import org.geppetto.model.ISynchable;
 import org.geppetto.model.LibraryManager;
 import org.geppetto.model.ModelFormat;
 import org.geppetto.model.Node;
-import org.geppetto.model.ProcessQuery;
-import org.geppetto.model.Query;
-import org.geppetto.model.QueryMatchingCriteria;
-import org.geppetto.model.QueryResult;
-import org.geppetto.model.QueryResults;
-import org.geppetto.model.RunnableQuery;
-import org.geppetto.model.SerializableQueryResult;
-import org.geppetto.model.SimpleQuery;
 import org.geppetto.model.Tag;
 import org.geppetto.model.VariableValue;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.impl.DatasourcesPackageImpl;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
 import org.geppetto.model.values.ValuesPackage;
@@ -128,90 +117,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dataSourceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dataSourceLibraryConfigurationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass queryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass processQueryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass simpleQueryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass compoundQueryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass compoundRefQueryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass queryResultsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass aQueryResultEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass queryResultEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass serializableQueryResultEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass queryMatchingCriteriaEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass stringToStringMapEClass = null;
 
 	/**
@@ -220,13 +125,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * @generated
 	 */
 	private EClass iSynchableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass runnableQueryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -290,18 +188,21 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) instanceof ValuesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) : ValuesPackage.eINSTANCE);
 		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) instanceof VariablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) : VariablesPackage.eINSTANCE);
+		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) instanceof DatasourcesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) : DatasourcesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theGeppettoPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 		theValuesPackage.createPackageContents();
 		theVariablesPackage.createPackageContents();
+		theDatasourcesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theGeppettoPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 		theValuesPackage.initializePackageContents();
 		theVariablesPackage.initializePackageContents();
+		theDatasourcesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theGeppettoPackage.freeze();
@@ -667,376 +568,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDataSource()
-	{
-		return dataSourceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDataSource_DataSourceService()
-	{
-		return (EAttribute)dataSourceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataSource_LibraryConfigurations()
-	{
-		return (EReference)dataSourceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDataSource_Url()
-	{
-		return (EAttribute)dataSourceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataSource_Queries()
-	{
-		return (EReference)dataSourceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataSource_DependenciesLibrary()
-	{
-		return (EReference)dataSourceEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataSource_TargetLibrary()
-	{
-		return (EReference)dataSourceEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataSource_FetchVariableQuery()
-	{
-		return (EReference)dataSourceEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDataSourceLibraryConfiguration()
-	{
-		return dataSourceLibraryConfigurationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataSourceLibraryConfiguration_Library()
-	{
-		return (EReference)dataSourceLibraryConfigurationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDataSourceLibraryConfiguration_ModelInterpreterId()
-	{
-		return (EAttribute)dataSourceLibraryConfigurationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDataSourceLibraryConfiguration_Format()
-	{
-		return (EAttribute)dataSourceLibraryConfigurationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getQuery()
-	{
-		return queryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQuery_Description()
-	{
-		return (EAttribute)queryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuery_MatchingCriteria()
-	{
-		return (EReference)queryEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getProcessQuery()
-	{
-		return processQueryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProcessQuery_Parameters()
-	{
-		return (EReference)processQueryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getProcessQuery_QueryProcessorId()
-	{
-		return (EAttribute)processQueryEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSimpleQuery()
-	{
-		return simpleQueryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSimpleQuery_Query()
-	{
-		return (EAttribute)simpleQueryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSimpleQuery_CountQuery()
-	{
-		return (EAttribute)simpleQueryEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCompoundQuery()
-	{
-		return compoundQueryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCompoundQuery_QueryChain()
-	{
-		return (EReference)compoundQueryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCompoundRefQuery()
-	{
-		return compoundRefQueryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCompoundRefQuery_QueryChain()
-	{
-		return (EReference)compoundRefQueryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getQueryResults()
-	{
-		return queryResultsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQueryResults_Id()
-	{
-		return (EAttribute)queryResultsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQueryResults_Header()
-	{
-		return (EAttribute)queryResultsEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQueryResults_Results()
-	{
-		return (EReference)queryResultsEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getQueryResults__GetValue__String_int()
-	{
-		return queryResultsEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAQueryResult()
-	{
-		return aQueryResultEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getQueryResult()
-	{
-		return queryResultEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getQueryResult_Values()
-	{
-		return (EAttribute)queryResultEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSerializableQueryResult()
-	{
-		return serializableQueryResultEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSerializableQueryResult_Values()
-	{
-		return (EAttribute)serializableQueryResultEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getQueryMatchingCriteria()
-	{
-		return queryMatchingCriteriaEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQueryMatchingCriteria_Type()
-	{
-		return (EReference)queryMatchingCriteriaEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStringToStringMap()
 	{
 		return stringToStringMapEClass;
@@ -1080,36 +611,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	public EAttribute getISynchable_Synched()
 	{
 		return (EAttribute)iSynchableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRunnableQuery()
-	{
-		return runnableQueryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRunnableQuery_TargetVariablePath()
-	{
-		return (EAttribute)runnableQueryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRunnableQuery_QueryPath()
-	{
-		return (EAttribute)runnableQueryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1197,59 +698,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		externalDomainModelEClass = createEClass(EXTERNAL_DOMAIN_MODEL);
 		createEAttribute(externalDomainModelEClass, EXTERNAL_DOMAIN_MODEL__FILE_FORMAT);
 
-		dataSourceEClass = createEClass(DATA_SOURCE);
-		createEAttribute(dataSourceEClass, DATA_SOURCE__DATA_SOURCE_SERVICE);
-		createEReference(dataSourceEClass, DATA_SOURCE__LIBRARY_CONFIGURATIONS);
-		createEAttribute(dataSourceEClass, DATA_SOURCE__URL);
-		createEReference(dataSourceEClass, DATA_SOURCE__QUERIES);
-		createEReference(dataSourceEClass, DATA_SOURCE__DEPENDENCIES_LIBRARY);
-		createEReference(dataSourceEClass, DATA_SOURCE__TARGET_LIBRARY);
-		createEReference(dataSourceEClass, DATA_SOURCE__FETCH_VARIABLE_QUERY);
-
-		dataSourceLibraryConfigurationEClass = createEClass(DATA_SOURCE_LIBRARY_CONFIGURATION);
-		createEReference(dataSourceLibraryConfigurationEClass, DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY);
-		createEAttribute(dataSourceLibraryConfigurationEClass, DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID);
-		createEAttribute(dataSourceLibraryConfigurationEClass, DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT);
-
-		queryEClass = createEClass(QUERY);
-		createEAttribute(queryEClass, QUERY__DESCRIPTION);
-		createEReference(queryEClass, QUERY__MATCHING_CRITERIA);
-
-		processQueryEClass = createEClass(PROCESS_QUERY);
-		createEReference(processQueryEClass, PROCESS_QUERY__PARAMETERS);
-		createEAttribute(processQueryEClass, PROCESS_QUERY__QUERY_PROCESSOR_ID);
-
-		simpleQueryEClass = createEClass(SIMPLE_QUERY);
-		createEAttribute(simpleQueryEClass, SIMPLE_QUERY__QUERY);
-		createEAttribute(simpleQueryEClass, SIMPLE_QUERY__COUNT_QUERY);
-
-		compoundQueryEClass = createEClass(COMPOUND_QUERY);
-		createEReference(compoundQueryEClass, COMPOUND_QUERY__QUERY_CHAIN);
-
-		compoundRefQueryEClass = createEClass(COMPOUND_REF_QUERY);
-		createEReference(compoundRefQueryEClass, COMPOUND_REF_QUERY__QUERY_CHAIN);
-
-		queryResultsEClass = createEClass(QUERY_RESULTS);
-		createEAttribute(queryResultsEClass, QUERY_RESULTS__ID);
-		createEAttribute(queryResultsEClass, QUERY_RESULTS__HEADER);
-		createEReference(queryResultsEClass, QUERY_RESULTS__RESULTS);
-		createEOperation(queryResultsEClass, QUERY_RESULTS___GET_VALUE__STRING_INT);
-
-		runnableQueryEClass = createEClass(RUNNABLE_QUERY);
-		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__TARGET_VARIABLE_PATH);
-		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__QUERY_PATH);
-
-		aQueryResultEClass = createEClass(AQUERY_RESULT);
-
-		queryResultEClass = createEClass(QUERY_RESULT);
-		createEAttribute(queryResultEClass, QUERY_RESULT__VALUES);
-
-		serializableQueryResultEClass = createEClass(SERIALIZABLE_QUERY_RESULT);
-		createEAttribute(serializableQueryResultEClass, SERIALIZABLE_QUERY_RESULT__VALUES);
-
-		queryMatchingCriteriaEClass = createEClass(QUERY_MATCHING_CRITERIA);
-		createEReference(queryMatchingCriteriaEClass, QUERY_MATCHING_CRITERIA__TYPE);
-
 		stringToStringMapEClass = createEClass(STRING_TO_STRING_MAP);
 		createEAttribute(stringToStringMapEClass, STRING_TO_STRING_MAP__KEY);
 		createEAttribute(stringToStringMapEClass, STRING_TO_STRING_MAP__VALUE);
@@ -1289,12 +737,14 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 		ValuesPackage theValuesPackage = (ValuesPackage)EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
 		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
+		DatasourcesPackage theDatasourcesPackage = (DatasourcesPackage)EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theTypesPackage);
 		getESubpackages().add(theValuesPackage);
 		getESubpackages().add(theVariablesPackage);
+		getESubpackages().add(theDatasourcesPackage);
 
 		// Create type parameters
 
@@ -1305,14 +755,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		geppettoLibraryEClass.getESuperTypes().add(this.getNode());
 		tagEClass.getESuperTypes().add(this.getISynchable());
 		externalDomainModelEClass.getESuperTypes().add(this.getDomainModel());
-		dataSourceEClass.getESuperTypes().add(this.getNode());
-		queryEClass.getESuperTypes().add(this.getNode());
-		processQueryEClass.getESuperTypes().add(this.getQuery());
-		simpleQueryEClass.getESuperTypes().add(this.getQuery());
-		compoundQueryEClass.getESuperTypes().add(this.getQuery());
-		compoundRefQueryEClass.getESuperTypes().add(this.getQuery());
-		queryResultEClass.getESuperTypes().add(this.getAQueryResult());
-		serializableQueryResultEClass.getESuperTypes().add(this.getAQueryResult());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(geppettoModelEClass, GeppettoModel.class, "GeppettoModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1321,8 +763,8 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEReference(getGeppettoModel_Tags(), this.getTag(), null, "tags", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeppettoModel_Id(), theXMLTypePackage.getString(), "id", "", 1, 1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeppettoModel_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeppettoModel_DataSources(), this.getDataSource(), null, "dataSources", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeppettoModel_Queries(), this.getQuery(), null, "queries", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeppettoModel_DataSources(), theDatasourcesPackage.getDataSource(), null, "dataSources", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeppettoModel_Queries(), theDatasourcesPackage.getQuery(), null, "queries", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNode_Id(), theXMLTypePackage.getString(), "id", "", 1, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1360,62 +802,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 
 		initEClass(externalDomainModelEClass, ExternalDomainModel.class, "ExternalDomainModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExternalDomainModel_FileFormat(), this.getFileFormat(), "fileFormat", "ZIP", 1, 1, ExternalDomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(dataSourceEClass, DataSource.class, "DataSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDataSource_DataSourceService(), theXMLTypePackage.getString(), "dataSourceService", null, 1, 1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataSource_LibraryConfigurations(), this.getDataSourceLibraryConfiguration(), null, "libraryConfigurations", null, 0, -1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDataSource_Url(), theXMLTypePackage.getString(), "url", null, 1, 1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataSource_Queries(), this.getQuery(), null, "queries", null, 0, -1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataSource_DependenciesLibrary(), this.getGeppettoLibrary(), null, "dependenciesLibrary", null, 0, -1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataSource_TargetLibrary(), this.getGeppettoLibrary(), null, "targetLibrary", null, 1, 1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataSource_FetchVariableQuery(), this.getQuery(), null, "fetchVariableQuery", null, 0, 1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(dataSourceLibraryConfigurationEClass, DataSourceLibraryConfiguration.class, "DataSourceLibraryConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDataSourceLibraryConfiguration_Library(), this.getGeppettoLibrary(), null, "library", null, 1, 1, DataSourceLibraryConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDataSourceLibraryConfiguration_ModelInterpreterId(), theXMLTypePackage.getString(), "modelInterpreterId", null, 1, 1, DataSourceLibraryConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDataSourceLibraryConfiguration_Format(), theXMLTypePackage.getString(), "format", null, 1, 1, DataSourceLibraryConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(queryEClass, Query.class, "Query", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getQuery_Description(), theXMLTypePackage.getString(), "description", null, 1, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuery_MatchingCriteria(), this.getQueryMatchingCriteria(), null, "matchingCriteria", null, 0, -1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(processQueryEClass, ProcessQuery.class, "ProcessQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProcessQuery_Parameters(), this.getStringToStringMap(), null, "parameters", null, 0, -1, ProcessQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessQuery_QueryProcessorId(), theXMLTypePackage.getString(), "queryProcessorId", null, 1, 1, ProcessQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(simpleQueryEClass, SimpleQuery.class, "SimpleQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSimpleQuery_Query(), theXMLTypePackage.getString(), "query", null, 1, 1, SimpleQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSimpleQuery_CountQuery(), theXMLTypePackage.getString(), "countQuery", null, 1, 1, SimpleQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(compoundQueryEClass, CompoundQuery.class, "CompoundQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCompoundQuery_QueryChain(), this.getQuery(), null, "queryChain", null, 1, -1, CompoundQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(compoundRefQueryEClass, CompoundRefQuery.class, "CompoundRefQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCompoundRefQuery_QueryChain(), this.getQuery(), null, "queryChain", null, 1, -1, CompoundRefQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(queryResultsEClass, QueryResults.class, "QueryResults", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getQueryResults_Id(), theXMLTypePackage.getString(), "id", null, 1, 1, QueryResults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getQueryResults_Header(), theXMLTypePackage.getString(), "header", null, 0, -1, QueryResults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQueryResults_Results(), this.getAQueryResult(), null, "results", null, 0, -1, QueryResults.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		EOperation op = initEOperation(getQueryResults__GetValue__String_int(), ecorePackage.getEJavaObject(), "getValue", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theXMLTypePackage.getString(), "field", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theXMLTypePackage.getInt(), "row", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(runnableQueryEClass, RunnableQuery.class, "RunnableQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRunnableQuery_TargetVariablePath(), theXMLTypePackage.getString(), "targetVariablePath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRunnableQuery_QueryPath(), theXMLTypePackage.getString(), "queryPath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(aQueryResultEClass, AQueryResult.class, "AQueryResult", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(queryResultEClass, QueryResult.class, "QueryResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getQueryResult_Values(), ecorePackage.getEJavaObject(), "values", null, 1, -1, QueryResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(serializableQueryResultEClass, SerializableQueryResult.class, "SerializableQueryResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSerializableQueryResult_Values(), theXMLTypePackage.getString(), "values", null, 1, -1, SerializableQueryResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(queryMatchingCriteriaEClass, QueryMatchingCriteria.class, "QueryMatchingCriteria", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQueryMatchingCriteria_Type(), theTypesPackage.getType(), null, "type", null, 0, -1, QueryMatchingCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stringToStringMapEClass, Map.Entry.class, "StringToStringMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToStringMap_Key(), theXMLTypePackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

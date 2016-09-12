@@ -1,13 +1,13 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.geppetto.model.AQueryResult;
-import org.geppetto.model.GeppettoPackage;
+import org.geppetto.model.datasources.AQueryResult;
+import org.geppetto.model.datasources.DatasourcesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public abstract class AQueryResultImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.AQUERY_RESULT;
+		return DatasourcesPackage.Literals.AQUERY_RESULT;
 	}
 
 } //AQueryResultImpl

@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -10,9 +10,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.geppetto.model.DataSourceLibraryConfiguration;
 import org.geppetto.model.GeppettoLibrary;
-import org.geppetto.model.GeppettoPackage;
+
+import org.geppetto.model.datasources.DataSourceLibraryConfiguration;
+import org.geppetto.model.datasources.DatasourcesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,9 +22,9 @@ import org.geppetto.model.GeppettoPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.DataSourceLibraryConfigurationImpl#getLibrary <em>Library</em>}</li>
- *   <li>{@link org.geppetto.model.impl.DataSourceLibraryConfigurationImpl#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
- *   <li>{@link org.geppetto.model.impl.DataSourceLibraryConfigurationImpl#getFormat <em>Format</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceLibraryConfigurationImpl#getLibrary <em>Library</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceLibraryConfigurationImpl#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceLibraryConfigurationImpl#getFormat <em>Format</em>}</li>
  * </ul>
  * </p>
  *
@@ -99,7 +100,7 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.DATA_SOURCE_LIBRARY_CONFIGURATION;
+		return DatasourcesPackage.Literals.DATA_SOURCE_LIBRARY_CONFIGURATION;
 	}
 
 	/**
@@ -116,7 +117,7 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 			if (library != oldLibrary)
 			{
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY, oldLibrary, library));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY, oldLibrary, library));
 			}
 		}
 		return library;
@@ -142,7 +143,7 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 		GeppettoLibrary oldLibrary = library;
 		library = newLibrary;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY, oldLibrary, library));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY, oldLibrary, library));
 	}
 
 	/**
@@ -165,7 +166,7 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 		String oldModelInterpreterId = modelInterpreterId;
 		modelInterpreterId = newModelInterpreterId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID, oldModelInterpreterId, modelInterpreterId));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID, oldModelInterpreterId, modelInterpreterId));
 	}
 
 	/**
@@ -188,7 +189,7 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 		String oldFormat = format;
 		format = newFormat;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT, oldFormat, format));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT, oldFormat, format));
 	}
 
 	/**
@@ -201,12 +202,12 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY:
 				if (resolve) return getLibrary();
 				return basicGetLibrary();
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID:
 				return getModelInterpreterId();
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT:
 				return getFormat();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -222,13 +223,13 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY:
 				setLibrary((GeppettoLibrary)newValue);
 				return;
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID:
 				setModelInterpreterId((String)newValue);
 				return;
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT:
 				setFormat((String)newValue);
 				return;
 		}
@@ -245,13 +246,13 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY:
 				setLibrary((GeppettoLibrary)null);
 				return;
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID:
 				setModelInterpreterId(MODEL_INTERPRETER_ID_EDEFAULT);
 				return;
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT:
 				setFormat(FORMAT_EDEFAULT);
 				return;
 		}
@@ -268,11 +269,11 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY:
 				return library != null;
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__MODEL_INTERPRETER_ID:
 				return MODEL_INTERPRETER_ID_EDEFAULT == null ? modelInterpreterId != null : !MODEL_INTERPRETER_ID_EDEFAULT.equals(modelInterpreterId);
-			case GeppettoPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT:
+			case DatasourcesPackage.DATA_SOURCE_LIBRARY_CONFIGURATION__FORMAT:
 				return FORMAT_EDEFAULT == null ? format != null : !FORMAT_EDEFAULT.equals(format);
 		}
 		return super.eIsSet(featureID);

@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import java.util.Collection;
 
@@ -18,11 +18,14 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.geppetto.model.DataSource;
-import org.geppetto.model.DataSourceLibraryConfiguration;
 import org.geppetto.model.GeppettoLibrary;
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.Query;
+
+import org.geppetto.model.datasources.DataSource;
+import org.geppetto.model.datasources.DataSourceLibraryConfiguration;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.Query;
+
+import org.geppetto.model.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,13 +34,13 @@ import org.geppetto.model.Query;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getDataSourceService <em>Data Source Service</em>}</li>
- *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getLibraryConfigurations <em>Library Configurations</em>}</li>
- *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getQueries <em>Queries</em>}</li>
- *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getDependenciesLibrary <em>Dependencies Library</em>}</li>
- *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getTargetLibrary <em>Target Library</em>}</li>
- *   <li>{@link org.geppetto.model.impl.DataSourceImpl#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getDataSourceService <em>Data Source Service</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getLibraryConfigurations <em>Library Configurations</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getQueries <em>Queries</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getDependenciesLibrary <em>Dependencies Library</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getTargetLibrary <em>Target Library</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
  * </ul>
  * </p>
  *
@@ -153,7 +156,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.DATA_SOURCE;
+		return DatasourcesPackage.Literals.DATA_SOURCE;
 	}
 
 	/**
@@ -176,7 +179,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 		String oldDataSourceService = dataSourceService;
 		dataSourceService = newDataSourceService;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE__DATA_SOURCE_SERVICE, oldDataSourceService, dataSourceService));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.DATA_SOURCE__DATA_SOURCE_SERVICE, oldDataSourceService, dataSourceService));
 	}
 
 	/**
@@ -188,7 +191,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	{
 		if (libraryConfigurations == null)
 		{
-			libraryConfigurations = new EObjectContainmentEList<DataSourceLibraryConfiguration>(DataSourceLibraryConfiguration.class, this, GeppettoPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS);
+			libraryConfigurations = new EObjectContainmentEList<DataSourceLibraryConfiguration>(DataSourceLibraryConfiguration.class, this, DatasourcesPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS);
 		}
 		return libraryConfigurations;
 	}
@@ -213,7 +216,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.DATA_SOURCE__URL, oldUrl, url));
 	}
 
 	/**
@@ -225,7 +228,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	{
 		if (queries == null)
 		{
-			queries = new EObjectContainmentEList<Query>(Query.class, this, GeppettoPackage.DATA_SOURCE__QUERIES);
+			queries = new EObjectContainmentEList<Query>(Query.class, this, DatasourcesPackage.DATA_SOURCE__QUERIES);
 		}
 		return queries;
 	}
@@ -239,7 +242,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	{
 		if (dependenciesLibrary == null)
 		{
-			dependenciesLibrary = new EObjectResolvingEList<GeppettoLibrary>(GeppettoLibrary.class, this, GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY);
+			dependenciesLibrary = new EObjectResolvingEList<GeppettoLibrary>(GeppettoLibrary.class, this, DatasourcesPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY);
 		}
 		return dependenciesLibrary;
 	}
@@ -258,7 +261,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 			if (targetLibrary != oldTargetLibrary)
 			{
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY, oldTargetLibrary, targetLibrary));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DatasourcesPackage.DATA_SOURCE__TARGET_LIBRARY, oldTargetLibrary, targetLibrary));
 			}
 		}
 		return targetLibrary;
@@ -284,7 +287,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 		GeppettoLibrary oldTargetLibrary = targetLibrary;
 		targetLibrary = newTargetLibrary;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY, oldTargetLibrary, targetLibrary));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.DATA_SOURCE__TARGET_LIBRARY, oldTargetLibrary, targetLibrary));
 	}
 
 	/**
@@ -308,7 +311,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 		fetchVariableQuery = newFetchVariableQuery;
 		if (eNotificationRequired())
 		{
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, oldFetchVariableQuery, newFetchVariableQuery);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, oldFetchVariableQuery, newFetchVariableQuery);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -325,14 +328,14 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 		{
 			NotificationChain msgs = null;
 			if (fetchVariableQuery != null)
-				msgs = ((InternalEObject)fetchVariableQuery).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, null, msgs);
+				msgs = ((InternalEObject)fetchVariableQuery).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, null, msgs);
 			if (newFetchVariableQuery != null)
-				msgs = ((InternalEObject)newFetchVariableQuery).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, null, msgs);
+				msgs = ((InternalEObject)newFetchVariableQuery).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, null, msgs);
 			msgs = basicSetFetchVariableQuery(newFetchVariableQuery, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, newFetchVariableQuery, newFetchVariableQuery));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY, newFetchVariableQuery, newFetchVariableQuery));
 	}
 
 	/**
@@ -345,11 +348,11 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
+			case DatasourcesPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
 				return ((InternalEList<?>)getLibraryConfigurations()).basicRemove(otherEnd, msgs);
-			case GeppettoPackage.DATA_SOURCE__QUERIES:
+			case DatasourcesPackage.DATA_SOURCE__QUERIES:
 				return ((InternalEList<?>)getQueries()).basicRemove(otherEnd, msgs);
-			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+			case DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
 				return basicSetFetchVariableQuery(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -365,20 +368,20 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.DATA_SOURCE__DATA_SOURCE_SERVICE:
+			case DatasourcesPackage.DATA_SOURCE__DATA_SOURCE_SERVICE:
 				return getDataSourceService();
-			case GeppettoPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
+			case DatasourcesPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
 				return getLibraryConfigurations();
-			case GeppettoPackage.DATA_SOURCE__URL:
+			case DatasourcesPackage.DATA_SOURCE__URL:
 				return getUrl();
-			case GeppettoPackage.DATA_SOURCE__QUERIES:
+			case DatasourcesPackage.DATA_SOURCE__QUERIES:
 				return getQueries();
-			case GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
 				return getDependenciesLibrary();
-			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE__TARGET_LIBRARY:
 				if (resolve) return getTargetLibrary();
 				return basicGetTargetLibrary();
-			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+			case DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
 				return getFetchVariableQuery();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -395,28 +398,28 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.DATA_SOURCE__DATA_SOURCE_SERVICE:
+			case DatasourcesPackage.DATA_SOURCE__DATA_SOURCE_SERVICE:
 				setDataSourceService((String)newValue);
 				return;
-			case GeppettoPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
+			case DatasourcesPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
 				getLibraryConfigurations().clear();
 				getLibraryConfigurations().addAll((Collection<? extends DataSourceLibraryConfiguration>)newValue);
 				return;
-			case GeppettoPackage.DATA_SOURCE__URL:
+			case DatasourcesPackage.DATA_SOURCE__URL:
 				setUrl((String)newValue);
 				return;
-			case GeppettoPackage.DATA_SOURCE__QUERIES:
+			case DatasourcesPackage.DATA_SOURCE__QUERIES:
 				getQueries().clear();
 				getQueries().addAll((Collection<? extends Query>)newValue);
 				return;
-			case GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
 				getDependenciesLibrary().clear();
 				getDependenciesLibrary().addAll((Collection<? extends GeppettoLibrary>)newValue);
 				return;
-			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE__TARGET_LIBRARY:
 				setTargetLibrary((GeppettoLibrary)newValue);
 				return;
-			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+			case DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
 				setFetchVariableQuery((Query)newValue);
 				return;
 		}
@@ -433,25 +436,25 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.DATA_SOURCE__DATA_SOURCE_SERVICE:
+			case DatasourcesPackage.DATA_SOURCE__DATA_SOURCE_SERVICE:
 				setDataSourceService(DATA_SOURCE_SERVICE_EDEFAULT);
 				return;
-			case GeppettoPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
+			case DatasourcesPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
 				getLibraryConfigurations().clear();
 				return;
-			case GeppettoPackage.DATA_SOURCE__URL:
+			case DatasourcesPackage.DATA_SOURCE__URL:
 				setUrl(URL_EDEFAULT);
 				return;
-			case GeppettoPackage.DATA_SOURCE__QUERIES:
+			case DatasourcesPackage.DATA_SOURCE__QUERIES:
 				getQueries().clear();
 				return;
-			case GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
 				getDependenciesLibrary().clear();
 				return;
-			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE__TARGET_LIBRARY:
 				setTargetLibrary((GeppettoLibrary)null);
 				return;
-			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+			case DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
 				setFetchVariableQuery((Query)null);
 				return;
 		}
@@ -468,19 +471,19 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.DATA_SOURCE__DATA_SOURCE_SERVICE:
+			case DatasourcesPackage.DATA_SOURCE__DATA_SOURCE_SERVICE:
 				return DATA_SOURCE_SERVICE_EDEFAULT == null ? dataSourceService != null : !DATA_SOURCE_SERVICE_EDEFAULT.equals(dataSourceService);
-			case GeppettoPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
+			case DatasourcesPackage.DATA_SOURCE__LIBRARY_CONFIGURATIONS:
 				return libraryConfigurations != null && !libraryConfigurations.isEmpty();
-			case GeppettoPackage.DATA_SOURCE__URL:
+			case DatasourcesPackage.DATA_SOURCE__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-			case GeppettoPackage.DATA_SOURCE__QUERIES:
+			case DatasourcesPackage.DATA_SOURCE__QUERIES:
 				return queries != null && !queries.isEmpty();
-			case GeppettoPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE__DEPENDENCIES_LIBRARY:
 				return dependenciesLibrary != null && !dependenciesLibrary.isEmpty();
-			case GeppettoPackage.DATA_SOURCE__TARGET_LIBRARY:
+			case DatasourcesPackage.DATA_SOURCE__TARGET_LIBRARY:
 				return targetLibrary != null;
-			case GeppettoPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
+			case DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
 				return fetchVariableQuery != null;
 		}
 		return super.eIsSet(featureID);

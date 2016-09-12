@@ -4,6 +4,8 @@ package org.geppetto.model;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.geppetto.model.datasources.DataSource;
+import org.geppetto.model.datasources.Query;
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -153,7 +155,7 @@ public interface GeppettoModel extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Data Sources</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.DataSource}.
+	 * The list contents are of type {@link org.geppetto.model.datasources.DataSource}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Data Sources</em>' containment reference list isn't clear,
@@ -172,7 +174,7 @@ public interface GeppettoModel extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Queries</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.Query}.
+	 * The list contents are of type {@link org.geppetto.model.datasources.Query}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Queries</em>' containment reference list isn't clear,

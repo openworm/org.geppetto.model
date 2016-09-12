@@ -1,8 +1,10 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.ecore.EObject;
+
+import org.geppetto.model.GeppettoLibrary;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,13 +14,13 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.DataSourceLibraryConfiguration#getLibrary <em>Library</em>}</li>
- *   <li>{@link org.geppetto.model.DataSourceLibraryConfiguration#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
- *   <li>{@link org.geppetto.model.DataSourceLibraryConfiguration#getFormat <em>Format</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration#getLibrary <em>Library</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration#getFormat <em>Format</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getDataSourceLibraryConfiguration()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSourceLibraryConfiguration()
  * @model
  * @generated
  */
@@ -34,14 +36,14 @@ public interface DataSourceLibraryConfiguration extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Library</em>' reference.
 	 * @see #setLibrary(GeppettoLibrary)
-	 * @see org.geppetto.model.GeppettoPackage#getDataSourceLibraryConfiguration_Library()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSourceLibraryConfiguration_Library()
 	 * @model required="true"
 	 * @generated
 	 */
 	GeppettoLibrary getLibrary();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.DataSourceLibraryConfiguration#getLibrary <em>Library</em>}' reference.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration#getLibrary <em>Library</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Library</em>' reference.
@@ -60,14 +62,14 @@ public interface DataSourceLibraryConfiguration extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model Interpreter Id</em>' attribute.
 	 * @see #setModelInterpreterId(String)
-	 * @see org.geppetto.model.GeppettoPackage#getDataSourceLibraryConfiguration_ModelInterpreterId()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSourceLibraryConfiguration_ModelInterpreterId()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getModelInterpreterId();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.DataSourceLibraryConfiguration#getModelInterpreterId <em>Model Interpreter Id</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration#getModelInterpreterId <em>Model Interpreter Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Model Interpreter Id</em>' attribute.
@@ -86,14 +88,14 @@ public interface DataSourceLibraryConfiguration extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Format</em>' attribute.
 	 * @see #setFormat(String)
-	 * @see org.geppetto.model.GeppettoPackage#getDataSourceLibraryConfiguration_Format()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSourceLibraryConfiguration_Format()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getFormat();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.DataSourceLibraryConfiguration#getFormat <em>Format</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration#getFormat <em>Format</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Format</em>' attribute.

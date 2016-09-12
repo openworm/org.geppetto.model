@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.GeppettoPackage;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.impl.DatasourcesPackageImpl;
 import org.geppetto.model.impl.GeppettoPackageImpl;
 import org.geppetto.model.types.ArgumentType;
 import org.geppetto.model.types.ArrayType;
@@ -241,18 +243,21 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) instanceof GeppettoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) : GeppettoPackage.eINSTANCE);
 		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) instanceof ValuesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) : ValuesPackage.eINSTANCE);
 		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) instanceof VariablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) : VariablesPackage.eINSTANCE);
+		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) instanceof DatasourcesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) : DatasourcesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theTypesPackage.createPackageContents();
 		theGeppettoPackage.createPackageContents();
 		theValuesPackage.createPackageContents();
 		theVariablesPackage.createPackageContents();
+		theDatasourcesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theTypesPackage.initializePackageContents();
 		theGeppettoPackage.initializePackageContents();
 		theValuesPackage.initializePackageContents();
 		theVariablesPackage.initializePackageContents();
+		theDatasourcesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theTypesPackage.freeze();

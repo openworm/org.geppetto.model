@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.RunnableQuery#getTargetVariablePath <em>Target Variable Path</em>}</li>
- *   <li>{@link org.geppetto.model.RunnableQuery#getQueryPath <em>Query Path</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.RunnableQuery#getTargetVariablePath <em>Target Variable Path</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.RunnableQuery#getQueryPath <em>Query Path</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getRunnableQuery()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getRunnableQuery()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface RunnableQuery extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Variable Path</em>' attribute.
 	 * @see #setTargetVariablePath(String)
-	 * @see org.geppetto.model.GeppettoPackage#getRunnableQuery_TargetVariablePath()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getRunnableQuery_TargetVariablePath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getTargetVariablePath();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.RunnableQuery#getTargetVariablePath <em>Target Variable Path</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.RunnableQuery#getTargetVariablePath <em>Target Variable Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Target Variable Path</em>' attribute.
@@ -59,14 +59,14 @@ public interface RunnableQuery extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Query Path</em>' attribute.
 	 * @see #setQueryPath(String)
-	 * @see org.geppetto.model.GeppettoPackage#getRunnableQuery_QueryPath()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getRunnableQuery_QueryPath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getQueryPath();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.RunnableQuery#getQueryPath <em>Query Path</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.RunnableQuery#getQueryPath <em>Query Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Query Path</em>' attribute.

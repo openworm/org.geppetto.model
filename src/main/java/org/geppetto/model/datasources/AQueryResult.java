@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.geppetto.model.GeppettoPackage#getAQueryResult()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getAQueryResult()
  * @model abstract="true"
  * @generated
  */
