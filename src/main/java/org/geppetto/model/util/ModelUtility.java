@@ -89,6 +89,13 @@ public class ModelUtility
 			String token = st.nextToken();
 			if(dataSource == null)
 			{
+				for(Query q : geppettoModel.getQueries())
+				{
+					if(q.getId().equals(token))
+					{
+						return q;
+					}
+				}
 				for(DataSource ds : geppettoModel.getDataSources())
 				{
 					if(ds.getId().equals(token))
