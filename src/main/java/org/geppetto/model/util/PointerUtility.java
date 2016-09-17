@@ -213,7 +213,7 @@ public class PointerUtility
 				library = findLibrary(model, token);
 				if(library == null)
 				{
-					throw new GeppettoModelException("Can't find a type for the path " + path);
+					throw new GeppettoModelException("Can't find a value for the path " + path);
 				}
 			}
 
@@ -227,7 +227,7 @@ public class PointerUtility
 		}
 		else
 		{
-			throw new GeppettoModelException("Couldn't find a type for the path " + path);
+			throw new GeppettoModelException("Couldn't find a value for the path " + path);
 		}		
 	}
 	/**
