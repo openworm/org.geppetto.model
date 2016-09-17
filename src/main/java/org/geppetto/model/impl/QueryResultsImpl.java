@@ -7,22 +7,19 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.geppetto.model.AQueryResult;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.QueryResult;
 import org.geppetto.model.QueryResults;
+import org.geppetto.model.SerializableQueryResult;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,7 +76,7 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<QueryResult> results;
+	protected EList<AQueryResult> results;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -144,11 +141,11 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<QueryResult> getResults()
+	public EList<AQueryResult> getResults()
 	{
 		if (results == null)
 		{
-			results = new EObjectContainmentEList<QueryResult>(QueryResult.class, this, GeppettoPackage.QUERY_RESULTS__RESULTS);
+			results = new EObjectContainmentEList<AQueryResult>(AQueryResult.class, this, GeppettoPackage.QUERY_RESULTS__RESULTS);
 		}
 		return results;
 	}
@@ -165,8 +162,14 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 			for(String header:getHeader()){
 				if(header.equals(field)){
 					int column=getHeader().indexOf(header);
-					QueryResult resultRow=getResults().get(row);
-					return resultRow.getValues().get(column);
+					if(getResults().get(row) instanceof QueryResult){
+						QueryResult resultRow=(QueryResult) getResults().get(row);
+						return resultRow.getValues().get(column);
+					}
+					else if(getResults().get(row) instanceof QueryResult){
+						SerializableQueryResult resultRow=(SerializableQueryResult) getResults().get(row);
+						return resultRow.getValues().get(column);
+					}
 				}
 			}
 		}
@@ -229,7 +232,7 @@ public class QueryResultsImpl extends MinimalEObjectImpl.Container implements Qu
 				return;
 			case GeppettoPackage.QUERY_RESULTS__RESULTS:
 				getResults().clear();
-				getResults().addAll((Collection<? extends QueryResult>)newValue);
+				getResults().addAll((Collection<? extends AQueryResult>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -168,6 +168,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				Query query = (Query)theEObject;
 				T result = caseQuery(query);
+				if (result == null) result = caseNode(query);
 				if (result == null) result = caseISynchable(query);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -177,6 +178,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				ProcessQuery processQuery = (ProcessQuery)theEObject;
 				T result = caseProcessQuery(processQuery);
 				if (result == null) result = caseQuery(processQuery);
+				if (result == null) result = caseNode(processQuery);
 				if (result == null) result = caseISynchable(processQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -186,6 +188,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				SimpleQuery simpleQuery = (SimpleQuery)theEObject;
 				T result = caseSimpleQuery(simpleQuery);
 				if (result == null) result = caseQuery(simpleQuery);
+				if (result == null) result = caseNode(simpleQuery);
 				if (result == null) result = caseISynchable(simpleQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -195,6 +198,7 @@ public class GeppettoSwitch<T> extends Switch<T>
 				CompoundQuery compoundQuery = (CompoundQuery)theEObject;
 				T result = caseCompoundQuery(compoundQuery);
 				if (result == null) result = caseQuery(compoundQuery);
+				if (result == null) result = caseNode(compoundQuery);
 				if (result == null) result = caseISynchable(compoundQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -206,10 +210,26 @@ public class GeppettoSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GeppettoPackage.AQUERY_RESULT:
+			{
+				AQueryResult aQueryResult = (AQueryResult)theEObject;
+				T result = caseAQueryResult(aQueryResult);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GeppettoPackage.QUERY_RESULT:
 			{
 				QueryResult queryResult = (QueryResult)theEObject;
 				T result = caseQueryResult(queryResult);
+				if (result == null) result = caseAQueryResult(queryResult);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GeppettoPackage.SERIALIZABLE_QUERY_RESULT:
+			{
+				SerializableQueryResult serializableQueryResult = (SerializableQueryResult)theEObject;
+				T result = caseSerializableQueryResult(serializableQueryResult);
+				if (result == null) result = caseAQueryResult(serializableQueryResult);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -518,6 +538,22 @@ public class GeppettoSwitch<T> extends Switch<T>
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>AQuery Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>AQuery Result</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAQueryResult(AQueryResult object)
+	{
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Query Result</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -529,6 +565,22 @@ public class GeppettoSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseQueryResult(QueryResult object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Serializable Query Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Serializable Query Result</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSerializableQueryResult(SerializableQueryResult object)
 	{
 		return null;
 	}

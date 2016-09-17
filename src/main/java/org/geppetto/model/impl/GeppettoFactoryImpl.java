@@ -82,6 +82,7 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.COMPOUND_QUERY: return createCompoundQuery();
 			case GeppettoPackage.QUERY_RESULTS: return createQueryResults();
 			case GeppettoPackage.QUERY_RESULT: return createQueryResult();
+			case GeppettoPackage.SERIALIZABLE_QUERY_RESULT: return createSerializableQueryResult();
 			case GeppettoPackage.QUERY_MATCHING_CRITERIA: return createQueryMatchingCriteria();
 			case GeppettoPackage.STRING_TO_STRING_MAP: return (EObject)createStringToStringMap();
 			case GeppettoPackage.RUNNABLE_QUERY: return createRunnableQuery();
@@ -298,6 +299,17 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		QueryResultImpl queryResult = new QueryResultImpl();
 		return queryResult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SerializableQueryResult createSerializableQueryResult()
+	{
+		SerializableQueryResultImpl serializableQueryResult = new SerializableQueryResultImpl();
+		return serializableQueryResult;
 	}
 
 	/**

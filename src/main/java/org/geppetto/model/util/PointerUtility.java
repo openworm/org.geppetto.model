@@ -15,7 +15,6 @@ import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
 import org.geppetto.model.values.Value;
 import org.geppetto.model.values.ValuesFactory;
-import org.geppetto.model.values.VisualReference;
 import org.geppetto.model.variables.Variable;
 
 public class PointerUtility

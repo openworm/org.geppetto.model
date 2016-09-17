@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.RunnableQuery#getQuery <em>Query</em>}</li>
- *   <li>{@link org.geppetto.model.RunnableQuery#getId <em>Id</em>}</li>
+ *   <li>{@link org.geppetto.model.RunnableQuery#getTargetVariablePath <em>Target Variable Path</em>}</li>
+ *   <li>{@link org.geppetto.model.RunnableQuery#getQueryPath <em>Query Path</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,55 +24,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface RunnableQuery extends EObject
 {
 	/**
-	 * Returns the value of the '<em><b>Query</b></em>' reference.
+	 * Returns the value of the '<em><b>Target Variable Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Query</em>' reference isn't clear,
+	 * If the meaning of the '<em>Target Variable Path</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Query</em>' reference.
-	 * @see #setQuery(Query)
-	 * @see org.geppetto.model.GeppettoPackage#getRunnableQuery_Query()
-	 * @model required="true"
-	 * @generated
-	 */
-	Query getQuery();
-
-	/**
-	 * Sets the value of the '{@link org.geppetto.model.RunnableQuery#getQuery <em>Query</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Query</em>' reference.
-	 * @see #getQuery()
-	 * @generated
-	 */
-	void setQuery(Query value);
-
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see org.geppetto.model.GeppettoPackage#getRunnableQuery_Id()
+	 * @return the value of the '<em>Target Variable Path</em>' attribute.
+	 * @see #setTargetVariablePath(String)
+	 * @see org.geppetto.model.GeppettoPackage#getRunnableQuery_TargetVariablePath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
-	String getId();
+	String getTargetVariablePath();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.RunnableQuery#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.RunnableQuery#getTargetVariablePath <em>Target Variable Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
+	 * @param value the new value of the '<em>Target Variable Path</em>' attribute.
+	 * @see #getTargetVariablePath()
 	 * @generated
 	 */
-	void setId(String value);
+	void setTargetVariablePath(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Query Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Query Path</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Query Path</em>' attribute.
+	 * @see #setQueryPath(String)
+	 * @see org.geppetto.model.GeppettoPackage#getRunnableQuery_QueryPath()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
+	 * @generated
+	 */
+	String getQueryPath();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.RunnableQuery#getQueryPath <em>Query Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Query Path</em>' attribute.
+	 * @see #getQueryPath()
+	 * @generated
+	 */
+	void setQueryPath(String value);
 
 } // RunnableQuery

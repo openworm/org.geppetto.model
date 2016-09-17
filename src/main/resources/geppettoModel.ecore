@@ -121,8 +121,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Query" abstract="true" eSuperTypes="#//ISynchable">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Query" abstract="true" eSuperTypes="#//Node">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="matchingCriteria" upperBound="-1"
@@ -159,11 +158,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="header" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="results" upperBound="-1"
-        eType="#//QueryResult" containment="true"/>
+        eType="#//AQueryResult" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QueryResult">
+  <eClassifiers xsi:type="ecore:EClass" name="AQueryResult" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryResult" eSuperTypes="#//AQueryResult">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
         lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SerializableQueryResult" eSuperTypes="#//AQueryResult">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
+        lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QueryMatchingCriteria">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//types/Type"/>
@@ -178,8 +182,10 @@
         transient="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RunnableQuery">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="query" lowerBound="1" eType="#//Query"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetVariablePath" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="queryPath" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eSubpackages name="types" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/importValue/src/main/resources/geppettoModel.ecore#//types"
       nsPrefix="gep">

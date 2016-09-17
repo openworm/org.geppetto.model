@@ -70,7 +70,7 @@ public interface QueryResults extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Results</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.QueryResult}.
+	 * The list contents are of type {@link org.geppetto.model.AQueryResult}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Results</em>' containment reference list isn't clear,
@@ -82,7 +82,7 @@ public interface QueryResults extends EObject
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<QueryResult> getResults();
+	EList<AQueryResult> getResults();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -6,25 +6,25 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Query Result</b></em>'.
+ * A representation of the model object '<em><b>Serializable Query Result</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.QueryResult#getValues <em>Values</em>}</li>
+ *   <li>{@link org.geppetto.model.SerializableQueryResult#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getQueryResult()
+ * @see org.geppetto.model.GeppettoPackage#getSerializableQueryResult()
  * @model
  * @generated
  */
-public interface QueryResult extends AQueryResult
+public interface SerializableQueryResult extends AQueryResult
 {
 	/**
 	 * Returns the value of the '<em><b>Values</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Object}.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Values</em>' attribute list isn't clear,
@@ -32,10 +32,10 @@ public interface QueryResult extends AQueryResult
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' attribute list.
-	 * @see org.geppetto.model.GeppettoPackage#getQueryResult_Values()
-	 * @model unique="false" required="true"
+	 * @see org.geppetto.model.GeppettoPackage#getSerializableQueryResult_Values()
+	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
-	EList<Object> getValues();
+	EList<String> getValues();
 
-} // QueryResult
+} // SerializableQueryResult

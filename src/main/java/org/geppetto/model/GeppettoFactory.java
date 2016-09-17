@@ -167,6 +167,15 @@ public interface GeppettoFactory extends EFactory
 	QueryResult createQueryResult();
 
 	/**
+	 * Returns a new object of class '<em>Serializable Query Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Serializable Query Result</em>'.
+	 * @generated
+	 */
+	SerializableQueryResult createSerializableQueryResult();
+
+	/**
 	 * Returns a new object of class '<em>Query Matching Criteria</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
