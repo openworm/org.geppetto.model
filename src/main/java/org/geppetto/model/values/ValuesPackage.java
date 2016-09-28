@@ -2096,6 +2096,52 @@ public interface ValuesPackage extends EPackage
 	int IMAGE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.ImportValueImpl <em>Import Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.ImportValueImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImportValue()
+	 * @generated
+	 */
+	int IMPORT_VALUE = 34;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_VALUE__SYNCHED = VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Model Interpreter Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_VALUE__MODEL_INTERPRETER_ID = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Import Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Import Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2103,7 +2149,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectivity()
 	 * @generated
 	 */
-	int CONNECTIVITY = 34;
+	int CONNECTIVITY = 35;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}' enum.
@@ -2113,7 +2159,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImageFormat()
 	 * @generated
 	 */
-	int IMAGE_FORMAT = 35;
+	int IMAGE_FORMAT = 36;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Value <em>Value</em>}'.
@@ -3172,6 +3218,27 @@ public interface ValuesPackage extends EPackage
 	EAttribute getImage_Format();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.ImportValue <em>Import Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Import Value</em>'.
+	 * @see org.geppetto.model.values.ImportValue
+	 * @generated
+	 */
+	EClass getImportValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.ImportValue#getModelInterpreterId <em>Model Interpreter Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Model Interpreter Id</em>'.
+	 * @see org.geppetto.model.values.ImportValue#getModelInterpreterId()
+	 * @see #getImportValue()
+	 * @generated
+	 */
+	EAttribute getImportValue_ModelInterpreterId();
+
+	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4074,6 +4141,24 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute IMAGE__FORMAT = eINSTANCE.getImage_Format();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ImportValueImpl <em>Import Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.ImportValueImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImportValue()
+		 * @generated
+		 */
+		EClass IMPORT_VALUE = eINSTANCE.getImportValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Model Interpreter Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORT_VALUE__MODEL_INTERPRETER_ID = eINSTANCE.getImportValue_ModelInterpreterId();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.

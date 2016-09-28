@@ -293,6 +293,15 @@ public interface ValuesFactory extends EFactory
 	Image createImage();
 
 	/**
+	 * Returns a new object of class '<em>Import Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Import Value</em>'.
+	 * @generated
+	 */
+	ImportValue createImportValue();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -381,6 +381,15 @@ public class ValuesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ValuesPackage.IMPORT_VALUE:
+			{
+				ImportValue importValue = (ImportValue)theEObject;
+				T result = caseImportValue(importValue);
+				if (result == null) result = caseValue(importValue);
+				if (result == null) result = caseISynchable(importValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -925,6 +934,22 @@ public class ValuesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseImage(Image object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Import Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Import Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImportValue(ImportValue object)
 	{
 		return null;
 	}

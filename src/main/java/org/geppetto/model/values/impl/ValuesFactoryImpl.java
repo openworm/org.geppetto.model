@@ -94,6 +94,7 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.ARRAY_ELEMENT: return createArrayElement();
 			case ValuesPackage.ARRAY_VALUE: return createArrayValue();
 			case ValuesPackage.IMAGE: return createImage();
+			case ValuesPackage.IMPORT_VALUE: return createImportValue();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -476,6 +477,17 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		ImageImpl image = new ImageImpl();
 		return image;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImportValue createImportValue()
+	{
+		ImportValueImpl importValue = new ImportValueImpl();
+		return importValue;
 	}
 
 	/**

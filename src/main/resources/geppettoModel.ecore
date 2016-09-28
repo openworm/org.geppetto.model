@@ -390,6 +390,9 @@
       <eLiterals name="PNG" literal="PNG"/>
       <eLiterals name="JPEG" value="1" literal="JPEG"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ImportValue" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelInterpreterId" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="variables" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/query/src/main/resources/geppettoModel.ecore#//variables"
       nsPrefix="gep">
