@@ -3,11 +3,8 @@
 package org.geppetto.model.values.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.geppetto.model.values.ImportValue;
 import org.geppetto.model.values.ValuesPackage;
 
@@ -173,4 +170,4 @@ public class ImportValueImpl extends ValueImpl implements ImportValue
 		return result.toString();
 	}
 
-} //ImportValueImpl
+} //developmentImpl

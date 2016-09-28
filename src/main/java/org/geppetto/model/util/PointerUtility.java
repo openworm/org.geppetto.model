@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import org.eclipse.emf.common.util.EMap;
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.types.ArrayType;
 import org.geppetto.model.types.CompositeType;
 import org.geppetto.model.types.Type;
-import org.geppetto.model.values.ImportValue;
 import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
 import org.geppetto.model.values.Value;
@@ -290,16 +288,6 @@ public class PointerUtility
 	}
 
 	
-	/**
-	 * @param geppettoModel
-	 * @param path
-	 * @return
-	 */
-	public static ImportValue getValue(GeppettoModel geppettoModel, String path)
-	{
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	/**
 	 * @param pointer
