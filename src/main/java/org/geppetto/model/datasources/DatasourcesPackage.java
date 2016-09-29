@@ -316,13 +316,31 @@ public interface DatasourcesPackage extends EPackage
 	int QUERY__MATCHING_CRITERIA = GeppettoPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Run For Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY__RUN_FOR_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Return Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY__RETURN_TYPE = GeppettoPackage.NODE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Query</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 2;
+	int QUERY_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -405,6 +423,24 @@ public interface DatasourcesPackage extends EPackage
 	 * @ordered
 	 */
 	int PROCESS_QUERY__MATCHING_CRITERIA = QUERY__MATCHING_CRITERIA;
+
+	/**
+	 * The feature id for the '<em><b>Run For Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__RUN_FOR_COUNT = QUERY__RUN_FOR_COUNT;
+
+	/**
+	 * The feature id for the '<em><b>Return Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_QUERY__RETURN_TYPE = QUERY__RETURN_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' map.
@@ -516,6 +552,24 @@ public interface DatasourcesPackage extends EPackage
 	int SIMPLE_QUERY__MATCHING_CRITERIA = QUERY__MATCHING_CRITERIA;
 
 	/**
+	 * The feature id for the '<em><b>Run For Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_QUERY__RUN_FOR_COUNT = QUERY__RUN_FOR_COUNT;
+
+	/**
+	 * The feature id for the '<em><b>Return Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_QUERY__RETURN_TYPE = QUERY__RETURN_TYPE;
+
+	/**
 	 * The feature id for the '<em><b>Query</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -625,6 +679,24 @@ public interface DatasourcesPackage extends EPackage
 	int COMPOUND_QUERY__MATCHING_CRITERIA = QUERY__MATCHING_CRITERIA;
 
 	/**
+	 * The feature id for the '<em><b>Run For Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_QUERY__RUN_FOR_COUNT = QUERY__RUN_FOR_COUNT;
+
+	/**
+	 * The feature id for the '<em><b>Return Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_QUERY__RETURN_TYPE = QUERY__RETURN_TYPE;
+
+	/**
 	 * The feature id for the '<em><b>Query Chain</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -723,6 +795,24 @@ public interface DatasourcesPackage extends EPackage
 	 * @ordered
 	 */
 	int COMPOUND_REF_QUERY__MATCHING_CRITERIA = QUERY__MATCHING_CRITERIA;
+
+	/**
+	 * The feature id for the '<em><b>Run For Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY__RUN_FOR_COUNT = QUERY__RUN_FOR_COUNT;
+
+	/**
+	 * The feature id for the '<em><b>Return Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOUND_REF_QUERY__RETURN_TYPE = QUERY__RETURN_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Query Chain</b></em>' reference list.
@@ -1173,6 +1263,28 @@ public interface DatasourcesPackage extends EPackage
 	EReference getQuery_MatchingCriteria();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.datasources.Query#isRunForCount <em>Run For Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Run For Count</em>'.
+	 * @see org.geppetto.model.datasources.Query#isRunForCount()
+	 * @see #getQuery()
+	 * @generated
+	 */
+	EAttribute getQuery_RunForCount();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.geppetto.model.datasources.Query#getReturnType <em>Return Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Return Type</em>'.
+	 * @see org.geppetto.model.datasources.Query#getReturnType()
+	 * @see #getQuery()
+	 * @generated
+	 */
+	EReference getQuery_ReturnType();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.datasources.ProcessQuery <em>Process Query</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1585,6 +1697,22 @@ public interface DatasourcesPackage extends EPackage
 		 * @generated
 		 */
 		EReference QUERY__MATCHING_CRITERIA = eINSTANCE.getQuery_MatchingCriteria();
+
+		/**
+		 * The meta object literal for the '<em><b>Run For Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUERY__RUN_FOR_COUNT = eINSTANCE.getQuery_RunForCount();
+
+		/**
+		 * The meta object literal for the '<em><b>Return Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUERY__RETURN_TYPE = eINSTANCE.getQuery_ReturnType();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.datasources.impl.ProcessQueryImpl <em>Process Query</em>}' class.

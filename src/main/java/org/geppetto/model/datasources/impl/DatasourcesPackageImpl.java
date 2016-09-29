@@ -378,6 +378,26 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getQuery_RunForCount()
+	{
+		return (EAttribute)queryEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQuery_ReturnType()
+	{
+		return (EReference)queryEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProcessQuery()
 	{
 		return processQueryEClass;
@@ -670,6 +690,8 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		queryEClass = createEClass(QUERY);
 		createEAttribute(queryEClass, QUERY__DESCRIPTION);
 		createEReference(queryEClass, QUERY__MATCHING_CRITERIA);
+		createEAttribute(queryEClass, QUERY__RUN_FOR_COUNT);
+		createEReference(queryEClass, QUERY__RETURN_TYPE);
 
 		processQueryEClass = createEClass(PROCESS_QUERY);
 		createEReference(processQueryEClass, PROCESS_QUERY__PARAMETERS);
@@ -768,6 +790,8 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		initEClass(queryEClass, Query.class, "Query", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQuery_Description(), theXMLTypePackage.getString(), "description", null, 1, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuery_MatchingCriteria(), this.getQueryMatchingCriteria(), null, "matchingCriteria", null, 0, -1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuery_RunForCount(), theXMLTypePackage.getBoolean(), "runForCount", "true", 0, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuery_ReturnType(), theTypesPackage.getType(), null, "returnType", null, 0, 1, Query.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processQueryEClass, ProcessQuery.class, "ProcessQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProcessQuery_Parameters(), theGeppettoPackage.getStringToStringMap(), null, "parameters", null, 0, -1, ProcessQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

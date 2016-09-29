@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Compound queries allow creating composite queries which chain together multiple queries. The results of a query in the chain will be fed to the subsequent query.
+ * Compound ref queries make it possible to reference queries from any datasource
  * <!-- end-model-doc -->
  *
  * <p>
