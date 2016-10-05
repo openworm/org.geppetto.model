@@ -3,6 +3,7 @@
 package org.geppetto.model.datasources.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -77,6 +78,40 @@ public class DatasourcesFactoryImpl extends EFactoryImpl implements DatasourcesF
 			case DatasourcesPackage.QUERY_MATCHING_CRITERIA: return createQueryMatchingCriteria();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
+			case DatasourcesPackage.BOOLEAN_OPERATOR:
+				return createBooleanOperatorFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
+			case DatasourcesPackage.BOOLEAN_OPERATOR:
+				return convertBooleanOperatorToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -199,6 +234,28 @@ public class DatasourcesFactoryImpl extends EFactoryImpl implements DatasourcesF
 	{
 		QueryMatchingCriteriaImpl queryMatchingCriteria = new QueryMatchingCriteriaImpl();
 		return queryMatchingCriteria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BooleanOperator createBooleanOperatorFromString(EDataType eDataType, String initialValue)
+	{
+		BooleanOperator result = BooleanOperator.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBooleanOperatorToString(EDataType eDataType, Object instanceValue)
+	{
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

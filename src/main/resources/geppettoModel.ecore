@@ -497,6 +497,8 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="queryPath" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="booleanOperator" eType="#//datasources/BooleanOperator"
+          defaultValueLiteral="AND"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AQueryResult" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="QueryResult" eSuperTypes="#//datasources/AQueryResult">
@@ -510,6 +512,10 @@
     <eClassifiers xsi:type="ecore:EClass" name="QueryMatchingCriteria">
       <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1"
           eType="#//types/Type"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="BooleanOperator">
+      <eLiterals name="AND" literal="AND"/>
+      <eLiterals name="NAND" value="1" literal="NAND"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

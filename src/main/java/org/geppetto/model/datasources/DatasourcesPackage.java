@@ -4,6 +4,7 @@ package org.geppetto.model.datasources;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -943,13 +944,22 @@ public interface DatasourcesPackage extends EPackage
 	int RUNNABLE_QUERY__QUERY_PATH = 1;
 
 	/**
+	 * The feature id for the '<em><b>Boolean Operator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNNABLE_QUERY__BOOLEAN_OPERATOR = 2;
+
+	/**
 	 * The number of structural features of the '<em>Runnable Query</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RUNNABLE_QUERY_FEATURE_COUNT = 2;
+	int RUNNABLE_QUERY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Runnable Query</em>' class.
@@ -1098,6 +1108,17 @@ public interface DatasourcesPackage extends EPackage
 	 * @ordered
 	 */
 	int QUERY_MATCHING_CRITERIA_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.datasources.BooleanOperator <em>Boolean Operator</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.datasources.BooleanOperator
+	 * @see org.geppetto.model.datasources.impl.DatasourcesPackageImpl#getBooleanOperator()
+	 * @generated
+	 */
+	int BOOLEAN_OPERATOR = 13;
 
 
 	/**
@@ -1476,6 +1497,17 @@ public interface DatasourcesPackage extends EPackage
 	EAttribute getRunnableQuery_QueryPath();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.datasources.RunnableQuery#getBooleanOperator <em>Boolean Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Boolean Operator</em>'.
+	 * @see org.geppetto.model.datasources.RunnableQuery#getBooleanOperator()
+	 * @see #getRunnableQuery()
+	 * @generated
+	 */
+	EAttribute getRunnableQuery_BooleanOperator();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.datasources.AQueryResult <em>AQuery Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1547,6 +1579,16 @@ public interface DatasourcesPackage extends EPackage
 	 * @generated
 	 */
 	EReference getQueryMatchingCriteria_Type();
+
+	/**
+	 * Returns the meta object for enum '{@link org.geppetto.model.datasources.BooleanOperator <em>Boolean Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Boolean Operator</em>'.
+	 * @see org.geppetto.model.datasources.BooleanOperator
+	 * @generated
+	 */
+	EEnum getBooleanOperator();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1871,6 +1913,14 @@ public interface DatasourcesPackage extends EPackage
 		EAttribute RUNNABLE_QUERY__QUERY_PATH = eINSTANCE.getRunnableQuery_QueryPath();
 
 		/**
+		 * The meta object literal for the '<em><b>Boolean Operator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RUNNABLE_QUERY__BOOLEAN_OPERATOR = eINSTANCE.getRunnableQuery_BooleanOperator();
+
+		/**
 		 * The meta object literal for the '{@link org.geppetto.model.datasources.impl.AQueryResultImpl <em>AQuery Result</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1933,6 +1983,16 @@ public interface DatasourcesPackage extends EPackage
 		 * @generated
 		 */
 		EReference QUERY_MATCHING_CRITERIA__TYPE = eINSTANCE.getQueryMatchingCriteria_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.datasources.BooleanOperator <em>Boolean Operator</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.datasources.BooleanOperator
+		 * @see org.geppetto.model.datasources.impl.DatasourcesPackageImpl#getBooleanOperator()
+		 * @generated
+		 */
+		EEnum BOOLEAN_OPERATOR = eINSTANCE.getBooleanOperator();
 
 	}
 

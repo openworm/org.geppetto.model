@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.geppetto.model.datasources.BooleanOperator;
 import org.geppetto.model.datasources.DatasourcesPackage;
 import org.geppetto.model.datasources.RunnableQuery;
 
@@ -21,6 +22,7 @@ import org.geppetto.model.datasources.RunnableQuery;
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.RunnableQueryImpl#getTargetVariablePath <em>Target Variable Path</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.RunnableQueryImpl#getQueryPath <em>Query Path</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.RunnableQueryImpl#getBooleanOperator <em>Boolean Operator</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,6 +69,26 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	 * @ordered
 	 */
 	protected String queryPath = QUERY_PATH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBooleanOperator() <em>Boolean Operator</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanOperator()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final BooleanOperator BOOLEAN_OPERATOR_EDEFAULT = BooleanOperator.AND;
+
+	/**
+	 * The cached value of the '{@link #getBooleanOperator() <em>Boolean Operator</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanOperator()
+	 * @generated
+	 * @ordered
+	 */
+	protected BooleanOperator booleanOperator = BOOLEAN_OPERATOR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,6 +162,29 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BooleanOperator getBooleanOperator()
+	{
+		return booleanOperator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBooleanOperator(BooleanOperator newBooleanOperator)
+	{
+		BooleanOperator oldBooleanOperator = booleanOperator;
+		booleanOperator = newBooleanOperator == null ? BOOLEAN_OPERATOR_EDEFAULT : newBooleanOperator;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.RUNNABLE_QUERY__BOOLEAN_OPERATOR, oldBooleanOperator, booleanOperator));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
@@ -149,6 +194,8 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 				return getTargetVariablePath();
 			case DatasourcesPackage.RUNNABLE_QUERY__QUERY_PATH:
 				return getQueryPath();
+			case DatasourcesPackage.RUNNABLE_QUERY__BOOLEAN_OPERATOR:
+				return getBooleanOperator();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,6 +215,9 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 				return;
 			case DatasourcesPackage.RUNNABLE_QUERY__QUERY_PATH:
 				setQueryPath((String)newValue);
+				return;
+			case DatasourcesPackage.RUNNABLE_QUERY__BOOLEAN_OPERATOR:
+				setBooleanOperator((BooleanOperator)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -189,6 +239,9 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 			case DatasourcesPackage.RUNNABLE_QUERY__QUERY_PATH:
 				setQueryPath(QUERY_PATH_EDEFAULT);
 				return;
+			case DatasourcesPackage.RUNNABLE_QUERY__BOOLEAN_OPERATOR:
+				setBooleanOperator(BOOLEAN_OPERATOR_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -207,6 +260,8 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 				return TARGET_VARIABLE_PATH_EDEFAULT == null ? targetVariablePath != null : !TARGET_VARIABLE_PATH_EDEFAULT.equals(targetVariablePath);
 			case DatasourcesPackage.RUNNABLE_QUERY__QUERY_PATH:
 				return QUERY_PATH_EDEFAULT == null ? queryPath != null : !QUERY_PATH_EDEFAULT.equals(queryPath);
+			case DatasourcesPackage.RUNNABLE_QUERY__BOOLEAN_OPERATOR:
+				return booleanOperator != BOOLEAN_OPERATOR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -226,6 +281,8 @@ public class RunnableQueryImpl extends MinimalEObjectImpl.Container implements R
 		result.append(targetVariablePath);
 		result.append(", queryPath: ");
 		result.append(queryPath);
+		result.append(", booleanOperator: ");
+		result.append(booleanOperator);
 		result.append(')');
 		return result.toString();
 	}

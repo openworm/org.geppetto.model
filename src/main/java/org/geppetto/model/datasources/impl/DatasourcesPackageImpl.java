@@ -4,6 +4,7 @@ package org.geppetto.model.datasources.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.GeppettoPackage;
 
 import org.geppetto.model.datasources.AQueryResult;
+import org.geppetto.model.datasources.BooleanOperator;
 import org.geppetto.model.datasources.CompoundQuery;
 import org.geppetto.model.datasources.CompoundRefQuery;
 import org.geppetto.model.datasources.DataSource;
@@ -142,6 +144,13 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 	 * @generated
 	 */
 	private EClass queryMatchingCriteriaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum booleanOperatorEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -578,6 +587,16 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRunnableQuery_BooleanOperator()
+	{
+		return (EAttribute)runnableQueryEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAQueryResult()
 	{
 		return aQueryResultEClass;
@@ -641,6 +660,16 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 	public EReference getQueryMatchingCriteria_Type()
 	{
 		return (EReference)queryMatchingCriteriaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getBooleanOperator()
+	{
+		return booleanOperatorEEnum;
 	}
 
 	/**
@@ -716,6 +745,7 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		runnableQueryEClass = createEClass(RUNNABLE_QUERY);
 		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__TARGET_VARIABLE_PATH);
 		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__QUERY_PATH);
+		createEAttribute(runnableQueryEClass, RUNNABLE_QUERY__BOOLEAN_OPERATOR);
 
 		aQueryResultEClass = createEClass(AQUERY_RESULT);
 
@@ -727,6 +757,9 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 
 		queryMatchingCriteriaEClass = createEClass(QUERY_MATCHING_CRITERIA);
 		createEReference(queryMatchingCriteriaEClass, QUERY_MATCHING_CRITERIA__TYPE);
+
+		// Create enums
+		booleanOperatorEEnum = createEEnum(BOOLEAN_OPERATOR);
 	}
 
 	/**
@@ -819,6 +852,7 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		initEClass(runnableQueryEClass, RunnableQuery.class, "RunnableQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRunnableQuery_TargetVariablePath(), theXMLTypePackage.getString(), "targetVariablePath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRunnableQuery_QueryPath(), theXMLTypePackage.getString(), "queryPath", null, 1, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRunnableQuery_BooleanOperator(), this.getBooleanOperator(), "booleanOperator", "AND", 0, 1, RunnableQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aQueryResultEClass, AQueryResult.class, "AQueryResult", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -830,6 +864,11 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 
 		initEClass(queryMatchingCriteriaEClass, QueryMatchingCriteria.class, "QueryMatchingCriteria", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQueryMatchingCriteria_Type(), theTypesPackage.getType(), null, "type", null, 0, -1, QueryMatchingCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(booleanOperatorEEnum, BooleanOperator.class, "BooleanOperator");
+		addEEnumLiteral(booleanOperatorEEnum, BooleanOperator.AND);
+		addEEnumLiteral(booleanOperatorEEnum, BooleanOperator.NAND);
 	}
 
 } //DatasourcesPackageImpl

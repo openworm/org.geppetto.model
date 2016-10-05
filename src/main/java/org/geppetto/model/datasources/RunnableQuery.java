@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.RunnableQuery#getTargetVariablePath <em>Target Variable Path</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.RunnableQuery#getQueryPath <em>Query Path</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.RunnableQuery#getBooleanOperator <em>Boolean Operator</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,5 +75,35 @@ public interface RunnableQuery extends EObject
 	 * @generated
 	 */
 	void setQueryPath(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Boolean Operator</b></em>' attribute.
+	 * The default value is <code>"AND"</code>.
+	 * The literals are from the enumeration {@link org.geppetto.model.datasources.BooleanOperator}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Boolean Operator</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Boolean Operator</em>' attribute.
+	 * @see org.geppetto.model.datasources.BooleanOperator
+	 * @see #setBooleanOperator(BooleanOperator)
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getRunnableQuery_BooleanOperator()
+	 * @model default="AND"
+	 * @generated
+	 */
+	BooleanOperator getBooleanOperator();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.datasources.RunnableQuery#getBooleanOperator <em>Boolean Operator</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Boolean Operator</em>' attribute.
+	 * @see org.geppetto.model.datasources.BooleanOperator
+	 * @see #getBooleanOperator()
+	 * @generated
+	 */
+	void setBooleanOperator(BooleanOperator value);
 
 } // RunnableQuery
