@@ -37,7 +37,15 @@ public enum ImageFormat implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-	JPEG(1, "JPEG", "JPEG");
+	JPEG(1, "JPEG", "JPEG"), /**
+	 * The '<em><b>IIP</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #IIP_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	IIP(2, "IIP", "IIP");
 
 	/**
 	 * The '<em><b>PNG</b></em>' literal value.
@@ -70,6 +78,21 @@ public enum ImageFormat implements Enumerator
 	public static final int JPEG_VALUE = 1;
 
 	/**
+	 * The '<em><b>IIP</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>IIP</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #IIP
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int IIP_VALUE = 2;
+
+	/**
 	 * An array of all the '<em><b>Image Format</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -80,6 +103,7 @@ public enum ImageFormat implements Enumerator
 		{
 			PNG,
 			JPEG,
+			IIP,
 		};
 
 	/**
@@ -140,6 +164,7 @@ public enum ImageFormat implements Enumerator
 		{
 			case PNG_VALUE: return PNG;
 			case JPEG_VALUE: return JPEG;
+			case IIP_VALUE: return IIP;
 		}
 		return null;
 	}
