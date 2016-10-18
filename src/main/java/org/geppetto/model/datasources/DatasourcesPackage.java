@@ -43,7 +43,7 @@ public interface DatasourcesPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/query/src/main/resources/geppettoModel.ecore#//datasources";
+	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//datasources";
 
 	/**
 	 * The package namespace name.
