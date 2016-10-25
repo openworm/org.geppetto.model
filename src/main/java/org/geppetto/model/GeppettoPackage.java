@@ -43,6 +43,14 @@ public interface GeppettoPackage extends EPackage
 	 */
 	String eNS_URI = "https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore";
 
+	
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	String eNS_URI_TEMPLATE = "https://raw.githubusercontent.com/openworm/org.geppetto.model/$VERSION$/src/main/resources/geppettoModel.ecore";
+	
 	/**
 	 * The package namespace name.
 	 * <!-- begin-user-doc -->
