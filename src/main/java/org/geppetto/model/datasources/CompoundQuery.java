@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,11 +16,11 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.CompoundQuery#getQueryChain <em>Query Chain</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.CompoundQuery#getQueryChain <em>Query Chain</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getCompoundQuery()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getCompoundQuery()
  * @model
  * @generated
  */
@@ -28,18 +28,14 @@ public interface CompoundQuery extends Query
 {
 	/**
 	 * Returns the value of the '<em><b>Query Chain</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.Query}.
+	 * The list contents are of type {@link org.geppetto.model.datasources.Query}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Query Chain</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The chain of queries for this Compound query.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Query Chain</em>' containment reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getCompoundQuery_QueryChain()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getCompoundQuery_QueryChain()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

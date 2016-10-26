@@ -11,8 +11,8 @@ import org.geppetto.model.types.CompositeType;
 import org.geppetto.model.types.Type;
 import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
+import org.geppetto.model.values.Value;
 import org.geppetto.model.values.ValuesFactory;
-import org.geppetto.model.values.VisualReference;
 import org.geppetto.model.variables.Variable;
 
 public class PointerUtility
@@ -60,7 +60,7 @@ public class PointerUtility
 			Variable v = null;
 			if(lastType == null)
 			{
-				v = findVariable(getVariable(token), model);
+				v = findVariable(getVariable(token), model); // why ? fo
 			}
 			else
 			{
@@ -156,7 +156,6 @@ public class PointerUtility
 			}
 
 		}
-
 		if(lastType != null && lastType.getPath().equals(path))
 		{
 			return lastType;
@@ -167,6 +166,67 @@ public class PointerUtility
 		}
 	}
 
+	public static Value getValue(GeppettoModel model, String path, Type stateVariablType) throws GeppettoModelException
+	{
+		StringTokenizer st = new StringTokenizer(path, ".");
+		Type lastType = null;
+		Variable lastVar = null;
+		GeppettoLibrary library = null;
+		while(st.hasMoreElements())
+		{
+			String token = st.nextToken();
+			// token can be a library, a type or a variable
+
+			if(lastType != null)
+			{
+				if(lastType instanceof CompositeType)
+				{
+					lastVar = findVariable(getVariable(token), (CompositeType) lastType);
+					lastType = null;
+				}
+				else
+				{
+					if(lastType instanceof ArrayType && ((ArrayType) lastType).getArrayType() instanceof CompositeType)
+					{
+						lastVar = findVariable(getVariable(token), (CompositeType) ((ArrayType) lastType).getArrayType());
+					}
+					else
+					{
+						throw new GeppettoModelException(lastType.getId() + " is not of type CompositeType there can't be nested variables");
+					}
+				}
+			}
+			else if(lastVar != null)
+			{
+				lastType = findType(getType(token), lastVar);
+			}
+			else if(library != null)
+			{
+				lastType = findType(token, library);
+			}
+			else
+			{
+				// they are all null
+				library = findLibrary(model, token);
+				if(library == null)
+				{
+					throw new GeppettoModelException("Can't find a value for the path " + path);
+				}
+			}
+
+		}
+
+		if(lastType != null && lastType.getPath().equals(path) )
+		{
+			return lastType.getDefaultValue();
+		}else if(lastVar != null){
+			return (Value) lastVar.getInitialValues().get(stateVariablType);
+		}
+		else
+		{
+			throw new GeppettoModelException("Couldn't find a value for the path " + path);
+		}		
+	}
 	/**
 	 * @param typeId
 	 * @param library
@@ -227,6 +287,8 @@ public class PointerUtility
 		return true;
 	}
 
+	
+	
 	/**
 	 * @param pointer
 	 * @param pointer2
@@ -427,5 +489,7 @@ public class PointerUtility
 	{
 		return path.replaceAll("\\([^)]*\\)", "");
 	}
+
+
 
 }

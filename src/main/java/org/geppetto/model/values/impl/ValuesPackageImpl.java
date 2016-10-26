@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.geppetto.model.GeppettoPackage;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.impl.DatasourcesPackageImpl;
 import org.geppetto.model.impl.GeppettoPackageImpl;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
@@ -29,6 +31,7 @@ import org.geppetto.model.values.Function;
 import org.geppetto.model.values.FunctionPlot;
 import org.geppetto.model.values.Image;
 import org.geppetto.model.values.ImageFormat;
+import org.geppetto.model.values.ImportValue;
 import org.geppetto.model.values.MetadataValue;
 import org.geppetto.model.values.Particle;
 import org.geppetto.model.values.PhysicalQuantity;
@@ -303,6 +306,13 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass importValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum connectivityEEnum = null;
 
 	/**
@@ -367,18 +377,21 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) instanceof GeppettoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) : GeppettoPackage.eINSTANCE);
 		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
 		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) instanceof VariablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) : VariablesPackage.eINSTANCE);
+		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) instanceof DatasourcesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) : DatasourcesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theValuesPackage.createPackageContents();
 		theGeppettoPackage.createPackageContents();
 		theTypesPackage.createPackageContents();
 		theVariablesPackage.createPackageContents();
+		theDatasourcesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theValuesPackage.initializePackageContents();
 		theGeppettoPackage.initializePackageContents();
 		theTypesPackage.initializePackageContents();
 		theVariablesPackage.initializePackageContents();
+		theDatasourcesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theValuesPackage.freeze();
@@ -1384,6 +1397,26 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getImportValue()
+	{
+		return importValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImportValue_ModelInterpreterId()
+	{
+		return (EAttribute)importValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getConnectivity()
 	{
 		return connectivityEEnum;
@@ -1562,6 +1595,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEAttribute(imageEClass, IMAGE__REFERENCE);
 		createEAttribute(imageEClass, IMAGE__FORMAT);
 
+		importValueEClass = createEClass(IMPORT_VALUE);
+		createEAttribute(importValueEClass, IMPORT_VALUE__MODEL_INTERPRETER_ID);
+
 		// Create enums
 		connectivityEEnum = createEEnum(CONNECTIVITY);
 		imageFormatEEnum = createEEnum(IMAGE_FORMAT);
@@ -1633,6 +1669,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		arrayElementEClass.getESuperTypes().add(this.getValue());
 		arrayValueEClass.getESuperTypes().add(this.getValue());
 		imageEClass.getESuperTypes().add(this.getValue());
+		importValueEClass.getESuperTypes().add(this.getValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(valueEClass, Value.class, "Value", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1769,6 +1806,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEAttribute(getImage_Reference(), theXMLTypePackage.getString(), "reference", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_Format(), this.getImageFormat(), "format", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(importValueEClass, ImportValue.class, "ImportValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getImportValue_ModelInterpreterId(), theXMLTypePackage.getString(), "modelInterpreterId", null, 0, 1, ImportValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(connectivityEEnum, Connectivity.class, "Connectivity");
 		addEEnumLiteral(connectivityEEnum, Connectivity.DIRECTIONAL);
@@ -1778,6 +1818,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEEnum(imageFormatEEnum, ImageFormat.class, "ImageFormat");
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.PNG);
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.JPEG);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.IIP);
 	}
 
 } //ValuesPackageImpl

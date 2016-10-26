@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.common.util.EMap;
 
@@ -12,12 +12,12 @@ import org.eclipse.emf.common.util.EMap;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.ProcessQuery#getParameters <em>Parameters</em>}</li>
- *   <li>{@link org.geppetto.model.ProcessQuery#getQueryProcessorId <em>Query Processor Id</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.ProcessQuery#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.ProcessQuery#getQueryProcessorId <em>Query Processor Id</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getProcessQuery()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getProcessQuery()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ProcessQuery extends Query
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' map.
-	 * @see org.geppetto.model.GeppettoPackage#getProcessQuery_Parameters()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getProcessQuery_Parameters()
 	 * @model mapType="org.geppetto.model.StringToStringMap<org.eclipse.emf.ecore.xml.type.String, org.eclipse.emf.ecore.xml.type.String>"
 	 * @generated
 	 */
@@ -50,14 +50,14 @@ public interface ProcessQuery extends Query
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Query Processor Id</em>' attribute.
 	 * @see #setQueryProcessorId(String)
-	 * @see org.geppetto.model.GeppettoPackage#getProcessQuery_QueryProcessorId()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getProcessQuery_QueryProcessorId()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getQueryProcessorId();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.ProcessQuery#getQueryProcessorId <em>Query Processor Id</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.ProcessQuery#getQueryProcessorId <em>Query Processor Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Query Processor Id</em>' attribute.

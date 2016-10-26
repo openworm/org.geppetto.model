@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.QueryResults#getId <em>Id</em>}</li>
- *   <li>{@link org.geppetto.model.QueryResults#getHeader <em>Header</em>}</li>
- *   <li>{@link org.geppetto.model.QueryResults#getResults <em>Results</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.QueryResults#getId <em>Id</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.QueryResults#getHeader <em>Header</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.QueryResults#getResults <em>Results</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getQueryResults()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryResults()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface QueryResults extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
-	 * @see org.geppetto.model.GeppettoPackage#getQueryResults_Id()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryResults_Id()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
 	String getId();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.QueryResults#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link org.geppetto.model.datasources.QueryResults#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -62,7 +62,7 @@ public interface QueryResults extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Header</em>' attribute list.
-	 * @see org.geppetto.model.GeppettoPackage#getQueryResults_Header()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryResults_Header()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 * @generated
 	 */
@@ -70,7 +70,7 @@ public interface QueryResults extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Results</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.QueryResult}.
+	 * The list contents are of type {@link org.geppetto.model.datasources.AQueryResult}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Results</em>' containment reference list isn't clear,
@@ -78,11 +78,11 @@ public interface QueryResults extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Results</em>' containment reference list.
-	 * @see org.geppetto.model.GeppettoPackage#getQueryResults_Results()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryResults_Results()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<QueryResult> getResults();
+	EList<AQueryResult> getResults();
 
 	/**
 	 * <!-- begin-user-doc -->

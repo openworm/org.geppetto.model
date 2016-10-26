@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -8,8 +8,8 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.SimpleQuery;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.SimpleQuery;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,8 +18,8 @@ import org.geppetto.model.SimpleQuery;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.SimpleQueryImpl#getQuery <em>Query</em>}</li>
- *   <li>{@link org.geppetto.model.impl.SimpleQueryImpl#getCountQuery <em>Count Query</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.SimpleQueryImpl#getQuery <em>Query</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.SimpleQueryImpl#getCountQuery <em>Count Query</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,7 +85,7 @@ public class SimpleQueryImpl extends QueryImpl implements SimpleQuery
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.SIMPLE_QUERY;
+		return DatasourcesPackage.Literals.SIMPLE_QUERY;
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class SimpleQueryImpl extends QueryImpl implements SimpleQuery
 		String oldQuery = query;
 		query = newQuery;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.SIMPLE_QUERY__QUERY, oldQuery, query));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.SIMPLE_QUERY__QUERY, oldQuery, query));
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class SimpleQueryImpl extends QueryImpl implements SimpleQuery
 		String oldCountQuery = countQuery;
 		countQuery = newCountQuery;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.SIMPLE_QUERY__COUNT_QUERY, oldCountQuery, countQuery));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.SIMPLE_QUERY__COUNT_QUERY, oldCountQuery, countQuery));
 	}
 
 	/**
@@ -144,9 +144,9 @@ public class SimpleQueryImpl extends QueryImpl implements SimpleQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.SIMPLE_QUERY__QUERY:
+			case DatasourcesPackage.SIMPLE_QUERY__QUERY:
 				return getQuery();
-			case GeppettoPackage.SIMPLE_QUERY__COUNT_QUERY:
+			case DatasourcesPackage.SIMPLE_QUERY__COUNT_QUERY:
 				return getCountQuery();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -162,10 +162,10 @@ public class SimpleQueryImpl extends QueryImpl implements SimpleQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.SIMPLE_QUERY__QUERY:
+			case DatasourcesPackage.SIMPLE_QUERY__QUERY:
 				setQuery((String)newValue);
 				return;
-			case GeppettoPackage.SIMPLE_QUERY__COUNT_QUERY:
+			case DatasourcesPackage.SIMPLE_QUERY__COUNT_QUERY:
 				setCountQuery((String)newValue);
 				return;
 		}
@@ -182,10 +182,10 @@ public class SimpleQueryImpl extends QueryImpl implements SimpleQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.SIMPLE_QUERY__QUERY:
+			case DatasourcesPackage.SIMPLE_QUERY__QUERY:
 				setQuery(QUERY_EDEFAULT);
 				return;
-			case GeppettoPackage.SIMPLE_QUERY__COUNT_QUERY:
+			case DatasourcesPackage.SIMPLE_QUERY__COUNT_QUERY:
 				setCountQuery(COUNT_QUERY_EDEFAULT);
 				return;
 		}
@@ -202,9 +202,9 @@ public class SimpleQueryImpl extends QueryImpl implements SimpleQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.SIMPLE_QUERY__QUERY:
+			case DatasourcesPackage.SIMPLE_QUERY__QUERY:
 				return QUERY_EDEFAULT == null ? query != null : !QUERY_EDEFAULT.equals(query);
-			case GeppettoPackage.SIMPLE_QUERY__COUNT_QUERY:
+			case DatasourcesPackage.SIMPLE_QUERY__COUNT_QUERY:
 				return COUNT_QUERY_EDEFAULT == null ? countQuery != null : !COUNT_QUERY_EDEFAULT.equals(countQuery);
 		}
 		return super.eIsSet(featureID);

@@ -1,40 +1,36 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import org.geppetto.model.CompoundQuery;
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.Query;
+import org.geppetto.model.datasources.CompoundRefQuery;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.Query;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Compound Query</b></em>'.
+ * An implementation of the model object '<em><b>Compound Ref Query</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.CompoundQueryImpl#getQueryChain <em>Query Chain</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.CompoundRefQueryImpl#getQueryChain <em>Query Chain</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class CompoundQueryImpl extends QueryImpl implements CompoundQuery
+public class CompoundRefQueryImpl extends QueryImpl implements CompoundRefQuery
 {
 	/**
-	 * The cached value of the '{@link #getQueryChain() <em>Query Chain</em>}' containment reference list.
+	 * The cached value of the '{@link #getQueryChain() <em>Query Chain</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getQueryChain()
@@ -48,7 +44,7 @@ public class CompoundQueryImpl extends QueryImpl implements CompoundQuery
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CompoundQueryImpl()
+	protected CompoundRefQueryImpl()
 	{
 		super();
 	}
@@ -61,7 +57,7 @@ public class CompoundQueryImpl extends QueryImpl implements CompoundQuery
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.COMPOUND_QUERY;
+		return DatasourcesPackage.Literals.COMPOUND_REF_QUERY;
 	}
 
 	/**
@@ -73,25 +69,9 @@ public class CompoundQueryImpl extends QueryImpl implements CompoundQuery
 	{
 		if (queryChain == null)
 		{
-			queryChain = new EObjectContainmentEList<Query>(Query.class, this, GeppettoPackage.COMPOUND_QUERY__QUERY_CHAIN);
+			queryChain = new EObjectResolvingEList<Query>(Query.class, this, DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN);
 		}
 		return queryChain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-	{
-		switch (featureID)
-		{
-			case GeppettoPackage.COMPOUND_QUERY__QUERY_CHAIN:
-				return ((InternalEList<?>)getQueryChain()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -104,7 +84,7 @@ public class CompoundQueryImpl extends QueryImpl implements CompoundQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.COMPOUND_QUERY__QUERY_CHAIN:
+			case DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
 				return getQueryChain();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -121,7 +101,7 @@ public class CompoundQueryImpl extends QueryImpl implements CompoundQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.COMPOUND_QUERY__QUERY_CHAIN:
+			case DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
 				getQueryChain().clear();
 				getQueryChain().addAll((Collection<? extends Query>)newValue);
 				return;
@@ -139,7 +119,7 @@ public class CompoundQueryImpl extends QueryImpl implements CompoundQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.COMPOUND_QUERY__QUERY_CHAIN:
+			case DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
 				getQueryChain().clear();
 				return;
 		}
@@ -156,10 +136,10 @@ public class CompoundQueryImpl extends QueryImpl implements CompoundQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.COMPOUND_QUERY__QUERY_CHAIN:
+			case DatasourcesPackage.COMPOUND_REF_QUERY__QUERY_CHAIN:
 				return queryChain != null && !queryChain.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //CompoundQueryImpl
+} //CompoundRefQueryImpl

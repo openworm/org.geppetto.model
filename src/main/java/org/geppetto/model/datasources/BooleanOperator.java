@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model.values;
+package org.geppetto.model.datasources;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -10,121 +10,97 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Image Format</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Boolean Operator</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.geppetto.model.values.ValuesPackage#getImageFormat()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getBooleanOperator()
  * @model
  * @generated
  */
-public enum ImageFormat implements Enumerator
+public enum BooleanOperator implements Enumerator
 {
 	/**
-	 * The '<em><b>PNG</b></em>' literal object.
+	 * The '<em><b>AND</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PNG_VALUE
+	 * @see #AND_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PNG(0, "PNG", "PNG"),
+	AND(0, "AND", "AND"),
 
 	/**
-	 * The '<em><b>JPEG</b></em>' literal object.
+	 * The '<em><b>NAND</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #JPEG_VALUE
+	 * @see #NAND_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	JPEG(1, "JPEG", "JPEG"), /**
-	 * The '<em><b>IIP</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #IIP_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	IIP(2, "IIP", "IIP");
+	NAND(1, "NAND", "NAND");
 
 	/**
-	 * The '<em><b>PNG</b></em>' literal value.
+	 * The '<em><b>AND</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>PNG</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>AND</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PNG
+	 * @see #AND
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PNG_VALUE = 0;
+	public static final int AND_VALUE = 0;
 
 	/**
-	 * The '<em><b>JPEG</b></em>' literal value.
+	 * The '<em><b>NAND</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>JPEG</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>NAND</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #JPEG
+	 * @see #NAND
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int JPEG_VALUE = 1;
+	public static final int NAND_VALUE = 1;
 
 	/**
-	 * The '<em><b>IIP</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>IIP</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #IIP
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int IIP_VALUE = 2;
-
-	/**
-	 * An array of all the '<em><b>Image Format</b></em>' enumerators.
+	 * An array of all the '<em><b>Boolean Operator</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ImageFormat[] VALUES_ARRAY =
-		new ImageFormat[]
+	private static final BooleanOperator[] VALUES_ARRAY =
+		new BooleanOperator[]
 		{
-			PNG,
-			JPEG,
-			IIP,
+			AND,
+			NAND,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Image Format</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Boolean Operator</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<ImageFormat> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<BooleanOperator> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Image Format</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Boolean Operator</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ImageFormat get(String literal)
+	public static BooleanOperator get(String literal)
 	{
 		for (int i = 0; i < VALUES_ARRAY.length; ++i)
 		{
-			ImageFormat result = VALUES_ARRAY[i];
+			BooleanOperator result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal))
 			{
 				return result;
@@ -134,16 +110,16 @@ public enum ImageFormat implements Enumerator
 	}
 
 	/**
-	 * Returns the '<em><b>Image Format</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Boolean Operator</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ImageFormat getByName(String name)
+	public static BooleanOperator getByName(String name)
 	{
 		for (int i = 0; i < VALUES_ARRAY.length; ++i)
 		{
-			ImageFormat result = VALUES_ARRAY[i];
+			BooleanOperator result = VALUES_ARRAY[i];
 			if (result.getName().equals(name))
 			{
 				return result;
@@ -153,18 +129,17 @@ public enum ImageFormat implements Enumerator
 	}
 
 	/**
-	 * Returns the '<em><b>Image Format</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Boolean Operator</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ImageFormat get(int value)
+	public static BooleanOperator get(int value)
 	{
 		switch (value)
 		{
-			case PNG_VALUE: return PNG;
-			case JPEG_VALUE: return JPEG;
-			case IIP_VALUE: return IIP;
+			case AND_VALUE: return AND;
+			case NAND_VALUE: return NAND;
 		}
 		return null;
 	}
@@ -196,7 +171,7 @@ public enum ImageFormat implements Enumerator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private ImageFormat(int value, String name, String literal)
+	private BooleanOperator(int value, String name, String literal)
 	{
 		this.value = value;
 		this.name = name;
@@ -245,4 +220,4 @@ public enum ImageFormat implements Enumerator
 		return literal;
 	}
 	
-} //ImageFormat
+} //BooleanOperator

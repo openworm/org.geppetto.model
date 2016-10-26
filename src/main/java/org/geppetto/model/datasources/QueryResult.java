@@ -1,10 +1,8 @@
 /**
  */
-package org.geppetto.model;
+package org.geppetto.model.datasources;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,15 +12,15 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.geppetto.model.QueryResult#getValues <em>Values</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.QueryResult#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.geppetto.model.GeppettoPackage#getQueryResult()
+ * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryResult()
  * @model
  * @generated
  */
-public interface QueryResult extends EObject
+public interface QueryResult extends AQueryResult
 {
 	/**
 	 * Returns the value of the '<em><b>Values</b></em>' attribute list.
@@ -34,7 +32,7 @@ public interface QueryResult extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' attribute list.
-	 * @see org.geppetto.model.GeppettoPackage#getQueryResult_Values()
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryResult_Values()
 	 * @model unique="false" required="true"
 	 * @generated
 	 */

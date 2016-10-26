@@ -1,14 +1,17 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.QueryResult;
+
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.QueryResult;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,13 +20,13 @@ import org.geppetto.model.QueryResult;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.QueryResultImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.QueryResultImpl#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class QueryResultImpl extends MinimalEObjectImpl.Container implements QueryResult
+public class QueryResultImpl extends AQueryResultImpl implements QueryResult
 {
 	/**
 	 * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
@@ -53,7 +56,7 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.QUERY_RESULT;
+		return DatasourcesPackage.Literals.QUERY_RESULT;
 	}
 
 	/**
@@ -65,7 +68,7 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 	{
 		if (values == null)
 		{
-			values = new EDataTypeEList<Object>(Object.class, this, GeppettoPackage.QUERY_RESULT__VALUES);
+			values = new EDataTypeEList<Object>(Object.class, this, DatasourcesPackage.QUERY_RESULT__VALUES);
 		}
 		return values;
 	}
@@ -80,7 +83,7 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_RESULT__VALUES:
+			case DatasourcesPackage.QUERY_RESULT__VALUES:
 				return getValues();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -97,7 +100,7 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_RESULT__VALUES:
+			case DatasourcesPackage.QUERY_RESULT__VALUES:
 				getValues().clear();
 				getValues().addAll((Collection<? extends Object>)newValue);
 				return;
@@ -115,7 +118,7 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_RESULT__VALUES:
+			case DatasourcesPackage.QUERY_RESULT__VALUES:
 				getValues().clear();
 				return;
 		}
@@ -132,7 +135,7 @@ public class QueryResultImpl extends MinimalEObjectImpl.Container implements Que
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_RESULT__VALUES:
+			case DatasourcesPackage.QUERY_RESULT__VALUES:
 				return values != null && !values.isEmpty();
 		}
 		return super.eIsSet(featureID);

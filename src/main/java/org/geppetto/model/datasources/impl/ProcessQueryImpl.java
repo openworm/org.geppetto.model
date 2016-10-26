@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,7 +17,11 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.ProcessQuery;
+
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.ProcessQuery;
+
+import org.geppetto.model.impl.StringToStringMapImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,8 +30,8 @@ import org.geppetto.model.ProcessQuery;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.ProcessQueryImpl#getParameters <em>Parameters</em>}</li>
- *   <li>{@link org.geppetto.model.impl.ProcessQueryImpl#getQueryProcessorId <em>Query Processor Id</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.ProcessQueryImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.ProcessQueryImpl#getQueryProcessorId <em>Query Processor Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,7 +87,7 @@ public class ProcessQueryImpl extends QueryImpl implements ProcessQuery
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.PROCESS_QUERY;
+		return DatasourcesPackage.Literals.PROCESS_QUERY;
 	}
 
 	/**
@@ -95,7 +99,7 @@ public class ProcessQueryImpl extends QueryImpl implements ProcessQuery
 	{
 		if (parameters == null)
 		{
-			parameters = new EcoreEMap<String,String>(GeppettoPackage.Literals.STRING_TO_STRING_MAP, StringToStringMapImpl.class, this, GeppettoPackage.PROCESS_QUERY__PARAMETERS);
+			parameters = new EcoreEMap<String,String>(GeppettoPackage.Literals.STRING_TO_STRING_MAP, StringToStringMapImpl.class, this, DatasourcesPackage.PROCESS_QUERY__PARAMETERS);
 		}
 		return parameters;
 	}
@@ -120,7 +124,7 @@ public class ProcessQueryImpl extends QueryImpl implements ProcessQuery
 		String oldQueryProcessorId = queryProcessorId;
 		queryProcessorId = newQueryProcessorId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID, oldQueryProcessorId, queryProcessorId));
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID, oldQueryProcessorId, queryProcessorId));
 	}
 
 	/**
@@ -133,7 +137,7 @@ public class ProcessQueryImpl extends QueryImpl implements ProcessQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.PROCESS_QUERY__PARAMETERS:
+			case DatasourcesPackage.PROCESS_QUERY__PARAMETERS:
 				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -149,10 +153,10 @@ public class ProcessQueryImpl extends QueryImpl implements ProcessQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.PROCESS_QUERY__PARAMETERS:
+			case DatasourcesPackage.PROCESS_QUERY__PARAMETERS:
 				if (coreType) return getParameters();
 				else return getParameters().map();
-			case GeppettoPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID:
+			case DatasourcesPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID:
 				return getQueryProcessorId();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -168,10 +172,10 @@ public class ProcessQueryImpl extends QueryImpl implements ProcessQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.PROCESS_QUERY__PARAMETERS:
+			case DatasourcesPackage.PROCESS_QUERY__PARAMETERS:
 				((EStructuralFeature.Setting)getParameters()).set(newValue);
 				return;
-			case GeppettoPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID:
+			case DatasourcesPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID:
 				setQueryProcessorId((String)newValue);
 				return;
 		}
@@ -188,10 +192,10 @@ public class ProcessQueryImpl extends QueryImpl implements ProcessQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.PROCESS_QUERY__PARAMETERS:
+			case DatasourcesPackage.PROCESS_QUERY__PARAMETERS:
 				getParameters().clear();
 				return;
-			case GeppettoPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID:
+			case DatasourcesPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID:
 				setQueryProcessorId(QUERY_PROCESSOR_ID_EDEFAULT);
 				return;
 		}
@@ -208,9 +212,9 @@ public class ProcessQueryImpl extends QueryImpl implements ProcessQuery
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.PROCESS_QUERY__PARAMETERS:
+			case DatasourcesPackage.PROCESS_QUERY__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
-			case GeppettoPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID:
+			case DatasourcesPackage.PROCESS_QUERY__QUERY_PROCESSOR_ID:
 				return QUERY_PROCESSOR_ID_EDEFAULT == null ? queryProcessorId != null : !QUERY_PROCESSOR_ID_EDEFAULT.equals(queryProcessorId);
 		}
 		return super.eIsSet(featureID);

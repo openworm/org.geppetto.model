@@ -4,6 +4,8 @@ package org.geppetto.model;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.geppetto.model.datasources.DataSource;
+import org.geppetto.model.datasources.Query;
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -24,6 +26,7 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.GeppettoModel#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getName <em>Name</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getDataSources <em>Data Sources</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getQueries <em>Queries</em>}</li>
  * </ul>
  * </p>
  *
@@ -152,7 +155,7 @@ public interface GeppettoModel extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Data Sources</b></em>' containment reference list.
-	 * The list contents are of type {@link org.geppetto.model.DataSource}.
+	 * The list contents are of type {@link org.geppetto.model.datasources.DataSource}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Data Sources</em>' containment reference list isn't clear,
@@ -168,5 +171,21 @@ public interface GeppettoModel extends EObject
 	 * @generated
 	 */
 	EList<DataSource> getDataSources();
+
+	/**
+	 * Returns the value of the '<em><b>Queries</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.datasources.Query}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Queries</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Queries</em>' containment reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Queries()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Query> getQueries();
 
 } // GeppettoModel

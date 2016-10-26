@@ -3,20 +3,29 @@
 package org.geppetto.model.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.geppetto.model.DataSource;
+
 import org.geppetto.model.GeppettoLibrary;
 import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.Tag;
+
+import org.geppetto.model.datasources.DataSource;
+import org.geppetto.model.datasources.Query;
+
 import org.geppetto.model.variables.Variable;
 
 /**
@@ -32,6 +41,7 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getDataSources <em>Data Sources</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getQueries <em>Queries</em>}</li>
  * </ul>
  * </p>
  *
@@ -118,6 +128,16 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * @ordered
 	 */
 	protected EList<DataSource> dataSources;
+
+	/**
+	 * The cached value of the '{@link #getQueries() <em>Queries</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQueries()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Query> queries;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -247,6 +267,20 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Query> getQueries()
+	{
+		if (queries == null)
+		{
+			queries = new EObjectContainmentEList<Query>(Query.class, this, GeppettoPackage.GEPPETTO_MODEL__QUERIES);
+		}
+		return queries;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -260,6 +294,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
 			case GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES:
 				return ((InternalEList<?>)getDataSources()).basicRemove(otherEnd, msgs);
+			case GeppettoPackage.GEPPETTO_MODEL__QUERIES:
+				return ((InternalEList<?>)getQueries()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -286,6 +322,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return getName();
 			case GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES:
 				return getDataSources();
+			case GeppettoPackage.GEPPETTO_MODEL__QUERIES:
+				return getQueries();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -323,6 +361,10 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				getDataSources().clear();
 				getDataSources().addAll((Collection<? extends DataSource>)newValue);
 				return;
+			case GeppettoPackage.GEPPETTO_MODEL__QUERIES:
+				getQueries().clear();
+				getQueries().addAll((Collection<? extends Query>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -355,6 +397,9 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 			case GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES:
 				getDataSources().clear();
 				return;
+			case GeppettoPackage.GEPPETTO_MODEL__QUERIES:
+				getQueries().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -381,6 +426,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case GeppettoPackage.GEPPETTO_MODEL__DATA_SOURCES:
 				return dataSources != null && !dataSources.isEmpty();
+			case GeppettoPackage.GEPPETTO_MODEL__QUERIES:
+				return queries != null && !queries.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

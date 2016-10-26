@@ -1,6 +1,6 @@
 /**
  */
-package org.geppetto.model.impl;
+package org.geppetto.model.datasources.impl;
 
 import java.util.Collection;
 
@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import org.geppetto.model.GeppettoPackage;
-import org.geppetto.model.QueryMatchingCriteria;
+import org.geppetto.model.datasources.DatasourcesPackage;
+import org.geppetto.model.datasources.QueryMatchingCriteria;
 
 import org.geppetto.model.types.Type;
 
@@ -24,7 +24,7 @@ import org.geppetto.model.types.Type;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.geppetto.model.impl.QueryMatchingCriteriaImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.QueryMatchingCriteriaImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,7 +60,7 @@ public class QueryMatchingCriteriaImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	protected EClass eStaticClass()
 	{
-		return GeppettoPackage.Literals.QUERY_MATCHING_CRITERIA;
+		return DatasourcesPackage.Literals.QUERY_MATCHING_CRITERIA;
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class QueryMatchingCriteriaImpl extends MinimalEObjectImpl.Container impl
 	{
 		if (type == null)
 		{
-			type = new EObjectResolvingEList<Type>(Type.class, this, GeppettoPackage.QUERY_MATCHING_CRITERIA__TYPE);
+			type = new EObjectResolvingEList<Type>(Type.class, this, DatasourcesPackage.QUERY_MATCHING_CRITERIA__TYPE);
 		}
 		return type;
 	}
@@ -87,7 +87,7 @@ public class QueryMatchingCriteriaImpl extends MinimalEObjectImpl.Container impl
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_MATCHING_CRITERIA__TYPE:
+			case DatasourcesPackage.QUERY_MATCHING_CRITERIA__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -104,7 +104,7 @@ public class QueryMatchingCriteriaImpl extends MinimalEObjectImpl.Container impl
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_MATCHING_CRITERIA__TYPE:
+			case DatasourcesPackage.QUERY_MATCHING_CRITERIA__TYPE:
 				getType().clear();
 				getType().addAll((Collection<? extends Type>)newValue);
 				return;
@@ -122,7 +122,7 @@ public class QueryMatchingCriteriaImpl extends MinimalEObjectImpl.Container impl
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_MATCHING_CRITERIA__TYPE:
+			case DatasourcesPackage.QUERY_MATCHING_CRITERIA__TYPE:
 				getType().clear();
 				return;
 		}
@@ -139,7 +139,7 @@ public class QueryMatchingCriteriaImpl extends MinimalEObjectImpl.Container impl
 	{
 		switch (featureID)
 		{
-			case GeppettoPackage.QUERY_MATCHING_CRITERIA__TYPE:
+			case DatasourcesPackage.QUERY_MATCHING_CRITERIA__TYPE:
 				return type != null && !type.isEmpty();
 		}
 		return super.eIsSet(featureID);
