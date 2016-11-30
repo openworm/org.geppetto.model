@@ -254,7 +254,7 @@
       <eOperations name="getInstancePath" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
           eType="#//values/PointerElement" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="visualReference" eType="#//values/VisualReference"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="point" eType="#//values/Point"
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PointerElement">
@@ -262,14 +262,6 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//types/Type"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//IntObject"
           defaultValueLiteral="-1"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="VisualReference" eSuperTypes="#//values/Value">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="if the pointed type has a visual type the VisualPointer provides the facility to point to a specific visual value inside the visual type.&#xA;This allows us for instance to have a connection between two specific subparts (e.g. two cylinders).&#xA;The fraction attribute is optional and can be used to specify (0 to 1) where along a linear geometry (e.g. a cylinder) the connection is located."/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="visualVariable" lowerBound="1"
-          eType="#//variables/Variable"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="fraction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Point" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>

@@ -113,15 +113,6 @@ public interface ValuesFactory extends EFactory
 	PointerElement createPointerElement();
 
 	/**
-	 * Returns a new object of class '<em>Visual Reference</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Visual Reference</em>'.
-	 * @generated
-	 */
-	VisualReference createVisualReference();
-
-	/**
 	 * Returns a new object of class '<em>Point</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

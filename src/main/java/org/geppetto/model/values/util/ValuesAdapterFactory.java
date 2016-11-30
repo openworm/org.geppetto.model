@@ -140,11 +140,6 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createPointerElementAdapter();
 			}
 			@Override
-			public Adapter caseVisualReference(VisualReference object)
-			{
-				return createVisualReferenceAdapter();
-			}
-			@Override
 			public Adapter casePoint(Point object)
 			{
 				return createPointAdapter();
@@ -472,21 +467,6 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createPointerElementAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.VisualReference <em>Visual Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.geppetto.model.values.VisualReference
-	 * @generated
-	 */
-	public Adapter createVisualReferenceAdapter()
 	{
 		return null;
 	}

@@ -622,13 +622,13 @@ public interface ValuesPackage extends EPackage
 	int POINTER__ELEMENTS = VALUE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Visual Reference</b></em>' containment reference.
+	 * The feature id for the '<em><b>Point</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINTER__VISUAL_REFERENCE = VALUE_FEATURE_COUNT + 1;
+	int POINTER__POINT = VALUE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Pointer</em>' class.
@@ -713,61 +713,6 @@ public interface ValuesPackage extends EPackage
 	int POINTER_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.values.impl.VisualReferenceImpl <em>Visual Reference</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.values.impl.VisualReferenceImpl
-	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualReference()
-	 * @generated
-	 */
-	int VISUAL_REFERENCE = 13;
-
-	/**
-	 * The feature id for the '<em><b>Synched</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_REFERENCE__SYNCHED = VALUE__SYNCHED;
-
-	/**
-	 * The feature id for the '<em><b>Visual Variable</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_REFERENCE__VISUAL_VARIABLE = VALUE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Fraction</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_REFERENCE__FRACTION = VALUE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Visual Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_REFERENCE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Visual Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_REFERENCE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.impl.PointImpl <em>Point</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -775,7 +720,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getPoint()
 	 * @generated
 	 */
-	int POINT = 14;
+	int POINT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -839,7 +784,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getDynamics()
 	 * @generated
 	 */
-	int DYNAMICS = 15;
+	int DYNAMICS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -894,7 +839,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getFunctionPlot()
 	 * @generated
 	 */
-	int FUNCTION_PLOT = 16;
+	int FUNCTION_PLOT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -976,7 +921,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getFunction()
 	 * @generated
 	 */
-	int FUNCTION = 17;
+	int FUNCTION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1040,7 +985,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArgument()
 	 * @generated
 	 */
-	int ARGUMENT = 18;
+	int ARGUMENT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1086,7 +1031,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getExpression()
 	 * @generated
 	 */
-	int EXPRESSION = 19;
+	int EXPRESSION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1132,7 +1077,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualValue()
 	 * @generated
 	 */
-	int VISUAL_VALUE = 20;
+	int VISUAL_VALUE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1187,7 +1132,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getCollada()
 	 * @generated
 	 */
-	int COLLADA = 21;
+	int COLLADA = 20;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1251,7 +1196,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getOBJ()
 	 * @generated
 	 */
-	int OBJ = 22;
+	int OBJ = 21;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1315,7 +1260,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSphere()
 	 * @generated
 	 */
-	int SPHERE = 23;
+	int SPHERE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1379,7 +1324,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getCylinder()
 	 * @generated
 	 */
-	int CYLINDER = 24;
+	int CYLINDER = 23;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1470,7 +1415,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getParticle()
 	 * @generated
 	 */
-	int PARTICLE = 25;
+	int PARTICLE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1553,7 +1498,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSkeletonAnimation()
 	 * @generated
 	 */
-	int SKELETON_ANIMATION = 26;
+	int SKELETON_ANIMATION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1617,7 +1562,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSkeletonTransformation()
 	 * @generated
 	 */
-	int SKELETON_TRANSFORMATION = 27;
+	int SKELETON_TRANSFORMATION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Skeleton Transformation</b></em>' attribute list.
@@ -1655,7 +1600,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroupElement()
 	 * @generated
 	 */
-	int VISUAL_GROUP_ELEMENT = 28;
+	int VISUAL_GROUP_ELEMENT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1746,7 +1691,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroup()
 	 * @generated
 	 */
-	int VISUAL_GROUP = 29;
+	int VISUAL_GROUP = 28;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1856,7 +1801,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnection()
 	 * @generated
 	 */
-	int CONNECTION = 30;
+	int CONNECTION = 29;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1920,7 +1865,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayElement()
 	 * @generated
 	 */
-	int ARRAY_ELEMENT = 31;
+	int ARRAY_ELEMENT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1984,7 +1929,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayValue()
 	 * @generated
 	 */
-	int ARRAY_VALUE = 32;
+	int ARRAY_VALUE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -2030,7 +1975,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImage()
 	 * @generated
 	 */
-	int IMAGE = 33;
+	int IMAGE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -2103,7 +2048,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImportValue()
 	 * @generated
 	 */
-	int IMPORT_VALUE = 34;
+	int IMPORT_VALUE = 33;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -2149,7 +2094,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectivity()
 	 * @generated
 	 */
-	int CONNECTIVITY = 35;
+	int CONNECTIVITY = 34;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}' enum.
@@ -2159,7 +2104,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImageFormat()
 	 * @generated
 	 */
-	int IMAGE_FORMAT = 36;
+	int IMAGE_FORMAT = 35;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Value <em>Value</em>}'.
@@ -2438,15 +2383,15 @@ public interface ValuesPackage extends EPackage
 	EReference getPointer_Elements();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Pointer#getVisualReference <em>Visual Reference</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.values.Pointer#getPoint <em>Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Visual Reference</em>'.
-	 * @see org.geppetto.model.values.Pointer#getVisualReference()
+	 * @return the meta object for the containment reference '<em>Point</em>'.
+	 * @see org.geppetto.model.values.Pointer#getPoint()
 	 * @see #getPointer()
 	 * @generated
 	 */
-	EReference getPointer_VisualReference();
+	EReference getPointer_Point();
 
 	/**
 	 * Returns the meta object for the '{@link org.geppetto.model.values.Pointer#getInstancePath() <em>Get Instance Path</em>}' operation.
@@ -2500,38 +2445,6 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getPointerElement_Index();
-
-	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.values.VisualReference <em>Visual Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Visual Reference</em>'.
-	 * @see org.geppetto.model.values.VisualReference
-	 * @generated
-	 */
-	EClass getVisualReference();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.values.VisualReference#getVisualVariable <em>Visual Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Visual Variable</em>'.
-	 * @see org.geppetto.model.values.VisualReference#getVisualVariable()
-	 * @see #getVisualReference()
-	 * @generated
-	 */
-	EReference getVisualReference_VisualVariable();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.VisualReference#getFraction <em>Fraction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fraction</em>'.
-	 * @see org.geppetto.model.values.VisualReference#getFraction()
-	 * @see #getVisualReference()
-	 * @generated
-	 */
-	EAttribute getVisualReference_Fraction();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Point <em>Point</em>}'.
@@ -3515,12 +3428,12 @@ public interface ValuesPackage extends EPackage
 		EReference POINTER__ELEMENTS = eINSTANCE.getPointer_Elements();
 
 		/**
-		 * The meta object literal for the '<em><b>Visual Reference</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Point</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference POINTER__VISUAL_REFERENCE = eINSTANCE.getPointer_VisualReference();
+		EReference POINTER__POINT = eINSTANCE.getPointer_Point();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Instance Path</b></em>' operation.
@@ -3563,32 +3476,6 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute POINTER_ELEMENT__INDEX = eINSTANCE.getPointerElement_Index();
-
-		/**
-		 * The meta object literal for the '{@link org.geppetto.model.values.impl.VisualReferenceImpl <em>Visual Reference</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.values.impl.VisualReferenceImpl
-		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualReference()
-		 * @generated
-		 */
-		EClass VISUAL_REFERENCE = eINSTANCE.getVisualReference();
-
-		/**
-		 * The meta object literal for the '<em><b>Visual Variable</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VISUAL_REFERENCE__VISUAL_VARIABLE = eINSTANCE.getVisualReference_VisualVariable();
-
-		/**
-		 * The meta object literal for the '<em><b>Fraction</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VISUAL_REFERENCE__FRACTION = eINSTANCE.getVisualReference_Fraction();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.PointImpl <em>Point</em>}' class.
