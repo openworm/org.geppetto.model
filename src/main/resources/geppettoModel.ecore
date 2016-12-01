@@ -509,6 +509,7 @@
     <eClassifiers xsi:type="ecore:EEnum" name="BooleanOperator">
       <eLiterals name="AND" literal="AND"/>
       <eLiterals name="NAND" value="1" literal="NAND"/>
+      <eLiterals name="OR" value="2" literal="OR"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
