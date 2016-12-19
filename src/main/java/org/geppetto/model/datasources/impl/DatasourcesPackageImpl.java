@@ -869,6 +869,7 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		initEEnum(booleanOperatorEEnum, BooleanOperator.class, "BooleanOperator");
 		addEEnumLiteral(booleanOperatorEEnum, BooleanOperator.AND);
 		addEEnumLiteral(booleanOperatorEEnum, BooleanOperator.NAND);
+		addEEnumLiteral(booleanOperatorEEnum, BooleanOperator.OR);
 	}
 
 } //DatasourcesPackageImpl

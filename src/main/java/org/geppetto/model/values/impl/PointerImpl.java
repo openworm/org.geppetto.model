@@ -12,10 +12,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.geppetto.model.values.Point;
 import org.geppetto.model.values.Pointer;
 import org.geppetto.model.values.PointerElement;
 import org.geppetto.model.values.ValuesPackage;
-import org.geppetto.model.values.VisualReference;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Pointer</b></em>'. <!-- end-user-doc -->
@@ -23,7 +23,7 @@ import org.geppetto.model.values.VisualReference;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.PointerImpl#getElements <em>Elements</em>}</li>
- *   <li>{@link org.geppetto.model.values.impl.PointerImpl#getVisualReference <em>Visual Reference</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.PointerImpl#getPoint <em>Point</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,14 +41,14 @@ public class PointerImpl extends ValueImpl implements Pointer
 	protected EList<PointerElement> elements;
 
 	/**
-	 * The cached value of the '{@link #getVisualReference() <em>Visual Reference</em>}' containment reference.
+	 * The cached value of the '{@link #getPoint() <em>Point</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVisualReference()
+	 * @see #getPoint()
 	 * @generated
 	 * @ordered
 	 */
-	protected VisualReference visualReference;
+	protected Point point;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -87,9 +87,9 @@ public class PointerImpl extends ValueImpl implements Pointer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VisualReference getVisualReference()
+	public Point getPoint()
 	{
-		return visualReference;
+		return point;
 	}
 
 	/**
@@ -97,13 +97,13 @@ public class PointerImpl extends ValueImpl implements Pointer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVisualReference(VisualReference newVisualReference, NotificationChain msgs)
+	public NotificationChain basicSetPoint(Point newPoint, NotificationChain msgs)
 	{
-		VisualReference oldVisualReference = visualReference;
-		visualReference = newVisualReference;
+		Point oldPoint = point;
+		point = newPoint;
 		if (eNotificationRequired())
 		{
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER__VISUAL_REFERENCE, oldVisualReference, newVisualReference);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER__POINT, oldPoint, newPoint);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -114,20 +114,20 @@ public class PointerImpl extends ValueImpl implements Pointer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVisualReference(VisualReference newVisualReference)
+	public void setPoint(Point newPoint)
 	{
-		if (newVisualReference != visualReference)
+		if (newPoint != point)
 		{
 			NotificationChain msgs = null;
-			if (visualReference != null)
-				msgs = ((InternalEObject)visualReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.POINTER__VISUAL_REFERENCE, null, msgs);
-			if (newVisualReference != null)
-				msgs = ((InternalEObject)newVisualReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.POINTER__VISUAL_REFERENCE, null, msgs);
-			msgs = basicSetVisualReference(newVisualReference, msgs);
+			if (point != null)
+				msgs = ((InternalEObject)point).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.POINTER__POINT, null, msgs);
+			if (newPoint != null)
+				msgs = ((InternalEObject)newPoint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ValuesPackage.POINTER__POINT, null, msgs);
+			msgs = basicSetPoint(newPoint, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER__VISUAL_REFERENCE, newVisualReference, newVisualReference));
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER__POINT, newPoint, newPoint));
 	}
 
 	/**
@@ -165,8 +165,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 		{
 			case ValuesPackage.POINTER__ELEMENTS:
 				return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
-			case ValuesPackage.POINTER__VISUAL_REFERENCE:
-				return basicSetVisualReference(null, msgs);
+			case ValuesPackage.POINTER__POINT:
+				return basicSetPoint(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -182,8 +182,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 		{
 			case ValuesPackage.POINTER__ELEMENTS:
 				return getElements();
-			case ValuesPackage.POINTER__VISUAL_REFERENCE:
-				return getVisualReference();
+			case ValuesPackage.POINTER__POINT:
+				return getPoint();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -202,8 +202,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 				getElements().clear();
 				getElements().addAll((Collection<? extends PointerElement>)newValue);
 				return;
-			case ValuesPackage.POINTER__VISUAL_REFERENCE:
-				setVisualReference((VisualReference)newValue);
+			case ValuesPackage.POINTER__POINT:
+				setPoint((Point)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -221,8 +221,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 			case ValuesPackage.POINTER__ELEMENTS:
 				getElements().clear();
 				return;
-			case ValuesPackage.POINTER__VISUAL_REFERENCE:
-				setVisualReference((VisualReference)null);
+			case ValuesPackage.POINTER__POINT:
+				setPoint((Point)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -239,8 +239,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 		{
 			case ValuesPackage.POINTER__ELEMENTS:
 				return elements != null && !elements.isEmpty();
-			case ValuesPackage.POINTER__VISUAL_REFERENCE:
-				return visualReference != null;
+			case ValuesPackage.POINTER__POINT:
+				return point != null;
 		}
 		return super.eIsSet(featureID);
 	}

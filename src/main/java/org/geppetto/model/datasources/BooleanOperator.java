@@ -37,7 +37,15 @@ public enum BooleanOperator implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-	NAND(1, "NAND", "NAND");
+	NAND(1, "NAND", "NAND"), /**
+	 * The '<em><b>OR</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OR(2, "OR", "OR");
 
 	/**
 	 * The '<em><b>AND</b></em>' literal value.
@@ -70,6 +78,21 @@ public enum BooleanOperator implements Enumerator
 	public static final int NAND_VALUE = 1;
 
 	/**
+	 * The '<em><b>OR</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>OR</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OR
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OR_VALUE = 2;
+
+	/**
 	 * An array of all the '<em><b>Boolean Operator</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -80,6 +103,7 @@ public enum BooleanOperator implements Enumerator
 		{
 			AND,
 			NAND,
+			OR,
 		};
 
 	/**
@@ -140,6 +164,7 @@ public enum BooleanOperator implements Enumerator
 		{
 			case AND_VALUE: return AND;
 			case NAND_VALUE: return NAND;
+			case OR_VALUE: return OR;
 		}
 		return null;
 	}

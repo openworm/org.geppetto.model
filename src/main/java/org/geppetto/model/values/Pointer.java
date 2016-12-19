@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.geppetto.model.values.Pointer#getElements <em>Elements</em>}</li>
- *   <li>{@link org.geppetto.model.values.Pointer#getVisualReference <em>Visual Reference</em>}</li>
+ *   <li>{@link org.geppetto.model.values.Pointer#getPoint <em>Point</em>}</li>
  * </ul>
  * </p>
  *
@@ -40,30 +40,30 @@ public interface Pointer extends Value
 	EList<PointerElement> getElements();
 
 	/**
-	 * Returns the value of the '<em><b>Visual Reference</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Point</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Visual Reference</em>' reference isn't clear,
+	 * If the meaning of the '<em>Point</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visual Reference</em>' containment reference.
-	 * @see #setVisualReference(VisualReference)
-	 * @see org.geppetto.model.values.ValuesPackage#getPointer_VisualReference()
+	 * @return the value of the '<em>Point</em>' containment reference.
+	 * @see #setPoint(Point)
+	 * @see org.geppetto.model.values.ValuesPackage#getPointer_Point()
 	 * @model containment="true"
 	 * @generated
 	 */
-	VisualReference getVisualReference();
+	Point getPoint();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.values.Pointer#getVisualReference <em>Visual Reference</em>}' containment reference.
+	 * Sets the value of the '{@link org.geppetto.model.values.Pointer#getPoint <em>Point</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visual Reference</em>' containment reference.
-	 * @see #getVisualReference()
+	 * @param value the new value of the '<em>Point</em>' containment reference.
+	 * @see #getPoint()
 	 * @generated
 	 */
-	void setVisualReference(VisualReference value);
+	void setPoint(Point value);
 
 	/**
 	 * <!-- begin-user-doc -->
