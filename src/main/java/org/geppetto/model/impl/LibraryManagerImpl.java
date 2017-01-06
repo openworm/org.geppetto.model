@@ -20,10 +20,10 @@ import org.geppetto.model.LibraryManager;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.LibraryManagerImpl#getLibraries <em>Libraries</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

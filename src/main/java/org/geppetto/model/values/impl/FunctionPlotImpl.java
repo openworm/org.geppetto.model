@@ -18,6 +18,7 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.FunctionPlotImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.FunctionPlotImpl#getXAxisLabel <em>XAxis Label</em>}</li>
@@ -26,7 +27,6 @@ import org.geppetto.model.values.ValuesPackage;
  *   <li>{@link org.geppetto.model.values.impl.FunctionPlotImpl#getFinalValue <em>Final Value</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.FunctionPlotImpl#getStepValue <em>Step Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -21,11 +21,11 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.DynamicsImpl#getInitialCondition <em>Initial Condition</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.DynamicsImpl#getDynamics <em>Dynamics</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

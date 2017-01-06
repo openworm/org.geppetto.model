@@ -14,11 +14,11 @@ import org.geppetto.model.variables.Variable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.CompositeVisualType#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.geppetto.model.types.CompositeVisualType#getVisualGroups <em>Visual Groups</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.types.TypesPackage#getCompositeVisualType()
  * @model

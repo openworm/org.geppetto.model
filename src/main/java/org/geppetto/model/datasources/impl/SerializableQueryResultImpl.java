@@ -19,10 +19,10 @@ import org.geppetto.model.datasources.SerializableQueryResult;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.SerializableQueryResultImpl#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

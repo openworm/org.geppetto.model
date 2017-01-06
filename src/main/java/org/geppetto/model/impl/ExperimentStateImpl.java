@@ -22,12 +22,13 @@ import org.geppetto.model.VariableValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.ExperimentStateImpl#getRecordedVariables <em>Recorded Variables</em>}</li>
  *   <li>{@link org.geppetto.model.impl.ExperimentStateImpl#getSetParameters <em>Set Parameters</em>}</li>
  *   <li>{@link org.geppetto.model.impl.ExperimentStateImpl#getExperimentId <em>Experiment Id</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.ExperimentStateImpl#getProjectId <em>Project Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,6 +73,26 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected long experimentId = EXPERIMENT_ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getProjectId() <em>Project Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProjectId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final long PROJECT_ID_EDEFAULT = 0L;
+
+	/**
+	 * The cached value of the '{@link #getProjectId() <em>Project Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProjectId()
+	 * @generated
+	 * @ordered
+	 */
+	protected long projectId = PROJECT_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -150,6 +171,29 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public long getProjectId()
+	{
+		return projectId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProjectId(long newProjectId)
+	{
+		long oldProjectId = projectId;
+		projectId = newProjectId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.EXPERIMENT_STATE__PROJECT_ID, oldProjectId, projectId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -179,6 +223,8 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 				return getSetParameters();
 			case GeppettoPackage.EXPERIMENT_STATE__EXPERIMENT_ID:
 				return getExperimentId();
+			case GeppettoPackage.EXPERIMENT_STATE__PROJECT_ID:
+				return getProjectId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -205,6 +251,9 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 			case GeppettoPackage.EXPERIMENT_STATE__EXPERIMENT_ID:
 				setExperimentId((Long)newValue);
 				return;
+			case GeppettoPackage.EXPERIMENT_STATE__PROJECT_ID:
+				setProjectId((Long)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -228,6 +277,9 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 			case GeppettoPackage.EXPERIMENT_STATE__EXPERIMENT_ID:
 				setExperimentId(EXPERIMENT_ID_EDEFAULT);
 				return;
+			case GeppettoPackage.EXPERIMENT_STATE__PROJECT_ID:
+				setProjectId(PROJECT_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -248,6 +300,8 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 				return setParameters != null && !setParameters.isEmpty();
 			case GeppettoPackage.EXPERIMENT_STATE__EXPERIMENT_ID:
 				return experimentId != EXPERIMENT_ID_EDEFAULT;
+			case GeppettoPackage.EXPERIMENT_STATE__PROJECT_ID:
+				return projectId != PROJECT_ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -265,6 +319,8 @@ public class ExperimentStateImpl extends MinimalEObjectImpl.Container implements
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (experimentId: ");
 		result.append(experimentId);
+		result.append(", projectId: ");
+		result.append(projectId);
 		result.append(')');
 		return result.toString();
 	}

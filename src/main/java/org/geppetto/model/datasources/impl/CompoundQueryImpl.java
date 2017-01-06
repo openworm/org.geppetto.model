@@ -24,10 +24,10 @@ import org.geppetto.model.datasources.Query;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.CompoundQueryImpl#getQueryChain <em>Query Chain</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

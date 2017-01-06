@@ -15,10 +15,10 @@ import org.geppetto.model.ModelFormat;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.ModelFormatImpl#getModelFormat <em>Model Format</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

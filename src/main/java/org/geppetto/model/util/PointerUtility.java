@@ -27,13 +27,14 @@ public class PointerUtility
 	public static Pointer getPointer(Variable variable, Type type, Integer index)
 	{
 		Pointer pointer = ValuesFactory.eINSTANCE.createPointer();
-
+		
 		PointerElement pointerElement = ValuesFactory.eINSTANCE.createPointerElement();
 		pointerElement.setIndex(index);
 		pointerElement.setVariable(variable);
 		pointerElement.setType(type);
 
 		pointer.getElements().add(pointerElement);
+		pointer.setPath(pointer.getInstancePath());
 		return pointer;
 	}
 
@@ -51,6 +52,7 @@ public class PointerUtility
 	public static Pointer getPointer(GeppettoModel model, String instancePath) throws GeppettoModelException
 	{
 		Pointer pointer = ValuesFactory.eINSTANCE.createPointer();
+		pointer.setPath(instancePath);
 		StringTokenizer st = new StringTokenizer(instancePath, ".");
 		Type lastType = null;
 		while(st.hasMoreElements())

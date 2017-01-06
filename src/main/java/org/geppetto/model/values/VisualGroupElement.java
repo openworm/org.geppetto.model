@@ -11,11 +11,11 @@ import org.geppetto.model.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.VisualGroupElement#getDefaultColor <em>Default Color</em>}</li>
  *   <li>{@link org.geppetto.model.values.VisualGroupElement#getParameter <em>Parameter</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getVisualGroupElement()
  * @model

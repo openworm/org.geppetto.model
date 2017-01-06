@@ -13,12 +13,12 @@ import org.geppetto.model.GeppettoLibrary;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration#getLibrary <em>Library</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration#getFormat <em>Format</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSourceLibraryConfiguration()
  * @model

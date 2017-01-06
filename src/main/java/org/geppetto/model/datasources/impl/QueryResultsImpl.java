@@ -27,12 +27,12 @@ import org.geppetto.model.datasources.SerializableQueryResult;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.QueryResultsImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.QueryResultsImpl#getHeader <em>Header</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.QueryResultsImpl#getResults <em>Results</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

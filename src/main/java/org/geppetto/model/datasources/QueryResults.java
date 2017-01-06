@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.QueryResults#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.QueryResults#getHeader <em>Header</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.QueryResults#getResults <em>Results</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryResults()
  * @model

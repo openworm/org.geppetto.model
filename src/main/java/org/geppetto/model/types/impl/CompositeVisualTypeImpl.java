@@ -20,11 +20,11 @@ import org.geppetto.model.variables.Variable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.impl.CompositeVisualTypeImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.CompositeVisualTypeImpl#getVisualGroups <em>Visual Groups</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

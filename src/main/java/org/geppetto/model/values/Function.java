@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.Function#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.geppetto.model.values.Function#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.geppetto.model.values.Function#getFunctionPlot <em>Function Plot</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getFunction()
  * @model

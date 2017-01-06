@@ -669,6 +669,16 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPointer_Path()
+	{
+		return (EAttribute)pointerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getPointer__GetInstancePath()
 	{
 		return pointerEClass.getEOperations().get(0);
@@ -1462,6 +1472,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		pointerEClass = createEClass(POINTER);
 		createEReference(pointerEClass, POINTER__ELEMENTS);
 		createEReference(pointerEClass, POINTER__POINT);
+		createEAttribute(pointerEClass, POINTER__PATH);
 		createEOperation(pointerEClass, POINTER___GET_INSTANCE_PATH);
 
 		pointerElementEClass = createEClass(POINTER_ELEMENT);
@@ -1667,6 +1678,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEClass(pointerEClass, Pointer.class, "Pointer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPointer_Elements(), this.getPointerElement(), null, "elements", null, 0, -1, Pointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPointer_Point(), this.getPoint(), null, "point", null, 0, 1, Pointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPointer_Path(), theXMLTypePackage.getString(), "path", null, 1, 1, Pointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getPointer__GetInstancePath(), theXMLTypePackage.getString(), "getInstancePath", 0, 1, IS_UNIQUE, IS_ORDERED);
 

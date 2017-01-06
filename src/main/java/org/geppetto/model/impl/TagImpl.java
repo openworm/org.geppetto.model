@@ -27,12 +27,12 @@ import org.geppetto.model.Tag;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.TagImpl#isSynched <em>Synched</em>}</li>
  *   <li>{@link org.geppetto.model.impl.TagImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.geppetto.model.impl.TagImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

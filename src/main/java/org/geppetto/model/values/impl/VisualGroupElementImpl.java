@@ -18,11 +18,11 @@ import org.geppetto.model.values.VisualGroupElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.VisualGroupElementImpl#getDefaultColor <em>Default Color</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.VisualGroupElementImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

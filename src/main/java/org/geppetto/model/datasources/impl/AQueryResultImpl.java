@@ -13,8 +13,6 @@ import org.geppetto.model.datasources.DatasourcesPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>AQuery Result</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

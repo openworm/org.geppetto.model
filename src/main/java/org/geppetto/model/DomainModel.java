@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.DomainModel#getDomainModel <em>Domain Model</em>}</li>
  *   <li>{@link org.geppetto.model.DomainModel#getFormat <em>Format</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.GeppettoPackage#getDomainModel()
  * @model

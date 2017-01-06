@@ -12,13 +12,13 @@ import org.geppetto.model.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.VisualGroup#getLowSpectrumColor <em>Low Spectrum Color</em>}</li>
  *   <li>{@link org.geppetto.model.values.VisualGroup#getHighSpectrumColor <em>High Spectrum Color</em>}</li>
  *   <li>{@link org.geppetto.model.values.VisualGroup#getType <em>Type</em>}</li>
  *   <li>{@link org.geppetto.model.values.VisualGroup#getVisualGroupElements <em>Visual Group Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getVisualGroup()
  * @model

@@ -15,10 +15,10 @@ import org.geppetto.model.types.Type;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.QueryMatchingCriteria#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getQueryMatchingCriteria()
  * @model

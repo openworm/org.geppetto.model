@@ -11,10 +11,10 @@ import org.geppetto.model.values.Dynamics;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.DynamicsType#getDefaultValue <em>Default Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.types.TypesPackage#getDynamicsType()
  * @model

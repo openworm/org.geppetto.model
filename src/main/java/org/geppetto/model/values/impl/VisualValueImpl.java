@@ -22,11 +22,11 @@ import org.geppetto.model.values.VisualValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.VisualValueImpl#getGroupElements <em>Group Elements</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.VisualValueImpl#getPosition <em>Position</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

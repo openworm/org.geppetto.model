@@ -29,6 +29,7 @@ import org.geppetto.model.variables.VariablesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#getAnonymousTypes <em>Anonymous Types</em>}</li>
  *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#getTypes <em>Types</em>}</li>
@@ -36,7 +37,6 @@ import org.geppetto.model.variables.VariablesPackage;
  *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#isStatic <em>Static</em>}</li>
  *   <li>{@link org.geppetto.model.variables.impl.VariableImpl#getPosition <em>Position</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

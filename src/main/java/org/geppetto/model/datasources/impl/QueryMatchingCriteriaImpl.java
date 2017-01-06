@@ -23,10 +23,10 @@ import org.geppetto.model.types.Type;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.QueryMatchingCriteriaImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

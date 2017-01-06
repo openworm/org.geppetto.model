@@ -17,12 +17,12 @@ import org.geppetto.model.types.TypesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.impl.ImportTypeImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.ImportTypeImpl#getReferenceURL <em>Reference URL</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.ImportTypeImpl#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

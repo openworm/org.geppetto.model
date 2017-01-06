@@ -22,13 +22,13 @@ import org.geppetto.model.values.VisualGroupElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.VisualGroupImpl#getLowSpectrumColor <em>Low Spectrum Color</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.VisualGroupImpl#getHighSpectrumColor <em>High Spectrum Color</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.VisualGroupImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.VisualGroupImpl#getVisualGroupElements <em>Visual Group Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

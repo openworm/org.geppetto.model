@@ -14,6 +14,7 @@ import org.geppetto.model.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.DataSource#getDataSourceService <em>Data Source Service</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.DataSource#getLibraryConfigurations <em>Library Configurations</em>}</li>
@@ -23,7 +24,6 @@ import org.geppetto.model.Node;
  *   <li>{@link org.geppetto.model.datasources.DataSource#getTargetLibrary <em>Target Library</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.DataSource#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource()
  * @model

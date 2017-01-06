@@ -21,11 +21,12 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Pointer</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.PointerImpl#getElements <em>Elements</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.PointerImpl#getPoint <em>Point</em>}</li>
+ *   <li>{@link org.geppetto.model.values.impl.PointerImpl#getPath <em>Path</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -49,6 +50,26 @@ public class PointerImpl extends ValueImpl implements Pointer
 	 * @ordered
 	 */
 	protected Point point;
+
+	/**
+	 * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String path = PATH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -131,6 +152,29 @@ public class PointerImpl extends ValueImpl implements Pointer
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPath()
+	{
+		return path;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPath(String newPath)
+	{
+		String oldPath = path;
+		path = newPath;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ValuesPackage.POINTER__PATH, oldPath, path));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
@@ -184,6 +228,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 				return getElements();
 			case ValuesPackage.POINTER__POINT:
 				return getPoint();
+			case ValuesPackage.POINTER__PATH:
+				return getPath();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -205,6 +251,9 @@ public class PointerImpl extends ValueImpl implements Pointer
 			case ValuesPackage.POINTER__POINT:
 				setPoint((Point)newValue);
 				return;
+			case ValuesPackage.POINTER__PATH:
+				setPath((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -224,6 +273,9 @@ public class PointerImpl extends ValueImpl implements Pointer
 			case ValuesPackage.POINTER__POINT:
 				setPoint((Point)null);
 				return;
+			case ValuesPackage.POINTER__PATH:
+				setPath(PATH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -241,6 +293,8 @@ public class PointerImpl extends ValueImpl implements Pointer
 				return elements != null && !elements.isEmpty();
 			case ValuesPackage.POINTER__POINT:
 				return point != null;
+			case ValuesPackage.POINTER__PATH:
+				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -258,6 +312,23 @@ public class PointerImpl extends ValueImpl implements Pointer
 				return getInstancePath();
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString()
+	{
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (path: ");
+		result.append(path);
+		result.append(')');
+		return result.toString();
 	}
 
 } // PointerImpl

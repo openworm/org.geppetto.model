@@ -15,12 +15,12 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.ParticleImpl#getX <em>X</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ParticleImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ParticleImpl#getZ <em>Z</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -28,6 +28,7 @@ import org.geppetto.model.variables.VariablesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#isAbstract <em>Abstract</em>}</li>
@@ -35,7 +36,6 @@ import org.geppetto.model.variables.VariablesPackage;
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getReferencedVariables <em>Referenced Variables</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.TypeImpl#getDomainModel <em>Domain Model</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

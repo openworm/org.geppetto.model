@@ -22,13 +22,13 @@ import org.geppetto.model.Tag;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.NodeImpl#isSynched <em>Synched</em>}</li>
  *   <li>{@link org.geppetto.model.impl.NodeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.impl.NodeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.geppetto.model.impl.NodeImpl#getTags <em>Tags</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

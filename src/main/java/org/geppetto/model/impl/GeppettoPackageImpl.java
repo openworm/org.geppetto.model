@@ -438,6 +438,16 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getExperimentState_ProjectId()
+	{
+		return (EAttribute)experimentStateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVariableValue()
 	{
 		return variableValueEClass;
@@ -679,6 +689,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		createEReference(experimentStateEClass, EXPERIMENT_STATE__RECORDED_VARIABLES);
 		createEReference(experimentStateEClass, EXPERIMENT_STATE__SET_PARAMETERS);
 		createEAttribute(experimentStateEClass, EXPERIMENT_STATE__EXPERIMENT_ID);
+		createEAttribute(experimentStateEClass, EXPERIMENT_STATE__PROJECT_ID);
 
 		variableValueEClass = createEClass(VARIABLE_VALUE);
 		createEReference(variableValueEClass, VARIABLE_VALUE__POINTER);
@@ -784,6 +795,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEReference(getExperimentState_RecordedVariables(), this.getVariableValue(), null, "recordedVariables", null, 0, -1, ExperimentState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getExperimentState_SetParameters(), this.getVariableValue(), null, "setParameters", null, 0, -1, ExperimentState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExperimentState_ExperimentId(), theXMLTypePackage.getLong(), "experimentId", null, 1, 1, ExperimentState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExperimentState_ProjectId(), theXMLTypePackage.getLong(), "projectId", null, 1, 1, ExperimentState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableValueEClass, VariableValue.class, "VariableValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableValue_Pointer(), theValuesPackage.getPointer(), null, "pointer", null, 1, 1, VariableValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

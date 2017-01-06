@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.FunctionPlot#getTitle <em>Title</em>}</li>
  *   <li>{@link org.geppetto.model.values.FunctionPlot#getXAxisLabel <em>XAxis Label</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.geppetto.model.values.FunctionPlot#getFinalValue <em>Final Value</em>}</li>
  *   <li>{@link org.geppetto.model.values.FunctionPlot#getStepValue <em>Step Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getFunctionPlot()
  * @model

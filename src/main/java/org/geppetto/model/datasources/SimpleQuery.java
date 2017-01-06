@@ -10,11 +10,11 @@ package org.geppetto.model.datasources;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.SimpleQuery#getQuery <em>Query</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.SimpleQuery#getCountQuery <em>Count Query</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getSimpleQuery()
  * @model

@@ -10,13 +10,13 @@ package org.geppetto.model.values;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.Cylinder#getBottomRadius <em>Bottom Radius</em>}</li>
  *   <li>{@link org.geppetto.model.values.Cylinder#getTopRadius <em>Top Radius</em>}</li>
  *   <li>{@link org.geppetto.model.values.Cylinder#getHeight <em>Height</em>}</li>
  *   <li>{@link org.geppetto.model.values.Cylinder#getDistal <em>Distal</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getCylinder()
  * @model

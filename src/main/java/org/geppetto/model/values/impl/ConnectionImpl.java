@@ -18,12 +18,12 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.ConnectionImpl#getA <em>A</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ConnectionImpl#getB <em>B</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ConnectionImpl#getConnectivity <em>Connectivity</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

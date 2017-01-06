@@ -34,6 +34,7 @@ import org.geppetto.model.variables.Variable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getLibraries <em>Libraries</em>}</li>
@@ -43,7 +44,6 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getDataSources <em>Data Sources</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getQueries <em>Queries</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

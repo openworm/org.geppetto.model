@@ -30,11 +30,11 @@ import org.geppetto.model.variables.Variable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.impl.ConnectionTypeImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.ConnectionTypeImpl#getDefaultValue <em>Default Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

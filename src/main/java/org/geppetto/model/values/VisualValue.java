@@ -12,11 +12,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.VisualValue#getGroupElements <em>Group Elements</em>}</li>
  *   <li>{@link org.geppetto.model.values.VisualValue#getPosition <em>Position</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getVisualValue()
  * @model abstract="true"

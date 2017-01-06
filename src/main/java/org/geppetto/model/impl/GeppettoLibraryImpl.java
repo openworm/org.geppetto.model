@@ -20,11 +20,11 @@ import org.geppetto.model.types.Type;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.GeppettoLibraryImpl#getTypes <em>Types</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoLibraryImpl#getSharedTypes <em>Shared Types</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

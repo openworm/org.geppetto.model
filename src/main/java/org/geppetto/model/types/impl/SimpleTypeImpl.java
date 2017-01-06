@@ -11,8 +11,6 @@ import org.geppetto.model.types.TypesPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Simple Type</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

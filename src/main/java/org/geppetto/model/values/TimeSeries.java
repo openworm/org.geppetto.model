@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.TimeSeries#getUnit <em>Unit</em>}</li>
  *   <li>{@link org.geppetto.model.values.TimeSeries#getScalingFactor <em>Scaling Factor</em>}</li>
  *   <li>{@link org.geppetto.model.values.TimeSeries#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getTimeSeries()
  * @model

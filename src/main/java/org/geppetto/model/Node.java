@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.Node#getId <em>Id</em>}</li>
  *   <li>{@link org.geppetto.model.Node#getName <em>Name</em>}</li>
  *   <li>{@link org.geppetto.model.Node#getTags <em>Tags</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.GeppettoPackage#getNode()
  * @model abstract="true"

@@ -27,11 +27,11 @@ import org.geppetto.model.variables.VariablesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.variables.impl.TypeToValueMapImpl#getTypedKey <em>Key</em>}</li>
  *   <li>{@link org.geppetto.model.variables.impl.TypeToValueMapImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

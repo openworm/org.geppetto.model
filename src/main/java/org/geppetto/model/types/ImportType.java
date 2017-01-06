@@ -10,12 +10,12 @@ package org.geppetto.model.types;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.ImportType#getUrl <em>Url</em>}</li>
  *   <li>{@link org.geppetto.model.types.ImportType#getReferenceURL <em>Reference URL</em>}</li>
  *   <li>{@link org.geppetto.model.types.ImportType#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.types.TypesPackage#getImportType()
  * @model

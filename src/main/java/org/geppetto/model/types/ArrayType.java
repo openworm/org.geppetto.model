@@ -12,12 +12,12 @@ import org.geppetto.model.values.ArrayValue;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.ArrayType#getSize <em>Size</em>}</li>
  *   <li>{@link org.geppetto.model.types.ArrayType#getArrayType <em>Array Type</em>}</li>
  *   <li>{@link org.geppetto.model.types.ArrayType#getDefaultValue <em>Default Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.types.TypesPackage#getArrayType()
  * @model

@@ -29,11 +29,11 @@ import org.geppetto.model.impl.StringToStringMapImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.ProcessQueryImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.ProcessQueryImpl#getQueryProcessorId <em>Query Processor Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

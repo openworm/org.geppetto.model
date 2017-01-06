@@ -13,12 +13,12 @@ import org.geppetto.model.variables.Variable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.PointerElement#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.geppetto.model.values.PointerElement#getType <em>Type</em>}</li>
  *   <li>{@link org.geppetto.model.values.PointerElement#getIndex <em>Index</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getPointerElement()
  * @model

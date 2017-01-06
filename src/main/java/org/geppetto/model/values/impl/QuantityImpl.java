@@ -17,11 +17,11 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.QuantityImpl#getScalingFactor <em>Scaling Factor</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.QuantityImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

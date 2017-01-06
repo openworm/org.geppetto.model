@@ -19,12 +19,12 @@ import org.geppetto.model.datasources.RunnableQuery;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.RunnableQueryImpl#getTargetVariablePath <em>Target Variable Path</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.RunnableQueryImpl#getQueryPath <em>Query Path</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.RunnableQueryImpl#getBooleanOperator <em>Boolean Operator</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

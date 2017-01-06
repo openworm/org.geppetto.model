@@ -18,12 +18,12 @@ import org.geppetto.model.values.ArrayValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.impl.ArrayTypeImpl#getSize <em>Size</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.ArrayTypeImpl#getArrayType <em>Array Type</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.ArrayTypeImpl#getDefaultValue <em>Default Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -15,6 +15,7 @@ import org.geppetto.model.variables.Variable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.Type#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.geppetto.model.types.Type#isAbstract <em>Abstract</em>}</li>
@@ -22,7 +23,6 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.types.Type#getReferencedVariables <em>Referenced Variables</em>}</li>
  *   <li>{@link org.geppetto.model.types.Type#getDomainModel <em>Domain Model</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.types.TypesPackage#getType()
  * @model abstract="true"

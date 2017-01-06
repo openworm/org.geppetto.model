@@ -33,6 +33,7 @@ import org.geppetto.model.impl.NodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getDataSourceService <em>Data Source Service</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getLibraryConfigurations <em>Library Configurations</em>}</li>
@@ -42,7 +43,6 @@ import org.geppetto.model.impl.NodeImpl;
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getTargetLibrary <em>Target Library</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
