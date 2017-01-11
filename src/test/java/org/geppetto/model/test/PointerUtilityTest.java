@@ -92,6 +92,8 @@ public class PointerUtilityTest
 		PointerUtility.getPointer(geppettoModel, "addressBook[6]");
 		PointerUtility.getPointer(geppettoModel, "addressBook(addressBook)[30].address(address).zone(zone)[4].area(genericParameter)");
 		PointerUtility.getPointer(geppettoModel, "addressBook[30].address.zone[4].area");
+		PointerUtility.getPointer(geppettoModel, "sample.person.name");
+				
 	}
 	
 	/**

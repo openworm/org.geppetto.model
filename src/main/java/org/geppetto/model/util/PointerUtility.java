@@ -27,7 +27,7 @@ public class PointerUtility
 	public static Pointer getPointer(Variable variable, Type type, Integer index)
 	{
 		Pointer pointer = ValuesFactory.eINSTANCE.createPointer();
-		
+
 		PointerElement pointerElement = ValuesFactory.eINSTANCE.createPointerElement();
 		pointerElement.setIndex(index);
 		pointerElement.setVariable(variable);
@@ -62,7 +62,24 @@ public class PointerUtility
 			Variable v = null;
 			if(lastType == null)
 			{
-				v = findVariable(getVariable(token), model); // why ? fo
+				v = findInstanceVariable(getVariable(token), model);
+				if(v == null)
+				{
+					// it's not an instance but it might a library
+					GeppettoLibrary library = findLibrary(model, token);
+					if(library != null && st.hasMoreElements())
+					{
+						String type = st.nextToken();
+						lastType = getType(model, token + "." + type);
+						element.setType(lastType);
+						pointer.getElements().add(element);
+						continue;
+					}
+					else
+					{
+						throw new GeppettoModelException(token + " is neither an instanve variable nor a library id");
+					}
+				}
 			}
 			else
 			{
@@ -218,17 +235,20 @@ public class PointerUtility
 
 		}
 
-		if(lastType != null && lastType.getPath().equals(path) )
+		if(lastType != null && lastType.getPath().equals(path))
 		{
 			return lastType.getDefaultValue();
-		}else if(lastVar != null){
+		}
+		else if(lastVar != null)
+		{
 			return (Value) lastVar.getInitialValues().get(stateVariablType);
 		}
 		else
 		{
 			throw new GeppettoModelException("Couldn't find a value for the path " + path);
-		}		
+		}
 	}
+
 	/**
 	 * @param typeId
 	 * @param library
@@ -289,8 +309,6 @@ public class PointerUtility
 		return true;
 	}
 
-	
-	
 	/**
 	 * @param pointer
 	 * @param pointer2
@@ -403,7 +421,7 @@ public class PointerUtility
 	 * @param variable
 	 * @return
 	 */
-	private static Variable findVariable(String variable, GeppettoModel model) throws GeppettoModelException
+	private static Variable findInstanceVariable(String variable, GeppettoModel model) throws GeppettoModelException
 	{
 		for(Variable v : model.getVariables())
 		{
@@ -412,7 +430,7 @@ public class PointerUtility
 				return v;
 			}
 		}
-		throw new GeppettoModelException("The variable " + variable + " was not found in the Geppetto model");
+		return null;
 	}
 
 	/**
@@ -491,7 +509,5 @@ public class PointerUtility
 	{
 		return path.replaceAll("\\([^)]*\\)", "");
 	}
-
-
 
 }
