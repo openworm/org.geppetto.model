@@ -316,7 +316,10 @@ public class PointerUtility
 	 */
 	public static boolean equals(PointerElement pointer, PointerElement pointer2)
 	{
-		return pointer.getType().equals(pointer2.getType()) && pointer.getVariable().equals(pointer2.getVariable()) && (pointer.getIndex() == pointer2.getIndex());
+		boolean sameType = pointer.getType() == pointer2.getType() || pointer.getType().equals(pointer2.getType());
+		boolean sameVar = pointer.getVariable() == pointer2.getVariable() || pointer.getVariable().equals(pointer2.getVariable());
+		boolean sameIndex = pointer.getIndex() == pointer2.getIndex();
+		return sameType && sameVar && sameIndex;
 	}
 
 	/**
