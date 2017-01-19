@@ -15,6 +15,7 @@ import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.Node;
 import org.geppetto.model.Tag;
+import org.geppetto.model.variables.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -217,7 +218,11 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
        if(!(this.eContainer instanceof GeppettoModel) && this.eContainer instanceof Node)
        {
-    	   return ((Node)this.eContainer).getPath()+"."+this.getId();
+    	   Node container = (Node) this.eContainer;
+    	   if (container.eContainer() instanceof Variable){
+    		   container=(Node) container.eContainer();
+    	   }
+    	   return container.getPath()+"."+this.getId();
        }
        else
        {
