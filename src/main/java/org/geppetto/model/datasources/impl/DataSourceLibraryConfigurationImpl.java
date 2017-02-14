@@ -21,12 +21,12 @@ import org.geppetto.model.datasources.DatasourcesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceLibraryConfigurationImpl#getLibrary <em>Library</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceLibraryConfigurationImpl#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceLibraryConfigurationImpl#getFormat <em>Format</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -10,10 +10,10 @@ package org.geppetto.model.values;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.HTML#getHtml <em>Html</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getHTML()
  * @model

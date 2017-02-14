@@ -10,13 +10,13 @@ package org.geppetto.model.values;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.Image#getData <em>Data</em>}</li>
  *   <li>{@link org.geppetto.model.values.Image#getName <em>Name</em>}</li>
  *   <li>{@link org.geppetto.model.values.Image#getReference <em>Reference</em>}</li>
  *   <li>{@link org.geppetto.model.values.Image#getFormat <em>Format</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getImage()
  * @model

@@ -14,13 +14,13 @@ import org.geppetto.model.types.Type;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.Query#getDescription <em>Description</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.Query#getMatchingCriteria <em>Matching Criteria</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.Query#isRunForCount <em>Run For Count</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.Query#getReturnType <em>Return Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getQuery()
  * @model abstract="true"

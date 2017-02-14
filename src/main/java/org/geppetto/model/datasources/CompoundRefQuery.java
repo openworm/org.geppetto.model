@@ -15,10 +15,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.CompoundRefQuery#getQueryChain <em>Query Chain</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getCompoundRefQuery()
  * @model

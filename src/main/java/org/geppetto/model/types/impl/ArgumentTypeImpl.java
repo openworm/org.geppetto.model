@@ -21,10 +21,10 @@ import org.geppetto.model.values.Argument;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.impl.ArgumentTypeImpl#getDefaultValue <em>Default Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

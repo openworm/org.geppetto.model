@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.Composite#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getComposite()
  * @model

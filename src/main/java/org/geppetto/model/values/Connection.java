@@ -10,12 +10,12 @@ package org.geppetto.model.values;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.Connection#getA <em>A</em>}</li>
  *   <li>{@link org.geppetto.model.values.Connection#getB <em>B</em>}</li>
  *   <li>{@link org.geppetto.model.values.Connection#getConnectivity <em>Connectivity</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getConnection()
  * @model

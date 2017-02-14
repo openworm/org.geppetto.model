@@ -21,11 +21,11 @@ import org.geppetto.model.ModelFormat;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.DomainModelImpl#getDomainModel <em>Domain Model</em>}</li>
  *   <li>{@link org.geppetto.model.impl.DomainModelImpl#getFormat <em>Format</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

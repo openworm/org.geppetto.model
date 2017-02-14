@@ -13,11 +13,11 @@ import org.geppetto.model.values.Value;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.VariableValue#getPointer <em>Pointer</em>}</li>
  *   <li>{@link org.geppetto.model.VariableValue#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.GeppettoPackage#getVariableValue()
  * @model

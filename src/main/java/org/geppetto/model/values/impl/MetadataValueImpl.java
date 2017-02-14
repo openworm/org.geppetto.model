@@ -11,8 +11,6 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Metadata Value</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

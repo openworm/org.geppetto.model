@@ -17,11 +17,11 @@ import org.geppetto.model.datasources.SimpleQuery;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.impl.SimpleQueryImpl#getQuery <em>Query</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.SimpleQueryImpl#getCountQuery <em>Count Query</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

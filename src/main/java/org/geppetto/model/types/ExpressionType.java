@@ -11,10 +11,10 @@ import org.geppetto.model.values.Expression;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.types.ExpressionType#getDefaultValue <em>Default Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.types.TypesPackage#getExpressionType()
  * @model

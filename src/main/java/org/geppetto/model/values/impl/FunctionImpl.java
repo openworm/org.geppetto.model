@@ -23,12 +23,12 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.FunctionImpl#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.FunctionImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.FunctionImpl#getFunctionPlot <em>Function Plot</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

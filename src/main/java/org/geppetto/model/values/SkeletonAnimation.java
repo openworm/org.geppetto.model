@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.SkeletonAnimation#getSkeletonTransformationSeries <em>Skeleton Transformation Series</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getSkeletonAnimation()
  * @model

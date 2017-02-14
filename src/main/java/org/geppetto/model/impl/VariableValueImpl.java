@@ -19,11 +19,11 @@ import org.geppetto.model.values.Value;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.VariableValueImpl#getPointer <em>Pointer</em>}</li>
  *   <li>{@link org.geppetto.model.impl.VariableValueImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

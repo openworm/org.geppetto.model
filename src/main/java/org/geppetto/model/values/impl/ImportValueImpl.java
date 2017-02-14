@@ -14,10 +14,10 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.ImportValueImpl#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

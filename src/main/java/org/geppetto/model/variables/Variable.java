@@ -16,6 +16,7 @@ import org.geppetto.model.values.Value;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.variables.Variable#getAnonymousTypes <em>Anonymous Types</em>}</li>
  *   <li>{@link org.geppetto.model.variables.Variable#getTypes <em>Types</em>}</li>
@@ -23,7 +24,6 @@ import org.geppetto.model.values.Value;
  *   <li>{@link org.geppetto.model.variables.Variable#isStatic <em>Static</em>}</li>
  *   <li>{@link org.geppetto.model.variables.Variable#getPosition <em>Position</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.variables.VariablesPackage#getVariable()
  * @model

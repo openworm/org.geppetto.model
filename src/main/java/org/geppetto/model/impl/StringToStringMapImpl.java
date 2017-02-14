@@ -21,11 +21,11 @@ import org.geppetto.model.GeppettoPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.StringToStringMapImpl#getTypedKey <em>Key</em>}</li>
  *   <li>{@link org.geppetto.model.impl.StringToStringMapImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

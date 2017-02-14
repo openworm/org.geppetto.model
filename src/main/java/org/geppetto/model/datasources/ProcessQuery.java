@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.ProcessQuery#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.ProcessQuery#getQueryProcessorId <em>Query Processor Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getProcessQuery()
  * @model

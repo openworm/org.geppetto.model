@@ -21,12 +21,12 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.ArrayElementImpl#getIndex <em>Index</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ArrayElementImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ArrayElementImpl#getInitialValue <em>Initial Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

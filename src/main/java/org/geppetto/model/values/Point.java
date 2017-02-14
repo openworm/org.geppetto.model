@@ -10,12 +10,12 @@ package org.geppetto.model.values;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.Point#getX <em>X</em>}</li>
  *   <li>{@link org.geppetto.model.values.Point#getY <em>Y</em>}</li>
  *   <li>{@link org.geppetto.model.values.Point#getZ <em>Z</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getPoint()
  * @model

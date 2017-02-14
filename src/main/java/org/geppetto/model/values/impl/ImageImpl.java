@@ -18,13 +18,13 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.ImageImpl#getData <em>Data</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ImageImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ImageImpl#getReference <em>Reference</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.ImageImpl#getFormat <em>Format</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

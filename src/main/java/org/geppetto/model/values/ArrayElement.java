@@ -10,12 +10,12 @@ package org.geppetto.model.values;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.ArrayElement#getIndex <em>Index</em>}</li>
  *   <li>{@link org.geppetto.model.values.ArrayElement#getPosition <em>Position</em>}</li>
  *   <li>{@link org.geppetto.model.values.ArrayElement#getInitialValue <em>Initial Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getArrayElement()
  * @model

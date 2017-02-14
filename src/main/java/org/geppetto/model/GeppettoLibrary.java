@@ -12,11 +12,11 @@ import org.geppetto.model.types.Type;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.GeppettoLibrary#getTypes <em>Types</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoLibrary#getSharedTypes <em>Shared Types</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.GeppettoPackage#getGeppettoLibrary()
  * @model

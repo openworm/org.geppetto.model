@@ -17,12 +17,12 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.PointImpl#getX <em>X</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.PointImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.geppetto.model.values.impl.PointImpl#getZ <em>Z</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -436,13 +436,22 @@ public interface GeppettoPackage extends EPackage
 	int EXPERIMENT_STATE__EXPERIMENT_ID = 2;
 
 	/**
+	 * The feature id for the '<em><b>Project Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPERIMENT_STATE__PROJECT_ID = 3;
+
+	/**
 	 * The number of structural features of the '<em>Experiment State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT_STATE_FEATURE_COUNT = 3;
+	int EXPERIMENT_STATE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Experiment State</em>' class.
@@ -985,6 +994,17 @@ public interface GeppettoPackage extends EPackage
 	EAttribute getExperimentState_ExperimentId();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.ExperimentState#getProjectId <em>Project Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Project Id</em>'.
+	 * @see org.geppetto.model.ExperimentState#getProjectId()
+	 * @see #getExperimentState()
+	 * @generated
+	 */
+	EAttribute getExperimentState_ProjectId();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.VariableValue <em>Variable Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1396,6 +1416,14 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute EXPERIMENT_STATE__EXPERIMENT_ID = eINSTANCE.getExperimentState_ExperimentId();
+
+		/**
+		 * The meta object literal for the '<em><b>Project Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPERIMENT_STATE__PROJECT_ID = eINSTANCE.getExperimentState_ProjectId();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.VariableValueImpl <em>Variable Value</em>}' class.

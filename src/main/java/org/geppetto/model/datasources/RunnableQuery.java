@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.datasources.RunnableQuery#getTargetVariablePath <em>Target Variable Path</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.RunnableQuery#getQueryPath <em>Query Path</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.RunnableQuery#getBooleanOperator <em>Boolean Operator</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getRunnableQuery()
  * @model

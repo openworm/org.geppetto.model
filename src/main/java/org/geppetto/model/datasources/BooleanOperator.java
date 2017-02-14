@@ -118,6 +118,8 @@ public enum BooleanOperator implements Enumerator
 	 * Returns the '<em><b>Boolean Operator</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static BooleanOperator get(String literal)
@@ -137,6 +139,8 @@ public enum BooleanOperator implements Enumerator
 	 * Returns the '<em><b>Boolean Operator</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static BooleanOperator getByName(String name)
@@ -156,6 +160,8 @@ public enum BooleanOperator implements Enumerator
 	 * Returns the '<em><b>Boolean Operator</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static BooleanOperator get(int value)

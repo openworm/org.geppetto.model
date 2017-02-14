@@ -19,6 +19,7 @@ import org.geppetto.model.variables.Variable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.GeppettoModel#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getLibraries <em>Libraries</em>}</li>
@@ -28,7 +29,6 @@ import org.geppetto.model.variables.Variable;
  *   <li>{@link org.geppetto.model.GeppettoModel#getDataSources <em>Data Sources</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getQueries <em>Queries</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.GeppettoPackage#getGeppettoModel()
  * @model

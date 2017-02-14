@@ -631,13 +631,22 @@ public interface ValuesPackage extends EPackage
 	int POINTER__POINT = VALUE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINTER__PATH = VALUE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Pointer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINTER_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
+	int POINTER_FEATURE_COUNT = VALUE_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Instance Path</em>' operation.
@@ -2394,6 +2403,17 @@ public interface ValuesPackage extends EPackage
 	EReference getPointer_Point();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.Pointer#getPath <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Path</em>'.
+	 * @see org.geppetto.model.values.Pointer#getPath()
+	 * @see #getPointer()
+	 * @generated
+	 */
+	EAttribute getPointer_Path();
+
+	/**
 	 * Returns the meta object for the '{@link org.geppetto.model.values.Pointer#getInstancePath() <em>Get Instance Path</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3434,6 +3454,14 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EReference POINTER__POINT = eINSTANCE.getPointer_Point();
+
+		/**
+		 * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POINTER__PATH = eINSTANCE.getPointer_Path();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Instance Path</b></em>' operation.

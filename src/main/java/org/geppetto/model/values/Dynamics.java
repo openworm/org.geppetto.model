@@ -10,11 +10,11 @@ package org.geppetto.model.values;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.Dynamics#getInitialCondition <em>Initial Condition</em>}</li>
  *   <li>{@link org.geppetto.model.values.Dynamics#getDynamics <em>Dynamics</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.values.ValuesPackage#getDynamics()
  * @model

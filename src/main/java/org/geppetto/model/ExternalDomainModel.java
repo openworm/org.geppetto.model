@@ -10,10 +10,10 @@ package org.geppetto.model;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.ExternalDomainModel#getFileFormat <em>File Format</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.GeppettoPackage#getExternalDomainModel()
  * @model

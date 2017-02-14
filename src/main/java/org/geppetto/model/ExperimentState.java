@@ -13,12 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.ExperimentState#getRecordedVariables <em>Recorded Variables</em>}</li>
  *   <li>{@link org.geppetto.model.ExperimentState#getSetParameters <em>Set Parameters</em>}</li>
  *   <li>{@link org.geppetto.model.ExperimentState#getExperimentId <em>Experiment Id</em>}</li>
+ *   <li>{@link org.geppetto.model.ExperimentState#getProjectId <em>Project Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.geppetto.model.GeppettoPackage#getExperimentState()
  * @model
@@ -83,5 +84,31 @@ public interface ExperimentState extends EObject
 	 * @generated
 	 */
 	void setExperimentId(long value);
+
+	/**
+	 * Returns the value of the '<em><b>Project Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Project Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Project Id</em>' attribute.
+	 * @see #setProjectId(long)
+	 * @see org.geppetto.model.GeppettoPackage#getExperimentState_ProjectId()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Long" required="true"
+	 * @generated
+	 */
+	long getProjectId();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.ExperimentState#getProjectId <em>Project Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Project Id</em>' attribute.
+	 * @see #getProjectId()
+	 * @generated
+	 */
+	void setProjectId(long value);
 
 } // ExperimentState

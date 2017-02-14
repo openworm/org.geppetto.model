@@ -21,10 +21,10 @@ import org.geppetto.model.values.ValuesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.values.impl.SkeletonTransformationImpl#getSkeletonTransformation <em>Skeleton Transformation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
