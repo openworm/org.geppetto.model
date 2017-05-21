@@ -163,7 +163,7 @@ public interface ValuesPackage extends EPackage
 	int STRING_TO_VALUE_MAP__KEY = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1417,14 +1417,14 @@ public interface ValuesPackage extends EPackage
 	int CYLINDER_OPERATION_COUNT = VISUAL_VALUE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.geppetto.model.values.impl.ParticleImpl <em>Particle</em>}' class.
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.ParticlesImpl <em>Particles</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.geppetto.model.values.impl.ParticleImpl
-	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getParticle()
+	 * @see org.geppetto.model.values.impl.ParticlesImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getParticles()
 	 * @generated
 	 */
-	int PARTICLE = 24;
+	int PARTICLES = 24;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1433,71 +1433,34 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PARTICLE__SYNCHED = VISUAL_VALUE__SYNCHED;
+	int PARTICLES__SYNCHED = VALUE__SYNCHED;
 
 	/**
-	 * The feature id for the '<em><b>Group Elements</b></em>' reference list.
+	 * The feature id for the '<em><b>Particles</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARTICLE__GROUP_ELEMENTS = VISUAL_VALUE__GROUP_ELEMENTS;
+	int PARTICLES__PARTICLES = VALUE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Position</b></em>' containment reference.
+	 * The number of structural features of the '<em>Particles</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARTICLE__POSITION = VISUAL_VALUE__POSITION;
+	int PARTICLES_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * The number of operations of the '<em>Particles</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARTICLE__X = VISUAL_VALUE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTICLE__Y = VISUAL_VALUE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Z</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTICLE__Z = VISUAL_VALUE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Particle</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTICLE_FEATURE_COUNT = VISUAL_VALUE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Particle</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTICLE_OPERATION_COUNT = VISUAL_VALUE_OPERATION_COUNT + 0;
-
+	int PARTICLES_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.impl.SkeletonAnimationImpl <em>Skeleton Animation</em>}' class.
@@ -2153,7 +2116,7 @@ public interface ValuesPackage extends EPackage
 	 * @return the meta object for class '<em>String To Value Map</em>'.
 	 * @see java.util.Map.Entry
 	 * @model keyDataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        valueType="org.geppetto.model.values.Value"
+	 *        valueType="org.geppetto.model.values.Value" valueContainment="true"
 	 * @generated
 	 */
 	EClass getStringToValueMap();
@@ -2170,10 +2133,10 @@ public interface ValuesPackage extends EPackage
 	EAttribute getStringToValueMap_Key();
 
 	/**
-	 * Returns the meta object for the reference '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link java.util.Map.Entry <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see java.util.Map.Entry
 	 * @see #getStringToValueMap()
 	 * @generated
@@ -2852,14 +2815,25 @@ public interface ValuesPackage extends EPackage
 	EReference getCylinder_Distal();
 
 	/**
-	 * Returns the meta object for class '{@link org.geppetto.model.values.Particle <em>Particle</em>}'.
+	 * Returns the meta object for class '{@link org.geppetto.model.values.Particles <em>Particles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Particle</em>'.
-	 * @see org.geppetto.model.values.Particle
+	 * @return the meta object for class '<em>Particles</em>'.
+	 * @see org.geppetto.model.values.Particles
 	 * @generated
 	 */
-	EClass getParticle();
+	EClass getParticles();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.values.Particles#getParticles <em>Particles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Particles</em>'.
+	 * @see org.geppetto.model.values.Particles#getParticles()
+	 * @see #getParticles()
+	 * @generated
+	 */
+	EReference getParticles_Particles();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.SkeletonAnimation <em>Skeleton Animation</em>}'.
@@ -3262,7 +3236,7 @@ public interface ValuesPackage extends EPackage
 		EAttribute STRING_TO_VALUE_MAP__KEY = eINSTANCE.getStringToValueMap_Key();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3816,14 +3790,22 @@ public interface ValuesPackage extends EPackage
 		EReference CYLINDER__DISTAL = eINSTANCE.getCylinder_Distal();
 
 		/**
-		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ParticleImpl <em>Particle</em>}' class.
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.ParticlesImpl <em>Particles</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.geppetto.model.values.impl.ParticleImpl
-		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getParticle()
+		 * @see org.geppetto.model.values.impl.ParticlesImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getParticles()
 		 * @generated
 		 */
-		EClass PARTICLE = eINSTANCE.getParticle();
+		EClass PARTICLES = eINSTANCE.getParticles();
+
+		/**
+		 * The meta object literal for the '<em><b>Particles</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARTICLES__PARTICLES = eINSTANCE.getParticles_Particles();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.SkeletonAnimationImpl <em>Skeleton Animation</em>}' class.

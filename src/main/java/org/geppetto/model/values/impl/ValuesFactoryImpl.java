@@ -84,7 +84,7 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.OBJ: return createOBJ();
 			case ValuesPackage.SPHERE: return createSphere();
 			case ValuesPackage.CYLINDER: return createCylinder();
-			case ValuesPackage.PARTICLE: return createParticle();
+			case ValuesPackage.PARTICLES: return createParticles();
 			case ValuesPackage.SKELETON_ANIMATION: return createSkeletonAnimation();
 			case ValuesPackage.SKELETON_TRANSFORMATION: return createSkeletonTransformation();
 			case ValuesPackage.VISUAL_GROUP_ELEMENT: return createVisualGroupElement();
@@ -373,10 +373,10 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Particle createParticle()
+	public Particles createParticles()
 	{
-		ParticleImpl particle = new ParticleImpl();
-		return particle;
+		ParticlesImpl particles = new ParticlesImpl();
+		return particles;
 	}
 
 	/**

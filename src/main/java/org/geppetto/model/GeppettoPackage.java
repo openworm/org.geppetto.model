@@ -352,13 +352,22 @@ public interface GeppettoPackage extends EPackage
 	int GEPPETTO_LIBRARY___GET_PATH = NODE___GET_PATH;
 
 	/**
+	 * The operation id for the '<em>Get Type By Id</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_LIBRARY___GET_TYPE_BY_ID = NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Library</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_LIBRARY_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int GEPPETTO_LIBRARY_OPERATION_COUNT = NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.impl.LibraryManagerImpl <em>Library Manager</em>}' class.
@@ -930,6 +939,16 @@ public interface GeppettoPackage extends EPackage
 	EReference getGeppettoLibrary_SharedTypes();
 
 	/**
+	 * Returns the meta object for the '{@link org.geppetto.model.GeppettoLibrary#getTypeById() <em>Get Type By Id</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Type By Id</em>' operation.
+	 * @see org.geppetto.model.GeppettoLibrary#getTypeById()
+	 * @generated
+	 */
+	EOperation getGeppettoLibrary__GetTypeById();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.LibraryManager <em>Library Manager</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1364,6 +1383,14 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference GEPPETTO_LIBRARY__SHARED_TYPES = eINSTANCE.getGeppettoLibrary_SharedTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Type By Id</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GEPPETTO_LIBRARY___GET_TYPE_BY_ID = eINSTANCE.getGeppettoLibrary__GetTypeById();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.impl.LibraryManagerImpl <em>Library Manager</em>}' class.

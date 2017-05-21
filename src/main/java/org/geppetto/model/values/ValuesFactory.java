@@ -203,13 +203,13 @@ public interface ValuesFactory extends EFactory
 	Cylinder createCylinder();
 
 	/**
-	 * Returns a new object of class '<em>Particle</em>'.
+	 * Returns a new object of class '<em>Particles</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Particle</em>'.
+	 * @return a new object of class '<em>Particles</em>'.
 	 * @generated
 	 */
-	Particle createParticle();
+	Particles createParticles();
 
 	/**
 	 * Returns a new object of class '<em>Skeleton Animation</em>'.
