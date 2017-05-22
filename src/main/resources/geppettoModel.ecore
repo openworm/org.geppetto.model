@@ -391,6 +391,10 @@
       <eLiterals name="PNG" literal="PNG"/>
       <eLiterals name="JPEG" value="1" literal="JPEG"/>
       <eLiterals name="IIP" value="2" literal="IIP"/>
+      <eLiterals name="DCM" value="3" literal="DCM"/>
+      <eLiterals name="NIFTI" value="4" literal="NIFTI"/>
+      <eLiterals name="TIFF" value="5" literal="TIFF"/>
+      <eLiterals name="DZI" value="6" literal="DZI"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ImportValue" eSuperTypes="#//values/Value">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelInterpreterId" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>

@@ -1795,6 +1795,10 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.PNG);
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.JPEG);
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.IIP);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.DCM);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.NIFTI);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.TIFF);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.DZI);
 	}
 
 } //ValuesPackageImpl
