@@ -1799,6 +1799,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.NIFTI);
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.TIFF);
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.DZI);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.GOOGLE_MAP);
 	}
 
 } //ValuesPackageImpl

@@ -77,7 +77,16 @@ public enum ImageFormat implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-	DZI(6, "DZI", "DZI");
+	DZI(6, "DZI", "DZI"),
+	/**
+	 * The '<em><b>GOOGLE MAP</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GOOGLE_MAP_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	GOOGLE_MAP(7, "GOOGLE_MAP", "GOOGLE_MAP");
 
 	/**
 	 * The '<em><b>PNG</b></em>' literal value.
@@ -185,6 +194,21 @@ public enum ImageFormat implements Enumerator
 	public static final int DZI_VALUE = 6;
 
 	/**
+	 * The '<em><b>GOOGLE MAP</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>GOOGLE MAP</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #GOOGLE_MAP
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int GOOGLE_MAP_VALUE = 7;
+
+	/**
 	 * An array of all the '<em><b>Image Format</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -200,6 +224,7 @@ public enum ImageFormat implements Enumerator
 			NIFTI,
 			TIFF,
 			DZI,
+			GOOGLE_MAP, 
 		};
 
 	/**
@@ -271,6 +296,7 @@ public enum ImageFormat implements Enumerator
 			case NIFTI_VALUE: return NIFTI;
 			case TIFF_VALUE: return TIFF;
 			case DZI_VALUE: return DZI;
+			case GOOGLE_MAP_VALUE: return GOOGLE_MAP;
 		}
 		return null;
 	}
