@@ -33,7 +33,7 @@ import org.geppetto.model.values.Image;
 import org.geppetto.model.values.ImageFormat;
 import org.geppetto.model.values.ImportValue;
 import org.geppetto.model.values.MetadataValue;
-import org.geppetto.model.values.Particle;
+import org.geppetto.model.values.Particles;
 import org.geppetto.model.values.PhysicalQuantity;
 import org.geppetto.model.values.Point;
 import org.geppetto.model.values.Pointer;
@@ -235,7 +235,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass particleEClass = null;
+	private EClass particlesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1089,9 +1089,19 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParticle()
+	public EClass getParticles()
 	{
-		return particleEClass;
+		return particlesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParticles_Particles()
+	{
+		return (EReference)particlesEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1527,7 +1537,8 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEAttribute(cylinderEClass, CYLINDER__HEIGHT);
 		createEReference(cylinderEClass, CYLINDER__DISTAL);
 
-		particleEClass = createEClass(PARTICLE);
+		particlesEClass = createEClass(PARTICLES);
+		createEReference(particlesEClass, PARTICLES__PARTICLES);
 
 		skeletonAnimationEClass = createEClass(SKELETON_ANIMATION);
 		createEReference(skeletonAnimationEClass, SKELETON_ANIMATION__SKELETON_TRANSFORMATION_SERIES);
@@ -1628,8 +1639,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		objEClass.getESuperTypes().add(this.getVisualValue());
 		sphereEClass.getESuperTypes().add(this.getVisualValue());
 		cylinderEClass.getESuperTypes().add(this.getVisualValue());
-		particleEClass.getESuperTypes().add(this.getVisualValue());
-		particleEClass.getESuperTypes().add(this.getPoint());
+		particlesEClass.getESuperTypes().add(this.getValue());
 		skeletonAnimationEClass.getESuperTypes().add(this.getVisualValue());
 		visualGroupElementEClass.getESuperTypes().add(theGeppettoPackage.getNode());
 		visualGroupEClass.getESuperTypes().add(theGeppettoPackage.getNode());
@@ -1647,7 +1657,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		initEClass(stringToValueMapEClass, Map.Entry.class, "StringToValueMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToValueMap_Key(), theXMLTypePackage.getString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStringToValueMap_Value(), this.getValue(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStringToValueMap_Value(), this.getValue(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(quantityEClass, Quantity.class, "Quantity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQuantity_ScalingFactor(), theXMLTypePackage.getInt(), "scalingFactor", null, 0, 1, Quantity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1734,7 +1744,8 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEAttribute(getCylinder_Height(), theXMLTypePackage.getDouble(), "height", null, 1, 1, Cylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCylinder_Distal(), this.getPoint(), null, "distal", null, 0, 1, Cylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(particleEClass, Particle.class, "Particle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(particlesEClass, Particles.class, "Particles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getParticles_Particles(), this.getPoint(), null, "particles", null, 0, -1, Particles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(skeletonAnimationEClass, SkeletonAnimation.class, "SkeletonAnimation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSkeletonAnimation_SkeletonTransformationSeries(), this.getSkeletonTransformation(), null, "skeletonTransformationSeries", null, 0, -1, SkeletonAnimation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1784,6 +1795,11 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.PNG);
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.JPEG);
 		addEEnumLiteral(imageFormatEEnum, ImageFormat.IIP);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.DCM);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.NIFTI);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.TIFF);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.DZI);
+		addEEnumLiteral(imageFormatEEnum, ImageFormat.GOOGLE_MAP);
 	}
 
 } //ValuesPackageImpl

@@ -290,14 +290,12 @@ public class ValuesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ValuesPackage.PARTICLE:
+			case ValuesPackage.PARTICLES:
 			{
-				Particle particle = (Particle)theEObject;
-				T result = caseParticle(particle);
-				if (result == null) result = caseVisualValue(particle);
-				if (result == null) result = casePoint(particle);
-				if (result == null) result = caseValue(particle);
-				if (result == null) result = caseISynchable(particle);
+				Particles particles = (Particles)theEObject;
+				T result = caseParticles(particles);
+				if (result == null) result = caseValue(particles);
+				if (result == null) result = caseISynchable(particles);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -770,17 +768,17 @@ public class ValuesSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Particle</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Particles</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Particle</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Particles</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParticle(Particle object)
+	public T caseParticles(Particles object)
 	{
 		return null;
 	}

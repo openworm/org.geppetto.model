@@ -2,7 +2,9 @@
  */
 package org.geppetto.model.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -104,6 +106,32 @@ public class GeppettoLibraryImpl extends NodeImpl implements GeppettoLibrary
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Type getTypeById()
+	{
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public Type getTypeById(String id)
+	{
+		for(Type type:types){
+			if(type.getId().equals(id)){
+				return type;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -192,6 +220,22 @@ public class GeppettoLibraryImpl extends NodeImpl implements GeppettoLibrary
 				return sharedTypes != null && !sharedTypes.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
+	{
+		switch (operationID)
+		{
+			case GeppettoPackage.GEPPETTO_LIBRARY___GET_TYPE_BY_ID:
+				return getTypeById();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //GeppettoLibraryImpl

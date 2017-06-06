@@ -45,7 +45,48 @@ public enum ImageFormat implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-	IIP(2, "IIP", "IIP");
+	IIP(2, "IIP", "IIP"), /**
+	 * The '<em><b>DCM</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DCM_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DCM(3, "DCM", "DCM"), /**
+	 * The '<em><b>NIFTI</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NIFTI_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NIFTI(4, "NIFTI", "NIFTI"), /**
+	 * The '<em><b>TIFF</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TIFF_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	TIFF(5, "TIFF", "TIFF"), /**
+	 * The '<em><b>DZI</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DZI_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DZI(6, "DZI", "DZI"),
+	/**
+	 * The '<em><b>GOOGLE MAP</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GOOGLE_MAP_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	GOOGLE_MAP(7, "GOOGLE_MAP", "GOOGLE_MAP");
 
 	/**
 	 * The '<em><b>PNG</b></em>' literal value.
@@ -93,6 +134,81 @@ public enum ImageFormat implements Enumerator
 	public static final int IIP_VALUE = 2;
 
 	/**
+	 * The '<em><b>DCM</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>DCM</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DCM
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DCM_VALUE = 3;
+
+	/**
+	 * The '<em><b>NIFTI</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>NIFTI</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #NIFTI
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NIFTI_VALUE = 4;
+
+	/**
+	 * The '<em><b>TIFF</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>TIFF</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #TIFF
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TIFF_VALUE = 5;
+
+	/**
+	 * The '<em><b>DZI</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>DZI</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DZI
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DZI_VALUE = 6;
+
+	/**
+	 * The '<em><b>GOOGLE MAP</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>GOOGLE MAP</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #GOOGLE_MAP
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int GOOGLE_MAP_VALUE = 7;
+
+	/**
 	 * An array of all the '<em><b>Image Format</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -104,6 +220,11 @@ public enum ImageFormat implements Enumerator
 			PNG,
 			JPEG,
 			IIP,
+			DCM,
+			NIFTI,
+			TIFF,
+			DZI,
+			GOOGLE_MAP, 
 		};
 
 	/**
@@ -171,6 +292,11 @@ public enum ImageFormat implements Enumerator
 			case PNG_VALUE: return PNG;
 			case JPEG_VALUE: return JPEG;
 			case IIP_VALUE: return IIP;
+			case DCM_VALUE: return DCM;
+			case NIFTI_VALUE: return NIFTI;
+			case TIFF_VALUE: return TIFF;
+			case DZI_VALUE: return DZI;
+			case GOOGLE_MAP_VALUE: return GOOGLE_MAP;
 		}
 		return null;
 	}

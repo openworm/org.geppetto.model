@@ -195,9 +195,9 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createCylinderAdapter();
 			}
 			@Override
-			public Adapter caseParticle(Particle object)
+			public Adapter caseParticles(Particles object)
 			{
-				return createParticleAdapter();
+				return createParticlesAdapter();
 			}
 			@Override
 			public Adapter caseSkeletonAnimation(SkeletonAnimation object)
@@ -637,16 +637,16 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Particle <em>Particle</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Particles <em>Particles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.geppetto.model.values.Particle
+	 * @see org.geppetto.model.values.Particles
 	 * @generated
 	 */
-	public Adapter createParticleAdapter()
+	public Adapter createParticlesAdapter()
 	{
 		return null;
 	}

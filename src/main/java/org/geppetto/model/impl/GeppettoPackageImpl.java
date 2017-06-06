@@ -378,6 +378,16 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getGeppettoLibrary__GetTypeById()
+	{
+		return geppettoLibraryEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLibraryManager()
 	{
 		return libraryManagerEClass;
@@ -681,6 +691,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		geppettoLibraryEClass = createEClass(GEPPETTO_LIBRARY);
 		createEReference(geppettoLibraryEClass, GEPPETTO_LIBRARY__TYPES);
 		createEReference(geppettoLibraryEClass, GEPPETTO_LIBRARY__SHARED_TYPES);
+		createEOperation(geppettoLibraryEClass, GEPPETTO_LIBRARY___GET_TYPE_BY_ID);
 
 		libraryManagerEClass = createEClass(LIBRARY_MANAGER);
 		createEReference(libraryManagerEClass, LIBRARY_MANAGER__LIBRARIES);
@@ -787,6 +798,8 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEClass(geppettoLibraryEClass, GeppettoLibrary.class, "GeppettoLibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeppettoLibrary_Types(), theTypesPackage.getType(), null, "types", null, 0, -1, GeppettoLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGeppettoLibrary_SharedTypes(), theTypesPackage.getType(), null, "sharedTypes", null, 0, -1, GeppettoLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getGeppettoLibrary__GetTypeById(), theTypesPackage.getType(), "getTypeById", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(libraryManagerEClass, LibraryManager.class, "LibraryManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLibraryManager_Libraries(), this.getGeppettoLibrary(), null, "libraries", null, 0, -1, LibraryManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -56,4 +56,19 @@ public interface GeppettoLibrary extends Node
 	 */
 	EList<Type> getSharedTypes();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Type getTypeById();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 */
+	Type getTypeById(String id);
+
 } // GeppettoLibrary
