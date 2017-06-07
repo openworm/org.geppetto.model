@@ -15,6 +15,7 @@ package org.geppetto.model.types;
  *   <li>{@link org.geppetto.model.types.ImportType#getUrl <em>Url</em>}</li>
  *   <li>{@link org.geppetto.model.types.ImportType#getReferenceURL <em>Reference URL</em>}</li>
  *   <li>{@link org.geppetto.model.types.ImportType#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
+ *   <li>{@link org.geppetto.model.types.ImportType#isAutoresolve <em>Autoresolve</em>}</li>
  * </ul>
  *
  * @see org.geppetto.model.types.TypesPackage#getImportType()
@@ -100,5 +101,32 @@ public interface ImportType extends Type
 	 * @generated
 	 */
 	void setModelInterpreterId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Autoresolve</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Autoresolve</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Autoresolve</em>' attribute.
+	 * @see #setAutoresolve(boolean)
+	 * @see org.geppetto.model.types.TypesPackage#getImportType_Autoresolve()
+	 * @model default="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 * @generated
+	 */
+	boolean isAutoresolve();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.types.ImportType#isAutoresolve <em>Autoresolve</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Autoresolve</em>' attribute.
+	 * @see #isAutoresolve()
+	 * @generated
+	 */
+	void setAutoresolve(boolean value);
 
 } // ImportType

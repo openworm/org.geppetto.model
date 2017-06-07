@@ -224,7 +224,7 @@ public enum ImageFormat implements Enumerator
 			NIFTI,
 			TIFF,
 			DZI,
-			GOOGLE_MAP, 
+			GOOGLE_MAP,
 		};
 
 	/**

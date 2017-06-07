@@ -413,6 +413,16 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getImportType_Autoresolve()
+	{
+		return (EAttribute)importTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCompositeType()
 	{
 		return compositeTypeEClass;
@@ -834,6 +844,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		createEAttribute(importTypeEClass, IMPORT_TYPE__URL);
 		createEAttribute(importTypeEClass, IMPORT_TYPE__REFERENCE_URL);
 		createEAttribute(importTypeEClass, IMPORT_TYPE__MODEL_INTERPRETER_ID);
+		createEAttribute(importTypeEClass, IMPORT_TYPE__AUTORESOLVE);
 
 		compositeTypeEClass = createEClass(COMPOSITE_TYPE);
 		createEReference(compositeTypeEClass, COMPOSITE_TYPE__VARIABLES);
@@ -967,6 +978,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		initEAttribute(getImportType_Url(), theXMLTypePackage.getString(), "url", null, 0, 1, ImportType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImportType_ReferenceURL(), theXMLTypePackage.getString(), "referenceURL", null, 0, 1, ImportType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImportType_ModelInterpreterId(), theXMLTypePackage.getString(), "modelInterpreterId", null, 0, 1, ImportType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImportType_Autoresolve(), theXMLTypePackage.getBoolean(), "autoresolve", "true", 0, 1, ImportType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositeTypeEClass, CompositeType.class, "CompositeType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeType_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, CompositeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
