@@ -460,13 +460,22 @@ public interface TypesPackage extends EPackage
 	int IMPORT_TYPE__MODEL_INTERPRETER_ID = TYPE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Autoresolve</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TYPE__AUTORESOLVE = TYPE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Import Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORT_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 3;
+	int IMPORT_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -3169,6 +3178,17 @@ public interface TypesPackage extends EPackage
 	EAttribute getImportType_ModelInterpreterId();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.types.ImportType#isAutoresolve <em>Autoresolve</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Autoresolve</em>'.
+	 * @see org.geppetto.model.types.ImportType#isAutoresolve()
+	 * @see #getImportType()
+	 * @generated
+	 */
+	EAttribute getImportType_Autoresolve();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.types.CompositeType <em>Composite Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3710,6 +3730,14 @@ public interface TypesPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute IMPORT_TYPE__MODEL_INTERPRETER_ID = eINSTANCE.getImportType_ModelInterpreterId();
+
+		/**
+		 * The meta object literal for the '<em><b>Autoresolve</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORT_TYPE__AUTORESOLVE = eINSTANCE.getImportType_Autoresolve();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.types.impl.CompositeTypeImpl <em>Composite Type</em>}' class.

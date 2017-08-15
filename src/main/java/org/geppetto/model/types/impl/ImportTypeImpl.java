@@ -22,6 +22,7 @@ import org.geppetto.model.types.TypesPackage;
  *   <li>{@link org.geppetto.model.types.impl.ImportTypeImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.ImportTypeImpl#getReferenceURL <em>Reference URL</em>}</li>
  *   <li>{@link org.geppetto.model.types.impl.ImportTypeImpl#getModelInterpreterId <em>Model Interpreter Id</em>}</li>
+ *   <li>{@link org.geppetto.model.types.impl.ImportTypeImpl#isAutoresolve <em>Autoresolve</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +88,26 @@ public class ImportTypeImpl extends TypeImpl implements ImportType
 	 * @ordered
 	 */
 	protected String modelInterpreterId = MODEL_INTERPRETER_ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isAutoresolve() <em>Autoresolve</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAutoresolve()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean AUTORESOLVE_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isAutoresolve() <em>Autoresolve</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAutoresolve()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean autoresolve = AUTORESOLVE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -183,6 +204,29 @@ public class ImportTypeImpl extends TypeImpl implements ImportType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isAutoresolve()
+	{
+		return autoresolve;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAutoresolve(boolean newAutoresolve)
+	{
+		boolean oldAutoresolve = autoresolve;
+		autoresolve = newAutoresolve;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TypesPackage.IMPORT_TYPE__AUTORESOLVE, oldAutoresolve, autoresolve));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
@@ -194,6 +238,8 @@ public class ImportTypeImpl extends TypeImpl implements ImportType
 				return getReferenceURL();
 			case TypesPackage.IMPORT_TYPE__MODEL_INTERPRETER_ID:
 				return getModelInterpreterId();
+			case TypesPackage.IMPORT_TYPE__AUTORESOLVE:
+				return isAutoresolve();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -216,6 +262,9 @@ public class ImportTypeImpl extends TypeImpl implements ImportType
 				return;
 			case TypesPackage.IMPORT_TYPE__MODEL_INTERPRETER_ID:
 				setModelInterpreterId((String)newValue);
+				return;
+			case TypesPackage.IMPORT_TYPE__AUTORESOLVE:
+				setAutoresolve((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -240,6 +289,9 @@ public class ImportTypeImpl extends TypeImpl implements ImportType
 			case TypesPackage.IMPORT_TYPE__MODEL_INTERPRETER_ID:
 				setModelInterpreterId(MODEL_INTERPRETER_ID_EDEFAULT);
 				return;
+			case TypesPackage.IMPORT_TYPE__AUTORESOLVE:
+				setAutoresolve(AUTORESOLVE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -260,6 +312,8 @@ public class ImportTypeImpl extends TypeImpl implements ImportType
 				return REFERENCE_URL_EDEFAULT == null ? referenceURL != null : !REFERENCE_URL_EDEFAULT.equals(referenceURL);
 			case TypesPackage.IMPORT_TYPE__MODEL_INTERPRETER_ID:
 				return MODEL_INTERPRETER_ID_EDEFAULT == null ? modelInterpreterId != null : !MODEL_INTERPRETER_ID_EDEFAULT.equals(modelInterpreterId);
+			case TypesPackage.IMPORT_TYPE__AUTORESOLVE:
+				return autoresolve != AUTORESOLVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -281,6 +335,8 @@ public class ImportTypeImpl extends TypeImpl implements ImportType
 		result.append(referenceURL);
 		result.append(", modelInterpreterId: ");
 		result.append(modelInterpreterId);
+		result.append(", autoresolve: ");
+		result.append(autoresolve);
 		result.append(')');
 		return result.toString();
 	}
