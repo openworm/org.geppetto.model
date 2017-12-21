@@ -68,6 +68,15 @@ public interface ValuesFactory extends EFactory
 	TimeSeries createTimeSeries();
 
 	/**
+	 * Returns a new object of class '<em>MD Time Series</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MD Time Series</em>'.
+	 * @generated
+	 */
+	MDTimeSeries createMDTimeSeries();
+
+	/**
 	 * Returns a new object of class '<em>Text</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
