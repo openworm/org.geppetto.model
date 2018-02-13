@@ -244,6 +244,10 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false"
           upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MDTimeSeries" eSuperTypes="#//values/Value">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
+          eType="#//values/Value" containment="true"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MetadataValue" abstract="true" eSuperTypes="#//values/Value"/>
     <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//values/MetadataValue">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1"

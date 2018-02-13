@@ -32,6 +32,7 @@ import org.geppetto.model.values.FunctionPlot;
 import org.geppetto.model.values.Image;
 import org.geppetto.model.values.ImageFormat;
 import org.geppetto.model.values.ImportValue;
+import org.geppetto.model.values.MDTimeSeries;
 import org.geppetto.model.values.MetadataValue;
 import org.geppetto.model.values.Particles;
 import org.geppetto.model.values.PhysicalQuantity;
@@ -110,6 +111,13 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * @generated
 	 */
 	private EClass timeSeriesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mdTimeSeriesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -562,6 +570,26 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	public EAttribute getTimeSeries_Value()
 	{
 		return (EAttribute)timeSeriesEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMDTimeSeries()
+	{
+		return mdTimeSeriesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMDTimeSeries_Value()
+	{
+		return (EReference)mdTimeSeriesEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1468,6 +1496,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		createEAttribute(timeSeriesEClass, TIME_SERIES__SCALING_FACTOR);
 		createEAttribute(timeSeriesEClass, TIME_SERIES__VALUE);
 
+		mdTimeSeriesEClass = createEClass(MD_TIME_SERIES);
+		createEReference(mdTimeSeriesEClass, MD_TIME_SERIES__VALUE);
+
 		metadataValueEClass = createEClass(METADATA_VALUE);
 
 		textEClass = createEClass(TEXT);
@@ -1624,6 +1655,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		physicalQuantityEClass.getESuperTypes().add(this.getQuantity());
 		unitEClass.getESuperTypes().add(this.getValue());
 		timeSeriesEClass.getESuperTypes().add(this.getValue());
+		mdTimeSeriesEClass.getESuperTypes().add(this.getValue());
 		metadataValueEClass.getESuperTypes().add(this.getValue());
 		textEClass.getESuperTypes().add(this.getMetadataValue());
 		urlEClass.getESuperTypes().add(this.getMetadataValue());
@@ -1673,6 +1705,9 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		initEReference(getTimeSeries_Unit(), this.getUnit(), null, "unit", null, 0, 1, TimeSeries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTimeSeries_ScalingFactor(), theXMLTypePackage.getInt(), "scalingFactor", null, 0, 1, TimeSeries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTimeSeries_Value(), theXMLTypePackage.getDouble(), "value", null, 0, -1, TimeSeries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mdTimeSeriesEClass, MDTimeSeries.class, "MDTimeSeries", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMDTimeSeries_Value(), this.getValue(), null, "value", null, 0, -1, MDTimeSeries.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(metadataValueEClass, MetadataValue.class, "MetadataValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -69,6 +69,7 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.PHYSICAL_QUANTITY: return createPhysicalQuantity();
 			case ValuesPackage.UNIT: return createUnit();
 			case ValuesPackage.TIME_SERIES: return createTimeSeries();
+			case ValuesPackage.MD_TIME_SERIES: return createMDTimeSeries();
 			case ValuesPackage.TEXT: return createText();
 			case ValuesPackage.URL: return createURL();
 			case ValuesPackage.HTML: return createHTML();
@@ -201,6 +202,17 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		TimeSeriesImpl timeSeries = new TimeSeriesImpl();
 		return timeSeries;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MDTimeSeries createMDTimeSeries()
+	{
+		MDTimeSeriesImpl mdTimeSeries = new MDTimeSeriesImpl();
+		return mdTimeSeries;
 	}
 
 	/**
