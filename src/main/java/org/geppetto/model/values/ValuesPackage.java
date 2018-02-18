@@ -419,6 +419,52 @@ public interface ValuesPackage extends EPackage
 	int TIME_SERIES_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.MDTimeSeriesImpl <em>MD Time Series</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.MDTimeSeriesImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getMDTimeSeries()
+	 * @generated
+	 */
+	int MD_TIME_SERIES = 7;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MD_TIME_SERIES__SYNCHED = VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MD_TIME_SERIES__VALUE = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>MD Time Series</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MD_TIME_SERIES_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>MD Time Series</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MD_TIME_SERIES_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.impl.MetadataValueImpl <em>Metadata Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -426,7 +472,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getMetadataValue()
 	 * @generated
 	 */
-	int METADATA_VALUE = 7;
+	int METADATA_VALUE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -463,7 +509,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getText()
 	 * @generated
 	 */
-	int TEXT = 8;
+	int TEXT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -509,7 +555,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getURL()
 	 * @generated
 	 */
-	int URL = 9;
+	int URL = 10;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -555,7 +601,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getHTML()
 	 * @generated
 	 */
-	int HTML = 10;
+	int HTML = 11;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -601,7 +647,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getPointer()
 	 * @generated
 	 */
-	int POINTER = 11;
+	int POINTER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -674,7 +720,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getPointerElement()
 	 * @generated
 	 */
-	int POINTER_ELEMENT = 12;
+	int POINTER_ELEMENT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -729,7 +775,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getPoint()
 	 * @generated
 	 */
-	int POINT = 13;
+	int POINT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -793,7 +839,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getDynamics()
 	 * @generated
 	 */
-	int DYNAMICS = 14;
+	int DYNAMICS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -848,7 +894,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getFunctionPlot()
 	 * @generated
 	 */
-	int FUNCTION_PLOT = 15;
+	int FUNCTION_PLOT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -930,7 +976,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getFunction()
 	 * @generated
 	 */
-	int FUNCTION = 16;
+	int FUNCTION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -994,7 +1040,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArgument()
 	 * @generated
 	 */
-	int ARGUMENT = 17;
+	int ARGUMENT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1040,7 +1086,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getExpression()
 	 * @generated
 	 */
-	int EXPRESSION = 18;
+	int EXPRESSION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1086,7 +1132,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualValue()
 	 * @generated
 	 */
-	int VISUAL_VALUE = 19;
+	int VISUAL_VALUE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1141,7 +1187,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getCollada()
 	 * @generated
 	 */
-	int COLLADA = 20;
+	int COLLADA = 21;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1205,7 +1251,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getOBJ()
 	 * @generated
 	 */
-	int OBJ = 21;
+	int OBJ = 22;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1269,7 +1315,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSphere()
 	 * @generated
 	 */
-	int SPHERE = 22;
+	int SPHERE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1333,7 +1379,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getCylinder()
 	 * @generated
 	 */
-	int CYLINDER = 23;
+	int CYLINDER = 24;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1424,7 +1470,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getParticles()
 	 * @generated
 	 */
-	int PARTICLES = 24;
+	int PARTICLES = 25;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1470,7 +1516,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSkeletonAnimation()
 	 * @generated
 	 */
-	int SKELETON_ANIMATION = 25;
+	int SKELETON_ANIMATION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1534,7 +1580,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getSkeletonTransformation()
 	 * @generated
 	 */
-	int SKELETON_TRANSFORMATION = 26;
+	int SKELETON_TRANSFORMATION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Skeleton Transformation</b></em>' attribute list.
@@ -1572,7 +1618,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroupElement()
 	 * @generated
 	 */
-	int VISUAL_GROUP_ELEMENT = 27;
+	int VISUAL_GROUP_ELEMENT = 28;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1663,7 +1709,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getVisualGroup()
 	 * @generated
 	 */
-	int VISUAL_GROUP = 28;
+	int VISUAL_GROUP = 29;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1773,7 +1819,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnection()
 	 * @generated
 	 */
-	int CONNECTION = 29;
+	int CONNECTION = 30;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1837,7 +1883,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayElement()
 	 * @generated
 	 */
-	int ARRAY_ELEMENT = 30;
+	int ARRAY_ELEMENT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1901,7 +1947,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getArrayValue()
 	 * @generated
 	 */
-	int ARRAY_VALUE = 31;
+	int ARRAY_VALUE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -1947,7 +1993,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImage()
 	 * @generated
 	 */
-	int IMAGE = 32;
+	int IMAGE = 33;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -2020,7 +2066,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImportValue()
 	 * @generated
 	 */
-	int IMPORT_VALUE = 33;
+	int IMPORT_VALUE = 34;
 
 	/**
 	 * The feature id for the '<em><b>Synched</b></em>' attribute.
@@ -2066,7 +2112,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectivity()
 	 * @generated
 	 */
-	int CONNECTIVITY = 34;
+	int CONNECTIVITY = 35;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}' enum.
@@ -2076,7 +2122,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImageFormat()
 	 * @generated
 	 */
-	int IMAGE_FORMAT = 35;
+	int IMAGE_FORMAT = 36;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Value <em>Value</em>}'.
@@ -2259,6 +2305,27 @@ public interface ValuesPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getTimeSeries_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.MDTimeSeries <em>MD Time Series</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MD Time Series</em>'.
+	 * @see org.geppetto.model.values.MDTimeSeries
+	 * @generated
+	 */
+	EClass getMDTimeSeries();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.values.MDTimeSeries#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Value</em>'.
+	 * @see org.geppetto.model.values.MDTimeSeries#getValue()
+	 * @see #getMDTimeSeries()
+	 * @generated
+	 */
+	EReference getMDTimeSeries_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.MetadataValue <em>Metadata Value</em>}'.
@@ -3338,6 +3405,24 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute TIME_SERIES__VALUE = eINSTANCE.getTimeSeries_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.MDTimeSeriesImpl <em>MD Time Series</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.MDTimeSeriesImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getMDTimeSeries()
+		 * @generated
+		 */
+		EClass MD_TIME_SERIES = eINSTANCE.getMDTimeSeries();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MD_TIME_SERIES__VALUE = eINSTANCE.getMDTimeSeries_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.impl.MetadataValueImpl <em>Metadata Value</em>}' class.

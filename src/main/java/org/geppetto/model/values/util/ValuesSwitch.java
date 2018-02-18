@@ -134,6 +134,15 @@ public class ValuesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ValuesPackage.MD_TIME_SERIES:
+			{
+				MDTimeSeries mdTimeSeries = (MDTimeSeries)theEObject;
+				T result = caseMDTimeSeries(mdTimeSeries);
+				if (result == null) result = caseValue(mdTimeSeries);
+				if (result == null) result = caseISynchable(mdTimeSeries);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ValuesPackage.METADATA_VALUE:
 			{
 				MetadataValue metadataValue = (MetadataValue)theEObject;
@@ -491,6 +500,22 @@ public class ValuesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseTimeSeries(TimeSeries object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MD Time Series</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MD Time Series</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMDTimeSeries(MDTimeSeries object)
 	{
 		return null;
 	}

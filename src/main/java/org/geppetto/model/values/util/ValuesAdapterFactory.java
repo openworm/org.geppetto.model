@@ -110,6 +110,11 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createTimeSeriesAdapter();
 			}
 			@Override
+			public Adapter caseMDTimeSeries(MDTimeSeries object)
+			{
+				return createMDTimeSeriesAdapter();
+			}
+			@Override
 			public Adapter caseMetadataValue(MetadataValue object)
 			{
 				return createMetadataValueAdapter();
@@ -377,6 +382,21 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createTimeSeriesAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.MDTimeSeries <em>MD Time Series</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.MDTimeSeries
+	 * @generated
+	 */
+	public Adapter createMDTimeSeriesAdapter()
 	{
 		return null;
 	}
