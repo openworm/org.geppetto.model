@@ -318,7 +318,7 @@ public class PointerUtility
 	{
 		boolean sameType = pointer.getType() == pointer2.getType() || pointer.getType().equals(pointer2.getType());
 		boolean sameVar = pointer.getVariable() == pointer2.getVariable() || pointer.getVariable().equals(pointer2.getVariable());
-		boolean sameIndex = pointer.getIndex() == pointer2.getIndex();
+		boolean sameIndex = pointer.getIndex().intValue() == pointer2.getIndex().intValue();
 		return sameType && sameVar && sameIndex;
 	}
 

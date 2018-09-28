@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated geppettoModelGenerator -->
       <package
-            uri="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore"
+            uri="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore"
             class="org.geppetto.model.GeppettoPackage"
             genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
    </extension>
@@ -24,7 +24,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated geppettoModelGenerator -->
       <package
-            uri="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//types"
+            uri="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//types"
             class="org.geppetto.model.types.TypesPackage"
             genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
    </extension>
@@ -32,7 +32,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated geppettoModelGenerator -->
       <package
-            uri="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//values"
+            uri="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//values"
             class="org.geppetto.model.values.ValuesPackage"
             genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
    </extension>
@@ -40,7 +40,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated geppettoModelGenerator -->
       <package
-            uri="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//variables"
+            uri="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//variables"
             class="org.geppetto.model.variables.VariablesPackage"
             genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
    </extension>
