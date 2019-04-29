@@ -426,7 +426,7 @@
           eType="#//values/Value" containment="true"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="datasources" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore#//datasources"
+  <eSubpackages name="datasources" nsURI="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//datasources"
       nsPrefix="gep">
     <eClassifiers xsi:type="ecore:EClass" name="DataSource" eSuperTypes="#//Node">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSourceService" lowerBound="1"
