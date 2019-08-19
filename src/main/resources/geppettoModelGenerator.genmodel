@@ -16,6 +16,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//GeppettoModel/variables"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//GeppettoModel/libraries"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//GeppettoModel/tags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//GeppettoModel/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//GeppettoModel/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//GeppettoModel/dataSources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//GeppettoModel/queries"/>
     </genClasses>
     <genClasses image="false" ecoreClass="geppettoModel.ecore#//Node">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//Node/id"/>
@@ -26,6 +30,7 @@
     <genClasses ecoreClass="geppettoModel.ecore#//GeppettoLibrary">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//GeppettoLibrary/types"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//GeppettoLibrary/sharedTypes"/>
+      <genOperations ecoreOperation="geppettoModel.ecore#//GeppettoLibrary/getTypeById"/>
     </genClasses>
     <genClasses ecoreClass="geppettoModel.ecore#//LibraryManager">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//LibraryManager/libraries"/>
@@ -34,6 +39,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//ExperimentState/recordedVariables"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//ExperimentState/setParameters"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//ExperimentState/experimentId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//ExperimentState/projectId"/>
     </genClasses>
     <genClasses ecoreClass="geppettoModel.ecore#//VariableValue">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//VariableValue/pointer"/>
@@ -53,6 +59,13 @@
     <genClasses ecoreClass="geppettoModel.ecore#//ExternalDomainModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//ExternalDomainModel/fileFormat"/>
     </genClasses>
+    <genClasses ecoreClass="geppettoModel.ecore#//StringToStringMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//StringToStringMap/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//StringToStringMap/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="geppettoModel.ecore#//ISynchable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//ISynchable/synched"/>
+    </genClasses>
     <nestedGenPackages prefix="Types" disposableProviderFactory="true" ecorePackage="geppettoModel.ecore#//types">
       <genClasses image="false" ecoreClass="geppettoModel.ecore#//types/Type">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -65,6 +78,9 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference geppettoModel.ecore#//types/Type/domainModel"/>
         <genOperations ecoreOperation="geppettoModel.ecore#//types/Type/getDefaultValue"/>
+        <genOperations ecoreOperation="geppettoModel.ecore#//types/Type/extendsType">
+          <genParameters ecoreParameter="geppettoModel.ecore#//types/Type/extendsType/type"/>
+        </genOperations>
       </genClasses>
       <genClasses ecoreClass="geppettoModel.ecore#//types/VisualType">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//types/VisualType/defaultValue"/>
@@ -73,6 +89,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//types/ImportType/url"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//types/ImportType/referenceURL"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//types/ImportType/modelInterpreterId"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//types/ImportType/autoresolve"/>
       </genClasses>
       <genClasses ecoreClass="geppettoModel.ecore#//types/CompositeType">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//types/CompositeType/variables"/>
@@ -102,6 +119,9 @@
       <genClasses ecoreClass="geppettoModel.ecore#//types/HTMLType">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//types/HTMLType/defaultValue"/>
       </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//types/JSONType">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//types/JSONType/defaultValue"/>
+      </genClasses>
       <genClasses ecoreClass="geppettoModel.ecore#//types/TextType">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//types/TextType/defaultValue"/>
       </genClasses>
@@ -125,12 +145,30 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//types/ConnectionType/variables"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//types/ConnectionType/defaultValue"/>
       </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//types/SimpleType"/>
+      <genClasses ecoreClass="geppettoModel.ecore#//types/ImageType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference geppettoModel.ecore#//types/ImageType/defaultValue"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//types/SimpleArrayType">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//types/SimpleArrayType/defaultValue"/>
+      </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Values" disposableProviderFactory="true" ecorePackage="geppettoModel.ecore#//values">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="geppettoModel.ecore#//values/ConnectionType">
-        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ConnectionType/DIRECTIONAL"/>
-        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ConnectionType/BIDIRECTIONAL"/>
-        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ConnectionType/NON_DIRECTIONAL"/>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="geppettoModel.ecore#//values/Connectivity">
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/Connectivity/DIRECTIONAL"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/Connectivity/BIDIRECTIONAL"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/Connectivity/NON_DIRECTIONAL"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="geppettoModel.ecore#//values/ImageFormat">
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ImageFormat/PNG"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ImageFormat/JPEG"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ImageFormat/IIP"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ImageFormat/DCM"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ImageFormat/NIFTI"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ImageFormat/TIFF"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ImageFormat/DZI"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//values/ImageFormat/GOOGLE_MAP"/>
       </genEnums>
       <genClasses image="false" ecoreClass="geppettoModel.ecore#//values/Value"/>
       <genClasses ecoreClass="geppettoModel.ecore#//values/Composite">
@@ -152,9 +190,12 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/Unit/unit"/>
       </genClasses>
       <genClasses ecoreClass="geppettoModel.ecore#//values/TimeSeries">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference geppettoModel.ecore#//values/TimeSeries/quantities"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/TimeSeries/unit"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/TimeSeries/scalingFactor"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/TimeSeries/value"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/MDTimeSeries">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/MDTimeSeries/value"/>
       </genClasses>
       <genClasses image="false" ecoreClass="geppettoModel.ecore#//values/MetadataValue"/>
       <genClasses ecoreClass="geppettoModel.ecore#//values/Text">
@@ -168,6 +209,8 @@
       </genClasses>
       <genClasses ecoreClass="geppettoModel.ecore#//values/Pointer">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/Pointer/elements"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/Pointer/point"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/Pointer/path"/>
         <genOperations ecoreOperation="geppettoModel.ecore#//values/Pointer/getInstancePath"/>
       </genClasses>
       <genClasses ecoreClass="geppettoModel.ecore#//values/PointerElement">
@@ -225,7 +268,9 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/Cylinder/height"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/Cylinder/distal"/>
       </genClasses>
-      <genClasses ecoreClass="geppettoModel.ecore#//values/Particle"/>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/Particles">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/Particles/particles"/>
+      </genClasses>
       <genClasses ecoreClass="geppettoModel.ecore#//values/SkeletonAnimation">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference geppettoModel.ecore#//values/SkeletonAnimation/skeletonTransformationSeries"/>
@@ -246,7 +291,7 @@
       <genClasses ecoreClass="geppettoModel.ecore#//values/Connection">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/Connection/a"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/Connection/b"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/Connection/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/Connection/connectivity"/>
       </genClasses>
       <genClasses ecoreClass="geppettoModel.ecore#//values/ArrayElement">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/ArrayElement/index"/>
@@ -256,6 +301,34 @@
       <genClasses ecoreClass="geppettoModel.ecore#//values/ArrayValue">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/ArrayValue/elements"/>
       </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/Image">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/Image/data"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/Image/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/Image/reference"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/Image/format"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/ImportValue">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/ImportValue/modelInterpreterId"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/Metadata">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/Metadata/value"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/JSON">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/JSON/json"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/GenericArray">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//values/GenericArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/StringArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/StringArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/IntArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/IntArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//values/DoubleArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//values/DoubleArray/elements"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="geppettoModel.ecore#//values/AArrayValue"/>
     </nestedGenPackages>
     <nestedGenPackages prefix="Variables" disposableProviderFactory="true" ecorePackage="geppettoModel.ecore#//variables">
       <genClasses image="false" ecoreClass="geppettoModel.ecore#//variables/Variable">
@@ -271,6 +344,77 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference geppettoModel.ecore#//variables/TypeToValueMap/key"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//variables/TypeToValueMap/value"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Datasources" disposableProviderFactory="true" ecorePackage="geppettoModel.ecore#//datasources">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="geppettoModel.ecore#//datasources/BooleanOperator">
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//datasources/BooleanOperator/AND"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//datasources/BooleanOperator/NAND"/>
+        <genEnumLiterals ecoreEnumLiteral="geppettoModel.ecore#//datasources/BooleanOperator/OR"/>
+      </genEnums>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/DataSource">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/DataSource/dataSourceService"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/DataSource/libraryConfigurations"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/DataSource/url"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/DataSource/queries"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/DataSource/dependenciesLibrary"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/DataSource/targetLibrary"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/DataSource/fetchVariableQuery"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/DataSourceLibraryConfiguration">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/DataSourceLibraryConfiguration/library"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/DataSourceLibraryConfiguration/modelInterpreterId"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/DataSourceLibraryConfiguration/format"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="geppettoModel.ecore#//datasources/Query">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/Query/description"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/Query/matchingCriteria"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/Query/runForCount"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/Query/returnType"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/ProcessQuery">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/ProcessQuery/parameters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/ProcessQuery/queryProcessorId"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/SimpleQuery">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/SimpleQuery/query"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/SimpleQuery/countQuery"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/CompoundQuery">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/CompoundQuery/queryChain"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/CompoundRefQuery">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/CompoundRefQuery/queryChain"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/QueryResults">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/QueryResults/id"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/QueryResults/header"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/QueryResults/results"/>
+        <genOperations ecoreOperation="geppettoModel.ecore#//datasources/QueryResults/getValue">
+          <genParameters ecoreParameter="geppettoModel.ecore#//datasources/QueryResults/getValue/field"/>
+          <genParameters ecoreParameter="geppettoModel.ecore#//datasources/QueryResults/getValue/row"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/RunnableQuery">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/RunnableQuery/targetVariablePath"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/RunnableQuery/queryPath"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/RunnableQuery/booleanOperator"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="geppettoModel.ecore#//datasources/AQueryResult"/>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/QueryResult">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/QueryResult/values"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/SerializableQueryResult">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/SerializableQueryResult/values"/>
+      </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//datasources/QueryMatchingCriteria">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/QueryMatchingCriteria/type"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

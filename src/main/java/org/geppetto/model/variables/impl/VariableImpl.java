@@ -395,7 +395,7 @@ public class VariableImpl extends NodeImpl implements Variable
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (static: ");
 		result.append(static_);
 		result.append(')');

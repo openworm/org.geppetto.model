@@ -499,7 +499,7 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (dataSourceService: ");
 		result.append(dataSourceService);
 		result.append(", url: ");

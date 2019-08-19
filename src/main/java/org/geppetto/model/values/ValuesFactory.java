@@ -302,6 +302,60 @@ public interface ValuesFactory extends EFactory
 	ImportValue createImportValue();
 
 	/**
+	 * Returns a new object of class '<em>Metadata</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Metadata</em>'.
+	 * @generated
+	 */
+	Metadata createMetadata();
+
+	/**
+	 * Returns a new object of class '<em>JSON</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>JSON</em>'.
+	 * @generated
+	 */
+	JSON createJSON();
+
+	/**
+	 * Returns a new object of class '<em>Generic Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generic Array</em>'.
+	 * @generated
+	 */
+	GenericArray createGenericArray();
+
+	/**
+	 * Returns a new object of class '<em>String Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>String Array</em>'.
+	 * @generated
+	 */
+	StringArray createStringArray();
+
+	/**
+	 * Returns a new object of class '<em>Int Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Int Array</em>'.
+	 * @generated
+	 */
+	IntArray createIntArray();
+
+	/**
+	 * Returns a new object of class '<em>Double Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Double Array</em>'.
+	 * @generated
+	 */
+	DoubleArray createDoubleArray();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

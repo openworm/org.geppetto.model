@@ -289,7 +289,7 @@ public class DataSourceLibraryConfigurationImpl extends MinimalEObjectImpl.Conta
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (modelInterpreterId: ");
 		result.append(modelInterpreterId);
 		result.append(", format: ");

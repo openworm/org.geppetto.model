@@ -122,6 +122,15 @@ public interface TypesFactory extends EFactory
 	HTMLType createHTMLType();
 
 	/**
+	 * Returns a new object of class '<em>JSON Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>JSON Type</em>'.
+	 * @generated
+	 */
+	JSONType createJSONType();
+
+	/**
 	 * Returns a new object of class '<em>Text Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -192,6 +201,15 @@ public interface TypesFactory extends EFactory
 	 * @generated
 	 */
 	ImageType createImageType();
+
+	/**
+	 * Returns a new object of class '<em>Simple Array Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Array Type</em>'.
+	 * @generated
+	 */
+	SimpleArrayType createSimpleArrayType();
 
 	/**
 	 * Returns the package supported by this factory.

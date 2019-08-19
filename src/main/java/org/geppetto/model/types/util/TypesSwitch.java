@@ -191,6 +191,16 @@ public class TypesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TypesPackage.JSON_TYPE:
+			{
+				JSONType jsonType = (JSONType)theEObject;
+				T result = caseJSONType(jsonType);
+				if (result == null) result = caseType(jsonType);
+				if (result == null) result = caseNode(jsonType);
+				if (result == null) result = caseISynchable(jsonType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case TypesPackage.TEXT_TYPE:
 			{
 				TextType textType = (TextType)theEObject;
@@ -269,6 +279,16 @@ public class TypesSwitch<T> extends Switch<T>
 				if (result == null) result = caseType(imageType);
 				if (result == null) result = caseNode(imageType);
 				if (result == null) result = caseISynchable(imageType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TypesPackage.SIMPLE_ARRAY_TYPE:
+			{
+				SimpleArrayType simpleArrayType = (SimpleArrayType)theEObject;
+				T result = caseSimpleArrayType(simpleArrayType);
+				if (result == null) result = caseType(simpleArrayType);
+				if (result == null) result = caseNode(simpleArrayType);
+				if (result == null) result = caseISynchable(simpleArrayType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -469,6 +489,22 @@ public class TypesSwitch<T> extends Switch<T>
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>JSON Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>JSON Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJSONType(JSONType object)
+	{
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Text Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -592,6 +628,22 @@ public class TypesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseImageType(ImageType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Array Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Array Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSimpleArrayType(SimpleArrayType object)
 	{
 		return null;
 	}

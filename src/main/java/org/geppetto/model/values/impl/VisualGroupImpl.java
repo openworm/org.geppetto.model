@@ -332,7 +332,7 @@ public class VisualGroupImpl extends NodeImpl implements VisualGroup
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (lowSpectrumColor: ");
 		result.append(lowSpectrumColor);
 		result.append(", highSpectrumColor: ");

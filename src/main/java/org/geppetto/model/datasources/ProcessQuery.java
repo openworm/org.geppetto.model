@@ -35,7 +35,7 @@ public interface ProcessQuery extends Query
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' map.
 	 * @see org.geppetto.model.datasources.DatasourcesPackage#getProcessQuery_Parameters()
-	 * @model mapType="org.geppetto.model.StringToStringMap<org.eclipse.emf.ecore.xml.type.String, org.eclipse.emf.ecore.xml.type.String>"
+	 * @model mapType="org.geppetto.model.StringToStringMap&lt;org.eclipse.emf.ecore.xml.type.String, org.eclipse.emf.ecore.xml.type.String&gt;"
 	 * @generated
 	 */
 	EMap<String, String> getParameters();

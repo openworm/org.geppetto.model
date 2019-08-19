@@ -163,7 +163,7 @@ public class ImportValueImpl extends ValueImpl implements ImportValue
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (modelInterpreterId: ");
 		result.append(modelInterpreterId);
 		result.append(')');

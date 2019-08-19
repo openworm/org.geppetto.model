@@ -164,7 +164,7 @@ public class ExternalDomainModelImpl extends DomainModelImpl implements External
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (fileFormat: ");
 		result.append(fileFormat);
 		result.append(')');

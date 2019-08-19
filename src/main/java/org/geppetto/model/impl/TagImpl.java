@@ -283,7 +283,7 @@ public class TagImpl extends MinimalEObjectImpl.Container implements Tag
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (synched: ");
 		result.append(synched);
 		result.append(", name: ");

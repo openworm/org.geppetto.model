@@ -2105,6 +2105,319 @@ public interface ValuesPackage extends EPackage
 	int IMPORT_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.MetadataImpl <em>Metadata</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.MetadataImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getMetadata()
+	 * @generated
+	 */
+	int METADATA = 35;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA__SYNCHED = METADATA_VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA__VALUE = METADATA_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Metadata</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_FEATURE_COUNT = METADATA_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Metadata</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_OPERATION_COUNT = METADATA_VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.JSONImpl <em>JSON</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.JSONImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getJSON()
+	 * @generated
+	 */
+	int JSON = 36;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JSON__SYNCHED = METADATA_VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Json</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JSON__JSON = METADATA_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>JSON</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JSON_FEATURE_COUNT = METADATA_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>JSON</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JSON_OPERATION_COUNT = METADATA_VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.AArrayValueImpl <em>AArray Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.AArrayValueImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getAArrayValue()
+	 * @generated
+	 */
+	int AARRAY_VALUE = 41;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AARRAY_VALUE__SYNCHED = VALUE__SYNCHED;
+
+	/**
+	 * The number of structural features of the '<em>AArray Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AARRAY_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>AArray Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AARRAY_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.GenericArrayImpl <em>Generic Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.GenericArrayImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getGenericArray()
+	 * @generated
+	 */
+	int GENERIC_ARRAY = 37;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_ARRAY__SYNCHED = AARRAY_VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_ARRAY__ELEMENTS = AARRAY_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Generic Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_ARRAY_FEATURE_COUNT = AARRAY_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Generic Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_ARRAY_OPERATION_COUNT = AARRAY_VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.StringArrayImpl <em>String Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.StringArrayImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getStringArray()
+	 * @generated
+	 */
+	int STRING_ARRAY = 38;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_ARRAY__SYNCHED = AARRAY_VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_ARRAY__ELEMENTS = AARRAY_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>String Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_ARRAY_FEATURE_COUNT = AARRAY_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>String Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_ARRAY_OPERATION_COUNT = AARRAY_VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.IntArrayImpl <em>Int Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.IntArrayImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getIntArray()
+	 * @generated
+	 */
+	int INT_ARRAY = 39;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_ARRAY__SYNCHED = AARRAY_VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_ARRAY__ELEMENTS = AARRAY_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Int Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_ARRAY_FEATURE_COUNT = AARRAY_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Int Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_ARRAY_OPERATION_COUNT = AARRAY_VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.geppetto.model.values.impl.DoubleArrayImpl <em>Double Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.values.impl.DoubleArrayImpl
+	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getDoubleArray()
+	 * @generated
+	 */
+	int DOUBLE_ARRAY = 40;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_ARRAY__SYNCHED = AARRAY_VALUE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_ARRAY__ELEMENTS = AARRAY_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Double Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_ARRAY_FEATURE_COUNT = AARRAY_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Double Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_ARRAY_OPERATION_COUNT = AARRAY_VALUE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2112,7 +2425,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getConnectivity()
 	 * @generated
 	 */
-	int CONNECTIVITY = 35;
+	int CONNECTIVITY = 42;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.values.ImageFormat <em>Image Format</em>}' enum.
@@ -2122,7 +2435,7 @@ public interface ValuesPackage extends EPackage
 	 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getImageFormat()
 	 * @generated
 	 */
-	int IMAGE_FORMAT = 36;
+	int IMAGE_FORMAT = 43;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.values.Value <em>Value</em>}'.
@@ -3213,6 +3526,142 @@ public interface ValuesPackage extends EPackage
 	EAttribute getImportValue_ModelInterpreterId();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.Metadata <em>Metadata</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Metadata</em>'.
+	 * @see org.geppetto.model.values.Metadata
+	 * @generated
+	 */
+	EClass getMetadata();
+
+	/**
+	 * Returns the meta object for the map '{@link org.geppetto.model.values.Metadata#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Value</em>'.
+	 * @see org.geppetto.model.values.Metadata#getValue()
+	 * @see #getMetadata()
+	 * @generated
+	 */
+	EReference getMetadata_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.JSON <em>JSON</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>JSON</em>'.
+	 * @see org.geppetto.model.values.JSON
+	 * @generated
+	 */
+	EClass getJSON();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.values.JSON#getJson <em>Json</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Json</em>'.
+	 * @see org.geppetto.model.values.JSON#getJson()
+	 * @see #getJSON()
+	 * @generated
+	 */
+	EAttribute getJSON_Json();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.GenericArray <em>Generic Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Generic Array</em>'.
+	 * @see org.geppetto.model.values.GenericArray
+	 * @generated
+	 */
+	EClass getGenericArray();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.values.GenericArray#getElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Elements</em>'.
+	 * @see org.geppetto.model.values.GenericArray#getElements()
+	 * @see #getGenericArray()
+	 * @generated
+	 */
+	EReference getGenericArray_Elements();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.StringArray <em>String Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String Array</em>'.
+	 * @see org.geppetto.model.values.StringArray
+	 * @generated
+	 */
+	EClass getStringArray();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.geppetto.model.values.StringArray#getElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Elements</em>'.
+	 * @see org.geppetto.model.values.StringArray#getElements()
+	 * @see #getStringArray()
+	 * @generated
+	 */
+	EAttribute getStringArray_Elements();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.IntArray <em>Int Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Int Array</em>'.
+	 * @see org.geppetto.model.values.IntArray
+	 * @generated
+	 */
+	EClass getIntArray();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.geppetto.model.values.IntArray#getElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Elements</em>'.
+	 * @see org.geppetto.model.values.IntArray#getElements()
+	 * @see #getIntArray()
+	 * @generated
+	 */
+	EAttribute getIntArray_Elements();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.DoubleArray <em>Double Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Double Array</em>'.
+	 * @see org.geppetto.model.values.DoubleArray
+	 * @generated
+	 */
+	EClass getDoubleArray();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.geppetto.model.values.DoubleArray#getElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Elements</em>'.
+	 * @see org.geppetto.model.values.DoubleArray#getElements()
+	 * @see #getDoubleArray()
+	 * @generated
+	 */
+	EAttribute getDoubleArray_Elements();
+
+	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.values.AArrayValue <em>AArray Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>AArray Value</em>'.
+	 * @see org.geppetto.model.values.AArrayValue
+	 * @generated
+	 */
+	EClass getAArrayValue();
+
+	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4141,6 +4590,124 @@ public interface ValuesPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute IMPORT_VALUE__MODEL_INTERPRETER_ID = eINSTANCE.getImportValue_ModelInterpreterId();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.MetadataImpl <em>Metadata</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.MetadataImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getMetadata()
+		 * @generated
+		 */
+		EClass METADATA = eINSTANCE.getMetadata();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METADATA__VALUE = eINSTANCE.getMetadata_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.JSONImpl <em>JSON</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.JSONImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getJSON()
+		 * @generated
+		 */
+		EClass JSON = eINSTANCE.getJSON();
+
+		/**
+		 * The meta object literal for the '<em><b>Json</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JSON__JSON = eINSTANCE.getJSON_Json();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.GenericArrayImpl <em>Generic Array</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.GenericArrayImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getGenericArray()
+		 * @generated
+		 */
+		EClass GENERIC_ARRAY = eINSTANCE.getGenericArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GENERIC_ARRAY__ELEMENTS = eINSTANCE.getGenericArray_Elements();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.StringArrayImpl <em>String Array</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.StringArrayImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getStringArray()
+		 * @generated
+		 */
+		EClass STRING_ARRAY = eINSTANCE.getStringArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_ARRAY__ELEMENTS = eINSTANCE.getStringArray_Elements();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.IntArrayImpl <em>Int Array</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.IntArrayImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getIntArray()
+		 * @generated
+		 */
+		EClass INT_ARRAY = eINSTANCE.getIntArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INT_ARRAY__ELEMENTS = eINSTANCE.getIntArray_Elements();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.DoubleArrayImpl <em>Double Array</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.DoubleArrayImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getDoubleArray()
+		 * @generated
+		 */
+		EClass DOUBLE_ARRAY = eINSTANCE.getDoubleArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOUBLE_ARRAY__ELEMENTS = eINSTANCE.getDoubleArray_Elements();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.values.impl.AArrayValueImpl <em>AArray Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.values.impl.AArrayValueImpl
+		 * @see org.geppetto.model.values.impl.ValuesPackageImpl#getAArrayValue()
+		 * @generated
+		 */
+		EClass AARRAY_VALUE = eINSTANCE.getAArrayValue();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.values.Connectivity <em>Connectivity</em>}' enum.

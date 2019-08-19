@@ -220,7 +220,7 @@ public class QuantityImpl extends ValueImpl implements Quantity
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (scalingFactor: ");
 		result.append(scalingFactor);
 		result.append(", value: ");

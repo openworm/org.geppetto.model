@@ -274,7 +274,7 @@ public class PointImpl extends ValueImpl implements Point
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (x: ");
 		result.append(x);
 		result.append(", y: ");
