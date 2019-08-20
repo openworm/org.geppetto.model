@@ -24,6 +24,7 @@ import org.geppetto.model.types.HTMLType;
 import org.geppetto.model.types.ImageType;
 import org.geppetto.model.types.ImportType;
 import org.geppetto.model.types.JSONType;
+import org.geppetto.model.types.MetadataType;
 import org.geppetto.model.types.ParameterType;
 import org.geppetto.model.types.PointType;
 import org.geppetto.model.types.PointerType;
@@ -203,6 +204,13 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * @generated
 	 */
 	private EClass simpleArrayTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass metadataTypeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -863,6 +871,16 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMetadataType()
+	{
+		return metadataTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TypesFactory getTypesFactory()
 	{
 		return (TypesFactory)getEFactoryInstance();
@@ -966,6 +984,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		simpleArrayTypeEClass = createEClass(SIMPLE_ARRAY_TYPE);
 		createEReference(simpleArrayTypeEClass, SIMPLE_ARRAY_TYPE__DEFAULT_VALUE);
+
+		metadataTypeEClass = createEClass(METADATA_TYPE);
 	}
 
 	/**
@@ -1025,6 +1045,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		simpleTypeEClass.getESuperTypes().add(this.getType());
 		imageTypeEClass.getESuperTypes().add(this.getType());
 		simpleArrayTypeEClass.getESuperTypes().add(this.getType());
+		metadataTypeEClass.getESuperTypes().add(this.getType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1108,6 +1129,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		initEClass(simpleArrayTypeEClass, SimpleArrayType.class, "SimpleArrayType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSimpleArrayType_DefaultValue(), theValuesPackage.getAArrayValue(), null, "defaultValue", null, 0, 1, SimpleArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(metadataTypeEClass, MetadataType.class, "MetadataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //TypesPackageImpl

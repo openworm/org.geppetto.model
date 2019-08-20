@@ -212,6 +212,15 @@ public interface TypesFactory extends EFactory
 	SimpleArrayType createSimpleArrayType();
 
 	/**
+	 * Returns a new object of class '<em>Metadata Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Metadata Type</em>'.
+	 * @generated
+	 */
+	MetadataType createMetadataType();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

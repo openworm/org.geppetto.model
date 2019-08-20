@@ -184,6 +184,11 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 				return createSimpleArrayTypeAdapter();
 			}
 			@Override
+			public Adapter caseMetadataType(MetadataType object)
+			{
+				return createMetadataTypeAdapter();
+			}
+			@Override
 			public Adapter caseISynchable(ISynchable object)
 			{
 				return createISynchableAdapter();
@@ -541,6 +546,21 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createSimpleArrayTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.MetadataType <em>Metadata Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.MetadataType
+	 * @generated
+	 */
+	public Adapter createMetadataTypeAdapter()
 	{
 		return null;
 	}

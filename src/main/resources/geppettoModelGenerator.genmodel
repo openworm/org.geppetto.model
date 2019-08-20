@@ -153,6 +153,7 @@
       <genClasses ecoreClass="geppettoModel.ecore#//types/SimpleArrayType">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//types/SimpleArrayType/defaultValue"/>
       </genClasses>
+      <genClasses ecoreClass="geppettoModel.ecore#//types/MetadataType"/>
     </nestedGenPackages>
     <nestedGenPackages prefix="Values" disposableProviderFactory="true" ecorePackage="geppettoModel.ecore#//values">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="geppettoModel.ecore#//values/Connectivity">

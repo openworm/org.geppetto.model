@@ -82,6 +82,7 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.SIMPLE_TYPE: return createSimpleType();
 			case TypesPackage.IMAGE_TYPE: return createImageType();
 			case TypesPackage.SIMPLE_ARRAY_TYPE: return createSimpleArrayType();
+			case TypesPackage.METADATA_TYPE: return createMetadataType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -316,6 +317,17 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		SimpleArrayTypeImpl simpleArrayType = new SimpleArrayTypeImpl();
 		return simpleArrayType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MetadataType createMetadataType()
+	{
+		MetadataTypeImpl metadataType = new MetadataTypeImpl();
+		return metadataType;
 	}
 
 	/**

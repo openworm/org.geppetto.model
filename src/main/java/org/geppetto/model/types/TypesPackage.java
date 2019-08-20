@@ -3320,6 +3320,143 @@ public interface TypesPackage extends EPackage
 
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.types.impl.MetadataTypeImpl <em>Metadata Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.types.impl.MetadataTypeImpl
+	 * @see org.geppetto.model.types.impl.TypesPackageImpl#getMetadataType()
+	 * @generated
+	 */
+	int METADATA_TYPE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE__SYNCHED = TYPE__SYNCHED;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE__ID = TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE__TAGS = TYPE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Super Type</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE__SUPER_TYPE = TYPE__SUPER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE__ABSTRACT = TYPE__ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Visual Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE__VISUAL_TYPE = TYPE__VISUAL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Referenced Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE__REFERENCED_VARIABLES = TYPE__REFERENCED_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE__DOMAIN_MODEL = TYPE__DOMAIN_MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Metadata Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE___GET_PATH = TYPE___GET_PATH;
+
+	/**
+	 * The operation id for the '<em>Get Default Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE___GET_DEFAULT_VALUE = TYPE___GET_DEFAULT_VALUE;
+
+	/**
+	 * The operation id for the '<em>Extends Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE___EXTENDS_TYPE__TYPE = TYPE___EXTENDS_TYPE__TYPE;
+
+	/**
+	 * The number of operations of the '<em>Metadata Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METADATA_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.types.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3923,6 +4060,16 @@ public interface TypesPackage extends EPackage
 	EReference getSimpleArrayType_DefaultValue();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.types.MetadataType <em>Metadata Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Metadata Type</em>'.
+	 * @see org.geppetto.model.types.MetadataType
+	 * @generated
+	 */
+	EClass getMetadataType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4445,6 +4592,16 @@ public interface TypesPackage extends EPackage
 		 * @generated
 		 */
 		EReference SIMPLE_ARRAY_TYPE__DEFAULT_VALUE = eINSTANCE.getSimpleArrayType_DefaultValue();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.types.impl.MetadataTypeImpl <em>Metadata Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.types.impl.MetadataTypeImpl
+		 * @see org.geppetto.model.types.impl.TypesPackageImpl#getMetadataType()
+		 * @generated
+		 */
+		EClass METADATA_TYPE = eINSTANCE.getMetadataType();
 
 	}
 

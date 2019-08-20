@@ -292,6 +292,16 @@ public class TypesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TypesPackage.METADATA_TYPE:
+			{
+				MetadataType metadataType = (MetadataType)theEObject;
+				T result = caseMetadataType(metadataType);
+				if (result == null) result = caseType(metadataType);
+				if (result == null) result = caseNode(metadataType);
+				if (result == null) result = caseISynchable(metadataType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -644,6 +654,22 @@ public class TypesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseSimpleArrayType(SimpleArrayType object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Metadata Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Metadata Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMetadataType(MetadataType object)
 	{
 		return null;
 	}
