@@ -87,13 +87,22 @@ public interface GeppettoPackage extends EPackage
 	int GEPPETTO_MODEL__VARIABLES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Worlds</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEPPETTO_MODEL__WORLDS = 1;
+
+	/**
 	 * The feature id for the '<em><b>Libraries</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL__LIBRARIES = 1;
+	int GEPPETTO_MODEL__LIBRARIES = 2;
 
 	/**
 	 * The feature id for the '<em><b>Tags</b></em>' containment reference list.
@@ -102,7 +111,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL__TAGS = 2;
+	int GEPPETTO_MODEL__TAGS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -111,7 +120,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL__ID = 3;
+	int GEPPETTO_MODEL__ID = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -120,7 +129,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL__NAME = 4;
+	int GEPPETTO_MODEL__NAME = 5;
 
 	/**
 	 * The feature id for the '<em><b>Data Sources</b></em>' containment reference list.
@@ -129,7 +138,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL__DATA_SOURCES = 5;
+	int GEPPETTO_MODEL__DATA_SOURCES = 6;
 
 	/**
 	 * The feature id for the '<em><b>Queries</b></em>' containment reference list.
@@ -138,7 +147,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL__QUERIES = 6;
+	int GEPPETTO_MODEL__QUERIES = 7;
 
 	/**
 	 * The number of structural features of the '<em>Model</em>' class.
@@ -147,7 +156,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int GEPPETTO_MODEL_FEATURE_COUNT = 7;
+	int GEPPETTO_MODEL_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Model</em>' class.
@@ -757,6 +766,61 @@ public interface GeppettoPackage extends EPackage
 	int STRING_TO_STRING_MAP_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.geppetto.model.impl.WorldImpl <em>World</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.geppetto.model.impl.WorldImpl
+	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getWorld()
+	 * @generated
+	 */
+	int WORLD = 12;
+
+	/**
+	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD__VARIABLES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Instances</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD__INSTANCES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD__NAME = 2;
+
+	/**
+	 * The number of structural features of the '<em>World</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>World</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -764,7 +828,7 @@ public interface GeppettoPackage extends EPackage
 	 * @see org.geppetto.model.impl.GeppettoPackageImpl#getFileFormat()
 	 * @generated
 	 */
-	int FILE_FORMAT = 12;
+	int FILE_FORMAT = 13;
 
 	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.GeppettoModel <em>Model</em>}'.
@@ -786,6 +850,17 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 */
 	EReference getGeppettoModel_Variables();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.GeppettoModel#getWorlds <em>Worlds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Worlds</em>'.
+	 * @see org.geppetto.model.GeppettoModel#getWorlds()
+	 * @see #getGeppettoModel()
+	 * @generated
+	 */
+	EReference getGeppettoModel_Worlds();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.GeppettoModel#getLibraries <em>Libraries</em>}'.
@@ -1217,6 +1292,49 @@ public interface GeppettoPackage extends EPackage
 	EAttribute getISynchable_Synched();
 
 	/**
+	 * Returns the meta object for class '{@link org.geppetto.model.World <em>World</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>World</em>'.
+	 * @see org.geppetto.model.World
+	 * @generated
+	 */
+	EClass getWorld();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.World#getVariables <em>Variables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Variables</em>'.
+	 * @see org.geppetto.model.World#getVariables()
+	 * @see #getWorld()
+	 * @generated
+	 */
+	EReference getWorld_Variables();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.geppetto.model.World#getInstances <em>Instances</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Instances</em>'.
+	 * @see org.geppetto.model.World#getInstances()
+	 * @see #getWorld()
+	 * @generated
+	 */
+	EReference getWorld_Instances();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.World#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.geppetto.model.World#getName()
+	 * @see #getWorld()
+	 * @generated
+	 */
+	EAttribute getWorld_Name();
+
+	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.FileFormat <em>File Format</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1267,6 +1385,14 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference GEPPETTO_MODEL__VARIABLES = eINSTANCE.getGeppettoModel_Variables();
+
+		/**
+		 * The meta object literal for the '<em><b>Worlds</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GEPPETTO_MODEL__WORLDS = eINSTANCE.getGeppettoModel_Worlds();
 
 		/**
 		 * The meta object literal for the '<em><b>Libraries</b></em>' containment reference list feature.
@@ -1609,6 +1735,40 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute ISYNCHABLE__SYNCHED = eINSTANCE.getISynchable_Synched();
+
+		/**
+		 * The meta object literal for the '{@link org.geppetto.model.impl.WorldImpl <em>World</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.geppetto.model.impl.WorldImpl
+		 * @see org.geppetto.model.impl.GeppettoPackageImpl#getWorld()
+		 * @generated
+		 */
+		EClass WORLD = eINSTANCE.getWorld();
+
+		/**
+		 * The meta object literal for the '<em><b>Variables</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORLD__VARIABLES = eINSTANCE.getWorld_Variables();
+
+		/**
+		 * The meta object literal for the '<em><b>Instances</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORLD__INSTANCES = eINSTANCE.getWorld_Instances();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WORLD__NAME = eINSTANCE.getWorld_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.

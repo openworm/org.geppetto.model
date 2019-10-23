@@ -14,7 +14,7 @@ import org.geppetto.model.variables.Variable;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * The root of every Geppetto model
+ * The root of every Geppetto model. This is the configuration of the Geppetto Model, to not be confused with the model Instantiation.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -22,6 +22,7 @@ import org.geppetto.model.variables.Variable;
  * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.GeppettoModel#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.geppetto.model.GeppettoModel#getWorlds <em>Worlds</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getLibraries <em>Libraries</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getTags <em>Tags</em>}</li>
  *   <li>{@link org.geppetto.model.GeppettoModel#getId <em>Id</em>}</li>
@@ -46,14 +47,30 @@ public interface GeppettoModel extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The top level variables instantiated inside the Geppetto Model.  The type of the variables will be coming from inside Libraries available inside this GeppettoModel.
+	 * [DEPRECATED, see Instantiation] The top level variables instantiated inside the Geppetto Model.  The type of the variables will be coming from inside Libraries available inside this GeppettoModel.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variables</em>' containment reference list.
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Variables()
 	 * @model containment="true"
 	 * @generated
+	 * @deprecated use getWorlds
 	 */
 	EList<Variable> getVariables();
+
+	/**
+	 * Returns the value of the '<em><b>Worlds</b></em>' containment reference list.
+	 * The list contents are of type {@link org.geppetto.model.World}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The top level variables instantiated inside the Geppetto Model.  The type of the variables will be coming from inside Libraries available inside this GeppettoModel.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Worlds</em>' containment reference list.
+	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Worlds()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<World> getWorlds();
 
 	/**
 	 * Returns the value of the '<em><b>Libraries</b></em>' containment reference list.
