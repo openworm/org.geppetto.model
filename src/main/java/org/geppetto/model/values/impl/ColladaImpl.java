@@ -166,7 +166,7 @@ public class ColladaImpl extends VisualValueImpl implements Collada
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (collada: ");
 		result.append(collada);
 		result.append(')');

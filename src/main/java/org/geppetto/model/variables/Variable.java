@@ -77,7 +77,7 @@ public interface Variable extends Node
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial Values</em>' map.
 	 * @see org.geppetto.model.variables.VariablesPackage#getVariable_InitialValues()
-	 * @model mapType="org.geppetto.model.variables.TypeToValueMap<org.geppetto.model.types.Type, org.geppetto.model.values.Value>"
+	 * @model mapType="org.geppetto.model.variables.TypeToValueMap&lt;org.geppetto.model.types.Type, org.geppetto.model.values.Value&gt;"
 	 * @generated
 	 */
 	EMap<Type, Value> getInitialValues();

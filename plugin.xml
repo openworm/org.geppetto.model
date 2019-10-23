@@ -14,13 +14,13 @@
             genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
    </extension>
 
-
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <!-- @generated geppettoModelGenerator -->
       <parser
             type="gep"
             class="org.geppetto.model.util.GeppettoResourceFactoryImpl"/>
    </extension>
+
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated geppettoModelGenerator -->
       <package

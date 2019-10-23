@@ -72,6 +72,7 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.ARGUMENT_TYPE: return createArgumentType();
 			case TypesPackage.EXPRESSION_TYPE: return createExpressionType();
 			case TypesPackage.HTML_TYPE: return createHTMLType();
+			case TypesPackage.JSON_TYPE: return createJSONType();
 			case TypesPackage.TEXT_TYPE: return createTextType();
 			case TypesPackage.URL_TYPE: return createURLType();
 			case TypesPackage.POINT_TYPE: return createPointType();
@@ -80,6 +81,8 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 			case TypesPackage.CONNECTION_TYPE: return createConnectionType();
 			case TypesPackage.SIMPLE_TYPE: return createSimpleType();
 			case TypesPackage.IMAGE_TYPE: return createImageType();
+			case TypesPackage.SIMPLE_ARRAY_TYPE: return createSimpleArrayType();
+			case TypesPackage.METADATA_TYPE: return createMetadataType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -211,6 +214,17 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public JSONType createJSONType()
+	{
+		JSONTypeImpl jsonType = new JSONTypeImpl();
+		return jsonType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TextType createTextType()
 	{
 		TextTypeImpl textType = new TextTypeImpl();
@@ -292,6 +306,28 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory
 	{
 		ImageTypeImpl imageType = new ImageTypeImpl();
 		return imageType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleArrayType createSimpleArrayType()
+	{
+		SimpleArrayTypeImpl simpleArrayType = new SimpleArrayTypeImpl();
+		return simpleArrayType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MetadataType createMetadataType()
+	{
+		MetadataTypeImpl metadataType = new MetadataTypeImpl();
+		return metadataType;
 	}
 
 	/**

@@ -17,6 +17,7 @@ import org.geppetto.model.datasources.impl.DatasourcesPackageImpl;
 import org.geppetto.model.impl.GeppettoPackageImpl;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
+import org.geppetto.model.values.AArrayValue;
 import org.geppetto.model.values.Argument;
 import org.geppetto.model.values.ArrayElement;
 import org.geppetto.model.values.ArrayValue;
@@ -25,14 +26,18 @@ import org.geppetto.model.values.Composite;
 import org.geppetto.model.values.Connection;
 import org.geppetto.model.values.Connectivity;
 import org.geppetto.model.values.Cylinder;
+import org.geppetto.model.values.DoubleArray;
 import org.geppetto.model.values.Dynamics;
 import org.geppetto.model.values.Expression;
 import org.geppetto.model.values.Function;
 import org.geppetto.model.values.FunctionPlot;
+import org.geppetto.model.values.GenericArray;
 import org.geppetto.model.values.Image;
 import org.geppetto.model.values.ImageFormat;
 import org.geppetto.model.values.ImportValue;
+import org.geppetto.model.values.IntArray;
 import org.geppetto.model.values.MDTimeSeries;
+import org.geppetto.model.values.Metadata;
 import org.geppetto.model.values.MetadataValue;
 import org.geppetto.model.values.Particles;
 import org.geppetto.model.values.PhysicalQuantity;
@@ -43,6 +48,7 @@ import org.geppetto.model.values.Quantity;
 import org.geppetto.model.values.SkeletonAnimation;
 import org.geppetto.model.values.SkeletonTransformation;
 import org.geppetto.model.values.Sphere;
+import org.geppetto.model.values.StringArray;
 import org.geppetto.model.values.Text;
 import org.geppetto.model.values.TimeSeries;
 import org.geppetto.model.values.Unit;
@@ -313,6 +319,55 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass metadataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass jsonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass genericArrayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringArrayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass intArrayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass doubleArrayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass aArrayValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum connectivityEEnum = null;
 
 	/**
@@ -351,7 +406,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ValuesPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -366,7 +421,8 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		if (isInited) return (ValuesPackage)EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ValuesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ValuesPackageImpl());
+		Object registeredValuesPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ValuesPackageImpl theValuesPackage = registeredValuesPackage instanceof ValuesPackageImpl ? (ValuesPackageImpl)registeredValuesPackage : new ValuesPackageImpl();
 
 		isInited = true;
 
@@ -374,10 +430,14 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) instanceof GeppettoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) : GeppettoPackage.eINSTANCE);
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
-		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) instanceof VariablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) : VariablesPackage.eINSTANCE);
-		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) instanceof DatasourcesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) : DatasourcesPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI);
+		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(registeredPackage instanceof GeppettoPackageImpl ? registeredPackage : GeppettoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(registeredPackage instanceof TypesPackageImpl ? registeredPackage : TypesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
+		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(registeredPackage instanceof VariablesPackageImpl ? registeredPackage : VariablesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI);
+		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(registeredPackage instanceof DatasourcesPackageImpl ? registeredPackage : DatasourcesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theValuesPackage.createPackageContents();
@@ -396,7 +456,6 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		// Mark meta-data to indicate it can't be changed
 		theValuesPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ValuesPackage.eNS_URI, theValuesPackage);
 		return theValuesPackage;
@@ -1427,6 +1486,136 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMetadata()
+	{
+		return metadataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMetadata_Value()
+	{
+		return (EReference)metadataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJSON()
+	{
+		return jsonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJSON_Json()
+	{
+		return (EAttribute)jsonEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGenericArray()
+	{
+		return genericArrayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGenericArray_Elements()
+	{
+		return (EReference)genericArrayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStringArray()
+	{
+		return stringArrayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStringArray_Elements()
+	{
+		return (EAttribute)stringArrayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIntArray()
+	{
+		return intArrayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIntArray_Elements()
+	{
+		return (EAttribute)intArrayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDoubleArray()
+	{
+		return doubleArrayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDoubleArray_Elements()
+	{
+		return (EAttribute)doubleArrayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAArrayValue()
+	{
+		return aArrayValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getConnectivity()
 	{
 		return connectivityEEnum;
@@ -1609,6 +1798,26 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		importValueEClass = createEClass(IMPORT_VALUE);
 		createEAttribute(importValueEClass, IMPORT_VALUE__MODEL_INTERPRETER_ID);
 
+		metadataEClass = createEClass(METADATA);
+		createEReference(metadataEClass, METADATA__VALUE);
+
+		jsonEClass = createEClass(JSON);
+		createEAttribute(jsonEClass, JSON__JSON);
+
+		genericArrayEClass = createEClass(GENERIC_ARRAY);
+		createEReference(genericArrayEClass, GENERIC_ARRAY__ELEMENTS);
+
+		stringArrayEClass = createEClass(STRING_ARRAY);
+		createEAttribute(stringArrayEClass, STRING_ARRAY__ELEMENTS);
+
+		intArrayEClass = createEClass(INT_ARRAY);
+		createEAttribute(intArrayEClass, INT_ARRAY__ELEMENTS);
+
+		doubleArrayEClass = createEClass(DOUBLE_ARRAY);
+		createEAttribute(doubleArrayEClass, DOUBLE_ARRAY__ELEMENTS);
+
+		aArrayValueEClass = createEClass(AARRAY_VALUE);
+
 		// Create enums
 		connectivityEEnum = createEEnum(CONNECTIVITY);
 		imageFormatEEnum = createEEnum(IMAGE_FORMAT);
@@ -1680,6 +1889,13 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		arrayValueEClass.getESuperTypes().add(this.getValue());
 		imageEClass.getESuperTypes().add(this.getValue());
 		importValueEClass.getESuperTypes().add(this.getValue());
+		metadataEClass.getESuperTypes().add(this.getMetadataValue());
+		jsonEClass.getESuperTypes().add(this.getMetadataValue());
+		genericArrayEClass.getESuperTypes().add(this.getAArrayValue());
+		stringArrayEClass.getESuperTypes().add(this.getAArrayValue());
+		intArrayEClass.getESuperTypes().add(this.getAArrayValue());
+		doubleArrayEClass.getESuperTypes().add(this.getAArrayValue());
+		aArrayValueEClass.getESuperTypes().add(this.getValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(valueEClass, Value.class, "Value", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1819,6 +2035,26 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 
 		initEClass(importValueEClass, ImportValue.class, "ImportValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImportValue_ModelInterpreterId(), theXMLTypePackage.getString(), "modelInterpreterId", null, 0, 1, ImportValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(metadataEClass, Metadata.class, "Metadata", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMetadata_Value(), this.getStringToValueMap(), null, "value", null, 0, -1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(jsonEClass, org.geppetto.model.values.JSON.class, "JSON", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJSON_Json(), theXMLTypePackage.getString(), "json", null, 1, 1, org.geppetto.model.values.JSON.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(genericArrayEClass, GenericArray.class, "GenericArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGenericArray_Elements(), this.getValue(), null, "elements", null, 0, -1, GenericArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stringArrayEClass, StringArray.class, "StringArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringArray_Elements(), theXMLTypePackage.getString(), "elements", null, 0, -1, StringArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(intArrayEClass, IntArray.class, "IntArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIntArray_Elements(), theXMLTypePackage.getInt(), "elements", null, 0, -1, IntArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(doubleArrayEClass, DoubleArray.class, "DoubleArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDoubleArray_Elements(), theXMLTypePackage.getDouble(), "elements", null, 0, -1, DoubleArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(aArrayValueEClass, AArrayValue.class, "AArrayValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(connectivityEEnum, Connectivity.class, "Connectivity");

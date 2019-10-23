@@ -354,7 +354,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (synched: ");
 		result.append(synched);
 		result.append(", id: ");

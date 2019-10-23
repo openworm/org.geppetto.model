@@ -362,7 +362,7 @@ public class CylinderImpl extends VisualValueImpl implements Cylinder
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (bottomRadius: ");
 		result.append(bottomRadius);
 		result.append(", topRadius: ");

@@ -250,6 +250,41 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 				return createImportValueAdapter();
 			}
 			@Override
+			public Adapter caseMetadata(Metadata object)
+			{
+				return createMetadataAdapter();
+			}
+			@Override
+			public Adapter caseJSON(JSON object)
+			{
+				return createJSONAdapter();
+			}
+			@Override
+			public Adapter caseGenericArray(GenericArray object)
+			{
+				return createGenericArrayAdapter();
+			}
+			@Override
+			public Adapter caseStringArray(StringArray object)
+			{
+				return createStringArrayAdapter();
+			}
+			@Override
+			public Adapter caseIntArray(IntArray object)
+			{
+				return createIntArrayAdapter();
+			}
+			@Override
+			public Adapter caseDoubleArray(DoubleArray object)
+			{
+				return createDoubleArrayAdapter();
+			}
+			@Override
+			public Adapter caseAArrayValue(AArrayValue object)
+			{
+				return createAArrayValueAdapter();
+			}
+			@Override
 			public Adapter caseISynchable(ISynchable object)
 			{
 				return createISynchableAdapter();
@@ -802,6 +837,111 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createImportValueAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.Metadata <em>Metadata</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.Metadata
+	 * @generated
+	 */
+	public Adapter createMetadataAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.JSON <em>JSON</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.JSON
+	 * @generated
+	 */
+	public Adapter createJSONAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.GenericArray <em>Generic Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.GenericArray
+	 * @generated
+	 */
+	public Adapter createGenericArrayAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.StringArray <em>String Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.StringArray
+	 * @generated
+	 */
+	public Adapter createStringArrayAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.IntArray <em>Int Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.IntArray
+	 * @generated
+	 */
+	public Adapter createIntArrayAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.DoubleArray <em>Double Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.DoubleArray
+	 * @generated
+	 */
+	public Adapter createDoubleArrayAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.values.AArrayValue <em>AArray Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.values.AArrayValue
+	 * @generated
+	 */
+	public Adapter createAArrayValueAdapter()
 	{
 		return null;
 	}

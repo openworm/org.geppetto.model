@@ -255,7 +255,7 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (domainModel: ");
 		result.append(domainModel);
 		result.append(')');

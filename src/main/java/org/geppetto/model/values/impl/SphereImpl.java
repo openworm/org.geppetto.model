@@ -166,7 +166,7 @@ public class SphereImpl extends VisualValueImpl implements Sphere
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (radius: ");
 		result.append(radius);
 		result.append(')');

@@ -34,7 +34,7 @@ public interface Composite extends Value
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' map.
 	 * @see org.geppetto.model.values.ValuesPackage#getComposite_Value()
-	 * @model mapType="org.geppetto.model.values.StringToValueMap<org.eclipse.emf.ecore.xml.type.String, org.geppetto.model.values.Value>"
+	 * @model mapType="org.geppetto.model.values.StringToValueMap&lt;org.eclipse.emf.ecore.xml.type.String, org.geppetto.model.values.Value&gt;"
 	 * @generated
 	 */
 	EMap<String, Value> getValue();

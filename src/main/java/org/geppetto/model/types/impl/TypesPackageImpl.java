@@ -23,10 +23,13 @@ import org.geppetto.model.types.ExpressionType;
 import org.geppetto.model.types.HTMLType;
 import org.geppetto.model.types.ImageType;
 import org.geppetto.model.types.ImportType;
+import org.geppetto.model.types.JSONType;
+import org.geppetto.model.types.MetadataType;
 import org.geppetto.model.types.ParameterType;
 import org.geppetto.model.types.PointType;
 import org.geppetto.model.types.PointerType;
 import org.geppetto.model.types.QuantityType;
+import org.geppetto.model.types.SimpleArrayType;
 import org.geppetto.model.types.SimpleType;
 import org.geppetto.model.types.StateVariableType;
 import org.geppetto.model.types.TextType;
@@ -137,6 +140,13 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass jsonTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass textTypeEClass = null;
 
 	/**
@@ -189,6 +199,20 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	private EClass imageTypeEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass simpleArrayTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass metadataTypeEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -217,7 +241,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link TypesPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -232,7 +256,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		if (isInited) return (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Obtain or create and register package
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new TypesPackageImpl());
+		Object registeredTypesPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		TypesPackageImpl theTypesPackage = registeredTypesPackage instanceof TypesPackageImpl ? (TypesPackageImpl)registeredTypesPackage : new TypesPackageImpl();
 
 		isInited = true;
 
@@ -240,10 +265,14 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) instanceof GeppettoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) : GeppettoPackage.eINSTANCE);
-		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) instanceof ValuesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) : ValuesPackage.eINSTANCE);
-		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) instanceof VariablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) : VariablesPackage.eINSTANCE);
-		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) instanceof DatasourcesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI) : DatasourcesPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI);
+		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(registeredPackage instanceof GeppettoPackageImpl ? registeredPackage : GeppettoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
+		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(registeredPackage instanceof ValuesPackageImpl ? registeredPackage : ValuesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
+		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(registeredPackage instanceof VariablesPackageImpl ? registeredPackage : VariablesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI);
+		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(registeredPackage instanceof DatasourcesPackageImpl ? registeredPackage : DatasourcesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theTypesPackage.createPackageContents();
@@ -262,7 +291,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		// Mark meta-data to indicate it can't be changed
 		theTypesPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(TypesPackage.eNS_URI, theTypesPackage);
 		return theTypesPackage;
@@ -613,6 +641,26 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getJSONType()
+	{
+		return jsonTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getJSONType_DefaultValue()
+	{
+		return (EReference)jsonTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTextType()
 	{
 		return textTypeEClass;
@@ -803,6 +851,36 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSimpleArrayType()
+	{
+		return simpleArrayTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSimpleArrayType_DefaultValue()
+	{
+		return (EReference)simpleArrayTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMetadataType()
+	{
+		return metadataTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TypesFactory getTypesFactory()
 	{
 		return (TypesFactory)getEFactoryInstance();
@@ -874,6 +952,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		htmlTypeEClass = createEClass(HTML_TYPE);
 		createEReference(htmlTypeEClass, HTML_TYPE__DEFAULT_VALUE);
 
+		jsonTypeEClass = createEClass(JSON_TYPE);
+		createEReference(jsonTypeEClass, JSON_TYPE__DEFAULT_VALUE);
+
 		textTypeEClass = createEClass(TEXT_TYPE);
 		createEReference(textTypeEClass, TEXT_TYPE__DEFAULT_VALUE);
 
@@ -900,6 +981,11 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		imageTypeEClass = createEClass(IMAGE_TYPE);
 		createEReference(imageTypeEClass, IMAGE_TYPE__DEFAULT_VALUE);
+
+		simpleArrayTypeEClass = createEClass(SIMPLE_ARRAY_TYPE);
+		createEReference(simpleArrayTypeEClass, SIMPLE_ARRAY_TYPE__DEFAULT_VALUE);
+
+		metadataTypeEClass = createEClass(METADATA_TYPE);
 	}
 
 	/**
@@ -949,6 +1035,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		argumentTypeEClass.getESuperTypes().add(this.getType());
 		expressionTypeEClass.getESuperTypes().add(this.getType());
 		htmlTypeEClass.getESuperTypes().add(this.getType());
+		jsonTypeEClass.getESuperTypes().add(this.getType());
 		textTypeEClass.getESuperTypes().add(this.getType());
 		urlTypeEClass.getESuperTypes().add(this.getType());
 		pointTypeEClass.getESuperTypes().add(this.getType());
@@ -957,6 +1044,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		connectionTypeEClass.getESuperTypes().add(this.getType());
 		simpleTypeEClass.getESuperTypes().add(this.getType());
 		imageTypeEClass.getESuperTypes().add(this.getType());
+		simpleArrayTypeEClass.getESuperTypes().add(this.getType());
+		metadataTypeEClass.getESuperTypes().add(this.getType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1008,6 +1097,9 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 		initEClass(htmlTypeEClass, HTMLType.class, "HTMLType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHTMLType_DefaultValue(), theValuesPackage.getHTML(), null, "defaultValue", null, 0, 1, HTMLType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(jsonTypeEClass, JSONType.class, "JSONType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getJSONType_DefaultValue(), theValuesPackage.getJSON(), null, "defaultValue", null, 0, 1, JSONType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(textTypeEClass, TextType.class, "TextType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTextType_DefaultValue(), theValuesPackage.getText(), null, "defaultValue", null, 0, 1, TextType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1034,6 +1126,11 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage
 
 		initEClass(imageTypeEClass, ImageType.class, "ImageType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImageType_DefaultValue(), theValuesPackage.getImage(), null, "defaultValue", null, 0, 1, ImageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(simpleArrayTypeEClass, SimpleArrayType.class, "SimpleArrayType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSimpleArrayType_DefaultValue(), theValuesPackage.getAArrayValue(), null, "defaultValue", null, 0, 1, SimpleArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(metadataTypeEClass, MetadataType.class, "MetadataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //TypesPackageImpl

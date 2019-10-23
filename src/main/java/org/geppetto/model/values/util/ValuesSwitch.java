@@ -388,6 +388,75 @@ public class ValuesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ValuesPackage.METADATA:
+			{
+				Metadata metadata = (Metadata)theEObject;
+				T result = caseMetadata(metadata);
+				if (result == null) result = caseMetadataValue(metadata);
+				if (result == null) result = caseValue(metadata);
+				if (result == null) result = caseISynchable(metadata);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.JSON:
+			{
+				JSON json = (JSON)theEObject;
+				T result = caseJSON(json);
+				if (result == null) result = caseMetadataValue(json);
+				if (result == null) result = caseValue(json);
+				if (result == null) result = caseISynchable(json);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.GENERIC_ARRAY:
+			{
+				GenericArray genericArray = (GenericArray)theEObject;
+				T result = caseGenericArray(genericArray);
+				if (result == null) result = caseAArrayValue(genericArray);
+				if (result == null) result = caseValue(genericArray);
+				if (result == null) result = caseISynchable(genericArray);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.STRING_ARRAY:
+			{
+				StringArray stringArray = (StringArray)theEObject;
+				T result = caseStringArray(stringArray);
+				if (result == null) result = caseAArrayValue(stringArray);
+				if (result == null) result = caseValue(stringArray);
+				if (result == null) result = caseISynchable(stringArray);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.INT_ARRAY:
+			{
+				IntArray intArray = (IntArray)theEObject;
+				T result = caseIntArray(intArray);
+				if (result == null) result = caseAArrayValue(intArray);
+				if (result == null) result = caseValue(intArray);
+				if (result == null) result = caseISynchable(intArray);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.DOUBLE_ARRAY:
+			{
+				DoubleArray doubleArray = (DoubleArray)theEObject;
+				T result = caseDoubleArray(doubleArray);
+				if (result == null) result = caseAArrayValue(doubleArray);
+				if (result == null) result = caseValue(doubleArray);
+				if (result == null) result = caseISynchable(doubleArray);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.AARRAY_VALUE:
+			{
+				AArrayValue aArrayValue = (AArrayValue)theEObject;
+				T result = caseAArrayValue(aArrayValue);
+				if (result == null) result = caseValue(aArrayValue);
+				if (result == null) result = caseISynchable(aArrayValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -948,6 +1017,118 @@ public class ValuesSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseImportValue(ImportValue object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Metadata</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Metadata</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMetadata(Metadata object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>JSON</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>JSON</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJSON(JSON object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Generic Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Generic Array</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGenericArray(GenericArray object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String Array</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringArray(StringArray object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Int Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Int Array</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIntArray(IntArray object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Double Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Double Array</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDoubleArray(DoubleArray object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>AArray Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>AArray Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAArrayValue(AArrayValue object)
 	{
 		return null;
 	}
