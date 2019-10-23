@@ -164,7 +164,7 @@ public class ModelFormatImpl extends MinimalEObjectImpl.Container implements Mod
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (modelFormat: ");
 		result.append(modelFormat);
 		result.append(')');

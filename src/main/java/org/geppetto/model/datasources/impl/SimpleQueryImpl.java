@@ -220,7 +220,7 @@ public class SimpleQueryImpl extends QueryImpl implements SimpleQuery
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (query: ");
 		result.append(query);
 		result.append(", countQuery: ");

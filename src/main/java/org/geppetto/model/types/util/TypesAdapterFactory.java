@@ -134,6 +134,11 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 				return createHTMLTypeAdapter();
 			}
 			@Override
+			public Adapter caseJSONType(JSONType object)
+			{
+				return createJSONTypeAdapter();
+			}
+			@Override
 			public Adapter caseTextType(TextType object)
 			{
 				return createTextTypeAdapter();
@@ -172,6 +177,16 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 			public Adapter caseImageType(ImageType object)
 			{
 				return createImageTypeAdapter();
+			}
+			@Override
+			public Adapter caseSimpleArrayType(SimpleArrayType object)
+			{
+				return createSimpleArrayTypeAdapter();
+			}
+			@Override
+			public Adapter caseMetadataType(MetadataType object)
+			{
+				return createMetadataTypeAdapter();
 			}
 			@Override
 			public Adapter caseISynchable(ISynchable object)
@@ -386,6 +401,21 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.JSONType <em>JSON Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.JSONType
+	 * @generated
+	 */
+	public Adapter createJSONTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.TextType <em>Text Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -501,6 +531,36 @@ public class TypesAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createImageTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.SimpleArrayType <em>Simple Array Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.SimpleArrayType
+	 * @generated
+	 */
+	public Adapter createSimpleArrayTypeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.geppetto.model.types.MetadataType <em>Metadata Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.geppetto.model.types.MetadataType
+	 * @generated
+	 */
+	public Adapter createMetadataTypeAdapter()
 	{
 		return null;
 	}

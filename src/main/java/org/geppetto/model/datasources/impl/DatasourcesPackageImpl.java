@@ -181,7 +181,7 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link DatasourcesPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -196,7 +196,8 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		if (isInited) return (DatasourcesPackage)EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI);
 
 		// Obtain or create and register package
-		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DatasourcesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new DatasourcesPackageImpl());
+		Object registeredDatasourcesPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		DatasourcesPackageImpl theDatasourcesPackage = registeredDatasourcesPackage instanceof DatasourcesPackageImpl ? (DatasourcesPackageImpl)registeredDatasourcesPackage : new DatasourcesPackageImpl();
 
 		isInited = true;
 
@@ -204,10 +205,14 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) instanceof GeppettoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI) : GeppettoPackage.eINSTANCE);
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
-		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) instanceof ValuesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI) : ValuesPackage.eINSTANCE);
-		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) instanceof VariablesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI) : VariablesPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GeppettoPackage.eNS_URI);
+		GeppettoPackageImpl theGeppettoPackage = (GeppettoPackageImpl)(registeredPackage instanceof GeppettoPackageImpl ? registeredPackage : GeppettoPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(registeredPackage instanceof TypesPackageImpl ? registeredPackage : TypesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
+		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(registeredPackage instanceof ValuesPackageImpl ? registeredPackage : ValuesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
+		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(registeredPackage instanceof VariablesPackageImpl ? registeredPackage : VariablesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDatasourcesPackage.createPackageContents();
@@ -226,7 +231,6 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		// Mark meta-data to indicate it can't be changed
 		theDatasourcesPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(DatasourcesPackage.eNS_URI, theDatasourcesPackage);
 		return theDatasourcesPackage;

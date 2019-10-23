@@ -166,7 +166,7 @@ public class HTMLImpl extends MetadataValueImpl implements HTML
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (html: ");
 		result.append(html);
 		result.append(')');

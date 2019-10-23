@@ -95,6 +95,12 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 			case ValuesPackage.ARRAY_VALUE: return createArrayValue();
 			case ValuesPackage.IMAGE: return createImage();
 			case ValuesPackage.IMPORT_VALUE: return createImportValue();
+			case ValuesPackage.METADATA: return createMetadata();
+			case ValuesPackage.JSON: return createJSON();
+			case ValuesPackage.GENERIC_ARRAY: return createGenericArray();
+			case ValuesPackage.STRING_ARRAY: return createStringArray();
+			case ValuesPackage.INT_ARRAY: return createIntArray();
+			case ValuesPackage.DOUBLE_ARRAY: return createDoubleArray();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -488,6 +494,72 @@ public class ValuesFactoryImpl extends EFactoryImpl implements ValuesFactory
 	{
 		ImportValueImpl importValue = new ImportValueImpl();
 		return importValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Metadata createMetadata()
+	{
+		MetadataImpl metadata = new MetadataImpl();
+		return metadata;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JSON createJSON()
+	{
+		JSONImpl json = new JSONImpl();
+		return json;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GenericArray createGenericArray()
+	{
+		GenericArrayImpl genericArray = new GenericArrayImpl();
+		return genericArray;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringArray createStringArray()
+	{
+		StringArrayImpl stringArray = new StringArrayImpl();
+		return stringArray;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntArray createIntArray()
+	{
+		IntArrayImpl intArray = new IntArrayImpl();
+		return intArray;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DoubleArray createDoubleArray()
+	{
+		DoubleArrayImpl doubleArray = new DoubleArrayImpl();
+		return doubleArray;
 	}
 
 	/**
