@@ -25,26 +25,26 @@ import org.geppetto.model.values.VisualValue;
 public interface SimpleInstance extends Instance
 {
 	/**
-	 * Returns the value of the '<em><b>Visual Value</b></em>' reference.
+	 * Returns the value of the '<em><b>Visual Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Visual Value</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visual Value</em>' reference.
+	 * @return the value of the '<em>Visual Value</em>' containment reference.
 	 * @see #setVisualValue(VisualValue)
 	 * @see org.geppetto.model.instances.InstancesPackage#getSimpleInstance_VisualValue()
-	 * @model resolveProxies="false"
+	 * @model containment="true"
 	 * @generated
 	 */
 	VisualValue getVisualValue();
 
 	/**
-	 * Sets the value of the '{@link org.geppetto.model.instances.SimpleInstance#getVisualValue <em>Visual Value</em>}' reference.
+	 * Sets the value of the '{@link org.geppetto.model.instances.SimpleInstance#getVisualValue <em>Visual Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visual Value</em>' reference.
+	 * @param value the new value of the '<em>Visual Value</em>' containment reference.
 	 * @see #getVisualValue()
 	 * @generated
 	 */

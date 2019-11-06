@@ -602,13 +602,13 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SimpleInstance" eSuperTypes="#//instances/Instance">
       <eStructuralFeatures xsi:type="ecore:EReference" name="visualValue" eType="#//values/VisualValue"
-          resolveProxies="false"/>
+          containment="true" resolveProxies="false"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//values/Point"
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SimpleConnectionInstance" eSuperTypes="#//instances/Instance">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="a" lowerBound="1" eType="#//instances/SimpleInstance"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="b" lowerBound="1" eType="#//instances/SimpleInstance"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="a" lowerBound="1" eType="#//instances/Instance"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="b" lowerBound="1" eType="#//instances/Instance"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="connectivity" eType="#//values/Connectivity"/>
     </eClassifiers>
   </eSubpackages>

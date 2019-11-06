@@ -33,7 +33,7 @@ import org.geppetto.model.values.VisualValue;
 public class SimpleInstanceImpl extends InstanceImpl implements SimpleInstance
 {
 	/**
-	 * The cached value of the '{@link #getVisualValue() <em>Visual Value</em>}' reference.
+	 * The cached value of the '{@link #getVisualValue() <em>Visual Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVisualValue()
@@ -88,12 +88,37 @@ public class SimpleInstanceImpl extends InstanceImpl implements SimpleInstance
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVisualValue(VisualValue newVisualValue)
+	public NotificationChain basicSetVisualValue(VisualValue newVisualValue, NotificationChain msgs)
 	{
 		VisualValue oldVisualValue = visualValue;
 		visualValue = newVisualValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InstancesPackage.SIMPLE_INSTANCE__VISUAL_VALUE, oldVisualValue, visualValue));
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, InstancesPackage.SIMPLE_INSTANCE__VISUAL_VALUE, oldVisualValue, newVisualValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVisualValue(VisualValue newVisualValue)
+	{
+		if (newVisualValue != visualValue)
+		{
+			NotificationChain msgs = null;
+			if (visualValue != null)
+				msgs = ((InternalEObject)visualValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - InstancesPackage.SIMPLE_INSTANCE__VISUAL_VALUE, null, msgs);
+			if (newVisualValue != null)
+				msgs = ((InternalEObject)newVisualValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - InstancesPackage.SIMPLE_INSTANCE__VISUAL_VALUE, null, msgs);
+			msgs = basicSetVisualValue(newVisualValue, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, InstancesPackage.SIMPLE_INSTANCE__VISUAL_VALUE, newVisualValue, newVisualValue));
 	}
 
 	/**
@@ -154,6 +179,8 @@ public class SimpleInstanceImpl extends InstanceImpl implements SimpleInstance
 	{
 		switch (featureID)
 		{
+			case InstancesPackage.SIMPLE_INSTANCE__VISUAL_VALUE:
+				return basicSetVisualValue(null, msgs);
 			case InstancesPackage.SIMPLE_INSTANCE__POSITION:
 				return basicSetPosition(null, msgs);
 		}

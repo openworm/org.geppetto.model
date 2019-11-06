@@ -33,12 +33,12 @@ public interface SimpleConnectionInstance extends Instance
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>A</em>' reference.
-	 * @see #setA(SimpleInstance)
+	 * @see #setA(Instance)
 	 * @see org.geppetto.model.instances.InstancesPackage#getSimpleConnectionInstance_A()
 	 * @model required="true"
 	 * @generated
 	 */
-	SimpleInstance getA();
+	Instance getA();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.instances.SimpleConnectionInstance#getA <em>A</em>}' reference.
@@ -48,7 +48,7 @@ public interface SimpleConnectionInstance extends Instance
 	 * @see #getA()
 	 * @generated
 	 */
-	void setA(SimpleInstance value);
+	void setA(Instance value);
 
 	/**
 	 * Returns the value of the '<em><b>B</b></em>' reference.
@@ -59,12 +59,12 @@ public interface SimpleConnectionInstance extends Instance
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>B</em>' reference.
-	 * @see #setB(SimpleInstance)
+	 * @see #setB(Instance)
 	 * @see org.geppetto.model.instances.InstancesPackage#getSimpleConnectionInstance_B()
 	 * @model required="true"
 	 * @generated
 	 */
-	SimpleInstance getB();
+	Instance getB();
 
 	/**
 	 * Sets the value of the '{@link org.geppetto.model.instances.SimpleConnectionInstance#getB <em>B</em>}' reference.
@@ -74,7 +74,7 @@ public interface SimpleConnectionInstance extends Instance
 	 * @see #getB()
 	 * @generated
 	 */
-	void setB(SimpleInstance value);
+	void setB(Instance value);
 
 	/**
 	 * Returns the value of the '<em><b>Connectivity</b></em>' attribute.

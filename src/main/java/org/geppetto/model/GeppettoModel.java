@@ -53,7 +53,6 @@ public interface GeppettoModel extends EObject
 	 * @see org.geppetto.model.GeppettoPackage#getGeppettoModel_Variables()
 	 * @model containment="true"
 	 * @generated
-	 * @deprecated use getWorlds
 	 */
 	EList<Variable> getVariables();
 

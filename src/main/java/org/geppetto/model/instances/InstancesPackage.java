@@ -215,7 +215,7 @@ public interface InstancesPackage extends EPackage
 	int SIMPLE_INSTANCE__VALUE = INSTANCE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Visual Value</b></em>' reference.
+	 * The feature id for the '<em><b>Visual Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -421,10 +421,10 @@ public interface InstancesPackage extends EPackage
 	EClass getSimpleInstance();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.geppetto.model.instances.SimpleInstance#getVisualValue <em>Visual Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.geppetto.model.instances.SimpleInstance#getVisualValue <em>Visual Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Visual Value</em>'.
+	 * @return the meta object for the containment reference '<em>Visual Value</em>'.
 	 * @see org.geppetto.model.instances.SimpleInstance#getVisualValue()
 	 * @see #getSimpleInstance()
 	 * @generated
@@ -546,7 +546,7 @@ public interface InstancesPackage extends EPackage
 		EClass SIMPLE_INSTANCE = eINSTANCE.getSimpleInstance();
 
 		/**
-		 * The meta object literal for the '<em><b>Visual Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Visual Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

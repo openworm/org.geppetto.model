@@ -9,10 +9,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.geppetto.model.instances.Instance;
 import org.geppetto.model.instances.InstancesPackage;
 import org.geppetto.model.instances.SimpleConnectionInstance;
-import org.geppetto.model.instances.SimpleInstance;
-
 import org.geppetto.model.values.Connectivity;
 
 /**
@@ -40,7 +39,7 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 	 * @generated
 	 * @ordered
 	 */
-	protected SimpleInstance a;
+	protected Instance a;
 
 	/**
 	 * The cached value of the '{@link #getB() <em>B</em>}' reference.
@@ -50,7 +49,7 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 	 * @generated
 	 * @ordered
 	 */
-	protected SimpleInstance b;
+	protected Instance b;
 
 	/**
 	 * The default value of the '{@link #getConnectivity() <em>Connectivity</em>}' attribute.
@@ -98,12 +97,12 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleInstance getA()
+	public Instance getA()
 	{
 		if (a != null && a.eIsProxy())
 		{
 			InternalEObject oldA = (InternalEObject)a;
-			a = (SimpleInstance)eResolveProxy(oldA);
+			a = (Instance)eResolveProxy(oldA);
 			if (a != oldA)
 			{
 				if (eNotificationRequired())
@@ -118,7 +117,7 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleInstance basicGetA()
+	public Instance basicGetA()
 	{
 		return a;
 	}
@@ -128,9 +127,9 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setA(SimpleInstance newA)
+	public void setA(Instance newA)
 	{
-		SimpleInstance oldA = a;
+		Instance oldA = a;
 		a = newA;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, InstancesPackage.SIMPLE_CONNECTION_INSTANCE__A, oldA, a));
@@ -141,12 +140,12 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleInstance getB()
+	public Instance getB()
 	{
 		if (b != null && b.eIsProxy())
 		{
 			InternalEObject oldB = (InternalEObject)b;
-			b = (SimpleInstance)eResolveProxy(oldB);
+			b = (Instance)eResolveProxy(oldB);
 			if (b != oldB)
 			{
 				if (eNotificationRequired())
@@ -161,7 +160,7 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleInstance basicGetB()
+	public Instance basicGetB()
 	{
 		return b;
 	}
@@ -171,9 +170,9 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setB(SimpleInstance newB)
+	public void setB(Instance newB)
 	{
-		SimpleInstance oldB = b;
+		Instance oldB = b;
 		b = newB;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, InstancesPackage.SIMPLE_CONNECTION_INSTANCE__B, oldB, b));
@@ -235,10 +234,10 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 		switch (featureID)
 		{
 			case InstancesPackage.SIMPLE_CONNECTION_INSTANCE__A:
-				setA((SimpleInstance)newValue);
+				setA((Instance)newValue);
 				return;
 			case InstancesPackage.SIMPLE_CONNECTION_INSTANCE__B:
-				setB((SimpleInstance)newValue);
+				setB((Instance)newValue);
 				return;
 			case InstancesPackage.SIMPLE_CONNECTION_INSTANCE__CONNECTIVITY:
 				setConnectivity((Connectivity)newValue);
@@ -258,10 +257,10 @@ public class SimpleConnectionInstanceImpl extends InstanceImpl implements Simple
 		switch (featureID)
 		{
 			case InstancesPackage.SIMPLE_CONNECTION_INSTANCE__A:
-				setA((SimpleInstance)null);
+				setA((Instance)null);
 				return;
 			case InstancesPackage.SIMPLE_CONNECTION_INSTANCE__B:
-				setB((SimpleInstance)null);
+				setB((Instance)null);
 				return;
 			case InstancesPackage.SIMPLE_CONNECTION_INSTANCE__CONNECTIVITY:
 				setConnectivity(CONNECTIVITY_EDEFAULT);
