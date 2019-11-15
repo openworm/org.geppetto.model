@@ -776,22 +776,22 @@ public interface GeppettoPackage extends EPackage
 	int WORLD = 12;
 
 	/**
-	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Synched</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD__VARIABLES = 0;
+	int WORLD__SYNCHED = NODE__SYNCHED;
 
 	/**
-	 * The feature id for the '<em><b>Instances</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD__INSTANCES = 1;
+	int WORLD__ID = NODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -800,7 +800,34 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD__NAME = 2;
+	int WORLD__NAME = NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD__TAGS = NODE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD__VARIABLES = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Instances</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD__INSTANCES = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>World</em>' class.
@@ -809,7 +836,16 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_FEATURE_COUNT = 3;
+	int WORLD_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD___GET_PATH = NODE___GET_PATH;
 
 	/**
 	 * The number of operations of the '<em>World</em>' class.
@@ -818,7 +854,7 @@ public interface GeppettoPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD_OPERATION_COUNT = 0;
+	int WORLD_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.
@@ -1324,17 +1360,6 @@ public interface GeppettoPackage extends EPackage
 	EReference getWorld_Instances();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.geppetto.model.World#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.geppetto.model.World#getName()
-	 * @see #getWorld()
-	 * @generated
-	 */
-	EAttribute getWorld_Name();
-
-	/**
 	 * Returns the meta object for enum '{@link org.geppetto.model.FileFormat <em>File Format</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1761,14 +1786,6 @@ public interface GeppettoPackage extends EPackage
 		 * @generated
 		 */
 		EReference WORLD__INSTANCES = eINSTANCE.getWorld_Instances();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WORLD__NAME = eINSTANCE.getWorld_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.FileFormat <em>File Format</em>}' enum.

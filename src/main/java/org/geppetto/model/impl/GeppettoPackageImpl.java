@@ -696,16 +696,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getWorld_Name()
-	{
-		return (EAttribute)worldEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getFileFormat()
 	{
 		return fileFormatEEnum;
@@ -799,7 +789,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		worldEClass = createEClass(WORLD);
 		createEReference(worldEClass, WORLD__VARIABLES);
 		createEReference(worldEClass, WORLD__INSTANCES);
-		createEAttribute(worldEClass, WORLD__NAME);
 
 		// Create enums
 		fileFormatEEnum = createEEnum(FILE_FORMAT);
@@ -853,6 +842,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		geppettoLibraryEClass.getESuperTypes().add(this.getNode());
 		tagEClass.getESuperTypes().add(this.getISynchable());
 		externalDomainModelEClass.getESuperTypes().add(this.getDomainModel());
+		worldEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(geppettoModelEClass, GeppettoModel.class, "GeppettoModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -915,7 +905,6 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		initEClass(worldEClass, World.class, "World", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWorld_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorld_Instances(), theInstancesPackage.getInstance(), null, "instances", null, 0, -1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWorld_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(fileFormatEEnum, FileFormat.class, "FileFormat");

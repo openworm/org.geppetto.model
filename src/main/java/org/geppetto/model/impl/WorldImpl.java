@@ -3,18 +3,12 @@
 package org.geppetto.model.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -35,12 +29,11 @@ import org.geppetto.model.variables.Variable;
  * <ul>
  *   <li>{@link org.geppetto.model.impl.WorldImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.geppetto.model.impl.WorldImpl#getInstances <em>Instances</em>}</li>
- *   <li>{@link org.geppetto.model.impl.WorldImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WorldImpl extends MinimalEObjectImpl.Container implements World
+public class WorldImpl extends NodeImpl implements World
 {
 	/**
 	 * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference list.
@@ -61,26 +54,6 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World
 	 * @ordered
 	 */
 	protected EList<Instance> instances;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,29 +109,6 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName()
-	{
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName)
-	{
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeppettoPackage.WORLD__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -186,8 +136,6 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World
 				return getVariables();
 			case GeppettoPackage.WORLD__INSTANCES:
 				return getInstances();
-			case GeppettoPackage.WORLD__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,9 +159,6 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World
 				getInstances().clear();
 				getInstances().addAll((Collection<? extends Instance>)newValue);
 				return;
-			case GeppettoPackage.WORLD__NAME:
-				setName((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -234,9 +179,6 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World
 			case GeppettoPackage.WORLD__INSTANCES:
 				getInstances().clear();
 				return;
-			case GeppettoPackage.WORLD__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -255,27 +197,8 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World
 				return variables != null && !variables.isEmpty();
 			case GeppettoPackage.WORLD__INSTANCES:
 				return instances != null && !instances.isEmpty();
-			case GeppettoPackage.WORLD__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString()
-	{
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //WorldImpl

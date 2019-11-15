@@ -70,7 +70,6 @@
     <genClasses ecoreClass="geppettoModel.ecore#//World">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//World/variables"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//World/instances"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//World/name"/>
     </genClasses>
     <nestedGenPackages prefix="Types" disposableProviderFactory="true" ecorePackage="geppettoModel.ecore#//types">
       <genClasses image="false" ecoreClass="geppettoModel.ecore#//types/Type">

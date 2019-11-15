@@ -166,6 +166,8 @@ public class GeppettoSwitch<T> extends Switch<T>
 			{
 				World world = (World)theEObject;
 				T result = caseWorld(world);
+				if (result == null) result = caseNode(world);
+				if (result == null) result = caseISynchable(world);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
