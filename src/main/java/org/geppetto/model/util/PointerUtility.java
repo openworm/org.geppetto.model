@@ -77,7 +77,7 @@ public class PointerUtility
 					}
 					else
 					{
-						throw new GeppettoModelException(token + " is neither an instanve variable nor a library id");
+						throw new GeppettoModelException(token + " is neither an instance variable nor a library id");
 					}
 				}
 			}
