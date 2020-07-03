@@ -23,6 +23,7 @@ import org.geppetto.model.Node;
  *   <li>{@link org.geppetto.model.datasources.DataSource#getDependenciesLibrary <em>Dependencies Library</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.DataSource#getTargetLibrary <em>Target Library</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.DataSource#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.DataSource#getAuth <em>Auth</em>}</li>
  * </ul>
  *
  * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource()
@@ -182,5 +183,31 @@ public interface DataSource extends Node
 	 * @generated
 	 */
 	void setFetchVariableQuery(Query value);
+
+	/**
+	 * Returns the value of the '<em><b>Auth</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Auth</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Auth</em>' attribute.
+	 * @see #setAuth(String)
+	 * @see org.geppetto.model.datasources.DatasourcesPackage#getDataSource_Auth()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	String getAuth();
+
+	/**
+	 * Sets the value of the '{@link org.geppetto.model.datasources.DataSource#getAuth <em>Auth</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Auth</em>' attribute.
+	 * @see #getAuth()
+	 * @generated
+	 */
+	void setAuth(String value);
 
 } // DataSource

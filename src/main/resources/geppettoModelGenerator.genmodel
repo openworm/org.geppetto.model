@@ -368,6 +368,7 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/DataSource/targetLibrary"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geppettoModel.ecore#//datasources/DataSource/fetchVariableQuery"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geppettoModel.ecore#//datasources/DataSource/auth"/>
       </genClasses>
       <genClasses ecoreClass="geppettoModel.ecore#//datasources/DataSourceLibraryConfiguration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"

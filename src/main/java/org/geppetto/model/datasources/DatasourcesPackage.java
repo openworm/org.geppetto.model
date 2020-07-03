@@ -171,13 +171,22 @@ public interface DatasourcesPackage extends EPackage
 	int DATA_SOURCE__FETCH_VARIABLE_QUERY = GeppettoPackage.NODE_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Auth</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SOURCE__AUTH = GeppettoPackage.NODE_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>Data Source</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SOURCE_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 7;
+	int DATA_SOURCE_FEATURE_COUNT = GeppettoPackage.NODE_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Get Path</em>' operation.
@@ -1209,6 +1218,17 @@ public interface DatasourcesPackage extends EPackage
 	EReference getDataSource_FetchVariableQuery();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.geppetto.model.datasources.DataSource#getAuth <em>Auth</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Auth</em>'.
+	 * @see org.geppetto.model.datasources.DataSource#getAuth()
+	 * @see #getDataSource()
+	 * @generated
+	 */
+	EAttribute getDataSource_Auth();
+
+	/**
 	 * Returns the meta object for class '{@link org.geppetto.model.datasources.DataSourceLibraryConfiguration <em>Data Source Library Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1679,6 +1699,14 @@ public interface DatasourcesPackage extends EPackage
 		 * @generated
 		 */
 		EReference DATA_SOURCE__FETCH_VARIABLE_QUERY = eINSTANCE.getDataSource_FetchVariableQuery();
+
+		/**
+		 * The meta object literal for the '<em><b>Auth</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_SOURCE__AUTH = eINSTANCE.getDataSource_Auth();
 
 		/**
 		 * The meta object literal for the '{@link org.geppetto.model.datasources.impl.DataSourceLibraryConfigurationImpl <em>Data Source Library Configuration</em>}' class.
