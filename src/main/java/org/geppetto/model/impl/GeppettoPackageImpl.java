@@ -25,8 +25,11 @@ import org.geppetto.model.ModelFormat;
 import org.geppetto.model.Node;
 import org.geppetto.model.Tag;
 import org.geppetto.model.VariableValue;
+import org.geppetto.model.World;
 import org.geppetto.model.datasources.DatasourcesPackage;
 import org.geppetto.model.datasources.impl.DatasourcesPackageImpl;
+import org.geppetto.model.instances.InstancesPackage;
+import org.geppetto.model.instances.impl.InstancesPackageImpl;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
 import org.geppetto.model.values.ValuesPackage;
@@ -131,6 +134,13 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass worldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum fileFormatEEnum = null;
 
 	/**
@@ -194,6 +204,8 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(registeredPackage instanceof VariablesPackageImpl ? registeredPackage : VariablesPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI);
 		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(registeredPackage instanceof DatasourcesPackageImpl ? registeredPackage : DatasourcesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(InstancesPackage.eNS_URI);
+		InstancesPackageImpl theInstancesPackage = (InstancesPackageImpl)(registeredPackage instanceof InstancesPackageImpl ? registeredPackage : InstancesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theGeppettoPackage.createPackageContents();
@@ -201,6 +213,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		theValuesPackage.createPackageContents();
 		theVariablesPackage.createPackageContents();
 		theDatasourcesPackage.createPackageContents();
+		theInstancesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theGeppettoPackage.initializePackageContents();
@@ -208,6 +221,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		theValuesPackage.initializePackageContents();
 		theVariablesPackage.initializePackageContents();
 		theDatasourcesPackage.initializePackageContents();
+		theInstancesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theGeppettoPackage.freeze();
@@ -242,7 +256,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeppettoModel_Libraries()
+	public EReference getGeppettoModel_Worlds()
 	{
 		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -252,7 +266,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeppettoModel_Tags()
+	public EReference getGeppettoModel_Libraries()
 	{
 		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(2);
 	}
@@ -262,9 +276,9 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGeppettoModel_Id()
+	public EReference getGeppettoModel_Tags()
 	{
-		return (EAttribute)geppettoModelEClass.getEStructuralFeatures().get(3);
+		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -272,7 +286,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGeppettoModel_Name()
+	public EAttribute getGeppettoModel_Id()
 	{
 		return (EAttribute)geppettoModelEClass.getEStructuralFeatures().get(4);
 	}
@@ -282,9 +296,19 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getGeppettoModel_Name()
+	{
+		return (EAttribute)geppettoModelEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getGeppettoModel_DataSources()
 	{
-		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(5);
+		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -294,7 +318,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 */
 	public EReference getGeppettoModel_Queries()
 	{
-		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(6);
+		return (EReference)geppettoModelEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -642,6 +666,36 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getWorld()
+	{
+		return worldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorld_Variables()
+	{
+		return (EReference)worldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorld_Instances()
+	{
+		return (EReference)worldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getFileFormat()
 	{
 		return fileFormatEEnum;
@@ -679,6 +733,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		// Create classes and their features
 		geppettoModelEClass = createEClass(GEPPETTO_MODEL);
 		createEReference(geppettoModelEClass, GEPPETTO_MODEL__VARIABLES);
+		createEReference(geppettoModelEClass, GEPPETTO_MODEL__WORLDS);
 		createEReference(geppettoModelEClass, GEPPETTO_MODEL__LIBRARIES);
 		createEReference(geppettoModelEClass, GEPPETTO_MODEL__TAGS);
 		createEAttribute(geppettoModelEClass, GEPPETTO_MODEL__ID);
@@ -731,6 +786,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		iSynchableEClass = createEClass(ISYNCHABLE);
 		createEAttribute(iSynchableEClass, ISYNCHABLE__SYNCHED);
 
+		worldEClass = createEClass(WORLD);
+		createEReference(worldEClass, WORLD__VARIABLES);
+		createEReference(worldEClass, WORLD__INSTANCES);
+
 		// Create enums
 		fileFormatEEnum = createEEnum(FILE_FORMAT);
 	}
@@ -764,6 +823,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		ValuesPackage theValuesPackage = (ValuesPackage)EPackage.Registry.INSTANCE.getEPackage(ValuesPackage.eNS_URI);
 		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
 		DatasourcesPackage theDatasourcesPackage = (DatasourcesPackage)EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI);
+		InstancesPackage theInstancesPackage = (InstancesPackage)EPackage.Registry.INSTANCE.getEPackage(InstancesPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Add subpackages
@@ -771,6 +831,7 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		getESubpackages().add(theValuesPackage);
 		getESubpackages().add(theVariablesPackage);
 		getESubpackages().add(theDatasourcesPackage);
+		getESubpackages().add(theInstancesPackage);
 
 		// Create type parameters
 
@@ -781,10 +842,12 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 		geppettoLibraryEClass.getESuperTypes().add(this.getNode());
 		tagEClass.getESuperTypes().add(this.getISynchable());
 		externalDomainModelEClass.getESuperTypes().add(this.getDomainModel());
+		worldEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(geppettoModelEClass, GeppettoModel.class, "GeppettoModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeppettoModel_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeppettoModel_Worlds(), this.getWorld(), null, "worlds", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGeppettoModel_Libraries(), this.getGeppettoLibrary(), null, "libraries", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGeppettoModel_Tags(), this.getTag(), null, "tags", null, 0, -1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeppettoModel_Id(), theXMLTypePackage.getString(), "id", "", 1, 1, GeppettoModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -838,6 +901,10 @@ public class GeppettoPackageImpl extends EPackageImpl implements GeppettoPackage
 
 		initEClass(iSynchableEClass, ISynchable.class, "ISynchable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getISynchable_Synched(), theXMLTypePackage.getBoolean(), "synched", null, 1, 1, ISynchable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(worldEClass, World.class, "World", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWorld_Variables(), theVariablesPackage.getVariable(), null, "variables", null, 0, -1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorld_Instances(), theInstancesPackage.getInstance(), null, "instances", null, 0, -1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(fileFormatEEnum, FileFormat.class, "FileFormat");

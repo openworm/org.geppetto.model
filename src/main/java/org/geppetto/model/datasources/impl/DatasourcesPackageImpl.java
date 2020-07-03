@@ -34,6 +34,8 @@ import org.geppetto.model.datasources.SimpleQuery;
 
 import org.geppetto.model.impl.GeppettoPackageImpl;
 
+import org.geppetto.model.instances.InstancesPackage;
+import org.geppetto.model.instances.impl.InstancesPackageImpl;
 import org.geppetto.model.types.TypesPackage;
 
 import org.geppetto.model.types.impl.TypesPackageImpl;
@@ -213,6 +215,8 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		ValuesPackageImpl theValuesPackage = (ValuesPackageImpl)(registeredPackage instanceof ValuesPackageImpl ? registeredPackage : ValuesPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
 		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(registeredPackage instanceof VariablesPackageImpl ? registeredPackage : VariablesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(InstancesPackage.eNS_URI);
+		InstancesPackageImpl theInstancesPackage = (InstancesPackageImpl)(registeredPackage instanceof InstancesPackageImpl ? registeredPackage : InstancesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDatasourcesPackage.createPackageContents();
@@ -220,6 +224,7 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		theTypesPackage.createPackageContents();
 		theValuesPackage.createPackageContents();
 		theVariablesPackage.createPackageContents();
+		theInstancesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theDatasourcesPackage.initializePackageContents();
@@ -227,6 +232,7 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		theTypesPackage.initializePackageContents();
 		theValuesPackage.initializePackageContents();
 		theVariablesPackage.initializePackageContents();
+		theInstancesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theDatasourcesPackage.freeze();

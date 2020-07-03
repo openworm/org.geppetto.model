@@ -53,4 +53,12 @@
             genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated geppettoModelGenerator -->
+      <package
+            uri="https://raw.githubusercontent.com/openworm/org.geppetto.model/master/src/main/resources/geppettoModel.ecore#//instances"
+            class="org.geppetto.model.instances.InstancesPackage"
+            genModel="src/main/resources/geppettoModelGenerator.genmodel"/>
+   </extension>
+
 </plugin>

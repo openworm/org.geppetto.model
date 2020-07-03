@@ -23,6 +23,7 @@ import org.geppetto.model.GeppettoModel;
 import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.Tag;
 
+import org.geppetto.model.World;
 import org.geppetto.model.datasources.DataSource;
 import org.geppetto.model.datasources.Query;
 
@@ -37,6 +38,7 @@ import org.geppetto.model.variables.Variable;
  * </p>
  * <ul>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getWorlds <em>Worlds</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getLibraries <em>Libraries</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.geppetto.model.impl.GeppettoModelImpl#getId <em>Id</em>}</li>
@@ -58,6 +60,16 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * @ordered
 	 */
 	protected EList<Variable> variables;
+
+	/**
+	 * The cached value of the '{@link #getWorlds() <em>Worlds</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWorlds()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<World> worlds;
 
 	/**
 	 * The cached value of the '{@link #getLibraries() <em>Libraries</em>}' containment reference list.
@@ -179,6 +191,20 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<World> getWorlds()
+	{
+		if (worlds == null)
+		{
+			worlds = new EObjectContainmentEList<World>(World.class, this, GeppettoPackage.GEPPETTO_MODEL__WORLDS);
+		}
+		return worlds;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<GeppettoLibrary> getLibraries()
 	{
 		if (libraries == null)
@@ -288,6 +314,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 		{
 			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				return ((InternalEList<?>)getVariables()).basicRemove(otherEnd, msgs);
+			case GeppettoPackage.GEPPETTO_MODEL__WORLDS:
+				return ((InternalEList<?>)getWorlds()).basicRemove(otherEnd, msgs);
 			case GeppettoPackage.GEPPETTO_MODEL__LIBRARIES:
 				return ((InternalEList<?>)getLibraries()).basicRemove(otherEnd, msgs);
 			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
@@ -312,6 +340,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 		{
 			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				return getVariables();
+			case GeppettoPackage.GEPPETTO_MODEL__WORLDS:
+				return getWorlds();
 			case GeppettoPackage.GEPPETTO_MODEL__LIBRARIES:
 				return getLibraries();
 			case GeppettoPackage.GEPPETTO_MODEL__TAGS:
@@ -342,6 +372,10 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				getVariables().clear();
 				getVariables().addAll((Collection<? extends Variable>)newValue);
+				return;
+			case GeppettoPackage.GEPPETTO_MODEL__WORLDS:
+				getWorlds().clear();
+				getWorlds().addAll((Collection<? extends World>)newValue);
 				return;
 			case GeppettoPackage.GEPPETTO_MODEL__LIBRARIES:
 				getLibraries().clear();
@@ -382,6 +416,9 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				getVariables().clear();
 				return;
+			case GeppettoPackage.GEPPETTO_MODEL__WORLDS:
+				getWorlds().clear();
+				return;
 			case GeppettoPackage.GEPPETTO_MODEL__LIBRARIES:
 				getLibraries().clear();
 				return;
@@ -416,6 +453,8 @@ public class GeppettoModelImpl extends MinimalEObjectImpl.Container implements G
 		{
 			case GeppettoPackage.GEPPETTO_MODEL__VARIABLES:
 				return variables != null && !variables.isEmpty();
+			case GeppettoPackage.GEPPETTO_MODEL__WORLDS:
+				return worlds != null && !worlds.isEmpty();
 			case GeppettoPackage.GEPPETTO_MODEL__LIBRARIES:
 				return libraries != null && !libraries.isEmpty();
 			case GeppettoPackage.GEPPETTO_MODEL__TAGS:

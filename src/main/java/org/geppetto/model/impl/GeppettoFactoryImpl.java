@@ -76,6 +76,7 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 			case GeppettoPackage.MODEL_FORMAT: return createModelFormat();
 			case GeppettoPackage.EXTERNAL_DOMAIN_MODEL: return createExternalDomainModel();
 			case GeppettoPackage.STRING_TO_STRING_MAP: return (EObject)createStringToStringMap();
+			case GeppettoPackage.WORLD: return createWorld();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -223,6 +224,17 @@ public class GeppettoFactoryImpl extends EFactoryImpl implements GeppettoFactory
 	{
 		StringToStringMapImpl stringToStringMap = new StringToStringMapImpl();
 		return stringToStringMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public World createWorld()
+	{
+		WorldImpl world = new WorldImpl();
+		return world;
 	}
 
 	/**

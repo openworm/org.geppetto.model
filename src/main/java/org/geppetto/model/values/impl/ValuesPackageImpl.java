@@ -15,6 +15,8 @@ import org.geppetto.model.GeppettoPackage;
 import org.geppetto.model.datasources.DatasourcesPackage;
 import org.geppetto.model.datasources.impl.DatasourcesPackageImpl;
 import org.geppetto.model.impl.GeppettoPackageImpl;
+import org.geppetto.model.instances.InstancesPackage;
+import org.geppetto.model.instances.impl.InstancesPackageImpl;
 import org.geppetto.model.types.TypesPackage;
 import org.geppetto.model.types.impl.TypesPackageImpl;
 import org.geppetto.model.values.AArrayValue;
@@ -438,6 +440,8 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		VariablesPackageImpl theVariablesPackage = (VariablesPackageImpl)(registeredPackage instanceof VariablesPackageImpl ? registeredPackage : VariablesPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DatasourcesPackage.eNS_URI);
 		DatasourcesPackageImpl theDatasourcesPackage = (DatasourcesPackageImpl)(registeredPackage instanceof DatasourcesPackageImpl ? registeredPackage : DatasourcesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(InstancesPackage.eNS_URI);
+		InstancesPackageImpl theInstancesPackage = (InstancesPackageImpl)(registeredPackage instanceof InstancesPackageImpl ? registeredPackage : InstancesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theValuesPackage.createPackageContents();
@@ -445,6 +449,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		theTypesPackage.createPackageContents();
 		theVariablesPackage.createPackageContents();
 		theDatasourcesPackage.createPackageContents();
+		theInstancesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theValuesPackage.initializePackageContents();
@@ -452,6 +457,7 @@ public class ValuesPackageImpl extends EPackageImpl implements ValuesPackage
 		theTypesPackage.initializePackageContents();
 		theVariablesPackage.initializePackageContents();
 		theDatasourcesPackage.initializePackageContents();
+		theInstancesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theValuesPackage.freeze();
