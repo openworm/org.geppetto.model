@@ -327,6 +327,16 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDataSource_Auth()
+	{
+		return (EAttribute)dataSourceEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDataSourceLibraryConfiguration()
 	{
 		return dataSourceLibraryConfigurationEClass;
@@ -720,6 +730,7 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		createEReference(dataSourceEClass, DATA_SOURCE__DEPENDENCIES_LIBRARY);
 		createEReference(dataSourceEClass, DATA_SOURCE__TARGET_LIBRARY);
 		createEReference(dataSourceEClass, DATA_SOURCE__FETCH_VARIABLE_QUERY);
+		createEAttribute(dataSourceEClass, DATA_SOURCE__AUTH);
 
 		dataSourceLibraryConfigurationEClass = createEClass(DATA_SOURCE_LIBRARY_CONFIGURATION);
 		createEReference(dataSourceLibraryConfigurationEClass, DATA_SOURCE_LIBRARY_CONFIGURATION__LIBRARY);
@@ -824,6 +835,7 @@ public class DatasourcesPackageImpl extends EPackageImpl implements DatasourcesP
 		initEReference(getDataSource_DependenciesLibrary(), theGeppettoPackage.getGeppettoLibrary(), null, "dependenciesLibrary", null, 0, -1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSource_TargetLibrary(), theGeppettoPackage.getGeppettoLibrary(), null, "targetLibrary", null, 1, 1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSource_FetchVariableQuery(), this.getQuery(), null, "fetchVariableQuery", null, 0, 1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataSource_Auth(), theXMLTypePackage.getString(), "auth", null, 0, 1, DataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataSourceLibraryConfigurationEClass, DataSourceLibraryConfiguration.class, "DataSourceLibraryConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataSourceLibraryConfiguration_Library(), theGeppettoPackage.getGeppettoLibrary(), null, "library", null, 1, 1, DataSourceLibraryConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

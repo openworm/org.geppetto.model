@@ -42,6 +42,7 @@ import org.geppetto.model.impl.NodeImpl;
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getDependenciesLibrary <em>Dependencies Library</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getTargetLibrary <em>Target Library</em>}</li>
  *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getFetchVariableQuery <em>Fetch Variable Query</em>}</li>
+ *   <li>{@link org.geppetto.model.datasources.impl.DataSourceImpl#getAuth <em>Auth</em>}</li>
  * </ul>
  *
  * @generated
@@ -137,6 +138,26 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	 * @ordered
 	 */
 	protected Query fetchVariableQuery;
+
+	/**
+	 * The default value of the '{@link #getAuth() <em>Auth</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuth() <em>Auth</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuth()
+	 * @generated
+	 * @ordered
+	 */
+	protected String auth = AUTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -343,6 +364,29 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getAuth()
+	{
+		return auth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAuth(String newAuth)
+	{
+		String oldAuth = auth;
+		auth = newAuth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DatasourcesPackage.DATA_SOURCE__AUTH, oldAuth, auth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -383,6 +427,8 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 				return basicGetTargetLibrary();
 			case DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
 				return getFetchVariableQuery();
+			case DatasourcesPackage.DATA_SOURCE__AUTH:
+				return getAuth();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -422,6 +468,9 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 			case DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
 				setFetchVariableQuery((Query)newValue);
 				return;
+			case DatasourcesPackage.DATA_SOURCE__AUTH:
+				setAuth((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -457,6 +506,9 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 			case DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
 				setFetchVariableQuery((Query)null);
 				return;
+			case DatasourcesPackage.DATA_SOURCE__AUTH:
+				setAuth(AUTH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -485,6 +537,8 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 				return targetLibrary != null;
 			case DatasourcesPackage.DATA_SOURCE__FETCH_VARIABLE_QUERY:
 				return fetchVariableQuery != null;
+			case DatasourcesPackage.DATA_SOURCE__AUTH:
+				return AUTH_EDEFAULT == null ? auth != null : !AUTH_EDEFAULT.equals(auth);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -504,6 +558,8 @@ public class DataSourceImpl extends NodeImpl implements DataSource
 		result.append(dataSourceService);
 		result.append(", url: ");
 		result.append(url);
+		result.append(", auth: ");
+		result.append(auth);
 		result.append(')');
 		return result.toString();
 	}
